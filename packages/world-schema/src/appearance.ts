@@ -19,6 +19,9 @@ export const OutfitSchema = z.enum(['casual','streetwear','smart','formal','cozy
 export const OutfitColorSchema = z.enum(['navy','charcoal','forest','burgundy','cream','plum','teal','rose','gold']);
 export const AccessorySchema = z.enum(['none','glasses','earrings','necklace','freckles']);
 
+export const FacialHairSchema = z.enum(['none','stubble','goatee','beard','moustache']);
+export const HeadwearSchema = z.enum(['none','beanie','cap','headband','beret']);
+export const MakeupSchema = z.enum(['none','soft','bold','gloss']);
 export const AppearanceSchema = z.object({
   skinTone: SkinToneSchema,
   face: FaceShapeSchema,
@@ -33,6 +36,9 @@ export const AppearanceSchema = z.object({
   outfit: OutfitSchema,
   outfitColor: OutfitColorSchema,
   accessory: AccessorySchema,
+  facialHair: FacialHairSchema.optional(),
+  headwear: HeadwearSchema.optional(),
+  makeup: MakeupSchema.optional(),
 }).strict();
 
 export type Appearance = z.infer<typeof AppearanceSchema>;
@@ -41,7 +47,8 @@ export const DEFAULT_APPEARANCE: Appearance = {
   skinTone: 'golden', face: 'oval', eyes: 'almond', eyeColor: 'brown',
   nose: 'soft', lips: 'natural', brows: 'soft', hair: 'waves',
   hairColor: 'espresso', body: 'average', outfit: 'casual',
-  outfitColor: 'navy', accessory: 'none',
+  outfitColor: 'navy', accessory: 'none', facialHair: 'none',
+  headwear: 'none', makeup: 'none',
 };
 
 export const SKIN_COLORS: Record<Appearance['skinTone'],string> = {
@@ -77,6 +84,9 @@ export const APPEARANCE_GROUPS = [
   { key: 'outfit', label: 'Clothing style' },
   { key: 'outfitColor', label: 'Clothing color', color: 'outfit' },
   { key: 'accessory', label: 'Accessories' },
+  { key: 'facialHair', label: 'Facial hair' },
+  { key: 'headwear', label: 'Hats & headwear' },
+  { key: 'makeup', label: 'Makeup' },
 ] as const satisfies readonly {key: keyof Appearance; label: string; color?: string}[];
 
 /** Keep appearance validation pure so Creator Studio and player can share it. */
