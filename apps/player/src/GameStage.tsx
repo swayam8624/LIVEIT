@@ -52,6 +52,9 @@ export function GameStage({
       : mood === 'warm'
         ? 'rgba(105,55,15,0.08)'
         : 'rgba(9,17,39,0.2)';
+  // Metro resolves asset dimensions and bundles this JPG offline.
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const cafePlate = require('../assets/cafe-dusk.jpg');
   return (
     <ImageBackground
       accessibilityLabel={
@@ -60,9 +63,7 @@ export function GameStage({
           : 'Your next chapter in the city of Bellweather'
       }
       resizeMode="cover"
-      // Metro requires a static asset require for bundled offline images.
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      source={require('../assets/cafe-dusk.jpg')}
+      source={cafePlate}
       imageStyle={styles.image}
       style={[
         styles.stage,
