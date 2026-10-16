@@ -1,3 +1,4 @@
+export { applyForJob, attendJobInterview, requestPromotion, resignFromJob, ageUp } from './life';
 import { initialCityState, tickCity } from './city';
 import { initialNPCLives, tickNPCs } from './npc';
 export { NPC_BEATS, initialNPCLives } from './npc';
@@ -69,11 +70,18 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
     tickNPCs(w);
     w.player.money -= 2800;
     if (activity === 'work') {
-      if (w.player.career === 'seeking' && w.player.skill >= 25)
+      if (!w.city?.employment && w.player.career === 'seeking' && w.player.skill >= 25)
         w.player.career = 'employed';
-      w.player.money += w.player.career === 'employed' ? 12000 : 6500;
+      const careerJob = w.city?.employment;
+      // An actual chosen job pays its contract rate; old v1 employment
+      // still uses its original wages so legacy playthroughs do not change.
+      w.player.money += careerJob
+        ? careerJob.stage === 'applied' ? 6500 : Math.round(careerJob.salaryAnnual / 260)
+        : w.player.career === 'employed' ? 12000 : 6500;
       w.player.wellbeing -= 4;
       w.player.skill += 1;
+      if (careerJob && careerJob.stage !== 'applied')
+        careerJob.experience = Math.min(20000, careerJob.experience + 1);
       if (w.player.career === 'employed' && w.city) {
         const bonus = { undecided: 0, technology: 2200, creative: 800, business: 2800, community: 1200 }[w.city.careerPath];
         w.player.money += bonus;
