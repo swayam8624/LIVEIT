@@ -545,10 +545,27 @@ aside {
 }
 
 /* Narrative editor action controls: visible without interrupting the draft. */
-.add-branch { width: 100%; margin-top: 12px; border: 1px dashed #af8968; background: #233044; color: #f5d7af; }
-.add-branch:disabled { opacity: .4; cursor: not-allowed; }
-.studio-actions button { white-space: nowrap; }
-@media(max-width: 750px) {
-  .studio-actions { justify-content: flex-start; }
-  .studio-actions button,.upload-control { flex: 1 1 auto; text-align: center; }
+.add-branch {
+  width: 100%;
+  margin-top: 12px;
+  border: 1px dashed #af8968;
+  background: #233044;
+  color: #f5d7af;
+}
+.add-branch:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.studio-actions button {
+  white-space: nowrap;
+}
+@media (max-width: 750px) {
+  .studio-actions {
+    justify-content: flex-start;
+  }
+  .studio-actions button,
+  .upload-control {
+    flex: 1 1 auto;
+    text-align: center;
+  }
 }

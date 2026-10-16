@@ -60,7 +60,12 @@ export default function Studio() {
   const previewScene = story?.scenes.find((node) => node.id === preview);
 
   function createStory() {
-    if (!window.confirm('Start a new story? Export your current draft first if you want to keep it.')) return;
+    if (
+      !window.confirm(
+        'Start a new story? Export your current draft first if you want to keep it.',
+      )
+    )
+      return;
     const id = 'creator.story-' + Date.now().toString(36);
     const fresh = parseStory({
       schemaVersion: 1,
@@ -70,24 +75,44 @@ export default function Studio() {
       description: 'An interactive chapter',
       compatibleWorlds: ['modern_life_v1'],
       minAge: 18,
-      permissions: { relationshipTargets: ['amelia'], memoryTargets: ['amelia'] },
+      permissions: {
+        relationshipTargets: ['amelia'],
+        memoryTargets: ['amelia'],
+      },
       entry: 'opening',
       scenes: [
         {
-          id: 'opening', speaker: 'Narrator',
+          id: 'opening',
+          speaker: 'Narrator',
           text: 'The city is quiet. You have a decision to make.',
-          mood: 'reflective', ending: false,
-          choices: [{ id: 'continue', label: 'See what happens', next: 'ending', conditions: [], effects: [] }],
+          mood: 'reflective',
+          ending: false,
+          choices: [
+            {
+              id: 'continue',
+              label: 'See what happens',
+              next: 'ending',
+              conditions: [],
+              effects: [],
+            },
+          ],
         },
         {
-          id: 'ending', speaker: 'Narrator', text: 'A new chapter begins.', mood: 'warm', ending: true, choices: [],
+          id: 'ending',
+          speaker: 'Narrator',
+          text: 'A new chapter begins.',
+          mood: 'warm',
+          ending: true,
+          choices: [],
         },
       ],
     });
     setRaw(JSON.stringify(fresh, null, 2));
     setSelected(fresh.entry);
     setPreview(fresh.entry);
-    setMessage('New story created. Rename it, write your scenes, then validate and export.');
+    setMessage(
+      'New story created. Rename it, write your scenes, then validate and export.',
+    );
   }
 
   function addConnectedScene() {
@@ -101,7 +126,8 @@ export default function Studio() {
       return;
     }
     let nextNumber = story.scenes.length + 1;
-    while (story.scenes.some((item) => item.id === 'scene_' + nextNumber)) nextNumber++;
+    while (story.scenes.some((item) => item.id === 'scene_' + nextNumber))
+      nextNumber++;
     const id = 'scene_' + nextNumber;
     const branch: Scene['choices'][number] = {
       id: 'to_' + id,
@@ -111,8 +137,12 @@ export default function Studio() {
       effects: [],
     };
     const additional: Scene = {
-      id, speaker: 'Narrator', text: 'Write the next moment here.',
-      mood: 'reflective', ending: true, choices: [],
+      id,
+      speaker: 'Narrator',
+      text: 'Write the next moment here.',
+      mood: 'reflective',
+      ending: true,
+      choices: [],
     };
     try {
       const combined = parseStory({
@@ -129,9 +159,13 @@ export default function Studio() {
       write(combined);
       setSelected(id);
       setPreview(id);
-      setMessage('Connected scene created. Edit its dialogue and the choice leading here.');
+      setMessage(
+        'Connected scene created. Edit its dialogue and the choice leading here.',
+      );
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'Could not create this branch');
+      setMessage(
+        error instanceof Error ? error.message : 'Could not create this branch',
+      );
     }
   }
 
@@ -140,9 +174,13 @@ export default function Studio() {
     if (!valid) return;
     try {
       await navigator.clipboard.writeText(JSON.stringify(valid, null, 2));
-      setMessage('Copied validated story JSON. Paste it into the LIVEIT player story shelf.');
+      setMessage(
+        'Copied validated story JSON. Paste it into the LIVEIT player story shelf.',
+      );
     } catch {
-      setMessage('Clipboard permission unavailable. Use Export story to download the JSON.');
+      setMessage(
+        'Clipboard permission unavailable. Use Export story to download the JSON.',
+      );
     }
   }
 
@@ -233,8 +271,16 @@ export default function Studio() {
           ✦ LIVEIT <small> / CREATOR STUDIO</small>
         </span>
         <div className="studio-actions">
-          <button type="button" className="secondary" onClick={createStory}>+ New story</button>
-          <button type="button" className="secondary" onClick={() => void copyStory()}>Copy to player</button>
+          <button type="button" className="secondary" onClick={createStory}>
+            + New story
+          </button>
+          <button
+            type="button"
+            className="secondary"
+            onClick={() => void copyStory()}
+          >
+            Copy to player
+          </button>
           <label className="upload-control">
             Import JSON
             <input
@@ -294,7 +340,12 @@ export default function Studio() {
               </button>
             ))}
           </div>
-          <button type="button" className="secondary add-branch" onClick={addConnectedScene} disabled={!scene}>
+          <button
+            type="button"
+            className="secondary add-branch"
+            onClick={addConnectedScene}
+            disabled={!scene}
+          >
             + Add connected scene
           </button>
           <div className="scene-help">
