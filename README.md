@@ -77,3 +77,23 @@ npm run dev
 ```
 
 Production art, layered rigged actors, multiple distinct city locations, user-upload publishing, cloud saves, native-device QA, and moderation are still in progress. See [immersive gameplay production gates](docs/IMMERSIVE_GAMEPLAY_GATE.md). Do not deploy this branch to paying users or merge it into production on the strength of bundle exports alone.
+
+## Install original high-resolution concept art
+
+The GitHub branch includes tiny offline preview images so the player can build
+without downloading asset libraries. For the substantially sharper original
+concept pack, download `LIVEIT_Original_Concept_Art_Pack_v1.zip` from the
+project conversation and run:
+
+```sh
+python3 -m pip install Pillow
+python3 tools/install_concept_art.py ~/Downloads/LIVEIT_Original_Concept_Art_Pack_v1.zip --confirm-rights
+npm run check
+npm run build:player
+```
+
+The script installs optimized JPEGs into `apps/player/assets`, records hashes
+and source references in `art-provenance.json`, and preserves the original ZIP.
+Inspect responsive crops before you commit generated images. This is still
+concept artwork, not a transparent modular character rig, and native devices
+still require hands-on tests. Only use materials whose terms you have verified.
