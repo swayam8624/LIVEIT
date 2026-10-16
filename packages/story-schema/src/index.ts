@@ -29,7 +29,7 @@ export const EffectSchema = z.discriminatedUnion('operation', [
 export const StorySchema = z
   .object({
     schemaVersion: z.literal(1),
-    id: z.string().regex(/^[a-z0-9.-]+$/),
+    id: z.string().min(1).max(120).regex(/^[a-z0-9.-]+$/),
     version: z.literal(1),
     title: z.string().min(1).max(100),
     description: z.string().max(500),
@@ -46,7 +46,7 @@ export const StorySchema = z
       .array(
         z
           .object({
-            id: z.string().min(1),
+            id: z.string().min(1).max(120),
             speaker: z.string().max(60),
             text: z.string().min(1).max(2000),
             mood: z.enum(['reflective', 'warm', 'tense']),
@@ -55,7 +55,7 @@ export const StorySchema = z
               .array(
                 z
                   .object({
-                    id: z.string().min(1),
+                    id: z.string().min(1).max(120),
                     label: z.string().min(1).max(200),
                     next: z.string().min(1),
                     conditions: z.array(ConditionSchema).max(20),
@@ -78,7 +78,7 @@ export const StorySchema = z
     if (ids.size !== s.scenes.length) issue('Scene IDs must be unique');
     if (!ids.has(s.entry)) issue('Entry scene does not exist');
     for (const n of s.scenes) {
-      if (n.ending === n.choices.length > 0)
+      if (n.ending ? n.choices.length !== 0 : n.choices.length === 0)
         issue(`Scene ${n.id} must have choices or be an ending`);
       if (new Set(n.choices.map((c) => c.id)).size !== n.choices.length)
         issue(`Duplicate choice in ${n.id}`);
