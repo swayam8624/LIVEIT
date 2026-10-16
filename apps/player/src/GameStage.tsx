@@ -60,6 +60,8 @@ export function GameStage({
           : 'Your next chapter in the city of Bellweather'
       }
       resizeMode="cover"
+      // Metro requires a static asset require for bundled offline images.
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       source={require('../assets/cafe-dusk.jpg')}
       imageStyle={styles.image}
       style={[
