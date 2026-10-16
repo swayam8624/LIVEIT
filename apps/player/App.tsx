@@ -33,6 +33,7 @@ import { GameStage } from './src/GameStage';
 import { CityWorld } from './src/CityWorld';
 import { AvatarEditor } from './src/AvatarEditor';
 import { AvatarPortrait } from './src/AvatarPortrait';
+import { LifeDashboard } from './src/LifeDashboard';
 const c = {
   paper: '#0c1421',
   ink: '#f7eee1',
@@ -632,6 +633,10 @@ export default function App() {
                         : 'MAIN TIMELINE'}
                     </Tag>
                   </View>
+                  <LifeDashboard
+                    world={world!}
+                    onAction={(operation) => run(() => update(operation(world!)))}
+                  />
                   <GameStage mode="life">
                     <Text style={s.stageHeadline}>Your life is happening.</Text>
                     <Text style={s.stageHint}>
