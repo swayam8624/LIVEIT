@@ -524,3 +524,25 @@ describe('bundled stories, reload and dismiss safety', () => {
     expect(parsed.activeStoryId).toBeUndefined();
   });
 });
+
+describe('story-schema safety regressions', () => {
+  it('rejects endings with choices rather than quietly treating them as complete', () => {
+    const story = structuredClone(reunion);
+    const ending = story.scenes.find(scene => scene.ending)!;
+    ending.choices = [{ id: 'illegal', label: 'This must not work', next: story.entry, effects: [], conditions: [] }];
+    expect(() => parseStory(story)).toThrow('choices or be an ending');
+  });
+  it('enforces a story ID length that can actually be saved and restored', () => {
+    const story = structuredClone(reunion);
+    story.id = 'creator.' + 'a'.repeat(121);
+    expect(() => parseStory(story)).toThrow();
+  });
+  it('bounds scene and choice IDs to resist oversized untrusted story payloads', () => {
+    const badScene = structuredClone(reunion);
+    badScene.scenes[0]!.id = 'x'.repeat(121);
+    expect(() => parseStory(badScene)).toThrow();
+    const badChoice = structuredClone(reunion);
+    badChoice.scenes[0]!.choices[0]!.id = 'y'.repeat(121);
+    expect(() => parseStory(badChoice)).toThrow();
+  });
+});
