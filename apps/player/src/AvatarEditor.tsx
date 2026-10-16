@@ -21,6 +21,9 @@ const OPTIONS: { [K in Key]: readonly Appearance[K][] } = {
   outfit:['casual','streetwear','smart','formal','cozy','athletic','vintage','creative','evening'],
   outfitColor:['navy','charcoal','forest','burgundy','cream','plum','teal','rose','gold'],
   accessory:['none','glasses','earrings','necklace','freckles'],
+  facialHair:['none','stubble','goatee','beard','moustache'],
+  headwear:['none','beanie','cap','headband','beret'],
+  makeup:['none','soft','bold','gloss'],
 };
 const LOOK_PRESETS: readonly {name:string; description:string; options:Partial<Appearance>}[]=[
   {name:'City Noir',description:'Sharp and understated',options:{skinTone:'tan',hair:'sidepart',hairColor:'midnight',eyes:'hooded',outfit:'smart',outfitColor:'charcoal'}},
@@ -33,7 +36,7 @@ const LOOK_PRESETS: readonly {name:string; description:string; options:Partial<A
 const GROUP_ICONS: Record<Key,string> = {
   skinTone:'◒', face:'◯', eyes:'◉', eyeColor:'✦', nose:'⌁',
   lips:'♡', brows:'⌃', hair:'♛', hairColor:'✧', body:'♙',
-  outfit:'✂', outfitColor:'◆', accessory:'◇',
+  outfit:'✂', outfitColor:'◆', accessory:'◇', facialHair:'♟', headwear:'♧', makeup:'✿',
 };
 function colorFor(k: Key, value: string): string | undefined {
   if(k==='skinTone') return SKIN_COLORS[value as keyof typeof SKIN_COLORS];
@@ -54,6 +57,32 @@ export function AvatarEditor({
   compact?: boolean;
 }) {
   const [selected, setSelected] = useState<Key>('hair');
+  const [expression, setExpression] = useState<'neutral'|'happy'|'sad'|'tense'>('neutral');
+  const [history, setHistory] = useState<Appearance[]>([]);
+  const [variation, setVariation] = useState(0);
+  function change(next: Appearance) {
+    setHistory(items => [...items.slice(-9),appearance]);
+    onChange(next);
+  }
+  function surprise() {
+    // Deterministic on-device cycling, not remote AI portrait generation.
+    const keys = Object.keys(OPTIONS) as Key[];
+    const next = {...appearance};
+    for (let i=0;i<keys.length;i++) {
+      const key=keys[i]!;
+      const options=OPTIONS[key] as readonly string[];
+      const selectedOption=options[(variation*7 + i*11 + 3)%options.length]!;
+      Object.assign(next,{[key]:selectedOption});
+    }
+    setVariation(v=>v+1);
+    change(next);
+  }
+  function undo() {
+    const prior = history.at(-1);
+    if (!prior) return;
+    setHistory(items=>items.slice(0,-1));
+    onChange(prior);
+  }
   const entry = APPEARANCE_GROUPS.find(x => x.key === selected)!;
   const choices = OPTIONS[selected] as readonly string[];
   return (
@@ -68,12 +97,16 @@ export function AvatarEditor({
           </Text>
         </View>
       </View>
+      <View style={styles.quickActions}>
+        <Pressable accessibilityRole="button" accessibilityLabel="Surprise me with a new appearance" onPress={surprise} style={styles.quickButton}><Text style={styles.quickText}>✦ SURPRISE ME</Text></Pressable>
+        <Pressable accessibilityRole="button" accessibilityLabel="Undo appearance change" disabled={!history.length} onPress={undo} style={[styles.quickButton,!history.length&&{opacity:.4}]}><Text style={styles.quickText}>↶ UNDO</Text></Pressable>
+      </View>
       <Text style={styles.presetHeading}>START WITH A LOOK · CUSTOMIZE EVERYTHING AFTERWARDS</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.presetRow} accessibilityLabel="Character appearance presets">
         {LOOK_PRESETS.map(preset=>(
           <Pressable key={preset.name} accessibilityRole="button"
             accessibilityLabel={'Try '+preset.name+' look'}
-            onPress={()=>onChange({...appearance,...preset.options})}
+            onPress={()=>change({...appearance,...preset.options})}
             style={styles.presetButton}>
             <Text style={styles.presetName}>{preset.name}</Text>
             <Text style={styles.presetDescription}>{preset.description}</Text>
@@ -84,7 +117,14 @@ export function AvatarEditor({
         <View style={[styles.preview, compact && { minHeight: 260 }]}>
           <View style={styles.spotlight} />
           <Text style={styles.previewLabel}>LIVE CHARACTER PREVIEW</Text>
-          <AvatarPortrait appearance={appearance} size={compact ? 168 : 220} />
+          <AvatarPortrait appearance={appearance} size={compact ? 168 : 220} expression={expression} />
+          <View style={styles.expressionRow}>
+            {(['neutral','happy','sad','tense'] as const).map(mood=><Pressable key={mood} accessibilityRole="button"
+              accessibilityLabel={'Preview '+mood+' expression'} accessibilityState={{selected:expression===mood}}
+              style={[styles.expressionButton,expression===mood&&styles.expressionSelected]} onPress={()=>setExpression(mood)}>
+              <Text style={styles.expressionText}>{mood.toUpperCase()}</Text>
+            </Pressable>)}
+          </View>
           <View style={styles.previewBar}>
             <Text style={styles.previewSubtitle}>MY CHARACTER</Text>
             <Text style={styles.previewHint}>Changes appear instantly</Text>
@@ -121,7 +161,7 @@ export function AvatarEditor({
                   accessibilityRole="radio"
                   accessibilityLabel={`${entry.label}: ${value}`}
                   accessibilityState={{ selected: active, checked: active }}
-                  onPress={() => onChange({ ...appearance, [selected]: value })}
+                  onPress={() => change({ ...appearance, [selected]: value })}
                   style={[styles.option, active && styles.activeOption]}
                 >
                   {swatch ? (
@@ -144,6 +184,14 @@ export function AvatarEditor({
   );
 }
 const styles = StyleSheet.create({
+  quickActions:{flexDirection:'row',flexWrap:'wrap',gap:9},
+  quickButton:{padding:12,borderRadius:9,backgroundColor:'#6b493d',borderColor:'#d0a074',borderWidth:1,minHeight:44,justifyContent:'center'},
+  quickText:{color:'#ffe9c8',fontWeight:'800',fontSize:12},
+  expressionRow:{width:'100%',flexDirection:'row',flexWrap:'wrap',gap:4,justifyContent:'center',padding:8},
+  expressionButton:{borderRadius:6,backgroundColor:'#252b41',paddingVertical:9,paddingHorizontal:6,flexGrow:1,alignItems:'center'},
+  expressionSelected:{backgroundColor:'#89543d',borderWidth:1,borderColor:'#eac18c'},
+  expressionText:{fontSize:9,color:'#ffe3c4',fontWeight:'700'},
+
   presetHeading:{color:'#c3aa94',fontSize:10,fontWeight:'800',letterSpacing:1.4},
   presetRow:{gap:9,paddingBottom:3},
   presetButton:{minWidth:141,minHeight:70,backgroundColor:'#302c42',borderColor:'#806b69',borderWidth:1,borderRadius:9,padding:12,justifyContent:'center',gap:6},
