@@ -32,7 +32,6 @@ export function AvatarPortrait({
   const faceH = a.face === 'long' ? 149 : a.face === 'round' ? 129 : 141;
   const jaw = a.face === 'square' ? 46 : a.face === 'heart' ? 78 : a.face === 'round' ? 85 : 69;
   const hairLong = ['long','waves','curls','coils','braids','locs','ponytail','lob','shag'].includes(a.hair);
-  const frizz = ['curls','coils','afro','shag'].includes(a.hair);
   const fringe = ['bob','lob','pixie','waves','curls','coils','shag','sidepart','long','afro'].includes(a.hair);
   const eyeW = a.eyes === 'round' ? 23 : a.eyes === 'hooded' ? 24 : 27;
   const eyeH = a.eyes === 'round' ? 16 : a.eyes === 'hooded' ? 8 : 12;
