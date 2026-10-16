@@ -409,12 +409,21 @@ export default function App() {
                       key={currentScene(world!, reunion).id}
                     >
                       <View style={s.speakerRow}>
-                        <Image source={ameliaPortrait} style={s.speakerPortrait} accessibilityLabel="Illustrated portrait of Amelia" />
+                        <Image
+                          source={ameliaPortrait}
+                          style={s.speakerPortrait}
+                          accessibilityLabel="Illustrated portrait of Amelia"
+                        />
                         <View style={{ flex: 1, gap: 3 }}>
                           <Text style={s.eyebrow}>
-                            {currentScene(world!, reunion).speaker.toUpperCase()}
+                            {currentScene(
+                              world!,
+                              reunion,
+                            ).speaker.toUpperCase()}
                           </Text>
-                          <Text style={s.small}>THE SPACE BETWEEN · BELLWEATHER</Text>
+                          <Text style={s.small}>
+                            THE SPACE BETWEEN · BELLWEATHER
+                          </Text>
                         </View>
                       </View>
                       <Text style={s.dialogueText}>
@@ -704,7 +713,15 @@ export default function App() {
                                 { backgroundColor: i ? '#dfe7d7' : '#ead7cb' },
                               ]}
                             >
-                              {i ? <Text style={s.avatarText}>N</Text> : <Image source={ameliaPortrait} style={s.avatarImage} accessibilityLabel="Amelia Chen's portrait" />}
+                              {i ? (
+                                <Text style={s.avatarText}>N</Text>
+                              ) : (
+                                <Image
+                                  source={ameliaPortrait}
+                                  style={s.avatarImage}
+                                  accessibilityLabel="Amelia Chen's portrait"
+                                />
+                              )}
                             </View>
                             <View style={{ flex: 1 }}>
                               <Text style={s.activityTitle}>
@@ -869,7 +886,11 @@ export default function App() {
 const s = StyleSheet.create({
   speakerRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
   speakerPortrait: {
-    width: 66, height: 78, borderRadius: 10, borderColor: '#e3a66d', borderWidth: 2,
+    width: 66,
+    height: 78,
+    borderRadius: 10,
+    borderColor: '#e3a66d',
+    borderWidth: 2,
   },
   avatarImage: { width: 42, height: 42, borderRadius: 22 },
 
