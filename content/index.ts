@@ -293,3 +293,9 @@ export const bookshop = parseStory({
     },
   ],
 });
+
+/** Bundled stories can always be resumed offline without a local story import. */
+export const OFFICIAL_STORIES = [reunion, bookshop] as const;
+export function findOfficialStory(id: string) {
+  return OFFICIAL_STORIES.find(story => story.id === id);
+}
