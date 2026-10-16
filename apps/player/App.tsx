@@ -221,72 +221,40 @@ export default function App() {
           <Text style={s.logo}>✦ LIVEIT</Text>
           <Text style={s.logoSub}>EVERY CHOICE BECOMES A LIFE</Text>
         </View>
-        <View style={s.headerRight}>
-          <View style={s.dot} />
-          <Text style={s.small}>CHAPTER ONE · BELLWEATHER</Text>
-        </View>
-      </View>
-      <View style={[s.shell, wide && { flexDirection: 'row' }]}>
-        <View
-          style={[
-            s.sidebar,
-            wide
-              ? { width: 224 }
-              : {
-                  borderRightWidth: 0,
-                  borderBottomWidth: 1,
-                  borderBottomColor: c.line,
-                },
-          ]}
-        >
-          <Text style={[s.eyebrow, { marginBottom: 16 }]}>THE WORLD</Text>
-          <View
-            style={
-              !wide
-                ? { flexDirection: 'row', flexWrap: 'wrap', gap: 6 }
-                : undefined
-            }
-          >
-            {(
-              [
-                { id: 'life', icon: '◈', title: 'Free Life' },
-                { id: 'stories', icon: '▤', title: 'Story Mode' },
-                { id: 'journal', icon: '◷', title: 'Your journal' },
-              ] as const
-            ).map((item) => (
-              <Pressable
-                accessibilityRole="tab"
-                accessibilityState={{ selected: tab === item.id }}
-                key={item.id}
-                onPress={() => {
-                  setTab(item.id);
-                  setSceneOpen(false);
-                }}
-                style={[s.nav, tab === item.id && s.navActive]}
-              >
-                <Text style={[s.navText, tab === item.id && { color: c.ink }]}>
-                  {item.icon} {item.title}
-                </Text>
-                {wide && tab === item.id && (
-                  <Text style={{ color: c.green }}>↗</Text>
-                )}
-              </Pressable>
-            ))}
+        {wide && (
+          <View style={s.headerRight}>
+            <View style={s.dot} />
+            <Text style={s.small}>CHAPTER ONE · BELLWEATHER</Text>
           </View>
-          {wide && (
-            <View style={s.sideNote}>
-              <Text style={s.sideQuote}>
-                “Every life is a story still being written.”
+        )}
+      </View>
+      <View style={s.shell}>
+        <View style={s.gameNav}>
+          {([
+            { id: 'life', symbol: '⌂', title: 'FREE LIFE' },
+            { id: 'stories', symbol: '✧', title: 'STORIES' },
+            { id: 'journal', symbol: '◷', title: 'MEMORIES' },
+          ] as const).map((entry) => (
+            <Pressable
+              key={entry.id}
+              accessibilityRole="tab"
+              accessibilityState={{ selected: tab === entry.id }}
+              accessibilityLabel={entry.title}
+              onPress={() => {
+                setTab(entry.id);
+                setSceneOpen(false);
+              }}
+              style={({ pressed }) => [
+                s.gameNavItem,
+                tab === entry.id && s.gameNavSelected,
+                pressed && { opacity: 0.75 },
+              ]}
+            >
+              <Text style={[s.gameNavText, tab === entry.id && { color: '#f7d6a1' }]}>
+                {entry.symbol}  {entry.title}
               </Text>
-              <View style={s.divider} />
-              <Text style={s.small}>
-                No tickets. No waiting. Every meaningful choice is yours.
-              </Text>
-              <Text style={[s.eyebrow, { marginTop: 24 }]}>
-                A NEW BEGINNING · V0.1
-              </Text>
-            </View>
-          )}
+            </Pressable>
+          ))}
         </View>
         <ScrollView
           contentContainerStyle={[s.main, { padding: wide ? 40 : 22 }]}
@@ -884,6 +852,21 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  gameNav: {
+    flexDirection: 'row', gap: 9, backgroundColor: '#121c2b',
+    borderBottomColor: '#414457', borderBottomWidth: 1, paddingVertical: 11,
+    paddingHorizontal: 12, justifyContent: 'center',
+  },
+  gameNavItem: {
+    minHeight: 42, justifyContent: 'center', alignItems: 'center',
+    borderWidth: 1, borderColor: '#3e4557', borderRadius: 9,
+    paddingHorizontal: 13, backgroundColor: '#1d293a',
+  },
+  gameNavSelected: {
+    backgroundColor: '#4a3334', borderColor: '#dba46f',
+  },
+  gameNavText: { fontSize: 11, color: '#d9d7d8', fontWeight: '800', letterSpacing: 0.5 },
+
   speakerRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
   speakerPortrait: {
     width: 66,
