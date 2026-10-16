@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { parseStory, type Story } from '@living/story-schema';
 import { reunion } from '@living/content';
 
-const KEY = 'liveit:local-stories:v1';
+export const LOCAL_STORIES_KEY = 'liveit:local-stories:v1';
 const MAX_STORIES = 12;
 const MAX_JSON = 250_000;
 
@@ -16,8 +16,11 @@ const MAX_JSON = 250_000;
  */
 export function LocalStoryLibrary({
   onPlay,
+  protectedIds = [],
 }: {
   onPlay: (story: Story) => void;
+  /** Already referenced by a saved timeline; modifying/removing could break continuity. */
+  protectedIds?: string[];
 }) {
   const [stories, setStories] = useState<Story[]>([]);
   const [source, setSource] = useState('');
@@ -28,7 +31,7 @@ export function LocalStoryLibrary({
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    AsyncStorage.getItem(KEY)
+    AsyncStorage.getItem(LOCAL_STORIES_KEY)
       .then((value) => {
         if (value) {
           const items: unknown = JSON.parse(value);
@@ -61,10 +64,13 @@ export function LocalStoryLibrary({
           'The original story ID is reserved. Choose another story ID.',
         );
       }
+      if (protectedIds.includes(parsed.id)) {
+        throw new Error('This story is referenced by a saved life. Give the revised edition a new unique story ID.');
+      }
       const next = [...stories.filter((item) => item.id !== parsed.id), parsed];
       if (next.length > MAX_STORIES)
         throw new Error('Local library limit is 12 stories.');
-      await AsyncStorage.setItem(KEY, JSON.stringify(next));
+      await AsyncStorage.setItem(LOCAL_STORIES_KEY, JSON.stringify(next));
       setStories(next);
       setSource('');
       setOpen(false);
@@ -81,9 +87,13 @@ export function LocalStoryLibrary({
   }
 
   async function removeStory(id: string) {
+    if (protectedIds.includes(id)) {
+      setNotice('This story is used by a saved timeline. Keep it installed to preserve the narrative.');
+      return;
+    }
     const next = stories.filter((story) => story.id !== id);
     try {
-      await AsyncStorage.setItem(KEY, JSON.stringify(next));
+      await AsyncStorage.setItem(LOCAL_STORIES_KEY, JSON.stringify(next));
       setStories(next);
       setNotice(
         'Removed from this device. Existing journal entries remain in their saves.',
@@ -167,7 +177,9 @@ export function LocalStoryLibrary({
               <Pressable
                 accessibilityRole="button"
                 accessibilityLabel={'Remove ' + story.title}
-                onPress={() => void removeStory(story.id)}
+                disabled={protectedIds.includes(story.id)}
+                  accessibilityState={{ disabled: protectedIds.includes(story.id) }}
+                  onPress={() => void removeStory(story.id)}
                 style={styles.remove}
               >
                 <Text style={styles.removeText}>Remove</Text>
