@@ -74,6 +74,16 @@ export type CityState = z.infer<typeof CityStateSchema>;
 export type District = z.infer<typeof DistrictSchema>;
 export type CareerPath = z.infer<typeof CareerPathSchema>;
 
+/** Lightweight off-screen NPC simulation; optional for old local saves. */
+export const NPCLifeSchema = z.object({
+  characterId: z.string().min(1),
+  occupation: z.string().min(1).max(100),
+  currentGoal: z.string().min(1).max(200),
+  mood: z.enum(['hopeful', 'busy', 'anxious', 'content', 'restless']),
+  milestones: z.array(z.string().min(1).max(120)).max(80),
+}).strict();
+export type NPCLife = z.infer<typeof NPCLifeSchema>;
+
 export const WorldSchema = z
   .object({
     schemaVersion: z.literal(1),
@@ -87,6 +97,7 @@ export const WorldSchema = z
     facts: z.array(z.string()).max(10000),
     progress: z.array(ProgressSchema).max(100),
     city: CityStateSchema.optional(),
+    npcLives: z.array(NPCLifeSchema).max(100).optional(),
   })
   .strict()
   .superRefine((w, ctx) => {
