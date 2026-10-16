@@ -105,7 +105,9 @@ export default function App() {
   const [ready, setReady] = useState(false);
   const [error, setError] = useState('');
   const [status, setStatus] = useState('');
-  const [tab, setTab] = useState<'life' | 'stories' | 'people' | 'journal'>('life');
+  const [tab, setTab] = useState<'life' | 'stories' | 'people' | 'journal'>(
+    'life',
+  );
   const [name, setName] = useState('Alex Morgan');
   const [pronouns, setPronouns] = useState<'they/them' | 'she/her' | 'he/him'>(
     'they/them',
@@ -959,7 +961,7 @@ export default function App() {
                       const amelia = friend.characterId === 'amelia';
                       const name = amelia ? 'Amelia Chen' : 'Noah Bennett';
                       const memories = world!.memories.filter(
-                        memory => memory.subject === friend.characterId
+                        (memory) => memory.subject === friend.characterId,
                       );
                       return (
                         <View key={friend.characterId} style={s.profileCard}>
@@ -991,8 +993,16 @@ export default function App() {
                             <Text style={s.eyebrow}>TRUST</Text>
                             <Text style={s.trust}>{friend.trust}/100</Text>
                           </View>
-                          <View style={s.trustTrack} accessibilityLabel={`${name} trust ${friend.trust} out of 100`}>
-                            <View style={[s.trustFill, { width: `${friend.trust}%` }]} />
+                          <View
+                            style={s.trustTrack}
+                            accessibilityLabel={`${name} trust ${friend.trust} out of 100`}
+                          >
+                            <View
+                              style={[
+                                s.trustFill,
+                                { width: `${friend.trust}%` },
+                              ]}
+                            />
                           </View>
                           <Text style={s.small}>
                             {memories.length === 0
@@ -1000,11 +1010,19 @@ export default function App() {
                               : `${memories.length} remembered moment${memories.length === 1 ? '' : 's'}`}
                           </Text>
                           <Button
-                            label={amelia ? 'Meet at the café →' : 'Spend time together →'}
+                            label={
+                              amelia
+                                ? 'Meet at the café →'
+                                : 'Spend time together →'
+                            }
                             onPress={() =>
                               amelia
                                 ? openEncounter()
-                                : run(() => update(advanceLife(world!, 'socialize', days)))
+                                : run(() =>
+                                    update(
+                                      advanceLife(world!, 'socialize', days),
+                                    ),
+                                  )
                             }
                           />
                         </View>
@@ -1086,20 +1104,44 @@ export default function App() {
 const s = StyleSheet.create({
   peopleGallery: { flexDirection: 'row', flexWrap: 'wrap', gap: 17 },
   profileCard: {
-    flexGrow: 1, flexBasis: 280, maxWidth: 620, backgroundColor: '#1c293d',
-    borderRadius: 13, borderWidth: 1, borderColor: '#544b52', padding: 18, gap: 14,
+    flexGrow: 1,
+    flexBasis: 280,
+    maxWidth: 620,
+    backgroundColor: '#1c293d',
+    borderRadius: 13,
+    borderWidth: 1,
+    borderColor: '#544b52',
+    padding: 18,
+    gap: 14,
   },
   profileTop: { flexDirection: 'row', alignItems: 'center', gap: 16 },
   profilePortrait: {
-    width: 95, height: 112, borderRadius: 10, borderWidth: 1, borderColor: '#c38c68',
+    width: 95,
+    height: 112,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#c38c68',
   },
   profileUnknown: {
-    width: 95, height: 112, backgroundColor: '#3e4659', borderRadius: 10,
-    justifyContent: 'center', alignItems: 'center',
+    width: 95,
+    height: 112,
+    backgroundColor: '#3e4659',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   profileUnknownText: { fontFamily: serif, color: '#f3c694', fontSize: 50 },
-  trustHeading: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  trustTrack: { height: 8, backgroundColor: '#0c1729', borderRadius: 9, overflow: 'hidden' },
+  trustHeading: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  trustTrack: {
+    height: 8,
+    backgroundColor: '#0c1729',
+    borderRadius: 9,
+    overflow: 'hidden',
+  },
   trustFill: { height: '100%', backgroundColor: '#e7ac78', borderRadius: 9 },
 
   paceActive: {
