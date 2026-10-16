@@ -1,9 +1,12 @@
 import { z } from 'zod';
+import { AppearanceSchema } from './appearance';
+export * from './appearance';
 export const CharacterSchema = z
   .object({
     id: z.string().min(1),
     name: z.string().trim().min(1).max(40),
     pronouns: z.enum(['they/them', 'she/her', 'he/him']),
+    appearance: AppearanceSchema.optional(),
     ageDays: z.number().int().nonnegative(),
     wellbeing: z.number().int().min(0).max(100),
     skill: z.number().int().min(0).max(100),
