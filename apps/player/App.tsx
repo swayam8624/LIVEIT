@@ -25,6 +25,8 @@ import {
 import { loadSave, writeSave, type Save } from '@living/save-system';
 import type { World } from '@living/world-schema';
 import { reunion } from '@living/content';
+import type { Story } from '@living/story-schema';
+import { LocalStoryLibrary } from './src/LocalStoryLibrary';
 import { GameStage } from './src/GameStage';
 const c = {
   paper: '#0c1421',
@@ -108,6 +110,7 @@ export default function App() {
     'they/them',
   );
   const [sceneOpen, setSceneOpen] = useState(false);
+  const [authored, setAuthored] = useState<Story>(reunion);
   const [days, setDays] = useState(1);
   const [reset, setReset] = useState(false);
   const queue = useRef(Promise.resolve());
@@ -172,6 +175,7 @@ export default function App() {
   }
   function openEncounter() {
     if (!save) return;
+    setAuthored(reunion);
     run(() => {
       update(startStory(world!, reunion));
       setSceneOpen(true);
@@ -179,6 +183,7 @@ export default function App() {
   }
   function standalone() {
     if (!save) return;
+    setAuthored(reunion);
     run(() => {
       const story =
         save.story ??
@@ -195,6 +200,7 @@ export default function App() {
     });
   }
   function newLife() {
+    setAuthored(reunion);
     run(() => {
       persist({
         version: 1,
@@ -205,6 +211,16 @@ export default function App() {
       setReset(false);
       setTab('life');
       setSceneOpen(false);
+    });
+  }
+  function playImported(story: Story) {
+    if (!save) return;
+    run(() => {
+      const started = startStory(save.life, story);
+      setAuthored(story);
+      persist({ ...save, active: 'life', life: started });
+      setTab('stories');
+      setSceneOpen(true);
     });
   }
   if (!ready)
@@ -346,7 +362,7 @@ export default function App() {
                           ? 'AN ENCOUNTER IN YOUR LIFE'
                           : 'STANDALONE STORY TIMELINE'}
                       </Tag>
-                      <Text style={s.title}>{reunion.title}</Text>
+                      <Text style={s.title}>{authored.title}</Text>
                     </View>
                     <Button
                       label="Save & leave scene"
@@ -361,7 +377,7 @@ export default function App() {
                     <View style={{ flex: 1.15 }}>
                       <GameStage
                         mode="story"
-                        mood={currentScene(world!, reunion).mood}
+                        mood={currentScene(world!, authored).mood}
                       >
                         <Text style={s.stageHeadline}>
                           A conversation you can't undo.
@@ -372,16 +388,16 @@ export default function App() {
                       </GameStage>
                       <View style={s.sceneMeta}>
                         <Text style={s.small}>
-                          A NEW BEGINNING · CHAPTER 01
+                          LIVEIT · PLAYABLE ENCOUNTER
                         </Text>
                         <Text style={s.small}>
-                          Amelia’s trust · {world!.relationships[0]?.trust}/100
+                          Consequences are saved to this timeline
                         </Text>
                       </View>
                     </View>
                     <View
                       style={s.dialogue}
-                      key={currentScene(world!, reunion).id}
+                      key={currentScene(world!, authored).id}
                     >
                       <View style={s.speakerRow}>
                         <Image
@@ -402,9 +418,9 @@ export default function App() {
                         </View>
                       </View>
                       <Text style={s.dialogueText}>
-                        {currentScene(world!, reunion).text}
+                        {currentScene(world!, authored).text}
                       </Text>
-                      {currentScene(world!, reunion).choices.map((choice) => {
+                      {currentScene(world!, authored).choices.map((choice) => {
                         const available = choice.conditions.every((cond) =>
                           conditionMet(world!, cond),
                         );
@@ -415,7 +431,7 @@ export default function App() {
                             disabled={!available}
                             onPress={() =>
                               run(() =>
-                                update(choose(world!, reunion, choice.id)),
+                                update(choose(world!, authored, choice.id)),
                               )
                             }
                             style={({ pressed }) => [
@@ -432,7 +448,7 @@ export default function App() {
                           </Pressable>
                         );
                       })}
-                      {currentScene(world!, reunion).ending && (
+                      {currentScene(world!, authored).ending && (
                         <>
                           <Tag>CHAPTER COMPLETE · YOUR WORLD REMEMBERS</Tag>
                           <Text style={s.small}>
@@ -786,6 +802,7 @@ export default function App() {
                       way, the world remembers.
                     </Text>
                   </View>
+                  <LocalStoryLibrary onPlay={playImported} />
                 </>
               ) : (
                 <>
