@@ -39,9 +39,10 @@ try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
   const errs = [];
   page.on('pageerror', (e) => errs.push(e.message));
-  await page.goto('http://127.0.0.1:3000/', { waitUntil: 'networkidle', timeout: 60000 });
+  await page.goto('http://localhost:3000/', { waitUntil: 'networkidle', timeout: 60000 });
   await page.getByText('Creator Studio', { exact: false }).first().waitFor();
   await page.screenshot({ path: path.join(out, 'creator-studio-desktop.png'), fullPage: true });
+  await page.waitForTimeout(900); // Allow Next.js client hydration before editing.
   await page.getByRole('button', { name: /New story/i }).click();
   await page.screenshot({ path: path.join(out, 'creator-studio-new-story.png'), fullPage: true });
   await page.getByRole('heading', { name: 'Untitled story' }).waitFor({ timeout: 10000 });
