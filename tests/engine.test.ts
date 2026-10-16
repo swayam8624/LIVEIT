@@ -450,12 +450,12 @@ describe('NPC autonomy and career/district modifiers', () => {
     const initial = createWorld();
     expect(initial.npcLives).toHaveLength(2);
     const after = advanceLife(initial, 'rest', 23);
-    const amelia = after.npcLives?.find(n => n.characterId === 'amelia')!;
-    const noah = after.npcLives?.find(n => n.characterId === 'noah')!;
-    expect(amelia.occupation).toBe('Bookshop owner');
-    expect(amelia.milestones).toContain('shop_open');
-    expect(noah.occupation).toBe('Café supervisor');
-    expect(noah.milestones).toContain('promoted');
+    const amelia = after.npcLives?.find(n => n.characterId === 'amelia');
+    const noah = after.npcLives?.find(n => n.characterId === 'noah');
+    expect(amelia?.occupation).toBe('Bookshop owner');
+    expect(amelia?.milestones).toContain('shop_open');
+    expect(noah?.occupation).toBe('Café supervisor');
+    expect(noah?.milestones).toContain('promoted');
     expect(initial.npcLives?.[0]?.milestones).toHaveLength(0);
     expect(after).toEqual(advanceLife(initial, 'rest', 23));
   });
