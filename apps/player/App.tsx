@@ -453,7 +453,7 @@ export default function App() {
                     />
                   </View>
                   <View style={s.sceneLayout}>
-                    <View style={{ flex: 1.15 }}>
+                    <View style={{ width: '100%' }}>
                       <GameStage
                         mode="story"
                         mood={currentScene(world!, authored).mood}
@@ -1475,7 +1475,7 @@ const s = StyleSheet.create({
     backgroundColor: c.white,
   },
   alert: { padding: 16, backgroundColor: '#fae7d7', borderRadius: 5 },
-  sceneLayout: { gap: 0, alignItems: 'center' },
+  sceneLayout: { gap: 0, alignItems: 'center', width: '100%' },
   dialogue: {
     flex: 1,
     padding: 25,
