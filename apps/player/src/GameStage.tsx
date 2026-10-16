@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {
   Animated,
+  AccessibilityInfo,
   ImageBackground,
   Platform,
   StyleSheet,
@@ -29,22 +30,36 @@ export function GameStage({
 }) {
   const pulse = useRef(new Animated.Value(0)).current;
   useEffect(() => {
-    const animation = Animated.loop(
-      Animated.sequence([
-        Animated.timing(pulse, {
-          toValue: 1,
-          duration: 3500,
-          useNativeDriver: Platform.OS !== 'web',
-        }),
-        Animated.timing(pulse, {
-          toValue: 0,
-          duration: 3500,
-          useNativeDriver: Platform.OS !== 'web',
-        }),
-      ]),
-    );
-    animation.start();
-    return () => animation.stop();
+    let mounted = true;
+    let animation: ReturnType<typeof Animated.loop> | null = null;
+    // Respect the platform's reduced-motion setting. A scene must remain
+    // playable with all motion disabled, including on mobile browsers.
+    void AccessibilityInfo.isReduceMotionEnabled()
+      .then((reducedMotion) => {
+        if (!mounted || reducedMotion) return;
+        animation = Animated.loop(
+          Animated.sequence([
+            Animated.timing(pulse, {
+              toValue: 1,
+              duration: 3500,
+              useNativeDriver: Platform.OS !== 'web',
+            }),
+            Animated.timing(pulse, {
+              toValue: 0,
+              duration: 3500,
+              useNativeDriver: Platform.OS !== 'web',
+            }),
+          ]),
+        );
+        animation.start();
+      })
+      .catch(() => {
+        // Accessibility query failures must not interrupt core gameplay.
+      });
+    return () => {
+      mounted = false;
+      animation?.stop();
+    };
   }, [pulse]);
   const tint =
     mood === 'tense'
@@ -93,7 +108,9 @@ export function GameStage({
       <View pointerEvents="none" style={styles.location}>
         <Text style={styles.locationTitle}>BELLWEATHER</Text>
         <Text style={styles.locationCaption}>
-          THE CORNER CAFÉ · AN EVENING IN OCTOBER
+          {mode === 'story'
+            ? 'THE CORNER CAFÉ · A CONVERSATION THAT MATTERS'
+            : 'A CITY OF POSSIBILITIES · YOUR LIFE, YOUR PACE'}
         </Text>
       </View>
       <View style={styles.content}>{children}</View>
