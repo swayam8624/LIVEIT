@@ -25,7 +25,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Build offline-capable client-side player
+      - name: Build client-side Expo web player
         run: npm run build:player
       - name: Package static web export for hosting review
         uses: actions/upload-artifact@v4
