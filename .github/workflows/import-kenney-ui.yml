@@ -1,0 +1,44 @@
+name: Import pinned CC0 Kenney HUD sprites
+on:
+  push:
+    branches:
+      - feat/living-city-systems
+    paths:
+      - '.github/workflows/import-kenney-ui.yml'
+permissions:
+  contents: write
+jobs:
+  import-reviewed-assets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download only the four reviewed Kenney UI assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC="3694c6879e487c108f55677be7dd2ca75b07cc3b"
+          BASE="https://raw.githubusercontent.com/shorepine/kenney/$SRC/ui/UI%20Pack/Extra"
+          mkdir -p apps/player/assets
+          curl -fL --retry 3 --max-time 30 "$BASE/icon_play_light.png" -o apps/player/assets/kenney-play.png
+          curl -fL --retry 3 --max-time 30 "$BASE/icon_repeat_light.png" -o apps/player/assets/kenney-repeat.png
+          curl -fL --retry 3 --max-time 30 "$BASE/icon_arrow_down_light.png" -o apps/player/assets/kenney-down.png
+          curl -fL --retry 3 --max-time 30 "$BASE/icon_arrow_up_light.png" -o apps/player/assets/kenney-up.png
+          # Blob-object hashes prove exact correspondence to vetted source files.
+          test "$(git hash-object apps/player/assets/kenney-play.png)" = "b50a69081a44da3dc418aaf298c46904a32b1a06"
+          test "$(git hash-object apps/player/assets/kenney-repeat.png)" = "d12c3dfdbc94ba8b3ca3244d5e20923346b99d08"
+          test "$(git hash-object apps/player/assets/kenney-down.png)" = "76900c14a13ab02b334e14b48877ae02be214f9b"
+          test "$(git hash-object apps/player/assets/kenney-up.png)" = "cc001a489ea2cdd3f75a51be7608c731e3f1a54c"
+          file apps/player/assets/kenney-*.png
+      - name: Commit redistributable CC0 art with pinned source
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/player/assets/kenney-*.png
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: import four verified CC0 Kenney UI icons (pinned mirror commit)"
+            git push origin HEAD:feat/living-city-systems
+          fi
