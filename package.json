@@ -1,0 +1,41 @@
+{
+  "name": "living-universe",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "content"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "npm run web -w @living/player",
+    "dev:studio": "npm run dev -w @living/creator-studio",
+    "ios": "npm run ios -w @living/player",
+    "android": "npm run android -w @living/player",
+    "typecheck": "tsc --noEmit && npm run typecheck -w @living/creator-studio",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "build:player": "npm run build -w @living/player",
+    "build:studio": "npm run build -w @living/creator-studio",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5",
+    "eslint": "^9.39.0",
+    "@eslint/js": "^9.39.0",
+    "typescript-eslint": "^8.46.0",
+    "prettier": "^3.9.10",
+    "@types/react": "^19.2.0",
+    "@types/node": "^22.0.0"
+  },
+  "dependencies": {
+    "zod": "^4.1.0"
+  },
+  "type": "module"
+}

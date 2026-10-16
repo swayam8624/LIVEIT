@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Living Universe",
+    "slug": "living-universe",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "studio.livinguniverse.player"
+    },
+    "android": {
+      "package": "studio.livinguniverse.player"
+    },
+    "web": {
+      "bundler": "metro",
+      "name": "Living Universe"
+    },
+    "platforms": ["ios", "android", "web"]
+  }
+}

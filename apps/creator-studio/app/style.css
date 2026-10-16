@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f6f5ef;
+  color: #223c35;
+  font-family: Arial, sans-serif;
+}
+main {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 40px 70px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid #dce0d6;
+}
+header span {
+  font:
+    28px Georgia,
+    serif;
+}
+small,
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #778079;
+}
+.eyebrow {
+  margin-top: 60px;
+  color: #bd623c;
+}
+h1 {
+  font:
+    52px/1.1 Georgia,
+    serif;
+  letter-spacing: -2px;
+  margin: 24px 0;
+}
+h2 {
+  font:
+    25px Georgia,
+    serif;
+}
+h3 {
+  font:
+    21px Georgia,
+    serif;
+}
+.intro {
+  max-width: 530px;
+  line-height: 1.8;
+  color: #778079;
+}
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  margin-top: 45px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  margin: 24px 0;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background: #fffefa;
+  border: 1px solid #dce0d6;
+  border-radius: 5px;
+  padding: 16px;
+  color: #223c35;
+  font:
+    15px/1.7 Arial,
+    sans-serif;
+  margin-top: 10px;
+}
+textarea {
+  resize: vertical;
+}
+.code {
+  font: 12px/1.6 monospace;
+  height: 650px;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+button {
+  background: #375c4c;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.secondary {
+  background: transparent;
+  border: 1px solid #dce0d6;
+  color: #223c35;
+}
+.note,
+aside p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #778079;
+}
+.status {
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+aside {
+  background: #e7ebdf;
+  padding: 5px 24px 15px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+@media (max-width: 750px) {
+  main {
+    padding: 0 22px 40px;
+  }
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  header {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,16 @@
+node_modules/
+.expo/
+dist/
+.next/
+coverage/
+*.tsbuildinfo
+.DS_Store
+.env*
+!.env.example
+apps/player/ios/
+apps/player/android/
+playwright-report/
+test-results/
+
+.playwright-cli/
+**/dist-native/

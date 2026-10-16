@@ -1,0 +1,29 @@
+{
+  "name": "@living/player",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "web": "expo start --web --port 8081",
+    "ios": "expo start --ios",
+    "android": "expo start --android",
+    "build": "expo export --platform web"
+  },
+  "dependencies": {
+    "expo": "~58.0.12",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-native": "0.88.0",
+    "react-native-web": "^0.21.0",
+    "@expo/metro-runtime": "~58.0.0",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@living/world-schema": "*",
+    "@living/story-schema": "*",
+    "@living/simulation-core": "*",
+    "@living/consequence-engine": "*",
+    "@living/narrative-core": "*",
+    "@living/save-system": "*",
+    "@living/content": "*"
+  }
+}
