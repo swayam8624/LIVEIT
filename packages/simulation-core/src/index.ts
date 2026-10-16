@@ -6,6 +6,9 @@ export type { CityOpportunity, CityChoice } from './city';
 import {
   WorldSchema,
   record,
+  DEFAULT_APPEARANCE,
+  AppearanceSchema,
+  type Appearance,
   type World,
   type Character,
 } from '@living/world-schema';
@@ -14,6 +17,7 @@ export function createWorld(
   name = 'Alex Morgan',
   timelineId = 'main',
   pronouns: Character['pronouns'] = 'they/them',
+  appearance: Appearance = DEFAULT_APPEARANCE,
 ): World {
   return WorldSchema.parse({
     schemaVersion: 1,
@@ -24,6 +28,7 @@ export function createWorld(
       id: 'player',
       name,
       pronouns,
+      appearance: AppearanceSchema.parse(appearance),
       ageDays: 23 * 365,
       wellbeing: 72,
       skill: 20,
@@ -109,4 +114,11 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
     `${days} ${days === 1 ? 'day' : 'days'} spent ${activity === 'work' ? 'working' : activity === 'study' ? 'learning' : activity === 'rest' ? 'resting' : 'with Noah'}. Daily living costs: £28.`,
   );
   return WorldSchema.parse(w);
+}
+
+/** Re-style an existing character without purchasing clothing or changing stats. */
+export function setCharacterAppearance(input: World, appearance: Appearance): World {
+  const world = structuredClone(WorldSchema.parse(input));
+  world.player.appearance = AppearanceSchema.parse(appearance);
+  return WorldSchema.parse(world);
 }
