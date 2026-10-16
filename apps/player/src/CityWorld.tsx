@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import {
   DISTRICTS, availableCityOpportunities, cityState, chooseCareer,
-  resolveCityOpportunity, visitDistrict, type CityOpportunity,
+  resolveCityOpportunity, visitDistrict,
 } from '@living/simulation-core';
 import type { CareerPath, World } from '@living/world-schema';
 
