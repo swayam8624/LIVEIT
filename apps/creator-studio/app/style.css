@@ -139,3 +139,30 @@ aside {
     flex-wrap: wrap;
   }
 }
+
+/* LIVEIT cinematic creator workstation treatment. Keeps the existing authoring contract. */
+body { background: #0b1220; color: #f6e9dc; }
+main { max-width: 1440px; }
+header { border-bottom-color: #344056; }
+header span { color: #e8bc83; }
+small, .eyebrow { color: #b4a6a1; }
+.eyebrow { color: #edb987; }
+h1 { color: #f6e9dc; text-shadow: 0 8px 30px rgba(0,0,0,.24); }
+h2 { color: #e9bb87; }
+h3 { color: #f6e9dc; }
+.intro,.note,aside p { color: #bdc5d2; }
+.workspace { gap: 18px; }
+.workspace > section {
+  min-width: 0; padding: 26px; border: 1px solid #344056;
+  border-radius: 14px; background: #162136;
+  box-shadow: 0 24px 48px rgba(0,0,0,.14);
+}
+input,textarea { color: #f7f1e7; background: #0e1929; border: 1px solid #48536a; border-radius: 8px; }
+input:focus-visible,textarea:focus-visible,button:focus-visible { outline: 2px solid #efc68f; outline-offset: 3px; }
+button { background: #ad603e; color: white; border-radius: 9px; font-weight: 700; min-height: 44px; }
+button:hover { filter: brightness(1.12); }
+.secondary { background: #27354b; border-color: #617087; color: #f5e6d5; }
+aside { background: #24344a; border-radius: 12px; border: 1px solid #46526a; }
+.status { color: #f2d19c; }
+.code { min-height: 530px; }
+@media(max-width:750px) { .workspace > section { padding: 16px; } }
