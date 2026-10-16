@@ -22,6 +22,14 @@ const OPTIONS: { [K in Key]: readonly Appearance[K][] } = {
   outfitColor:['navy','charcoal','forest','burgundy','cream','plum','teal','rose','gold'],
   accessory:['none','glasses','earrings','necklace','freckles'],
 };
+const LOOK_PRESETS: readonly {name:string; description:string; options:Partial<Appearance>}[]=[
+  {name:'City Noir',description:'Sharp and understated',options:{skinTone:'tan',hair:'sidepart',hairColor:'midnight',eyes:'hooded',outfit:'smart',outfitColor:'charcoal'}},
+  {name:'Creative Soul',description:'Artistic and warm',options:{skinTone:'caramel',hair:'locs',hairColor:'copper',eyes:'round',outfit:'creative',outfitColor:'teal'}},
+  {name:'Golden Hour',description:'Soft and elegant',options:{skinTone:'olive',hair:'long',hairColor:'chestnut',eyes:'almond',outfit:'evening',outfitColor:'rose'}},
+  {name:'Weekend Wanderer',description:'Relaxed and free',options:{skinTone:'mahogany',hair:'afro',hairColor:'black',eyes:'upturned',outfit:'streetwear',outfitColor:'forest'}},
+  {name:'Vintage Library',description:'Classic and curious',options:{skinTone:'ivory',hair:'bob',hairColor:'auburn',eyes:'hooded',outfit:'vintage',outfitColor:'burgundy',accessory:'glasses'}},
+  {name:'Silver Star',description:'Expressive and bold',options:{skinTone:'cocoa',hair:'pixie',hairColor:'silver',eyes:'almond',eyeColor:'gray',outfit:'formal',outfitColor:'plum'}},
+];
 const GROUP_ICONS: Record<Key,string> = {
   skinTone:'◒', face:'◯', eyes:'◉', eyeColor:'✦', nose:'⌁',
   lips:'♡', brows:'⌃', hair:'♛', hairColor:'✧', body:'♙',
@@ -60,6 +68,18 @@ export function AvatarEditor({
           </Text>
         </View>
       </View>
+      <Text style={styles.presetHeading}>START WITH A LOOK · CUSTOMIZE EVERYTHING AFTERWARDS</Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.presetRow} accessibilityLabel="Character appearance presets">
+        {LOOK_PRESETS.map(preset=>(
+          <Pressable key={preset.name} accessibilityRole="button"
+            accessibilityLabel={'Try '+preset.name+' look'}
+            onPress={()=>onChange({...appearance,...preset.options})}
+            style={styles.presetButton}>
+            <Text style={styles.presetName}>{preset.name}</Text>
+            <Text style={styles.presetDescription}>{preset.description}</Text>
+          </Pressable>
+        ))}
+      </ScrollView>
       <View style={styles.layout}>
         <View style={[styles.preview, compact && { minHeight: 260 }]}>
           <View style={styles.spotlight} />
@@ -124,6 +144,12 @@ export function AvatarEditor({
   );
 }
 const styles = StyleSheet.create({
+  presetHeading:{color:'#c3aa94',fontSize:10,fontWeight:'800',letterSpacing:1.4},
+  presetRow:{gap:9,paddingBottom:3},
+  presetButton:{minWidth:141,minHeight:70,backgroundColor:'#302c42',borderColor:'#806b69',borderWidth:1,borderRadius:9,padding:12,justifyContent:'center',gap:6},
+  presetName:{fontSize:13,fontWeight:'800',color:'#fbe2bf'},
+  presetDescription:{color:'#bcc3d4',fontSize:10},
+
   shell:{ gap:16, width:'100%' },
   header:{ flexDirection:'row',gap:14 },
   kicker:{color:'#e6bc8f',fontSize:10,fontWeight:'800',letterSpacing:1.8},
