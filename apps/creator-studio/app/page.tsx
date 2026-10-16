@@ -47,7 +47,7 @@ export default function Studio() {
 
   const draft = useMemo(() => {
     try {
-      return { value: JSON.parse(raw) as Story, error: '' };
+      return { value: parseStory(JSON.parse(raw)), error: '' };
     } catch (e) {
       return {
         value: null,
@@ -58,6 +58,93 @@ export default function Studio() {
   const story = draft.value;
   const scene = story?.scenes.find((node) => node.id === selected);
   const previewScene = story?.scenes.find((node) => node.id === preview);
+
+  function createStory() {
+    if (!window.confirm('Start a new story? Export your current draft first if you want to keep it.')) return;
+    const id = 'creator.story-' + Date.now().toString(36);
+    const fresh = parseStory({
+      schemaVersion: 1,
+      id,
+      version: 1,
+      title: 'Untitled story',
+      description: 'An interactive chapter',
+      compatibleWorlds: ['modern_life_v1'],
+      minAge: 18,
+      permissions: { relationshipTargets: ['amelia'], memoryTargets: ['amelia'] },
+      entry: 'opening',
+      scenes: [
+        {
+          id: 'opening', speaker: 'Narrator',
+          text: 'The city is quiet. You have a decision to make.',
+          mood: 'reflective', ending: false,
+          choices: [{ id: 'continue', label: 'See what happens', next: 'ending', conditions: [], effects: [] }],
+        },
+        {
+          id: 'ending', speaker: 'Narrator', text: 'A new chapter begins.', mood: 'warm', ending: true, choices: [],
+        },
+      ],
+    });
+    setRaw(JSON.stringify(fresh, null, 2));
+    setSelected(fresh.entry);
+    setPreview(fresh.entry);
+    setMessage('New story created. Rename it, write your scenes, then validate and export.');
+  }
+
+  function addConnectedScene() {
+    if (!story || !scene) return;
+    if (story.scenes.length >= 100) {
+      setMessage('The story already contains the maximum of 100 scenes.');
+      return;
+    }
+    if (!scene.ending && scene.choices.length >= 8) {
+      setMessage('This scene already has the maximum of 8 choices.');
+      return;
+    }
+    let nextNumber = story.scenes.length + 1;
+    while (story.scenes.some((item) => item.id === 'scene_' + nextNumber)) nextNumber++;
+    const id = 'scene_' + nextNumber;
+    const branch: Scene['choices'][number] = {
+      id: 'to_' + id,
+      label: 'Take another path',
+      next: id,
+      conditions: [],
+      effects: [],
+    };
+    const additional: Scene = {
+      id, speaker: 'Narrator', text: 'Write the next moment here.',
+      mood: 'reflective', ending: true, choices: [],
+    };
+    try {
+      const combined = parseStory({
+        ...story,
+        scenes: [
+          ...story.scenes.map((item) =>
+            item.id === scene.id
+              ? { ...item, ending: false, choices: [...item.choices, branch] }
+              : item,
+          ),
+          additional,
+        ],
+      });
+      write(combined);
+      setSelected(id);
+      setPreview(id);
+      setMessage('Connected scene created. Edit its dialogue and the choice leading here.');
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : 'Could not create this branch');
+    }
+  }
+
+  async function copyStory() {
+    const valid = validate();
+    if (!valid) return;
+    try {
+      await navigator.clipboard.writeText(JSON.stringify(valid, null, 2));
+      setMessage('Copied validated story JSON. Paste it into the LIVEIT player story shelf.');
+    } catch {
+      setMessage('Clipboard permission unavailable. Use Export story to download the JSON.');
+    }
+  }
 
   function write(next: Story) {
     setRaw(JSON.stringify(next, null, 2));
@@ -146,6 +233,8 @@ export default function Studio() {
           ✦ LIVEIT <small> / CREATOR STUDIO</small>
         </span>
         <div className="studio-actions">
+          <button type="button" className="secondary" onClick={createStory}>+ New story</button>
+          <button type="button" className="secondary" onClick={() => void copyStory()}>Copy to player</button>
           <label className="upload-control">
             Import JSON
             <input
@@ -205,6 +294,9 @@ export default function Studio() {
               </button>
             ))}
           </div>
+          <button type="button" className="secondary add-branch" onClick={addConnectedScene} disabled={!scene}>
+            + Add connected scene
+          </button>
           <div className="scene-help">
             Story graph links are defined by each choice's destination.
             Validation checks reachability, invalid effects and endings.
