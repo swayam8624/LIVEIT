@@ -249,6 +249,47 @@ export default function Studio() {
       ),
     });
   }
+  function addChoiceEffect(index: number, kind: 'build-trust' | 'damage-trust' | 'memory' | 'clear') {
+    if (!story || !scene) return;
+    const current = scene.choices[index];
+    if (!current) return;
+    if (kind === 'clear') {
+      updateChoice(index, { effects: [] });
+      return;
+    }
+    if (current.effects.length >= 20) {
+      setMessage('A choice can have at most 20 validated effects.');
+      return;
+    }
+    if (kind === 'memory') {
+      const target = story.permissions.memoryTargets[0];
+      if (!target) {
+        setMessage('Add an authorized memory target in the advanced story permissions.');
+        return;
+      }
+      const fact = ('creator_' + scene.id + '_' + current.id + '_' + current.effects.length)
+        .replace(/[^a-zA-Z0-9_]/g, '_').slice(0, 80);
+      updateChoice(index, {
+        effects: [...current.effects, {
+          operation: 'add_memory', target, fact,
+          text: 'You chose: ' + current.label.slice(0, 200),
+        }],
+      });
+      return;
+    }
+    const target = story.permissions.relationshipTargets[0];
+    if (!target) {
+      setMessage('Add an authorized relationship target in the advanced story permissions.');
+      return;
+    }
+    updateChoice(index, {
+      effects: [...current.effects, {
+        operation: 'adjust_relationship', target,
+        value: kind === 'build-trust' ? 5 : -5,
+      }],
+    });
+  }
+
   function validate(): Story | null {
     try {
       const compiled = parseStory(JSON.parse(raw));
@@ -497,11 +538,17 @@ export default function Studio() {
                       </select>
                     </label>
                     <small>
-                      Effects:{' '}
-                      {choice.effects
-                        .map((effect) => effect.operation)
-                        .join(', ') || 'No state changes'}
+                      Consequences:{' '}
+                      {choice.effects.map(e => e.operation === 'adjust_relationship'
+                        ? `${e.target} trust ${e.value > 0 ? '+' : ''}${e.value}`
+                        : `remember: ${e.fact}`).join(' · ') || 'No state changes'}
                     </small>
+                    <div className="effect-controls" aria-label="Add game consequences">
+                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'build-trust')}>+5 trust</button>
+                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'damage-trust')}>−5 trust</button>
+                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'memory')}>+ Memory</button>
+                      <button type="button" className="secondary" disabled={choice.effects.length === 0} onClick={() => addChoiceEffect(index, 'clear')}>Clear effects</button>
+                    </div>
                   </div>
                 ))
               )}
