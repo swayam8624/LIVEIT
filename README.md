@@ -60,17 +60,17 @@ See [verification evidence](docs/VERIFICATION.md) for actual commands, outcomes,
 | `docs`                        | Specification, architecture, art standard, backend design, roadmap        |
 | `tests`                       | Engine, compatibility, persistence and untrusted-content regression tests |
 
-Start with [the specification](docs/PRODUCT_SPEC.md) and [architecture](docs/ARCHITECTURE.md). The project is private and unlicensed pending an owner decision; no open-source license has been selected implicitly.
+Start with [the specification](docs/PRODUCT_SPEC.md) and [architecture](docs/ARCHITECTURE.md). The repository is currently public, but the original LIVEIT code and story content have **not** been explicitly offered under an open-source license; do not assume they are reusable. Third-party Kenney assets have their own CC0-1.0 terms documented in `assets/`.
 
-## Cinematic design branch
+## Cinematic gameplay
 
-The `design/immersive-gameplay-v1` branch is a preview of the new game-like presentation. It includes a bundled illustrated café stage, tappable destinations in Free Life, character portraits, visual-novel dialogue overlay and a significantly more usable Creator Studio. The scene plate is a deliberately compressed placeholder, so expect visible blur rather than final game artwork.
+The cinematic interface overhaul is merged into `main`. This project also has a separate `feat/living-city-systems` development branch adding five explorable districts, deterministic encounters, NPC autonomy, a second original story, and verified CC0 artwork. It includes a bundled illustrated café stage, tappable destinations in Free Life, character portraits, visual-novel dialogue overlay and a significantly more usable Creator Studio. The scene plate is a deliberately compressed placeholder, so expect visible blur rather than final game artwork.
 
 To inspect this preview on your own machine:
 
 ```sh
 git fetch origin
-git switch design/immersive-gameplay-v1
+git switch feat/living-city-systems
 npm ci
 npm run dev
 # In another terminal: npm run dev:studio
@@ -97,3 +97,19 @@ and source references in `art-provenance.json`, and preserves the original ZIP.
 Inspect responsive crops before you commit generated images. This is still
 concept artwork, not a transparent modular character rig, and native devices
 still require hands-on tests. Only use materials whose terms you have verified.
+
+## Expanded Bellweather gameplay (living-city branch)
+
+This gameplay branch adds meaningful gameplay rather than a static mockup: an explorable isometric neighborhood map with five destinations, twenty authored choice events, a career direction, independent NPC life milestones, and **A Place for Second Chances**, a second original 11-scene / three-ending narrative connected to the Amelia reunion. Consequences modify trust, wellbeing, finances, skill, stress, reputation, connections, memories, and saved world history.
+
+Free Life is now best played by choosing a destination, spending time working/studying/socializing/resting, opening the city encounter when a new opportunity appears, and making one of the event's trade-off decisions. Events appear as *game time* advances: there are no ads, energy, paid-choice gates or real-time waiting.
+
+Free/open graphics in this branch are **actually bundled and pinned**:
+- 4 Kenney CC0 UI control icons;
+- 15 Kenney CC0 city tile pieces;
+- 9 Kenney CC0 isometric building pieces (5 currently visible in the main city map).
+All 28 source assets have exact Git blob hashes, pinned upstream commit information and credits in `assets/kenney_ui_provenance.json` and `assets/kenney_city_provenance.json`. Source files remain owned by their respective original authors; the LIVEIT repository itself is not automatically CC0.
+
+Do not merge or publish without green foundation checks, visual screenshots and a review of original asset rights. Physical iOS and Android devices are still untested. The public creator marketplace, remote accounts, UGC moderation, full-body rigs, advanced story editing and real store distribution have not yet been implemented.
+
+See [open-asset intake policy](docs/OPEN_SOURCE_ASSET_PIPELINE.md) for adding legitimate free content.
