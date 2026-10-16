@@ -46,3 +46,16 @@ The connected fal image-generation account returned a `balance_exhausted` error 
 ## Note for Codex
 
 Do not declare the art overhaul complete because checks pass. Insist on actual rendered screenshots for each mode, visual comparisons, verified art provenance, and native smoke testing. Keep improvements in small reviewable commits and preserve all engine contracts.
+
+## Implemented art-backed interaction pass — 16 Oct 2026
+
+- Original generated Bellweather rainy-dusk café preview was added at `apps/player/assets/cafe-dusk.jpg`. It is an intentionally low-resolution bundled concept plate, **not** production art. Full-resolution source artwork must be retained separately and optimized for phone and web delivery before launch.
+- New reusable `GameStage` accepts life/story presentation modes, mood values and responsive content overlays. It has a gentle ambient pulse; full reduced-motion support is outstanding.
+- Free Life now offers tappable in-world destinations for café, work, study, friends and rest. All taps invoke existing typed simulation or narrative actions.
+- Story Mode uses the same original image-backed stage and a vertically arranged dialogue dock. Existing choices still use the story runtime and preserve consequences.
+- Creator Studio now includes scene selection, editing of dialogue/speaker/mood/choice labels/destinations, interactive branch preview, local browser autosave, JSON import and validated export. The preview does **not** execute conditions or apply consequences; engine-backed preview and publishing remain unimplemented.
+- GitHub Actions formatting job normalizes generated source before review. Continue validating tests, web build and native exports. Device QA and screenshot comparison remain mandatory before merging.
+
+### Next production gates
+
+The environment must be upgraded to a production-resolution multi-layer asset, with a real Amelia character rig, dynamic expressions and responsive camera staging. Free Life must move from a single café backdrop to distinct illustrated home/city/work locations. Implement a published-content ingestion pipeline with server-side validation and moderation before allowing public uploads.
