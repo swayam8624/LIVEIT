@@ -1,0 +1,59 @@
+name: Import verified CC0 Kenney city tiles
+on:
+  push:
+    branches:
+      - feat/living-city-systems
+    paths:
+      - '.github/workflows/import-kenney-city.yml'
+permissions:
+  contents: write
+jobs:
+  verified-city-tiles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download pin-verified original city tiles
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC="3694c6879e487c108f55677be7dd2ca75b07cc3b"
+          BASE="https://raw.githubusercontent.com/shorepine/kenney/$SRC/2d/Isometric%20Tiles%20City"
+          mkdir -p apps/player/assets/city
+          while read -r num expected; do
+            name="cityTiles_${num}.png"
+            target="apps/player/assets/city/tile-${num}.png"
+            curl -fsSL --retry 3 --max-time 30 "$BASE/$name" -o "$target"
+            test "$(git hash-object "$target")" = "$expected"
+          done <<'PINS'
+          000 1f70bf18b3721882c0732842875b3ecb01d79cb7
+          001 43ee32cf80700c1b0b75646d529ace01383e36bf
+          002 e3e09d4df38652a3cb91f79abcdd0f5135631a72
+          003 ff0a0dbf7ef4d1c371f96f96b4125f7328e2e84f
+          004 a39648b3b4a9bcee99683b32082f5f0156790dc6
+          005 9388f7e62e8eab62d8215b9211a36415ad0b27ff
+          006 1bf117bcdc2de5f58687a9e585b7558cbd062c23
+          007 6aac9d94bd6c98b5993518dd0b20cc3db287f929
+          008 002c84a501fa962cac771c946d34afdc0dd4d9fa
+          009 5787d2cc1909016f3e2ca1f087c42148f6b12c10
+          010 d012bff90456743691315d4eb1d606ab639a502b
+          011 c4e8d17c9fd5322b722d7dd39382576590f5b70f
+          012 b20773c661237de61a9b354a694c755a8224ea36
+          013 8882361ba4728c33b9ae6982cf4a930f7d98a5f2
+          014 84dea6877af182c43006a889987ea60c59256a10
+          PINS
+      - name: Upload reviewed sprite previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: kenney-cc0-city-tiles
+          path: apps/player/assets/city/*.png
+      - name: Commit verified asset excerpt
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/player/assets/city/*.png
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: fifteen pinned CC0 Kenney isometric city tiles"
+            git push origin HEAD:feat/living-city-systems
+          fi
