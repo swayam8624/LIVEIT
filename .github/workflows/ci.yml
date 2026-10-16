@@ -16,4 +16,4 @@ jobs:
       - run: npm run build:player
       - run: npm run build:studio
       - name: Bundle native iOS and Android assets
-        run: npx expo export --platform ios --platform android --output-dir dist-native
+        run: cd apps/player && npx expo export --platform ios --platform android --output-dir ../../dist-native
