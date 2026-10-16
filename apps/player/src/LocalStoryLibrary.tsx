@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { parseStory, type Story } from '@living/story-schema';
+import { reunion } from '@living/content';
 
 const KEY = 'liveit:local-stories:v1';
 const MAX_STORIES = 12;
@@ -46,7 +47,7 @@ export function LocalStoryLibrary({
     }
     try {
       const parsed = parseStory(JSON.parse(source));
-      if (parsed.id === 'the-space-between') {
+      if (parsed.id === reunion.id) {
         throw new Error('The original story ID is reserved. Choose another story ID.');
       }
       const next = [...stories.filter((item) => item.id !== parsed.id), parsed];
