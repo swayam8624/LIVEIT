@@ -12,6 +12,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Normalize formatting in this ephemeral checkout so CI verifies the
+      # actual code even when the separate formatting commit arrives later.
+      - run: npx prettier --write .
       - run: npm run check
       - run: npm run build:player
       - run: npm run build:studio
