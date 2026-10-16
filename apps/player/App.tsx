@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  Animated,
   Platform,
+  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -25,17 +25,25 @@ import {
 import { loadSave, writeSave, type Save } from '@living/save-system';
 import type { World } from '@living/world-schema';
 import { reunion } from '@living/content';
+import { parseStory, type Story } from '@living/story-schema';
+import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
+import { LocalStoryLibrary } from './src/LocalStoryLibrary';
+import { GameStage } from './src/GameStage';
 const c = {
-  paper: '#f6f5ef',
-  ink: '#223c35',
-  muted: '#778079',
-  line: '#dce0d6',
-  green: '#375c4c',
-  sage: '#e7ebdf',
-  orange: '#bd623c',
-  white: '#fffefa',
+  paper: '#0c1421',
+  ink: '#f7eee1',
+  muted: '#b0b7c4',
+  line: '#3a4457',
+  green: '#a35a37',
+  sage: '#253247',
+  orange: '#f8b97e',
+  white: '#192536',
 };
 const serif = Platform.OS === 'ios' ? 'Georgia' : 'serif';
+const gold = '#ecc391';
+// Metro bundles this original, locally stored character portrait offline.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const ameliaPortrait = require('./assets/amelia-portrait.jpg');
 const money = (n: number) =>
   new Intl.NumberFormat('en-GB', {
     style: 'currency',
@@ -90,142 +98,104 @@ function Stat({
     </View>
   );
 }
-/** Temporary reusable scene made from native primitives; no external asset requests. */
-function Cafe({ warm = false }: { warm?: boolean }) {
-  const breath = useRef(new Animated.Value(0)).current;
-  useEffect(() => {
-    const animation = Animated.loop(
-      Animated.sequence([
-        Animated.timing(breath, {
-          toValue: 1,
-          duration: 2600,
-          useNativeDriver: Platform.OS !== 'web',
-        }),
-        Animated.timing(breath, {
-          toValue: 0,
-          duration: 2600,
-          useNativeDriver: Platform.OS !== 'web',
-        }),
-      ]),
-    );
-    animation.start();
-    return () => animation.stop();
-  }, [breath]);
-  return (
-    <View
-      style={s.cafe}
-      accessibilityLabel="Illustrated café scene, Amelia sitting by a sunlit window"
-    >
-      <View style={s.window}>
-        <View style={s.sun} />
-        {[24, 65, 103, 150, 190, 230].map((left, i) => (
-          <View
-            key={left}
-            style={[
-              s.building,
-              {
-                left,
-                width: 27,
-                height: 35 + (i % 3) * 25,
-                backgroundColor: i % 2 ? '#9aaca0' : '#b4bba5',
-              },
-            ]}
-          />
-        ))}
-        <View style={s.windowCross} />
-        <View style={s.windowCrossH} />
-      </View>
-      <View style={s.picture}>
-        <Text style={{ color: '#747553', fontSize: 25 }}>✳</Text>
-      </View>
-      <View style={s.lampCord} />
-      <View style={s.lamp} />
-      <View style={s.floor} />
-      <View style={s.plantPot} />
-      {[0, 1, 2].map((i) => (
-        <View
-          key={i}
-          style={[
-            s.leaf,
-            {
-              transform: [{ rotate: `${i * 35 - 35}deg` }],
-              left: 32 + i * 13,
-              bottom: 92 + (i % 2) * 28,
-            },
-          ]}
-        />
-      ))}
-      <Animated.View
-        style={[
-          s.person,
-          {
-            transform: [
-              {
-                translateY: breath.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0, -3],
-                }),
-              },
-            ],
-          },
-        ]}
-      >
-        <View style={s.hair} />
-        <View style={s.body} />
-        <View style={s.neck} />
-        <View style={s.face}>
-          <View style={[s.eye, { left: 16 }]} />
-          <View style={[s.eye, { right: 16 }]} />
-          <View
-            style={[
-              s.mouth,
-              warm && { width: 15, borderBottomWidth: 2, borderRadius: 10 },
-            ]}
-          />
-        </View>
-        <View style={s.fringe} />
-      </Animated.View>
-      <View style={s.table} />
-      <View style={s.cup} />
-      <View style={s.cupHandle} />
-      <Text style={s.sceneLabel}>THE CORNER CAFÉ · BELLWEATHER</Text>
-    </View>
-  );
-}
 export default function App() {
   const { width } = useWindowDimensions();
   const wide = width >= 1000;
   const [save, setSave] = useState<Save | null>(null);
+  const scrollRef = useRef<React.ComponentRef<typeof ScrollView>>(null);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState('');
   const [status, setStatus] = useState('');
-  const [tab, setTab] = useState<'life' | 'stories' | 'journal'>('life');
+  const [tab, setTab] = useState<'life' | 'stories' | 'people' | 'journal'>(
+    'life',
+  );
   const [name, setName] = useState('Alex Morgan');
   const [pronouns, setPronouns] = useState<'they/them' | 'she/her' | 'he/him'>(
     'they/them',
   );
   const [sceneOpen, setSceneOpen] = useState(false);
+  const [plannerOpen, setPlannerOpen] = useState(false);
+  const [authored, setAuthored] = useState<Story>(reunion);
   const [days, setDays] = useState(1);
   const [reset, setReset] = useState(false);
   const queue = useRef(Promise.resolve());
   const revision = useRef(0);
   useEffect(() => {
-    loadSave(AsyncStorage)
-      .then((value) => {
+    let mounted = true;
+    // Restore the narrative identity as well as world state. Imported story
+    // content lives in the local library, not inside the authoritative save.
+    // Missing/corrupted content must never overwrite or destroy a saved life.
+    void loadSave(AsyncStorage)
+      .then(async (value) => {
+        if (!mounted) return;
         if (value) {
           setSave(value);
-          setSceneOpen(value.active === 'story');
-          setTab(value.active === 'story' ? 'stories' : 'life');
+          if (value.activeStoryId && value.activeStoryId !== reunion.id) {
+            try {
+              const serialized = await AsyncStorage.getItem(LOCAL_STORIES_KEY);
+              const untrusted: unknown = JSON.parse(serialized ?? '[]');
+              if (!Array.isArray(untrusted))
+                throw new Error('Local story shelf is damaged');
+              const candidate = untrusted.find(
+                (item: unknown) =>
+                  typeof item === 'object' &&
+                  item !== null &&
+                  'id' in item &&
+                  item.id === value.activeStoryId,
+              );
+              if (!candidate)
+                throw new Error('Imported story is no longer installed');
+              const active = parseStory(candidate);
+              if (!mounted) return;
+              setAuthored(active);
+              const timeline =
+                value.active === 'life' ? value.life : value.story!;
+              const progress = timeline.progress.find(
+                (p) => p.storyId === active.id,
+              );
+              setSceneOpen(Boolean(progress && !progress.completed));
+              setTab('stories');
+            } catch {
+              if (!mounted) return;
+              setSceneOpen(false);
+              setTab('stories');
+              setError(
+                'Your life is safe, but the active imported story could not be restored. Re-import the original JSON to continue.',
+              );
+            }
+          } else {
+            const timeline =
+              value.active === 'life' ? value.life : value.story!;
+            const progress = timeline.progress.find(
+              (p) => p.storyId === reunion.id,
+            );
+            setAuthored(reunion);
+            setSceneOpen(
+              value.active === 'story' &&
+                Boolean(progress && !progress.completed),
+            );
+            setTab(value.active === 'story' ? 'stories' : 'life');
+          }
         }
-        setReady(true);
+        if (mounted) setReady(true);
       })
       .catch(() => {
+        if (!mounted) return;
         setError(
           'Your saved life could not be read. It has not been overwritten. Start a new life only if you want to replace it.',
         );
         setReady(true);
       });
+    return () => {
+      mounted = false;
+    };
   }, []);
+  useEffect(() => {
+    // Navigation and new-character creation must not preserve an old scroll
+    // offset that hides the top of the new game screen on small devices.
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+  }, [tab, sceneOpen, Boolean(save)]);
+
   function persist(next: Save) {
     setSave(next);
     setError('');
@@ -270,12 +240,19 @@ export default function App() {
   function openEncounter() {
     if (!save) return;
     run(() => {
-      update(startStory(world!, reunion));
+      const nextWorld = startStory(world!, reunion);
+      setAuthored(reunion);
+      persist(
+        save.active === 'life'
+          ? { ...save, activeStoryId: reunion.id, life: nextWorld }
+          : { ...save, activeStoryId: reunion.id, story: nextWorld },
+      );
       setSceneOpen(true);
     });
   }
   function standalone() {
     if (!save) return;
+    setAuthored(reunion);
     run(() => {
       const story =
         save.story ??
@@ -287,11 +264,12 @@ export default function App() {
           ),
           reunion,
         );
-      persist({ ...save, story, active: 'story' });
+      persist({ ...save, story, active: 'story', activeStoryId: reunion.id });
       setSceneOpen(true);
     });
   }
   function newLife() {
+    setAuthored(reunion);
     run(() => {
       persist({
         version: 1,
@@ -302,6 +280,21 @@ export default function App() {
       setReset(false);
       setTab('life');
       setSceneOpen(false);
+    });
+  }
+  function playImported(story: Story) {
+    if (!save) return;
+    run(() => {
+      const started = startStory(save.life, story);
+      setAuthored(story);
+      persist({
+        ...save,
+        active: 'life',
+        life: started,
+        activeStoryId: story.id,
+      });
+      setTab('stories');
+      setSceneOpen(true);
     });
   }
   if (!ready)
@@ -315,77 +308,54 @@ export default function App() {
     <View style={s.app}>
       <View style={[s.header, { paddingHorizontal: wide ? 48 : 22 }]}>
         <View>
-          <Text style={s.logo}>✳ living universe</Text>
-          <Text style={s.logoSub}>A LIFE. A STORY. YOURS.</Text>
+          <Text style={s.logo}>✦ LIVEIT</Text>
+          <Text style={s.logoSub}>EVERY CHOICE BECOMES A LIFE</Text>
         </View>
-        <View style={s.headerRight}>
-          <View style={s.dot} />
-          <Text style={s.small}>FOUNDATION EDITION</Text>
-        </View>
-      </View>
-      <View style={[s.shell, wide && { flexDirection: 'row' }]}>
-        <View
-          style={[
-            s.sidebar,
-            wide
-              ? { width: 224 }
-              : {
-                  borderRightWidth: 0,
-                  borderBottomWidth: 1,
-                  borderBottomColor: c.line,
-                },
-          ]}
-        >
-          <Text style={[s.eyebrow, { marginBottom: 16 }]}>YOUR UNIVERSE</Text>
-          <View
-            style={
-              !wide
-                ? { flexDirection: 'row', flexWrap: 'wrap', gap: 6 }
-                : undefined
-            }
-          >
-            {(
-              [
-                { id: 'life', icon: '◈', title: 'Free Life' },
-                { id: 'stories', icon: '▤', title: 'Story Mode' },
-                { id: 'journal', icon: '◷', title: 'Your journal' },
-              ] as const
-            ).map((item) => (
-              <Pressable
-                accessibilityRole="tab"
-                accessibilityState={{ selected: tab === item.id }}
-                key={item.id}
-                onPress={() => {
-                  setTab(item.id);
-                  setSceneOpen(false);
-                }}
-                style={[s.nav, tab === item.id && s.navActive]}
-              >
-                <Text style={[s.navText, tab === item.id && { color: c.ink }]}>
-                  {item.icon} {item.title}
-                </Text>
-                {wide && tab === item.id && (
-                  <Text style={{ color: c.green }}>↗</Text>
-                )}
-              </Pressable>
-            ))}
+        {wide && (
+          <View style={s.headerRight}>
+            <View style={s.dot} />
+            <Text style={s.small}>CHAPTER ONE · BELLWEATHER</Text>
           </View>
-          {wide && (
-            <View style={s.sideNote}>
-              <Text style={s.sideQuote}>
-                “Every life is a story still being written.”
+        )}
+      </View>
+      <View style={s.shell}>
+        <View style={s.gameNav}>
+          {(
+            [
+              { id: 'life', symbol: '⌂', title: 'FREE LIFE' },
+              { id: 'stories', symbol: '✧', title: 'STORIES' },
+              { id: 'people', symbol: '♡', title: 'PEOPLE' },
+              { id: 'journal', symbol: '◷', title: 'MEMORIES' },
+            ] as const
+          ).map((entry) => (
+            <Pressable
+              key={entry.id}
+              accessibilityRole="tab"
+              accessibilityState={{ selected: tab === entry.id }}
+              accessibilityLabel={entry.title}
+              onPress={() => {
+                setTab(entry.id);
+                setSceneOpen(false);
+              }}
+              style={({ pressed }) => [
+                s.gameNavItem,
+                tab === entry.id && s.gameNavSelected,
+                pressed && { opacity: 0.75 },
+              ]}
+            >
+              <Text
+                style={[
+                  s.gameNavText,
+                  tab === entry.id && { color: '#f7d6a1' },
+                ]}
+              >
+                {entry.symbol} {entry.title}
               </Text>
-              <View style={s.divider} />
-              <Text style={s.small}>
-                No tickets. No waiting. Every meaningful choice is yours.
-              </Text>
-              <Text style={[s.eyebrow, { marginTop: 24 }]}>
-                A NEW BEGINNING · V0.1
-              </Text>
-            </View>
-          )}
+            </Pressable>
+          ))}
         </View>
         <ScrollView
+          ref={scrollRef}
           contentContainerStyle={[s.main, { padding: wide ? 40 : 22 }]}
         >
           {error !== '' && (
@@ -395,9 +365,18 @@ export default function App() {
           )}
           {!save || reset ? (
             <View style={s.onboard}>
+              <GameStage mode="story" compact>
+                <Text style={s.stageHeadline}>
+                  The life you live is the story you make.
+                </Text>
+                <Text style={s.stageHint}>
+                  A new city. A familiar face. A million things that haven't
+                  happened yet.
+                </Text>
+              </GameStage>
               <Tag>CHAPTER ZERO</Tag>
               <Text style={s.title}>
-                Every story starts{wide ? '\n' : ' '}with someone.
+                A life worth{wide ? '\n' : ' '}remembering.
               </Text>
               <Text style={s.subtitle}>
                 You’re 23, newly arrived in Bellweather. There’s £1,800 in your
@@ -453,7 +432,9 @@ export default function App() {
                     ? 'YOUR LIFE, UNFOLDING'
                     : tab === 'stories'
                       ? 'A DIFFERENT WAY TO LIVE'
-                      : 'THE THINGS THAT STAY'}
+                      : tab === 'people'
+                        ? 'PEOPLE & CONSEQUENCES'
+                        : 'THE THINGS THAT STAY'}
                 </Text>
                 <Text accessibilityLiveRegion="polite" style={s.saveStatus}>
                   {status || 'Saved on this device'}
@@ -468,7 +449,7 @@ export default function App() {
                           ? 'AN ENCOUNTER IN YOUR LIFE'
                           : 'STANDALONE STORY TIMELINE'}
                       </Tag>
-                      <Text style={s.title}>{reunion.title}</Text>
+                      <Text style={s.title}>{authored.title}</Text>
                     </View>
                     <Button
                       label="Save & leave scene"
@@ -479,33 +460,67 @@ export default function App() {
                       }}
                     />
                   </View>
-                  <View
-                    style={[s.sceneLayout, wide && { flexDirection: 'row' }]}
-                  >
-                    <View style={{ flex: 1.15 }}>
-                      <Cafe
-                        warm={currentScene(world!, reunion).mood === 'warm'}
-                      />
-                      <View style={s.sceneMeta}>
-                        <Text style={s.small}>
-                          A NEW BEGINNING · CHAPTER 01
+                  <View style={s.sceneLayout}>
+                    <View style={{ width: '100%' }}>
+                      <GameStage
+                        mode="story"
+                        mood={currentScene(world!, authored).mood}
+                      >
+                        <Text style={s.stageHeadline}>
+                          {authored.id === reunion.id
+                            ? "A conversation you can't undo."
+                            : authored.title}
                         </Text>
+                        <Text style={s.stageHint}>
+                          What you say here becomes part of your history.
+                        </Text>
+                      </GameStage>
+                      <View style={s.sceneMeta}>
+                        <Text style={s.small}>LIVEIT · PLAYABLE ENCOUNTER</Text>
                         <Text style={s.small}>
-                          Amelia’s trust · {world!.relationships[0]?.trust}/100
+                          Consequences are saved to this timeline
                         </Text>
                       </View>
                     </View>
                     <View
                       style={s.dialogue}
-                      key={currentScene(world!, reunion).id}
+                      key={currentScene(world!, authored).id}
                     >
-                      <Text style={s.eyebrow}>
-                        {currentScene(world!, reunion).speaker.toUpperCase()}
-                      </Text>
+                      <View style={s.speakerRow}>
+                        {currentScene(
+                          world!,
+                          authored,
+                        ).speaker.toLowerCase() === 'amelia' ? (
+                          <Image
+                            source={ameliaPortrait}
+                            style={s.speakerPortrait}
+                            accessibilityLabel="Illustrated portrait of Amelia"
+                          />
+                        ) : (
+                          <View style={s.speakerFallback}>
+                            <Text style={s.speakerFallbackText}>
+                              {currentScene(world!, authored)
+                                .speaker.slice(0, 1)
+                                .toUpperCase() || '✧'}
+                            </Text>
+                          </View>
+                        )}
+                        <View style={{ flex: 1, gap: 3 }}>
+                          <Text style={s.eyebrow}>
+                            {currentScene(
+                              world!,
+                              reunion,
+                            ).speaker.toUpperCase()}
+                          </Text>
+                          <Text style={s.small}>
+                            THE SPACE BETWEEN · BELLWEATHER
+                          </Text>
+                        </View>
+                      </View>
                       <Text style={s.dialogueText}>
-                        {currentScene(world!, reunion).text}
+                        {currentScene(world!, authored).text}
                       </Text>
-                      {currentScene(world!, reunion).choices.map((choice) => {
+                      {currentScene(world!, authored).choices.map((choice) => {
                         const available = choice.conditions.every((cond) =>
                           conditionMet(world!, cond),
                         );
@@ -516,7 +531,7 @@ export default function App() {
                             disabled={!available}
                             onPress={() =>
                               run(() =>
-                                update(choose(world!, reunion, choice.id)),
+                                update(choose(world!, authored, choice.id)),
                               )
                             }
                             style={({ pressed }) => [
@@ -533,7 +548,7 @@ export default function App() {
                           </Pressable>
                         );
                       })}
-                      {currentScene(world!, reunion).ending && (
+                      {currentScene(world!, authored).ending && (
                         <>
                           <Tag>CHAPTER COMPLETE · YOUR WORLD REMEMBERS</Tag>
                           <Text style={s.small}>
@@ -576,6 +591,51 @@ export default function App() {
                         : 'MAIN TIMELINE'}
                     </Tag>
                   </View>
+                  <GameStage mode="life">
+                    <Text style={s.stageHeadline}>Your life is happening.</Text>
+                    <Text style={s.stageHint}>
+                      Choose where to spend your time. The city will remember
+                      what you do.
+                    </Text>
+                    <View style={s.destinationRow}>
+                      {(
+                        [
+                          { icon: '✦', label: 'THE CAFÉ', action: 'cafe' },
+                          { icon: '↗', label: 'WORK', action: 'work' },
+                          { icon: '✧', label: 'STUDY', action: 'study' },
+                          { icon: '♡', label: 'FRIENDS', action: 'socialize' },
+                          { icon: '☾', label: 'REST', action: 'rest' },
+                        ] as const
+                      ).map((dest) => (
+                        <Pressable
+                          key={dest.action}
+                          accessibilityRole="button"
+                          accessibilityLabel={dest.label}
+                          style={({ pressed }) => [
+                            s.destination,
+                            pressed && { backgroundColor: '#865037' },
+                          ]}
+                          onPress={() =>
+                            dest.action === 'cafe'
+                              ? openEncounter()
+                              : run(() =>
+                                  update(
+                                    advanceLife(
+                                      world!,
+                                      dest.action as Activity,
+                                      days,
+                                    ),
+                                  ),
+                                )
+                          }
+                        >
+                          <Text style={s.destinationText}>
+                            {dest.icon} {dest.label}
+                          </Text>
+                        </Pressable>
+                      ))}
+                    </View>
+                  </GameStage>
                   <View style={s.stats}>
                     <Stat
                       label="YOUR SAVINGS"
@@ -602,173 +662,228 @@ export default function App() {
                       detail="Time moves when you choose"
                     />
                   </View>
-                  <View style={[s.columns, wide && { flexDirection: 'row' }]}>
-                    <View style={{ flex: 1.15, gap: 22 }}>
-                      <View style={s.sectionHeading}>
-                        <Text style={s.sectionTitle}>
-                          What will you make of today?
+                  <View style={s.timeRow}>
+                    <Text style={s.small}>SIMULATE</Text>
+                    {[1, 7, 30].map((n) => (
+                      <Pressable
+                        key={n}
+                        accessibilityRole="button"
+                        accessibilityLabel={`Advance ${n} days per activity`}
+                        accessibilityState={{ selected: days === n }}
+                        onPress={() => setDays(n)}
+                        style={[s.pace, days === n && s.paceActive]}
+                      >
+                        <Text
+                          style={[
+                            s.paceText,
+                            days === n && { color: '#fff4df' },
+                          ]}
+                        >
+                          {n === 1 ? 'One day' : `${n} days`}
                         </Text>
-                        <Text style={s.small}>THE EVERYDAY MATTERS</Text>
-                      </View>
-                      <View style={s.activities}>
-                        {(
-                          [
-                            {
-                              id: 'work',
-                              icon: '↗',
-                              title: 'Put yourself out there',
-                              detail:
-                                'Work a freelance shift. Build experience.',
-                              result: '+ income · − wellbeing',
-                            },
-                            {
-                              id: 'study',
-                              icon: '✧',
-                              title: 'Learn something new',
-                              detail: 'A little practice opens new doors.',
-                              result: '+ 4 experience per day',
-                            },
-                            {
-                              id: 'socialize',
-                              icon: '☏',
-                              title: 'Make time for a friend',
-                              detail: 'Catch up with Noah. Be present.',
-                              result: '+ connection · + wellbeing',
-                            },
-                            {
-                              id: 'rest',
-                              icon: '☼',
-                              title: 'Take a slower day',
-                              detail: 'A book, an open window, no plans.',
-                              result: '+ 9 wellbeing per day',
-                            },
-                          ] as const
-                        ).map((a) => (
-                          <Pressable
-                            accessibilityRole="button"
-                            accessibilityLabel={a.title}
-                            key={a.id}
-                            style={({ pressed }) => [
-                              s.activity,
-                              pressed && { backgroundColor: c.sage },
-                            ]}
-                            onPress={() =>
-                              run(() =>
-                                update(
-                                  advanceLife(world!, a.id as Activity, days),
-                                ),
-                              )
-                            }
-                          >
-                            <View style={s.activityIcon}>
-                              <Text style={{ fontSize: 25, color: c.green }}>
-                                {a.icon}
-                              </Text>
-                            </View>
-                            <View style={{ flex: 1 }}>
-                              <Text style={s.activityTitle}>{a.title}</Text>
-                              <Text style={s.small}>{a.detail}</Text>
-                              <Text style={s.result}>{a.result}</Text>
-                            </View>
-                            <Text style={{ fontSize: 22, color: c.muted }}>
-                              ↗
-                            </Text>
-                          </Pressable>
-                        ))}
-                      </View>
-                      <View style={s.timeRow}>
-                        <Text style={s.small}>Each activity advances</Text>
-                        {[1, 7, 30].map((n) => (
-                          <Pressable
-                            key={n}
-                            accessibilityRole="button"
-                            accessibilityLabel={`Advance ${n} days per activity`}
-                            accessibilityState={{ selected: days === n }}
-                            onPress={() => setDays(n)}
-                            style={[
-                              s.pace,
-                              days === n && { backgroundColor: c.green },
-                            ]}
-                          >
-                            <Text
-                              style={{
-                                fontSize: 12,
-                                color: days === n ? c.white : c.ink,
-                              }}
-                            >
-                              {n === 1 ? '1 day' : `${n} days`}
-                            </Text>
-                          </Pressable>
-                        ))}
-                      </View>
-                      <Text style={s.small}>
-                        £28 daily living costs are automatic. Study to 25
-                        experience to find steady work.
-                      </Text>
-                    </View>
-                    <View style={{ flex: 0.85, gap: 18 }}>
-                      <View style={s.encounter}>
-                        <Cafe />
-                        <View style={s.encounterBody}>
-                          <Tag>A FAMILIAR FACE</Tag>
-                          <Text style={s.cardTitle}>
-                            Some stories find you.
+                      </Pressable>
+                    ))}
+                    <Text style={s.small}>
+                      No energy timers. You set the pace.
+                    </Text>
+                  </View>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityState={{ expanded: plannerOpen }}
+                    onPress={() => setPlannerOpen((p) => !p)}
+                    style={s.plannerToggle}
+                  >
+                    <Text style={s.plannerToggleText}>
+                      {plannerOpen
+                        ? '− CLOSE LIFE PLANNER'
+                        : '+ OPEN LIFE PLANNER & RELATIONSHIPS'}
+                    </Text>
+                    <Text style={s.plannerToggleText}>
+                      {plannerOpen ? '⌃' : '⌄'}
+                    </Text>
+                  </Pressable>
+                  {plannerOpen && (
+                    <View style={[s.columns, wide && { flexDirection: 'row' }]}>
+                      <View style={{ flex: 1.15, gap: 22 }}>
+                        <View style={s.sectionHeading}>
+                          <Text style={s.sectionTitle}>
+                            What will you make of today?
                           </Text>
-                          <Text style={s.cardDescription}>
-                            Amelia is in town. There’s a table by the window,
-                            and a conversation you’ve both been avoiding.
-                          </Text>
-                          <Button
-                            label={
-                              world!.progress.some(
-                                (p) => p.storyId === reunion.id && p.completed,
-                              )
-                                ? 'Revisit your ending →'
-                                : world!.progress.some(
-                                      (p) => p.storyId === reunion.id,
-                                    )
-                                  ? 'Continue the conversation →'
-                                  : 'Meet Amelia →'
-                            }
-                            onPress={openEncounter}
-                          />
+                          <Text style={s.small}>THE EVERYDAY MATTERS</Text>
                         </View>
-                      </View>
-                      <View style={s.people}>
-                        <Text style={s.eyebrow}>THE PEOPLE IN YOUR ORBIT</Text>
-                        {world!.relationships.map((p, i) => (
-                          <View style={s.personRow} key={p.characterId}>
-                            <View
+                        <View style={s.activities}>
+                          {(
+                            [
+                              {
+                                id: 'work',
+                                icon: '↗',
+                                title: 'Put yourself out there',
+                                detail:
+                                  'Work a freelance shift. Build experience.',
+                                result: '+ income · − wellbeing',
+                              },
+                              {
+                                id: 'study',
+                                icon: '✧',
+                                title: 'Learn something new',
+                                detail: 'A little practice opens new doors.',
+                                result: '+ 4 experience per day',
+                              },
+                              {
+                                id: 'socialize',
+                                icon: '☏',
+                                title: 'Make time for a friend',
+                                detail: 'Catch up with Noah. Be present.',
+                                result: '+ connection · + wellbeing',
+                              },
+                              {
+                                id: 'rest',
+                                icon: '☼',
+                                title: 'Take a slower day',
+                                detail: 'A book, an open window, no plans.',
+                                result: '+ 9 wellbeing per day',
+                              },
+                            ] as const
+                          ).map((a) => (
+                            <Pressable
+                              accessibilityRole="button"
+                              accessibilityLabel={a.title}
+                              key={a.id}
+                              style={({ pressed }) => [
+                                s.activity,
+                                pressed && { backgroundColor: c.sage },
+                              ]}
+                              onPress={() =>
+                                run(() =>
+                                  update(
+                                    advanceLife(world!, a.id as Activity, days),
+                                  ),
+                                )
+                              }
+                            >
+                              <View style={s.activityIcon}>
+                                <Text style={{ fontSize: 25, color: c.green }}>
+                                  {a.icon}
+                                </Text>
+                              </View>
+                              <View style={{ flex: 1 }}>
+                                <Text style={s.activityTitle}>{a.title}</Text>
+                                <Text style={s.small}>{a.detail}</Text>
+                                <Text style={s.result}>{a.result}</Text>
+                              </View>
+                              <Text style={{ fontSize: 22, color: c.muted }}>
+                                ↗
+                              </Text>
+                            </Pressable>
+                          ))}
+                        </View>
+                        <View style={s.timeRow}>
+                          <Text style={s.small}>Each activity advances</Text>
+                          {[1, 7, 30].map((n) => (
+                            <Pressable
+                              key={n}
+                              accessibilityRole="button"
+                              accessibilityLabel={`Advance ${n} days per activity`}
+                              accessibilityState={{ selected: days === n }}
+                              onPress={() => setDays(n)}
                               style={[
-                                s.avatar,
-                                { backgroundColor: i ? '#dfe7d7' : '#ead7cb' },
+                                s.pace,
+                                days === n && { backgroundColor: c.green },
                               ]}
                             >
-                              <Text style={s.avatarText}>{i ? 'N' : 'A'}</Text>
-                            </View>
-                            <View style={{ flex: 1 }}>
-                              <Text style={s.activityTitle}>
-                                {i ? 'Noah Bennett' : 'Amelia Chen'}
+                              <Text
+                                style={{
+                                  fontSize: 12,
+                                  color: days === n ? c.white : c.ink,
+                                }}
+                              >
+                                {n === 1 ? '1 day' : `${n} days`}
                               </Text>
-                              <Text style={s.small}>
-                                {i
-                                  ? 'Your first friend in the city'
-                                  : 'An old friend. An unfinished chapter.'}
-                              </Text>
-                            </View>
-                            <Text style={s.trust}>
-                              {p.trust}
-                              <Text style={s.small}>/100</Text>
+                            </Pressable>
+                          ))}
+                        </View>
+                        <Text style={s.small}>
+                          £28 daily living costs are automatic. Study to 25
+                          experience to find steady work.
+                        </Text>
+                      </View>
+                      <View style={{ flex: 0.85, gap: 18 }}>
+                        <View style={s.encounter}>
+                          <GameStage mode="life" compact />
+                          <View style={s.encounterBody}>
+                            <Tag>A FAMILIAR FACE</Tag>
+                            <Text style={s.cardTitle}>
+                              Some stories find you.
                             </Text>
+                            <Text style={s.cardDescription}>
+                              Amelia is in town. There’s a table by the window,
+                              and a conversation you’ve both been avoiding.
+                            </Text>
+                            <Button
+                              label={
+                                world!.progress.some(
+                                  (p) =>
+                                    p.storyId === reunion.id && p.completed,
+                                )
+                                  ? 'Revisit your ending →'
+                                  : world!.progress.some(
+                                        (p) => p.storyId === reunion.id,
+                                      )
+                                    ? 'Continue the conversation →'
+                                    : 'Meet Amelia →'
+                              }
+                              onPress={openEncounter}
+                            />
                           </View>
-                        ))}
+                        </View>
+                        <View style={s.people}>
+                          <Text style={s.eyebrow}>
+                            THE PEOPLE IN YOUR ORBIT
+                          </Text>
+                          {world!.relationships.map((p, i) => (
+                            <View style={s.personRow} key={p.characterId}>
+                              <View
+                                style={[
+                                  s.avatar,
+                                  {
+                                    backgroundColor: i ? '#dfe7d7' : '#ead7cb',
+                                  },
+                                ]}
+                              >
+                                {i ? (
+                                  <Text style={s.avatarText}>N</Text>
+                                ) : (
+                                  <Image
+                                    source={ameliaPortrait}
+                                    style={s.avatarImage}
+                                    accessibilityLabel="Amelia Chen's portrait"
+                                  />
+                                )}
+                              </View>
+                              <View style={{ flex: 1 }}>
+                                <Text style={s.activityTitle}>
+                                  {i ? 'Noah Bennett' : 'Amelia Chen'}
+                                </Text>
+                                <Text style={s.small}>
+                                  {i
+                                    ? 'Your first friend in the city'
+                                    : 'An old friend. An unfinished chapter.'}
+                                </Text>
+                              </View>
+                              <Text style={s.trust}>
+                                {p.trust}
+                                <Text style={s.small}>/100</Text>
+                              </Text>
+                            </View>
+                          ))}
+                        </View>
                       </View>
                     </View>
-                  </View>
+                  )}
                 </>
               ) : tab === 'stories' ? (
                 <>
-                  <Text style={s.title}>Step into a story.</Text>
+                  <Text style={s.title}>Enter another life.</Text>
                   <Text style={s.subtitle}>
                     Another perspective. A different possibility. Still your
                     choices.
@@ -777,7 +892,7 @@ export default function App() {
                     style={[s.storyFeature, wide && { flexDirection: 'row' }]}
                   >
                     <View style={{ flex: 1 }}>
-                      <Cafe />
+                      <GameStage mode="life" compact />
                     </View>
                     <View style={s.storyFeatureText}>
                       <Tag>ORIGINAL STORY · FAMILY & FRIENDSHIP</Tag>
@@ -833,6 +948,94 @@ export default function App() {
                       your everyday world, or play independently here. Either
                       way, the world remembers.
                     </Text>
+                  </View>
+                  <LocalStoryLibrary
+                    onPlay={playImported}
+                    protectedIds={[
+                      ...save.life.progress.map((p) => p.storyId),
+                      ...(save.story?.progress.map((p) => p.storyId) ?? []),
+                    ]}
+                  />
+                </>
+              ) : tab === 'people' ? (
+                <>
+                  <Text style={s.title}>Your people. Your history.</Text>
+                  <Text style={s.subtitle}>
+                    Relationships change as life goes on. People remember what
+                    you said, and whether you made time for them.
+                  </Text>
+                  <View style={s.peopleGallery}>
+                    {world!.relationships.map((friend) => {
+                      const amelia = friend.characterId === 'amelia';
+                      const name = amelia ? 'Amelia Chen' : 'Noah Bennett';
+                      const memories = world!.memories.filter(
+                        (memory) => memory.subject === friend.characterId,
+                      );
+                      return (
+                        <View key={friend.characterId} style={s.profileCard}>
+                          <View style={s.profileTop}>
+                            {amelia ? (
+                              <Image
+                                source={ameliaPortrait}
+                                style={s.profilePortrait}
+                                accessibilityLabel="Amelia Chen's illustrated portrait"
+                              />
+                            ) : (
+                              <View style={s.profileUnknown}>
+                                <Text style={s.profileUnknownText}>N</Text>
+                              </View>
+                            )}
+                            <View style={{ flex: 1, gap: 5 }}>
+                              <Text style={s.cardTitle}>{name}</Text>
+                              <Text style={s.small}>
+                                {amelia
+                                  ? 'An old friend with unfinished history'
+                                  : 'Your first friend in Bellweather'}
+                              </Text>
+                              <Text style={s.eyebrow}>
+                                LAST SPOKEN · DAY {friend.lastContactDay + 1}
+                              </Text>
+                            </View>
+                          </View>
+                          <View style={s.trustHeading}>
+                            <Text style={s.eyebrow}>TRUST</Text>
+                            <Text style={s.trust}>{friend.trust}/100</Text>
+                          </View>
+                          <View
+                            style={s.trustTrack}
+                            accessibilityLabel={`${name} trust ${friend.trust} out of 100`}
+                          >
+                            <View
+                              style={[
+                                s.trustFill,
+                                { width: `${friend.trust}%` },
+                              ]}
+                            />
+                          </View>
+                          <Text style={s.small}>
+                            {memories.length === 0
+                              ? 'No shared story memories yet.'
+                              : `${memories.length} remembered moment${memories.length === 1 ? '' : 's'}`}
+                          </Text>
+                          <Button
+                            label={
+                              amelia
+                                ? 'Meet at the café →'
+                                : 'Spend time together →'
+                            }
+                            onPress={() =>
+                              amelia
+                                ? openEncounter()
+                                : run(() =>
+                                    update(
+                                      advanceLife(world!, 'socialize', days),
+                                    ),
+                                  )
+                            }
+                          />
+                        </View>
+                      );
+                    })}
                   </View>
                 </>
               ) : (
@@ -907,6 +1110,170 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  peopleGallery: { flexDirection: 'row', flexWrap: 'wrap', gap: 17 },
+  profileCard: {
+    flexGrow: 1,
+    flexBasis: 280,
+    maxWidth: 620,
+    backgroundColor: '#1c293d',
+    borderRadius: 13,
+    borderWidth: 1,
+    borderColor: '#544b52',
+    padding: 18,
+    gap: 14,
+  },
+  profileTop: { flexDirection: 'row', alignItems: 'center', gap: 16 },
+  profilePortrait: {
+    width: 95,
+    height: 112,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#c38c68',
+  },
+  profileUnknown: {
+    width: 95,
+    height: 112,
+    backgroundColor: '#3e4659',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  profileUnknownText: { fontFamily: serif, color: '#f3c694', fontSize: 50 },
+  trustHeading: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  trustTrack: {
+    height: 8,
+    backgroundColor: '#0c1729',
+    borderRadius: 9,
+    overflow: 'hidden',
+  },
+  trustFill: { height: '100%', backgroundColor: '#e7ac78', borderRadius: 9 },
+
+  paceActive: {
+    backgroundColor: '#9d5634',
+    borderColor: '#e5b47b',
+    borderWidth: 1,
+  },
+  paceText: { color: '#cfdae5', fontSize: 12, fontWeight: '700' },
+  plannerToggle: {
+    minHeight: 50,
+    paddingHorizontal: 17,
+    paddingVertical: 12,
+    borderRadius: 11,
+    borderWidth: 1,
+    borderColor: '#785840',
+    backgroundColor: '#1a273b',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  plannerToggleText: {
+    color: '#e3bd8d',
+    fontSize: 12,
+    fontWeight: '800',
+    letterSpacing: 1,
+  },
+
+  gameNav: {
+    flexDirection: 'row',
+    gap: 5,
+    maxWidth: 900,
+    alignSelf: 'center',
+    backgroundColor: '#121c2b',
+    borderBottomColor: '#414457',
+    borderBottomWidth: 1,
+    paddingVertical: 11,
+    paddingHorizontal: 6,
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+  gameNavItem: {
+    minHeight: 44,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#3e4557',
+    borderRadius: 9,
+    paddingHorizontal: 3,
+    backgroundColor: '#1d293a',
+  },
+  gameNavSelected: {
+    backgroundColor: '#4a3334',
+    borderColor: '#dba46f',
+  },
+  gameNavText: {
+    fontSize: 10,
+    color: '#d9d7d8',
+    fontWeight: '800',
+    letterSpacing: 0,
+    textAlign: 'center',
+  },
+
+  speakerRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
+  speakerFallback: {
+    width: 66,
+    height: 78,
+    borderRadius: 10,
+    borderColor: '#e3a66d',
+    borderWidth: 2,
+    backgroundColor: '#3b3450',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  speakerFallbackText: { fontSize: 30, color: '#f4c892', fontWeight: '700' },
+  speakerPortrait: {
+    width: 66,
+    height: 78,
+    borderRadius: 10,
+    borderColor: '#e3a66d',
+    borderWidth: 2,
+  },
+  avatarImage: { width: 42, height: 42, borderRadius: 22 },
+
+  stageHeadline: {
+    fontFamily: serif,
+    fontSize: 33,
+    color: '#fff0d3',
+    fontWeight: '700',
+    textShadowColor: 'rgba(0,0,0,0.75)',
+    textShadowRadius: 12,
+    maxWidth: 560,
+  },
+  stageHint: {
+    fontSize: 13,
+    lineHeight: 20,
+    color: '#f6e8df',
+    maxWidth: 580,
+    textShadowColor: '#000000',
+    textShadowRadius: 8,
+  },
+  destinationRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginTop: 13,
+  },
+  destination: {
+    minHeight: 46,
+    justifyContent: 'center',
+    paddingHorizontal: 14,
+    borderRadius: 9,
+    borderWidth: 1,
+    borderColor: '#c99064',
+    backgroundColor: 'rgba(9,15,25,0.88)',
+  },
+  destinationText: {
+    color: '#fff1dc',
+    letterSpacing: 0.8,
+    fontSize: 11,
+    fontWeight: '800',
+  },
+
   app: { flex: 1, backgroundColor: c.paper },
   loading: {
     flex: 1,
@@ -916,14 +1283,15 @@ const s = StyleSheet.create({
     backgroundColor: c.paper,
   },
   header: {
-    height: 100,
+    height: 84,
+    backgroundColor: '#101b2c',
     borderBottomWidth: 1,
     borderBottomColor: c.line,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  logo: { fontFamily: serif, fontSize: 28, color: c.ink, letterSpacing: -1 },
+  logo: { fontFamily: serif, fontSize: 29, color: gold, letterSpacing: -1 },
   logoSub: {
     fontSize: 8,
     letterSpacing: 2.7,
@@ -948,9 +1316,13 @@ const s = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  navActive: { backgroundColor: c.sage },
+  navActive: {
+    backgroundColor: '#303147',
+    borderLeftWidth: 3,
+    borderLeftColor: gold,
+  },
   navText: { fontSize: 14, color: c.muted },
-  sideNote: { marginTop: 100, padding: 7 },
+  sideNote: { marginTop: 100, padding: 7, opacity: 0.55 },
   sideQuote: {
     fontFamily: serif,
     fontSize: 22,
@@ -981,7 +1353,7 @@ const s = StyleSheet.create({
     marginVertical: 6,
   },
   title: {
-    fontSize: 44,
+    fontSize: 48,
     fontFamily: serif,
     letterSpacing: -1.8,
     color: c.ink,
@@ -1000,16 +1372,16 @@ const s = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     borderWidth: 1,
-    borderColor: c.line,
-    borderRadius: 6,
-    backgroundColor: c.white,
+    borderColor: '#6e5448',
+    borderRadius: 12,
+    backgroundColor: '#101b2c',
     marginVertical: 8,
   },
-  stat: { flex: 1, minWidth: 155, padding: 22, gap: 9 },
-  statValue: { fontFamily: serif, fontSize: 30, color: c.ink },
+  stat: { flex: 1, minWidth: 140, padding: 16, gap: 4 },
+  statValue: { fontFamily: serif, fontSize: 25, color: gold },
   columns: { gap: 30, alignItems: 'stretch' },
   sectionHeading: { gap: 8 },
-  sectionTitle: { fontFamily: serif, fontSize: 24, color: c.ink, marginTop: 8 },
+  sectionTitle: { fontFamily: serif, fontSize: 26, color: gold, marginTop: 8 },
   activities: { gap: 10 },
   activity: {
     padding: 18,
@@ -1049,21 +1421,23 @@ const s = StyleSheet.create({
     borderRadius: 4,
   },
   encounter: {
-    backgroundColor: c.white,
+    backgroundColor: '#192536',
     borderWidth: 1,
     borderColor: c.line,
     borderRadius: 8,
     overflow: 'hidden',
   },
   encounterBody: { padding: 22, gap: 10 },
-  cardTitle: { fontFamily: serif, fontSize: 26, color: c.ink },
+  cardTitle: { fontFamily: serif, fontSize: 28, color: gold },
   cardDescription: { fontSize: 13, lineHeight: 22, color: c.muted },
   button: {
     backgroundColor: c.green,
     paddingVertical: 13,
     paddingHorizontal: 17,
-    borderRadius: 4,
+    borderRadius: 8,
     alignSelf: 'flex-start',
+    borderWidth: 1,
+    borderColor: '#dba36f',
   },
   buttonText: { fontSize: 12, color: c.white, fontWeight: '600' },
   secondary: {
@@ -1080,8 +1454,8 @@ const s = StyleSheet.create({
   },
   personRow: { flexDirection: 'row', alignItems: 'center', gap: 11 },
   avatar: {
-    width: 36,
-    height: 36,
+    width: 42,
+    height: 42,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
@@ -1114,14 +1488,18 @@ const s = StyleSheet.create({
     backgroundColor: c.white,
   },
   alert: { padding: 16, backgroundColor: '#fae7d7', borderRadius: 5 },
-  sceneLayout: { gap: 30 },
+  sceneLayout: { gap: 0, alignItems: 'center', width: '100%' },
   dialogue: {
     flex: 1,
     padding: 25,
+    width: '100%',
+    maxWidth: 980,
+    marginTop: -35,
+    zIndex: 2,
     borderWidth: 1,
     borderColor: c.line,
-    backgroundColor: c.white,
-    borderRadius: 6,
+    backgroundColor: '#18243a',
+    borderRadius: 12,
     gap: 18,
   },
   dialogueText: {
@@ -1135,7 +1513,8 @@ const s = StyleSheet.create({
     padding: 17,
     borderWidth: 1,
     borderColor: c.line,
-    borderRadius: 4,
+    borderRadius: 10,
+    backgroundColor: '#29374c',
     flexDirection: 'row',
     justifyContent: 'space-between',
     gap: 10,
@@ -1176,9 +1555,9 @@ const s = StyleSheet.create({
     gap: 8,
   },
   cafe: {
-    height: 300,
+    height: 380,
     minWidth: 250,
-    backgroundColor: '#d7c9af',
+    backgroundColor: '#26344a',
     overflow: 'hidden',
     position: 'relative',
   },
@@ -1188,9 +1567,9 @@ const s = StyleSheet.create({
     top: 20,
     width: '58%',
     height: 177,
-    backgroundColor: '#dce2ce',
+    backgroundColor: '#4b6179',
     borderWidth: 7,
-    borderColor: '#8b8c73',
+    borderColor: '#4b3540',
     overflow: 'hidden',
   },
   sun: {
@@ -1200,7 +1579,7 @@ const s = StyleSheet.create({
     width: 65,
     height: 65,
     borderRadius: 40,
-    backgroundColor: '#eee2ad',
+    backgroundColor: '#f5ad73',
   },
   building: { position: 'absolute', bottom: 0 },
   windowCross: {
@@ -1255,7 +1634,7 @@ const s = StyleSheet.create({
     left: 0,
     right: 0,
     height: 75,
-    backgroundColor: '#b5ab8f',
+    backgroundColor: '#5d4b55',
   },
   plantPot: {
     position: 'absolute',
@@ -1353,7 +1732,7 @@ const s = StyleSheet.create({
     left: '28%',
     width: '73%',
     height: 16,
-    backgroundColor: '#84674b',
+    backgroundColor: '#68424a',
     borderRadius: 30,
   },
   cup: {
@@ -1362,7 +1741,7 @@ const s = StyleSheet.create({
     left: '40%',
     width: 26,
     height: 26,
-    backgroundColor: '#f1e8d1',
+    backgroundColor: '#ecd2b1',
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
   },
@@ -1373,7 +1752,7 @@ const s = StyleSheet.create({
     width: 14,
     height: 14,
     borderWidth: 3,
-    borderColor: '#f1e8d1',
+    borderColor: '#ecd2b1',
     borderRadius: 9,
   },
   sceneLabel: {
@@ -1382,6 +1761,6 @@ const s = StyleSheet.create({
     left: 16,
     fontSize: 8,
     letterSpacing: 2,
-    color: '#f9f4df',
+    color: '#f8cd90',
   },
 });

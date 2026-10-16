@@ -1,0 +1,34 @@
+name: Design-branch formatting
+on:
+  push:
+    branches:
+      - design/immersive-gameplay-v1
+permissions:
+  contents: write
+concurrency:
+  group: liveit-design-format
+  cancel-in-progress: false
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Format current design changes
+        run: npx prettier --write apps/player/App.tsx apps/player/src/GameStage.tsx apps/player/src/LocalStoryLibrary.tsx apps/creator-studio/app/page.tsx apps/creator-studio/app/style.css docs/IMMERSIVE_GAMEPLAY_GATE.md README.md tests/engine.test.ts
+      - name: Commit formatted files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/player/App.tsx apps/player/src/GameStage.tsx apps/player/src/LocalStoryLibrary.tsx apps/creator-studio/app/page.tsx apps/creator-studio/app/style.css docs/IMMERSIVE_GAMEPLAY_GATE.md README.md tests/engine.test.ts
+          if ! git diff --cached --quiet; then
+            git commit -m "style: format immersive game and creator changes"
+            git push origin HEAD:design/immersive-gameplay-v1
+          fi

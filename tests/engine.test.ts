@@ -253,3 +253,91 @@ describe('versioned persistence', () => {
     ).toThrow();
   });
 });
+
+describe('Creator Studio to local player story bridge', () => {
+  it('accepts a JSON-exported story and persists its effects in the main life', () => {
+    const authored = copy();
+    authored.id = 'creator.cafe-encounter';
+    authored.title = 'An Evening to Remember';
+    authored.scenes[0]!.text = 'You recognize an old friend across the room.';
+    const parsed = parseStory(JSON.parse(JSON.stringify(authored)));
+
+    const original = createWorld('Alex Morgan');
+    const started = startStory(original, parsed);
+    const firstChoice = choose(started, parsed, 'apologize');
+    const ending = choose(firstChoice, parsed, 'truth');
+    const restored = decodeSave(
+      encodeSave({ version: 1, active: 'life', life: ending, story: null }),
+    );
+
+    expect(original.relationships[0]!.trust).toBe(35);
+    expect(restored.life.relationships[0]!.trust).toBe(57);
+    expect(restored.life.progress[0]!.storyId).toBe('creator.cafe-encounter');
+    expect(restored.life.progress[0]!.completed).toBe(true);
+    expect(restored.life.memories).toHaveLength(2);
+  });
+
+  it('does not permit imported stories to execute arbitrary commands or effects', () => {
+    const unsafe = {
+      ...copy(),
+      id: 'creator.unsafe',
+      injectedCode: 'process.exit(0)',
+    };
+    expect(() => parseStory(unsafe)).toThrow();
+
+    const unauthorized = copy();
+    unauthorized.id = 'creator.unauthorized';
+    unauthorized.scenes[0]!.choices[0]!.effects[0] = {
+      operation: 'adjust_relationship',
+      target: 'noah',
+      value: 20,
+    };
+    expect(() => parseStory(unauthorized)).toThrow('permissions');
+  });
+});
+
+describe('imported narrative persistence and compatibility', () => {
+  it('loads legacy version-one saves without a narrative ID', () => {
+    const legacy = {
+      version: 1 as const,
+      active: 'life' as const,
+      life: createWorld(),
+      story: null,
+    };
+    const restored = decodeSave(JSON.stringify(legacy));
+    expect(restored.activeStoryId).toBeUndefined();
+    expect(restored).toEqual(legacy);
+  });
+
+  it('preserves an imported story identifier and in-progress scene across a full save round trip', () => {
+    const imported = copy();
+    imported.id = 'creator.a-new-moment';
+    const incomplete = choose(createWorld(), imported, 'listen');
+    expect(currentScene(incomplete, imported).id).toBe('listening');
+    const checkpoint: Save = {
+      version: 1,
+      active: 'life',
+      activeStoryId: imported.id,
+      life: incomplete,
+      story: null,
+    };
+    const restored = decodeSave(encodeSave(checkpoint));
+    expect(restored.activeStoryId).toBe(imported.id);
+    expect(currentScene(restored.life, imported).id).toBe('listening');
+    expect(
+      choose(restored.life, imported, 'support').relationships[0]?.trust,
+    ).toBe(51);
+  });
+
+  it('rejects invalid active narrative identifiers', () => {
+    const data: Save = {
+      version: 1,
+      active: 'life',
+      life: createWorld(),
+      story: null,
+    };
+    expect(() =>
+      decodeSave(JSON.stringify({ ...data, activeStoryId: '' })),
+    ).toThrow();
+  });
+});

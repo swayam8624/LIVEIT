@@ -1,0 +1,56 @@
+name: LIVEIT visual smoke review
+on:
+  push:
+    branches:
+      - design/immersive-gameplay-v1
+    paths:
+      - 'apps/player/**'
+      - 'apps/creator-studio/**'
+      - 'tools/visual-smoke.mjs'
+      - '.github/workflows/visual-review.yml'
+permissions:
+  contents: read
+jobs:
+  screenshot-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Install isolated visual test tooling
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.58.0
+          npx playwright install --with-deps chromium
+      - name: Start web player and Creator Studio
+        shell: bash
+        run: |
+          npm run dev > /tmp/liveit-expo.log 2>&1 &
+          npm run dev:studio > /tmp/liveit-studio.log 2>&1 &
+          for i in $(seq 1 90); do
+            if curl -fsS http://127.0.0.1:8081/ > /dev/null && curl -fsS http://127.0.0.1:3000/ > /dev/null; then
+              echo 'Both development servers are ready'
+              exit 0
+            fi
+            sleep 2
+          done
+          cat /tmp/liveit-expo.log
+          cat /tmp/liveit-studio.log
+          exit 1
+      - name: Exercise and capture game screens
+        run: node tools/visual-smoke.mjs
+      - name: Upload screenshots for art review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: liveit-visual-review
+          path: artifacts/visual-smoke/
+          if-no-files-found: warn
+      - name: Show dev server logs on failure
+        if: failure()
+        run: |
+          tail -n 100 /tmp/liveit-expo.log || true
+          tail -n 100 /tmp/liveit-studio.log || true
