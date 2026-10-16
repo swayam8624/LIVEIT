@@ -1181,6 +1181,8 @@ const s = StyleSheet.create({
   gameNav: {
     flexDirection: 'row',
     gap: 5,
+    maxWidth: 900,
+    alignSelf: 'center',
     backgroundColor: '#121c2b',
     borderBottomColor: '#414457',
     borderBottomWidth: 1,
