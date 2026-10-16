@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Living Universe",
+    "name": "LIVEIT",
     "slug": "living-universe",
     "version": "0.1.0",
     "orientation": "default",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "studio.livinguniverse.player"
@@ -14,8 +14,12 @@
     },
     "web": {
       "bundler": "metro",
-      "name": "Living Universe"
+      "name": "LIVEIT"
     },
-    "platforms": ["ios", "android", "web"]
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ]
   }
 }

@@ -1,0 +1,36 @@
+name: Package LIVEIT web preview
+on:
+  push:
+    branches:
+      - main
+      - chore/cross-platform-preview
+    paths:
+      - 'apps/player/**'
+      - 'packages/**'
+      - 'content/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/web-export.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  web-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build client-side Expo web player
+        run: npm run build:player
+      - name: Package static web export for hosting review
+        uses: actions/upload-artifact@v4
+        with:
+          name: liveit-web-static-preview
+          path: apps/player/dist/
+          if-no-files-found: error
+          retention-days: 30
