@@ -387,9 +387,7 @@ export default function App() {
                         </Text>
                       </GameStage>
                       <View style={s.sceneMeta}>
-                        <Text style={s.small}>
-                          LIVEIT · PLAYABLE ENCOUNTER
-                        </Text>
+                        <Text style={s.small}>LIVEIT · PLAYABLE ENCOUNTER</Text>
                         <Text style={s.small}>
                           Consequences are saved to this timeline
                         </Text>
