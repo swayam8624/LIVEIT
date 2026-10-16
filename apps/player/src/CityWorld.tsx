@@ -20,6 +20,7 @@ import {
   resolveCityOpportunity, visitDistrict,
 } from '@living/simulation-core';
 import type { CareerPath, World } from '@living/world-schema';
+import { CityMap } from './CityMap';
 
 const CAREERS: { id: Exclude<CareerPath, 'undecided'>; name: string; description: string }[] = [
   { id: 'technology', name: 'Technology', description: 'Build useful things that change the city.' },
@@ -41,6 +42,7 @@ export function CityWorld({
 }) {
   const [focused, setFocused] = useState<string | null>(null);
   const [careerOpen, setCareerOpen] = useState(false);
+  const [showDistrictCards, setShowDistrictCards] = useState(false);
   const city = cityState(world);
   const events = availableCityOpportunities(world);
   const selected = events.find(event => event.id === focused) ?? events[0] ?? null;
@@ -58,6 +60,17 @@ export function CityWorld({
           <Text style={styles.hudLabel}>CONNECTIONS {city.connections} · STRESS {city.stress}</Text>
         </View>
       </View>
+      <View style={styles.mapControls}>
+        <Text style={styles.eyebrow}>YOUR CITY MAP</Text>
+        <Pressable accessibilityRole="button" onPress={() => setShowDistrictCards(v => !v)} style={styles.mapToggle}>
+          <Text style={styles.mapToggleText}>
+            {showDistrictCards ? '◈ MAP VIEW' : '▤ LIST VIEW'}
+          </Text>
+        </Pressable>
+      </View>
+      {!showDistrictCards ? (
+        <CityMap selected={city.district} onVisit={district => onAction(w => visitDistrict(w, district))} />
+      ) : (
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -90,6 +103,7 @@ export function CityWorld({
           </Pressable>
         ))}
       </ScrollView>
+      )}
       <View style={styles.storyHeading}>
         <View style={{ flex: 1, gap: 5 }}>
           <Text style={styles.eyebrow}>STORIES THE CITY TELLS</Text>
@@ -177,6 +191,10 @@ export function CityWorld({
   );
 }
 const styles = StyleSheet.create({
+  mapControls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 15 },
+  mapToggle: { borderWidth: 1, borderColor: '#ae825f', backgroundColor: '#273549', paddingVertical: 9, paddingHorizontal: 14, borderRadius: 8, minHeight: 42, justifyContent: 'center' },
+  mapToggleText: { color: '#f7c68f', fontSize: 10, fontWeight: '800', letterSpacing: 1 },
+
   buildingSprite: { width: 123, height: 119, position: 'absolute', top: 3, right: 3 },
   choiceIcon: { width: 18, height: 18, resizeMode: 'contain' },
   careerButtonRow: { flexDirection: 'row', gap: 9, alignItems: 'center' },
