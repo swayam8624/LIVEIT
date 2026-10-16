@@ -1,0 +1,51 @@
+name: LIVEIT character and life browser QA
+on:
+  push:
+    branches:
+      - feat/character-creator-life-loop
+      - main
+    paths:
+      - 'apps/player/**'
+      - 'packages/world-schema/**'
+      - 'packages/simulation-core/**'
+      - 'tools/appearance-life-smoke.mjs'
+      - '.github/workflows/appearance-life-review.yml'
+permissions:
+  contents: read
+jobs:
+  character-and-life:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Install isolated browser test tooling
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.58.0
+          npx playwright install --with-deps chromium
+      - name: Start Expo web game
+        shell: bash
+        run: |
+          npm run dev > /tmp/liveit-game.log 2>&1 &
+          for i in $(seq 1 90); do
+            if curl -fsS http://127.0.0.1:8081/ > /dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/liveit-game.log
+          exit 1
+      - name: Exercise character creation, saves and careers
+        run: node tools/appearance-life-smoke.mjs
+      - name: Upload responsive QA captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: liveit-appearance-and-ageup
+          path: artifacts/appearance-life/
+          if-no-files-found: warn
+      - name: Development server log on failure
+        if: failure()
+        run: tail -n 150 /tmp/liveit-game.log || true
