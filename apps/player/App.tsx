@@ -1010,6 +1010,7 @@ export default function App() {
                       const memories = world!.memories.filter(
                         (memory) => memory.subject === friend.characterId,
                       );
+                      const npc = world!.npcLives?.find(person => person.characterId === friend.characterId);
                       return (
                         <View key={friend.characterId} style={s.profileCard}>
                           <View style={s.profileTop}>
@@ -1031,6 +1032,12 @@ export default function App() {
                                   ? 'An old friend with unfinished history'
                                   : 'Your first friend in Bellweather'}
                               </Text>
+                              {npc && (
+                                <>
+                                  <Text style={s.eyebrow}>{npc.occupation.toUpperCase()} · {npc.mood.toUpperCase()}</Text>
+                                  <Text style={s.small}>Currently: {npc.currentGoal}</Text>
+                                </>
+                              )}
                               <Text style={s.eyebrow}>
                                 LAST SPOKEN · DAY {friend.lastContactDay + 1}
                               </Text>
@@ -1056,6 +1063,14 @@ export default function App() {
                               ? 'No shared story memories yet.'
                               : `${memories.length} remembered moment${memories.length === 1 ? '' : 's'}`}
                           </Text>
+                          {npc && npc.milestones.length > 0 && (
+                            <View style={s.npcMilestones}>
+                              <Text style={s.eyebrow}>LIFE OUTSIDE YOUR OWN</Text>
+                              {npc.milestones.slice(-3).map(item => (
+                                <Text key={item} style={s.small}>✦ {item.replaceAll('_', ' ')}</Text>
+                              ))}
+                            </View>
+                          )}
                           <Button
                             label={
                               amelia
@@ -1149,6 +1164,8 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  npcMilestones: { padding: 12, borderRadius: 9, backgroundColor: '#29384c', gap: 5 },
+
   bookshopFeature: {
     flexDirection: 'row', flexWrap: 'wrap', gap: 18,
     padding: 23, borderRadius: 13, borderWidth: 1,
