@@ -289,6 +289,10 @@ export default function App() {
           )}
           {!save || reset ? (
             <View style={s.onboard}>
+              <GameStage mode="story" compact>
+                <Text style={s.stageHeadline}>The life you live is the story you make.</Text>
+                <Text style={s.stageHint}>A new city. A familiar face. A million things that haven't happened yet.</Text>
+              </GameStage>
               <Tag>CHAPTER ZERO</Tag>
               <Text style={s.title}>
                 A life worth{wide ? '\n' : ' '}remembering.
