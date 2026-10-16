@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+/* Isometric city pieces by Kenney, CC0-1.0. Exact hashes in art registry. */
+/* eslint-disable @typescript-eslint/no-require-imports */
+const DISTRICT_BUILDINGS = [
+  require('../assets/buildings/building-002.png'),
+  require('../assets/buildings/building-003.png'),
+  require('../assets/buildings/building-004.png'),
+  require('../assets/buildings/building-010.png'),
+  require('../assets/buildings/building-000.png'),
+];
+/* eslint-enable @typescript-eslint/no-require-imports */
 // Independently verified Kenney CC0 assets, bundled offline from pinned source.
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const playIcon = require('../assets/kenney-play.png');
@@ -67,6 +77,12 @@ export function CityWorld({
               pressed && { opacity: 0.8 },
             ]}
           >
+            <Image
+              source={DISTRICT_BUILDINGS[index]}
+              style={styles.buildingSprite}
+              resizeMode="contain"
+              accessibilityLabel={district.title + ' illustrated district building'}
+            />
             <Text style={styles.districtSymbol}>{['☕','✎','⌘','✦','❀'][index]}</Text>
             <Text style={styles.districtName}>{district.title}</Text>
             <Text style={styles.districtSubtitle}>{district.tagline}</Text>
@@ -161,6 +177,7 @@ export function CityWorld({
   );
 }
 const styles = StyleSheet.create({
+  buildingSprite: { width: 123, height: 119, position: 'absolute', top: 3, right: 3 },
   choiceIcon: { width: 18, height: 18, resizeMode: 'contain' },
   careerButtonRow: { flexDirection: 'row', gap: 9, alignItems: 'center' },
   dropIcon: { width: 15, height: 15, resizeMode: 'contain' },
@@ -174,7 +191,7 @@ const styles = StyleSheet.create({
   hudLabel: { color: '#adb9c9', letterSpacing: .7, fontSize: 9 },
   hudValue: { color: '#efd3a7', fontSize: 22, fontWeight: '800' },
   districts: { gap: 10, paddingVertical: 3, paddingHorizontal: 1 },
-  district: { width: 178, minHeight: 166, padding: 16, borderRadius: 12, borderWidth: 1, borderColor: '#65758b', gap: 7, justifyContent: 'flex-end' },
+  district: { width: 195, minHeight: 235, padding: 16, borderRadius: 12, borderWidth: 1, borderColor: '#65758b', gap: 7, justifyContent: 'flex-end' },
   districtActive: { borderColor: '#f7c58c', borderWidth: 2 },
   districtSymbol: { fontSize: 26, color: '#f8d8a1' },
   districtName: { fontSize: 16, color: '#fff4df', fontWeight: '800' },
