@@ -112,7 +112,7 @@ export function ageUp(input:World):World {
   w.day=toDay;
   w.player.ageDays+=365;
   const hired=Boolean(c.employment && c.employment.stage!=='applied');
-  const gross=hired ? c.employment!.salaryAnnual : 850_000;
+  const gross=hired ? c.employment!.salaryAnnual : 1_250_000;
   // Approximate simulation taxes; not tax guidance.
   const tax=hired?Math.round(gross*0.20):Math.round(gross*.08);
   const living=365*2800;
