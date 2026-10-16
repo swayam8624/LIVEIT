@@ -42,10 +42,9 @@ try {
   await page.goto('http://127.0.0.1:3000/', { waitUntil: 'networkidle', timeout: 60000 });
   await page.getByText('Creator Studio', { exact: false }).first().waitFor();
   await page.screenshot({ path: path.join(out, 'creator-studio-desktop.png'), fullPage: true });
-  page.once('dialog', (dialog) => void dialog.accept());
   await page.getByRole('button', { name: /New story/i }).click();
-  await page.getByText('Untitled story').first().waitFor();
   await page.screenshot({ path: path.join(out, 'creator-studio-new-story.png'), fullPage: true });
+  await page.getByRole('heading', { name: 'Untitled story' }).waitFor({ timeout: 10000 });
   assert.equal(errs.length, 0, `Creator Studio browser exceptions: ${errs.join('; ')}`);
   await page.close();
   assert.ok(out.length > 0); // Captured screenshots are uploaded by the workflow.
