@@ -22,7 +22,8 @@ export function AvatarPortrait({
   appearance = DEFAULT_APPEARANCE,
   size = 200,
   label,
-}: { appearance?: Appearance; size?: number; label?: string }) {
+  expression = 'neutral',
+}: { appearance?: Appearance; size?: number; label?: string; expression?: 'neutral' | 'happy' | 'sad' | 'tense' }) {
   const a = appearance;
   const skin = SKIN_COLORS[a.skinTone];
   const hair = HAIR_COLORS[a.hairColor];
@@ -74,7 +75,7 @@ export function AvatarPortrait({
         <Piece form={{ x: 143, y: 148, w: 23, h: 11, radius: 12 }} color="#a85e5b44" />
         {/* Brows and iris colors respond to separate options. */}
         {[89,144].map((x) => <React.Fragment key={x}>
-          <Piece form={{ x: x-5, y: a.brows === 'arched' ? 109 : 114, w: 33, h: a.brows === 'bold' ? 7 : 4, radius: 6, rotate: a.brows === 'arched' ? (x === 89 ? '-12deg' : '12deg') : undefined }} color={hair} />
+          <Piece form={{ x: x-5, y: (a.brows === 'arched' ? 109 : 114) + (expression === 'tense' ? -5 : expression === 'sad' ? 4 : 0), w: 33, h: a.brows === 'bold' ? 7 : 4, radius: 6, rotate: a.brows === 'arched' ? (x === 89 ? '-12deg' : '12deg') : undefined }} color={hair} />
           <Piece form={{ x, y: 126, w: eyeW, h: eyeH, radius: a.eyes === 'upturned' ? 3 : 12, rotate: a.eyes === 'upturned' ? (x === 89 ? '-9deg' : '9deg') : a.eyes === 'downturned' ? '7deg' : undefined }} color="#fff9ed" border="#544238" />
           <Piece form={{ x: x+8, y: 128, w: 10, h: 11, radius: 6 }} color={iris} />
           <Piece form={{ x: x+11, y: 129, w: 5, h: 8, radius: 4 }} color="#22202c" />
@@ -83,7 +84,7 @@ export function AvatarPortrait({
         {/* Nose and lips, both independently customizable. */}
         <Piece form={{ x: a.nose === 'broad' ? 115 : 118, y: 136, w: a.nose === 'broad' ? 16 : 10, h: a.nose === 'straight' ? 29 : 22, radius: 10 }} color="#9b5b4d44" />
         <Piece form={{ x: 113, y: 157, w: a.nose === 'broad' ? 23 : a.nose === 'button' ? 13 : 18, h: 5, radius: 4 }} color="#8f574744" />
-        <Piece form={{ x: a.lips === 'full' ? 104 : 109, y: 176, w: a.lips === 'full' ? 38 : a.lips === 'thin' ? 24 : 29, h: a.lips === 'full' ? 12 : a.lips === 'thin' ? 4 : 7, radius: 14 }} color={a.lips === 'smile' ? '#ab5b55' : '#a65d5a'} />
+        <Piece form={{ x: a.lips === 'full' ? 104 : 109, y: expression === 'happy' ? 174 : expression === 'sad' ? 181 : 176, w: a.lips === 'full' ? 38 : a.lips === 'thin' ? 24 : 29, h: a.lips === 'full' ? 12 : a.lips === 'thin' ? 4 : 7, radius: 14 }} color={a.lips === 'smile' ? '#ab5b55' : '#a65d5a'} />
         {a.accessory === 'freckles' && [89,95,103,145,151,159].map(x => <Piece key={x} form={{ x,y:152+(x%3)*3,w:3,h:3,radius:3 }} color="#7d4c39" />)}
         {/* Hairline, fringe and hair styling drawn ABOVE facial features. */}
         {a.hair === 'buzz' && <Piece form={{ x: 63, y: 50, w: 122, h: 45, radius: 55 }} color={hair} />}
