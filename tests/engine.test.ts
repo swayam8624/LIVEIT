@@ -295,3 +295,45 @@ describe('Creator Studio to local player story bridge', () => {
     expect(() => parseStory(unauthorized)).toThrow('permissions');
   });
 });
+
+describe('imported narrative persistence and compatibility', () => {
+  it('loads legacy version-one saves without a narrative ID', () => {
+    const legacy = {
+      version: 1 as const,
+      active: 'life' as const,
+      life: createWorld(),
+      story: null,
+    };
+    const restored = decodeSave(JSON.stringify(legacy));
+    expect(restored.activeStoryId).toBeUndefined();
+    expect(restored).toEqual(legacy);
+  });
+
+  it('preserves an imported story identifier and in-progress scene across a full save round trip', () => {
+    const imported = copy();
+    imported.id = 'creator.a-new-moment';
+    const incomplete = choose(createWorld(), imported, 'listen');
+    expect(currentScene(incomplete, imported).id).toBe('listening');
+    const checkpoint: Save = {
+      version: 1,
+      active: 'life',
+      activeStoryId: imported.id,
+      life: incomplete,
+      story: null,
+    };
+    const restored = decodeSave(encodeSave(checkpoint));
+    expect(restored.activeStoryId).toBe(imported.id);
+    expect(currentScene(restored.life, imported).id).toBe('listening');
+    expect(choose(restored.life, imported, 'support').relationships[0]?.trust).toBe(51);
+  });
+
+  it('rejects invalid active narrative identifiers', () => {
+    const data: Save = {
+      version: 1,
+      active: 'life',
+      life: createWorld(),
+      story: null,
+    };
+    expect(() => decodeSave(JSON.stringify({ ...data, activeStoryId: '' }))).toThrow();
+  });
+});
