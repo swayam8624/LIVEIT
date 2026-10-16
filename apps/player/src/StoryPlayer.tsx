@@ -55,9 +55,9 @@ export function StoryPlayer({
   const speakerIsPlayer=scene.speaker.toLowerCase()===world.player.name.toLowerCase() || ['you','player'].includes(scene.speaker.toLowerCase());
   const moodExpression=scene.mood==='warm'?'happy':scene.mood==='tense'?'tense':'neutral';
   return (
-    <View accessibilityLabel={story.title+' interactive cinematic scene'} style={styles.shell}>
+    <View testID="story-stage" accessibilityLabel={story.title+' interactive cinematic scene'} style={styles.shell}>
       <GameStage mode="story" mood={scene.mood} stageHeight={compact?650:705} />
-      <View pointerEvents="none" style={[styles.actors,compact&&styles.actorsCompact]}>
+      <View testID="story-actors" pointerEvents="none" style={[styles.actors,compact&&styles.actorsCompact]}>
         <View style={styles.playerActor}>
           <AvatarPortrait appearance={world.player.appearance} size={compact?154:217}
             expression={moodExpression} label={'Customized player character in '+scene.mood+' scene'}/>
@@ -83,7 +83,7 @@ export function StoryPlayer({
           <Text style={styles.exitText}>✕  LEAVE</Text>
         </Pressable>
       </View>
-      <Animated.View key={scene.id} style={[styles.dialogueDock,compact&&styles.dialogueCompact,{opacity:fade}]}>
+      <Animated.View testID="story-dialogue-overlay" key={scene.id} style={[styles.dialogueDock,compact&&styles.dialogueCompact,{opacity:fade}]}>
         <View style={styles.speakerLine}>
           <View style={styles.speakerAccent} />
           <Text style={styles.speakerName}>{scene.speaker.toUpperCase()}</Text>
