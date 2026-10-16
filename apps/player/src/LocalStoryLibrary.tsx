@@ -65,7 +65,9 @@ export function LocalStoryLibrary({
         );
       }
       if (protectedIds.includes(parsed.id)) {
-        throw new Error('This story is referenced by a saved life. Give the revised edition a new unique story ID.');
+        throw new Error(
+          'This story is referenced by a saved life. Give the revised edition a new unique story ID.',
+        );
       }
       const next = [...stories.filter((item) => item.id !== parsed.id), parsed];
       if (next.length > MAX_STORIES)
@@ -88,7 +90,9 @@ export function LocalStoryLibrary({
 
   async function removeStory(id: string) {
     if (protectedIds.includes(id)) {
-      setNotice('This story is used by a saved timeline. Keep it installed to preserve the narrative.');
+      setNotice(
+        'This story is used by a saved timeline. Keep it installed to preserve the narrative.',
+      );
       return;
     }
     const next = stories.filter((story) => story.id !== id);
@@ -178,8 +182,10 @@ export function LocalStoryLibrary({
                 accessibilityRole="button"
                 accessibilityLabel={'Remove ' + story.title}
                 disabled={protectedIds.includes(story.id)}
-                  accessibilityState={{ disabled: protectedIds.includes(story.id) }}
-                  onPress={() => void removeStory(story.id)}
+                accessibilityState={{
+                  disabled: protectedIds.includes(story.id),
+                }}
+                onPress={() => void removeStory(story.id)}
                 style={styles.remove}
               >
                 <Text style={styles.removeText}>Remove</Text>
