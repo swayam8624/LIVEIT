@@ -26,16 +26,17 @@ import { loadSave, writeSave, type Save } from '@living/save-system';
 import type { World } from '@living/world-schema';
 import { reunion } from '@living/content';
 const c = {
-  paper: '#f6f5ef',
-  ink: '#223c35',
-  muted: '#778079',
-  line: '#dce0d6',
-  green: '#375c4c',
-  sage: '#e7ebdf',
-  orange: '#bd623c',
-  white: '#fffefa',
+  paper: '#0c1421',
+  ink: '#f7eee1',
+  muted: '#b0b7c4',
+  line: '#3a4457',
+  green: '#a35a37',
+  sage: '#253247',
+  orange: '#f8b97e',
+  white: '#192536',
 };
 const serif = Platform.OS === 'ios' ? 'Georgia' : 'serif';
+const gold = '#ecc391';
 const money = (n: number) =>
   new Intl.NumberFormat('en-GB', {
     style: 'currency',
@@ -188,7 +189,9 @@ function Cafe({ warm = false }: { warm?: boolean }) {
       <View style={s.table} />
       <View style={s.cup} />
       <View style={s.cupHandle} />
-      <Text style={s.sceneLabel}>THE CORNER CAFÉ · BELLWEATHER</Text>
+      <View pointerEvents="none" style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 12, backgroundColor: '#0a1020' }} />
+      <View pointerEvents="none" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 13, backgroundColor: '#0a1020' }} />
+      <Text style={s.sceneLabel}>BELLWEATHER · THE CORNER CAFÉ · 19:42</Text>
     </View>
   );
 }
@@ -315,12 +318,12 @@ export default function App() {
     <View style={s.app}>
       <View style={[s.header, { paddingHorizontal: wide ? 48 : 22 }]}>
         <View>
-          <Text style={s.logo}>✳ living universe</Text>
-          <Text style={s.logoSub}>A LIFE. A STORY. YOURS.</Text>
+          <Text style={s.logo}>✦ LIVEIT</Text>
+          <Text style={s.logoSub}>EVERY CHOICE BECOMES A LIFE</Text>
         </View>
         <View style={s.headerRight}>
           <View style={s.dot} />
-          <Text style={s.small}>FOUNDATION EDITION</Text>
+          <Text style={s.small}>CHAPTER ONE · BELLWEATHER</Text>
         </View>
       </View>
       <View style={[s.shell, wide && { flexDirection: 'row' }]}>
@@ -336,7 +339,7 @@ export default function App() {
                 },
           ]}
         >
-          <Text style={[s.eyebrow, { marginBottom: 16 }]}>YOUR UNIVERSE</Text>
+          <Text style={[s.eyebrow, { marginBottom: 16 }]}>THE WORLD</Text>
           <View
             style={
               !wide
@@ -397,7 +400,7 @@ export default function App() {
             <View style={s.onboard}>
               <Tag>CHAPTER ZERO</Tag>
               <Text style={s.title}>
-                Every story starts{wide ? '\n' : ' '}with someone.
+                A life worth{wide ? '\n' : ' '}remembering.
               </Text>
               <Text style={s.subtitle}>
                 You’re 23, newly arrived in Bellweather. There’s £1,800 in your
@@ -768,7 +771,7 @@ export default function App() {
                 </>
               ) : tab === 'stories' ? (
                 <>
-                  <Text style={s.title}>Step into a story.</Text>
+                  <Text style={s.title}>Enter another life.</Text>
                   <Text style={s.subtitle}>
                     Another perspective. A different possibility. Still your
                     choices.
@@ -916,14 +919,15 @@ const s = StyleSheet.create({
     backgroundColor: c.paper,
   },
   header: {
-    height: 100,
+    height: 84,
+    backgroundColor: '#101b2c',
     borderBottomWidth: 1,
     borderBottomColor: c.line,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  logo: { fontFamily: serif, fontSize: 28, color: c.ink, letterSpacing: -1 },
+  logo: { fontFamily: serif, fontSize: 29, color: gold, letterSpacing: -1 },
   logoSub: {
     fontSize: 8,
     letterSpacing: 2.7,
@@ -948,7 +952,7 @@ const s = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  navActive: { backgroundColor: c.sage },
+  navActive: { backgroundColor: '#303147', borderLeftWidth: 3, borderLeftColor: gold },
   navText: { fontSize: 14, color: c.muted },
   sideNote: { marginTop: 100, padding: 7 },
   sideQuote: {
@@ -981,7 +985,7 @@ const s = StyleSheet.create({
     marginVertical: 6,
   },
   title: {
-    fontSize: 44,
+    fontSize: 48,
     fontFamily: serif,
     letterSpacing: -1.8,
     color: c.ink,
@@ -1006,10 +1010,10 @@ const s = StyleSheet.create({
     marginVertical: 8,
   },
   stat: { flex: 1, minWidth: 155, padding: 22, gap: 9 },
-  statValue: { fontFamily: serif, fontSize: 30, color: c.ink },
+  statValue: { fontFamily: serif, fontSize: 34, color: gold },
   columns: { gap: 30, alignItems: 'stretch' },
   sectionHeading: { gap: 8 },
-  sectionTitle: { fontFamily: serif, fontSize: 24, color: c.ink, marginTop: 8 },
+  sectionTitle: { fontFamily: serif, fontSize: 26, color: gold, marginTop: 8 },
   activities: { gap: 10 },
   activity: {
     padding: 18,
@@ -1049,21 +1053,23 @@ const s = StyleSheet.create({
     borderRadius: 4,
   },
   encounter: {
-    backgroundColor: c.white,
+    backgroundColor: '#192536',
     borderWidth: 1,
     borderColor: c.line,
     borderRadius: 8,
     overflow: 'hidden',
   },
   encounterBody: { padding: 22, gap: 10 },
-  cardTitle: { fontFamily: serif, fontSize: 26, color: c.ink },
+  cardTitle: { fontFamily: serif, fontSize: 28, color: gold },
   cardDescription: { fontSize: 13, lineHeight: 22, color: c.muted },
   button: {
     backgroundColor: c.green,
     paddingVertical: 13,
     paddingHorizontal: 17,
-    borderRadius: 4,
+    borderRadius: 8,
     alignSelf: 'flex-start',
+    borderWidth: 1,
+    borderColor: '#dba36f',
   },
   buttonText: { fontSize: 12, color: c.white, fontWeight: '600' },
   secondary: {
@@ -1120,8 +1126,8 @@ const s = StyleSheet.create({
     padding: 25,
     borderWidth: 1,
     borderColor: c.line,
-    backgroundColor: c.white,
-    borderRadius: 6,
+    backgroundColor: '#18243a',
+    borderRadius: 12,
     gap: 18,
   },
   dialogueText: {
@@ -1135,7 +1141,8 @@ const s = StyleSheet.create({
     padding: 17,
     borderWidth: 1,
     borderColor: c.line,
-    borderRadius: 4,
+    borderRadius: 10,
+    backgroundColor: '#29374c',
     flexDirection: 'row',
     justifyContent: 'space-between',
     gap: 10,
@@ -1176,9 +1183,9 @@ const s = StyleSheet.create({
     gap: 8,
   },
   cafe: {
-    height: 300,
+    height: 380,
     minWidth: 250,
-    backgroundColor: '#d7c9af',
+    backgroundColor: '#26344a',
     overflow: 'hidden',
     position: 'relative',
   },
@@ -1188,9 +1195,9 @@ const s = StyleSheet.create({
     top: 20,
     width: '58%',
     height: 177,
-    backgroundColor: '#dce2ce',
+    backgroundColor: '#4b6179',
     borderWidth: 7,
-    borderColor: '#8b8c73',
+    borderColor: '#4b3540',
     overflow: 'hidden',
   },
   sun: {
@@ -1200,7 +1207,7 @@ const s = StyleSheet.create({
     width: 65,
     height: 65,
     borderRadius: 40,
-    backgroundColor: '#eee2ad',
+    backgroundColor: '#f5ad73',
   },
   building: { position: 'absolute', bottom: 0 },
   windowCross: {
@@ -1255,7 +1262,7 @@ const s = StyleSheet.create({
     left: 0,
     right: 0,
     height: 75,
-    backgroundColor: '#b5ab8f',
+    backgroundColor: '#5d4b55',
   },
   plantPot: {
     position: 'absolute',
@@ -1353,7 +1360,7 @@ const s = StyleSheet.create({
     left: '28%',
     width: '73%',
     height: 16,
-    backgroundColor: '#84674b',
+    backgroundColor: '#68424a',
     borderRadius: 30,
   },
   cup: {
@@ -1362,7 +1369,7 @@ const s = StyleSheet.create({
     left: '40%',
     width: 26,
     height: 26,
-    backgroundColor: '#f1e8d1',
+    backgroundColor: '#ecd2b1',
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
   },
@@ -1373,7 +1380,7 @@ const s = StyleSheet.create({
     width: 14,
     height: 14,
     borderWidth: 3,
-    borderColor: '#f1e8d1',
+    borderColor: '#ecd2b1',
     borderRadius: 9,
   },
   sceneLabel: {
@@ -1382,6 +1389,6 @@ const s = StyleSheet.create({
     left: 16,
     fontSize: 8,
     letterSpacing: 2,
-    color: '#f9f4df',
+    color: '#f8cd90',
   },
 });
