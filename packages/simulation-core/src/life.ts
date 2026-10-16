@@ -1,7 +1,7 @@
 import {
-  WorldSchema, record, type World, type CareerPath, type Employment,
+  WorldSchema, record, type World, type CareerPath,
 } from '@living/world-schema';
-import { cityState, initialCityState, scheduleCityOpportunity } from './city';
+import { initialCityState, scheduleCityOpportunity } from './city';
 import { NPC_BEATS, tickNPCs } from './npc';
 
 const clamp = (n:number) => Math.max(0,Math.min(100,Math.round(n)));
