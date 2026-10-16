@@ -16,7 +16,7 @@ import {
   type Save,
 } from '@living/save-system';
 import { parseStory } from '@living/story-schema';
-import { reunion } from '@living/content';
+import { reunion, bookshop } from '@living/content';
 const copy = () => structuredClone(reunion);
 describe('deterministic life simulation', () => {
   it('creates a valid life and rejects blank names', () => {
@@ -410,5 +410,37 @@ describe('Bellweather living city (deterministic open simulation)', () => {
     expect(restored.life.city?.district).toBe('university');
     expect(restored.life.city?.resolved).toContain(event.id);
     expect(restored.life.player.money).toBe(changed.player.money);
+  });
+});
+
+describe('Bookshop chapter and shared life continuity', () => {
+  it('provides a valid second playable chapter with three endings', () => {
+    expect(bookshop.scenes).toHaveLength(11);
+    expect(bookshop.scenes.filter(s => s.ending)).toHaveLength(3);
+    expect(bookshop.entry).toBe('doorway');
+  });
+  it('remembers earlier reconciliation and persists the bookshop outcome', () => {
+    const reunited = choose(choose(createWorld(), reunion, 'apologize'), reunion, 'truth');
+    const daysLater = advanceLife(reunited, 'rest', 7);
+    const opening = startStory(daysLater, bookshop);
+    let w = choose(opening, bookshop, 'early');
+    w = choose(w, bookshop, 'joke');
+    w = choose(w, bookshop, 'after');
+    const restored = decodeSave(encodeSave({
+      version: 1, active: 'life', life: w, story: null, activeStoryId: bookshop.id,
+    }));
+    expect(restored.life.progress.find(p => p.storyId === bookshop.id)?.completed).toBe(true);
+    expect(restored.life.progress.find(p => p.storyId === reunion.id)?.completed).toBe(true);
+    expect(restored.life.facts).toContain('bookshop_early');
+    expect(restored.life.facts).toContain('bookshop_afterhours');
+    expect(restored.life.relationships[0]!.trust).toBeGreaterThan(daysLater.relationships[0]!.trust);
+  });
+  it('allows the original standalone story without mutating main life memories', () => {
+    const mainLife = createWorld();
+    const alone = choose(choose(createWorld('Alex', 'story.bookshop'), bookshop, 'look'), bookshop, 'remember');
+    const completed = choose(alone, bookshop, 'goodbye');
+    expect(currentScene(completed, bookshop).id).toBe('separate');
+    expect(mainLife.memories).toHaveLength(0);
+    expect(mainLife.progress).toHaveLength(0);
   });
 });
