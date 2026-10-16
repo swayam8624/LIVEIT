@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { createWorld, advanceLife } from '@living/simulation-core';
+import { createWorld, advanceLife, DISTRICTS, CITY_OPPORTUNITIES, availableCityOpportunities, chooseCareer, visitDistrict, resolveCityOpportunity } from '@living/simulation-core';
 import {
   choose,
   startStory,
@@ -339,5 +339,76 @@ describe('imported narrative persistence and compatibility', () => {
     expect(() =>
       decodeSave(JSON.stringify({ ...data, activeStoryId: '' })),
     ).toThrow();
+  });
+});
+
+describe('Bellweather living city (deterministic open simulation)', () => {
+  it('initializes a rich city without breaking legacy save compatibility', () => {
+    const fresh = createWorld();
+    expect(fresh.city?.district).toBe('riverside');
+    expect(fresh.city?.careerPath).toBe('undecided');
+    expect(fresh.city?.reputation).toBe(35);
+    const legacy = structuredClone(fresh);
+    delete legacy.city;
+    const restored = decodeSave(encodeSave({
+      version: 1, active: 'life', life: legacy, story: null,
+    }));
+    expect(restored.life.city).toBeUndefined();
+    expect(visitDistrict(restored.life, 'market').city?.district).toBe('market');
+  });
+  it('contains twenty original opportunities, five districts and no duplicated IDs', () => {
+    expect(CITY_OPPORTUNITIES.length).toBeGreaterThanOrEqual(20);
+    expect(DISTRICTS).toHaveLength(5);
+    expect(new Set(CITY_OPPORTUNITIES.map(e => e.id)).size).toBe(CITY_OPPORTUNITIES.length);
+    for (const event of CITY_OPPORTUNITIES) {
+      expect(event.choices).toHaveLength(2);
+      expect(event.choices[0].id).not.toBe(event.choices[1].id);
+      expect(event.choices[0].consequence.length).toBeGreaterThan(5);
+    }
+  });
+  it('schedules reproducible events as time advances, without waiting in real time', () => {
+    const original = createWorld();
+    const first = advanceLife(original, 'study', 3);
+    const second = advanceLife(original, 'study', 3);
+    expect(first).toEqual(second);
+    expect(availableCityOpportunities(first).length).toBeGreaterThan(0);
+    expect(original.city?.opportunities).toHaveLength(0);
+    expect(first.city?.stress).toBeGreaterThan(original.city!.stress);
+  });
+  it('validates a choice and records atomic permanent consequences', () => {
+    const before = advanceLife(createWorld(), 'rest', 3);
+    const next = availableCityOpportunities(before)[0]!;
+    expect(next).toBeDefined();
+    const after = resolveCityOpportunity(before, next.id, next.choices[0].id);
+    expect(after.city?.resolved).toContain(next.id);
+    expect(after.facts).toContain(`city:${next.id}:${next.choices[0].id}`);
+    expect(after.memories.at(-1)?.subject).toBe('bellweather');
+    expect(after.history.at(-1)?.kind).toBe('choice');
+    expect(before.city!.resolved).toHaveLength(0);
+    expect(() => resolveCityOpportunity(after, next.id, next.choices[0].id)).toThrow();
+    expect(() => resolveCityOpportunity(before, next.id, 'execute_code')).toThrow('Choice unavailable');
+    expect(() => resolveCityOpportunity(before, 'invented', 'anything')).toThrow();
+  });
+  it('lets players choose a career field, and prevents accidental rewrites', () => {
+    const fresh = createWorld();
+    const direction = chooseCareer(fresh, 'technology');
+    expect(direction.city?.careerPath).toBe('technology');
+    expect(fresh.city?.careerPath).toBe('undecided');
+    expect(() => chooseCareer(direction, 'creative')).toThrow('career-transition');
+    expect(() => chooseCareer(fresh, 'undecided')).toThrow();
+  });
+  it('persists an opportunity decision and a named district across JSON saves', () => {
+    const original = advanceLife(createWorld(), 'study', 3);
+    const event = availableCityOpportunities(original)[0]!;
+    const changed = visitDistrict(
+      resolveCityOpportunity(original, event.id, event.choices[1].id),
+      'university',
+    );
+    const restored = decodeSave(
+      encodeSave({ version: 1, active: 'life', life: changed, story: null }),
+    );
+    expect(restored.life.city?.district).toBe('university');
+    expect(restored.life.city?.resolved).toContain(event.id);
+    expect(restored.life.player.money).toBe(changed.player.money);
   });
 });
