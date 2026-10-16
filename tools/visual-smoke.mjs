@@ -58,19 +58,19 @@ try {
   // merely hopping to a hard-coded destination node.
   assert.equal((await page.getByTestId('preview-trust').innerText()).trim(), '35/100');
   await page.getByRole('button', { name: /I should have called/i }).click();
-  await page.getByTestId('preview-trust').getByText('47/100').waitFor();
-  await page.getByRole('button', { name: /I was afraid I'd let you down/i }).click();
-  await page.getByTestId('preview-trust').getByText('57/100').waitFor();
+  await page.getByTestId('preview-trust').filter({ hasText: '47/100' }).waitFor();
+  await page.getByRole('button', { name: /I was afraid I/i }).click();
+  await page.getByTestId('preview-trust').filter({ hasText: '57/100' }).waitFor();
   assert.equal((await page.getByTestId('preview-memory-count').innerText()).trim(), '2');
   await page.getByRole('button', { name: /Restart/i }).click();
-  await page.getByTestId('preview-trust').getByText('35/100').waitFor();
+  await page.getByTestId('preview-trust').filter({ hasText: '35/100' }).waitFor();
 
   await page.getByRole('button', { name: /New story/i }).click();
   await page.getByRole('heading', { name: 'Untitled story' }).waitFor({ timeout: 10000 });
   await page.getByRole('button', { name: '+5 trust' }).click();
   await page.getByRole('button', { name: '+ Memory' }).click();
   await page.getByRole('button', { name: 'See what happens' }).click();
-  await page.getByTestId('preview-trust').getByText('40/100').waitFor();
+  await page.getByTestId('preview-trust').filter({ hasText: '40/100' }).waitFor();
   assert.equal((await page.getByTestId('preview-memory-count').innerText()).trim(), '1');
   await page.screenshot({ path: path.join(out, 'creator-studio-new-story.png'), fullPage: true });
   assert.equal(errs.length, 0, `Creator Studio browser exceptions: ${errs.join('; ')}`);
