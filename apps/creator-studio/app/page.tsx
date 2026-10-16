@@ -60,12 +60,13 @@ export default function Studio() {
   const previewScene = story?.scenes.find((node) => node.id === preview);
 
   function createStory() {
-    if (
-      !window.confirm(
-        'Start a new story? Export your current draft first if you want to keep it.',
-      )
-    )
-      return;
+    // Safely retain the last draft before opening a new story. This avoids
+    // unexpected native confirmation dialogs and makes the action undoable.
+    try {
+      window.localStorage.setItem(STORAGE_KEY + ':previous', raw);
+    } catch {
+      // Export remains available even if browser storage is disabled.
+    }
     const id = 'creator.story-' + Date.now().toString(36);
     const fresh = parseStory({
       schemaVersion: 1,
@@ -113,6 +114,24 @@ export default function Studio() {
     setMessage(
       'New story created. Rename it, write your scenes, then validate and export.',
     );
+  }
+
+  function restorePreviousDraft() {
+    try {
+      const previous = window.localStorage.getItem(STORAGE_KEY + ':previous');
+      if (!previous) {
+        setMessage('There is no previous story draft to restore.');
+        return;
+      }
+      const restored = parseStory(JSON.parse(previous));
+      window.localStorage.setItem(STORAGE_KEY + ':previous', raw);
+      setRaw(JSON.stringify(restored, null, 2));
+      setSelected(restored.entry);
+      setPreview(restored.entry);
+      setMessage('Previous story draft restored. Your current draft is available through Restore previous.');
+    } catch {
+      setMessage('Previous draft is invalid or unavailable. The active story was not changed.');
+    }
   }
 
   function addConnectedScene() {
@@ -273,6 +292,9 @@ export default function Studio() {
         <div className="studio-actions">
           <button type="button" className="secondary" onClick={createStory}>
             + New story
+          </button>
+          <button type="button" className="secondary" onClick={restorePreviousDraft}>
+            ↶ Previous draft
           </button>
           <button
             type="button"
