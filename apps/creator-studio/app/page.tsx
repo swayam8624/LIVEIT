@@ -290,7 +290,7 @@ export default function Studio() {
                           updateChoice(index, { next: e.target.value })
                         }
                       >
-                        {story.scenes.map((n) => (
+                        {story?.scenes.map((n) => (
                           <option value={n.id} key={n.id}>
                             {n.id}
                           </option>
