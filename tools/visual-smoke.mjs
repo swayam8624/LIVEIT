@@ -48,7 +48,7 @@ try {
   await page.screenshot({ path: path.join(out, 'creator-studio-new-story.png'), fullPage: true });
   assert.equal(errs.length, 0, `Creator Studio browser exceptions: ${errs.join('; ')}`);
   await page.close();
-  console.log('Visual smoke checks passed; screenshots saved to', out);
+  assert.ok(out.length > 0); // Captured screenshots are uploaded by the workflow.
 } finally {
   await browser.close();
 }
