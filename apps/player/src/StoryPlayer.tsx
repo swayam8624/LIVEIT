@@ -57,13 +57,19 @@ export function StoryPlayer({
   return (
     <View testID="story-stage" accessibilityLabel={story.title+' interactive cinematic scene'} style={styles.shell}>
       <GameStage mode="story" mood={scene.mood} stageHeight={compact?650:705} />
-      <View testID="story-actors" pointerEvents="none" style={[styles.actors,compact&&styles.actorsCompact]}>
+      <Animated.View
+        testID="story-actors" pointerEvents="none"
+        style={[
+          styles.actors, compact && styles.actorsCompact,
+          { opacity: fade, transform: [{ translateY: fade.interpolate({ inputRange:[0,1], outputRange:[18,0] }) }] },
+        ]}
+      >
         <View style={styles.playerActor}>
           <AvatarPortrait appearance={world.player.appearance} size={compact?154:217}
             expression={moodExpression} label={'Customized player character in '+scene.mood+' scene'}/>
         </View>
         {scene.speaker.toLowerCase()==='amelia' ? (
-          <View style={styles.npcActor}>
+          <View style={[styles.npcActor,compact&&styles.npcActorCompact]}>
             <Image source={ameliaImage} style={[styles.npcImage,compact&&styles.npcImageCompact]}
               accessibilityLabel="Amelia's illustrated portrait"/>
           </View>
@@ -72,7 +78,7 @@ export function StoryPlayer({
             <Text style={styles.npcLetter}>{scene.speaker.slice(0,1).toUpperCase()}</Text>
           </View>
         ):null}
-      </View>
+      </Animated.View>
       <View style={styles.topControls}>
         <View style={styles.topTitle}>
           <Text numberOfLines={1} style={styles.eyebrow}>✦ LIVEIT STORIES</Text>
@@ -140,6 +146,7 @@ const styles=StyleSheet.create({
   playerActor:{alignSelf:'flex-end'},
   npcActor:{width:190,height:235,borderRadius:90,overflow:'hidden',borderWidth:2,borderColor:'#ad8a71',backgroundColor:'#262238'},
   npcImage:{width:190,height:235,resizeMode:'cover'},
+  npcActorCompact:{width:136,height:180,borderRadius:66},
   npcImageCompact:{width:136,height:180},
   npcUnknown:{width:150,height:195,backgroundColor:'#35384e',borderRadius:72,alignItems:'center',justifyContent:'center',borderColor:'#ae8f77',borderWidth:2},
   npcLetter:{fontSize:75,color:'#e5c39d',fontFamily:'serif'},
