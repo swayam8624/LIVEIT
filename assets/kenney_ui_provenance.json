@@ -1,0 +1,37 @@
+{
+  "name": "LIVEIT bundled Kenney HUD asset excerpt",
+  "sourcePublisher": "Kenney",
+  "originalPublisherLicense": "CC0-1.0",
+  "publisherLicensePage": "https://kenney.nl/assets/ui-pack",
+  "officialSupportLicensing": "https://kenney.nl/support",
+  "repositoryMirror": "https://github.com/shorepine/kenney",
+  "mirrorCommit": "3694c6879e487c108f55677be7dd2ca75b07cc3b",
+  "mirrorLicense": "https://github.com/shorepine/kenney/blob/main/LICENSE.txt",
+  "checkedAt": "2026-10-16",
+  "commercialUse": true,
+  "attributionRequired": false,
+  "attribution": "UI icons by Kenney (CC0-1.0); credit included voluntarily",
+  "assets": [
+    {
+      "file": "apps/player/assets/kenney-play.png",
+      "source": "ui/UI Pack/Extra/icon_play_light.png",
+      "gitBlobSHA": "b50a69081a44da3dc418aaf298c46904a32b1a06"
+    },
+    {
+      "file": "apps/player/assets/kenney-repeat.png",
+      "source": "ui/UI Pack/Extra/icon_repeat_light.png",
+      "gitBlobSHA": "d12c3dfdbc94ba8b3ca3244d5e20923346b99d08"
+    },
+    {
+      "file": "apps/player/assets/kenney-down.png",
+      "source": "ui/UI Pack/Extra/icon_arrow_down_light.png",
+      "gitBlobSHA": "76900c14a13ab02b334e14b48877ae02be214f9b"
+    },
+    {
+      "file": "apps/player/assets/kenney-up.png",
+      "source": "ui/UI Pack/Extra/icon_arrow_up_light.png",
+      "gitBlobSHA": "cc001a489ea2cdd3f75a51be7608c731e3f1a54c"
+    }
+  ],
+  "notes": "Exact binary source Git blob object hashes were checked during GitHub Actions import. These four assets are incorporated into the game's local bundled asset library; none depend on an external runtime API."
+}
