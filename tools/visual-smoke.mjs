@@ -40,6 +40,23 @@ async function inspect(label, viewport) {
   await page.getByRole('button', { name: /THE CAFÉ/ }).click();
   await page.getByText('The Space Between').first().waitFor({ timeout: 15000 });
   await page.screenshot({ path: path.join(out, `story-${label}.png`), fullPage: true });
+  // Real cross-mode handoff: complete the original story, advance Free Life,
+  // start its official sequel and reload midway. No re-import must be needed.
+  await page.getByRole('button', { name: /I should have called/i }).click();
+  await page.getByRole('button', { name: /I was afraid I/i }).click();
+  await page.getByRole('tab', { name: 'FREE LIFE' }).click();
+  await page.getByRole('button', { name: /Advance 7 days per activity/i }).click();
+  await page.getByRole('button', { name: 'REST' }).click();
+  await page.getByRole('tab', { name: 'STORIES' }).click();
+  await page.getByRole('button', { name: /Enter the bookshop/i }).click();
+  await page.getByText('A Place for Second Chances').first().waitFor();
+  await page.getByRole('button', { name: /I said I would/i }).click();
+  await page.getByText(/That box goes under the window/).waitFor({ timeout: 12000 });
+  await page.screenshot({ path: path.join(out, `bookshop-mid-scene-${label}.png`), fullPage: true });
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.getByText(/That box goes under the window/).waitFor({ timeout: 15000 });
+  assert.equal(await page.getByText(/could not be restored/i).count(), 0);
+  await page.screenshot({ path: path.join(out, `bookshop-reloaded-${label}.png`), fullPage: true });
   assert.equal(errors.length, 0, `Browser exception in ${label}: ${errors.join('; ')}`);
   await context.close();
 }
