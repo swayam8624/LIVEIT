@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
   Platform,
+  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -37,6 +38,9 @@ const c = {
 };
 const serif = Platform.OS === 'ios' ? 'Georgia' : 'serif';
 const gold = '#ecc391';
+// Metro bundles this original, locally stored character portrait offline.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const ameliaPortrait = require('./assets/amelia-portrait.jpg');
 const money = (n: number) =>
   new Intl.NumberFormat('en-GB', {
     style: 'currency',
@@ -404,9 +408,15 @@ export default function App() {
                       style={s.dialogue}
                       key={currentScene(world!, reunion).id}
                     >
-                      <Text style={s.eyebrow}>
-                        {currentScene(world!, reunion).speaker.toUpperCase()}
-                      </Text>
+                      <View style={s.speakerRow}>
+                        <Image source={ameliaPortrait} style={s.speakerPortrait} accessibilityLabel="Illustrated portrait of Amelia" />
+                        <View style={{ flex: 1, gap: 3 }}>
+                          <Text style={s.eyebrow}>
+                            {currentScene(world!, reunion).speaker.toUpperCase()}
+                          </Text>
+                          <Text style={s.small}>THE SPACE BETWEEN · BELLWEATHER</Text>
+                        </View>
+                      </View>
                       <Text style={s.dialogueText}>
                         {currentScene(world!, reunion).text}
                       </Text>
@@ -694,7 +704,7 @@ export default function App() {
                                 { backgroundColor: i ? '#dfe7d7' : '#ead7cb' },
                               ]}
                             >
-                              <Text style={s.avatarText}>{i ? 'N' : 'A'}</Text>
+                              {i ? <Text style={s.avatarText}>N</Text> : <Image source={ameliaPortrait} style={s.avatarImage} accessibilityLabel="Amelia Chen's portrait" />}
                             </View>
                             <View style={{ flex: 1 }}>
                               <Text style={s.activityTitle}>
@@ -857,6 +867,12 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  speakerRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
+  speakerPortrait: {
+    width: 66, height: 78, borderRadius: 10, borderColor: '#e3a66d', borderWidth: 2,
+  },
+  avatarImage: { width: 42, height: 42, borderRadius: 22 },
+
   stageHeadline: {
     fontFamily: serif,
     fontSize: 33,
@@ -1076,8 +1092,8 @@ const s = StyleSheet.create({
   },
   personRow: { flexDirection: 'row', alignItems: 'center', gap: 11 },
   avatar: {
-    width: 36,
-    height: 36,
+    width: 42,
+    height: 42,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
