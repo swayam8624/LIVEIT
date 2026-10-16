@@ -24,7 +24,7 @@ import {
 } from '@living/narrative-core';
 import { loadSave, writeSave, type Save } from '@living/save-system';
 import type { World } from '@living/world-schema';
-import { reunion, bookshop } from '@living/content';
+import { reunion, bookshop, findOfficialStory } from '@living/content';
 import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
@@ -131,49 +131,50 @@ export default function App() {
         if (!mounted) return;
         if (value) {
           setSave(value);
-          if (value.activeStoryId && value.activeStoryId !== reunion.id) {
+          if (value.activeStoryId) {
             try {
-              const serialized = await AsyncStorage.getItem(LOCAL_STORIES_KEY);
-              const untrusted: unknown = JSON.parse(serialized ?? '[]');
-              if (!Array.isArray(untrusted))
-                throw new Error('Local story shelf is damaged');
-              const candidate = untrusted.find(
-                (item: unknown) =>
-                  typeof item === 'object' &&
-                  item !== null &&
-                  'id' in item &&
-                  item.id === value.activeStoryId,
-              );
-              if (!candidate)
-                throw new Error('Imported story is no longer installed');
-              const active = parseStory(candidate);
+              // Official stories are bundled, not user imports. Never require
+              // players to re-import them merely because the app restarted.
+              let active: Story | undefined = findOfficialStory(value.activeStoryId);
+              if (!active) {
+                const serialized = await AsyncStorage.getItem(LOCAL_STORIES_KEY);
+                const untrusted: unknown = JSON.parse(serialized ?? '[]');
+                if (!Array.isArray(untrusted))
+                  throw new Error('Local story shelf is damaged');
+                const candidate = untrusted.find(
+                  (item: unknown) =>
+                    typeof item === 'object' &&
+                    item !== null &&
+                    'id' in item &&
+                    item.id === value.activeStoryId,
+                );
+                if (!candidate)
+                  throw new Error('Imported story is no longer installed');
+                active = parseStory(candidate);
+              }
               if (!mounted) return;
+              const timeline = value.active === 'life' ? value.life : value.story!;
+              const progress = timeline.progress.find(p => p.storyId === active.id);
+              if (!progress) throw new Error('Saved narrative progress is missing');
+              // Verify referenced scenes and story versions before displaying.
+              currentScene(timeline, active);
               setAuthored(active);
-              const timeline =
-                value.active === 'life' ? value.life : value.story!;
-              const progress = timeline.progress.find(
-                (p) => p.storyId === active.id,
-              );
-              setSceneOpen(Boolean(progress && !progress.completed));
+              setSceneOpen(!progress.completed && !value.sceneDismissed);
               setTab('stories');
             } catch {
               if (!mounted) return;
               setSceneOpen(false);
               setTab('stories');
               setError(
-                'Your life is safe, but the active imported story could not be restored. Re-import the original JSON to continue.',
+                'Your saved life is safe, but its last narrative could not be restored. Re-import its original package if it was a creator story.',
               );
             }
           } else {
-            const timeline =
-              value.active === 'life' ? value.life : value.story!;
-            const progress = timeline.progress.find(
-              (p) => p.storyId === reunion.id,
-            );
+            const timeline = value.active === 'life' ? value.life : value.story!;
+            const progress = timeline.progress.find(p => p.storyId === reunion.id);
             setAuthored(reunion);
             setSceneOpen(
-              value.active === 'story' &&
-                Boolean(progress && !progress.completed),
+              value.active === 'story' && Boolean(progress && !progress.completed),
             );
             setTab(value.active === 'story' ? 'stories' : 'life');
           }
@@ -245,8 +246,8 @@ export default function App() {
       setAuthored(reunion);
       persist(
         save.active === 'life'
-          ? { ...save, activeStoryId: reunion.id, life: nextWorld }
-          : { ...save, activeStoryId: reunion.id, story: nextWorld },
+          ? { ...save, activeStoryId: reunion.id, sceneDismissed: false, life: nextWorld }
+          : { ...save, activeStoryId: reunion.id, sceneDismissed: false, story: nextWorld },
       );
       setSceneOpen(true);
     });
@@ -259,7 +260,7 @@ export default function App() {
         throw new Error('Finish the reunion and spend at least a week in Bellweather first.');
       const next = startStory(save.life, bookshop);
       setAuthored(bookshop);
-      persist({ ...save, active: 'life', life: next, activeStoryId: bookshop.id });
+      persist({ ...save, active: 'life', life: next, activeStoryId: bookshop.id, sceneDismissed: false });
       setTab('stories');
       setSceneOpen(true);
     });
@@ -278,7 +279,7 @@ export default function App() {
           ),
           reunion,
         );
-      persist({ ...save, story, active: 'story', activeStoryId: reunion.id });
+      persist({ ...save, story, active: 'story', activeStoryId: reunion.id, sceneDismissed: false });
       setSceneOpen(true);
     });
   }
@@ -306,6 +307,7 @@ export default function App() {
         active: 'life',
         life: started,
         activeStoryId: story.id,
+        sceneDismissed: false,
       });
       setTab('stories');
       setSceneOpen(true);
@@ -348,6 +350,8 @@ export default function App() {
               accessibilityState={{ selected: tab === entry.id }}
               accessibilityLabel={entry.title}
               onPress={() => {
+                if (sceneOpen && save)
+                  persist({ ...save, sceneDismissed: true });
                 setTab(entry.id);
                 setSceneOpen(false);
               }}
@@ -469,7 +473,7 @@ export default function App() {
                       label="Save & leave scene"
                       secondary
                       onPress={() => {
-                        persist(save);
+                        persist({ ...save, sceneDismissed: true });
                         setSceneOpen(false);
                       }}
                     />
