@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-10-16",
+  "note": "Discovery catalog only. No third-party binary asset is incorporated in the shipped game until its exact file and license have been reviewed. A site-wide license does not replace verifying a specific archive.",
+  "entries": [
+    {
+      "id": "kenney-ui",
+      "title": "Kenney UI Pack",
+      "publisher": "Kenney",
+      "homepage": "https://kenney.nl/assets/ui-pack",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "attributionRequired": false,
+      "plannedUse": "Game HUD panels, button frames and status chrome; reskin to LIVEIT palette",
+      "acquisition": "Download individual free pack from the official page; do not use the paid All-in-1 bundle"
+    },
+    {
+      "id": "kenney-pixel-ui",
+      "title": "Kenney Pixel UI Pack",
+      "publisher": "Kenney",
+      "homepage": "https://kenney.nl/assets/pixel-ui-pack",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "attributionRequired": false,
+      "plannedUse": "Prototype pixel art panels only, not the main painterly scene"
+    },
+    {
+      "id": "kenney-urban",
+      "title": "Kenney RPG Urban Kit",
+      "publisher": "Kenney",
+      "homepage": "https://kenney-assets.itch.io/rpg-urban-kit",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "attributionRequired": false,
+      "plannedUse": "Optional city map / pixel-mode prototype; inconsistent with cinematic character illustration",
+      "acquisition": "Name-your-price pack lists a free download option; choose 0 when available"
+    },
+    {
+      "id": "polyhaven-textures",
+      "title": "Poly Haven CC0 textures and HDRIs",
+      "publisher": "Poly Haven contributors",
+      "homepage": "https://polyhaven.com/",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "attributionRequired": false,
+      "plannedUse": "Source for background lighting/environment plates only; user interface cannot assume full 3D rendering",
+      "acquisition": "Download individual textures/HDRIs, review each asset and convert to 2D if appropriate"
+    },
+    {
+      "id": "opengameart-cc0",
+      "title": "OpenGameArt CC0 background collection",
+      "publisher": "Various individual authors",
+      "homepage": "https://opengameart.org/content/cc0-backgrounds",
+      "license": "CC0-1.0",
+      "commercialUse": true,
+      "attributionRequired": false,
+      "plannedUse": "Possible background explorations",
+      "acquisition": "Open each individual entry; verify its exact author and asset license first. Collection membership is not evidence of rights."
+    }
+  ]
+}
