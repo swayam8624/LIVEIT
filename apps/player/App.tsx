@@ -102,6 +102,7 @@ export default function App() {
   const { width } = useWindowDimensions();
   const wide = width >= 1000;
   const [save, setSave] = useState<Save | null>(null);
+  const scrollRef = useRef<ScrollView>(null);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState('');
   const [status, setStatus] = useState('');
@@ -189,6 +190,12 @@ export default function App() {
       mounted = false;
     };
   }, []);
+  useEffect(() => {
+    // Navigation and new-character creation must not preserve an old scroll
+    // offset that hides the top of the new game screen on small devices.
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+  }, [tab, sceneOpen, Boolean(save)]);
+
   function persist(next: Save) {
     setSave(next);
     setError('');
@@ -348,6 +355,7 @@ export default function App() {
           ))}
         </View>
         <ScrollView
+          ref={scrollRef}
           contentContainerStyle={[s.main, { padding: wide ? 40 : 22 }]}
         >
           {error !== '' && (
@@ -1172,22 +1180,24 @@ const s = StyleSheet.create({
 
   gameNav: {
     flexDirection: 'row',
-    gap: 9,
+    gap: 5,
     backgroundColor: '#121c2b',
     borderBottomColor: '#414457',
     borderBottomWidth: 1,
     paddingVertical: 11,
-    paddingHorizontal: 12,
-    justifyContent: 'center',
+    paddingHorizontal: 6,
+    justifyContent: 'space-between',
+    width: '100%',
   },
   gameNavItem: {
-    minHeight: 42,
+    minHeight: 44,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
     borderColor: '#3e4557',
     borderRadius: 9,
-    paddingHorizontal: 13,
+    paddingHorizontal: 3,
     backgroundColor: '#1d293a',
   },
   gameNavSelected: {
@@ -1195,10 +1205,11 @@ const s = StyleSheet.create({
     borderColor: '#dba46f',
   },
   gameNavText: {
-    fontSize: 11,
+    fontSize: 10,
     color: '#d9d7d8',
     fontWeight: '800',
-    letterSpacing: 0.5,
+    letterSpacing: 0,
+    textAlign: 'center',
   },
 
   speakerRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
