@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  Animated,
   Platform,
   Pressable,
   ScrollView,
@@ -25,6 +24,7 @@ import {
 import { loadSave, writeSave, type Save } from '@living/save-system';
 import type { World } from '@living/world-schema';
 import { reunion } from '@living/content';
+import { GameStage } from './src/GameStage';
 const c = {
   paper: '#0c1421',
   ink: '#f7eee1',
@@ -88,110 +88,6 @@ function Stat({
       <Text style={s.eyebrow}>{label}</Text>
       <Text style={s.statValue}>{value}</Text>
       <Text style={s.small}>{detail}</Text>
-    </View>
-  );
-}
-/** Temporary reusable scene made from native primitives; no external asset requests. */
-function Cafe({ warm = false }: { warm?: boolean }) {
-  const breath = useRef(new Animated.Value(0)).current;
-  useEffect(() => {
-    const animation = Animated.loop(
-      Animated.sequence([
-        Animated.timing(breath, {
-          toValue: 1,
-          duration: 2600,
-          useNativeDriver: Platform.OS !== 'web',
-        }),
-        Animated.timing(breath, {
-          toValue: 0,
-          duration: 2600,
-          useNativeDriver: Platform.OS !== 'web',
-        }),
-      ]),
-    );
-    animation.start();
-    return () => animation.stop();
-  }, [breath]);
-  return (
-    <View
-      style={s.cafe}
-      accessibilityLabel="Illustrated café scene, Amelia sitting by a sunlit window"
-    >
-      <View style={s.window}>
-        <View style={s.sun} />
-        {[24, 65, 103, 150, 190, 230].map((left, i) => (
-          <View
-            key={left}
-            style={[
-              s.building,
-              {
-                left,
-                width: 27,
-                height: 35 + (i % 3) * 25,
-                backgroundColor: i % 2 ? '#9aaca0' : '#b4bba5',
-              },
-            ]}
-          />
-        ))}
-        <View style={s.windowCross} />
-        <View style={s.windowCrossH} />
-      </View>
-      <View style={s.picture}>
-        <Text style={{ color: '#747553', fontSize: 25 }}>✳</Text>
-      </View>
-      <View style={s.lampCord} />
-      <View style={s.lamp} />
-      <View style={s.floor} />
-      <View style={s.plantPot} />
-      {[0, 1, 2].map((i) => (
-        <View
-          key={i}
-          style={[
-            s.leaf,
-            {
-              transform: [{ rotate: `${i * 35 - 35}deg` }],
-              left: 32 + i * 13,
-              bottom: 92 + (i % 2) * 28,
-            },
-          ]}
-        />
-      ))}
-      <Animated.View
-        style={[
-          s.person,
-          {
-            transform: [
-              {
-                translateY: breath.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0, -3],
-                }),
-              },
-            ],
-          },
-        ]}
-      >
-        <View style={s.hair} />
-        <View style={s.body} />
-        <View style={s.neck} />
-        <View style={s.face}>
-          <View style={[s.eye, { left: 16 }]} />
-          <View style={[s.eye, { right: 16 }]} />
-          <View
-            style={[
-              s.mouth,
-              warm && { width: 15, borderBottomWidth: 2, borderRadius: 10 },
-            ]}
-          />
-        </View>
-        <View style={s.fringe} />
-      </Animated.View>
-      <View style={s.table} />
-      <View style={s.cup} />
-      <View style={s.cupHandle} />
-      <View pointerEvents="none" style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 12, backgroundColor: '#0a1020' }} />
-      <View pointerEvents="none" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 13, backgroundColor: '#0a1020' }} />
-      <Text style={s.sceneLabel}>BELLWEATHER · THE CORNER CAFÉ · 19:42</Text>
     </View>
   );
 }
@@ -483,12 +379,13 @@ export default function App() {
                     />
                   </View>
                   <View
-                    style={[s.sceneLayout, wide && { flexDirection: 'row' }]}
+                    style={s.sceneLayout}
                   >
                     <View style={{ flex: 1.15 }}>
-                      <Cafe
-                        warm={currentScene(world!, reunion).mood === 'warm'}
-                      />
+                      <GameStage mode="story" mood={currentScene(world!, reunion).mood}>
+                        <Text style={s.stageHeadline}>A conversation you can't undo.</Text>
+                        <Text style={s.stageHint}>What you say here becomes part of your history.</Text>
+                      </GameStage>
                       <View style={s.sceneMeta}>
                         <Text style={s.small}>
                           A NEW BEGINNING · CHAPTER 01
@@ -579,6 +476,31 @@ export default function App() {
                         : 'MAIN TIMELINE'}
                     </Tag>
                   </View>
+                  <GameStage mode="life">
+                    <Text style={s.stageHeadline}>Your life is happening.</Text>
+                    <Text style={s.stageHint}>Choose where to spend your time. The city will remember what you do.</Text>
+                    <View style={s.destinationRow}>
+                      {([
+                        { icon: '✦', label: 'THE CAFÉ', action: 'cafe' },
+                        { icon: '↗', label: 'WORK', action: 'work' },
+                        { icon: '✧', label: 'STUDY', action: 'study' },
+                        { icon: '♡', label: 'FRIENDS', action: 'socialize' },
+                        { icon: '☾', label: 'REST', action: 'rest' },
+                      ] as const).map((dest) => (
+                        <Pressable
+                          key={dest.action}
+                          accessibilityRole="button"
+                          accessibilityLabel={dest.label}
+                          style={({ pressed }) => [s.destination, pressed && { backgroundColor: '#865037' }]}
+                          onPress={() => dest.action === 'cafe'
+                            ? openEncounter()
+                            : run(() => update(advanceLife(world!, dest.action as Activity, days)))}
+                        >
+                          <Text style={s.destinationText}>{dest.icon}  {dest.label}</Text>
+                        </Pressable>
+                      ))}
+                    </View>
+                  </GameStage>
                   <View style={s.stats}>
                     <Stat
                       label="YOUR SAVINGS"
@@ -711,7 +633,7 @@ export default function App() {
                     </View>
                     <View style={{ flex: 0.85, gap: 18 }}>
                       <View style={s.encounter}>
-                        <Cafe />
+                        <GameStage mode="life" compact />
                         <View style={s.encounterBody}>
                           <Tag>A FAMILIAR FACE</Tag>
                           <Text style={s.cardTitle}>
@@ -780,7 +702,7 @@ export default function App() {
                     style={[s.storyFeature, wide && { flexDirection: 'row' }]}
                   >
                     <View style={{ flex: 1 }}>
-                      <Cafe />
+                      <GameStage mode="life" compact />
                     </View>
                     <View style={s.storyFeatureText}>
                       <Tag>ORIGINAL STORY · FAMILY & FRIENDSHIP</Tag>
@@ -910,6 +832,21 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  stageHeadline: {
+    fontFamily: serif, fontSize: 33, color: '#fff0d3', fontWeight: '700',
+    textShadowColor: 'rgba(0,0,0,0.75)', textShadowRadius: 12, maxWidth: 560,
+  },
+  stageHint: {
+    fontSize: 13, lineHeight: 20, color: '#f6e8df', maxWidth: 580,
+    textShadowColor: '#000000', textShadowRadius: 8,
+  },
+  destinationRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 13 },
+  destination: {
+    minHeight: 46, justifyContent: 'center', paddingHorizontal: 14, borderRadius: 9,
+    borderWidth: 1, borderColor: '#c99064', backgroundColor: 'rgba(9,15,25,0.88)',
+  },
+  destinationText: { color: '#fff1dc', letterSpacing: 0.8, fontSize: 11, fontWeight: '800' },
+
   app: { flex: 1, backgroundColor: c.paper },
   loading: {
     flex: 1,
@@ -954,7 +891,7 @@ const s = StyleSheet.create({
   },
   navActive: { backgroundColor: '#303147', borderLeftWidth: 3, borderLeftColor: gold },
   navText: { fontSize: 14, color: c.muted },
-  sideNote: { marginTop: 100, padding: 7 },
+  sideNote: { marginTop: 100, padding: 7, opacity: 0.55 },
   sideQuote: {
     fontFamily: serif,
     fontSize: 22,
@@ -1009,7 +946,7 @@ const s = StyleSheet.create({
     backgroundColor: c.white,
     marginVertical: 8,
   },
-  stat: { flex: 1, minWidth: 155, padding: 22, gap: 9 },
+  stat: { flex: 1, minWidth: 140, padding: 16, gap: 4 },
   statValue: { fontFamily: serif, fontSize: 34, color: gold },
   columns: { gap: 30, alignItems: 'stretch' },
   sectionHeading: { gap: 8 },
@@ -1120,10 +1057,14 @@ const s = StyleSheet.create({
     backgroundColor: c.white,
   },
   alert: { padding: 16, backgroundColor: '#fae7d7', borderRadius: 5 },
-  sceneLayout: { gap: 30 },
+  sceneLayout: { gap: 0, alignItems: 'center' },
   dialogue: {
     flex: 1,
     padding: 25,
+    width: '100%',
+    maxWidth: 980,
+    marginTop: -35,
+    zIndex: 2,
     borderWidth: 1,
     borderColor: c.line,
     backgroundColor: '#18243a',
