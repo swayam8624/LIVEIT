@@ -4,6 +4,9 @@ export const SaveSchema = z
   .object({
     version: z.literal(1),
     active: z.enum(['life', 'story']),
+    // Optional for compatibility with existing v1 saves. Identifies the active
+    // narrative independently of timeline (official or locally imported).
+    activeStoryId: z.string().min(1).max(120).optional(),
     life: WorldSchema,
     story: WorldSchema.nullable(),
   })
