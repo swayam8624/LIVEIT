@@ -16,6 +16,8 @@ jobs:
       # actual code even when the separate formatting commit arrives later.
       - run: npx prettier --write .
       - run: npm run check
+      - name: Verify safe CC0 archive importer
+        run: python3 -m unittest discover -s tests -p 'test_asset_importer.py' -v
       - run: npm run build:player
       - run: npm run build:studio
       - name: Bundle native iOS and Android assets

@@ -1,3 +1,8 @@
+import { initialCityState, tickCity } from './city';
+import { initialNPCLives, tickNPCs } from './npc';
+export { NPC_BEATS, initialNPCLives } from './npc';
+export { CITY_OPPORTUNITIES, DISTRICTS, availableCityOpportunities, chooseCareer, cityState, visitDistrict, resolveCityOpportunity } from './city';
+export type { CityOpportunity, CityChoice } from './city';
 import {
   WorldSchema,
   record,
@@ -40,6 +45,8 @@ export function createWorld(
     ],
     facts: ['university_attended'],
     progress: [],
+    city: initialCityState(),
+    npcLives: initialNPCLives(),
   });
 }
 export type Activity = 'work' | 'study' | 'rest' | 'socialize';
@@ -53,6 +60,8 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
   for (let i = 0; i < days; i++) {
     w.day++;
     w.player.ageDays++;
+    tickCity(w, activity);
+    tickNPCs(w);
     w.player.money -= 2800;
     if (activity === 'work') {
       if (w.player.career === 'seeking' && w.player.skill >= 25)
@@ -60,12 +69,20 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
       w.player.money += w.player.career === 'employed' ? 12000 : 6500;
       w.player.wellbeing -= 4;
       w.player.skill += 1;
+      if (w.player.career === 'employed' && w.city) {
+        const bonus = { undecided: 0, technology: 2200, creative: 800, business: 2800, community: 1200 }[w.city.careerPath];
+        w.player.money += bonus;
+        if (w.city.careerPath === 'business') w.city.stress = Math.min(100, w.city.stress + 2);
+        if (w.city.careerPath === 'community') w.city.connections = Math.min(100, w.city.connections + 1);
+      }
+      if (w.city?.district === 'market') w.player.money += 1500;
     }
     if (activity === 'study') {
-      w.player.skill += 4;
+      w.player.skill += w.city?.district === 'university' ? 5 : 4;
       w.player.wellbeing -= 1;
+      if (w.city?.district === 'studio') w.city.reputation = Math.min(100, w.city.reputation + 1);
     }
-    if (activity === 'rest') w.player.wellbeing += 9;
+    if (activity === 'rest') w.player.wellbeing += w.city?.district === 'gardens' ? 12 : 9;
     if (activity === 'socialize') {
       w.player.wellbeing += 5;
       const friend = w.relationships.find((r) => r.characterId === 'noah');

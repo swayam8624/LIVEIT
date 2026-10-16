@@ -44,6 +44,46 @@ export const ProgressSchema = z
     choices: z.array(z.string()).max(1000),
   })
   .strict();
+/**
+ * City systems are optional in schema v1 so earlier local save files remain
+ * readable. New lives receive initialized city state; legacy saves are
+ * lazily upgraded when a city action is performed.
+ */
+export const DistrictSchema = z.enum([
+  'riverside', 'university', 'market', 'studio', 'gardens',
+]);
+export const CareerPathSchema = z.enum([
+  'undecided', 'technology', 'creative', 'business', 'community',
+]);
+export const CityStateSchema = z.object({
+  district: DistrictSchema,
+  careerPath: CareerPathSchema,
+  reputation: z.number().int().min(0).max(100),
+  stress: z.number().int().min(0).max(100),
+  connections: z.number().int().min(0).max(100),
+  housing: z.enum(['shared_flat', 'own_flat', 'townhouse']),
+  milestones: z.array(z.string().min(1).max(80)).max(150),
+  opportunities: z.array(z.object({
+    id: z.string().min(1).max(80),
+    offeredDay: z.number().int().nonnegative(),
+    expiresDay: z.number().int().nonnegative(),
+  }).strict()).max(3),
+  resolved: z.array(z.string().min(1).max(80)).max(1000),
+}).strict();
+export type CityState = z.infer<typeof CityStateSchema>;
+export type District = z.infer<typeof DistrictSchema>;
+export type CareerPath = z.infer<typeof CareerPathSchema>;
+
+/** Lightweight off-screen NPC simulation; optional for old local saves. */
+export const NPCLifeSchema = z.object({
+  characterId: z.string().min(1),
+  occupation: z.string().min(1).max(100),
+  currentGoal: z.string().min(1).max(200),
+  mood: z.enum(['hopeful', 'busy', 'anxious', 'content', 'restless']),
+  milestones: z.array(z.string().min(1).max(120)).max(80),
+}).strict();
+export type NPCLife = z.infer<typeof NPCLifeSchema>;
+
 export const WorldSchema = z
   .object({
     schemaVersion: z.literal(1),
@@ -56,6 +96,8 @@ export const WorldSchema = z
     history: z.array(EventSchema).max(20000),
     facts: z.array(z.string()).max(10000),
     progress: z.array(ProgressSchema).max(100),
+    city: CityStateSchema.optional(),
+    npcLives: z.array(NPCLifeSchema).max(100).optional(),
   })
   .strict()
   .superRefine((w, ctx) => {

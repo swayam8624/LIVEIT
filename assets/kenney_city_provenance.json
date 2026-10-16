@@ -1,0 +1,139 @@
+{
+  "name": "LIVEIT Kenney CC0 isometric city and building asset provenance",
+  "publisher": "Kenney",
+  "license": "CC0-1.0",
+  "commercialUse": true,
+  "attributionRequired": false,
+  "credit": "City art by Kenney (CC0-1.0); attribution provided voluntarily",
+  "sourceOfficial": "https://kenney.nl/assets",
+  "sourcePublisherLicensing": "https://kenney.nl/support",
+  "pinnedOpenMirror": "https://github.com/shorepine/kenney",
+  "mirrorCommit": "3694c6879e487c108f55677be7dd2ca75b07cc3b",
+  "checkedAt": "2026-10-16",
+  "hashMethod": "Git blob SHA-1 of raw file bytes, verified in GitHub Actions download jobs",
+  "sourceCodeNote": "Do not assume entire mirror's content carries a uniform license; only explicitly verified pinned Kenney packs were imported.",
+  "cityTiles": [
+    {
+      "file": "apps/player/assets/city/tile-000.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_000.png",
+      "gitBlobSha": "1f70bf18b3721882c0732842875b3ecb01d79cb7"
+    },
+    {
+      "file": "apps/player/assets/city/tile-001.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_001.png",
+      "gitBlobSha": "43ee32cf80700c1b0b75646d529ace01383e36bf"
+    },
+    {
+      "file": "apps/player/assets/city/tile-002.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_002.png",
+      "gitBlobSha": "e3e09d4df38652a3cb91f79abcdd0f5135631a72"
+    },
+    {
+      "file": "apps/player/assets/city/tile-003.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_003.png",
+      "gitBlobSha": "ff0a0dbf7ef4d1c371f96f96b4125f7328e2e84f"
+    },
+    {
+      "file": "apps/player/assets/city/tile-004.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_004.png",
+      "gitBlobSha": "a39648b3b4a9bcee99683b32082f5f0156790dc6"
+    },
+    {
+      "file": "apps/player/assets/city/tile-005.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_005.png",
+      "gitBlobSha": "9388f7e62e8eab62d8215b9211a36415ad0b27ff"
+    },
+    {
+      "file": "apps/player/assets/city/tile-006.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_006.png",
+      "gitBlobSha": "1bf117bcdc2de5f58687a9e585b7558cbd062c23"
+    },
+    {
+      "file": "apps/player/assets/city/tile-007.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_007.png",
+      "gitBlobSha": "6aac9d94bd6c98b5993518dd0b20cc3db287f929"
+    },
+    {
+      "file": "apps/player/assets/city/tile-008.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_008.png",
+      "gitBlobSha": "002c84a501fa962cac771c946d34afdc0dd4d9fa"
+    },
+    {
+      "file": "apps/player/assets/city/tile-009.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_009.png",
+      "gitBlobSha": "5787d2cc1909016f3e2ca1f087c42148f6b12c10"
+    },
+    {
+      "file": "apps/player/assets/city/tile-010.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_010.png",
+      "gitBlobSha": "d012bff90456743691315d4eb1d606ab639a502b"
+    },
+    {
+      "file": "apps/player/assets/city/tile-011.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_011.png",
+      "gitBlobSha": "c4e8d17c9fd5322b722d7dd39382576590f5b70f"
+    },
+    {
+      "file": "apps/player/assets/city/tile-012.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_012.png",
+      "gitBlobSha": "b20773c661237de61a9b354a694c755a8224ea36"
+    },
+    {
+      "file": "apps/player/assets/city/tile-013.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_013.png",
+      "gitBlobSha": "8882361ba4728c33b9ae6982cf4a930f7d98a5f2"
+    },
+    {
+      "file": "apps/player/assets/city/tile-014.png",
+      "origin": "2d/Isometric Tiles City/cityTiles_014.png",
+      "gitBlobSha": "84dea6877af182c43006a889987ea60c59256a10"
+    }
+  ],
+  "buildings": [
+    {
+      "file": "apps/player/assets/buildings/building-000.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_000.png",
+      "gitBlobSha": "9d7ec7c1c9447dacad4f541bf91f645bf2575b54"
+    },
+    {
+      "file": "apps/player/assets/buildings/building-001.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_001.png",
+      "gitBlobSha": "219a6857c22470f9bc852e0341466bf43e34e620"
+    },
+    {
+      "file": "apps/player/assets/buildings/building-002.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_002.png",
+      "gitBlobSha": "345376689b61853db37c92092b6b89c4b18e9535"
+    },
+    {
+      "file": "apps/player/assets/buildings/building-003.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_003.png",
+      "gitBlobSha": "8057d26a38082867217a5825d584adda691dae26"
+    },
+    {
+      "file": "apps/player/assets/buildings/building-004.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_004.png",
+      "gitBlobSha": "db45f01006a0b5fd525fcb1ededac93486b861f4"
+    },
+    {
+      "file": "apps/player/assets/buildings/building-009.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_009.png",
+      "gitBlobSha": "8449257728e95a7609162951449604916ae5129e"
+    },
+    {
+      "file": "apps/player/assets/buildings/building-010.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_010.png",
+      "gitBlobSha": "781edff93d84d0d0c3f352f70c46b2160e0c6397"
+    },
+    {
+      "file": "apps/player/assets/buildings/building-011.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_011.png",
+      "gitBlobSha": "6548c6e122c5e7075922db54e4f87bc5e99ba703"
+    },
+    {
+      "file": "apps/player/assets/buildings/building-012.png",
+      "origin": "2d/Isometric Tiles Buildings/buildingTiles_012.png",
+      "gitBlobSha": "bd0a68e50e8074f5a8019a7303432f1ac52410a2"
+    }
+  ]
+}

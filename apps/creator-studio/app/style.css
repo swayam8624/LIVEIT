@@ -569,3 +569,44 @@ aside {
     text-align: center;
   }
 }
+
+/* LIVEIT creator: no-code impact editor and actual simulation preview HUD. */
+.effect-controls {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-top: 9px;
+}
+.effect-controls button {
+  flex: 1 1 100px;
+  min-height: 38px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.effect-controls button:disabled,
+.preview-choices button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+.preview-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0 12px;
+}
+.preview-stats span {
+  border: 1px solid #756655;
+  background: #1b2838;
+  border-radius: 6px;
+  color: #c6d1db;
+  padding: 10px;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.preview-stats strong {
+  font-size: 14px;
+  color: #f4c58d;
+}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { parseStory, type Story } from '@living/story-schema';
-import { reunion } from '@living/content';
+import { findOfficialStory } from '@living/content';
 
 export const LOCAL_STORIES_KEY = 'liveit:local-stories:v1';
 const MAX_STORIES = 12;
@@ -59,9 +59,9 @@ export function LocalStoryLibrary({
     }
     try {
       const parsed = parseStory(JSON.parse(source));
-      if (parsed.id === reunion.id) {
+      if (findOfficialStory(parsed.id)) {
         throw new Error(
-          'The original story ID is reserved. Choose another story ID.',
+          'Official story IDs are reserved. Choose a different creator story ID.',
         );
       }
       if (protectedIds.includes(parsed.id)) {

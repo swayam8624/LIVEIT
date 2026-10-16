@@ -24,11 +24,12 @@ import {
 } from '@living/narrative-core';
 import { loadSave, writeSave, type Save } from '@living/save-system';
 import type { World } from '@living/world-schema';
-import { reunion } from '@living/content';
+import { reunion, bookshop, findOfficialStory } from '@living/content';
 import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
 import { GameStage } from './src/GameStage';
+import { CityWorld } from './src/CityWorld';
 const c = {
   paper: '#0c1421',
   ink: '#f7eee1',
@@ -130,49 +131,50 @@ export default function App() {
         if (!mounted) return;
         if (value) {
           setSave(value);
-          if (value.activeStoryId && value.activeStoryId !== reunion.id) {
+          if (value.activeStoryId) {
             try {
-              const serialized = await AsyncStorage.getItem(LOCAL_STORIES_KEY);
-              const untrusted: unknown = JSON.parse(serialized ?? '[]');
-              if (!Array.isArray(untrusted))
-                throw new Error('Local story shelf is damaged');
-              const candidate = untrusted.find(
-                (item: unknown) =>
-                  typeof item === 'object' &&
-                  item !== null &&
-                  'id' in item &&
-                  item.id === value.activeStoryId,
-              );
-              if (!candidate)
-                throw new Error('Imported story is no longer installed');
-              const active = parseStory(candidate);
+              // Official stories are bundled, not user imports. Never require
+              // players to re-import them merely because the app restarted.
+              let active: Story | undefined = findOfficialStory(value.activeStoryId);
+              if (!active) {
+                const serialized = await AsyncStorage.getItem(LOCAL_STORIES_KEY);
+                const untrusted: unknown = JSON.parse(serialized ?? '[]');
+                if (!Array.isArray(untrusted))
+                  throw new Error('Local story shelf is damaged');
+                const candidate = untrusted.find(
+                  (item: unknown) =>
+                    typeof item === 'object' &&
+                    item !== null &&
+                    'id' in item &&
+                    item.id === value.activeStoryId,
+                );
+                if (!candidate)
+                  throw new Error('Imported story is no longer installed');
+                active = parseStory(candidate);
+              }
               if (!mounted) return;
+              const timeline = value.active === 'life' ? value.life : value.story!;
+              const progress = timeline.progress.find(p => p.storyId === active.id);
+              if (!progress) throw new Error('Saved narrative progress is missing');
+              // Verify referenced scenes and story versions before displaying.
+              currentScene(timeline, active);
               setAuthored(active);
-              const timeline =
-                value.active === 'life' ? value.life : value.story!;
-              const progress = timeline.progress.find(
-                (p) => p.storyId === active.id,
-              );
-              setSceneOpen(Boolean(progress && !progress.completed));
+              setSceneOpen(!progress.completed && !value.sceneDismissed);
               setTab('stories');
             } catch {
               if (!mounted) return;
               setSceneOpen(false);
               setTab('stories');
               setError(
-                'Your life is safe, but the active imported story could not be restored. Re-import the original JSON to continue.',
+                'Your saved life is safe, but its last narrative could not be restored. Re-import its original package if it was a creator story.',
               );
             }
           } else {
-            const timeline =
-              value.active === 'life' ? value.life : value.story!;
-            const progress = timeline.progress.find(
-              (p) => p.storyId === reunion.id,
-            );
+            const timeline = value.active === 'life' ? value.life : value.story!;
+            const progress = timeline.progress.find(p => p.storyId === reunion.id);
             setAuthored(reunion);
             setSceneOpen(
-              value.active === 'story' &&
-                Boolean(progress && !progress.completed),
+              value.active === 'story' && Boolean(progress && !progress.completed),
             );
             setTab(value.active === 'story' ? 'stories' : 'life');
           }
@@ -244,9 +246,22 @@ export default function App() {
       setAuthored(reunion);
       persist(
         save.active === 'life'
-          ? { ...save, activeStoryId: reunion.id, life: nextWorld }
-          : { ...save, activeStoryId: reunion.id, story: nextWorld },
+          ? { ...save, activeStoryId: reunion.id, sceneDismissed: false, life: nextWorld }
+          : { ...save, activeStoryId: reunion.id, sceneDismissed: false, story: nextWorld },
       );
+      setSceneOpen(true);
+    });
+  }
+  function openBookshop() {
+    if (!save) return;
+    run(() => {
+      const reunited = save.life.progress.some(p => p.storyId === reunion.id && p.completed);
+      if (!reunited || save.life.day < 7)
+        throw new Error('Finish the reunion and spend at least a week in Bellweather first.');
+      const next = startStory(save.life, bookshop);
+      setAuthored(bookshop);
+      persist({ ...save, active: 'life', life: next, activeStoryId: bookshop.id, sceneDismissed: false });
+      setTab('stories');
       setSceneOpen(true);
     });
   }
@@ -264,7 +279,7 @@ export default function App() {
           ),
           reunion,
         );
-      persist({ ...save, story, active: 'story', activeStoryId: reunion.id });
+      persist({ ...save, story, active: 'story', activeStoryId: reunion.id, sceneDismissed: false });
       setSceneOpen(true);
     });
   }
@@ -292,6 +307,7 @@ export default function App() {
         active: 'life',
         life: started,
         activeStoryId: story.id,
+        sceneDismissed: false,
       });
       setTab('stories');
       setSceneOpen(true);
@@ -334,6 +350,8 @@ export default function App() {
               accessibilityState={{ selected: tab === entry.id }}
               accessibilityLabel={entry.title}
               onPress={() => {
+                if (sceneOpen && save)
+                  persist({ ...save, sceneDismissed: true });
                 setTab(entry.id);
                 setSceneOpen(false);
               }}
@@ -455,7 +473,7 @@ export default function App() {
                       label="Save & leave scene"
                       secondary
                       onPress={() => {
-                        persist(save);
+                        persist({ ...save, sceneDismissed: true });
                         setSceneOpen(false);
                       }}
                     />
@@ -509,11 +527,11 @@ export default function App() {
                           <Text style={s.eyebrow}>
                             {currentScene(
                               world!,
-                              reunion,
+                              authored,
                             ).speaker.toUpperCase()}
                           </Text>
                           <Text style={s.small}>
-                            THE SPACE BETWEEN · BELLWEATHER
+                            {authored.title.toUpperCase()} · BELLWEATHER
                           </Text>
                         </View>
                       </View>
@@ -636,6 +654,10 @@ export default function App() {
                       ))}
                     </View>
                   </GameStage>
+                  <CityWorld
+                    world={world!}
+                    onAction={(operation) => run(() => update(operation(world!)))}
+                  />
                   <View style={s.stats}>
                     <Stat
                       label="YOUR SAVINGS"
@@ -939,6 +961,27 @@ export default function App() {
                       )}
                     </View>
                   </View>
+                  <View style={s.bookshopFeature}>
+                    <View style={{ flex: 1, gap: 7 }}>
+                      <Tag>ORIGINAL STORY · CHAPTER TWO</Tag>
+                      <Text style={s.cardTitle}>{bookshop.title}</Text>
+                      <Text style={s.cardDescription}>{bookshop.description}</Text>
+                      <Text style={s.small}>11 illustrated narrative scenes · 3 endings · choices free</Text>
+                      <Text style={s.small}>Compatible with the main Free Life timeline; it remembers your earlier reunion.</Text>
+                    </View>
+                    <View style={{ justifyContent: 'center', gap: 8 }}>
+                      <Button
+                        label={save.life.progress.some(p => p.storyId === bookshop.id)
+                          ? 'Continue the bookshop →'
+                          : 'Enter the bookshop →'}
+                        disabled={!save.life.progress.some(p => p.storyId === reunion.id && p.completed) || save.life.day < 7}
+                        onPress={openBookshop}
+                      />
+                      {(!save.life.progress.some(p => p.storyId === reunion.id && p.completed) || save.life.day < 7) && (
+                        <Text style={s.small}>Unlock naturally: complete the reunion and spend 7 days in Bellweather.</Text>
+                      )}
+                    </View>
+                  </View>
                   <View style={s.infoBox}>
                     <Text style={s.sectionTitle}>
                       One universe. Many ways to live.
@@ -971,6 +1014,7 @@ export default function App() {
                       const memories = world!.memories.filter(
                         (memory) => memory.subject === friend.characterId,
                       );
+                      const npc = world!.npcLives?.find(person => person.characterId === friend.characterId);
                       return (
                         <View key={friend.characterId} style={s.profileCard}>
                           <View style={s.profileTop}>
@@ -992,6 +1036,12 @@ export default function App() {
                                   ? 'An old friend with unfinished history'
                                   : 'Your first friend in Bellweather'}
                               </Text>
+                              {npc && (
+                                <>
+                                  <Text style={s.eyebrow}>{npc.occupation.toUpperCase()} · {npc.mood.toUpperCase()}</Text>
+                                  <Text style={s.small}>Currently: {npc.currentGoal}</Text>
+                                </>
+                              )}
                               <Text style={s.eyebrow}>
                                 LAST SPOKEN · DAY {friend.lastContactDay + 1}
                               </Text>
@@ -1017,6 +1067,14 @@ export default function App() {
                               ? 'No shared story memories yet.'
                               : `${memories.length} remembered moment${memories.length === 1 ? '' : 's'}`}
                           </Text>
+                          {npc && npc.milestones.length > 0 && (
+                            <View style={s.npcMilestones}>
+                              <Text style={s.eyebrow}>LIFE OUTSIDE YOUR OWN</Text>
+                              {npc.milestones.slice(-3).map(item => (
+                                <Text key={item} style={s.small}>✦ {item.replaceAll('_', ' ')}</Text>
+                              ))}
+                            </View>
+                          )}
                           <Button
                             label={
                               amelia
@@ -1110,6 +1168,14 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  npcMilestones: { padding: 12, borderRadius: 9, backgroundColor: '#29384c', gap: 5 },
+
+  bookshopFeature: {
+    flexDirection: 'row', flexWrap: 'wrap', gap: 18,
+    padding: 23, borderRadius: 13, borderWidth: 1,
+    backgroundColor: '#242438', borderColor: '#8c6653',
+  },
+
   peopleGallery: { flexDirection: 'row', flexWrap: 'wrap', gap: 17 },
   profileCard: {
     flexGrow: 1,

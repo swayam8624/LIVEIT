@@ -2,6 +2,9 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { reunion } from '@living/content';
+import { createWorld } from '@living/simulation-core';
+import { choose, currentScene, conditionMet } from '@living/narrative-core';
+import type { World } from '@living/world-schema';
 import { parseStory, type Story } from '@living/story-schema';
 
 type Scene = Story['scenes'][number];
@@ -10,7 +13,7 @@ const STORAGE_KEY = 'liveit:creator-draft:v1';
 export default function Studio() {
   const [raw, setRaw] = useState(() => JSON.stringify(reunion, null, 2));
   const [selected, setSelected] = useState(reunion.entry);
-  const [preview, setPreview] = useState(reunion.entry);
+  const [previewWorld, setPreviewWorld] = useState<World>(() => createWorld('Preview Player', 'creator.preview'));
   const [message, setMessage] = useState(
     'Your work is stored locally in this browser.',
   );
@@ -24,7 +27,7 @@ export default function Studio() {
         const parsed = parseStory(JSON.parse(saved));
         setRaw(JSON.stringify(parsed, null, 2));
         setSelected(parsed.entry);
-        setPreview(parsed.entry);
+        setPreviewWorld(createWorld('Preview Player', 'creator.preview'));
       }
     } catch {
       setMessage(
@@ -57,7 +60,18 @@ export default function Studio() {
   }, [raw]);
   const story = draft.value;
   const scene = story?.scenes.find((node) => node.id === selected);
-  const previewScene = story?.scenes.find((node) => node.id === preview);
+  const previewScene = useMemo(() => {
+    if (!story) return null;
+    try {
+      return currentScene(previewWorld, story);
+    } catch {
+      // The editor may have just renamed/deleted a scene. Keep the previous
+      // runtime untouched and invite a fresh test session instead.
+      return null;
+    }
+  }, [previewWorld, story]);
+  const previewTrust = previewWorld.relationships.find(p => p.characterId === 'amelia')?.trust ?? 0;
+  const previewMemoryCount = previewWorld.memories.length;
 
   function createStory() {
     // Safely retain the last draft before opening a new story. This avoids
@@ -110,7 +124,7 @@ export default function Studio() {
     });
     setRaw(JSON.stringify(fresh, null, 2));
     setSelected(fresh.entry);
-    setPreview(fresh.entry);
+    setPreviewWorld(createWorld('Preview Player', 'creator.preview'));
     setMessage(
       'New story created. Rename it, write your scenes, then validate and export.',
     );
@@ -127,7 +141,7 @@ export default function Studio() {
       window.localStorage.setItem(STORAGE_KEY + ':previous', raw);
       setRaw(JSON.stringify(restored, null, 2));
       setSelected(restored.entry);
-      setPreview(restored.entry);
+      setPreviewWorld(createWorld('Preview Player', 'creator.preview'));
       setMessage(
         'Previous story draft restored. Your current draft is available through Restore previous.',
       );
@@ -181,7 +195,7 @@ export default function Studio() {
       });
       write(combined);
       setSelected(id);
-      setPreview(id);
+      setPreviewWorld(createWorld('Preview Player', 'creator.preview'));
       setMessage(
         'Connected scene created. Edit its dialogue and the choice leading here.',
       );
@@ -235,6 +249,47 @@ export default function Studio() {
       ),
     });
   }
+  function addChoiceEffect(index: number, kind: 'build-trust' | 'damage-trust' | 'memory' | 'clear') {
+    if (!story || !scene) return;
+    const current = scene.choices[index];
+    if (!current) return;
+    if (kind === 'clear') {
+      updateChoice(index, { effects: [] });
+      return;
+    }
+    if (current.effects.length >= 20) {
+      setMessage('A choice can have at most 20 validated effects.');
+      return;
+    }
+    if (kind === 'memory') {
+      const target = story.permissions.memoryTargets[0];
+      if (!target) {
+        setMessage('Add an authorized memory target in the advanced story permissions.');
+        return;
+      }
+      const fact = ('creator_' + scene.id + '_' + current.id + '_' + current.effects.length)
+        .replace(/[^a-zA-Z0-9_]/g, '_').slice(0, 80);
+      updateChoice(index, {
+        effects: [...current.effects, {
+          operation: 'add_memory', target, fact,
+          text: 'You chose: ' + current.label.slice(0, 200),
+        }],
+      });
+      return;
+    }
+    const target = story.permissions.relationshipTargets[0];
+    if (!target) {
+      setMessage('Add an authorized relationship target in the advanced story permissions.');
+      return;
+    }
+    updateChoice(index, {
+      effects: [...current.effects, {
+        operation: 'adjust_relationship', target,
+        value: kind === 'build-trust' ? 5 : -5,
+      }],
+    });
+  }
+
   function validate(): Story | null {
     try {
       const compiled = parseStory(JSON.parse(raw));
@@ -271,7 +326,7 @@ export default function Studio() {
       const incoming = parseStory(JSON.parse(await file.text()));
       setRaw(JSON.stringify(incoming, null, 2));
       setSelected(incoming.entry);
-      setPreview(incoming.entry);
+      setPreviewWorld(createWorld('Preview Player', 'creator.preview'));
       setMessage(
         'Imported ' +
           incoming.title +
@@ -284,7 +339,19 @@ export default function Studio() {
     }
   }
   function resetPreview() {
-    if (story) setPreview(story.entry);
+    setPreviewWorld(createWorld('Preview Player', 'creator.preview'));
+    setMessage('Preview reset. Try a different path and compare its consequences.');
+  }
+  function playPreviewChoice(choiceId: string) {
+    if (!story) return;
+    try {
+      // Exactly the same guards and atomic consequence engine as the player.
+      const next = choose(previewWorld, story, choiceId);
+      setPreviewWorld(next);
+      setMessage('Choice executed using the actual simulation and story runtime.');
+    } catch (error) {
+      setMessage(error instanceof Error ? 'Preview: ' + error.message : 'Preview could not advance.');
+    }
   }
 
   return (
@@ -356,7 +423,7 @@ export default function Studio() {
                 key={node.id}
                 onClick={() => {
                   setSelected(node.id);
-                  setPreview(node.id);
+                  // Selecting a scene to edit does not falsify the live test timeline.
                 }}
               >
                 <small>{String(index + 1).padStart(2, '0')}</small>
@@ -471,11 +538,17 @@ export default function Studio() {
                       </select>
                     </label>
                     <small>
-                      Effects:{' '}
-                      {choice.effects
-                        .map((effect) => effect.operation)
-                        .join(', ') || 'No state changes'}
+                      Consequences:{' '}
+                      {choice.effects.map(e => e.operation === 'adjust_relationship'
+                        ? `${e.target} trust ${e.value > 0 ? '+' : ''}${e.value}`
+                        : `remember: ${e.fact}`).join(' · ') || 'No state changes'}
                     </small>
+                    <div className="effect-controls" aria-label="Add game consequences">
+                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'build-trust')}>+5 trust</button>
+                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'damage-trust')}>−5 trust</button>
+                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'memory')}>+ Memory</button>
+                      <button type="button" className="secondary" disabled={choice.effects.length === 0} onClick={() => addChoiceEffect(index, 'clear')}>Clear effects</button>
+                    </div>
                   </div>
                 ))
               )}
@@ -520,8 +593,15 @@ export default function Studio() {
               <p>{previewScene?.text ?? 'Select a playable scene.'}</p>
             </div>
           </div>
+          <div className="preview-stats" aria-label="Preview simulation state">
+            <span>AMELIA TRUST <strong data-testid="preview-trust">{previewTrust}/100</strong></span>
+            <span>MEMORIES <strong data-testid="preview-memory-count">{previewMemoryCount}</strong></span>
+            <span>DAY <strong>{previewWorld.day + 1}</strong></span>
+          </div>
           <div className="preview-choices">
-            {previewScene?.ending ? (
+            {!previewScene ? (
+              <p>The edited story no longer matches the active preview. Restart the preview to run its latest graph.</p>
+            ) : previewScene.ending ? (
               <p>
                 ✦ Ending reached. The player’s story remains saved in its
                 timeline.
@@ -531,7 +611,9 @@ export default function Studio() {
                 <button
                   key={choice.id}
                   type="button"
-                  onClick={() => setPreview(choice.next)}
+                  disabled={!choice.conditions.every(c => conditionMet(previewWorld, c))}
+                  title={choice.conditions.length ? 'Requires conditions: ' + JSON.stringify(choice.conditions) : undefined}
+                  onClick={() => playPreviewChoice(choice.id)}
                 >
                   {choice.label} <span>›</span>
                 </button>
@@ -539,9 +621,10 @@ export default function Studio() {
             )}
           </div>
           <p className="scene-help">
-            Preview follows dialogue branches only; the full player runtime
-            evaluates conditions, saves and consequences. Export a validated
-            JSON to test that runtime.
+            This preview uses the same validated choice, condition and consequence
+            engine as the player. Trust and memories change immediately; restart
+            to compare another path. Export JSON to verify persistence in the
+            player itself.
           </p>
         </section>
       </div>

@@ -1,0 +1,51 @@
+name: Import verified CC0 Kenney isometric buildings
+on:
+  push:
+    branches:
+      - feat/living-city-systems
+    paths:
+      - '.github/workflows/import-kenney-buildings.yml'
+permissions:
+  contents: write
+jobs:
+  import-buildings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download original free-to-redistribute isometric tiles
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC="3694c6879e487c108f55677be7dd2ca75b07cc3b"
+          BASE="https://raw.githubusercontent.com/shorepine/kenney/$SRC/2d/Isometric%20Tiles%20Buildings"
+          mkdir -p apps/player/assets/buildings
+          while read -r num expected; do
+            target="apps/player/assets/buildings/building-${num}.png"
+            curl -fsSL --retry 3 --max-time 30 "$BASE/buildingTiles_${num}.png" -o "$target"
+            test "$(git hash-object "$target")" = "$expected"
+          done <<'PINS'
+          000 9d7ec7c1c9447dacad4f541bf91f645bf2575b54
+          001 219a6857c22470f9bc852e0341466bf43e34e620
+          002 345376689b61853db37c92092b6b89c4b18e9535
+          003 8057d26a38082867217a5825d584adda691dae26
+          004 db45f01006a0b5fd525fcb1ededac93486b861f4
+          009 8449257728e95a7609162951449604916ae5129e
+          010 781edff93d84d0d0c3f352f70c46b2160e0c6397
+          011 6548c6e122c5e7075922db54e4f87bc5e99ba703
+          012 bd0a68e50e8074f5a8019a7303432f1ac52410a2
+          PINS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kenney-cc0-buildings
+          path: apps/player/assets/buildings/*.png
+      - name: Commit pinned binaries
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/player/assets/buildings/*.png
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: nine verified CC0 Kenney isometric building pieces"
+            git push origin HEAD:feat/living-city-systems
+          fi

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { createWorld, advanceLife } from '@living/simulation-core';
+import { createWorld, advanceLife, DISTRICTS, CITY_OPPORTUNITIES, availableCityOpportunities, chooseCareer, visitDistrict, resolveCityOpportunity } from '@living/simulation-core';
 import {
   choose,
   startStory,
@@ -16,7 +16,7 @@ import {
   type Save,
 } from '@living/save-system';
 import { parseStory } from '@living/story-schema';
-import { reunion } from '@living/content';
+import { reunion, bookshop, OFFICIAL_STORIES, findOfficialStory } from '@living/content';
 const copy = () => structuredClone(reunion);
 describe('deterministic life simulation', () => {
   it('creates a valid life and rejects blank names', () => {
@@ -339,5 +339,210 @@ describe('imported narrative persistence and compatibility', () => {
     expect(() =>
       decodeSave(JSON.stringify({ ...data, activeStoryId: '' })),
     ).toThrow();
+  });
+});
+
+describe('Bellweather living city (deterministic open simulation)', () => {
+  it('initializes a rich city without breaking legacy save compatibility', () => {
+    const fresh = createWorld();
+    expect(fresh.city?.district).toBe('riverside');
+    expect(fresh.city?.careerPath).toBe('undecided');
+    expect(fresh.city?.reputation).toBe(35);
+    const legacy = structuredClone(fresh);
+    delete legacy.city;
+    const restored = decodeSave(encodeSave({
+      version: 1, active: 'life', life: legacy, story: null,
+    }));
+    expect(restored.life.city).toBeUndefined();
+    expect(visitDistrict(restored.life, 'market').city?.district).toBe('market');
+  });
+  it('contains twenty original opportunities, five districts and no duplicated IDs', () => {
+    expect(CITY_OPPORTUNITIES.length).toBeGreaterThanOrEqual(20);
+    expect(DISTRICTS).toHaveLength(5);
+    expect(new Set(CITY_OPPORTUNITIES.map(e => e.id)).size).toBe(CITY_OPPORTUNITIES.length);
+    for (const event of CITY_OPPORTUNITIES) {
+      expect(event.choices).toHaveLength(2);
+      expect(event.choices[0].id).not.toBe(event.choices[1].id);
+      expect(event.choices[0].consequence.length).toBeGreaterThan(5);
+    }
+  });
+  it('schedules reproducible events as time advances, without waiting in real time', () => {
+    const original = createWorld();
+    const first = advanceLife(original, 'study', 3);
+    const second = advanceLife(original, 'study', 3);
+    expect(first).toEqual(second);
+    expect(availableCityOpportunities(first).length).toBeGreaterThan(0);
+    expect(original.city?.opportunities).toHaveLength(0);
+    expect(first.city?.stress).toBeGreaterThan(original.city!.stress);
+  });
+  it('validates a choice and records atomic permanent consequences', () => {
+    const before = advanceLife(createWorld(), 'rest', 3);
+    const next = availableCityOpportunities(before)[0]!;
+    expect(next).toBeDefined();
+    const after = resolveCityOpportunity(before, next.id, next.choices[0].id);
+    expect(after.city?.resolved).toContain(next.id);
+    expect(after.facts).toContain(`city:${next.id}:${next.choices[0].id}`);
+    expect(after.memories.at(-1)?.subject).toBe('bellweather');
+    expect(after.history.at(-1)?.kind).toBe('choice');
+    expect(before.city!.resolved).toHaveLength(0);
+    expect(() => resolveCityOpportunity(after, next.id, next.choices[0].id)).toThrow();
+    expect(() => resolveCityOpportunity(before, next.id, 'execute_code')).toThrow('Choice unavailable');
+    expect(() => resolveCityOpportunity(before, 'invented', 'anything')).toThrow();
+  });
+  it('lets players choose a career field, and prevents accidental rewrites', () => {
+    const fresh = createWorld();
+    const direction = chooseCareer(fresh, 'technology');
+    expect(direction.city?.careerPath).toBe('technology');
+    expect(fresh.city?.careerPath).toBe('undecided');
+    expect(() => chooseCareer(direction, 'creative')).toThrow('career-transition');
+    expect(() => chooseCareer(fresh, 'undecided')).toThrow();
+  });
+  it('persists an opportunity decision and a named district across JSON saves', () => {
+    const original = advanceLife(createWorld(), 'study', 3);
+    const event = availableCityOpportunities(original)[0]!;
+    const changed = visitDistrict(
+      resolveCityOpportunity(original, event.id, event.choices[1].id),
+      'university',
+    );
+    const restored = decodeSave(
+      encodeSave({ version: 1, active: 'life', life: changed, story: null }),
+    );
+    expect(restored.life.city?.district).toBe('university');
+    expect(restored.life.city?.resolved).toContain(event.id);
+    expect(restored.life.player.money).toBe(changed.player.money);
+  });
+});
+
+describe('Bookshop chapter and shared life continuity', () => {
+  it('provides a valid second playable chapter with three endings', () => {
+    expect(bookshop.scenes).toHaveLength(11);
+    expect(bookshop.scenes.filter(s => s.ending)).toHaveLength(3);
+    expect(bookshop.entry).toBe('doorway');
+  });
+  it('remembers earlier reconciliation and persists the bookshop outcome', () => {
+    const reunited = choose(choose(createWorld(), reunion, 'apologize'), reunion, 'truth');
+    const daysLater = advanceLife(reunited, 'rest', 7);
+    const opening = startStory(daysLater, bookshop);
+    let w = choose(opening, bookshop, 'early');
+    w = choose(w, bookshop, 'joke');
+    w = choose(w, bookshop, 'after');
+    const restored = decodeSave(encodeSave({
+      version: 1, active: 'life', life: w, story: null, activeStoryId: bookshop.id,
+    }));
+    expect(restored.life.progress.find(p => p.storyId === bookshop.id)?.completed).toBe(true);
+    expect(restored.life.progress.find(p => p.storyId === reunion.id)?.completed).toBe(true);
+    expect(restored.life.facts).toContain('bookshop_early');
+    expect(restored.life.facts).toContain('bookshop_afterhours');
+    expect(restored.life.relationships[0]!.trust).toBeGreaterThan(daysLater.relationships[0]!.trust);
+  });
+  it('allows the original standalone story without mutating main life memories', () => {
+    const mainLife = createWorld();
+    const alone = choose(choose(createWorld('Alex', 'story.bookshop'), bookshop, 'look'), bookshop, 'remember');
+    const completed = choose(alone, bookshop, 'goodbye');
+    expect(currentScene(completed, bookshop).id).toBe('separate');
+    expect(mainLife.memories).toHaveLength(0);
+    expect(mainLife.progress).toHaveLength(0);
+  });
+});
+
+describe('NPC autonomy and career/district modifiers', () => {
+  it('advances independent NPC lives with stable goals and accomplishments', () => {
+    const initial = createWorld();
+    expect(initial.npcLives).toHaveLength(2);
+    const after = advanceLife(initial, 'rest', 23);
+    const amelia = after.npcLives?.find(n => n.characterId === 'amelia');
+    const noah = after.npcLives?.find(n => n.characterId === 'noah');
+    expect(amelia?.occupation).toBe('Bookshop owner');
+    expect(amelia?.milestones).toContain('shop_open');
+    expect(noah?.occupation).toBe('Café supervisor');
+    expect(noah?.milestones).toContain('promoted');
+    expect(initial.npcLives?.[0]?.milestones).toHaveLength(0);
+    expect(after).toEqual(advanceLife(initial, 'rest', 23));
+  });
+  it('restores NPC state lazily for an older save', () => {
+    const oldWorld = createWorld();
+    delete oldWorld.npcLives;
+    const updated = advanceLife(oldWorld, 'rest', 5);
+    expect(updated.npcLives?.find(p => p.characterId === 'noah')?.occupation).toBe('Café assistant');
+  });
+  it('makes choosing an occupation a genuine economic decision', () => {
+    const base = advanceLife(createWorld(), 'work', 8);
+    const focused = advanceLife(chooseCareer(createWorld(), 'technology'), 'work', 8);
+    expect(focused.player.money).toBeGreaterThan(base.player.money);
+    expect(focused.player.career).toBe('employed');
+    expect(focused.city?.careerPath).toBe('technology');
+  });
+  it('makes neighborhood location change skill and wellbeing progression', () => {
+    const ordinary = advanceLife(createWorld(), 'study', 4);
+    const campus = advanceLife(visitDistrict(createWorld(), 'university'), 'study', 4);
+    expect(campus.player.skill).toBe(ordinary.player.skill + 4);
+    const rested = advanceLife(visitDistrict(createWorld(), 'gardens'), 'rest', 1);
+    expect(rested.player.wellbeing).toBe(84);
+  });
+});
+
+describe('bundled stories, reload and dismiss safety', () => {
+  it('provides all official chapters without relying on the local creator shelf', () => {
+    expect(OFFICIAL_STORIES.map(s => s.id)).toEqual([reunion.id, bookshop.id]);
+    expect(findOfficialStory(bookshop.id)).toEqual(bookshop);
+    expect(findOfficialStory(reunion.id)).toEqual(reunion);
+    expect(findOfficialStory('creator.untrusted')).toBeUndefined();
+  });
+
+  it('restores the bookshop midway through a valid v1 save', () => {
+    const reunited = choose(choose(createWorld(), reunion, 'apologize'), reunion, 'truth');
+    const halfway = choose(startStory(advanceLife(reunited, 'study', 7), bookshop), bookshop, 'early');
+    const checkpoint: Save = {
+      version: 1, active: 'life', activeStoryId: bookshop.id,
+      sceneDismissed: false, life: halfway, story: null,
+    };
+    const saved = decodeSave(encodeSave(checkpoint));
+    const bundled = findOfficialStory(saved.activeStoryId!);
+    expect(bundled).toBeDefined();
+    expect(currentScene(saved.life, bundled!).id).toBe('backroom');
+    expect(saved.sceneDismissed).toBe(false);
+    expect(saved.life.progress.find(p => p.storyId === reunion.id)?.completed).toBe(true);
+  });
+
+  it('round-trips an intentionally dismissed scene without losing story progress', () => {
+    const ongoing = choose(createWorld(), reunion, 'listen');
+    const checkpoint: Save = {
+      version: 1, active: 'life', activeStoryId: reunion.id,
+      sceneDismissed: true, life: ongoing, story: null,
+    };
+    const resumed = decodeSave(encodeSave(checkpoint));
+    expect(resumed.sceneDismissed).toBe(true);
+    expect(currentScene(resumed.life, reunion).id).toBe('listening');
+    expect(resumed.life.relationships[0]!.trust).toBe(41);
+  });
+
+  it('accepts legacy save data with neither optional field', () => {
+    const old = { version: 1, active: 'life', life: createWorld(), story: null };
+    const parsed = decodeSave(JSON.stringify(old));
+    expect(parsed).toEqual(old);
+    expect(parsed.sceneDismissed).toBeUndefined();
+    expect(parsed.activeStoryId).toBeUndefined();
+  });
+});
+
+describe('story-schema safety regressions', () => {
+  it('rejects endings with choices rather than quietly treating them as complete', () => {
+    const story = structuredClone(reunion);
+    const ending = story.scenes.find(scene => scene.ending)!;
+    ending.choices = [{ id: 'illegal', label: 'This must not work', next: story.entry, effects: [], conditions: [] }];
+    expect(() => parseStory(story)).toThrow('choices or be an ending');
+  });
+  it('enforces a story ID length that can actually be saved and restored', () => {
+    const story = structuredClone(reunion);
+    story.id = 'creator.' + 'a'.repeat(121);
+    expect(() => parseStory(story)).toThrow();
+  });
+  it('bounds scene and choice IDs to resist oversized untrusted story payloads', () => {
+    const badScene = structuredClone(reunion);
+    badScene.scenes[0]!.id = 'x'.repeat(121);
+    expect(() => parseStory(badScene)).toThrow();
+    const badChoice = structuredClone(reunion);
+    badChoice.scenes[0]!.choices[0]!.id = 'y'.repeat(121);
+    expect(() => parseStory(badChoice)).toThrow();
   });
 });
