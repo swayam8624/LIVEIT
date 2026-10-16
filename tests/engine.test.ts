@@ -444,3 +444,39 @@ describe('Bookshop chapter and shared life continuity', () => {
     expect(mainLife.progress).toHaveLength(0);
   });
 });
+
+describe('NPC autonomy and career/district modifiers', () => {
+  it('advances independent NPC lives with stable goals and accomplishments', () => {
+    const initial = createWorld();
+    expect(initial.npcLives).toHaveLength(2);
+    const after = advanceLife(initial, 'rest', 23);
+    const amelia = after.npcLives?.find(n => n.characterId === 'amelia')!;
+    const noah = after.npcLives?.find(n => n.characterId === 'noah')!;
+    expect(amelia.occupation).toBe('Bookshop owner');
+    expect(amelia.milestones).toContain('shop_open');
+    expect(noah.occupation).toBe('Café supervisor');
+    expect(noah.milestones).toContain('promoted');
+    expect(initial.npcLives?.[0]?.milestones).toHaveLength(0);
+    expect(after).toEqual(advanceLife(initial, 'rest', 23));
+  });
+  it('restores NPC state lazily for an older save', () => {
+    const oldWorld = createWorld();
+    delete oldWorld.npcLives;
+    const updated = advanceLife(oldWorld, 'rest', 5);
+    expect(updated.npcLives?.find(p => p.characterId === 'noah')?.occupation).toBe('Café assistant');
+  });
+  it('makes choosing an occupation a genuine economic decision', () => {
+    const base = advanceLife(createWorld(), 'work', 8);
+    const focused = advanceLife(chooseCareer(createWorld(), 'technology'), 'work', 8);
+    expect(focused.player.money).toBeGreaterThan(base.player.money);
+    expect(focused.player.career).toBe('employed');
+    expect(focused.city?.careerPath).toBe('technology');
+  });
+  it('makes neighborhood location change skill and wellbeing progression', () => {
+    const ordinary = advanceLife(createWorld(), 'study', 4);
+    const campus = advanceLife(visitDistrict(createWorld(), 'university'), 'study', 4);
+    expect(campus.player.skill).toBe(ordinary.player.skill + 4);
+    const rested = advanceLife(visitDistrict(createWorld(), 'gardens'), 'rest', 1);
+    expect(rested.player.wellbeing).toBe(84);
+  });
+});
