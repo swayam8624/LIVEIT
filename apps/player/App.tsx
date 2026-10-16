@@ -230,11 +230,13 @@ export default function App() {
       </View>
       <View style={s.shell}>
         <View style={s.gameNav}>
-          {([
-            { id: 'life', symbol: '⌂', title: 'FREE LIFE' },
-            { id: 'stories', symbol: '✧', title: 'STORIES' },
-            { id: 'journal', symbol: '◷', title: 'MEMORIES' },
-          ] as const).map((entry) => (
+          {(
+            [
+              { id: 'life', symbol: '⌂', title: 'FREE LIFE' },
+              { id: 'stories', symbol: '✧', title: 'STORIES' },
+              { id: 'journal', symbol: '◷', title: 'MEMORIES' },
+            ] as const
+          ).map((entry) => (
             <Pressable
               key={entry.id}
               accessibilityRole="tab"
@@ -250,8 +252,13 @@ export default function App() {
                 pressed && { opacity: 0.75 },
               ]}
             >
-              <Text style={[s.gameNavText, tab === entry.id && { color: '#f7d6a1' }]}>
-                {entry.symbol}  {entry.title}
+              <Text
+                style={[
+                  s.gameNavText,
+                  tab === entry.id && { color: '#f7d6a1' },
+                ]}
+              >
+                {entry.symbol} {entry.title}
               </Text>
             </Pressable>
           ))}
@@ -853,19 +860,35 @@ export default function App() {
 }
 const s = StyleSheet.create({
   gameNav: {
-    flexDirection: 'row', gap: 9, backgroundColor: '#121c2b',
-    borderBottomColor: '#414457', borderBottomWidth: 1, paddingVertical: 11,
-    paddingHorizontal: 12, justifyContent: 'center',
+    flexDirection: 'row',
+    gap: 9,
+    backgroundColor: '#121c2b',
+    borderBottomColor: '#414457',
+    borderBottomWidth: 1,
+    paddingVertical: 11,
+    paddingHorizontal: 12,
+    justifyContent: 'center',
   },
   gameNavItem: {
-    minHeight: 42, justifyContent: 'center', alignItems: 'center',
-    borderWidth: 1, borderColor: '#3e4557', borderRadius: 9,
-    paddingHorizontal: 13, backgroundColor: '#1d293a',
+    minHeight: 42,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#3e4557',
+    borderRadius: 9,
+    paddingHorizontal: 13,
+    backgroundColor: '#1d293a',
   },
   gameNavSelected: {
-    backgroundColor: '#4a3334', borderColor: '#dba46f',
+    backgroundColor: '#4a3334',
+    borderColor: '#dba46f',
   },
-  gameNavText: { fontSize: 11, color: '#d9d7d8', fontWeight: '800', letterSpacing: 0.5 },
+  gameNavText: {
+    fontSize: 11,
+    color: '#d9d7d8',
+    fontWeight: '800',
+    letterSpacing: 0.5,
+  },
 
   speakerRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
   speakerPortrait: {
