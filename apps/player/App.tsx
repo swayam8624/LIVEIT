@@ -660,196 +660,212 @@ export default function App() {
                         onPress={() => setDays(n)}
                         style={[s.pace, days === n && s.paceActive]}
                       >
-                        <Text style={[s.paceText, days === n && { color: '#fff4df' }]}>
+                        <Text
+                          style={[
+                            s.paceText,
+                            days === n && { color: '#fff4df' },
+                          ]}
+                        >
                           {n === 1 ? 'One day' : `${n} days`}
                         </Text>
                       </Pressable>
                     ))}
-                    <Text style={s.small}>No energy timers. You set the pace.</Text>
+                    <Text style={s.small}>
+                      No energy timers. You set the pace.
+                    </Text>
                   </View>
                   <Pressable
                     accessibilityRole="button"
                     accessibilityState={{ expanded: plannerOpen }}
-                    onPress={() => setPlannerOpen(p => !p)}
+                    onPress={() => setPlannerOpen((p) => !p)}
                     style={s.plannerToggle}
                   >
                     <Text style={s.plannerToggleText}>
-                      {plannerOpen ? '− CLOSE LIFE PLANNER' : '+ OPEN LIFE PLANNER & RELATIONSHIPS'}
+                      {plannerOpen
+                        ? '− CLOSE LIFE PLANNER'
+                        : '+ OPEN LIFE PLANNER & RELATIONSHIPS'}
                     </Text>
-                    <Text style={s.plannerToggleText}>{plannerOpen ? '⌃' : '⌄'}</Text>
+                    <Text style={s.plannerToggleText}>
+                      {plannerOpen ? '⌃' : '⌄'}
+                    </Text>
                   </Pressable>
                   {plannerOpen && (
-                  <View style={[s.columns, wide && { flexDirection: 'row' }]}>
-                    <View style={{ flex: 1.15, gap: 22 }}>
-                      <View style={s.sectionHeading}>
-                        <Text style={s.sectionTitle}>
-                          What will you make of today?
-                        </Text>
-                        <Text style={s.small}>THE EVERYDAY MATTERS</Text>
-                      </View>
-                      <View style={s.activities}>
-                        {(
-                          [
-                            {
-                              id: 'work',
-                              icon: '↗',
-                              title: 'Put yourself out there',
-                              detail:
-                                'Work a freelance shift. Build experience.',
-                              result: '+ income · − wellbeing',
-                            },
-                            {
-                              id: 'study',
-                              icon: '✧',
-                              title: 'Learn something new',
-                              detail: 'A little practice opens new doors.',
-                              result: '+ 4 experience per day',
-                            },
-                            {
-                              id: 'socialize',
-                              icon: '☏',
-                              title: 'Make time for a friend',
-                              detail: 'Catch up with Noah. Be present.',
-                              result: '+ connection · + wellbeing',
-                            },
-                            {
-                              id: 'rest',
-                              icon: '☼',
-                              title: 'Take a slower day',
-                              detail: 'A book, an open window, no plans.',
-                              result: '+ 9 wellbeing per day',
-                            },
-                          ] as const
-                        ).map((a) => (
-                          <Pressable
-                            accessibilityRole="button"
-                            accessibilityLabel={a.title}
-                            key={a.id}
-                            style={({ pressed }) => [
-                              s.activity,
-                              pressed && { backgroundColor: c.sage },
-                            ]}
-                            onPress={() =>
-                              run(() =>
-                                update(
-                                  advanceLife(world!, a.id as Activity, days),
-                                ),
-                              )
-                            }
-                          >
-                            <View style={s.activityIcon}>
-                              <Text style={{ fontSize: 25, color: c.green }}>
-                                {a.icon}
-                              </Text>
-                            </View>
-                            <View style={{ flex: 1 }}>
-                              <Text style={s.activityTitle}>{a.title}</Text>
-                              <Text style={s.small}>{a.detail}</Text>
-                              <Text style={s.result}>{a.result}</Text>
-                            </View>
-                            <Text style={{ fontSize: 22, color: c.muted }}>
-                              ↗
-                            </Text>
-                          </Pressable>
-                        ))}
-                      </View>
-                      <View style={s.timeRow}>
-                        <Text style={s.small}>Each activity advances</Text>
-                        {[1, 7, 30].map((n) => (
-                          <Pressable
-                            key={n}
-                            accessibilityRole="button"
-                            accessibilityLabel={`Advance ${n} days per activity`}
-                            accessibilityState={{ selected: days === n }}
-                            onPress={() => setDays(n)}
-                            style={[
-                              s.pace,
-                              days === n && { backgroundColor: c.green },
-                            ]}
-                          >
-                            <Text
-                              style={{
-                                fontSize: 12,
-                                color: days === n ? c.white : c.ink,
-                              }}
-                            >
-                              {n === 1 ? '1 day' : `${n} days`}
-                            </Text>
-                          </Pressable>
-                        ))}
-                      </View>
-                      <Text style={s.small}>
-                        £28 daily living costs are automatic. Study to 25
-                        experience to find steady work.
-                      </Text>
-                    </View>
-                    <View style={{ flex: 0.85, gap: 18 }}>
-                      <View style={s.encounter}>
-                        <GameStage mode="life" compact />
-                        <View style={s.encounterBody}>
-                          <Tag>A FAMILIAR FACE</Tag>
-                          <Text style={s.cardTitle}>
-                            Some stories find you.
+                    <View style={[s.columns, wide && { flexDirection: 'row' }]}>
+                      <View style={{ flex: 1.15, gap: 22 }}>
+                        <View style={s.sectionHeading}>
+                          <Text style={s.sectionTitle}>
+                            What will you make of today?
                           </Text>
-                          <Text style={s.cardDescription}>
-                            Amelia is in town. There’s a table by the window,
-                            and a conversation you’ve both been avoiding.
-                          </Text>
-                          <Button
-                            label={
-                              world!.progress.some(
-                                (p) => p.storyId === reunion.id && p.completed,
-                              )
-                                ? 'Revisit your ending →'
-                                : world!.progress.some(
-                                      (p) => p.storyId === reunion.id,
-                                    )
-                                  ? 'Continue the conversation →'
-                                  : 'Meet Amelia →'
-                            }
-                            onPress={openEncounter}
-                          />
+                          <Text style={s.small}>THE EVERYDAY MATTERS</Text>
                         </View>
-                      </View>
-                      <View style={s.people}>
-                        <Text style={s.eyebrow}>THE PEOPLE IN YOUR ORBIT</Text>
-                        {world!.relationships.map((p, i) => (
-                          <View style={s.personRow} key={p.characterId}>
-                            <View
+                        <View style={s.activities}>
+                          {(
+                            [
+                              {
+                                id: 'work',
+                                icon: '↗',
+                                title: 'Put yourself out there',
+                                detail:
+                                  'Work a freelance shift. Build experience.',
+                                result: '+ income · − wellbeing',
+                              },
+                              {
+                                id: 'study',
+                                icon: '✧',
+                                title: 'Learn something new',
+                                detail: 'A little practice opens new doors.',
+                                result: '+ 4 experience per day',
+                              },
+                              {
+                                id: 'socialize',
+                                icon: '☏',
+                                title: 'Make time for a friend',
+                                detail: 'Catch up with Noah. Be present.',
+                                result: '+ connection · + wellbeing',
+                              },
+                              {
+                                id: 'rest',
+                                icon: '☼',
+                                title: 'Take a slower day',
+                                detail: 'A book, an open window, no plans.',
+                                result: '+ 9 wellbeing per day',
+                              },
+                            ] as const
+                          ).map((a) => (
+                            <Pressable
+                              accessibilityRole="button"
+                              accessibilityLabel={a.title}
+                              key={a.id}
+                              style={({ pressed }) => [
+                                s.activity,
+                                pressed && { backgroundColor: c.sage },
+                              ]}
+                              onPress={() =>
+                                run(() =>
+                                  update(
+                                    advanceLife(world!, a.id as Activity, days),
+                                  ),
+                                )
+                              }
+                            >
+                              <View style={s.activityIcon}>
+                                <Text style={{ fontSize: 25, color: c.green }}>
+                                  {a.icon}
+                                </Text>
+                              </View>
+                              <View style={{ flex: 1 }}>
+                                <Text style={s.activityTitle}>{a.title}</Text>
+                                <Text style={s.small}>{a.detail}</Text>
+                                <Text style={s.result}>{a.result}</Text>
+                              </View>
+                              <Text style={{ fontSize: 22, color: c.muted }}>
+                                ↗
+                              </Text>
+                            </Pressable>
+                          ))}
+                        </View>
+                        <View style={s.timeRow}>
+                          <Text style={s.small}>Each activity advances</Text>
+                          {[1, 7, 30].map((n) => (
+                            <Pressable
+                              key={n}
+                              accessibilityRole="button"
+                              accessibilityLabel={`Advance ${n} days per activity`}
+                              accessibilityState={{ selected: days === n }}
+                              onPress={() => setDays(n)}
                               style={[
-                                s.avatar,
-                                { backgroundColor: i ? '#dfe7d7' : '#ead7cb' },
+                                s.pace,
+                                days === n && { backgroundColor: c.green },
                               ]}
                             >
-                              {i ? (
-                                <Text style={s.avatarText}>N</Text>
-                              ) : (
-                                <Image
-                                  source={ameliaPortrait}
-                                  style={s.avatarImage}
-                                  accessibilityLabel="Amelia Chen's portrait"
-                                />
-                              )}
-                            </View>
-                            <View style={{ flex: 1 }}>
-                              <Text style={s.activityTitle}>
-                                {i ? 'Noah Bennett' : 'Amelia Chen'}
+                              <Text
+                                style={{
+                                  fontSize: 12,
+                                  color: days === n ? c.white : c.ink,
+                                }}
+                              >
+                                {n === 1 ? '1 day' : `${n} days`}
                               </Text>
-                              <Text style={s.small}>
-                                {i
-                                  ? 'Your first friend in the city'
-                                  : 'An old friend. An unfinished chapter.'}
-                              </Text>
-                            </View>
-                            <Text style={s.trust}>
-                              {p.trust}
-                              <Text style={s.small}>/100</Text>
+                            </Pressable>
+                          ))}
+                        </View>
+                        <Text style={s.small}>
+                          £28 daily living costs are automatic. Study to 25
+                          experience to find steady work.
+                        </Text>
+                      </View>
+                      <View style={{ flex: 0.85, gap: 18 }}>
+                        <View style={s.encounter}>
+                          <GameStage mode="life" compact />
+                          <View style={s.encounterBody}>
+                            <Tag>A FAMILIAR FACE</Tag>
+                            <Text style={s.cardTitle}>
+                              Some stories find you.
                             </Text>
+                            <Text style={s.cardDescription}>
+                              Amelia is in town. There’s a table by the window,
+                              and a conversation you’ve both been avoiding.
+                            </Text>
+                            <Button
+                              label={
+                                world!.progress.some(
+                                  (p) =>
+                                    p.storyId === reunion.id && p.completed,
+                                )
+                                  ? 'Revisit your ending →'
+                                  : world!.progress.some(
+                                        (p) => p.storyId === reunion.id,
+                                      )
+                                    ? 'Continue the conversation →'
+                                    : 'Meet Amelia →'
+                              }
+                              onPress={openEncounter}
+                            />
                           </View>
-                        ))}
+                        </View>
+                        <View style={s.people}>
+                          <Text style={s.eyebrow}>
+                            THE PEOPLE IN YOUR ORBIT
+                          </Text>
+                          {world!.relationships.map((p, i) => (
+                            <View style={s.personRow} key={p.characterId}>
+                              <View
+                                style={[
+                                  s.avatar,
+                                  {
+                                    backgroundColor: i ? '#dfe7d7' : '#ead7cb',
+                                  },
+                                ]}
+                              >
+                                {i ? (
+                                  <Text style={s.avatarText}>N</Text>
+                                ) : (
+                                  <Image
+                                    source={ameliaPortrait}
+                                    style={s.avatarImage}
+                                    accessibilityLabel="Amelia Chen's portrait"
+                                  />
+                                )}
+                              </View>
+                              <View style={{ flex: 1 }}>
+                                <Text style={s.activityTitle}>
+                                  {i ? 'Noah Bennett' : 'Amelia Chen'}
+                                </Text>
+                                <Text style={s.small}>
+                                  {i
+                                    ? 'Your first friend in the city'
+                                    : 'An old friend. An unfinished chapter.'}
+                                </Text>
+                              </View>
+                              <Text style={s.trust}>
+                                {p.trust}
+                                <Text style={s.small}>/100</Text>
+                              </Text>
+                            </View>
+                          ))}
+                        </View>
                       </View>
                     </View>
-                  </View>
                   )}
                 </>
               ) : tab === 'stories' ? (
@@ -1000,15 +1016,31 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
-  paceActive: { backgroundColor: '#9d5634', borderColor: '#e5b47b', borderWidth: 1 },
+  paceActive: {
+    backgroundColor: '#9d5634',
+    borderColor: '#e5b47b',
+    borderWidth: 1,
+  },
   paceText: { color: '#cfdae5', fontSize: 12, fontWeight: '700' },
   plannerToggle: {
-    minHeight: 50, paddingHorizontal: 17, paddingVertical: 12,
-    borderRadius: 11, borderWidth: 1, borderColor: '#785840',
-    backgroundColor: '#1a273b', flexDirection: 'row', alignItems: 'center',
-    justifyContent: 'space-between', gap: 12,
+    minHeight: 50,
+    paddingHorizontal: 17,
+    paddingVertical: 12,
+    borderRadius: 11,
+    borderWidth: 1,
+    borderColor: '#785840',
+    backgroundColor: '#1a273b',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
   },
-  plannerToggleText: { color: '#e3bd8d', fontSize: 12, fontWeight: '800', letterSpacing: 1 },
+  plannerToggleText: {
+    color: '#e3bd8d',
+    fontSize: 12,
+    fontWeight: '800',
+    letterSpacing: 1,
+  },
 
   gameNav: {
     flexDirection: 'row',
