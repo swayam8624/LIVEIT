@@ -16,7 +16,7 @@ import {
   type Save,
 } from '@living/save-system';
 import { parseStory } from '@living/story-schema';
-import { reunion, bookshop } from '@living/content';
+import { reunion, bookshop, OFFICIAL_STORIES, findOfficialStory } from '@living/content';
 const copy = () => structuredClone(reunion);
 describe('deterministic life simulation', () => {
   it('creates a valid life and rejects blank names', () => {
@@ -478,5 +478,49 @@ describe('NPC autonomy and career/district modifiers', () => {
     expect(campus.player.skill).toBe(ordinary.player.skill + 4);
     const rested = advanceLife(visitDistrict(createWorld(), 'gardens'), 'rest', 1);
     expect(rested.player.wellbeing).toBe(84);
+  });
+});
+
+describe('bundled stories, reload and dismiss safety', () => {
+  it('provides all official chapters without relying on the local creator shelf', () => {
+    expect(OFFICIAL_STORIES.map(s => s.id)).toEqual([reunion.id, bookshop.id]);
+    expect(findOfficialStory(bookshop.id)).toEqual(bookshop);
+    expect(findOfficialStory(reunion.id)).toEqual(reunion);
+    expect(findOfficialStory('creator.untrusted')).toBeUndefined();
+  });
+
+  it('restores the bookshop midway through a valid v1 save', () => {
+    const reunited = choose(choose(createWorld(), reunion, 'apologize'), reunion, 'truth');
+    const halfway = choose(startStory(advanceLife(reunited, 'study', 7), bookshop), bookshop, 'early');
+    const checkpoint: Save = {
+      version: 1, active: 'life', activeStoryId: bookshop.id,
+      sceneDismissed: false, life: halfway, story: null,
+    };
+    const saved = decodeSave(encodeSave(checkpoint));
+    const bundled = findOfficialStory(saved.activeStoryId!);
+    expect(bundled).toBeDefined();
+    expect(currentScene(saved.life, bundled!).id).toBe('backroom');
+    expect(saved.sceneDismissed).toBe(false);
+    expect(saved.life.progress.find(p => p.storyId === reunion.id)?.completed).toBe(true);
+  });
+
+  it('round-trips an intentionally dismissed scene without losing story progress', () => {
+    const ongoing = choose(createWorld(), reunion, 'listen');
+    const checkpoint: Save = {
+      version: 1, active: 'life', activeStoryId: reunion.id,
+      sceneDismissed: true, life: ongoing, story: null,
+    };
+    const resumed = decodeSave(encodeSave(checkpoint));
+    expect(resumed.sceneDismissed).toBe(true);
+    expect(currentScene(resumed.life, reunion).id).toBe('listening');
+    expect(resumed.life.relationships[0]!.trust).toBe(41);
+  });
+
+  it('accepts legacy save data with neither optional field', () => {
+    const old = { version: 1, active: 'life', life: createWorld(), story: null };
+    const parsed = decodeSave(JSON.stringify(old));
+    expect(parsed).toEqual(old);
+    expect(parsed.sceneDismissed).toBeUndefined();
+    expect(parsed.activeStoryId).toBeUndefined();
   });
 });
