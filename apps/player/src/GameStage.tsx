@@ -82,7 +82,7 @@ export function GameStage({
       imageStyle={styles.image}
       style={[
         styles.stage,
-        { minHeight: compact ? 270 : mode === 'story' ? 480 : 410 },
+        { height: compact ? 270 : mode === 'story' ? 480 : 410 },
       ]}
     >
       <View
@@ -100,7 +100,7 @@ export function GameStage({
           {
             opacity: pulse.interpolate({
               inputRange: [0, 1],
-              outputRange: [0.12, 0.25],
+              outputRange: [0.02, 0.06],
             }),
           },
         ]}
