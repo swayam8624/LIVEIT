@@ -72,7 +72,7 @@ export function GameStage({
     >
       <View
         pointerEvents="none"
-        style={[StyleSheet.absoluteFillObject, { backgroundColor: tint }]}
+        style={[StyleSheet.absoluteFill, { backgroundColor: tint }]}
       />
       <View pointerEvents="none" style={styles.vignetteTop} />
       <View pointerEvents="none" style={styles.vignetteBottom} />
