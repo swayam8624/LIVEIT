@@ -25,7 +25,8 @@ import {
 import { loadSave, writeSave, type Save } from '@living/save-system';
 import type { World } from '@living/world-schema';
 import { reunion } from '@living/content';
-import type { Story } from '@living/story-schema';
+import { parseStory, type Story } from '@living/story-schema';
+import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
 import { GameStage } from './src/GameStage';
 const c = {
@@ -116,21 +117,57 @@ export default function App() {
   const queue = useRef(Promise.resolve());
   const revision = useRef(0);
   useEffect(() => {
-    loadSave(AsyncStorage)
-      .then((value) => {
+    let mounted = true;
+    // Restore the narrative identity as well as world state. Imported story
+    // content lives in the local library, not inside the authoritative save.
+    // Missing/corrupted content must never overwrite or destroy a saved life.
+    void loadSave(AsyncStorage)
+      .then(async (value) => {
+        if (!mounted) return;
         if (value) {
           setSave(value);
-          setSceneOpen(value.active === 'story');
-          setTab(value.active === 'story' ? 'stories' : 'life');
+          if (value.activeStoryId && value.activeStoryId !== reunion.id) {
+            try {
+              const serialized = await AsyncStorage.getItem(LOCAL_STORIES_KEY);
+              const untrusted: unknown = JSON.parse(serialized ?? '[]');
+              if (!Array.isArray(untrusted)) throw new Error('Local story shelf is damaged');
+              const candidate = untrusted.find(
+                (item: unknown) =>
+                  typeof item === 'object' && item !== null &&
+                  'id' in item && item.id === value.activeStoryId,
+              );
+              if (!candidate) throw new Error('Imported story is no longer installed');
+              const active = parseStory(candidate);
+              if (!mounted) return;
+              setAuthored(active);
+              const timeline = value.active === 'life' ? value.life : value.story!;
+              const progress = timeline.progress.find(p => p.storyId === active.id);
+              setSceneOpen(Boolean(progress && !progress.completed));
+              setTab('stories');
+            } catch {
+              if (!mounted) return;
+              setSceneOpen(false);
+              setTab('stories');
+              setError('Your life is safe, but the active imported story could not be restored. Re-import the original JSON to continue.');
+            }
+          } else {
+            const timeline = value.active === 'life' ? value.life : value.story!;
+            const progress = timeline.progress.find(p => p.storyId === reunion.id);
+            setAuthored(reunion);
+            setSceneOpen(value.active === 'story' && Boolean(progress && !progress.completed));
+            setTab(value.active === 'story' ? 'stories' : 'life');
+          }
         }
-        setReady(true);
+        if (mounted) setReady(true);
       })
       .catch(() => {
+        if (!mounted) return;
         setError(
           'Your saved life could not be read. It has not been overwritten. Start a new life only if you want to replace it.',
         );
         setReady(true);
       });
+    return () => { mounted = false; };
   }, []);
   function persist(next: Save) {
     setSave(next);
@@ -175,9 +212,12 @@ export default function App() {
   }
   function openEncounter() {
     if (!save) return;
-    setAuthored(reunion);
     run(() => {
-      update(startStory(world!, reunion));
+      const nextWorld = startStory(world!, reunion);
+      setAuthored(reunion);
+      persist(save.active === 'life'
+        ? { ...save, activeStoryId: reunion.id, life: nextWorld }
+        : { ...save, activeStoryId: reunion.id, story: nextWorld });
       setSceneOpen(true);
     });
   }
@@ -195,7 +235,7 @@ export default function App() {
           ),
           reunion,
         );
-      persist({ ...save, story, active: 'story' });
+      persist({ ...save, story, active: 'story', activeStoryId: reunion.id });
       setSceneOpen(true);
     });
   }
@@ -218,7 +258,7 @@ export default function App() {
     run(() => {
       const started = startStory(save.life, story);
       setAuthored(story);
-      persist({ ...save, active: 'life', life: started });
+      persist({ ...save, active: 'life', life: started, activeStoryId: story.id });
       setTab('stories');
       setSceneOpen(true);
     });
@@ -824,7 +864,13 @@ export default function App() {
                       way, the world remembers.
                     </Text>
                   </View>
-                  <LocalStoryLibrary onPlay={playImported} />
+                  <LocalStoryLibrary
+                    onPlay={playImported}
+                    protectedIds={[
+                      ...save.life.progress.map(p => p.storyId),
+                      ...(save.story?.progress.map(p => p.storyId) ?? []),
+                    ]}
+                  />
                 </>
               ) : (
                 <>
