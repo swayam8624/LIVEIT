@@ -130,31 +130,46 @@ export default function App() {
             try {
               const serialized = await AsyncStorage.getItem(LOCAL_STORIES_KEY);
               const untrusted: unknown = JSON.parse(serialized ?? '[]');
-              if (!Array.isArray(untrusted)) throw new Error('Local story shelf is damaged');
+              if (!Array.isArray(untrusted))
+                throw new Error('Local story shelf is damaged');
               const candidate = untrusted.find(
                 (item: unknown) =>
-                  typeof item === 'object' && item !== null &&
-                  'id' in item && item.id === value.activeStoryId,
+                  typeof item === 'object' &&
+                  item !== null &&
+                  'id' in item &&
+                  item.id === value.activeStoryId,
               );
-              if (!candidate) throw new Error('Imported story is no longer installed');
+              if (!candidate)
+                throw new Error('Imported story is no longer installed');
               const active = parseStory(candidate);
               if (!mounted) return;
               setAuthored(active);
-              const timeline = value.active === 'life' ? value.life : value.story!;
-              const progress = timeline.progress.find(p => p.storyId === active.id);
+              const timeline =
+                value.active === 'life' ? value.life : value.story!;
+              const progress = timeline.progress.find(
+                (p) => p.storyId === active.id,
+              );
               setSceneOpen(Boolean(progress && !progress.completed));
               setTab('stories');
             } catch {
               if (!mounted) return;
               setSceneOpen(false);
               setTab('stories');
-              setError('Your life is safe, but the active imported story could not be restored. Re-import the original JSON to continue.');
+              setError(
+                'Your life is safe, but the active imported story could not be restored. Re-import the original JSON to continue.',
+              );
             }
           } else {
-            const timeline = value.active === 'life' ? value.life : value.story!;
-            const progress = timeline.progress.find(p => p.storyId === reunion.id);
+            const timeline =
+              value.active === 'life' ? value.life : value.story!;
+            const progress = timeline.progress.find(
+              (p) => p.storyId === reunion.id,
+            );
             setAuthored(reunion);
-            setSceneOpen(value.active === 'story' && Boolean(progress && !progress.completed));
+            setSceneOpen(
+              value.active === 'story' &&
+                Boolean(progress && !progress.completed),
+            );
             setTab(value.active === 'story' ? 'stories' : 'life');
           }
         }
@@ -167,7 +182,9 @@ export default function App() {
         );
         setReady(true);
       });
-    return () => { mounted = false; };
+    return () => {
+      mounted = false;
+    };
   }, []);
   function persist(next: Save) {
     setSave(next);
@@ -215,9 +232,11 @@ export default function App() {
     run(() => {
       const nextWorld = startStory(world!, reunion);
       setAuthored(reunion);
-      persist(save.active === 'life'
-        ? { ...save, activeStoryId: reunion.id, life: nextWorld }
-        : { ...save, activeStoryId: reunion.id, story: nextWorld });
+      persist(
+        save.active === 'life'
+          ? { ...save, activeStoryId: reunion.id, life: nextWorld }
+          : { ...save, activeStoryId: reunion.id, story: nextWorld },
+      );
       setSceneOpen(true);
     });
   }
@@ -258,7 +277,12 @@ export default function App() {
     run(() => {
       const started = startStory(save.life, story);
       setAuthored(story);
-      persist({ ...save, active: 'life', life: started, activeStoryId: story.id });
+      persist({
+        ...save,
+        active: 'life',
+        life: started,
+        activeStoryId: story.id,
+      });
       setTab('stories');
       setSceneOpen(true);
     });
@@ -867,8 +891,8 @@ export default function App() {
                   <LocalStoryLibrary
                     onPlay={playImported}
                     protectedIds={[
-                      ...save.life.progress.map(p => p.storyId),
-                      ...(save.story?.progress.map(p => p.storyId) ?? []),
+                      ...save.life.progress.map((p) => p.storyId),
+                      ...(save.story?.progress.map((p) => p.storyId) ?? []),
                     ]}
                   />
                 </>
