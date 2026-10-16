@@ -102,7 +102,7 @@ export default function App() {
   const { width } = useWindowDimensions();
   const wide = width >= 1000;
   const [save, setSave] = useState<Save | null>(null);
-  const scrollRef = useRef<ScrollView>(null);
+  const scrollRef = useRef<React.ComponentRef<typeof ScrollView>>(null);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState('');
   const [status, setStatus] = useState('');
