@@ -29,9 +29,9 @@ A compatible Expo Go installation or a development build and reachable developme
 3. Select **Meet Amelia**, choose an approach, and finish the reunion. Apologizing and telling the truth raises trust from 35 to 57. More guarded choices lead to different memories and endings.
 4. Return to Free Life and open **Your journal**. The relationship and memories persist in the main timeline. Reload to verify the saved life.
 5. In **Story Mode**, begin an independent campaign, leave mid-scene, resume, finish, and replay another branch. Its consequences never alter the main life. You can continue simulating life in the story continuity and switch back to your main life.
-6. Open Creator Studio to edit the opening and validate/export a story package. This is a local authoring tool; it does not publish into the player yet.
+6. Open Creator Studio to edit dialogue, scene mood, speakers, branching choice labels/destinations and preview different paths. Import/export validated JSON or return to a locally saved draft. Public publishing into the player is not yet implemented.
 
-The story is a short functional demonstration, not yet the blueprint's intended polished 10–20-minute experience. Temporary café and character graphics use animated native primitives; no generated images, AI services, remote artwork, or paid choices are involved.
+The story is a short functional demonstration, not yet the blueprint's intended polished 10–20-minute experience. This design branch uses original AI-assisted, bundled low-resolution concept artwork for the café and Amelia's portrait, and retains offline play without any runtime AI service or paid choices. These previews are not final layered character rigs or commercial production art.
 
 ## Verify
 
@@ -42,7 +42,7 @@ npm run build:studio   # Next.js production build
 npm run format         # Apply formatting
 ```
 
-See [verification evidence](docs/VERIFICATION.md) for actual commands, outcomes, and device limits. CI runs checks and both builds on Node 22. No CI execution is claimed until this repository is pushed and the workflow runs.
+See [verification evidence](docs/VERIFICATION.md) for actual commands, outcomes, and device limits. CI runs checks, web and Studio production builds, plus native iOS and Android Expo bundle exports on Node 22. Exports do not replace physical-device or simulator smoke tests.
 
 ## Structure
 
@@ -61,3 +61,19 @@ See [verification evidence](docs/VERIFICATION.md) for actual commands, outcomes,
 | `tests`                       | Engine, compatibility, persistence and untrusted-content regression tests |
 
 Start with [the specification](docs/PRODUCT_SPEC.md) and [architecture](docs/ARCHITECTURE.md). The project is private and unlicensed pending an owner decision; no open-source license has been selected implicitly.
+
+## Cinematic design branch
+
+The `design/immersive-gameplay-v1` branch is a preview of the new game-like presentation. It includes a bundled illustrated café stage, tappable destinations in Free Life, character portraits, visual-novel dialogue overlay and a significantly more usable Creator Studio. The scene plate is a deliberately compressed placeholder, so expect visible blur rather than final game artwork.
+
+To inspect this preview on your own machine:
+
+```sh
+git fetch origin
+git switch design/immersive-gameplay-v1
+npm ci
+npm run dev
+# In another terminal: npm run dev:studio
+```
+
+Production art, layered rigged actors, multiple distinct city locations, user-upload publishing, cloud saves, native-device QA, and moderation are still in progress. See [immersive gameplay production gates](docs/IMMERSIVE_GAMEPLAY_GATE.md). Do not deploy this branch to paying users or merge it into production on the strength of bundle exports alone.
