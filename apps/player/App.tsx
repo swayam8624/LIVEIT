@@ -380,7 +380,9 @@ export default function App() {
                         mood={currentScene(world!, authored).mood}
                       >
                         <Text style={s.stageHeadline}>
-                          {authored.id === reunion.id ? "A conversation you can't undo." : authored.title}
+                          {authored.id === reunion.id
+                            ? "A conversation you can't undo."
+                            : authored.title}
                         </Text>
                         <Text style={s.stageHint}>
                           What you say here becomes part of your history.
@@ -398,11 +400,22 @@ export default function App() {
                       key={currentScene(world!, authored).id}
                     >
                       <View style={s.speakerRow}>
-                        {currentScene(world!, authored).speaker.toLowerCase() === 'amelia' ? (
-                          <Image source={ameliaPortrait} style={s.speakerPortrait} accessibilityLabel="Illustrated portrait of Amelia" />
+                        {currentScene(
+                          world!,
+                          authored,
+                        ).speaker.toLowerCase() === 'amelia' ? (
+                          <Image
+                            source={ameliaPortrait}
+                            style={s.speakerPortrait}
+                            accessibilityLabel="Illustrated portrait of Amelia"
+                          />
                         ) : (
                           <View style={s.speakerFallback}>
-                            <Text style={s.speakerFallbackText}>{currentScene(world!, authored).speaker.slice(0, 1).toUpperCase() || '✧'}</Text>
+                            <Text style={s.speakerFallbackText}>
+                              {currentScene(world!, authored)
+                                .speaker.slice(0, 1)
+                                .toUpperCase() || '✧'}
+                            </Text>
                           </View>
                         )}
                         <View style={{ flex: 1, gap: 3 }}>
@@ -908,7 +921,16 @@ const s = StyleSheet.create({
   },
 
   speakerRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
-  speakerFallback: { width: 66, height: 78, borderRadius: 10, borderColor: '#e3a66d', borderWidth: 2, backgroundColor: '#3b3450', justifyContent: 'center', alignItems: 'center' },
+  speakerFallback: {
+    width: 66,
+    height: 78,
+    borderRadius: 10,
+    borderColor: '#e3a66d',
+    borderWidth: 2,
+    backgroundColor: '#3b3450',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   speakerFallbackText: { fontSize: 30, color: '#f4c892', fontWeight: '700' },
   speakerPortrait: {
     width: 66,
