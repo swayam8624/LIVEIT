@@ -637,3 +637,37 @@ describe('fast annual Free Life and career progression', () => {
     expect(restored.life.player.money).toBeGreaterThan(0);
   });
 });
+
+describe('expanded character creation wardrobe and appearance persistence', () => {
+  it('accepts cosmetic headwear, facial hair, makeup independently of identity', () => {
+    const look = AppearanceSchema.parse({
+      ...DEFAULT_APPEARANCE,
+      facialHair: 'beard',
+      headwear: 'beret',
+      makeup: 'gloss',
+      hair: 'locs',
+      skinTone: 'espresso',
+    });
+    const world = createWorld('Taylor', 'main', 'they/them', look);
+    expect(world.player.appearance).toEqual(look);
+    const restored = decodeSave(encodeSave({
+      version: 1, active: 'life', life: world, story: null,
+    }));
+    expect(restored.life.player.appearance).toEqual(look);
+    expect(restored.life.player.skill).toBe(20);
+    expect(restored.life.player.money).toBe(180000);
+  });
+  it('reads preexisting character looks without optional wardrobe properties', () => {
+    const oldLook: Record<string, unknown> = { ...DEFAULT_APPEARANCE };
+    delete oldLook.facialHair;
+    delete oldLook.headwear;
+    delete oldLook.makeup;
+    expect(AppearanceSchema.parse(oldLook)).toEqual(oldLook);
+  });
+  it('rejects unrecognized cosmetic items instead of rendering unsafe content', () => {
+    expect(() => AppearanceSchema.parse({
+      ...DEFAULT_APPEARANCE,
+      headwear: 'javascript:alert(1)',
+    })).toThrow();
+  });
+});
