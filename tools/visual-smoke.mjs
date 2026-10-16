@@ -26,6 +26,15 @@ async function inspect(label, viewport) {
   await page.getByRole('button', { name: /Begin your life/i }).click();
   await page.getByRole('button', { name: /THE CAFÉ/ }).waitFor({ timeout: 15000 });
   await page.screenshot({ path: path.join(out, `free-life-${label}.png`), fullPage: true });
+  for (let day = 0; day < 3; day++) {
+    await page.getByRole('button', { name: /STUDY/ }).click();
+  }
+  await page.getByText('1 waiting').waitFor({ timeout: 12000 });
+  await page.screenshot({ path: path.join(out, `city-decision-${label}.png`), fullPage: true });
+  const decision = page.getByRole('button', { name: /Take the workshop|Find its owner|Help, even if it takes the evening/ });
+  await decision.first().click();
+  await page.getByText('0 waiting').waitFor({ timeout: 12000 });
+  await page.screenshot({ path: path.join(out, `city-after-choice-${label}.png`), fullPage: true });
   await page.getByRole('button', { name: /THE CAFÉ/ }).click();
   await page.getByText('The Space Between').first().waitFor({ timeout: 15000 });
   await page.screenshot({ path: path.join(out, `story-${label}.png`), fullPage: true });
