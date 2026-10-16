@@ -107,6 +107,7 @@ export default function App() {
   const { width } = useWindowDimensions();
   const wide = width >= 1000;
   const [save, setSave] = useState<Save | null>(null);
+  const latestSave = useRef<Save | null>(null);
   const scrollRef = useRef<React.ComponentRef<typeof ScrollView>>(null);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState('');
@@ -137,6 +138,7 @@ export default function App() {
       .then(async (value) => {
         if (!mounted) return;
         if (value) {
+          latestSave.current = value;
           setSave(value);
           if (value.activeStoryId) {
             try {
@@ -206,6 +208,7 @@ export default function App() {
   }, [tab, sceneOpen, Boolean(save)]);
 
   function persist(next: Save) {
+    latestSave.current = next;
     setSave(next);
     setError('');
     setStatus('Saving…');
@@ -232,10 +235,21 @@ export default function App() {
       : save.life
     : null;
   function update(w: World) {
-    if (!save) return;
-    persist(
-      save.active === 'life' ? { ...save, life: w } : { ...save, story: w },
-    );
+    const current = latestSave.current;
+    if (!current) return;
+    persist(current.active === 'life'
+      ? { ...current, life: w }
+      : { ...current, story: w });
+  }
+  // IMPORTANT: apply the operation against the newest *synchronous* world.
+  // React state/JS callback closures can lag behind rapid successive taps.
+  function applyWorldAction(action: (previous: World) => World) {
+    run(() => {
+      const current = latestSave.current;
+      if (!current) return;
+      const previous = current.active === 'life' ? current.life : current.story!;
+      update(action(previous));
+    });
   }
   function run(action: () => void) {
     try {
@@ -635,7 +649,7 @@ export default function App() {
                   </View>
                   <LifeDashboard
                     world={world!}
-                    onAction={(operation) => run(() => update(operation(world!)))}
+                    onAction={applyWorldAction}
                   />
                   <GameStage mode="life">
                     <Text style={s.stageHeadline}>Your life is happening.</Text>
@@ -664,15 +678,7 @@ export default function App() {
                           onPress={() =>
                             dest.action === 'cafe'
                               ? openEncounter()
-                              : run(() =>
-                                  update(
-                                    advanceLife(
-                                      world!,
-                                      dest.action as Activity,
-                                      days,
-                                    ),
-                                  ),
-                                )
+                              : applyWorldAction(w => advanceLife(w, dest.action as Activity, days))
                           }
                         >
                           <Text style={s.destinationText}>
@@ -684,7 +690,7 @@ export default function App() {
                   </GameStage>
                   <CityWorld
                     world={world!}
-                    onAction={(operation) => run(() => update(operation(world!)))}
+                    onAction={applyWorldAction}
                   />
                   <View style={s.stats}>
                     <Stat
