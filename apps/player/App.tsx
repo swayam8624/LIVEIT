@@ -512,7 +512,12 @@ export default function App() {
                         mood={currentScene(world!, authored).mood}
                       >
                         <View style={s.storyActors} pointerEvents="none">
-                          <AvatarPortrait appearance={world!.player.appearance} size={144} label="Your customizable character appearing in the story scene" />
+                          <AvatarPortrait
+                            appearance={world!.player.appearance}
+                            size={144}
+                            expression={currentScene(world!, authored).mood === 'warm' ? 'happy' : currentScene(world!, authored).mood === 'tense' ? 'tense' : 'neutral'}
+                            label="Your customizable character appearing in the story scene"
+                          />
                           <View style={s.npcActor}>
                             <Image source={ameliaPortrait} style={s.npcActorImage} accessibilityLabel="Amelia, a character in the story" />
                           </View>
