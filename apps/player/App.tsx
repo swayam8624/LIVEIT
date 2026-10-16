@@ -111,6 +111,7 @@ export default function App() {
     'they/them',
   );
   const [sceneOpen, setSceneOpen] = useState(false);
+  const [plannerOpen, setPlannerOpen] = useState(false);
   const [authored, setAuthored] = useState<Story>(reunion);
   const [days, setDays] = useState(1);
   const [reset, setReset] = useState(false);
@@ -648,6 +649,36 @@ export default function App() {
                       detail="Time moves when you choose"
                     />
                   </View>
+                  <View style={s.timeRow}>
+                    <Text style={s.small}>SIMULATE</Text>
+                    {[1, 7, 30].map((n) => (
+                      <Pressable
+                        key={n}
+                        accessibilityRole="button"
+                        accessibilityLabel={`Advance ${n} days per activity`}
+                        accessibilityState={{ selected: days === n }}
+                        onPress={() => setDays(n)}
+                        style={[s.pace, days === n && s.paceActive]}
+                      >
+                        <Text style={[s.paceText, days === n && { color: '#fff4df' }]}>
+                          {n === 1 ? 'One day' : `${n} days`}
+                        </Text>
+                      </Pressable>
+                    ))}
+                    <Text style={s.small}>No energy timers. You set the pace.</Text>
+                  </View>
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityState={{ expanded: plannerOpen }}
+                    onPress={() => setPlannerOpen(p => !p)}
+                    style={s.plannerToggle}
+                  >
+                    <Text style={s.plannerToggleText}>
+                      {plannerOpen ? '− CLOSE LIFE PLANNER' : '+ OPEN LIFE PLANNER & RELATIONSHIPS'}
+                    </Text>
+                    <Text style={s.plannerToggleText}>{plannerOpen ? '⌃' : '⌄'}</Text>
+                  </Pressable>
+                  {plannerOpen && (
                   <View style={[s.columns, wide && { flexDirection: 'row' }]}>
                     <View style={{ flex: 1.15, gap: 22 }}>
                       <View style={s.sectionHeading}>
@@ -819,6 +850,7 @@ export default function App() {
                       </View>
                     </View>
                   </View>
+                  )}
                 </>
               ) : tab === 'stories' ? (
                 <>
@@ -968,6 +1000,16 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  paceActive: { backgroundColor: '#9d5634', borderColor: '#e5b47b', borderWidth: 1 },
+  paceText: { color: '#cfdae5', fontSize: 12, fontWeight: '700' },
+  plannerToggle: {
+    minHeight: 50, paddingHorizontal: 17, paddingVertical: 12,
+    borderRadius: 11, borderWidth: 1, borderColor: '#785840',
+    backgroundColor: '#1a273b', flexDirection: 'row', alignItems: 'center',
+    justifyContent: 'space-between', gap: 12,
+  },
+  plannerToggleText: { color: '#e3bd8d', fontSize: 12, fontWeight: '800', letterSpacing: 1 },
+
   gameNav: {
     flexDirection: 'row',
     gap: 9,
@@ -1157,13 +1199,13 @@ const s = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     borderWidth: 1,
-    borderColor: c.line,
-    borderRadius: 6,
-    backgroundColor: c.white,
+    borderColor: '#6e5448',
+    borderRadius: 12,
+    backgroundColor: '#101b2c',
     marginVertical: 8,
   },
   stat: { flex: 1, minWidth: 140, padding: 16, gap: 4 },
-  statValue: { fontFamily: serif, fontSize: 34, color: gold },
+  statValue: { fontFamily: serif, fontSize: 25, color: gold },
   columns: { gap: 30, alignItems: 'stretch' },
   sectionHeading: { gap: 8 },
   sectionTitle: { fontFamily: serif, fontSize: 26, color: gold, marginTop: 8 },
