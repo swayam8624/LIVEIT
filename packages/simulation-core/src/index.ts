@@ -1,3 +1,4 @@
+export { applyForJob, attendJobInterview, requestPromotion, resignFromJob, ageUp } from './life';
 import { initialCityState, tickCity } from './city';
 import { initialNPCLives, tickNPCs } from './npc';
 export { NPC_BEATS, initialNPCLives } from './npc';
@@ -6,6 +7,9 @@ export type { CityOpportunity, CityChoice } from './city';
 import {
   WorldSchema,
   record,
+  DEFAULT_APPEARANCE,
+  AppearanceSchema,
+  type Appearance,
   type World,
   type Character,
 } from '@living/world-schema';
@@ -14,6 +18,7 @@ export function createWorld(
   name = 'Alex Morgan',
   timelineId = 'main',
   pronouns: Character['pronouns'] = 'they/them',
+  appearance: Appearance = DEFAULT_APPEARANCE,
 ): World {
   return WorldSchema.parse({
     schemaVersion: 1,
@@ -24,6 +29,7 @@ export function createWorld(
       id: 'player',
       name,
       pronouns,
+      appearance: AppearanceSchema.parse(appearance),
       ageDays: 23 * 365,
       wellbeing: 72,
       skill: 20,
@@ -64,11 +70,18 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
     tickNPCs(w);
     w.player.money -= 2800;
     if (activity === 'work') {
-      if (w.player.career === 'seeking' && w.player.skill >= 25)
+      if (!w.city?.employment && w.player.career === 'seeking' && w.player.skill >= 25)
         w.player.career = 'employed';
-      w.player.money += w.player.career === 'employed' ? 12000 : 6500;
+      const careerJob = w.city?.employment;
+      // An actual chosen job pays its contract rate; old v1 employment
+      // still uses its original wages so legacy playthroughs do not change.
+      w.player.money += careerJob
+        ? careerJob.stage === 'applied' ? 6500 : Math.round(careerJob.salaryAnnual / 260)
+        : w.player.career === 'employed' ? 12000 : 6500;
       w.player.wellbeing -= 4;
       w.player.skill += 1;
+      if (careerJob && careerJob.stage !== 'applied')
+        careerJob.experience = Math.min(20000, careerJob.experience + 1);
       if (w.player.career === 'employed' && w.city) {
         const bonus = { undecided: 0, technology: 2200, creative: 800, business: 2800, community: 1200 }[w.city.careerPath];
         w.player.money += bonus;
@@ -109,4 +122,11 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
     `${days} ${days === 1 ? 'day' : 'days'} spent ${activity === 'work' ? 'working' : activity === 'study' ? 'learning' : activity === 'rest' ? 'resting' : 'with Noah'}. Daily living costs: £28.`,
   );
   return WorldSchema.parse(w);
+}
+
+/** Re-style an existing character without purchasing clothing or changing stats. */
+export function setCharacterAppearance(input: World, appearance: Appearance): World {
+  const world = structuredClone(WorldSchema.parse(input));
+  world.player.appearance = AppearanceSchema.parse(appearance);
+  return WorldSchema.parse(world);
 }

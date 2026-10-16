@@ -242,6 +242,11 @@ export function tickCity(input: World, activity: 'work' | 'study' | 'rest' | 'so
   if (activity === 'socialize') c.connections = clamp(c.connections + 1);
   // Do not create hundreds of unplayed events or trigger every day.
   if (input.day % 3 !== 0) return;
+  scheduleCityOpportunity(input);
+}
+/** Schedule a small bounded opportunity pool, also usable by annual ageing. */
+export function scheduleCityOpportunity(input:World):void {
+  const c = input.city ?? (input.city = initialCityState());
   c.opportunities = c.opportunities.filter(o => o.expiresDay >= input.day);
   if (c.opportunities.length >= 2) return;
   const available = CITY_OPPORTUNITIES.filter(o => eligible(input, o));

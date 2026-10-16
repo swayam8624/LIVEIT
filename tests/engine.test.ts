@@ -16,6 +16,8 @@ import {
   type Save,
 } from '@living/save-system';
 import { parseStory } from '@living/story-schema';
+import { DEFAULT_APPEARANCE, AppearanceSchema } from '@living/world-schema';
+import { ageUp, applyForJob, attendJobInterview, requestPromotion, resignFromJob, setCharacterAppearance } from '@living/simulation-core';
 import { reunion, bookshop, OFFICIAL_STORIES, findOfficialStory } from '@living/content';
 const copy = () => structuredClone(reunion);
 describe('deterministic life simulation', () => {
@@ -544,5 +546,94 @@ describe('story-schema safety regressions', () => {
     const badChoice = structuredClone(reunion);
     badChoice.scenes[0]!.choices[0]!.id = 'y'.repeat(121);
     expect(() => parseStory(badChoice)).toThrow();
+  });
+});
+
+describe('customizable player appearance', () => {
+  it('offers an appearance system that validates and saves independently of pronouns', () => {
+    const customized = { ...DEFAULT_APPEARANCE, skinTone: 'espresso' as const, hair: 'afro' as const, hairColor: 'rose' as const, outfit: 'formal' as const };
+    const world = createWorld('Alex Morgan','main','they/them',customized);
+    expect(world.player.appearance).toEqual(customized);
+    const restored = decodeSave(encodeSave({version:1,active:'life',life:world,story:null}));
+    expect(restored.life.player.appearance).toEqual(customized);
+    expect(restored.life.player.pronouns).toBe('they/them');
+  });
+  it('respects all cosmetic options and rejects invalid or unsafe data', () => {
+    expect(AppearanceSchema.shape.skinTone.options).toHaveLength(12);
+    expect(AppearanceSchema.shape.hair.options).toHaveLength(14);
+    expect(AppearanceSchema.shape.outfit.options).toHaveLength(9);
+    expect(() => AppearanceSchema.parse({...DEFAULT_APPEARANCE,hair:'not-a-hair'})).toThrow();
+    expect(() => AppearanceSchema.parse({...DEFAULT_APPEARANCE,unexpectedScript:'hello'})).toThrow();
+  });
+  it('lets an existing player change outfits without altering stats, relationships or stories', () => {
+    const initial=choose(createWorld(),reunion,'apologize');
+    const updated=setCharacterAppearance(initial,{...DEFAULT_APPEARANCE,eyes:'hooded',outfit:'evening',accessory:'glasses'});
+    expect(updated.player.appearance?.outfit).toBe('evening');
+    expect(updated.player.money).toBe(initial.player.money);
+    expect(updated.relationships).toEqual(initial.relationships);
+    expect(updated.progress).toEqual(initial.progress);
+    expect(initial.player.appearance?.outfit).toBe('casual');
+  });
+  it('keeps old saves from before appearance features fully readable', () => {
+    const legacy=createWorld();
+    delete legacy.player.appearance;
+    expect(decodeSave(encodeSave({version:1,active:'life',life:legacy,story:null})).life.player.appearance).toBeUndefined();
+  });
+});
+describe('fast annual Free Life and career progression', () => {
+  it('ages one year in one deterministic transaction and preserves original player state', () => {
+    const before=createWorld();
+    const future=ageUp(before);
+    expect(future.player.ageDays).toBe(before.player.ageDays+365);
+    expect(future.day).toBe(365);
+    expect(future.history.at(-1)?.text).toContain('Age 24');
+    expect(future).toEqual(ageUp(before));
+    expect(before.day).toBe(0);
+    expect(future.player.money).not.toBe(before.player.money);
+  });
+  it('keeps NPC evolution from all intermediate timepoints during annual ages', () => {
+    const aged=ageUp(createWorld());
+    expect(aged.npcLives?.find(n=>n.characterId==='amelia')?.milestones).toContain('anthology');
+    expect(aged.npcLives?.find(n=>n.characterId==='noah')?.milestones).toContain('night_classes');
+  });
+  it('uses job interviews with skill-based success or failure', () => {
+    const applied=applyForJob(createWorld(),'technology');
+    expect(applied.city?.employment?.stage).toBe('applied');
+    const failed=attendJobInterview(applied);
+    expect(failed.city?.employment).toBeUndefined();
+    expect(failed.player.career).toBe('seeking');
+    const prepared=applyForJob(advanceLife(createWorld(),'study',7),'technology');
+    const hired=attendJobInterview(prepared);
+    expect(hired.city?.employment?.stage).toBe('employed');
+    expect(hired.player.career).toBe('employed');
+    expect(hired.city?.employment?.salaryAnnual).toBe(3400000);
+  });
+  it('pays employed workdays, promotes experienced employees, and allows a career switch', () => {
+    const prepared=advanceLife(createWorld(),'study',7);
+    const hired=attendJobInterview(applyForJob(prepared,'technology'));
+    const working=advanceLife(hired,'work',7);
+    expect(working.city?.employment?.experience).toBe(7);
+    const promoted=requestPromotion(working);
+    expect(promoted.city?.employment?.stage).toBe('senior');
+    expect(promoted.city?.employment?.salaryAnnual).toBeGreaterThan(3400000);
+    const resigned=resignFromJob(promoted);
+    expect(resigned.player.career).toBe('seeking');
+    const newApplication=applyForJob(resigned,'creative');
+    expect(newApplication.city?.employment?.field).toBe('creative');
+  });
+  it('does not silently overwrite active jobs or promote without qualifications', () => {
+    const applied=applyForJob(createWorld(),'technology');
+    expect(() => applyForJob(applied,'creative')).toThrow('pending interview');
+    expect(() => attendJobInterview(createWorld())).toThrow('No pending job');
+    expect(() => requestPromotion(createWorld())).toThrow('need a job');
+    expect(() => resignFromJob(createWorld())).toThrow('no position');
+  });
+  it('keeps annual wages and saves bounded and valid through repeated ages', () => {
+    let w=attendJobInterview(applyForJob(advanceLife(createWorld(),'study',8),'community'));
+    for(let i=0;i<12;i++) w=ageUp(w);
+    const restored=decodeSave(encodeSave({version:1,active:'life',life:w,story:null}));
+    expect(restored.life.player.ageDays).toBe((23+12)*365+8);
+    expect(restored.life.city?.employment?.stage).toBe('employed');
+    expect(restored.life.player.money).toBeGreaterThan(0);
   });
 });
