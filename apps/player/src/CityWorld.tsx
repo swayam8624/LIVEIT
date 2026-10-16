@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+// Independently verified Kenney CC0 assets, bundled offline from pinned source.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const playIcon = require('../assets/kenney-play.png');
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const downIcon = require('../assets/kenney-down.png');
 import {
   DISTRICTS, availableCityOpportunities, cityState, chooseCareer,
   resolveCityOpportunity, visitDistrict,
@@ -113,7 +118,7 @@ export function CityWorld({
               >
                 <Text style={styles.optionIndex}>0{i+1}</Text>
                 <Text style={styles.optionText}>{choice.label}</Text>
-                <Text style={styles.arrow}>↗</Text>
+                <Image source={playIcon} style={styles.choiceIcon} accessibilityLabel="Choose this option" />
               </Pressable>
             ))}
           </View>
@@ -131,7 +136,10 @@ export function CityWorld({
           </View>
           {city.careerPath === 'undecided' && (
             <Pressable accessibilityRole="button" onPress={() => setCareerOpen(p => !p)} style={styles.careerButton}>
-              <Text style={styles.careerButtonText}>{careerOpen ? 'Hide fields' : 'Choose a field  ↗'}</Text>
+              <View style={styles.careerButtonRow}>
+                <Text style={styles.careerButtonText}>{careerOpen ? 'Hide fields' : 'Choose a field'}</Text>
+                <Image source={downIcon} style={styles.dropIcon} />
+              </View>
             </Pressable>
           )}
         </View>
@@ -153,6 +161,9 @@ export function CityWorld({
   );
 }
 const styles = StyleSheet.create({
+  choiceIcon: { width: 18, height: 18, resizeMode: 'contain' },
+  careerButtonRow: { flexDirection: 'row', gap: 9, alignItems: 'center' },
+  dropIcon: { width: 15, height: 15, resizeMode: 'contain' },
   root: { gap: 17 },
   heading: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 12 },
   eyebrow: { color: '#e7ad79', fontSize: 10, fontWeight: '800', letterSpacing: 1.8 },
