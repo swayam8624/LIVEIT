@@ -324,7 +324,9 @@ describe('imported narrative persistence and compatibility', () => {
     const restored = decodeSave(encodeSave(checkpoint));
     expect(restored.activeStoryId).toBe(imported.id);
     expect(currentScene(restored.life, imported).id).toBe('listening');
-    expect(choose(restored.life, imported, 'support').relationships[0]?.trust).toBe(51);
+    expect(
+      choose(restored.life, imported, 'support').relationships[0]?.trust,
+    ).toBe(51);
   });
 
   it('rejects invalid active narrative identifiers', () => {
@@ -334,6 +336,8 @@ describe('imported narrative persistence and compatibility', () => {
       life: createWorld(),
       story: null,
     };
-    expect(() => decodeSave(JSON.stringify({ ...data, activeStoryId: '' }))).toThrow();
+    expect(() =>
+      decodeSave(JSON.stringify({ ...data, activeStoryId: '' })),
+    ).toThrow();
   });
 });
