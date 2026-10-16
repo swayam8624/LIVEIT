@@ -105,7 +105,7 @@ export default function App() {
   const [ready, setReady] = useState(false);
   const [error, setError] = useState('');
   const [status, setStatus] = useState('');
-  const [tab, setTab] = useState<'life' | 'stories' | 'journal'>('life');
+  const [tab, setTab] = useState<'life' | 'stories' | 'people' | 'journal'>('life');
   const [name, setName] = useState('Alex Morgan');
   const [pronouns, setPronouns] = useState<'they/them' | 'she/her' | 'he/him'>(
     'they/them',
@@ -315,6 +315,7 @@ export default function App() {
             [
               { id: 'life', symbol: '⌂', title: 'FREE LIFE' },
               { id: 'stories', symbol: '✧', title: 'STORIES' },
+              { id: 'people', symbol: '♡', title: 'PEOPLE' },
               { id: 'journal', symbol: '◷', title: 'MEMORIES' },
             ] as const
           ).map((entry) => (
@@ -421,7 +422,9 @@ export default function App() {
                     ? 'YOUR LIFE, UNFOLDING'
                     : tab === 'stories'
                       ? 'A DIFFERENT WAY TO LIVE'
-                      : 'THE THINGS THAT STAY'}
+                      : tab === 'people'
+                        ? 'PEOPLE & CONSEQUENCES'
+                        : 'THE THINGS THAT STAY'}
                 </Text>
                 <Text accessibilityLiveRegion="polite" style={s.saveStatus}>
                   {status || 'Saved on this device'}
@@ -944,6 +947,71 @@ export default function App() {
                     ]}
                   />
                 </>
+              ) : tab === 'people' ? (
+                <>
+                  <Text style={s.title}>Your people. Your history.</Text>
+                  <Text style={s.subtitle}>
+                    Relationships change as life goes on. People remember what
+                    you said, and whether you made time for them.
+                  </Text>
+                  <View style={s.peopleGallery}>
+                    {world!.relationships.map((friend) => {
+                      const amelia = friend.characterId === 'amelia';
+                      const name = amelia ? 'Amelia Chen' : 'Noah Bennett';
+                      const memories = world!.memories.filter(
+                        memory => memory.subject === friend.characterId
+                      );
+                      return (
+                        <View key={friend.characterId} style={s.profileCard}>
+                          <View style={s.profileTop}>
+                            {amelia ? (
+                              <Image
+                                source={ameliaPortrait}
+                                style={s.profilePortrait}
+                                accessibilityLabel="Amelia Chen's illustrated portrait"
+                              />
+                            ) : (
+                              <View style={s.profileUnknown}>
+                                <Text style={s.profileUnknownText}>N</Text>
+                              </View>
+                            )}
+                            <View style={{ flex: 1, gap: 5 }}>
+                              <Text style={s.cardTitle}>{name}</Text>
+                              <Text style={s.small}>
+                                {amelia
+                                  ? 'An old friend with unfinished history'
+                                  : 'Your first friend in Bellweather'}
+                              </Text>
+                              <Text style={s.eyebrow}>
+                                LAST SPOKEN · DAY {friend.lastContactDay + 1}
+                              </Text>
+                            </View>
+                          </View>
+                          <View style={s.trustHeading}>
+                            <Text style={s.eyebrow}>TRUST</Text>
+                            <Text style={s.trust}>{friend.trust}/100</Text>
+                          </View>
+                          <View style={s.trustTrack} accessibilityLabel={`${name} trust ${friend.trust} out of 100`}>
+                            <View style={[s.trustFill, { width: `${friend.trust}%` }]} />
+                          </View>
+                          <Text style={s.small}>
+                            {memories.length === 0
+                              ? 'No shared story memories yet.'
+                              : `${memories.length} remembered moment${memories.length === 1 ? '' : 's'}`}
+                          </Text>
+                          <Button
+                            label={amelia ? 'Meet at the café →' : 'Spend time together →'}
+                            onPress={() =>
+                              amelia
+                                ? openEncounter()
+                                : run(() => update(advanceLife(world!, 'socialize', days)))
+                            }
+                          />
+                        </View>
+                      );
+                    })}
+                  </View>
+                </>
               ) : (
                 <>
                   <Text style={s.title}>Your life, remembered.</Text>
@@ -1016,6 +1084,24 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  peopleGallery: { flexDirection: 'row', flexWrap: 'wrap', gap: 17 },
+  profileCard: {
+    flexGrow: 1, flexBasis: 280, maxWidth: 620, backgroundColor: '#1c293d',
+    borderRadius: 13, borderWidth: 1, borderColor: '#544b52', padding: 18, gap: 14,
+  },
+  profileTop: { flexDirection: 'row', alignItems: 'center', gap: 16 },
+  profilePortrait: {
+    width: 95, height: 112, borderRadius: 10, borderWidth: 1, borderColor: '#c38c68',
+  },
+  profileUnknown: {
+    width: 95, height: 112, backgroundColor: '#3e4659', borderRadius: 10,
+    justifyContent: 'center', alignItems: 'center',
+  },
+  profileUnknownText: { fontFamily: serif, color: '#f3c694', fontSize: 50 },
+  trustHeading: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  trustTrack: { height: 8, backgroundColor: '#0c1729', borderRadius: 9, overflow: 'hidden' },
+  trustFill: { height: '100%', backgroundColor: '#e7ac78', borderRadius: 9 },
+
   paceActive: {
     backgroundColor: '#9d5634',
     borderColor: '#e5b47b',
