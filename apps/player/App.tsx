@@ -29,6 +29,7 @@ import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
 import { GameStage } from './src/GameStage';
+import { CityWorld } from './src/CityWorld';
 const c = {
   paper: '#0c1421',
   ink: '#f7eee1',
@@ -636,6 +637,10 @@ export default function App() {
                       ))}
                     </View>
                   </GameStage>
+                  <CityWorld
+                    world={world!}
+                    onAction={(operation) => run(() => update(operation(world!)))}
+                  />
                   <View style={s.stats}>
                     <Stat
                       label="YOUR SAVINGS"
