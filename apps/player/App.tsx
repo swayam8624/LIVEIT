@@ -378,13 +378,18 @@ export default function App() {
                       }}
                     />
                   </View>
-                  <View
-                    style={s.sceneLayout}
-                  >
+                  <View style={s.sceneLayout}>
                     <View style={{ flex: 1.15 }}>
-                      <GameStage mode="story" mood={currentScene(world!, reunion).mood}>
-                        <Text style={s.stageHeadline}>A conversation you can't undo.</Text>
-                        <Text style={s.stageHint}>What you say here becomes part of your history.</Text>
+                      <GameStage
+                        mode="story"
+                        mood={currentScene(world!, reunion).mood}
+                      >
+                        <Text style={s.stageHeadline}>
+                          A conversation you can't undo.
+                        </Text>
+                        <Text style={s.stageHint}>
+                          What you say here becomes part of your history.
+                        </Text>
                       </GameStage>
                       <View style={s.sceneMeta}>
                         <Text style={s.small}>
@@ -478,25 +483,45 @@ export default function App() {
                   </View>
                   <GameStage mode="life">
                     <Text style={s.stageHeadline}>Your life is happening.</Text>
-                    <Text style={s.stageHint}>Choose where to spend your time. The city will remember what you do.</Text>
+                    <Text style={s.stageHint}>
+                      Choose where to spend your time. The city will remember
+                      what you do.
+                    </Text>
                     <View style={s.destinationRow}>
-                      {([
-                        { icon: '✦', label: 'THE CAFÉ', action: 'cafe' },
-                        { icon: '↗', label: 'WORK', action: 'work' },
-                        { icon: '✧', label: 'STUDY', action: 'study' },
-                        { icon: '♡', label: 'FRIENDS', action: 'socialize' },
-                        { icon: '☾', label: 'REST', action: 'rest' },
-                      ] as const).map((dest) => (
+                      {(
+                        [
+                          { icon: '✦', label: 'THE CAFÉ', action: 'cafe' },
+                          { icon: '↗', label: 'WORK', action: 'work' },
+                          { icon: '✧', label: 'STUDY', action: 'study' },
+                          { icon: '♡', label: 'FRIENDS', action: 'socialize' },
+                          { icon: '☾', label: 'REST', action: 'rest' },
+                        ] as const
+                      ).map((dest) => (
                         <Pressable
                           key={dest.action}
                           accessibilityRole="button"
                           accessibilityLabel={dest.label}
-                          style={({ pressed }) => [s.destination, pressed && { backgroundColor: '#865037' }]}
-                          onPress={() => dest.action === 'cafe'
-                            ? openEncounter()
-                            : run(() => update(advanceLife(world!, dest.action as Activity, days)))}
+                          style={({ pressed }) => [
+                            s.destination,
+                            pressed && { backgroundColor: '#865037' },
+                          ]}
+                          onPress={() =>
+                            dest.action === 'cafe'
+                              ? openEncounter()
+                              : run(() =>
+                                  update(
+                                    advanceLife(
+                                      world!,
+                                      dest.action as Activity,
+                                      days,
+                                    ),
+                                  ),
+                                )
+                          }
                         >
-                          <Text style={s.destinationText}>{dest.icon}  {dest.label}</Text>
+                          <Text style={s.destinationText}>
+                            {dest.icon} {dest.label}
+                          </Text>
                         </Pressable>
                       ))}
                     </View>
@@ -833,19 +858,43 @@ export default function App() {
 }
 const s = StyleSheet.create({
   stageHeadline: {
-    fontFamily: serif, fontSize: 33, color: '#fff0d3', fontWeight: '700',
-    textShadowColor: 'rgba(0,0,0,0.75)', textShadowRadius: 12, maxWidth: 560,
+    fontFamily: serif,
+    fontSize: 33,
+    color: '#fff0d3',
+    fontWeight: '700',
+    textShadowColor: 'rgba(0,0,0,0.75)',
+    textShadowRadius: 12,
+    maxWidth: 560,
   },
   stageHint: {
-    fontSize: 13, lineHeight: 20, color: '#f6e8df', maxWidth: 580,
-    textShadowColor: '#000000', textShadowRadius: 8,
+    fontSize: 13,
+    lineHeight: 20,
+    color: '#f6e8df',
+    maxWidth: 580,
+    textShadowColor: '#000000',
+    textShadowRadius: 8,
   },
-  destinationRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 13 },
+  destinationRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginTop: 13,
+  },
   destination: {
-    minHeight: 46, justifyContent: 'center', paddingHorizontal: 14, borderRadius: 9,
-    borderWidth: 1, borderColor: '#c99064', backgroundColor: 'rgba(9,15,25,0.88)',
+    minHeight: 46,
+    justifyContent: 'center',
+    paddingHorizontal: 14,
+    borderRadius: 9,
+    borderWidth: 1,
+    borderColor: '#c99064',
+    backgroundColor: 'rgba(9,15,25,0.88)',
   },
-  destinationText: { color: '#fff1dc', letterSpacing: 0.8, fontSize: 11, fontWeight: '800' },
+  destinationText: {
+    color: '#fff1dc',
+    letterSpacing: 0.8,
+    fontSize: 11,
+    fontWeight: '800',
+  },
 
   app: { flex: 1, backgroundColor: c.paper },
   loading: {
@@ -889,7 +938,11 @@ const s = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  navActive: { backgroundColor: '#303147', borderLeftWidth: 3, borderLeftColor: gold },
+  navActive: {
+    backgroundColor: '#303147',
+    borderLeftWidth: 3,
+    borderLeftColor: gold,
+  },
   navText: { fontSize: 14, color: c.muted },
   sideNote: { marginTop: 100, padding: 7, opacity: 0.55 },
   sideQuote: {
