@@ -22,11 +22,13 @@ export function GameStage({
   mode,
   mood = 'reflective',
   compact = false,
+  stageHeight,
 }: {
   children?: React.ReactNode;
   mode: 'life' | 'story';
   mood?: 'reflective' | 'tense' | 'warm';
   compact?: boolean;
+  stageHeight?: number;
 }) {
   const pulse = useRef(new Animated.Value(0)).current;
   useEffect(() => {
@@ -82,7 +84,7 @@ export function GameStage({
       imageStyle={styles.image}
       style={[
         styles.stage,
-        { height: compact ? 270 : mode === 'story' ? 480 : 410 },
+        { height: stageHeight ?? (compact ? 270 : mode === 'story' ? 480 : 410) },
       ]}
     >
       <View

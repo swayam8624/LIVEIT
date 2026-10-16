@@ -4,6 +4,8 @@ on:
     branches:
       - design/immersive-gameplay-v1
       - feat/living-city-systems
+      - feat/cinematic-story-player
+      - main
     paths:
       - 'apps/player/**'
       - 'apps/creator-studio/**'

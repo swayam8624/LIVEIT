@@ -39,6 +39,12 @@ async function inspect(label, viewport) {
   await page.screenshot({ path: path.join(out, `city-after-choice-${label}.png`), fullPage: true });
   await page.getByRole('button', { name: /THE CAFÉ/ }).click();
   await page.getByText('The Space Between').first().waitFor({ timeout: 15000 });
+  const stage = await page.getByTestId('story-stage').boundingBox();
+  const dock = await page.getByTestId('story-dialogue-overlay').boundingBox();
+  const actors = await page.getByTestId('story-actors').boundingBox();
+  assert.ok(stage && dock && actors, 'Story stage, actors and dock must render');
+  assert.ok(dock.y >= stage.y && dock.y + dock.height <= stage.y + stage.height + 2, 'Dialogue must be anchored INSIDE game stage');
+  assert.ok(actors.y >= stage.y && actors.y < dock.y, 'Character sprites should appear above the dock');
   await page.screenshot({ path: path.join(out, `story-${label}.png`), fullPage: true });
   // Real cross-mode handoff: complete the original story, advance Free Life,
   // start its official sequel and reload midway. No re-import must be needed.

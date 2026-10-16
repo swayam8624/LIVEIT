@@ -21,7 +21,6 @@ import {
   choose,
   currentScene,
   startStory,
-  conditionMet,
 } from '@living/narrative-core';
 import { loadSave, writeSave, type Save } from '@living/save-system';
 import { DEFAULT_APPEARANCE, type Appearance, type World } from '@living/world-schema';
@@ -34,6 +33,7 @@ import { CityWorld } from './src/CityWorld';
 import { AvatarEditor } from './src/AvatarEditor';
 import { AvatarPortrait } from './src/AvatarPortrait';
 import { LifeDashboard } from './src/LifeDashboard';
+import { StoryPlayer } from './src/StoryPlayer';
 const c = {
   paper: '#0c1421',
   ink: '#f7eee1',
@@ -486,147 +486,21 @@ export default function App() {
                 </Text>
               </View>
               {sceneOpen ? (
-                <>
-                  <View style={s.topLine}>
-                    <View>
-                      <Tag>
-                        {save.active === 'life'
-                          ? 'AN ENCOUNTER IN YOUR LIFE'
-                          : 'STANDALONE STORY TIMELINE'}
-                      </Tag>
-                      <Text style={s.title}>{authored.title}</Text>
-                    </View>
-                    <Button
-                      label="Save & leave scene"
-                      secondary
-                      onPress={() => {
-                        persist({ ...save, sceneDismissed: true });
-                        setSceneOpen(false);
-                      }}
-                    />
-                  </View>
-                  <View style={s.sceneLayout}>
-                    <View style={{ width: '100%' }}>
-                      <GameStage
-                        mode="story"
-                        mood={currentScene(world!, authored).mood}
-                      >
-                        <View style={s.storyActors} pointerEvents="none">
-                          <AvatarPortrait
-                            appearance={world!.player.appearance}
-                            size={144}
-                            expression={currentScene(world!, authored).mood === 'warm' ? 'happy' : currentScene(world!, authored).mood === 'tense' ? 'tense' : 'neutral'}
-                            label="Your customizable character appearing in the story scene"
-                          />
-                          <View style={s.npcActor}>
-                            <Image source={ameliaPortrait} style={s.npcActorImage} accessibilityLabel="Amelia, a character in the story" />
-                          </View>
-                        </View>
-                        <Text style={s.stageHeadline}>
-                          {authored.id === reunion.id
-                            ? "A conversation you can't undo."
-                            : authored.title}
-                        </Text>
-                        <Text style={s.stageHint}>
-                          What you say here becomes part of your history.
-                        </Text>
-                      </GameStage>
-                      <View style={s.sceneMeta}>
-                        <Text style={s.small}>LIVEIT · PLAYABLE ENCOUNTER</Text>
-                        <Text style={s.small}>
-                          Consequences are saved to this timeline
-                        </Text>
-                      </View>
-                    </View>
-                    <View
-                      style={s.dialogue}
-                      key={currentScene(world!, authored).id}
-                    >
-                      <View style={s.speakerRow}>
-                        {currentScene(
-                          world!,
-                          authored,
-                        ).speaker.toLowerCase() === 'amelia' ? (
-                          <Image
-                            source={ameliaPortrait}
-                            style={s.speakerPortrait}
-                            accessibilityLabel="Illustrated portrait of Amelia"
-                          />
-                        ) : (
-                          <View style={s.speakerFallback}>
-                            <Text style={s.speakerFallbackText}>
-                              {currentScene(world!, authored)
-                                .speaker.slice(0, 1)
-                                .toUpperCase() || '✧'}
-                            </Text>
-                          </View>
-                        )}
-                        <View style={{ flex: 1, gap: 3 }}>
-                          <Text style={s.eyebrow}>
-                            {currentScene(
-                              world!,
-                              authored,
-                            ).speaker.toUpperCase()}
-                          </Text>
-                          <Text style={s.small}>
-                            {authored.title.toUpperCase()} · BELLWEATHER
-                          </Text>
-                        </View>
-                      </View>
-                      <Text style={s.dialogueText}>
-                        {currentScene(world!, authored).text}
-                      </Text>
-                      {currentScene(world!, authored).choices.map((choice) => {
-                        const available = choice.conditions.every((cond) =>
-                          conditionMet(world!, cond),
-                        );
-                        return (
-                          <Pressable
-                            key={choice.id}
-                            accessibilityRole="button"
-                            disabled={!available}
-                            onPress={() =>
-                              run(() =>
-                                update(choose(world!, authored, choice.id)),
-                              )
-                            }
-                            style={({ pressed }) => [
-                              s.choice,
-                              !available && { opacity: 0.4 },
-                              pressed && { backgroundColor: c.sage },
-                            ]}
-                          >
-                            <Text style={s.choiceText}>
-                              {choice.label}
-                              {!available ? ' · More trust needed' : ''}
-                            </Text>
-                            <Text style={{ color: c.orange }}>↗</Text>
-                          </Pressable>
-                        );
-                      })}
-                      {currentScene(world!, authored).ending && (
-                        <>
-                          <Tag>CHAPTER COMPLETE · YOUR WORLD REMEMBERS</Tag>
-                          <Text style={s.small}>
-                            Your decisions are recorded in this timeline’s
-                            journal.
-                          </Text>
-                          <Button
-                            label={
-                              save.active === 'life'
-                                ? 'Return to your life →'
-                                : 'Continue living in this timeline →'
-                            }
-                            onPress={() => {
-                              setSceneOpen(false);
-                              setTab('life');
-                            }}
-                          />
-                        </>
-                      )}
-                    </View>
-                  </View>
-                </>
+                <StoryPlayer
+                  world={world!}
+                  story={authored}
+                  integrated={save.active === 'life'}
+                  onChoose={(choiceId) => applyWorldAction(w => choose(w, authored, choiceId))}
+                  onClose={() => {
+                    const current = latestSave.current;
+                    if(current) persist({ ...current, sceneDismissed: true });
+                    setSceneOpen(false);
+                  }}
+                  onFinish={() => {
+                    setSceneOpen(false);
+                    setTab('life');
+                  }}
+                />
               ) : tab === 'life' ? (
                 <>
                   <View style={s.topLine}>
