@@ -32,7 +32,7 @@ try {
     await page.getByRole('tab', { name:'PEOPLE' }).click();
     await page.getByRole('button', { name:/Customize my look/ }).click();
     await page.getByRole('tab', { name:'Accessories' }).click();
-    assert.equal(await page.getByRole('radio', { name:'Accessories: glasses' }).getAttribute('aria-checked'),'true');
+    assert.equal(await page.getByRole('radio', { name:'Accessories: glasses' }).getByText('✓').count(),1);
     await page.getByRole('button', { name:'Close appearance editor' }).click();
     await page.getByRole('tab', { name:'FREE LIFE' }).click();
     await page.getByRole('button', { name:'Search available jobs' }).click();
