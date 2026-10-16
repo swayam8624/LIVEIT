@@ -297,6 +297,7 @@ export default function App() {
             save.life.player.name,
             'story.reunion',
             save.life.player.pronouns,
+            save.life.player.appearance ?? DEFAULT_APPEARANCE,
           ),
           reunion,
         );
