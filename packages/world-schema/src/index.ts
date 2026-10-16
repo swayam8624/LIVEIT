@@ -58,9 +58,23 @@ export const DistrictSchema = z.enum([
 export const CareerPathSchema = z.enum([
   'undecided', 'technology', 'creative', 'business', 'community',
 ]);
+export const EmploymentSchema = z.object({
+  field: CareerPathSchema.exclude(['undecided']),
+  stage: z.enum(['applied','employed','senior','lead']),
+  company: z.string().min(1).max(80),
+  jobTitle: z.string().min(1).max(80),
+  salaryAnnual: z.number().int().min(0).max(100000000),
+  experience: z.number().int().min(0).max(20000),
+  interviews: z.number().int().min(0).max(1000),
+  hiredDay: z.number().int().nonnegative().nullable(),
+  lastPromotionDay: z.number().int().nonnegative().nullable(),
+}).strict();
+export type Employment = z.infer<typeof EmploymentSchema>;
+
 export const CityStateSchema = z.object({
   district: DistrictSchema,
   careerPath: CareerPathSchema,
+  employment: EmploymentSchema.optional(),
   reputation: z.number().int().min(0).max(100),
   stress: z.number().int().min(0).max(100),
   connections: z.number().int().min(0).max(100),
