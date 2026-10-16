@@ -1,3 +1,6 @@
+import { initialCityState, tickCity } from './city';
+export { CITY_OPPORTUNITIES, DISTRICTS, availableCityOpportunities, chooseCareer, cityState, visitDistrict, resolveCityOpportunity } from './city';
+export type { CityOpportunity, CityChoice } from './city';
 import {
   WorldSchema,
   record,
@@ -40,6 +43,7 @@ export function createWorld(
     ],
     facts: ['university_attended'],
     progress: [],
+    city: initialCityState(),
   });
 }
 export type Activity = 'work' | 'study' | 'rest' | 'socialize';
@@ -53,6 +57,7 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
   for (let i = 0; i < days; i++) {
     w.day++;
     w.player.ageDays++;
+    tickCity(w, activity);
     w.player.money -= 2800;
     if (activity === 'work') {
       if (w.player.career === 'seeking' && w.player.skill >= 25)
