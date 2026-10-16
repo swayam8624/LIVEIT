@@ -128,9 +128,13 @@ export default function Studio() {
       setRaw(JSON.stringify(restored, null, 2));
       setSelected(restored.entry);
       setPreview(restored.entry);
-      setMessage('Previous story draft restored. Your current draft is available through Restore previous.');
+      setMessage(
+        'Previous story draft restored. Your current draft is available through Restore previous.',
+      );
     } catch {
-      setMessage('Previous draft is invalid or unavailable. The active story was not changed.');
+      setMessage(
+        'Previous draft is invalid or unavailable. The active story was not changed.',
+      );
     }
   }
 
@@ -293,7 +297,11 @@ export default function Studio() {
           <button type="button" className="secondary" onClick={createStory}>
             + New story
           </button>
-          <button type="button" className="secondary" onClick={restorePreviousDraft}>
+          <button
+            type="button"
+            className="secondary"
+            onClick={restorePreviousDraft}
+          >
             ↶ Previous draft
           </button>
           <button
