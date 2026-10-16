@@ -24,7 +24,7 @@ import {
 } from '@living/narrative-core';
 import { loadSave, writeSave, type Save } from '@living/save-system';
 import type { World } from '@living/world-schema';
-import { reunion } from '@living/content';
+import { reunion, bookshop } from '@living/content';
 import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
@@ -248,6 +248,19 @@ export default function App() {
           ? { ...save, activeStoryId: reunion.id, life: nextWorld }
           : { ...save, activeStoryId: reunion.id, story: nextWorld },
       );
+      setSceneOpen(true);
+    });
+  }
+  function openBookshop() {
+    if (!save) return;
+    run(() => {
+      const reunited = save.life.progress.some(p => p.storyId === reunion.id && p.completed);
+      if (!reunited || save.life.day < 7)
+        throw new Error('Finish the reunion and spend at least a week in Bellweather first.');
+      const next = startStory(save.life, bookshop);
+      setAuthored(bookshop);
+      persist({ ...save, active: 'life', life: next, activeStoryId: bookshop.id });
+      setTab('stories');
       setSceneOpen(true);
     });
   }
@@ -944,6 +957,27 @@ export default function App() {
                       )}
                     </View>
                   </View>
+                  <View style={s.bookshopFeature}>
+                    <View style={{ flex: 1, gap: 7 }}>
+                      <Tag>ORIGINAL STORY · CHAPTER TWO</Tag>
+                      <Text style={s.cardTitle}>{bookshop.title}</Text>
+                      <Text style={s.cardDescription}>{bookshop.description}</Text>
+                      <Text style={s.small}>11 illustrated narrative scenes · 3 endings · choices free</Text>
+                      <Text style={s.small}>Compatible with the main Free Life timeline; it remembers your earlier reunion.</Text>
+                    </View>
+                    <View style={{ justifyContent: 'center', gap: 8 }}>
+                      <Button
+                        label={save.life.progress.some(p => p.storyId === bookshop.id)
+                          ? 'Continue the bookshop →'
+                          : 'Enter the bookshop →'}
+                        disabled={!save.life.progress.some(p => p.storyId === reunion.id && p.completed) || save.life.day < 7}
+                        onPress={openBookshop}
+                      />
+                      {(!save.life.progress.some(p => p.storyId === reunion.id && p.completed) || save.life.day < 7) && (
+                        <Text style={s.small}>Unlock naturally: complete the reunion and spend 7 days in Bellweather.</Text>
+                      )}
+                    </View>
+                  </View>
                   <View style={s.infoBox}>
                     <Text style={s.sectionTitle}>
                       One universe. Many ways to live.
@@ -1115,6 +1149,12 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  bookshopFeature: {
+    flexDirection: 'row', flexWrap: 'wrap', gap: 18,
+    padding: 23, borderRadius: 13, borderWidth: 1,
+    backgroundColor: '#242438', borderColor: '#8c6653',
+  },
+
   peopleGallery: { flexDirection: 'row', flexWrap: 'wrap', gap: 17 },
   profileCard: {
     flexGrow: 1,
