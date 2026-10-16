@@ -21,7 +21,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Format current design changes
-        run: npx prettier --write apps/player/App.tsx apps/player/src/GameStage.tsx apps/creator-studio/app/page.tsx apps/creator-studio/app/style.css docs/IMMERSIVE_GAMEPLAY_GATE.md
+        run: npx prettier --write apps/player/App.tsx apps/player/src/GameStage.tsx apps/player/src/LocalStoryLibrary.tsx apps/creator-studio/app/page.tsx apps/creator-studio/app/style.css docs/IMMERSIVE_GAMEPLAY_GATE.md README.md
       - name: Commit formatted files
         shell: bash
         run: |
