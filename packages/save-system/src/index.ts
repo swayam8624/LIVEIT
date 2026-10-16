@@ -7,6 +7,8 @@ export const SaveSchema = z
     // Optional for compatibility with existing v1 saves. Identifies the active
     // narrative independently of timeline (official or locally imported).
     activeStoryId: z.string().min(1).max(120).optional(),
+    /** Leaves active narrative progress intact, but does not auto-open on reload. */
+    sceneDismissed: z.boolean().optional(),
     life: WorldSchema,
     story: WorldSchema.nullable(),
   })
