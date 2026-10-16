@@ -523,11 +523,11 @@ export default function App() {
                           <Text style={s.eyebrow}>
                             {currentScene(
                               world!,
-                              reunion,
+                              authored,
                             ).speaker.toUpperCase()}
                           </Text>
                           <Text style={s.small}>
-                            THE SPACE BETWEEN · BELLWEATHER
+                            {authored.title.toUpperCase()} · BELLWEATHER
                           </Text>
                         </View>
                       </View>
