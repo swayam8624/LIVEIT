@@ -14,6 +14,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   createWorld,
   advanceLife,
+  setCharacterAppearance,
   type Activity,
 } from '@living/simulation-core';
 import {
@@ -23,13 +24,15 @@ import {
   conditionMet,
 } from '@living/narrative-core';
 import { loadSave, writeSave, type Save } from '@living/save-system';
-import type { World } from '@living/world-schema';
+import { DEFAULT_APPEARANCE, type Appearance, type World } from '@living/world-schema';
 import { reunion, bookshop, findOfficialStory } from '@living/content';
 import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
 import { GameStage } from './src/GameStage';
 import { CityWorld } from './src/CityWorld';
+import { AvatarEditor } from './src/AvatarEditor';
+import { AvatarPortrait } from './src/AvatarPortrait';
 const c = {
   paper: '#0c1421',
   ink: '#f7eee1',
@@ -119,6 +122,9 @@ export default function App() {
   const [authored, setAuthored] = useState<Story>(reunion);
   const [days, setDays] = useState(1);
   const [reset, setReset] = useState(false);
+  const [appearance, setAppearance] = useState<Appearance>(DEFAULT_APPEARANCE);
+  const [lookDraft, setLookDraft] = useState<Appearance>(DEFAULT_APPEARANCE);
+  const [editingLook, setEditingLook] = useState(false);
   const queue = useRef(Promise.resolve());
   const revision = useRef(0);
   useEffect(() => {
@@ -289,7 +295,7 @@ export default function App() {
       persist({
         version: 1,
         active: 'life',
-        life: createWorld(name, 'main', pronouns),
+        life: createWorld(name, 'main', pronouns, appearance),
         story: null,
       });
       setReset(false);
@@ -420,6 +426,11 @@ export default function App() {
                   />
                 ))}
               </View>
+              <AvatarEditor
+                appearance={appearance}
+                onChange={setAppearance}
+                heading="Choose how you look."
+              />
               <View style={s.row}>
                 <Button
                   label={
@@ -484,6 +495,12 @@ export default function App() {
                         mode="story"
                         mood={currentScene(world!, authored).mood}
                       >
+                        <View style={s.storyActors} pointerEvents="none">
+                          <AvatarPortrait appearance={world!.player.appearance} size={144} label="Your customizable character appearing in the story scene" />
+                          <View style={s.npcActor}>
+                            <Image source={ameliaPortrait} style={s.npcActorImage} accessibilityLabel="Amelia, a character in the story" />
+                          </View>
+                        </View>
                         <Text style={s.stageHeadline}>
                           {authored.id === reunion.id
                             ? "A conversation you can't undo."
@@ -598,10 +615,16 @@ export default function App() {
                           ? 'A new beginning.'
                           : 'A little more life.'}
                       </Text>
-                      <Text style={s.subtitle}>
-                        {world!.player.name} · Age{' '}
-                        {Math.floor(world!.player.ageDays / 365)} · Bellweather
-                      </Text>
+                      <View style={s.lifeIdentity}>
+                        <AvatarPortrait appearance={world!.player.appearance} size={87} />
+                        <View style={{ flex: 1, gap: 4 }}>
+                          <Text style={s.subtitle}>
+                            {world!.player.name} · Age{' '}
+                            {Math.floor(world!.player.ageDays / 365)} · Bellweather
+                          </Text>
+                          <Text style={s.small}>YOUR STORY. YOUR LOOK. YOUR CHOICES.</Text>
+                        </View>
+                      </View>
                     </View>
                     <Tag>
                       {save.active === 'story'
@@ -1003,6 +1026,34 @@ export default function App() {
               ) : tab === 'people' ? (
                 <>
                   <Text style={s.title}>Your people. Your history.</Text>
+                  <View style={s.playerProfile}>
+                    <AvatarPortrait appearance={world!.player.appearance} size={117} />
+                    <View style={{ flex: 1, gap: 8 }}>
+                      <Text style={s.cardTitle}>{world!.player.name}</Text>
+                      <Text style={s.small}>This is your character. Appearance is not tied to stats or gender.</Text>
+                      <Button
+                        label={editingLook ? 'Close appearance editor' : '✦ Customize my look'}
+                        onPress={() => {
+                          if (!editingLook) setLookDraft(world!.player.appearance ?? DEFAULT_APPEARANCE);
+                          setEditingLook(!editingLook);
+                        }}
+                      />
+                    </View>
+                  </View>
+                  {editingLook && (
+                    <View style={s.lookPanel}>
+                      <AvatarEditor appearance={lookDraft} onChange={setLookDraft} heading="Your look, your rules." compact />
+                      <View style={s.row}>
+                        <Button label="Save appearance ✓" onPress={() => {
+                          run(() => {
+                            update(setCharacterAppearance(world!, lookDraft));
+                            setEditingLook(false);
+                          });
+                        }} />
+                        <Button label="Cancel" secondary onPress={() => setEditingLook(false)} />
+                      </View>
+                    </View>
+                  )}
                   <Text style={s.subtitle}>
                     Relationships change as life goes on. People remember what
                     you said, and whether you made time for them.
@@ -1168,6 +1219,13 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
+  lifeIdentity: { flexDirection:'row', flexWrap:'wrap', alignItems:'center', gap:12 },
+  playerProfile: { flexDirection:'row', alignItems:'center', flexWrap:'wrap', gap:14, borderWidth:1, borderColor:'#7c5a52', backgroundColor:'#1a2a3d', borderRadius:13, padding:12 },
+  lookPanel: { borderRadius:14, borderWidth:1, borderColor:'#856751', backgroundColor:'#142238', padding:14, gap:16 },
+  storyActors: { alignSelf:'center', flexDirection:'row', alignItems:'flex-end', justifyContent:'space-between', width:'100%', maxWidth:510, minHeight:150, marginBottom:10 },
+  npcActor: { width:130, height:142, backgroundColor:'#1a2a3dcc', borderWidth:2, borderColor:'#d5a97d', borderRadius:60, overflow:'hidden', justifyContent:'center', alignItems:'center' },
+  npcActorImage: {width:128,height:140,resizeMode:'cover'},
+
   npcMilestones: { padding: 12, borderRadius: 9, backgroundColor: '#29384c', gap: 5 },
 
   bookshopFeature: {
