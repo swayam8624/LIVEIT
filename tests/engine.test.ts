@@ -658,8 +658,10 @@ describe('expanded character creation wardrobe and appearance persistence', () =
     expect(restored.life.player.money).toBe(180000);
   });
   it('reads preexisting character looks without optional wardrobe properties', () => {
-    const { facialHair: _facialHair, headwear: _headwear, makeup: _makeup, ...oldLook } =
-      DEFAULT_APPEARANCE;
+    const oldLook: Record<string, unknown> = { ...DEFAULT_APPEARANCE };
+    delete oldLook.facialHair;
+    delete oldLook.headwear;
+    delete oldLook.makeup;
     expect(AppearanceSchema.parse(oldLook)).toEqual(oldLook);
   });
   it('rejects unrecognized cosmetic items instead of rendering unsafe content', () => {
