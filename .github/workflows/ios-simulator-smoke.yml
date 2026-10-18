@@ -1,0 +1,53 @@
+name: LIVEIT iOS Simulator Native Smoke
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'apps/player/**'
+      - 'packages/**'
+      - 'content/**'
+      - 'package*.json'
+      - '.github/workflows/ios-simulator-smoke.yml'
+permissions:
+  contents: read
+jobs:
+  native-ios:
+    runs-on: macos-15
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependency-locked workspace
+        run: npm ci
+      - name: Select and boot actual simulator
+        id: simulator
+        run: |
+          xcodebuild -version
+          xcrun simctl list devices available
+          UDID=$(python3 - <<'PY'
+          import json,subprocess
+          data=json.loads(subprocess.check_output(['xcrun','simctl','list','devices','available','--json']))
+          options=[d for pool in data['devices'].values() for d in pool if d['name'].startswith('iPhone') and d['isAvailable']]
+          if not options: raise SystemExit('No available iPhone simulator installed on GitHub runner')
+          print(options[0]['udid'])
+          PY
+          )
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+      - name: Compile, install and launch real native iOS application
+        working-directory: apps/player
+        run: npx expo run:ios --device "${{ steps.simulator.outputs.udid }}" --no-bundler
+      - name: Verify bundle launches and capture evidence
+        run: |
+          xcrun simctl launch "${{ steps.simulator.outputs.udid }}" studio.livinguniverse.player
+          xcrun simctl io "${{ steps.simulator.outputs.udid }}" screenshot native-ios-smoke.png
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: liveit-native-ios-evidence
+          path: native-ios-smoke.png
+          if-no-files-found: ignore
