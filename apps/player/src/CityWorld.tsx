@@ -112,6 +112,8 @@ export function CityWorld({
       {!showDistrictCards ? (
         <CityMap
           selected={city.district}
+          day={world.day}
+          hotspots={events.map((event) => event.district)}
           onVisit={(district) => onAction((w) => visitDistrict(w, district))}
         />
       ) : (
