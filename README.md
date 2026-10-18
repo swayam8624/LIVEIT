@@ -2,25 +2,40 @@
 
 A shared life simulator and interactive story engine. Foundation Sprint 001 implements **A New Beginning**: a new life in Bellweather and an unfinished conversation with Amelia.
 
-## Run
+## Run LIVEIT on iPhone Simulator (primary development path)
 
-Requires Node.js 22.13+ and npm 10+. From this directory:
+LIVEIT is an **iOS/Android game**. The web player exists only as a temporary
+developer/browser test harness, **not** the target shipping experience.
+The simulator needs a Mac with Xcode, Node.js 22.13+ and npm 10+.
 
 ```sh
+git pull
 npm ci
-npm run dev          # Expo web player: http://localhost:8081
-npm run dev:studio   # Next.js Creator Studio: http://localhost:3000
+npm run ios -w @living/player         # Expo Metro + iOS Simulator
 ```
 
-Run each development server in its own terminal. For native development:
+If an iPhone simulator is not booted, launch one in Xcode → Open Developer
+Tool → Simulator. For a true native Xcode compile/install (not just an Expo JS
+bundle), from `apps/player` run `npx expo run:ios`. The
+[macOS iOS native smoke workflow](.github/workflows/ios-simulator-smoke.yml)
+now attempts to compile, install, launch and capture a real simulator screenshot.
+
+Android (Android Studio emulator/SDK required):
 
 ```sh
-npm run ios          # Expo starts and opens the iOS simulator; requires macOS + Xcode
-npm run android      # Expo starts and opens an Android emulator; requires Android SDK
-npm run start -w @living/player  # QR / device connection and platform shortcuts
+npm run android -w @living/player
 ```
 
-A compatible Expo Go installation or a development build and reachable development server are required for physical devices. Native distribution is not configured. The current Expo SDK and its supported native runtimes must match. Web and native use the same React Native app and pure TypeScript engines. Native device behavior has not been verified in this sprint.
+The existing internal `npm run dev` (Expo web at localhost:8081) and
+`npm run dev:studio` (creator development tool at localhost:3000)
+remain available for regression tests and content authoring; they are not
+public game destinations or a claim of app-store publication.
+
+For the new OpenLife-inspired portfolio and choice gameplay, see
+[reverse-engineering audit](docs/OPENLIFE_REVERSE_ENGINEERING.md) and
+[native rebuilding/QA contract](docs/NATIVE_RECONSTRUCTION.md).
+The project is still in pre-alpha; the new domain gameplay does not yet
+constitute a complete birth-to-death game or a working real-player chat platform.
 
 ## Play the slice
 
