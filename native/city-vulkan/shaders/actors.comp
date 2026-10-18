@@ -1,0 +1,198 @@
+#version 450
+// LIVEIT 2.5D actor stage. All visible character pixels are composited by
+// Vulkan compute; no React Native rectangles, remote images, or HTML canvas.
+// This is a procedural CHARACTER RIG PROTOTYPE, not the production texture atlas.
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
+layout(set = 0, binding = 0, std430) writeonly buffer Pixels {
+  uint pixels[];
+};
+struct Actor {
+  vec4 pose;       // screen x, screen y, scale, expression ID (0..11)
+  vec4 appearance; // skin palette, hair palette, outfit palette, hairstyle ID
+};
+layout(set = 0, binding = 1, std430) readonly buffer Actors {
+  Actor actors[];
+};
+layout(push_constant) uniform Config {
+  uint width;
+  uint height;
+  uint actorCount;
+  uint night;
+  float frame;         // animation phase
+  float sceneMood;     // additional animation/scene variant
+  float cameraDistance;
+  float exposure;
+} cfg;
+
+vec3 skinPalette(int id) {
+  const vec3 colors[12] = vec3[12](
+    vec3(.96,.86,.79), vec3(.93,.80,.68), vec3(.94,.75,.62),
+    vec3(.86,.66,.51), vec3(.79,.55,.38), vec3(.72,.53,.35),
+    vec3(.67,.44,.31), vec3(.60,.38,.25), vec3(.47,.29,.20),
+    vec3(.40,.23,.18), vec3(.31,.19,.15), vec3(.22,.13,.10)
+  );
+  return colors[clamp(id, 0, 11)];
+}
+vec3 hairPalette(int id) {
+  const vec3 colors[12] = vec3[12](
+    vec3(.08,.08,.13), vec3(.13,.11,.13), vec3(.22,.15,.14),
+    vec3(.40,.25,.17), vec3(.56,.26,.18), vec3(.74,.44,.23),
+    vec3(.84,.68,.39), vec3(.56,.50,.46), vec3(.75,.76,.79),
+    vec3(.79,.50,.58), vec3(.30,.43,.60), vec3(.47,.33,.49)
+  );
+  return colors[clamp(id, 0, 11)];
+}
+vec3 outfitPalette(int id) {
+  const vec3 colors[9] = vec3[9](
+    vec3(.15,.24,.39), vec3(.24,.25,.29), vec3(.24,.40,.33),
+    vec3(.53,.24,.33), vec3(.89,.83,.72), vec3(.42,.30,.45),
+    vec3(.22,.53,.55), vec3(.74,.45,.52), vec3(.76,.60,.29)
+  );
+  return colors[clamp(id, 0, 8)];
+}
+float ellipse(vec2 p, vec2 radius) {
+  return (length(p / radius) - 1.0) * min(radius.x, radius.y);
+}
+float roundBox(vec2 p, vec2 extent, float radius) {
+  vec2 q = abs(p) - extent + radius;
+  return length(max(q, vec2(0))) + min(max(q.x,q.y),0.0) - radius;
+}
+float capsule(vec2 p, vec2 a, vec2 b, float r) {
+  vec2 ab = b - a;
+  return length(p - a - ab * clamp(dot(p-a, ab) / dot(ab,ab),0.0,1.0)) - r;
+}
+void layer(inout vec3 dst, float distance, vec3 pigment, float aa) {
+  float weight = smoothstep(aa, -aa, distance);
+  dst = mix(dst, pigment, weight);
+}
+float hash21(vec2 v) {
+  return fract(sin(dot(v, vec2(127.1,311.7))) * 43758.5453);
+}
+uint packColor(vec3 rgb) {
+  uvec3 c = uvec3(clamp(rgb,0.0,1.0)*255.0+0.5);
+  return c.r | (c.g<<8) | (c.b<<16) | 0xff000000u;
+}
+vec3 drawActor(vec3 color, vec2 uv, Actor actor, float pixel, uint index) {
+  float scale = actor.pose.z;
+  vec2 p = (uv - actor.pose.xy) / scale;
+  float blink = step(0.992, fract(cfg.frame * 0.043 + float(index) * 0.37));
+  float breath = sin(cfg.frame * 0.11 + float(index)) * 0.004;
+  float talking = sin(cfg.frame * 0.75 + float(index)) * 0.006;
+  int expression = int(actor.pose.w);
+  int hairstyle = int(actor.appearance.w);
+  float softness = max(pixel / scale, 0.001);
+  vec3 skin = skinPalette(int(actor.appearance.x));
+  vec3 hair = hairPalette(int(actor.appearance.y));
+  vec3 shirt = outfitPalette(int(actor.appearance.z));
+  vec3 shade = skin * 0.68;
+  vec3 clothShadow = shirt * .64;
+  float outline = softness * 2.0;
+
+  // Shadow and depth behind the rig.
+  layer(color, ellipse(p-vec2(0.0,0.43),vec2(.29,.055)),vec3(.07,.13,.20),outline);
+  layer(color, ellipse(p-vec2(.0,.11),vec2(.23,.42)),vec3(.04,.10,.15),outline);
+  // Back hair, jacket, limbs, collar, neck: painter-like stacked cutouts.
+  float hairLength = (hairstyle==0 || hairstyle==1) ? .07 : (hairstyle==9 || hairstyle==13 ? .40 : .26);
+  layer(color, ellipse(p-vec2(.0,-.13+hairLength*.12),vec2(.163,.19+hairLength)),hair*.58,softness);
+  layer(color, capsule(p,vec2(-.14,.17),vec2(-.19,.43),.070),shirt*.67,softness);
+  layer(color, capsule(p,vec2(.14,.17),vec2(.19,.43),.070),shirt*.73,softness);
+  layer(color, roundBox(p-vec2(-.073,.42),vec2(.068,.15),.021),clothShadow,softness);
+  layer(color, roundBox(p-vec2(.073,.42),vec2(.068,.15),.021),clothShadow*.88,softness);
+  layer(color, ellipse(p-vec2(.0,.235+breath),vec2(.21,.19+breath)),shirt*.52,softness);
+  layer(color, ellipse(p-vec2(.0,.225+breath),vec2(.195,.19)),shirt,softness);
+  layer(color, ellipse(p-vec2(.0,.095),vec2(.056,.085)),shade,softness);
+  layer(color, ellipse(p-vec2(.0,.083),vec2(.048,.085)),skin,softness);
+  // Split lapel, sash and clothes: outfit index truly changes silhouette.
+  layer(color, capsule(p,vec2(-.065,.15),vec2(-.01,.32),.012),clothShadow,softness);
+  layer(color, capsule(p,vec2(.065,.15),vec2(.01,.32),.012),clothShadow,softness);
+  // Neck, ears, facial contour, light.
+  layer(color, ellipse(p-vec2(-.137,-.112),vec2(.035,.064)),shade,softness);
+  layer(color, ellipse(p-vec2(.137,-.112),vec2(.035,.064)),shade,softness);
+  layer(color, ellipse(p-vec2(.0,-.152),vec2(.142,.192)),shade,outline);
+  layer(color, ellipse(p-vec2(.002,-.157),vec2(.134,.183)),skin,softness);
+  layer(color, ellipse(p-vec2(-.055,-.11),vec2(.059,.13)),skin*1.07,softness*3.0);
+  // Hair cap, optional fringe and side locks, on top of forehead.
+  layer(color, ellipse(p-vec2(0.,-.305),vec2(.15,.112)),hair,softness);
+  layer(color, ellipse(p-vec2(-.081,-.258),vec2(.061,.082)),hair*.94,softness);
+  if (hairstyle > 2 && hairstyle != 7) {
+    layer(color, capsule(p,vec2(.125,-.30),vec2(.140,-.13),.023),hair*.92,softness);
+  }
+  if (hairstyle == 1 || hairstyle == 2) {
+    layer(color, ellipse(p-vec2(.02,-.325),vec2(.125,.052)),skin*.7,softness);
+  }
+  // Expressive eyebrows, white eyes, iris/pupils, eyelids.
+  float eyebrowBias = (expression == 2 || expression == 6) ? .014 :
+                      (expression == 3 || expression == 5) ? -.013 : 0.;
+  float eyeOpen = blink > 0.5 || expression == 10 ? 0.003 :
+                  expression == 5 ? .022 : .013;
+  for (int eye=0; eye<2; ++eye) {
+    float sx = eye == 0 ? -.064 : .064;
+    layer(color, capsule(p,vec2(sx-.026,-.235+eyebrowBias),
+                           vec2(sx+.027,-.241-eyebrowBias),.008),hair*.63,softness);
+    layer(color, ellipse(p-vec2(sx,-.208),vec2(.030,eyeOpen)),vec3(.97,.94,.83),softness);
+    if (eyeOpen > .005) {
+      layer(color, ellipse(p-vec2(sx+.006,-.207),vec2(.011,.013)),vec3(.22,.38,.32),softness);
+      layer(color, ellipse(p-vec2(sx+.006,-.207),vec2(.005,.008)),vec3(.08,.12,.13),softness);
+    }
+  }
+  // Nose and highlighted lips; 12 supported emotional silhouettes.
+  layer(color, capsule(p,vec2(.003,-.174),vec2(-.007,-.135),.005),shade,softness);
+  vec3 lip = skin * .62;
+  float smile = (expression==1 || expression==4 || expression==7) ? .011 :
+                (expression==2 || expression==6 || expression==8) ? -.011 : 0.;
+  layer(color, capsule(p,vec2(-.032,-.098-smile),
+                           vec2(.032,-.098-smile), expression==5 ? .019 : .006),
+                           lip,softness);
+  if (expression==8) {
+    layer(color, capsule(p,vec2(-.077,-.19),vec2(-.076,-.11),.005),
+          vec3(.40,.66,.79),softness);
+  }
+  if (expression==9) {
+    layer(color, ellipse(p-vec2(-.09,-.14),vec2(.022,.014)),skin*.78,softness);
+    layer(color, ellipse(p-vec2(.09,-.14),vec2(.022,.014)),skin*.78,softness);
+  }
+  // Ink contour, rim-light and jacket seam unify all characters with city art.
+  layer(color, capsule(p,vec2(-.17,.18),vec2(-.19,.34),.008),shirt*.30,softness);
+  if (cfg.night==1u) {
+    layer(color, capsule(p,vec2(.14,-.29),vec2(.17,.08),.004),
+          vec3(.96,.79,.55),softness);
+  }
+  return color;
+}
+
+void main() {
+  uvec2 px = gl_GlobalInvocationID.xy;
+  if (px.x >= cfg.width || px.y >= cfg.height) return;
+  vec2 uv = (vec2(px)+.5)/vec2(cfg.width,cfg.height);
+  float pixel = 1.2 / float(min(cfg.width,cfg.height));
+  // Painted stage backdrop with depth and controlled animation.
+  vec3 c = mix(
+    cfg.night==1u ? vec3(.035,.058,.105) : vec3(.28,.42,.47),
+    cfg.night==1u ? vec3(.11,.19,.24) : vec3(.60,.70,.61),
+    uv.y
+  );
+  c += vec3(.012,.019,.012)*sin(uv.x*13.0 + cfg.frame*.01);
+  float moon = ellipse(uv-vec2(.78,.19),vec2(.12,.12));
+  layer(c, moon, cfg.night==1u ? vec3(.60,.77,.71) : vec3(.89,.72,.49),pixel*2.0);
+  // Atmospheric cinematic skyline, café windows, colored rim-lights.
+  for (int i=0;i<9;++i) {
+    float x = float(i)*.14-.03;
+    float h = .21+hash21(vec2(float(i),1.0))*.23;
+    layer(c, roundBox(uv-vec2(x,.76),vec2(.070,h),.005),
+          mix(vec3(.09,.21,.25),vec3(.18,.30,.35),float(i%3)*.3),pixel);
+  }
+  for (int i=0;i<28;++i) {
+    vec2 pos = vec2(hash21(vec2(float(i),.2)),
+                    hash21(vec2(float(i),.9))*.36+.29);
+    layer(c,ellipse(uv-pos,vec2(.004,.004)),vec3(.89,.64,.33),pixel*.7);
+  }
+  layer(c,roundBox(uv-vec2(.50,.945),vec2(.7,.055),.008),
+        vec3(.11,.19,.20),pixel*2.0);
+  for(uint i=0u;i<cfg.actorCount;++i) {
+    c = drawActor(c,uv,actors[i],pixel,i);
+  }
+  if (cfg.night==1u) c *= cfg.exposure;
+  // A very slight film-like dither, but no visually aggressive pixel filter.
+  c += (hash21(vec2(px))-.5)*.004;
+  pixels[px.y*cfg.width+px.x]=packColor(c);
+}
