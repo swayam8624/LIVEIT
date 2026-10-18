@@ -44,6 +44,21 @@ jobs:
       - name: Compile, install and launch real native iOS application
         working-directory: apps/player
         run: npx expo run:ios --device "${{ steps.simulator.outputs.udid }}" --no-bundler
+      - name: Print actionable Xcode errors on build failure
+        if: failure()
+        run: |
+          if [ -f apps/player/.expo/xcodebuild.log ]; then
+            echo '--- Xcode warnings/errors ---'
+            grep -Ein -C 3 'error:|Could not resolve|failed|fatal error|timed out|permission denied' apps/player/.expo/xcodebuild.log | tail -150 || true
+            echo '--- Last 100 Xcode log lines ---'
+            tail -100 apps/player/.expo/xcodebuild.log
+          fi
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: native-ios-xcode-diagnostic
+          path: apps/player/.expo/xcodebuild.log
+          if-no-files-found: warn
       - name: Verify bundle launches and capture evidence
         run: |
           xcrun simctl launch "${{ steps.simulator.outputs.udid }}" studio.livinguniverse.player
