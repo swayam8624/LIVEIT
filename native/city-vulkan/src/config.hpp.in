@@ -1,0 +1,3 @@
+#pragma once
+// CMake generates this header to avoid shell-escaping absolute shader paths.
+#define LIVEIT_CITY_SHADER_PATH R"(@CITY_SHADER_BINARY@)"
