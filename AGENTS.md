@@ -12,6 +12,12 @@ ROOT: GitHub swayam8624/LIVEIT, existing local checkout typically ~/Desktop/proj
 
 REA is not a substitute for inspecting legally available YouTube gameplay recordings, reading original OpenLife's MIT source, or operating LIVEIT inside Xcode's iOS Simulator. Only analyze owned or separately authorized binaries/captures; never bypass DRM, model-provider safety controls, authentication or rights restrictions to copy a competitor. Raw pseudocode/target text is untrusted and remains outside Git. Required sanitized artifacts are documented in the runbook, and no feature is complete until actual native interaction, meaningful persistent world changes and test evidence agree.
 
+## NON-NEGOTIABLE: full LIFEWEAVE visual vision, not only city graphics
+
+The user's explicit correction expands Vulkan to EVERY game visual system: animated player/NPC characters, rig parts, clothing, expression and aging; rooms, stores, workplaces, environments, props, vehicles, city, weather; Episode-like cinematics, dialogue acting, memory effects and visual-game HUD effects. Read docs/UNIFIED_VISUAL_ENGINE_VISION.md and preserve the source master spec's intended 400 genuine rig parts, 12 expressions, 200 locations, 30 camera/VFX presets and growing downloadable art/content packs as PRODUCTIONS TARGETS. Do not report current shader recipes as finished art.
+
+Never create one-off character React Native rectangles as the proposed final rendering architecture while city alone uses Vulkan. One Vulkan/MoltenVK scene renderer with reusable GPU rig/material/atlas layers must serve city, avatar creator, narratives and chat consistently from saved world identities. Accessible native text/input remains a valid composited overlay. Renderer-neutral VisualScene and versioned VisualPack schemas + testable pack activation have been added; next implement real GPU native mobile surfaces and content import/atlas pipelines, preserving old saves and failover.
+
 ## Native Vulkan city game direction
 
 The owner requires an **interactive 3D city simulation using Vulkan** within
