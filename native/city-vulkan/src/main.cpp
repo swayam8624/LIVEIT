@@ -14,9 +14,7 @@
 #include <string>
 #include <vector>
 
-#ifndef LIVEIT_CITY_SHADER_PATH
-#error "CMake must define LIVEIT_CITY_SHADER_PATH"
-#endif
+#include "config.hpp"
 
 namespace {
 void require(VkResult result, const char* operation) {
