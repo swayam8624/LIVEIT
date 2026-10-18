@@ -163,7 +163,11 @@ export function CityMap({
                 {district.title.toUpperCase()}
               </Text>
               <Text style={styles.districtAction}>
-                {active ? '◆ CURRENT LOCATION' : hotspots.includes(district.id) ? '✦ EVENT AVAILABLE' : '○ ENTER DISTRICT'}
+                {active
+                  ? '◆ CURRENT LOCATION'
+                  : hotspots.includes(district.id)
+                    ? '✦ EVENT AVAILABLE'
+                    : '○ ENTER DISTRICT'}
               </Text>
             </View>
           </Pressable>
