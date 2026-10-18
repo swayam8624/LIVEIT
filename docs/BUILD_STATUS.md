@@ -18,6 +18,30 @@ Updated 2026-10-18. Branch: feat/native-life-economic-foundation. Main remains t
 | Playtesting          | No verified external 10-minute playtest or retention metrics                                                                                 | First iOS simulator quality baseline required                                                                        |
 | Research             | Competitor/feature dossier grounded in public official pages plus archived OpenLife code                                                     | Real gameplay video timestamp ledger is yet to be completed, must never be faked                                     |
 
+## 2026-10-18 Vulkan/retro city implementation update
+
+- `apps/player/src/gameTheme.ts` and the main player, city, story and avatar
+  UIs now use an arcade-influenced, accessible color/type system rather than
+  a primarily editorial serif look. Native device visual acceptance remains
+  unverified.
+- `CityMap` is an interactive illustrated isometric city fallback with real
+  gameplay location actions, camera zoom, day/night preview, actual day,
+  available event markers. It **is not a Vulkan surface**.
+- `city-scene.ts` deterministically generates renderer-neutral 3D block
+  geometry; Vitest includes city determinism, bounds and isometric projection
+  regression tests.
+- `native/city-vulkan` contains an original C++17 Vulkan compute renderer,
+  SPIR-V city shader, CMake and CI. On 2026-10-18, **City Vulkan compute smoke**
+  run [39101544442](https://github.com/swayam8624/LIVEIT/actions/runs/39101544442)
+  succeeded and uploaded real 256×160 day/night PPM results. This uses Mesa
+  Lavapipe software Vulkan in CI, NOT an iPhone GPU. It proves that executable
+  Vulkan rendering code builds and dispatches; no mobile swapchain integration
+  is claimed.
+- Next required: actual native view, Android Vulkan SurfaceView and iOS
+  CAMetalLayer/MoltenVK swapchain, in-app state binding, selection/raycast,
+  animation/traffic/LOD and 10-minute mobile playtest. Details in
+  [VULKAN_CITY_RENDERING.md](VULKAN_CITY_RENDERING.md).
+
 ## Required next exact actions
 
 1. Validate local git status and stash only local modifications that could conflict with tracked formatting changes (notably apps/creator-studio/next-env.d.ts). git fetch and fast-forward the development branch. Keep user changes intact.
