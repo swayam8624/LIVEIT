@@ -1,3 +1,4 @@
+export * from './visual-pack-activation';
 export * from './visual-assets';
 import { z } from 'zod';
 import { AppearanceSchema } from './appearance';
