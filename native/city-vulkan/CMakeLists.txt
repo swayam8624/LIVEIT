@@ -49,3 +49,5 @@ add_test(NAME actors_vulkan_conversation
   COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/actor-conversation.ppm 512 320 night conversation 2)
 add_test(NAME actors_vulkan_cast
   COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/actor-cast.ppm 512 320 day cast 1)
+add_test(NAME actors_vulkan_animation
+  COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/actor-animation.ppm 320 400 day portrait 1 16.0)
