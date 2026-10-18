@@ -1,0 +1,46 @@
+name: Format native reconstruction branch
+on:
+  push:
+    branches:
+      - feat/native-life-economic-foundation
+permissions:
+  contents: write
+concurrency:
+  group: liveit-native-format
+  cancel-in-progress: false
+jobs:
+  format:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Format changed native-rebuild code and documentation
+        run: |
+          npx prettier --write \
+            README.md \
+            docs/OPENLIFE_REVERSE_ENGINEERING.md \
+            docs/NATIVE_RECONSTRUCTION.md \
+            packages/world-schema/src/index.ts \
+            packages/simulation-core/src/index.ts \
+            packages/simulation-core/src/life.ts \
+            packages/simulation-core/src/portfolio.ts \
+            packages/simulation-core/src/moments.ts \
+            apps/player/src/LifeDashboard.tsx \
+            tests/portfolio.test.ts \
+            tests/moments.test.ts
+      - name: Commit formatting only if necessary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/OPENLIFE_REVERSE_ENGINEERING.md docs/NATIVE_RECONSTRUCTION.md packages/world-schema/src/index.ts packages/simulation-core/src/index.ts packages/simulation-core/src/life.ts packages/simulation-core/src/portfolio.ts packages/simulation-core/src/moments.ts apps/player/src/LifeDashboard.tsx tests/portfolio.test.ts tests/moments.test.ts
+          if ! git diff --cached --quiet; then
+            git commit -m "style: format native life reconstruction"
+            git push origin HEAD:feat/native-life-economic-foundation
+          fi
