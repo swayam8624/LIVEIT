@@ -8,6 +8,7 @@
 #include <array>
 #include <cstdint>
 #include <cstring>
+#include <cmath>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
@@ -219,6 +220,9 @@ int main(int argc, char** argv) {
         sceneMode != "conversation" && sceneMode != "cast")
       throw std::runtime_error("mode must be city, portrait, conversation or cast");
     if (expression > 11u) throw std::runtime_error("expression must be 0..11");
+    const float animationFrame = argc > 7 ? std::stof(argv[7]) : 1.0f;
+    if (!std::isfinite(animationFrame) || animationFrame < 0.0f)
+      throw std::runtime_error("animation frame must be a nonnegative finite float");
 
     if (width < 64 || height < 64 || width > 2048 || height > 2048)
       throw std::runtime_error("Width and height must be 64–2048 pixels");
@@ -414,7 +418,7 @@ int main(int argc, char** argv) {
     vkCmdBindDescriptorSets(command, VK_PIPELINE_BIND_POINT_COMPUTE,
                             pipelineLayout, 0, 1, &set, 0, nullptr);
     Configuration cfg{width, height, static_cast<uint32_t>(blocks.size()),
-                      night ? 1u : 0u, sceneMode == "city" ? .73f : 1.f, 79.0f, 117.0f, 0.9f};
+                      night ? 1u : 0u, sceneMode == "city" ? .73f : animationFrame, 79.0f, 117.0f, 0.9f};
     vkCmdPushConstants(command, pipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT,
                        0, sizeof(cfg), &cfg);
     vkCmdDispatch(command, (width + 7u) / 8u, (height + 7u) / 8u, 1u);
