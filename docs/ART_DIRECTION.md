@@ -1,3 +1,5 @@
+> Updated product vision: [UNIFIED_VISUAL_ENGINE_VISION.md](UNIFIED_VISUAL_ENGINE_VISION.md) is authoritative. Original LIFEWEAVE art direction is painterly cinematic comic (ink silhouettes, expressive rigged actors, painterly rooms and saturated life-stage lighting) with only modest retro/arcade HUD accents. This file's earlier muted editorial approach is a historical prototype, not the final selected art direction. Production characters, outfits, props, interior/environment layers and FX must share GPU shader/atlas/rig pipelines that run on Vulkan and MoltenVK, not isolated screen-specific React Native sketches.
+
 # Working visual direction and asset standard
 
 Baseline: quiet, mature, illustrated 2.5D. Warm paper, forest green, terracotta accents, generous space, expressive faces and cinematic natural light. Current native-primitives art is temporary and explicitly not production character artwork.
