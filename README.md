@@ -69,6 +69,21 @@ implementation. Its findings feed into
 [build-status ledger](docs/BUILD_STATUS.md). These are instructions;
 installation, outside-app decompilation and full game parity are not claimed.
 
+## Vulkan 3D city and retro-game UI
+
+Bellweather now has a **deterministic 3D city geometry model** and a more
+game-like, midnight/mint/amber native player theme. The offline iPhone/Android
+map has functional zoom, day/night preview, current game-day display,
+event hotspots and district navigation.
+
+An independently buildable **Vulkan compute city renderer** is in
+[native/city-vulkan](native/city-vulkan). Its shader generates genuine day and
+night 3D city preview images through Vulkan, with a headless Mesa CI smoke test.
+The [full native integration contract](docs/VULKAN_CITY_RENDERING.md)
+explains the next surface/view bridge work. **Current mobile Free Life still
+uses the React Native illustrated fallback, not a live Vulkan swapchain**;
+we do not claim an in-app native Vulkan view is complete.
+
 ## Play the slice
 
 1. Choose a name and pronouns, then **Begin your life**.
