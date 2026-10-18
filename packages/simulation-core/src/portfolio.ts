@@ -100,7 +100,7 @@ export function tickPortfolio(world: World): void {
   const year = Math.floor(world.day / 365);
   const cycle = [1.04, 1.08, 0.93, 1.11] as const;
   const previous = p.indexPence;
-  p.indexPence = Math.min(MAX_CASH, Math.round(previous * cycle[year % cycle.length]));
+  p.indexPence = Math.min(MAX_CASH, Math.round(previous * (cycle[year % cycle.length] ?? 1)));
   const upkeep = p.owned.reduce((sum, asset) => sum + CATALOG[asset.id].annualUpkeep, 0);
   world.player.money = boundedMoney(world.player.money - upkeep);
   if (upkeep > 0) record(world, 'simulation',
