@@ -19,9 +19,12 @@ add_custom_target(city_shader DEPENDS ${CITY_SHADER_BINARY})
 add_executable(city_vulkan src/main.cpp)
 add_dependencies(city_vulkan city_shader)
 target_compile_features(city_vulkan PRIVATE cxx_std_17)
-target_compile_definitions(city_vulkan PRIVATE
-  LIVEIT_CITY_SHADER_PATH="\"${CITY_SHADER_BINARY}\""
+configure_file(
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/config.hpp.in
+  ${CMAKE_CURRENT_BINARY_DIR}/generated/config.hpp
+  @ONLY
 )
+target_include_directories(city_vulkan PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/generated)
 target_link_libraries(city_vulkan PRIVATE Vulkan::Vulkan)
 
 enable_testing()
