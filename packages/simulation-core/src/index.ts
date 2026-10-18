@@ -1,3 +1,5 @@
+export { CATALOG, portfolio, assetValue, netWorth, buyAsset, sellAsset, investIndex, withdrawIndex } from './portfolio';
+export type { AssetId } from './portfolio';
 export { applyForJob, attendJobInterview, requestPromotion, resignFromJob, ageUp } from './life';
 import { initialCityState, tickCity } from './city';
 import { initialNPCLives, tickNPCs } from './npc';
