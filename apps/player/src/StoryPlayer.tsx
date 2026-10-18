@@ -339,7 +339,12 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   chapterName: { fontFamily: t.font.display, fontSize: 20, color: t.ink },
-  sceneNumber: { fontFamily: t.font.hud, fontSize: 10, color: t.muted, letterSpacing: 1 },
+  sceneNumber: {
+    fontFamily: t.font.hud,
+    fontSize: 10,
+    color: t.muted,
+    letterSpacing: 1,
+  },
   exitButton: {
     backgroundColor: 'rgba(10,17,29,.84)',
     borderColor: t.border,
@@ -426,7 +431,12 @@ const styles = StyleSheet.create({
   },
   choicePressed: { backgroundColor: t.neonDeep },
   choiceDisabled: { opacity: 0.38 },
-  choiceNumber: { fontFamily: t.font.hud, fontSize: 10, color: t.neon, fontWeight: '900' },
+  choiceNumber: {
+    fontFamily: t.font.hud,
+    fontSize: 10,
+    color: t.neon,
+    fontWeight: '900',
+  },
   choiceText: { fontSize: 13, lineHeight: 20, color: t.ink, flex: 1 },
   choiceArrow: { color: t.neon, fontSize: 20 },
   ending: { gap: 9 },

@@ -363,7 +363,12 @@ const styles = StyleSheet.create({
     padding: 9,
     borderRadius: 7,
   },
-  statLabel: { fontFamily: t.font.hud, fontSize: 9, letterSpacing: 0.5, color: t.muted },
+  statLabel: {
+    fontFamily: t.font.hud,
+    fontSize: 9,
+    letterSpacing: 0.5,
+    color: t.muted,
+  },
   statValue: { fontSize: 15, fontWeight: '800', color: t.amber },
   ageButton: {
     backgroundColor: t.neonDeep,
