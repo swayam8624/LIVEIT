@@ -101,6 +101,19 @@ export const NPCLifeSchema = z.object({
 }).strict();
 export type NPCLife = z.infer<typeof NPCLifeSchema>;
 
+/** Persisted financial assets remain optional for all legacy version-one saves. */
+export const PortfolioSchema = z.object({
+  indexPence: z.number().int().min(0).max(100000000),
+  owned: z.array(z.object({
+    id: z.enum(['bicycle', 'car', 'flat', 'townhouse']),
+    dayBought: z.number().int().nonnegative(),
+  }).strict()).max(4),
+}).strict().superRefine((portfolio, ctx) => {
+  if (new Set(portfolio.owned.map(asset => asset.id)).size !== portfolio.owned.length)
+    ctx.addIssue({ code: 'custom', message: 'An asset cannot be owned twice' });
+});
+export type Portfolio = z.infer<typeof PortfolioSchema>;
+
 export const WorldSchema = z
   .object({
     schemaVersion: z.literal(1),
@@ -115,6 +128,7 @@ export const WorldSchema = z
     progress: z.array(ProgressSchema).max(100),
     city: CityStateSchema.optional(),
     npcLives: z.array(NPCLifeSchema).max(100).optional(),
+    portfolio: PortfolioSchema.optional(),
   })
   .strict()
   .superRefine((w, ctx) => {
