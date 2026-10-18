@@ -31,19 +31,31 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import hashlib
-          files = [Path('build/city-vulkan/city-day.ppm'), Path('build/city-vulkan/city-night.ppm')]
-          for path in files:
+          outputs = {
+            'city-day.ppm': (256, 160),
+            'city-night.ppm': (256, 160),
+            'actor-portrait.ppm': (320, 400),
+            'actor-emotion.ppm': (320, 400),
+            'actor-conversation.ppm': (512, 320),
+            'actor-cast.ppm': (512, 320),
+          }
+          images = {}
+          for name, (w, h) in outputs.items():
+              path = Path('build/city-vulkan') / name
               b = path.read_bytes()
-              header = b'P6\n256 160\n255\n'
+              header = f'P6\\n{w} {h}\\n255\\n'.replace('\\n', '\n').encode()
               assert b.startswith(header), f'{path}: invalid PPM header'
-              assert len(b) == len(header) + 256*160*3, f'{path}: invalid dimensions'
-              assert len(set(b[-256*160*3:])) >= 25, f'{path}: renderer returned flat color'
+              assert len(b) == len(header) + w*h*3, f'{path}: invalid dimensions'
+              assert len(set(b[len(header):])) >= 25, f'{path}: renderer returned flat color'
+              images[name] = b
               print(path, 'SHA-256:', hashlib.sha256(b).hexdigest())
-          assert files[0].read_bytes() != files[1].read_bytes(), 'day and night renders must differ'
+          assert images['city-day.ppm'] != images['city-night.ppm'], 'lighting must differ'
+          assert images['actor-portrait.ppm'] != images['actor-emotion.ppm'], 'emotion must alter actual GPU output'
+          assert images['actor-conversation.ppm'] != images['actor-cast.ppm'], 'character count/composition must alter scene'
           PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: liveit-vulkan-city-ppm
-          path: build/city-vulkan/city-*.ppm
+          path: build/city-vulkan/*.ppm
           if-no-files-found: warn
