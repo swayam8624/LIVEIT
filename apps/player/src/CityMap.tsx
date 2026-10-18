@@ -32,9 +32,13 @@ const preview = generateCityScene(0xb311);
 export function CityMap({
   selected,
   onVisit,
+  day,
+  hotspots,
 }: {
   selected: District;
   onVisit: (district: District) => void;
+  day: number;
+  hotspots: readonly District[];
 }) {
   const [width, setWidth] = useState(350);
   const [zoom, setZoom] = useState(1);
@@ -91,7 +95,7 @@ export function CityMap({
       </View>
       <View style={styles.header}>
         <View style={styles.titleGroup} pointerEvents="none">
-          <Text style={styles.hud}>◆ BELLWEATHER / CITY VIEW</Text>
+          <Text style={styles.hud}>◆ BELLWEATHER / DAY {day + 1}</Text>
           <Text style={styles.heading}>CHOOSE YOUR DISTRICT</Text>
         </View>
         <View style={styles.toolbar}>
@@ -159,7 +163,7 @@ export function CityMap({
                 {district.title.toUpperCase()}
               </Text>
               <Text style={styles.districtAction}>
-                {active ? '◆ CURRENT LOCATION' : '○ ENTER DISTRICT'}
+                {active ? '◆ CURRENT LOCATION' : hotspots.includes(district.id) ? '✦ EVENT AVAILABLE' : '○ ENTER DISTRICT'}
               </Text>
             </View>
           </Pressable>
