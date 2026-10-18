@@ -1,8 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import { createWorld, buildVisualScene, setCharacterAppearance } from '@living/simulation-core';
 import {
-  DEFAULT_APPEARANCE, VisualSceneSchema, VisualPackSchema,
-  indexVisualAssets, type VisualPack,
+  createWorld,
+  buildVisualScene,
+  setCharacterAppearance,
+} from '@living/simulation-core';
+import {
+  DEFAULT_APPEARANCE,
+  VisualSceneSchema,
+  VisualPackSchema,
+  indexVisualAssets,
+  type VisualPack,
 } from '@living/world-schema';
 // Vitest resolves JSON as build-time content; no HTTP or bundled image downloads.
 import coreVisuals from '../content/visual-packs/core/manifest.json';
@@ -14,8 +21,12 @@ describe('growing visual pack system', () => {
     const lookup = indexVisualAssets([pack]);
     expect(pack.assets.length).toBeGreaterThan(45);
     expect(lookup.get('liveit.rig.prototype')?.kind).toBe('rig');
-    expect(lookup.get('liveit.expression.crying')?.implementation.kind).toBe('procedural');
-    expect(lookup.get('liveit.outfit.palette-teal')?.implementation.kind).toBe('procedural');
+    expect(lookup.get('liveit.expression.crying')?.implementation.kind).toBe(
+      'procedural',
+    );
+    expect(lookup.get('liveit.outfit.palette-teal')?.implementation.kind).toBe(
+      'procedural',
+    );
   });
 
   it('rejects duplicate, missing, circular and untrusted asset paths', () => {
@@ -31,11 +42,16 @@ describe('growing visual pack system', () => {
     expect(VisualPackSchema.safeParse(cycle).success).toBe(false);
     const unsafe = structuredClone(pack) as VisualPack;
     unsafe.assets[0]!.implementation = {
-      kind: 'external', path: '../escape.png', sha256: '0'.repeat(64),
-      bytes: 100, format: 'png',
+      kind: 'external',
+      path: '../escape.png',
+      sha256: '0'.repeat(64),
+      bytes: 100,
+      format: 'png',
     };
     expect(VisualPackSchema.safeParse(unsafe).success).toBe(false);
-    expect(() => indexVisualAssets([pack, pack])).toThrow('Duplicate installed asset');
+    expect(() => indexVisualAssets([pack, pack])).toThrow(
+      'Duplicate installed asset',
+    );
   });
 
   it('keeps old saved appearance consistent in city, story and AI portrait scenes', () => {
@@ -63,16 +79,27 @@ describe('growing visual pack system', () => {
   it('requires explicit distinct persisted NPC identity, never invents a cast', () => {
     const world = createWorld();
     expect(buildVisualScene(world, 'chat').actors).toHaveLength(1);
-    const cast = [{
-      entityId: 'npc-amelia',
-      appearance: DEFAULT_APPEARANCE,
-      ageYears: 24,
-      expression: 'happy' as const,
-    }];
-    expect(buildVisualScene(world, 'story', cast).actors[1]!.entityId).toBe('npc-amelia');
-    expect(() => buildVisualScene(world, 'story', [...cast, ...cast])).toThrow();
-    expect(() => buildVisualScene(world, 'story', [{
-      ...cast[0]!, entityId: world.player.id,
-    }])).toThrow();
+    const cast = [
+      {
+        entityId: 'npc-amelia',
+        appearance: DEFAULT_APPEARANCE,
+        ageYears: 24,
+        expression: 'happy' as const,
+      },
+    ];
+    expect(buildVisualScene(world, 'story', cast).actors[1]!.entityId).toBe(
+      'npc-amelia',
+    );
+    expect(() =>
+      buildVisualScene(world, 'story', [...cast, ...cast]),
+    ).toThrow();
+    expect(() =>
+      buildVisualScene(world, 'story', [
+        {
+          ...cast[0]!,
+          entityId: world.player.id,
+        },
+      ]),
+    ).toThrow();
   });
 });

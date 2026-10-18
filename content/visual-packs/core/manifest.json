@@ -14,11 +14,7 @@
       "revision": 1,
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "prototype"
-      ],
+      "tags": ["vulkan", "procedural", "prototype"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -38,11 +34,7 @@
       "revision": 1,
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "prototype"
-      ],
+      "tags": ["vulkan", "procedural", "prototype"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -63,11 +55,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "actor",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -90,11 +78,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "actor",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -117,11 +101,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -144,11 +124,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -171,11 +147,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -198,11 +170,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -225,11 +193,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -252,11 +216,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -279,11 +239,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -306,11 +262,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -333,11 +285,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -360,11 +308,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -387,11 +331,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -414,11 +354,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "face",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -441,11 +377,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -468,11 +400,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -495,11 +423,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -522,11 +446,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -549,11 +469,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -576,11 +492,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -603,11 +515,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -630,11 +538,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -657,11 +561,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "outfit",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -684,11 +584,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -711,11 +607,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -738,11 +630,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -765,11 +653,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -792,11 +676,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -819,11 +699,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -846,11 +722,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -873,11 +745,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -900,11 +768,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -927,11 +791,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -954,11 +814,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -981,11 +837,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "skin",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1008,11 +860,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1035,11 +883,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1062,11 +906,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1089,11 +929,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1116,11 +952,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1143,11 +975,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1170,11 +998,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1197,11 +1021,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1224,11 +1044,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1251,11 +1067,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1278,11 +1090,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1305,11 +1113,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "hair",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1332,11 +1136,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "city",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",
@@ -1359,11 +1159,7 @@
       "dependencies": [],
       "style": "liveit-retro-cinematic-2p5d-v1",
       "slot": "world",
-      "tags": [
-        "vulkan",
-        "procedural",
-        "shader-backed"
-      ],
+      "tags": ["vulkan", "procedural", "shader-backed"],
       "license": {
         "spdx": "MIT",
         "author": "LIVEIT original prototype",

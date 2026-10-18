@@ -63,11 +63,21 @@ export function buildVisualScene(
   const timeOfDay =
     view === 'city' ? (world.day % 3 === 0 ? 'dusk' : 'day') : 'night';
   return VisualSceneSchema.parse({
-    id: view === 'city' ? 'liveit.scene.city' : view === 'story' ? 'liveit.scene.story' : 'liveit.scene.chat',
+    id:
+      view === 'city'
+        ? 'liveit.scene.city'
+        : view === 'story'
+          ? 'liveit.scene.story'
+          : 'liveit.scene.chat',
     location: 'liveit.location.bellweather',
     day: world.day,
     camera: {
-      preset: view === 'city' ? 'isometric' : view === 'story' ? 'conversation' : 'portrait',
+      preset:
+        view === 'city'
+          ? 'isometric'
+          : view === 'story'
+            ? 'conversation'
+            : 'portrait',
       orbit: 0.78,
       zoom: view === 'city' ? 1 : 1.4,
     },
