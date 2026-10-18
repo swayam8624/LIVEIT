@@ -56,6 +56,19 @@ and the test-backed current-state ledger is [build status](docs/BUILD_STATUS.md)
 These files are instructions and evidence logs, **not** claims the game is
 finished or that all playthroughs have already been reviewed.
 
+## REA-assisted native reconstruction
+
+A full operating guide for the [morluto/rea](https://github.com/morluto/rea)
+reverse-engineering toolkit is available in
+[REA → LIVEIT playbook](docs/REA_RECONSTRUCTION_RUNBOOK.md). It covers setup
+for Codex on the owner's Mac, Node/Java/decompiler requirements,
+owned-build JS/Android/Apple inspection, permitted browser/network/SQLite
+evidence, safe research boundaries, exact commands, and proof-driven
+implementation. Its findings feed into
+[research templates](docs/research/REA_TARGETS.md) and the existing
+[build-status ledger](docs/BUILD_STATUS.md). These are instructions;
+installation, outside-app decompilation and full game parity are not claimed.
+
 ## Play the slice
 
 1. Choose a name and pronouns, then **Begin your life**.
