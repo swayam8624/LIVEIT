@@ -22,6 +22,7 @@ ROOT: GitHub swayam8624/LIVEIT, existing local checkout typically ~/Desktop/proj
 The owner's recent attempt ran git fetch and switched to feat/native-life-economic-foundation, with a modified tracked apps/creator-studio/next-env.d.ts; npm ci succeeded but emitted 22 advisory vulnerabilities. A formatting gate failed on 23 legacy files. Old npm run ios executed Expo Go, found another LIVEIT Metro on 8081 and opened exp://192.168.29.45:8082 on an iPhone 17 Pro simulator, where simctl openurl timed out (NSPOSIXErrorDomain code 60). A prior CI macOS native build also failed at Xcode package dependency resolution on Xcode 16.4, prompting a newer macOS runner.
 
 Treat these as separate diagnosable problems, not proof that the user's Mac is broken:
+
 - Read git status and diffs before cleanup. Preserve legitimate local changes; verify whether next-env.d.ts is generated noise before restoring it.
 - Normalize whole-workspace Prettier output into an actual tracked formatting commit, not only an ephemeral CI checkout. Repeat npm run check until local and CI pass on the same commit.
 - Inspect npm audit --json and expo install --check; fix demonstrably exploitable production dependencies with compatible, tested upgrades. Do not blindly run npm audit fix --force or break the Expo/React Native peer matrix.
@@ -37,6 +38,7 @@ Study: BitLife, Episode / Episode Writer Portal, AnonChat or its applicable curr
 Read docs/COMPETITOR_FORENSICS.md for grounded source links and how to label verified versus inferred observations. Go onto the public internet and search for **real app recordings on YouTube**, not merely the title or promotional trailer. Annotate multiple full playthroughs per reference, release version/date, creator, URL, timestamps, touch sequence, screen response, character animation, timing, progress gate, input validation, UI hierarchy, rewards and persistence. Interact with available officially distributed apps where authorized. Record exact interaction-to-result tables and compare behavior. Search official manuals/help centers/app-store release notes, issue trackers, open-source projects and public developer talks/papers. Use community complaints as targets for replication testing, not universal facts.
 
 Make a reference matrix for at least:
+
 - BitLife: life stages from birth to death, assets, education, jobs, family, crime, health, fame, death, dynasty, challenging outcomes, annual opportunities and user retention.
 - Episode: scene choreography, rigged character faces/hair/skin/clothes, gestures, body movement, walk/enter/exit, placement/layers, expression timing, camera moves, dialogue bubbles, skip/tap, dress-up, choices, timed and conditional branches, story library and creator workflow.
 - AnonChat: optional discovery/matching, queue/cancel, chat request/accept/decline, identities, real-time delivery, unread/typing/presence, friend/reconnection, attachments and privacy controls, block/report and no-match states.
@@ -59,6 +61,7 @@ An example target integration: player fails a scholarship interview, takes a job
 ## 5. Deep, balanced life simulation
 
 Implement a deterministic tested simulation kernel with state schema, seeded RNG, immutable/transactional effects, event-sourced log, pure transitions, save migrations, fast headless batch tests and calibrated probability functions. Cover meaningful gameplay including:
+
 - birth origins, socioeconomic context, hereditary/background traits, parent and sibling generation, age and mortality, personality, agency changes by age;
 - childhood/education, exams, extracurriculars, skills, scholarships, university, apprenticeships, professional credentials, student debt;
 - jobs with qualifications, applications, interviews, failures, compensation, promotions, discrimination/fairness-sensitive events handled thoughtfully, burnout, layoffs, career switching and retirement;
@@ -115,6 +118,7 @@ Search aggressively for useful free/open-source research, permissively licensed 
 ## 12. Testing and actual device operation
 
 Automated minimums:
+
 - strict TS/lint/format, unit and property tests, schemas, all event choices reachable, save/load migrations, deterministic seeds, 10,000-life headless runs, route reachability/cooldowns, cost/mortality distributions and inventory money exploits;
 - interaction E2E on iOS simulator and Android emulator, onboarding, character creator, age/choice, story animation, NPC memory, save+force close+reopen, offline mode, messaging from two authenticated accounts including block/reconnect; capture screenshots/video **of actual UI**;
 - server auth/cross-user isolation, schema rejects, rate limits, moderation/report, user deletion, idempotent replay, corrupt payload, network chaos and load tests;
