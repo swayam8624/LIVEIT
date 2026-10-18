@@ -1,3 +1,5 @@
+> **Scope correction:** This file documents ONLY one city-focused vertical slice. The full product mandate is [UNIFIED_VISUAL_ENGINE_VISION.md](UNIFIED_VISUAL_ENGINE_VISION.md). Vulkan must render all character rigs, outfits, expressions, interiors, story cinematic stages, props and FX through a shared asset-backed native scene renderer, not city alone. The independently tested actors.comp procedural Vulkan portrait/conversation/cast stage is another prototype, not a production rigged art atlas.
+
 # LIVEIT City Sim: Vulkan renderer + retro-native UI
 
 ## What is implemented (2026-10-18)
