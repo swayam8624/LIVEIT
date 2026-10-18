@@ -71,6 +71,7 @@ No claim that a game feature has been reverse-engineered "to bits" until user-vi
 The AI coding agent must search YouTube for public, permitted, **actual in-app** long-form sessions for every reference product (filter out generic marketing slides, unrelated apps sharing similar names, and out-of-date UI). Research at least three credible full playthroughs per product, plus short specialist tutorials for difficult features; retain URLs and creator names, publication date, timestamps and exact observations in docs/research/VIDEO_LEDGER.md. Preference order: 2026 current build, 2025 recent build, historical technique references clearly labelled. Sample chronological gameplay at key decision transitions; a frame alone is insufficient to infer the backend.
 
 For each source document:
+
 - 00:00–... initial onboarding, first valid input, permission prompts and default state
 - Character creation: appearance subcategories, animation and actually persistent appearance after relaunch
 - Core repeated 10-minute session: every meaningful choice, immediate feedback, time/scene progression
