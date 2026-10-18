@@ -47,13 +47,16 @@ export async function prepareVisualPackActivation(
   const replacements = new Map<string, VisualPack>();
   for (const candidate of incoming) {
     const pack = VisualPackSchema.parse(candidate);
-    if (replacements.has(pack.id)) throw new Error('Duplicate incoming visual pack');
+    if (replacements.has(pack.id))
+      throw new Error('Duplicate incoming visual pack');
     if (!greaterVersion(gameVersion, pack.minGameVersion)) {
       throw new Error('Pack requires newer game version: ' + pack.id);
     }
     replacements.set(pack.id, pack);
   }
-  const previousById = new Map(previouslyInstalled.map((pack) => [pack.id, pack]));
+  const previousById = new Map(
+    previouslyInstalled.map((pack) => [pack.id, pack]),
+  );
   for (const [id, candidate] of replacements) {
     const previous = previousById.get(id);
     if (previous && candidate.revision <= previous.revision) {
@@ -65,10 +68,12 @@ export async function prepareVisualPackActivation(
     ...replacements.values(),
   ];
   const ids = new Set(packs.map((pack) => pack.id));
-  if (ids.size !== packs.length) throw new Error('Duplicate installed visual pack');
+  if (ids.size !== packs.length)
+    throw new Error('Duplicate installed visual pack');
   for (const pack of packs) {
     for (const required of pack.dependencies) {
-      if (!ids.has(required)) throw new Error('Missing required visual pack: ' + required);
+      if (!ids.has(required))
+        throw new Error('Missing required visual pack: ' + required);
     }
   }
   const index = indexVisualAssets(packs);
@@ -82,9 +87,11 @@ export async function prepareVisualPackActivation(
         throw new Error('Pack exceeds staged download memory budget');
       }
       const payload = await verifier.read(pack.id, path);
-      if (payload.byteLength !== bytes) throw new Error('Asset byte size mismatch: ' + asset.id);
+      if (payload.byteLength !== bytes)
+        throw new Error('Asset byte size mismatch: ' + asset.id);
       const actual = await verifier.sha256(payload);
-      if (actual !== sha256) throw new Error('Asset digest mismatch: ' + asset.id);
+      if (actual !== sha256)
+        throw new Error('Asset digest mismatch: ' + asset.id);
       total += bytes;
     }
   }
