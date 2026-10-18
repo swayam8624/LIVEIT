@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import {
   ageUp, applyForJob, attendJobInterview, requestPromotion, resignFromJob,
+  CATALOG, portfolio, netWorth, buyAsset, sellAsset, investIndex, withdrawIndex,
 } from '@living/simulation-core';
 import type { World, CareerPath } from '@living/world-schema';
 import { AvatarPortrait } from './AvatarPortrait';
 
+const GOODS = ['bicycle','car','flat','townhouse'] as const;
 const ROLES: { field: Exclude<CareerPath,'undecided'>; label:string; caption:string }[] = [
   {field:'technology',label:'Developer',caption:'Systems, software and practical problem-solving'},
   {field:'creative',label:'Designer',caption:'Visual arts, studios and creative projects'},
@@ -20,6 +22,7 @@ export function LifeDashboard({ world, onAction }:{
   onAction:(apply:(current:World)=>World)=>void;
 }) {
   const [careerOpen,setCareerOpen]=useState(false);
+  const [assetsOpen,setAssetsOpen]=useState(false);
   const age=Math.floor(world.player.ageDays/365);
   const job=world.city?.employment;
   const last=world.history.at(-1);
@@ -103,6 +106,49 @@ export function LifeDashboard({ world, onAction }:{
           onPress={()=>onAction(resignFromJob)}
           style={styles.ghostButton}
         ><Text style={styles.muted}>Resign</Text></Pressable>
+      </View>}
+    </View>
+    <View style={styles.careerArea}>
+      <View style={styles.careerHeading}>
+        <View style={{flex:1,gap:4}}>
+          <Text style={styles.eyebrow}>ASSETS & INVESTMENTS</Text>
+          <Text style={styles.careerTitle}>Net worth {cash(netWorth(world))}</Text>
+          <Text style={styles.muted}>Cash {cash(world.player.money)} · Index {cash(portfolio(world).indexPence)} · {portfolio(world).owned.length} owned assets</Text>
+        </View>
+      </View>
+      <Pressable accessibilityRole="button" accessibilityLabel="Open assets and investments"
+        onPress={()=>setAssetsOpen(v=>!v)} style={styles.careerButton}>
+        <Text style={styles.buttonText}>{assetsOpen ? 'Close portfolio' : 'Manage assets and investments  ↗'}</Text>
+      </Pressable>
+      {assetsOpen && <View style={styles.jobs}>
+        <Text style={styles.muted}>
+          Real purchases affect cash, yearly maintenance and resale value. The index uses a deterministic fictional market, not live trading.
+        </Text>
+        <View style={styles.careerButtons}>
+          <Pressable accessibilityRole="button" accessibilityLabel="Invest 100 pounds"
+            style={styles.careerButton} onPress={()=>onAction(w=>investIndex(w,10000))}>
+            <Text style={styles.buttonText}>Invest £100</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" accessibilityLabel="Withdraw 100 pounds"
+            style={styles.ghostButton} onPress={()=>onAction(w=>withdrawIndex(w,10000))}>
+            <Text style={styles.muted}>Withdraw £100</Text>
+          </Pressable>
+        </View>
+        {GOODS.map(id => {
+          const product=CATALOG[id];
+          const owned=portfolio(world).owned.some(asset=>asset.id===id);
+          return <View key={id} style={styles.jobItem}>
+            <View style={{flex:1,gap:3}}>
+              <Text style={styles.jobTitle}>{product.label}</Text>
+              <Text style={styles.muted}>Purchase {cash(product.price)} · Annual upkeep {cash(product.annualUpkeep)}</Text>
+            </View>
+            <Pressable accessibilityRole="button" accessibilityLabel={owned ? 'Sell '+product.label : 'Buy '+product.label}
+              onPress={()=>onAction(w=>owned ? sellAsset(w,id) : buyAsset(w,id))}
+              style={styles.ghostButton}>
+              <Text style={styles.actionMark}>{owned ? 'SELL' : 'BUY'} ↗</Text>
+            </Pressable>
+          </View>;
+        })}
       </View>}
     </View>
   </View>;
