@@ -45,6 +45,17 @@ For the new OpenLife-inspired portfolio and choice gameplay, see
 The project is still in pre-alpha; the new domain gameplay does not yet
 constitute a complete birth-to-death game or a working real-player chat platform.
 
+## Autonomous reconstruction agent
+
+Give a full-capability coding agent the repository-root [AGENTS.md](AGENTS.md).
+Its mandate is to study public gameplay recordings, inspect legitimate source
+mechanics, rebuild genuine native interaction flows, test them on installed
+iOS/Android builds and keep shipping verified working software. The research
+evidence/source catalog is [competitor forensics](docs/COMPETITOR_FORENSICS.md),
+and the test-backed current-state ledger is [build status](docs/BUILD_STATUS.md).
+These files are instructions and evidence logs, **not** claims the game is
+finished or that all playthroughs have already been reviewed.
+
 ## Play the slice
 
 1. Choose a name and pronouns, then **Begin your life**.
