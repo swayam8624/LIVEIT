@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import {
   ageUp, applyForJob, attendJobInterview, requestPromotion, resignFromJob,
   CATALOG, portfolio, netWorth, buyAsset, sellAsset, investIndex, withdrawIndex,
+  pendingLifeMoment, resolveLifeMoment,
 } from '@living/simulation-core';
 import type { World, CareerPath } from '@living/world-schema';
 import { AvatarPortrait } from './AvatarPortrait';
@@ -26,6 +27,7 @@ export function LifeDashboard({ world, onAction }:{
   const age=Math.floor(world.player.ageDays/365);
   const job=world.city?.employment;
   const last=world.history.at(-1);
+  const moment=pendingLifeMoment(world);
   return <View style={styles.shell}>
     <View style={styles.hero}>
       <View style={styles.heroPortrait}>
@@ -44,16 +46,32 @@ export function LifeDashboard({ world, onAction }:{
           accessibilityRole="button"
           accessibilityLabel="Age up one year"
           onPress={() => onAction(ageUp)}
-          style={({pressed})=>[styles.ageButton,pressed&&styles.pressed]}
+          disabled={Boolean(moment)}
+          style={({pressed})=>[styles.ageButton,pressed&&styles.pressed,Boolean(moment)&&{opacity:0.45}]}
         >
           <View style={{flex:1,gap:3}}>
-            <Text style={styles.ageButtonText}>AGE UP  ➜  {age+1}</Text>
+            <Text style={styles.ageButtonText}>{moment ? 'MAKE YOUR CHOICE FIRST' : `AGE UP  ➜  ${age+1}`}</Text>
             <Text style={styles.ageButtonHint}>Advance one year • discover new life events</Text>
           </View>
           <Text style={styles.ageIcon}>✧</Text>
         </Pressable>
       </View>
     </View>
+    {moment && <View style={styles.momentCard}>
+      <Text style={styles.momentLabel}>A MOMENT THAT COULD CHANGE YOUR LIFE</Text>
+      <Text style={styles.momentTitle}>{moment.title}</Text>
+      <Text style={styles.momentDescription}>{moment.situation}</Text>
+      <View style={styles.jobs}>
+        {moment.choices.map(choice => <Pressable
+          key={choice.id}
+          accessibilityRole="button"
+          accessibilityLabel={choice.text}
+          style={({pressed})=>[styles.momentChoice,pressed&&styles.pressed]}
+          onPress={()=>onAction(w=>resolveLifeMoment(w,choice.id))}
+        ><Text style={styles.momentChoiceText}>{choice.text}  ↗</Text></Pressable>)}
+      </View>
+      <Text style={styles.muted}>Your decision changes money, relationships, skills or wellbeing and stays in your life history.</Text>
+    </View>}
     {last && <View style={styles.lifeReel}>
       <Text style={styles.eyebrow}>LATEST LIFE MOMENT</Text>
       <Text style={styles.reelText}>{last.text}</Text>
@@ -170,6 +188,12 @@ const styles=StyleSheet.create({
   ageButtonHint:{fontSize:11,color:'#f4d7b8'},
   ageIcon:{fontSize:29,color:'#ffe0ad'},
   pressed:{opacity:.7},
+  momentCard:{padding:16,borderRadius:15,backgroundColor:'#292b42',borderWidth:1,borderColor:'#e6aa78',gap:12},
+  momentLabel:{fontSize:10,fontWeight:'900',letterSpacing:1.2,color:'#f7be86'},
+  momentTitle:{fontSize:25,fontFamily:'serif',fontWeight:'700',color:'#ffe1b8'},
+  momentDescription:{fontSize:14,lineHeight:21,color:'#f9ede0'},
+  momentChoice:{padding:14,minHeight:52,borderRadius:11,borderWidth:1,borderColor:'#c88e67',backgroundColor:'#50364a',justifyContent:'center'},
+  momentChoiceText:{fontSize:14,color:'#ffead3',fontWeight:'700'},
   lifeReel:{backgroundColor:'#252639',borderLeftColor:'#e6aa78',borderLeftWidth:3,padding:13,gap:7,borderRadius:5},
   reelText:{color:'#f6e8d7',fontSize:13,lineHeight:21},
   careerArea:{padding:15,backgroundColor:'#192639',borderColor:'#4d5668',borderWidth:1,borderRadius:12,gap:12},
