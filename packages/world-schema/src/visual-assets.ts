@@ -99,7 +99,10 @@ export const VisualPackSchema = z
     }
     const edges = new Map<string, string[]>();
     for (const [index, asset] of pack.assets.entries()) {
-      const refs = [...asset.dependencies];
+      if (asset.kind !== 'shader' && asset.implementation.kind === 'procedural' && !asset.implementation.shader) {
+      ctx.addIssue({ code: 'custom', path: ['assets', index, 'implementation', 'shader'], message: 'Procedural resource needs a shader' });
+    }
+    const refs = [...asset.dependencies];
       if (asset.implementation.kind === 'procedural')
         refs.push(asset.implementation.shader);
       for (const ref of refs) {
