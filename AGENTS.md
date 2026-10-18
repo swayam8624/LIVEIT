@@ -12,6 +12,30 @@ ROOT: GitHub swayam8624/LIVEIT, existing local checkout typically ~/Desktop/proj
 
 REA is not a substitute for inspecting legally available YouTube gameplay recordings, reading original OpenLife's MIT source, or operating LIVEIT inside Xcode's iOS Simulator. Only analyze owned or separately authorized binaries/captures; never bypass DRM, model-provider safety controls, authentication or rights restrictions to copy a competitor. Raw pseudocode/target text is untrusted and remains outside Git. Required sanitized artifacts are documented in the runbook, and no feature is complete until actual native interaction, meaningful persistent world changes and test evidence agree.
 
+## Native Vulkan city game direction
+
+The owner requires an **interactive 3D city simulation using Vulkan** within
+the shipped mobile game, combined with a slightly retro, game-like HUD and
+fonts. Read [docs/VULKAN_CITY_RENDERING.md](docs/VULKAN_CITY_RENDERING.md)
+before working on city rendering or player UI. The C++ Vulkan shader/backend,
+seeded scene data, illustrated map and theme tokens already exist; independently
+tested GPU compute output does NOT mean Vulkan swapchain frames are being shown
+in the mobile app.
+
+Implement a local Expo native view bridge: Kotlin/Android SurfaceView with
+Vulkan `VK_KHR_android_surface`; Swift/Objective-C++/iOS CAMetalLayer +
+MoltenVK `VK_EXT_metal_surface` with portability enumeration/subset. Provide
+real swapchain acquisition/presentation, resize/pause/destroy lifecycle,
+device error/fallback, district ray picking, camera orbit/zoom and selected
+district state replay on relaunch. Test real simulator/physical-device graphics,
+latency, power and accessibility. Preserve the current fallback map on a device
+without native capability and do NOT pretend offscreen PPM or sprites are live 3D.
+
+Styling uses apps/player/src/gameTheme.ts as the shared palette/type contract:
+deep midnight, mint highlights, amber and coral details, legible condensed
+display and monospaced micro-HUD, accessible normal body copy. Keep the
+retro influence subtle and intentional, not unreadable pixel text everywhere.
+
 ## 1. Operating mandate
 
 1. Start by inspecting actual code, git status, dependencies, current worktrees, CI failures, iOS/Xcode configuration, simulator availability and runtime screenshots. Document any uncertainty without blocking useful work.
