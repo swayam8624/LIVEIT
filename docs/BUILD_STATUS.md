@@ -2,21 +2,21 @@
 
 Updated 2026-10-18. Branch: feat/native-life-economic-foundation. Main remains the earlier foundation. PR: https://github.com/swayam8624/LIVEIT/pull/8
 
-| Area | Reality | Evidence / next gate |
-|---|---|---|
-| Node/TS domain tests | Previous branch CI Foundation checks succeeded; check most recent head as code changes | GitHub Actions > Foundation checks |
-| Formatting | Whole-repository Prettier normalization workflow created; bot may create formatting commit on push | Verify npm run check at exact fetched commit; previous 23 warnings were on legacy source paths |
-| iOS native run | Old local Expo Go route failed simctl openurl timeout (code 60); npm run ios has been replaced with expo run:ios | Run latest branch on local Mac, boot simulator manually if necessary, capture actual user interaction and screenshot |
-| iOS CI build | macOS native simulator test workflow exists; initial Xcode 16.4 run failed at Swift package resolution; macos-26 rerun not yet verified here | Inspected CI log, native proof required; SDK exports don't count |
-| Android | Android Expo bundle export previously tested; Android emulator run not demonstrated | Run expo run:android and automated UI flows |
-| Life simulation | Career progression; 13 authored annual decisions with persistent consequences; fictional assets/index investment with upkeep | Gameplay is partial: initial player still age 23, no birth→death systems, no mortality and legacy |
-| Cinematics | Existing short dialogue/story player, preliminary art/character editor | No demonstrated Episode-grade rigs, blocking, animations or scene production |
-| AI NPCs | No deployed provider-backed chattable NPC with evaluated semantic/episodic memory | Provider, memory storage/evaluation and privacy controls unimplemented |
-| Human multiplayer | No deployed two-client anonymous/contextual message system | Backend, authentication, abuse controls, room delivery and real-world compliance unimplemented |
-| QUIC | No QUIC transport implemented/tested | Needs real physical device/network test after baseline TLS transport |
-| Vulnerabilities | User's npm ci reported 22 advisories: 7 moderate, 15 high | Inspect npm audit detail and actual production exposure; do not auto-apply force updates |
-| Playtesting | No verified external 10-minute playtest or retention metrics | First iOS simulator quality baseline required |
-| Research | Competitor/feature dossier grounded in public official pages plus archived OpenLife code | Real gameplay video timestamp ledger is yet to be completed, must never be faked |
+| Area                 | Reality                                                                                                                                      | Evidence / next gate                                                                                                 |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Node/TS domain tests | Previous branch CI Foundation checks succeeded; check most recent head as code changes                                                       | GitHub Actions > Foundation checks                                                                                   |
+| Formatting           | Whole-repository Prettier normalization workflow created; bot may create formatting commit on push                                           | Verify npm run check at exact fetched commit; previous 23 warnings were on legacy source paths                       |
+| iOS native run       | Old local Expo Go route failed simctl openurl timeout (code 60); npm run ios has been replaced with expo run:ios                             | Run latest branch on local Mac, boot simulator manually if necessary, capture actual user interaction and screenshot |
+| iOS CI build         | macOS native simulator test workflow exists; initial Xcode 16.4 run failed at Swift package resolution; macos-26 rerun not yet verified here | Inspected CI log, native proof required; SDK exports don't count                                                     |
+| Android              | Android Expo bundle export previously tested; Android emulator run not demonstrated                                                          | Run expo run:android and automated UI flows                                                                          |
+| Life simulation      | Career progression; 13 authored annual decisions with persistent consequences; fictional assets/index investment with upkeep                 | Gameplay is partial: initial player still age 23, no birth→death systems, no mortality and legacy                    |
+| Cinematics           | Existing short dialogue/story player, preliminary art/character editor                                                                       | No demonstrated Episode-grade rigs, blocking, animations or scene production                                         |
+| AI NPCs              | No deployed provider-backed chattable NPC with evaluated semantic/episodic memory                                                            | Provider, memory storage/evaluation and privacy controls unimplemented                                               |
+| Human multiplayer    | No deployed two-client anonymous/contextual message system                                                                                   | Backend, authentication, abuse controls, room delivery and real-world compliance unimplemented                       |
+| QUIC                 | No QUIC transport implemented/tested                                                                                                         | Needs real physical device/network test after baseline TLS transport                                                 |
+| Vulnerabilities      | User's npm ci reported 22 advisories: 7 moderate, 15 high                                                                                    | Inspect npm audit detail and actual production exposure; do not auto-apply force updates                             |
+| Playtesting          | No verified external 10-minute playtest or retention metrics                                                                                 | First iOS simulator quality baseline required                                                                        |
+| Research             | Competitor/feature dossier grounded in public official pages plus archived OpenLife code                                                     | Real gameplay video timestamp ledger is yet to be completed, must never be faked                                     |
 
 ## Required next exact actions
 
