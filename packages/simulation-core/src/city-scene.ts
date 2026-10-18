@@ -56,15 +56,16 @@ export function generateCityScene(seed = 0xb311): CityScene {
       const centerX = (col - 4) * SPACING;
       const centerZ = (row - 4) * SPACING;
       const sector = (col < 4 ? 0 : 1) + (row < 4 ? 0 : 2);
-      const district = DISTRICT_ORDER[
-        sector === 0 ? 1 : sector === 1 ? 2 : sector === 2 ? 0 : 3
-      ]!;
+      const district =
+        DISTRICT_ORDER[
+          sector === 0 ? 1 : sector === 1 ? 2 : sector === 2 ? 0 : 3
+        ]!;
       state = randomStep(state);
       // Gardens contains fewer, shorter buildings and more vegetation.
       const garden = row >= 6 && col >= 6;
       if (garden && (state & 3) === 0) continue;
       const height = garden ? 3 + (state % 6) : 5 + (state % 19);
-      const roof = garden ? 'green' : (state & 1) ? 'gable' : 'flat';
+      const roof = garden ? 'green' : state & 1 ? 'gable' : 'flat';
       blocks.push({
         id: `block-${row}-${col}`,
         district: garden ? 'gardens' : district,
@@ -94,7 +95,10 @@ export function projectCityBlock(
   const tile = (Math.min(width, height) / 110) * zoom;
   return {
     left: width * 0.5 + (block.x - block.z) * tile * 0.83,
-    top: height * 0.51 + (block.x + block.z) * tile * 0.38 - block.height * tile * 0.08,
+    top:
+      height * 0.51 +
+      (block.x + block.z) * tile * 0.38 -
+      block.height * tile * 0.08,
     scale: Math.max(0.4, Math.min(1.1, 0.64 + (block.x + block.z) / 280)),
   };
 }
