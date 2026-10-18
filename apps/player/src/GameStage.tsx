@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { gameTheme as t } from './gameTheme';
 import {
   Animated,
   AccessibilityInfo,
@@ -125,10 +126,10 @@ const styles = StyleSheet.create({
   stage: {
     width: '100%',
     overflow: 'hidden',
-    backgroundColor: '#142035',
+    backgroundColor: t.background,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: '#6f4a39',
+    borderColor: t.border,
     position: 'relative',
     justifyContent: 'flex-end',
   },
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
     right: 0,
     left: 0,
     height: 8,
-    backgroundColor: '#080e18',
+    backgroundColor: t.background,
   },
   letterboxBottom: {
     position: 'absolute',
@@ -163,17 +164,19 @@ const styles = StyleSheet.create({
     right: 0,
     left: 0,
     height: 8,
-    backgroundColor: '#080e18',
+    backgroundColor: t.background,
   },
   location: { position: 'absolute', top: 25, left: 24, right: 24, gap: 4 },
   locationTitle: {
-    color: '#f6d4a3',
+    fontFamily: t.font.hud,
+    color: t.neon,
     fontSize: 11,
     fontWeight: '800',
     letterSpacing: 4,
   },
   locationCaption: {
-    color: '#eee3d5',
+    fontFamily: t.font.hud,
+    color: t.ink,
     fontSize: 9,
     fontWeight: '600',
     letterSpacing: 1.5,
@@ -185,7 +188,7 @@ const styles = StyleSheet.create({
     width: 110,
     height: 110,
     borderRadius: 60,
-    backgroundColor: '#efa13d',
+    backgroundColor: t.amber,
   },
   content: {
     width: '100%',
