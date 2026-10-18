@@ -1,3 +1,5 @@
+export { generateCityScene, projectCityBlock } from './city-scene';
+export type { CityScene, CityBlock } from './city-scene';
 export {
   LIFE_MOMENTS,
   pendingLifeMoment,
