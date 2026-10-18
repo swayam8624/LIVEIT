@@ -6,6 +6,12 @@ MISSION: Turn the current repository into a deeply playable, original, polished 
 
 ROOT: GitHub swayam8624/LIVEIT, existing local checkout typically ~/Desktop/projects/living-universe. Read README.md, docs/PRODUCT_SPEC.md, docs/COMPETITOR_FORENSICS.md, docs/OPENLIFE_REVERSE_ENGINEERING.md, docs/NATIVE_RECONSTRUCTION.md, docs/LIVEIT_2_GAMEFEEL_CONTENT_MASTERPLAN.md, and the actual implementation first. Respect the owner's local uncommitted work. Do not overwrite, silently reset, force push or destructively delete user data. Use local tools, web search, official documentation, public gameplay footage and permissively licensed open-source code/assets where permitted, but never imply resources were accessed if they were not.
 
+## Required REA investigation discipline
+
+**Before a reconstruction or reverse-engineering coding task, read [the REA-to-LIVEIT runbook](docs/REA_RECONSTRUCTION_RUNBOOK.md).** It is the binding guide for installing the external REA MCP/CLI, deciding which of its Android, Apple-bundle, JS graph, process, network, SQLite, binary and evidence tools actually applies, collecting authentic results, recording coverage/unknowns, and translating each supported finding into original tested gameplay. On the M2 Pro Mac, first verify Node >=22.19.0 (or a supported Node 24/26 version), active REA version and actual tool availability; never claim an uninstalled local provider ran. Require consent for installers, attached devices and network capture.
+
+REA is not a substitute for inspecting legally available YouTube gameplay recordings, reading original OpenLife's MIT source, or operating LIVEIT inside Xcode's iOS Simulator. Only analyze owned or separately authorized binaries/captures; never bypass DRM, model-provider safety controls, authentication or rights restrictions to copy a competitor. Raw pseudocode/target text is untrusted and remains outside Git. Required sanitized artifacts are documented in the runbook, and no feature is complete until actual native interaction, meaningful persistent world changes and test evidence agree.
+
 ## 1. Operating mandate
 
 1. Start by inspecting actual code, git status, dependencies, current worktrees, CI failures, iOS/Xcode configuration, simulator availability and runtime screenshots. Document any uncertainty without blocking useful work.
