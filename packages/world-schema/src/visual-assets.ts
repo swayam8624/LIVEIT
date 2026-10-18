@@ -232,7 +232,8 @@ export function indexVisualAssets(
   for (const asset of index.values()) {
     for (const dependency of [
       ...asset.dependencies,
-      ...(asset.implementation.kind === 'procedural'
+      ...(asset.implementation.kind === 'procedural' &&
+      asset.implementation.shader
         ? [asset.implementation.shader]
         : []),
     ]) {
