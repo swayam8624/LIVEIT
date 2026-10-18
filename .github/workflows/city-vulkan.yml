@@ -25,7 +25,7 @@ jobs:
         run: |
           cmake -S native/city-vulkan -B build/city-vulkan -DCMAKE_BUILD_TYPE=Release
           cmake --build build/city-vulkan -j 2
-      - name: Render two actual Vulkan-computed city scenes
+      - name: Verify Vulkan world and character rendering, emotions and animation
         run: |
           ctest --test-dir build/city-vulkan --output-on-failure
           python3 - <<'PY'
@@ -38,6 +38,7 @@ jobs:
             'actor-emotion.ppm': (320, 400),
             'actor-conversation.ppm': (512, 320),
             'actor-cast.ppm': (512, 320),
+            'actor-animation.ppm': (320, 400),
           }
           images = {}
           for name, (w, h) in outputs.items():
@@ -52,6 +53,7 @@ jobs:
           assert images['city-day.ppm'] != images['city-night.ppm'], 'lighting must differ'
           assert images['actor-portrait.ppm'] != images['actor-emotion.ppm'], 'emotion must alter actual GPU output'
           assert images['actor-conversation.ppm'] != images['actor-cast.ppm'], 'character count/composition must alter scene'
+          assert images['actor-portrait.ppm'] != images['actor-animation.ppm'], 'GPU animation frame must alter pixels'
           PY
       - uses: actions/upload-artifact@v4
         if: always()
