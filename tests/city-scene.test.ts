@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { generateCityScene, projectCityBlock } from '../packages/simulation-core/src/city-scene';
+import {
+  generateCityScene,
+  projectCityBlock,
+} from '../packages/simulation-core/src/city-scene';
 
 describe('seeded 3D Bellweather city scenes', () => {
   it('produces an identical scene for an identical seed, without RNG globals', () => {
@@ -8,7 +11,9 @@ describe('seeded 3D Bellweather city scenes', () => {
     expect(generateCityScene(43)).not.toEqual(first);
     expect(first.blocks.length).toBeGreaterThan(35);
     expect(first.blocks.length).toBeLessThanOrEqual(64);
-    expect(new Set(first.blocks.map((block) => block.id)).size).toBe(first.blocks.length);
+    expect(new Set(first.blocks.map((block) => block.id)).size).toBe(
+      first.blocks.length,
+    );
     expect(new Set(first.blocks.map((block) => block.district)).size).toBe(5);
   });
 
