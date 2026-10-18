@@ -4,6 +4,7 @@ import {
 import { initialCityState, scheduleCityOpportunity } from './city';
 import { NPC_BEATS, tickNPCs } from './npc';
 import { tickPortfolio } from './portfolio';
+import { scheduleLifeMoment } from './moments';
 
 const clamp = (n:number) => Math.max(0,Math.min(100,Math.round(n)));
 const fields = {
@@ -139,6 +140,7 @@ export function ageUp(input:World):World {
   const net=(gross-tax-living)/100;
   const earning=net>=0?'+':'−';
   const text=`Age ${newAge}: a year passes. ${hired?`You continued your work at ${c.employment?.company}.`:'You found occasional freelance work.'} Net finances ${earning}£${Math.abs(Math.round(net)).toLocaleString('en-GB')} after routine living costs and estimated taxes.`;
+  scheduleLifeMoment(w);
   record(w,'simulation',text);
   return WorldSchema.parse(w);
 }
