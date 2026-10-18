@@ -33,7 +33,7 @@ describe('seeded 3D Bellweather city scenes', () => {
   });
 
   it('projects the model deterministically and reacts to camera zoom', () => {
-    const block = generateCityScene().blocks[0]!;
+    const block = generateCityScene().blocks.find((item) => item.x !== item.z)!;
     const atOne = projectCityBlock(block, 390, 405);
     const atTwo = projectCityBlock(block, 390, 405, 1.2);
     expect(atOne).toEqual(projectCityBlock(block, 390, 405));
