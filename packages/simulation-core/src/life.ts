@@ -3,6 +3,7 @@ import {
 } from '@living/world-schema';
 import { initialCityState, scheduleCityOpportunity } from './city';
 import { NPC_BEATS, tickNPCs } from './npc';
+import { tickPortfolio } from './portfolio';
 
 const clamp = (n:number) => Math.max(0,Math.min(100,Math.round(n)));
 const fields = {
@@ -124,6 +125,8 @@ export function ageUp(input:World):World {
   } else {
     w.player.skill=clamp(w.player.skill+2);
   }
+  // Once-per-year market growth, depreciation and real maintenance costs.
+  tickPortfolio(w);
   c.stress=clamp(c.stress+(hired?5:9));
   w.player.wellbeing=clamp(w.player.wellbeing+(hired?-2:0)-(c.stress>70?9:0));
   for(const relation of w.relationships){
