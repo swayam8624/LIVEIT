@@ -32,6 +32,7 @@ import {
 } from '@living/simulation-core';
 import type { CareerPath, World } from '@living/world-schema';
 import { CityMap } from './CityMap';
+import { gameTheme as t, districtColors } from './gameTheme';
 
 const CAREERS: {
   id: Exclude<CareerPath, 'undecided'>;
@@ -82,8 +83,8 @@ export function CityWorld({
     <View style={styles.root}>
       <View style={styles.heading}>
         <View style={{ flex: 1, gap: 3 }}>
-          <Text style={styles.eyebrow}>BELLWEATHER / AN OPEN CITY</Text>
-          <Text style={styles.title}>Find your next chapter.</Text>
+          <Text style={styles.eyebrow}>BELLWEATHER  /  FREE ROAM</Text>
+          <Text style={styles.title}>EXPLORE THE CITY</Text>
           <Text style={styles.caption}>
             Go somewhere. Meet someone. Choose what matters.
           </Text>
@@ -97,14 +98,14 @@ export function CityWorld({
         </View>
       </View>
       <View style={styles.mapControls}>
-        <Text style={styles.eyebrow}>YOUR CITY MAP</Text>
+        <Text style={styles.eyebrow}>WORLD MAP  ·  DISTRICT SELECT</Text>
         <Pressable
           accessibilityRole="button"
           onPress={() => setShowDistrictCards((v) => !v)}
           style={styles.mapToggle}
         >
           <Text style={styles.mapToggleText}>
-            {showDistrictCards ? '◈ MAP VIEW' : '▤ LIST VIEW'}
+            {showDistrictCards ? '◈ CITY VIEW' : '▤ DISTRICT LIST'}
           </Text>
         </Pressable>
       </View>
@@ -129,13 +130,7 @@ export function CityWorld({
               style={({ pressed }) => [
                 styles.district,
                 {
-                  backgroundColor: [
-                    '#27374b',
-                    '#2b3b4a',
-                    '#4c353e',
-                    '#323249',
-                    '#304b42',
-                  ][index],
+                  backgroundColor: districtColors[index],
                 },
                 city.district === district.id && styles.districtActive,
                 pressed && { opacity: 0.8 },
@@ -305,8 +300,8 @@ const styles = StyleSheet.create({
   },
   mapToggle: {
     borderWidth: 1,
-    borderColor: '#ae825f',
-    backgroundColor: '#273549',
+    borderColor: t.neon,
+    backgroundColor: t.panel,
     paddingVertical: 9,
     paddingHorizontal: 14,
     borderRadius: 8,
@@ -314,7 +309,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   mapToggleText: {
-    color: '#f7c68f',
+    fontFamily: t.font.hud,
+    color: t.amber,
     fontSize: 10,
     fontWeight: '800',
     letterSpacing: 1,
@@ -338,25 +334,26 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   eyebrow: {
-    color: '#e7ad79',
+    fontFamily: t.font.hud,
+    color: t.neon,
     fontSize: 10,
     fontWeight: '800',
     letterSpacing: 1.8,
   },
-  title: { color: '#f4e1c7', fontFamily: 'serif', fontSize: 28 },
-  titleSmall: { color: '#f4e1c7', fontFamily: 'serif', fontSize: 26 },
-  caption: { color: '#c4cbd4', fontSize: 13, lineHeight: 20 },
+  title: { color: t.ink, fontFamily: t.font.display, fontSize: 28 },
+  titleSmall: { color: t.ink, fontFamily: 'serif', fontSize: 26 },
+  caption: { color: t.muted, fontSize: 13, lineHeight: 20 },
   cityHud: {
-    backgroundColor: '#172538',
+    backgroundColor: t.panel,
     borderWidth: 1,
-    borderColor: '#5c5048',
+    borderColor: t.border,
     padding: 12,
     borderRadius: 9,
     gap: 3,
     minWidth: 170,
   },
-  hudLabel: { color: '#adb9c9', letterSpacing: 0.7, fontSize: 9 },
-  hudValue: { color: '#efd3a7', fontSize: 22, fontWeight: '800' },
+  hudLabel: { fontFamily: t.font.hud, color: t.muted, letterSpacing: 0.7, fontSize: 9 },
+  hudValue: { color: t.amber, fontSize: 22, fontWeight: '800' },
   districts: { gap: 10, paddingVertical: 3, paddingHorizontal: 1 },
   district: {
     width: 195,
@@ -364,68 +361,69 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#65758b',
+    borderColor: t.border,
     gap: 7,
     justifyContent: 'flex-end',
   },
-  districtActive: { borderColor: '#f7c58c', borderWidth: 2 },
-  districtSymbol: { fontSize: 26, color: '#f8d8a1' },
-  districtName: { fontSize: 16, color: '#fff4df', fontWeight: '800' },
+  districtActive: { borderColor: t.neon, borderWidth: 2 },
+  districtSymbol: { fontSize: 26, color: t.amber },
+  districtName: { fontSize: 16, color: t.ink, fontWeight: '800' },
   districtSubtitle: {
     fontSize: 11,
-    color: '#ded7d3',
+    color: t.muted,
     lineHeight: 16,
     minHeight: 35,
   },
   districtAction: {
+    fontFamily: t.font.hud,
     marginTop: 4,
     fontSize: 9,
     fontWeight: '800',
-    color: '#efbc87',
+    color: t.neon,
     letterSpacing: 1,
   },
   storyHeading: { flexDirection: 'row', alignItems: 'center', gap: 14 },
-  counter: { color: '#d7d6d8', fontSize: 12 },
+  counter: { fontFamily: t.font.hud, color: t.muted, fontSize: 12 },
   empty: {
     padding: 22,
     minHeight: 120,
     gap: 10,
     borderWidth: 1,
-    borderColor: '#47566b',
+    borderColor: t.border,
     borderRadius: 12,
-    backgroundColor: '#142138',
+    backgroundColor: t.background,
   },
-  emptyTitle: { color: '#eec28f', fontFamily: 'serif', fontSize: 21 },
+  emptyTitle: { color: t.amber, fontFamily: 'serif', fontSize: 21 },
   encounter: {
-    backgroundColor: '#1e2a3e',
+    backgroundColor: t.panel,
     padding: 22,
     gap: 16,
     borderRadius: 13,
     borderWidth: 1,
-    borderColor: '#a57958',
+    borderColor: t.border,
   },
   encounterTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     gap: 10,
   },
-  eventTitle: { fontFamily: 'serif', fontSize: 28, color: '#f9d5aa' },
+  eventTitle: { fontFamily: 'serif', fontSize: 28, color: t.amber },
   eventDescription: {
-    color: '#f3ecde',
+    color: t.ink,
     fontSize: 17,
     lineHeight: 27,
     maxWidth: 760,
   },
   eventPills: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   eventPill: {
-    backgroundColor: '#26374a',
+    backgroundColor: t.panelRaised,
     borderRadius: 8,
     padding: 9,
     borderWidth: 1,
-    borderColor: '#465469',
+    borderColor: t.border,
   },
-  eventPillActive: { borderColor: '#e4b884' },
-  eventPillText: { color: '#e8ded2', fontSize: 11 },
+  eventPillActive: { borderColor: t.neon },
+  eventPillText: { color: t.ink, fontSize: 11 },
   options: { gap: 10 },
   option: {
     flexDirection: 'row',
@@ -433,22 +431,22 @@ const styles = StyleSheet.create({
     gap: 13,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#756557',
-    backgroundColor: '#2b3244',
+    borderColor: t.border,
+    backgroundColor: t.panelRaised,
     borderRadius: 10,
     minHeight: 58,
   },
-  optionPressed: { backgroundColor: '#875037' },
-  optionIndex: { color: '#edb47f', fontWeight: '800', fontSize: 11 },
-  optionText: { flex: 1, color: '#f8ebdf', fontSize: 14, lineHeight: 22 },
-  arrow: { color: '#d8a36e', fontSize: 20 },
-  note: { color: '#a9afbd', fontSize: 11, lineHeight: 17 },
+  optionPressed: { backgroundColor: t.neonDeep },
+  optionIndex: { fontFamily: t.font.hud, color: t.neon, fontWeight: '800', fontSize: 11 },
+  optionText: { flex: 1, color: t.ink, fontSize: 14, lineHeight: 22 },
+  arrow: { color: t.amber, fontSize: 20 },
+  note: { color: t.muted, fontSize: 11, lineHeight: 17 },
   careerCard: {
     padding: 19,
     gap: 13,
     borderWidth: 1,
-    borderColor: '#4c5261',
-    backgroundColor: '#18273a',
+    borderColor: t.border,
+    backgroundColor: t.panel,
     borderRadius: 12,
   },
   careerTop: {
@@ -457,17 +455,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 13,
   },
-  careerTitle: { fontFamily: 'serif', color: '#f2d6ac', fontSize: 24 },
-  careerButton: { backgroundColor: '#945434', padding: 14, borderRadius: 8 },
-  careerButtonText: { color: '#fff0e1', fontWeight: '800', fontSize: 12 },
+  careerTitle: { fontFamily: 'serif', color: t.amber, fontSize: 24 },
+  careerButton: { backgroundColor: t.neonDeep, padding: 14, borderRadius: 8 },
+  careerButtonText: { color: t.ink, fontWeight: '800', fontSize: 12 },
   careerList: { gap: 8 },
   careerOption: {
     borderWidth: 1,
-    borderColor: '#6d5d54',
-    backgroundColor: '#26374c',
+    borderColor: t.border,
+    backgroundColor: t.panelRaised,
     borderRadius: 9,
     padding: 15,
     gap: 5,
   },
-  careerOptionTitle: { color: '#f2d5ad', fontSize: 16, fontWeight: '800' },
+  careerOptionTitle: { color: t.amber, fontSize: 16, fontWeight: '800' },
 });
