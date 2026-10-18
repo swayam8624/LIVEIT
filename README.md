@@ -11,12 +11,20 @@ The simulator needs a Mac with Xcode, Node.js 22.13+ and npm 10+.
 ```sh
 git pull
 npm ci
-npm run ios -w @living/player         # Expo Metro + iOS Simulator
+npm run ios                            # Xcode-native compile + iPhone Simulator
 ```
 
 If an iPhone simulator is not booted, launch one in Xcode → Open Developer
-Tool → Simulator. For a true native Xcode compile/install (not just an Expo JS
-bundle), from `apps/player` run `npx expo run:ios`. The
+Tool → Simulator. This command uses `expo run:ios`, not Expo Go or a LAN `exp://` redirect.
+It avoids the Expo Go `simctl openurl ... code 60` timeout that occurred with
+the old `expo start --ios` script. The optional legacy `npm run ios:go -w
+@living/player` uses localhost rather than a Wi-Fi IP and remains useful for
+isolated diagnostics, not game acceptance. Check that an old Metro process is
+not already occupying port 8081 with `lsof -nP -iTCP:8081 -sTCP:LISTEN`;
+terminate **only the confirmed stale LIVEIT process** before running again.
+If the simulator hangs, manually boot an iPhone in Xcode and inspect
+`xcrun simctl list devices booted` and `xcodebuild -version`.
+The
 [macOS iOS native smoke workflow](.github/workflows/ios-simulator-smoke.yml)
 now attempts to compile, install, launch and capture a real simulator screenshot.
 
