@@ -1,3 +1,5 @@
+export { LIFE_MOMENTS, pendingLifeMoment, scheduleLifeMoment, resolveLifeMoment } from './moments';
+export type { LifeMoment, MomentChoice } from './moments';
 export { CATALOG, portfolio, assetValue, netWorth, buyAsset, sellAsset, investIndex, withdrawIndex } from './portfolio';
 export type { AssetId } from './portfolio';
 export { applyForJob, attendJobInterview, requestPromotion, resignFromJob, ageUp } from './life';
