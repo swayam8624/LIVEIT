@@ -11,7 +11,7 @@
 
 LIVEIT is not a Pokémon clone, an open-world action RPG, a text novel, a Discord client or a cinematic viewer. It is a living, branching, multi-generational life simulator whose visual presentation deliberately **changes register with emotional distance**.
 
-- **Live:** roam and perform daily life in a deliberately crisp, collectible-feeling, top-down, pixel-art world reminiscent of the visual *grammar* of first-generation handheld role-playing games. This is a stylistic reference to grid/tile logic, camera clarity and small-town charm, not copying characters, maps, UI, sprite sheets, music or brand identity.
+- **Live:** roam and perform daily life in a deliberately crisp, collectible-feeling, top-down, pixel-art world reminiscent of the visual _grammar_ of first-generation handheld role-playing games. This is a stylistic reference to grid/tile logic, camera clarity and small-town charm, not copying characters, maps, UI, sprite sheets, music or brand identity.
 - **Feel:** step into luxurious, expressive **stylized 3D** when another person or major event requires attention: dialogue, romance, grief, family milestones, confrontations, major authored chapters, memories. Real depth, models/rigs, shader materials, facial acting, camera blocking and expressive lighting; **not merely an enlarged 2D sprite**.
 - **Control:** operate life and social systems through a tactile, information-rich **game HUD** that can overlay the overworld and cinematic moments without becoming an office dashboard. Every confirmed meaningful interaction should respond immediately visually, with suitably light haptic/audio feedback when enabled.
 - **Remember:** the same simulation identity, clothing, aging, relationships, home, memories, choices and consequences survive the transition between modes and after reload. The user can recognize their character in an overworld sprite and an emotional 3D close-up.
@@ -21,18 +21,18 @@ LIVEIT is not a Pokémon clone, an open-world action RPG, a text novel, a Discor
 
 ## 1. Non-negotiable style decisions
 
-| ID | Design contract | Forbidden outcome |
-|---|---|---|
-| VIS-01 | Overworld art is actual bespoke **2D pixel art with top-down readability**, rendered using GPU compositing, pixel-perfect scaling and optional pixel-aware shader passes. | Pseudo-3D low-poly city replacing the requested tile-based exploration |
-| VIS-02 | Overworld character travel is playable with responsive directional control and navigation, enterable places, collision, NPC markers and context prompts. | A picture of a town with only district selection cards |
-| VIS-03 | Important conversation and story shots contain **real 3D stylized characters and believable cinematic depth**. | Pixel sprites merely zoomed to fill dialogue panels; flat static portraits asserted to be 3D |
-| VIS-04 | One identity/appearance source supplies 2D sprite variants and the 3D rig, with consistent color, silhouette, outfit, age and distinctive features. | User looking like unrelated people in map and dialogue |
-| VIS-05 | Main navigation is a **game HUD**: animated stats, readable widgets, choice cards, quick drawers, status indicators and contextual interaction. | Productivity-app tab pages, unlabeled icons or static React Native prototype cards as final graphics |
-| VIS-06 | Meaningful player actions return prompt feedback and an outcome widget that reports **true authoritative deltas**, using haptics when enabled and supported. | Fake rewards, fabricated outcome cards, vibration for every scroll tick |
-| VIS-07 | "Anon chat" lives in an in-world communications panel, visually separate from AI NPC roleplay, with consent and identity safeguards. | Falsely posing AI as humans; making a random anonymous chat app as the product's primary purpose |
-| VIS-08 | Retro nostalgia is **playful, colorful, warm and legible**; cinematic scenes are lush and materially rich. | Gray-green monochrome across all scenes; nonstop scanlines/noisy CRT; blurry faux-pixel textures |
-| VIS-09 | Vulkan/ SPIR-V is the target gameplay GPU interface on Android; iOS uses MoltenVK over Metal. Accessible text/input may remain native. | Claiming Expo image views, WebGL or generated PPM renders are a native live Vulkan view |
-| VIS-10 | Every asset/scene stays lawful, original or licensed with auditable provenance, and downloadable packs remain validated data. | Borrowed Pokémon/Episode artwork, proprietary extracted assets or downloaded executable shaders |
+| ID     | Design contract                                                                                                                                                           | Forbidden outcome                                                                                    |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| VIS-01 | Overworld art is actual bespoke **2D pixel art with top-down readability**, rendered using GPU compositing, pixel-perfect scaling and optional pixel-aware shader passes. | Pseudo-3D low-poly city replacing the requested tile-based exploration                               |
+| VIS-02 | Overworld character travel is playable with responsive directional control and navigation, enterable places, collision, NPC markers and context prompts.                  | A picture of a town with only district selection cards                                               |
+| VIS-03 | Important conversation and story shots contain **real 3D stylized characters and believable cinematic depth**.                                                            | Pixel sprites merely zoomed to fill dialogue panels; flat static portraits asserted to be 3D         |
+| VIS-04 | One identity/appearance source supplies 2D sprite variants and the 3D rig, with consistent color, silhouette, outfit, age and distinctive features.                       | User looking like unrelated people in map and dialogue                                               |
+| VIS-05 | Main navigation is a **game HUD**: animated stats, readable widgets, choice cards, quick drawers, status indicators and contextual interaction.                           | Productivity-app tab pages, unlabeled icons or static React Native prototype cards as final graphics |
+| VIS-06 | Meaningful player actions return prompt feedback and an outcome widget that reports **true authoritative deltas**, using haptics when enabled and supported.              | Fake rewards, fabricated outcome cards, vibration for every scroll tick                              |
+| VIS-07 | "Anon chat" lives in an in-world communications panel, visually separate from AI NPC roleplay, with consent and identity safeguards.                                      | Falsely posing AI as humans; making a random anonymous chat app as the product's primary purpose     |
+| VIS-08 | Retro nostalgia is **playful, colorful, warm and legible**; cinematic scenes are lush and materially rich.                                                                | Gray-green monochrome across all scenes; nonstop scanlines/noisy CRT; blurry faux-pixel textures     |
+| VIS-09 | Vulkan/ SPIR-V is the target gameplay GPU interface on Android; iOS uses MoltenVK over Metal. Accessible text/input may remain native.                                    | Claiming Expo image views, WebGL or generated PPM renders are a native live Vulkan view              |
+| VIS-10 | Every asset/scene stays lawful, original or licensed with auditable provenance, and downloadable packs remain validated data.                                             | Borrowed Pokémon/Episode artwork, proprietary extracted assets or downloaded executable shaders      |
 
 ## 2. Visual hierarchy: three presentation spaces
 
@@ -41,11 +41,12 @@ LIVEIT is not a Pokémon clone, an open-world action RPG, a text novel, a Discor
 Purpose: the everyday feeling of owning a living town and a growing life. Use for streets, parks, homes, storefront entrances, campuses, schools, workplaces, neighborhoods, public transit stops and common interior activities. Movement is four-directional by default; cardinal routes, city blocks and contextual obstacles are visually obvious. The camera follows the avatar rather than the player following a long list of place cards.
 
 Visual grammar:
+
 - Deliberate visible pixel grid and strong silhouettes; **nearest-neighbor texture sampling only** for pixel-layer color sprites and tiles.
 - Original 16×16 logical-pixel environment tile as production default. Signage, facade details, foliage and shadows can occupy multiple tiles.
 - Character sprite footprint: 16×24 logical pixels for standard adult small-scale mode; hero/important NPC silhouettes may occupy 20×28 or 24×32; collision uses smaller feet rectangles, not whole sprite bounding boxes. Child and older-life forms have separately authored/adapted silhouettes, preserving identity.
 - Default 4 directions, 4 walk frames per direction for all main cast; idle frames and optional turn/gesture variants. Crowd NPCs can have fewer frames but must not all look alike. Eight directions or richer animation becomes a quality-tier/production expansion, not a day-one blocker.
-- Each asset uses palette discipline: approximately 8–16 distinct scene color families with intelligently reused ramps; this is a *new artistic target*, not original Game Boy hardware's enforced 4 grays. Color changes with district and weather.
+- Each asset uses palette discipline: approximately 8–16 distinct scene color families with intelligently reused ramps; this is a _new artistic target_, not original Game Boy hardware's enforced 4 grays. Color changes with district and weather.
 - Buildings show doorway, services and occupiable purpose. 1–3 tile signage legible at world scale; paths, doors, intersections and stairs must not visually lie about collision.
 - Depth from sorted sprites, occlusion cutouts, foreground tiles, local lighting gradients, shadow/sun rays and subtle water/rain shader; keep actual player silhouette clean.
 
@@ -59,9 +60,10 @@ The town should have original neighborhoods with distinctive silhouettes (e.g., 
 
 ### B. CINEMATIC WORLD — dialogue and major moments (premium emotional space)
 
-Purpose: make conversations and choices *worth stopping the world for*. Use for face-to-face dialogue, named NPC meeting, episode chapters, family events, romance, career successes or failures, betrayals, crises, intimate quiet moments, memory flashbacks and meaningful introductions.
+Purpose: make conversations and choices _worth stopping the world for_. Use for face-to-face dialogue, named NPC meeting, episode chapters, family events, romance, career successes or failures, betrayals, crises, intimate quiet moments, memory flashbacks and meaningful introductions.
 
 Visual grammar:
+
 - **Stylized 3D**, not photorealism: anime-adjacent painterly comic forms, realistic proportions where appropriate, original identity, expressive eye/brow/lip poses, deliberate skin and hair material choices, soft cloth, warm depth and rich art-directed light. A 2.5D painted background is acceptable BEHIND a genuine rigged 3D actor, but not as replacement for 3D expression/motion.
 - Actor pipeline: mesh, skeletal rig, blended shape keys for faces, layered outfit meshes/materials, hair geometry/card shaders, eye gaze, lip-sync-to-text timings, hand/upper-body acting and aging overlays. Body- and outfit-safe retargeting. Current Vulkan procedural actor shader is a useful experimental reference, not this finished rig.
 - Frame composition includes foreground texture/props, midground actor blocking and background architecture/environment. Soft rim lighting, motivated key light, soft shadow/contact geometry, optional depth-of-field with text and eyes remaining clear. Avoid excessive plastic specular and uncanny facial hyperrealism.
@@ -83,6 +85,7 @@ Purpose: be a tactile interface that makes statistics, choices and messages part
 Visual primitives: 1–2px high contrast strokes, restrained bevel/shadow, slight square corners (4–10dp), stepped corner motif on primary cards, layered translucent backing over 3D only, sharp icon language, personality in typography and audio. Full-screen settings and long text stay readable and adaptable.
 
 **HUD structure by responsibility** (exact per-screen variants belong to Step 2):
+
 - top strip (persistent unless full-screen cinematic): avatar, name, current location, age/phase, in-game date, major currency value, current energy/health indicator;
 - left edge / swipe drawer: character and appearance, relationships, family/legacy, career/school, inventory/home, skills and achievements, route graph, Memory Vault;
 - right edge / swipe drawer: communications hub (NPC chat distinctly labeled AI, consenting real-player contacts distinct), notifications, journal, major pending events, tasks. Masked social is behind a secondary labeled section, never shoved as the app's primary unsolicited entry.
@@ -105,22 +108,22 @@ The user's original specification proposed random matching of masked strangers. 
 
 Existing gameTheme.ts tokens should remain a **HUD** foundation, not forcibly tint world environments. These hex values define the baseline; all variants require testing under color blindness, low brightness and 200% text scaling.
 
-| Use | Hex | Rule |
-|---|---|---|
-| UI deep night | #101827 | default card/console backing, not all world pixels |
-| UI panel | #1A2737 | clear information surface |
-| Raised/tappable panel | #223449 | control affordance, visible outline |
-| Primary readable ink | #F5F2D9 | bright warm off-white for primary text |
-| Secondary readable ink | #B6C6C8 | adequate size/contrast, avoid tiny muted text |
-| Edge/keyline | #507174 | 1–2px borders; increase contrast for focus |
-| Positive/action mint | #97E6AC | choice focus, selected target, non-destructive confirmation |
-| Dark mint | #356D62 | solid action fill with text contrast testing |
-| Milestone amber | #FFD28A | earned discovery and important event emphasis |
-| Human warmth coral | #F49A82 | social, relationship emphasis; not automatic danger |
-| Actual warning/negative | #FF7588 | real errors or health/risk warning + icon/text |
-| Water/world teal | #2B617A | environment only |
-| Park green | #427969 | environment only |
-| Road slate | #243543 | environment only |
+| Use                     | Hex     | Rule                                                        |
+| ----------------------- | ------- | ----------------------------------------------------------- |
+| UI deep night           | #101827 | default card/console backing, not all world pixels          |
+| UI panel                | #1A2737 | clear information surface                                   |
+| Raised/tappable panel   | #223449 | control affordance, visible outline                         |
+| Primary readable ink    | #F5F2D9 | bright warm off-white for primary text                      |
+| Secondary readable ink  | #B6C6C8 | adequate size/contrast, avoid tiny muted text               |
+| Edge/keyline            | #507174 | 1–2px borders; increase contrast for focus                  |
+| Positive/action mint    | #97E6AC | choice focus, selected target, non-destructive confirmation |
+| Dark mint               | #356D62 | solid action fill with text contrast testing                |
+| Milestone amber         | #FFD28A | earned discovery and important event emphasis               |
+| Human warmth coral      | #F49A82 | social, relationship emphasis; not automatic danger         |
+| Actual warning/negative | #FF7588 | real errors or health/risk warning + icon/text              |
+| Water/world teal        | #2B617A | environment only                                            |
+| Park green              | #427969 | environment only                                            |
+| Road slate              | #243543 | environment only                                            |
 
 **World-local palettes:** every location pack supplies original daytime/night/weather palettes that harmonize rather than match the HUD. Suggested art-target families: sunlit seaside ochres/blue-green, campus brick/cream/lavender, downtown signage cyan/magenta, studio warm plum/terracotta, gardens moss/leaf/amber, childhood cream and apricot, snowy city muted blue/violet, autumn elder scene gold/chestnut. Scene palette color counts may exceed Game Boy constraints. A location "mood" shader can blend lighting but should not globally suppress outfit colors, skin-tone differentiation or label contrast.
 
@@ -132,12 +135,12 @@ Existing gameTheme.ts tokens should remain a **HUD** foundation, not forcibly ti
 
 Four typography roles; no unlicensed bundled fonts, no platform-styled defaults leaking inconsistently between views.
 
-| Role | Default direction | Metrics / behavior |
-|---|---|---|
-| Brand/display | condensed bold arcade-inspired non-pixel face | roughly 26–38sp portrait, letter spacing restrained; all caps only short headlines |
-| Game HUD | monospaced, bold, systematic numbers | roughly 11–14sp except safely smaller decorative coordinates, tabular digits; high contrast |
-| Dialogue/body | smooth, characterful sans-serif | default 16–18sp body, cinematic dialogue 18–22sp, line-height 1.35–1.5 |
-| Diegetic overworld pixel text | authored bitmap pixel font | pixel-world sign labels/rare headings only, never legal controls or long story dialogue |
+| Role                          | Default direction                             | Metrics / behavior                                                                          |
+| ----------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Brand/display                 | condensed bold arcade-inspired non-pixel face | roughly 26–38sp portrait, letter spacing restrained; all caps only short headlines          |
+| Game HUD                      | monospaced, bold, systematic numbers          | roughly 11–14sp except safely smaller decorative coordinates, tabular digits; high contrast |
+| Dialogue/body                 | smooth, characterful sans-serif               | default 16–18sp body, cinematic dialogue 18–22sp, line-height 1.35–1.5                      |
+| Diegetic overworld pixel text | authored bitmap pixel font                    | pixel-world sign labels/rare headings only, never legal controls or long story dialogue     |
 
 Font selections pending license/per-device QA, but current built-in AvenirNextCondensed-DemiBold, Menlo-Bold and AvenirNext-Medium can serve as temporary fallbacks. Production fonts must include commercial redistribution licenses, Android/iOS matching metrics and fallback language coverage. The older all-serif editorial appearance is **superseded**.
 
@@ -147,19 +150,19 @@ All reading text is a true scalable text layer independent of nearest-neighbor g
 
 The player should feel an input immediately, even if the server or storage result comes later. Input acknowledgment never falsely claims the consequence committed.
 
-| Event | Visual response | Sound | Haptic policy | Suggested timing |
-|---|---|---|---|---|
-| Menu/choice touch-down | 1–2 logical pixel press/depth change; bright outline | short click | soft selection only if not a repeated scroll | <50ms acknowledgement target |
-| Navigation/select tab | selected row slides/snap to detent | light tick | selection when change commits | 100–180ms |
-| Enter building | centered character passes doorway, short iris/scene wipe | door/jingle ambience | light confirmation | 200–450ms |
-| NPC conversation | avatar faces NPC, bubble opens or 3D focus transition | gentle chime/ambience stem | light on action, not each line | 450–750ms warm cinematic target |
-| Branching choice commit | card accepts, others fade, authoritative effect resolves | distinct decision signature | medium on confirmed action | immediate acknowledgement + honest loading if needed |
-| Age Up | ring advances, sky/calendar shifts, counters roll and recap appears | restrained whoosh/stem cue | medium/success for positive milestone; neutral or none for grief | 600–1400ms optional / skippable |
-| Opportunity or message arrives | contextual badge/widget and readable title | short private notification cue | only for allowed opt-in notifications | never steals focus from a major scene |
-| Relationship change | small heart/thread widget with real trust text/delta | warm ping only if fitting | one subtle pulse | 300–550ms |
-| Purchase/spend | amount updates, inventory changes, concise receipt | cash/confirm | one confirmation if success | 250–450ms |
-| Error/rejection | card returns, reason and retry action visible | soft low cue | warning/error only when appropriate | no fake success flash |
-| Death/loss | restrained, respectful fade/ink memory transition | avoid celebratory cues | off/soft only by player preference | event-paced, full skip and accessibility alternative |
+| Event                          | Visual response                                                     | Sound                          | Haptic policy                                                    | Suggested timing                                     |
+| ------------------------------ | ------------------------------------------------------------------- | ------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------- |
+| Menu/choice touch-down         | 1–2 logical pixel press/depth change; bright outline                | short click                    | soft selection only if not a repeated scroll                     | <50ms acknowledgement target                         |
+| Navigation/select tab          | selected row slides/snap to detent                                  | light tick                     | selection when change commits                                    | 100–180ms                                            |
+| Enter building                 | centered character passes doorway, short iris/scene wipe            | door/jingle ambience           | light confirmation                                               | 200–450ms                                            |
+| NPC conversation               | avatar faces NPC, bubble opens or 3D focus transition               | gentle chime/ambience stem     | light on action, not each line                                   | 450–750ms warm cinematic target                      |
+| Branching choice commit        | card accepts, others fade, authoritative effect resolves            | distinct decision signature    | medium on confirmed action                                       | immediate acknowledgement + honest loading if needed |
+| Age Up                         | ring advances, sky/calendar shifts, counters roll and recap appears | restrained whoosh/stem cue     | medium/success for positive milestone; neutral or none for grief | 600–1400ms optional / skippable                      |
+| Opportunity or message arrives | contextual badge/widget and readable title                          | short private notification cue | only for allowed opt-in notifications                            | never steals focus from a major scene                |
+| Relationship change            | small heart/thread widget with real trust text/delta                | warm ping only if fitting      | one subtle pulse                                                 | 300–550ms                                            |
+| Purchase/spend                 | amount updates, inventory changes, concise receipt                  | cash/confirm                   | one confirmation if success                                      | 250–450ms                                            |
+| Error/rejection                | card returns, reason and retry action visible                       | soft low cue                   | warning/error only when appropriate                              | no fake success flash                                |
+| Death/loss                     | restrained, respectful fade/ink memory transition                   | avoid celebratory cues         | off/soft only by player preference                               | event-paced, full skip and accessibility alternative |
 
 Haptics **opt-in according to OS/user settings**, use Expo Haptics when supported (selectionAsync, impactAsync, notificationAsync); Android-specific supported haptics where available. Debounce duplicate triggering, avoid pulses for every walk step, chat character, frame or continuous scroll. Keep an accessibility toggle **Off / Subtle / Full**, default to system behavior; silence/reduced motion must never hide a game state. Sound is similarly independently adjustable: music, effects, ambience and notifications. Source: https://docs.expo.dev/versions/v58.0.0/sdk/haptics/
 
@@ -176,6 +179,7 @@ Character appearance is **domain data**, not a bitmap chosen randomly per presen
 Aging is world-state driven: childhood, adolescence, young adult, midlife and elder form sets, with gradual scale, hairstyle/gray, posture, face morphology, scars/wrinkles only where plausible, new wardrobe availability and life-stage mood grading. Changes are not always a hard cut at birthday: blend the age-specific representation at important transitions and update sprites/model on the next frame/scene. Existing old saves must resolve valid default appearance and scene state. Cross-generational heirs inherit genealogical/contextual traits through simulation rules, not automatic identical clone appearances.
 
 **World consistency examples:**
+
 - The player's blue hair and red scarf appear in pixel town, at the café in 3D and on the relationship/message profile.
 - After a saved clothing purchase, outfit changes only if equipped, persists on reload and shows in both modes.
 - After aging years, older sprite/3D face update without changing identity.
@@ -187,6 +191,7 @@ Aging is world-state driven: childhood, adolescence, young adult, midlife and el
 ## 7. Story visual grammar and outcome widgets
 
 Three encounter scales:
+
 1. **Micro-event:** Pixel-world callout and 1–2 choices, short HUD result. E.g., purchase bread, casual greeting, tiny job decision.
 2. **Scene:** Dialogue in 3D with medium shot and two actors, 2–4 substantial replies/choices, meaningful emotional or financial state. E.g., confession, interview, reunion.
 3. **Chapter / life milestone:** authored multi-location 3D sequence with acting, multiple participants, camera changes and ending/route consequences. E.g., marriage, child, death, campaign finale.
@@ -199,13 +204,13 @@ The visual director picks scale from authored event metadata, not a random LLM t
 
 ## 8. Per-life-stage mood and city seasons
 
-| Life stage | Overworld treatment | Cinematic scene treatment | UI tone |
-|---|---|---|---|
-| Childhood | warm apricot/mint grass, bright clean edges and playful traffic density | pastel warm key light, close family eyelines, moderate bloom | bright sticker-like badges, larger icons |
-| Adolescence | energetic blue/coral signage, more school/friend social activity | stronger contrast and camera energy, youthful styling | dynamic but readable activity cues |
-| Young adult | most saturated and varied world palette, broad urban districts | deep expressive cinematic colors and diverse nightlife/daytime locations | balanced adventure/agency |
-| Midlife | warmer, grounded architecture and wardrobe with changing neighborhood history | realistic material restraint, richer domestic setting | clearer long-horizon finance/family surfaces |
-| Elder | optional golden seasonal light, preserved colorful environment, no mandatory bleak tone | gentle gold and sepia options, crisp face/eyes, quiet camera | larger default readability preference offered, respectful milestones |
+| Life stage  | Overworld treatment                                                                     | Cinematic scene treatment                                                | UI tone                                                              |
+| ----------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------- |
+| Childhood   | warm apricot/mint grass, bright clean edges and playful traffic density                 | pastel warm key light, close family eyelines, moderate bloom             | bright sticker-like badges, larger icons                             |
+| Adolescence | energetic blue/coral signage, more school/friend social activity                        | stronger contrast and camera energy, youthful styling                    | dynamic but readable activity cues                                   |
+| Young adult | most saturated and varied world palette, broad urban districts                          | deep expressive cinematic colors and diverse nightlife/daytime locations | balanced adventure/agency                                            |
+| Midlife     | warmer, grounded architecture and wardrobe with changing neighborhood history           | realistic material restraint, richer domestic setting                    | clearer long-horizon finance/family surfaces                         |
+| Elder       | optional golden seasonal light, preserved colorful environment, no mandatory bleak tone | gentle gold and sepia options, crisp face/eyes, quiet camera             | larger default readability preference offered, respectful milestones |
 
 Age does not force identical emotional weather or culturally stereotyped appearance. Day/night and weather have separate physical/environment cues. In-game time and weather are derived from simulation/world data; user manual "visual preview" never rewrites the day/time.
 
@@ -233,6 +238,7 @@ Default budget targets from original brief: core app under ~150MB where feasible
 ## 11. Twelve must-produce visual acceptance frames
 
 These are **required future golden image targets**, not mockups claimed in this design-only deliverable:
+
 1. Bellweather street, daylight: original tile grid, readable avatar, three enterable businesses, contextual HUD.
 2. Same saved scene, night/rain: crisp sprite silhouettes plus shader lights/puddles, accurate world state.
 3. Overworld interior: character at home, decorative inventory and job/financial context.
@@ -251,8 +257,9 @@ Each frame has a source world save fixture, expected render mode, rig/outfit IDs
 ## 12. Device performance and measurable interaction acceptance
 
 Metrics are acceptance **targets to test**, not benchmark claims:
+
 - World scroll/gameplay at steady 60fps on medium/high test devices; stable 30fps low/battery saver. No pixels jitter or texture shimmer during slow walking and diagonally near tile edges.
-- Existing CI Vulkan headless rendering is a *prototype*. True shipped-world readiness requires Vulkan swapchain/camera/pixel atlas on Android, MoltenVK/CAMetalLayer equivalent iOS, character 3D rendering, render lifecycle/restart and fallback in the installed app.
+- Existing CI Vulkan headless rendering is a _prototype_. True shipped-world readiness requires Vulkan swapchain/camera/pixel atlas on Android, MoltenVK/CAMetalLayer equivalent iOS, character 3D rendering, render lifecycle/restart and fallback in the installed app.
 - Input acknowledgement p95 within 50ms under normal load; 3D transition warm scene preferably under 750ms; any loading beyond that clearly represented. No deliberate haptic lag or spinner for simple offline interactions.
 - Character appearance parity across both render modes before/after outfit, age, inheritance, save/relaunch.
 - HUD and choice overlays never hide critical interaction areas in smallest supported layout or 200% text scaling; verify screen reader route.
