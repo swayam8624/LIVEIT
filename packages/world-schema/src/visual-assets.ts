@@ -111,7 +111,10 @@ export const VisualPackSchema = z
         });
       }
       const refs = [...asset.dependencies];
-      if (asset.implementation.kind === 'procedural' && asset.implementation.shader)
+      if (
+        asset.implementation.kind === 'procedural' &&
+        asset.implementation.shader
+      )
         refs.push(asset.implementation.shader);
       for (const ref of refs) {
         if (!ids.has(ref) && !pack.dependencies.includes(ref))
