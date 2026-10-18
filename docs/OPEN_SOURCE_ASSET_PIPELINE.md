@@ -4,13 +4,13 @@ The game is intended for commercial distribution on iOS, Android and web. **Free
 
 ## Verified candidate libraries
 
-| Source | Official URL | License indicated at source | Fit |
-| --- | --- | --- | --- |
-| Kenney UI Pack | https://kenney.nl/assets/ui-pack | CC0-1.0 | Strong option for HUD/panel building blocks, to restyle in LIVEIT's dark palette |
-| Kenney Pixel UI Pack | https://kenney.nl/assets/pixel-ui-pack | CC0-1.0 | Pixel-only prototype, not the main illustrated scene |
-| Kenney RPG Urban Kit | https://kenney-assets.itch.io/rpg-urban-kit | CC0-1.0 | Excellent tile library for an **optional pixel city map**, 480+ pieces and six animated characters |
-| Poly Haven | https://polyhaven.com/license | CC0-1.0 for site assets | Texture/HDRI source for original 2D environment painting or optional 3D |
-| OpenGameArt CC0 backgrounds collection | https://opengameart.org/content/cc0-backgrounds | Mixed individual pages: **verify one by one** | Curated leads only, not auto-approved for redistribution |
+| Source                                 | Official URL                                    | License indicated at source                   | Fit                                                                                                |
+| -------------------------------------- | ----------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Kenney UI Pack                         | https://kenney.nl/assets/ui-pack                | CC0-1.0                                       | Strong option for HUD/panel building blocks, to restyle in LIVEIT's dark palette                   |
+| Kenney Pixel UI Pack                   | https://kenney.nl/assets/pixel-ui-pack          | CC0-1.0                                       | Pixel-only prototype, not the main illustrated scene                                               |
+| Kenney RPG Urban Kit                   | https://kenney-assets.itch.io/rpg-urban-kit     | CC0-1.0                                       | Excellent tile library for an **optional pixel city map**, 480+ pieces and six animated characters |
+| Poly Haven                             | https://polyhaven.com/license                   | CC0-1.0 for site assets                       | Texture/HDRI source for original 2D environment painting or optional 3D                            |
+| OpenGameArt CC0 backgrounds collection | https://opengameart.org/content/cc0-backgrounds | Mixed individual pages: **verify one by one** | Curated leads only, not auto-approved for redistribution                                           |
 
 Kenney confirms commercial CC0 use and optional attribution at https://kenney.nl/support . Poly Haven's assets are CC0 and redistributable at https://polyhaven.com/license . OpenGameArt warns that attribution/license terms differ per work at https://opengameart.org/node/5571 .
 
@@ -25,7 +25,7 @@ Kenney confirms commercial CC0 use and optional attribution at https://kenney.nl
    python3 tools/import_cc0_pack.py kenney-ui ~/Downloads/Kenney_UI.zip --confirm-license
    ```
 4. The importer checks paths for ZIP traversal, ignores executable/HTML/SVG files, limits total size and file counts, and writes a hash/provenance manifest to `assets/third_party/<source-id>/manifest.json`.
-5. Review individual assets for quality, third-party marks/logos, potentially trademarked characters and compatibility with LIVEIT's art style. CC0 does not guarantee freedom from *trademark, privacy or publicity* claims.
+5. Review individual assets for quality, third-party marks/logos, potentially trademarked characters and compatibility with LIVEIT's art style. CC0 does not guarantee freedom from _trademark, privacy or publicity_ claims.
 6. Convert only approved assets into the **bundled player asset folder**, with explicit static `require()` paths, sizes and licensing records. Expo cannot bundle images merely because a ZIP contains them.
 7. Keep any original license notices. Where a future asset uses OFL or CC BY, preserve required credits and exact license documentation.
 

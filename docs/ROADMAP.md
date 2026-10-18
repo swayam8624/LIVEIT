@@ -8,7 +8,7 @@
 - Twenty original non-paywalled civic/social/career encounters, with two durable options apiece; outcomes persist as facts, memory events, and history.
 - Career direction and neighborhood modifiers affect actual earnings, skills and wellbeing.
 - Off-screen NPC life beats give Amelia and Noah distinct careers, emotions, ambitions, and milestones as game time advances.
-- Two original story campaigns: the café reunion (seven scenes, three endings) and *A Place for Second Chances* (11 scenes, three endings). The bookshop episode naturally unlocks after the reunion and a simulated week.
+- Two original story campaigns: the café reunion (seven scenes, three endings) and _A Place for Second Chances_ (11 scenes, three endings). The bookshop episode naturally unlocks after the reunion and a simulated week.
 - Reusable offline image-backed cinematic stage, NPC portraits, accessible dialog choices.
 - Interactive full-screen isometric city map with list-mode fallback, composed from 28 imported and SHA-verified Kenney CC0 icons/buildings/tiles.
 - Standalone browser Creator Studio with branching, scene editing, local draft backup, JSON export and validated local player import.
@@ -18,7 +18,7 @@
 
 - Story and city simulation choices deterministically yield valid save envelopes.
 - All old v1 save files remain decodable, despite optional new city/NPC fields.
-- Native iOS/Android *bundles* export successfully, but signed binaries and device startup remain **unverified**.
+- Native iOS/Android _bundles_ export successfully, but signed binaries and device startup remain **unverified**.
 - The game still has low-resolution original café/Amelia preview artwork; five Kenney isometric buildings are genuine game assets but **not yet a commercial art pass**.
 - Community publishing is still local-only with no public creator accounts, moderation or takedown service.
 - CI and screenshot evidence are attached to GitHub Actions and linked in PR #2.

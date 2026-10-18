@@ -16,10 +16,6 @@
       "bundler": "metro",
       "name": "LIVEIT"
     },
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ]
+    "platforms": ["ios", "android", "web"]
   }
 }

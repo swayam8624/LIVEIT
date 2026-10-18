@@ -10,21 +10,21 @@ The avatar's appearance is represented as validated portable data stored on the 
 
 ### Appearance menu
 
-| Category | Available options |
-| --- | --- |
-| Skin tones | 12 |
-| Face shapes | 5 |
-| Eye shapes | 5 |
-| Eye colors | 7 |
-| Nose shapes | 4 |
-| Lip styles | 4 |
-| Brow styles | 4 |
-| Hairstyles | 14 (including curls, coils, locs, braids, afro, waves, bob, pixie) |
-| Hair colors | 12 |
-| Body frames | 4 |
-| Outfit styles | 9 |
-| Outfit colors | 9 |
-| Accessories | 5 |
+| Category      | Available options                                                  |
+| ------------- | ------------------------------------------------------------------ |
+| Skin tones    | 12                                                                 |
+| Face shapes   | 5                                                                  |
+| Eye shapes    | 5                                                                  |
+| Eye colors    | 7                                                                  |
+| Nose shapes   | 4                                                                  |
+| Lip styles    | 4                                                                  |
+| Brow styles   | 4                                                                  |
+| Hairstyles    | 14 (including curls, coils, locs, braids, afro, waves, bob, pixie) |
+| Hair colors   | 12                                                                 |
+| Body frames   | 4                                                                  |
+| Outfit styles | 9                                                                  |
+| Outfit colors | 9                                                                  |
+| Accessories   | 5                                                                  |
 
 The same appearance renderer is reused for the character creation screen, main Life HUD, custom appearance editing in People, and the player actor in Story Mode. It supports basic expression changes for warm and tense scenes. All options are unlocked from the beginning, are separate from pronouns and can be changed without payment. Save files preserve appearance and old files without appearance default visually without modification.
 

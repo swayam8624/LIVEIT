@@ -29,7 +29,11 @@ export const EffectSchema = z.discriminatedUnion('operation', [
 export const StorySchema = z
   .object({
     schemaVersion: z.literal(1),
-    id: z.string().min(1).max(120).regex(/^[a-z0-9.-]+$/),
+    id: z
+      .string()
+      .min(1)
+      .max(120)
+      .regex(/^[a-z0-9.-]+$/),
     version: z.literal(1),
     title: z.string().min(1).max(100),
     description: z.string().max(500),

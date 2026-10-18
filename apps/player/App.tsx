@@ -17,13 +17,13 @@ import {
   setCharacterAppearance,
   type Activity,
 } from '@living/simulation-core';
-import {
-  choose,
-  currentScene,
-  startStory,
-} from '@living/narrative-core';
+import { choose, currentScene, startStory } from '@living/narrative-core';
 import { loadSave, writeSave, type Save } from '@living/save-system';
-import { DEFAULT_APPEARANCE, type Appearance, type World } from '@living/world-schema';
+import {
+  DEFAULT_APPEARANCE,
+  type Appearance,
+  type World,
+} from '@living/world-schema';
 import { reunion, bookshop, findOfficialStory } from '@living/content';
 import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
@@ -144,9 +144,12 @@ export default function App() {
             try {
               // Official stories are bundled, not user imports. Never require
               // players to re-import them merely because the app restarted.
-              let active: Story | undefined = findOfficialStory(value.activeStoryId);
+              let active: Story | undefined = findOfficialStory(
+                value.activeStoryId,
+              );
               if (!active) {
-                const serialized = await AsyncStorage.getItem(LOCAL_STORIES_KEY);
+                const serialized =
+                  await AsyncStorage.getItem(LOCAL_STORIES_KEY);
                 const untrusted: unknown = JSON.parse(serialized ?? '[]');
                 if (!Array.isArray(untrusted))
                   throw new Error('Local story shelf is damaged');
@@ -162,9 +165,13 @@ export default function App() {
                 active = parseStory(candidate);
               }
               if (!mounted) return;
-              const timeline = value.active === 'life' ? value.life : value.story!;
-              const progress = timeline.progress.find(p => p.storyId === active.id);
-              if (!progress) throw new Error('Saved narrative progress is missing');
+              const timeline =
+                value.active === 'life' ? value.life : value.story!;
+              const progress = timeline.progress.find(
+                (p) => p.storyId === active.id,
+              );
+              if (!progress)
+                throw new Error('Saved narrative progress is missing');
               // Verify referenced scenes and story versions before displaying.
               currentScene(timeline, active);
               setAuthored(active);
@@ -179,11 +186,15 @@ export default function App() {
               );
             }
           } else {
-            const timeline = value.active === 'life' ? value.life : value.story!;
-            const progress = timeline.progress.find(p => p.storyId === reunion.id);
+            const timeline =
+              value.active === 'life' ? value.life : value.story!;
+            const progress = timeline.progress.find(
+              (p) => p.storyId === reunion.id,
+            );
             setAuthored(reunion);
             setSceneOpen(
-              value.active === 'story' && Boolean(progress && !progress.completed),
+              value.active === 'story' &&
+                Boolean(progress && !progress.completed),
             );
             setTab(value.active === 'story' ? 'stories' : 'life');
           }
@@ -237,9 +248,11 @@ export default function App() {
   function update(w: World) {
     const current = latestSave.current;
     if (!current) return;
-    persist(current.active === 'life'
-      ? { ...current, life: w }
-      : { ...current, story: w });
+    persist(
+      current.active === 'life'
+        ? { ...current, life: w }
+        : { ...current, story: w },
+    );
   }
   // IMPORTANT: apply the operation against the newest *synchronous* world.
   // React state/JS callback closures can lag behind rapid successive taps.
@@ -247,7 +260,8 @@ export default function App() {
     run(() => {
       const current = latestSave.current;
       if (!current) return;
-      const previous = current.active === 'life' ? current.life : current.story!;
+      const previous =
+        current.active === 'life' ? current.life : current.story!;
       update(action(previous));
     });
   }
@@ -267,8 +281,18 @@ export default function App() {
       setAuthored(reunion);
       persist(
         save.active === 'life'
-          ? { ...save, activeStoryId: reunion.id, sceneDismissed: false, life: nextWorld }
-          : { ...save, activeStoryId: reunion.id, sceneDismissed: false, story: nextWorld },
+          ? {
+              ...save,
+              activeStoryId: reunion.id,
+              sceneDismissed: false,
+              life: nextWorld,
+            }
+          : {
+              ...save,
+              activeStoryId: reunion.id,
+              sceneDismissed: false,
+              story: nextWorld,
+            },
       );
       setSceneOpen(true);
     });
@@ -276,12 +300,22 @@ export default function App() {
   function openBookshop() {
     if (!save) return;
     run(() => {
-      const reunited = save.life.progress.some(p => p.storyId === reunion.id && p.completed);
+      const reunited = save.life.progress.some(
+        (p) => p.storyId === reunion.id && p.completed,
+      );
       if (!reunited || save.life.day < 7)
-        throw new Error('Finish the reunion and spend at least a week in Bellweather first.');
+        throw new Error(
+          'Finish the reunion and spend at least a week in Bellweather first.',
+        );
       const next = startStory(save.life, bookshop);
       setAuthored(bookshop);
-      persist({ ...save, active: 'life', life: next, activeStoryId: bookshop.id, sceneDismissed: false });
+      persist({
+        ...save,
+        active: 'life',
+        life: next,
+        activeStoryId: bookshop.id,
+        sceneDismissed: false,
+      });
       setTab('stories');
       setSceneOpen(true);
     });
@@ -301,7 +335,13 @@ export default function App() {
           ),
           reunion,
         );
-      persist({ ...save, story, active: 'story', activeStoryId: reunion.id, sceneDismissed: false });
+      persist({
+        ...save,
+        story,
+        active: 'story',
+        activeStoryId: reunion.id,
+        sceneDismissed: false,
+      });
       setSceneOpen(true);
     });
   }
@@ -490,10 +530,12 @@ export default function App() {
                   world={world!}
                   story={authored}
                   integrated={save.active === 'life'}
-                  onChoose={(choiceId) => applyWorldAction(w => choose(w, authored, choiceId))}
+                  onChoose={(choiceId) =>
+                    applyWorldAction((w) => choose(w, authored, choiceId))
+                  }
                   onClose={() => {
                     const current = latestSave.current;
-                    if(current) persist({ ...current, sceneDismissed: true });
+                    if (current) persist({ ...current, sceneDismissed: true });
                     setSceneOpen(false);
                   }}
                   onFinish={() => {
@@ -511,13 +553,19 @@ export default function App() {
                           : 'A little more life.'}
                       </Text>
                       <View style={s.lifeIdentity}>
-                        <AvatarPortrait appearance={world!.player.appearance} size={87} />
+                        <AvatarPortrait
+                          appearance={world!.player.appearance}
+                          size={87}
+                        />
                         <View style={{ flex: 1, gap: 4 }}>
                           <Text style={s.subtitle}>
                             {world!.player.name} · Age{' '}
-                            {Math.floor(world!.player.ageDays / 365)} · Bellweather
+                            {Math.floor(world!.player.ageDays / 365)} ·
+                            Bellweather
                           </Text>
-                          <Text style={s.small}>YOUR STORY. YOUR LOOK. YOUR CHOICES.</Text>
+                          <Text style={s.small}>
+                            YOUR STORY. YOUR LOOK. YOUR CHOICES.
+                          </Text>
                         </View>
                       </View>
                     </View>
@@ -527,10 +575,7 @@ export default function App() {
                         : 'MAIN TIMELINE'}
                     </Tag>
                   </View>
-                  <LifeDashboard
-                    world={world!}
-                    onAction={applyWorldAction}
-                  />
+                  <LifeDashboard world={world!} onAction={applyWorldAction} />
                   <GameStage mode="life">
                     <Text style={s.stageHeadline}>Your life is happening.</Text>
                     <Text style={s.stageHint}>
@@ -558,7 +603,9 @@ export default function App() {
                           onPress={() =>
                             dest.action === 'cafe'
                               ? openEncounter()
-                              : applyWorldAction(w => advanceLife(w, dest.action as Activity, days))
+                              : applyWorldAction((w) =>
+                                  advanceLife(w, dest.action as Activity, days),
+                                )
                           }
                         >
                           <Text style={s.destinationText}>
@@ -568,10 +615,7 @@ export default function App() {
                       ))}
                     </View>
                   </GameStage>
-                  <CityWorld
-                    world={world!}
-                    onAction={applyWorldAction}
-                  />
+                  <CityWorld world={world!} onAction={applyWorldAction} />
                   <View style={s.stats}>
                     <Stat
                       label="YOUR SAVINGS"
@@ -879,20 +923,42 @@ export default function App() {
                     <View style={{ flex: 1, gap: 7 }}>
                       <Tag>ORIGINAL STORY · CHAPTER TWO</Tag>
                       <Text style={s.cardTitle}>{bookshop.title}</Text>
-                      <Text style={s.cardDescription}>{bookshop.description}</Text>
-                      <Text style={s.small}>11 illustrated narrative scenes · 3 endings · choices free</Text>
-                      <Text style={s.small}>Compatible with the main Free Life timeline; it remembers your earlier reunion.</Text>
+                      <Text style={s.cardDescription}>
+                        {bookshop.description}
+                      </Text>
+                      <Text style={s.small}>
+                        11 illustrated narrative scenes · 3 endings · choices
+                        free
+                      </Text>
+                      <Text style={s.small}>
+                        Compatible with the main Free Life timeline; it
+                        remembers your earlier reunion.
+                      </Text>
                     </View>
                     <View style={{ justifyContent: 'center', gap: 8 }}>
                       <Button
-                        label={save.life.progress.some(p => p.storyId === bookshop.id)
-                          ? 'Continue the bookshop →'
-                          : 'Enter the bookshop →'}
-                        disabled={!save.life.progress.some(p => p.storyId === reunion.id && p.completed) || save.life.day < 7}
+                        label={
+                          save.life.progress.some(
+                            (p) => p.storyId === bookshop.id,
+                          )
+                            ? 'Continue the bookshop →'
+                            : 'Enter the bookshop →'
+                        }
+                        disabled={
+                          !save.life.progress.some(
+                            (p) => p.storyId === reunion.id && p.completed,
+                          ) || save.life.day < 7
+                        }
                         onPress={openBookshop}
                       />
-                      {(!save.life.progress.some(p => p.storyId === reunion.id && p.completed) || save.life.day < 7) && (
-                        <Text style={s.small}>Unlock naturally: complete the reunion and spend 7 days in Bellweather.</Text>
+                      {(!save.life.progress.some(
+                        (p) => p.storyId === reunion.id && p.completed,
+                      ) ||
+                        save.life.day < 7) && (
+                        <Text style={s.small}>
+                          Unlock naturally: complete the reunion and spend 7
+                          days in Bellweather.
+                        </Text>
                       )}
                     </View>
                   </View>
@@ -918,14 +984,27 @@ export default function App() {
                 <>
                   <Text style={s.title}>Your people. Your history.</Text>
                   <View style={s.playerProfile}>
-                    <AvatarPortrait appearance={world!.player.appearance} size={117} />
+                    <AvatarPortrait
+                      appearance={world!.player.appearance}
+                      size={117}
+                    />
                     <View style={{ flex: 1, gap: 8 }}>
                       <Text style={s.cardTitle}>{world!.player.name}</Text>
-                      <Text style={s.small}>This is your character. Appearance is not tied to stats or gender.</Text>
+                      <Text style={s.small}>
+                        This is your character. Appearance is not tied to stats
+                        or gender.
+                      </Text>
                       <Button
-                        label={editingLook ? 'Close appearance editor' : '✦ Customize my look'}
+                        label={
+                          editingLook
+                            ? 'Close appearance editor'
+                            : '✦ Customize my look'
+                        }
                         onPress={() => {
-                          if (!editingLook) setLookDraft(world!.player.appearance ?? DEFAULT_APPEARANCE);
+                          if (!editingLook)
+                            setLookDraft(
+                              world!.player.appearance ?? DEFAULT_APPEARANCE,
+                            );
                           setEditingLook(!editingLook);
                         }}
                       />
@@ -933,15 +1012,27 @@ export default function App() {
                   </View>
                   {editingLook && (
                     <View style={s.lookPanel}>
-                      <AvatarEditor appearance={lookDraft} onChange={setLookDraft} heading="Your look, your rules." compact />
+                      <AvatarEditor
+                        appearance={lookDraft}
+                        onChange={setLookDraft}
+                        heading="Your look, your rules."
+                        compact
+                      />
                       <View style={s.row}>
-                        <Button label="Save appearance ✓" onPress={() => {
-                          run(() => {
-                            update(setCharacterAppearance(world!, lookDraft));
-                            setEditingLook(false);
-                          });
-                        }} />
-                        <Button label="Cancel" secondary onPress={() => setEditingLook(false)} />
+                        <Button
+                          label="Save appearance ✓"
+                          onPress={() => {
+                            run(() => {
+                              update(setCharacterAppearance(world!, lookDraft));
+                              setEditingLook(false);
+                            });
+                          }}
+                        />
+                        <Button
+                          label="Cancel"
+                          secondary
+                          onPress={() => setEditingLook(false)}
+                        />
                       </View>
                     </View>
                   )}
@@ -956,7 +1047,9 @@ export default function App() {
                       const memories = world!.memories.filter(
                         (memory) => memory.subject === friend.characterId,
                       );
-                      const npc = world!.npcLives?.find(person => person.characterId === friend.characterId);
+                      const npc = world!.npcLives?.find(
+                        (person) => person.characterId === friend.characterId,
+                      );
                       return (
                         <View key={friend.characterId} style={s.profileCard}>
                           <View style={s.profileTop}>
@@ -980,8 +1073,13 @@ export default function App() {
                               </Text>
                               {npc && (
                                 <>
-                                  <Text style={s.eyebrow}>{npc.occupation.toUpperCase()} · {npc.mood.toUpperCase()}</Text>
-                                  <Text style={s.small}>Currently: {npc.currentGoal}</Text>
+                                  <Text style={s.eyebrow}>
+                                    {npc.occupation.toUpperCase()} ·{' '}
+                                    {npc.mood.toUpperCase()}
+                                  </Text>
+                                  <Text style={s.small}>
+                                    Currently: {npc.currentGoal}
+                                  </Text>
                                 </>
                               )}
                               <Text style={s.eyebrow}>
@@ -1011,9 +1109,13 @@ export default function App() {
                           </Text>
                           {npc && npc.milestones.length > 0 && (
                             <View style={s.npcMilestones}>
-                              <Text style={s.eyebrow}>LIFE OUTSIDE YOUR OWN</Text>
-                              {npc.milestones.slice(-3).map(item => (
-                                <Text key={item} style={s.small}>✦ {item.replaceAll('_', ' ')}</Text>
+                              <Text style={s.eyebrow}>
+                                LIFE OUTSIDE YOUR OWN
+                              </Text>
+                              {npc.milestones.slice(-3).map((item) => (
+                                <Text key={item} style={s.small}>
+                                  ✦ {item.replaceAll('_', ' ')}
+                                </Text>
                               ))}
                             </View>
                           )}
@@ -1110,19 +1212,70 @@ export default function App() {
   );
 }
 const s = StyleSheet.create({
-  lifeIdentity: { flexDirection:'row', flexWrap:'wrap', alignItems:'center', gap:12 },
-  playerProfile: { flexDirection:'row', alignItems:'center', flexWrap:'wrap', gap:14, borderWidth:1, borderColor:'#7c5a52', backgroundColor:'#1a2a3d', borderRadius:13, padding:12 },
-  lookPanel: { borderRadius:14, borderWidth:1, borderColor:'#856751', backgroundColor:'#142238', padding:14, gap:16 },
-  storyActors: { alignSelf:'center', flexDirection:'row', alignItems:'flex-end', justifyContent:'space-between', width:'100%', maxWidth:510, minHeight:150, marginBottom:10 },
-  npcActor: { width:130, height:142, backgroundColor:'#1a2a3dcc', borderWidth:2, borderColor:'#d5a97d', borderRadius:60, overflow:'hidden', justifyContent:'center', alignItems:'center' },
-  npcActorImage: {width:128,height:140,resizeMode:'cover'},
+  lifeIdentity: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    gap: 12,
+  },
+  playerProfile: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 14,
+    borderWidth: 1,
+    borderColor: '#7c5a52',
+    backgroundColor: '#1a2a3d',
+    borderRadius: 13,
+    padding: 12,
+  },
+  lookPanel: {
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: '#856751',
+    backgroundColor: '#142238',
+    padding: 14,
+    gap: 16,
+  },
+  storyActors: {
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    width: '100%',
+    maxWidth: 510,
+    minHeight: 150,
+    marginBottom: 10,
+  },
+  npcActor: {
+    width: 130,
+    height: 142,
+    backgroundColor: '#1a2a3dcc',
+    borderWidth: 2,
+    borderColor: '#d5a97d',
+    borderRadius: 60,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  npcActorImage: { width: 128, height: 140, resizeMode: 'cover' },
 
-  npcMilestones: { padding: 12, borderRadius: 9, backgroundColor: '#29384c', gap: 5 },
+  npcMilestones: {
+    padding: 12,
+    borderRadius: 9,
+    backgroundColor: '#29384c',
+    gap: 5,
+  },
 
   bookshopFeature: {
-    flexDirection: 'row', flexWrap: 'wrap', gap: 18,
-    padding: 23, borderRadius: 13, borderWidth: 1,
-    backgroundColor: '#242438', borderColor: '#8c6653',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 18,
+    padding: 23,
+    borderRadius: 13,
+    borderWidth: 1,
+    backgroundColor: '#242438',
+    borderColor: '#8c6653',
   },
 
   peopleGallery: { flexDirection: 'row', flexWrap: 'wrap', gap: 17 },

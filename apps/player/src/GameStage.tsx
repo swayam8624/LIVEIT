@@ -84,7 +84,9 @@ export function GameStage({
       imageStyle={styles.image}
       style={[
         styles.stage,
-        { height: stageHeight ?? (compact ? 270 : mode === 'story' ? 480 : 410) },
+        {
+          height: stageHeight ?? (compact ? 270 : mode === 'story' ? 480 : 410),
+        },
       ]}
     >
       <View

@@ -4,21 +4,21 @@ Prepared: 2026-10-17. Planning artifact; **not a claim that the features describ
 
 ## Vision and non-negotiables
 
-Create an original, commercial-quality life-simulation and animated-interactive-fiction platform. Free Life and Story Mode are equally important, with shared state and explicit standalone timeline isolation. Borrow successful *interaction principles* from BitLife and Episode, **not their proprietary artwork, animations, scripts, interfaces, stories, sounds, or trademarks**. No advertisements, energy timers, paid dialogue choices, forced retries, pay-to-win outcomes, or frustrating time-walls. Monetize optional creator tipping, cosmetics, or separately priced substantial additions only after the product works well for free.
+Create an original, commercial-quality life-simulation and animated-interactive-fiction platform. Free Life and Story Mode are equally important, with shared state and explicit standalone timeline isolation. Borrow successful _interaction principles_ from BitLife and Episode, **not their proprietary artwork, animations, scripts, interfaces, stories, sounds, or trademarks**. No advertisements, energy timers, paid dialogue choices, forced retries, pay-to-win outcomes, or frustrating time-walls. Monetize optional creator tipping, cosmetics, or separately priced substantial additions only after the product works well for free.
 
-Success is not measured in how many buttons are visible or how many story JSON files are indexed. It is measured by fast, expressive, consistent, replayable, *finished* interactive experiences.
+Success is not measured in how many buttons are visible or how many story JSON files are indexed. It is measured by fast, expressive, consistent, replayable, _finished_ interactive experiences.
 
 ## Direct source-code audit (main branch at 2026-10-17)
 
 - `apps/player/App.tsx` is about 1,800 lines: app boot, storage queue, navigation, onboarding, Scene UI, Free Life actions, people, and journal are coupled.
 - Free Life offers work / study / friends / rest activity clicks that largely adjust stats and pass time. There are limited careers, no proper school/family/purchasing/health/romance/career transitions and no life-stage arc. Current character starts at 23; the age-up loop of a life simulator is missing.
-- `chooseCareer()` explicitly rejects switching careers while describing a *future* transition event. A missing gameplay mechanic is not a feature.
+- `chooseCareer()` explicitly rejects switching careers while describing a _future_ transition event. A missing gameplay mechanic is not a feature.
 - `visitDistrict()` updates a stored district and history; many city opportunities are not strongly tied to spatial or social context.
 - The 20 scripted encounters are interesting prototypes but mostly one-off paired decisions. The scheduler offers them on fixed simulated-day cadences, and resolved content doesn't replay.
 - NPC careers/goals advance on authored day numbers, not reactive plans, budgets, schedules or interpersonal situations.
 - Story Mode uses largely one illustrated stage, minimal portrait logic, and conventional card-like text choices; no true rigged actors, outfit continuity, scene-specific backgrounds, camera blocking, reactions, music, or cinematic pacing.
 - Current story schema supports fact/trust conditions and two consequence operations: relationship adjustment and memory creation. Authoring new cast, dynamic flags, items, money, job changes, playable minigames and scene-level animation cues requires v2.
-- Creator Studio *does* execute real shared-state preview choices, but it is not yet a production publishing service. Locally imported packages are JSON and are not secure public-media packages.
+- Creator Studio _does_ execute real shared-state preview choices, but it is not yet a production publishing service. Locally imported packages are JSON and are not secure public-media packages.
 - Shared save state is validated and backward compatible, but player event handlers close over prior rendered state and persist asynchronously: audit rapid concurrent taps for dropped actions, stale revision updates and duplicate choices.
 - Browser visual smoke tests and Hermes bundle exports pass. Native signed binaries, actual devices and public-user feedback are not verified.
 
@@ -51,13 +51,13 @@ A separate optional `City` screen can be entered from Activities. The map must n
 3. Resolve transaction using data-driven rules and seeded randomness based on skill, finances, mood, relationships and world.
 4. Show a short story-like event response: who reacted, what changed, one optional detail view, and **exactly** what game state was updated.
 5. Add the event to the life chronicle. Reopen activities within a single tap.
-6. Age up advances *world years* with birthdays, jobs, school, relationships, finances, life events; don't blindly multiply all daily wages by 365 without economics tests.
+6. Age up advances _world years_ with birthdays, jobs, school, relationships, finances, life events; don't blindly multiply all daily wages by 365 without economics tests.
 
 ### Feature domains, ordered
 
 **Tier 0 (vertical slice, fully functional)**: player age/family life stage; education/school/jobs with interview and promotion pipeline; 12-20 distinct activities; friendship/date/relationship system with NPC boundaries; finances and recurring expenses; property basics; 80-120 contextual events with flags, cooldowns and follow-ups; initial setup with multiple background choices; an at-a-glance lifetime timeline; save/load/restart with restore warning; fast age up; audiovisual feedback.
 
-**Tier 1 (closed beta)**: birth-to-elderly life cycle, health/habits, grades and educational opportunities, marriage/children/parents, career branching + layoffs + job switching + entrepreneurship, housing/vehicles/debt, reputation and social networks, achievements and legacy; 300+ hand-edited event *templates*, broad enough that runs are recognizably distinct.
+**Tier 1 (closed beta)**: birth-to-elderly life cycle, health/habits, grades and educational opportunities, marriage/children/parents, career branching + layoffs + job switching + entrepreneurship, housing/vehicles/debt, reputation and social networks, achievements and legacy; 300+ hand-edited event _templates_, broad enough that runs are recognizably distinct.
 
 **Tier 2 (post validation)**: evolving world conditions, legal/social consequences, travel, ambitions, community outcomes, generational continuity, accessibility/localization and creator-authored compatible life events.
 
@@ -83,7 +83,7 @@ A year can contain a small story reel (1-3 memorable changes + optional context)
 
 ### A scene is NOT a web card
 
-Each scene fills the viewport with stage layers, actors, lighting/weather and an *anchored* bottom dialogue dock. Dialogue reveals on tap, optional skip/read history. Character portrait/bodies are in-stage and expressive. The dock exposes speaker, styled line, decision rows *only when a decision is meaningful*, save/exit, history and accessibility settings. No nav chrome over the actor's face.
+Each scene fills the viewport with stage layers, actors, lighting/weather and an _anchored_ bottom dialogue dock. Dialogue reveals on tap, optional skip/read history. Character portrait/bodies are in-stage and expressive. The dock exposes speaker, styled line, decision rows _only when a decision is meaningful_, save/exit, history and accessibility settings. No nav chrome over the actor's face.
 
 ```
 ┌────────── Episode Player (phone portrait) ────────────┐
@@ -126,13 +126,15 @@ Every story has explicit continuity mode: `standalone`, `life-compatible`, or `w
 See machine-readable vetted candidates `content/open_licensed_source_catalog.json` (**30 individual catalog entries** including 19 root editions, 9 selected short stories and two open-licensed interactive-source libraries). A catalog entry is not a playable, cleared package. Every entry starts in `candidate` state.
 
 **Source categories and permissions**
-1. Existing historical literature believed U.S. public domain: Standard Ebooks (https://standardebooks.org/about), Project Gutenberg (https://www.gutenberg.org/policy/license), Wikisource only with edition/translation inspection. Check country rights *before* adaptation/publication. India literary term is generally author's life + 60 years from calendar year following death (https://copyright.gov.in/Copyright_Act_1957/chapter_v.html); other jurisdictions differ. Do not reuse copyrighted covers, illustrations, typography asset files or translations just because the original author died long ago. Project Gutenberg's trademark rules make removing their boilerplate/trademark and keeping provenance essential for altered commercial derivative works. Do not bulk scrape their main website; use permitted archive mirrors for bulk (https://www.gutenberg.org/policy/terms_of_use.html).
+
+1. Existing historical literature believed U.S. public domain: Standard Ebooks (https://standardebooks.org/about), Project Gutenberg (https://www.gutenberg.org/policy/license), Wikisource only with edition/translation inspection. Check country rights _before_ adaptation/publication. India literary term is generally author's life + 60 years from calendar year following death (https://copyright.gov.in/Copyright_Act_1957/chapter_v.html); other jurisdictions differ. Do not reuse copyrighted covers, illustrations, typography asset files or translations just because the original author died long ago. Project Gutenberg's trademark rules make removing their boilerplate/trademark and keeping provenance essential for altered commercial derivative works. Do not bulk scrape their main website; use permitted archive mirrors for bulk (https://www.gutenberg.org/policy/terms_of_use.html).
 2. Explicit CC0 narrative repositories: e.g. https://github.com/lightlogic/twine-stories (check subassets). Actual stories, not all tools.
 3. MIT sample **story** files: https://github.com/inkle/ink-library/tree/master/Stories; review per-file notices and attributed third-party material. MIT requires retaining its notice in redistribution.
 4. Other Twine/Ink/ChoiceScript source repositories: only when story text license explicitly permits commercial adaptation; a compiler/runtime's MIT license gives **no** story rights.
 5. Original or commissioned author work: writer keeps copyright; LIVEIT needs a clear nonexclusive publishing license, allowed territories/formats, creator attribution, takedown rules, revisions, and optional revenue agreements.
 
 **Ingestion pipeline**
+
 - Catalog discovery: Gutendex REST metadata `?copyright=false&languages=en&search=...` and Standard Ebooks feeds. Metadata marked `copyright=false` is U.S. status, not global clearance.
 - Rights review per original work, selected edition, translator, territory, illustrations, third-party brand use, and distribution strategy. Save permanent source URL, author death year, first publication date, source SHA-256, text version, analyst note and recorded decision; uncertain license blocks shipping.
 - Fetch/archive legal source texts in a private provenance store; stripping headers only when permitted.
@@ -144,6 +146,7 @@ See machine-readable vetted candidates `content/open_licensed_source_catalog.jso
 **Launch library proposal — quality-gated**: 2 existing original story arcs extended to multi-chapter structure; 4-6 carefully adapted classics across romance, mystery, horror and speculative fiction (shorter works first); 8-12 high-quality independent episodes by commissioned/opt-in creators; 25-50 authored life events with multi-step follow-ups. Do not announce 1000 stories when 1000 plain texts are still not interactive.
 
 Recommended first pilots:
+
 - `The Adventure of the Speckled Band` — concise detective narrative (check depiction of threats), objective/hypothesis choices.
 - `Behind a Mask` — social strategy with strong character motives and alternate alliance outcomes.
 - `The Strange Case of Dr. Jekyll and Mr. Hyde` — short, psychological, atmospheric identity story.
@@ -172,6 +175,7 @@ Accept sanitized Twine/Twee (Harlowe/SugarCube supported subset) and ink via ver
 ## QUALITY AND MEASUREMENT
 
 Collect on-device gameplay test metrics, not just build success:
+
 - age-up completion under 1 sec on a median supported device, UI immediate feedback target <100ms, and no scroll-position surprises;
 - 30-minute Free Life session with no obvious repeated unique encounter and actual progression in education/career/relationships;
 - every user-visible activity affects concrete world state; disabled buttons explain precisely why;
@@ -183,18 +187,18 @@ Collect on-device gameplay test metrics, not just build success:
 
 ## EXECUTION ORDER AND ACCEPTANCE GATES
 
-| Phase | Scope | Gate |
-| --- | --- | --- |
-| P0: stability foundation | Profile CPU/renders/taps; freeze/migrate saves; state dispatcher; eliminate duplicate effects; split monolithic player | Existing progress preserved; 100 rapid taps deterministic; no crashes or lost updates |
-| P1: **Free Life vertical slice** | New HUD/dock, age-up, 4 complete career steps, education, social and money loops, event follow-ups | 30-minute complete playable life arc; repeat runs meaningfully distinct |
-| P2: **Story cinematic vertical slice** | Staged café + 2nd location, 2 cutout actors, 6 expressions, dialogue dock, scene transitions, sound | 10-minute polished chapter; all paths and mobile layouts tested |
-| P3: source library | Rights manifest, metadata importer, Twine/ink compiler subset; adapt 3-4 shorter works, add reviewed art | 100% rights-reviewed shipped assets; reviewed chapters playable from beginning to end |
-| P4: expand both modes | Wider life ages, work/relationships/family/economy; 4-6 edited adapted story arcs and UGC-ready schema | Both modes equally supported; retention sessions show no dead-end mechanics |
-| P5: Creator Studio | Graph editor, staging/pose tracks, effect GUIs, packaging, safe import/export | New writer creates and plays a complete chapter without modifying JSON |
-| P6: moderated catalog | Accounts, review, search, store, CDN, security, analytics/privacy | Creator uploads allowed only after review, abuse/copyright/age policy and tested package rollback |
-| P7: native/public beta | Phone builds, signed artifacts, accessibility, localization, performance, hosting, privacy and app-store compliance | Native QA, crash analytics, player feedback, explicit launch approval |
+| Phase                                  | Scope                                                                                                                  | Gate                                                                                              |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| P0: stability foundation               | Profile CPU/renders/taps; freeze/migrate saves; state dispatcher; eliminate duplicate effects; split monolithic player | Existing progress preserved; 100 rapid taps deterministic; no crashes or lost updates             |
+| P1: **Free Life vertical slice**       | New HUD/dock, age-up, 4 complete career steps, education, social and money loops, event follow-ups                     | 30-minute complete playable life arc; repeat runs meaningfully distinct                           |
+| P2: **Story cinematic vertical slice** | Staged café + 2nd location, 2 cutout actors, 6 expressions, dialogue dock, scene transitions, sound                    | 10-minute polished chapter; all paths and mobile layouts tested                                   |
+| P3: source library                     | Rights manifest, metadata importer, Twine/ink compiler subset; adapt 3-4 shorter works, add reviewed art               | 100% rights-reviewed shipped assets; reviewed chapters playable from beginning to end             |
+| P4: expand both modes                  | Wider life ages, work/relationships/family/economy; 4-6 edited adapted story arcs and UGC-ready schema                 | Both modes equally supported; retention sessions show no dead-end mechanics                       |
+| P5: Creator Studio                     | Graph editor, staging/pose tracks, effect GUIs, packaging, safe import/export                                          | New writer creates and plays a complete chapter without modifying JSON                            |
+| P6: moderated catalog                  | Accounts, review, search, store, CDN, security, analytics/privacy                                                      | Creator uploads allowed only after review, abuse/copyright/age policy and tested package rollback |
+| P7: native/public beta                 | Phone builds, signed artifacts, accessibility, localization, performance, hosting, privacy and app-store compliance    | Native QA, crash analytics, player feedback, explicit launch approval                             |
 
-**Recommended staffing:** One lead developer + code agent can rebuild logic and CI, but artwork, animation, writing, licensing, QA and moderation remain significant independent disciplines. Commission or art-direct a *small consistent visual kit* rather than trying to generate thousands of mismatched portraits.
+**Recommended staffing:** One lead developer + code agent can rebuild logic and CI, but artwork, animation, writing, licensing, QA and moderation remain significant independent disciplines. Commission or art-direct a _small consistent visual kit_ rather than trying to generate thousands of mismatched portraits.
 
 **Priority order:** Fix basic game feel and the two 10-minute vertical slices **before** bulk importing books. Otherwise LIVEIT will have a huge library that still looks and plays like a document reader.
 
