@@ -1,3 +1,5 @@
+export { buildVisualScene } from './visual-scene';
+export type { CastMember } from './visual-scene';
 export { generateCityScene, projectCityBlock } from './city-scene';
 export type { CityScene, CityBlock } from './city-scene';
 export {
