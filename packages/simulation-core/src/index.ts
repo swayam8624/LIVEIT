@@ -1,12 +1,40 @@
-export { LIFE_MOMENTS, pendingLifeMoment, scheduleLifeMoment, resolveLifeMoment } from './moments';
+export {
+  LIFE_MOMENTS,
+  pendingLifeMoment,
+  scheduleLifeMoment,
+  resolveLifeMoment,
+} from './moments';
 export type { LifeMoment, MomentChoice } from './moments';
-export { CATALOG, portfolio, assetValue, netWorth, buyAsset, sellAsset, investIndex, withdrawIndex } from './portfolio';
+export {
+  CATALOG,
+  portfolio,
+  assetValue,
+  netWorth,
+  buyAsset,
+  sellAsset,
+  investIndex,
+  withdrawIndex,
+} from './portfolio';
 export type { AssetId } from './portfolio';
-export { applyForJob, attendJobInterview, requestPromotion, resignFromJob, ageUp } from './life';
+export {
+  applyForJob,
+  attendJobInterview,
+  requestPromotion,
+  resignFromJob,
+  ageUp,
+} from './life';
 import { initialCityState, tickCity } from './city';
 import { initialNPCLives, tickNPCs } from './npc';
 export { NPC_BEATS, initialNPCLives } from './npc';
-export { CITY_OPPORTUNITIES, DISTRICTS, availableCityOpportunities, chooseCareer, cityState, visitDistrict, resolveCityOpportunity } from './city';
+export {
+  CITY_OPPORTUNITIES,
+  DISTRICTS,
+  availableCityOpportunities,
+  chooseCareer,
+  cityState,
+  visitDistrict,
+  resolveCityOpportunity,
+} from './city';
 export type { CityOpportunity, CityChoice } from './city';
 import {
   WorldSchema,
@@ -74,32 +102,50 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
     tickNPCs(w);
     w.player.money -= 2800;
     if (activity === 'work') {
-      if (!w.city?.employment && w.player.career === 'seeking' && w.player.skill >= 25)
+      if (
+        !w.city?.employment &&
+        w.player.career === 'seeking' &&
+        w.player.skill >= 25
+      )
         w.player.career = 'employed';
       const careerJob = w.city?.employment;
       // An actual chosen job pays its contract rate; old v1 employment
       // still uses its original wages so legacy playthroughs do not change.
       w.player.money += careerJob
-        ? careerJob.stage === 'applied' ? 6500 : Math.round(careerJob.salaryAnnual / 260)
-        : w.player.career === 'employed' ? 12000 : 6500;
+        ? careerJob.stage === 'applied'
+          ? 6500
+          : Math.round(careerJob.salaryAnnual / 260)
+        : w.player.career === 'employed'
+          ? 12000
+          : 6500;
       w.player.wellbeing -= 4;
       w.player.skill += 1;
       if (careerJob && careerJob.stage !== 'applied')
         careerJob.experience = Math.min(20000, careerJob.experience + 1);
       if (w.player.career === 'employed' && w.city) {
-        const bonus = { undecided: 0, technology: 2200, creative: 800, business: 2800, community: 1200 }[w.city.careerPath];
+        const bonus = {
+          undecided: 0,
+          technology: 2200,
+          creative: 800,
+          business: 2800,
+          community: 1200,
+        }[w.city.careerPath];
         w.player.money += bonus;
-        if (w.city.careerPath === 'business') w.city.stress = Math.min(100, w.city.stress + 2);
-        if (w.city.careerPath === 'community') w.city.connections = Math.min(100, w.city.connections + 1);
+        if (w.city.careerPath === 'business')
+          w.city.stress = Math.min(100, w.city.stress + 2);
+        if (w.city.careerPath === 'community')
+          w.city.connections = Math.min(100, w.city.connections + 1);
       }
       if (w.city?.district === 'market') w.player.money += 1500;
     }
     if (activity === 'study') {
       w.player.skill += w.city?.district === 'university' ? 5 : 4;
       w.player.wellbeing -= 1;
-      if (w.city?.district === 'studio') w.city.reputation = Math.min(100, w.city.reputation + 1);
+      if (w.city?.district === 'studio')
+        w.city.reputation = Math.min(100, w.city.reputation + 1);
     }
-    if (activity === 'rest') w.player.wellbeing += w.city?.district === 'gardens' ? 12 : 9;
+    if (activity === 'rest')
+      w.player.wellbeing += w.city?.district === 'gardens' ? 12 : 9;
     if (activity === 'socialize') {
       w.player.wellbeing += 5;
       const friend = w.relationships.find((r) => r.characterId === 'noah');
@@ -129,7 +175,10 @@ export function advanceLife(input: World, activity: Activity, days = 1): World {
 }
 
 /** Re-style an existing character without purchasing clothing or changing stats. */
-export function setCharacterAppearance(input: World, appearance: Appearance): World {
+export function setCharacterAppearance(
+  input: World,
+  appearance: Appearance,
+): World {
   const world = structuredClone(WorldSchema.parse(input));
   world.player.appearance = AppearanceSchema.parse(appearance);
   return WorldSchema.parse(world);

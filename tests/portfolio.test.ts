@@ -1,8 +1,15 @@
 import { describe, it, expect } from 'vitest';
 import { WorldSchema } from '@living/world-schema';
 import {
-  createWorld, ageUp, CATALOG, portfolio, netWorth,
-  buyAsset, sellAsset, investIndex, withdrawIndex,
+  createWorld,
+  ageUp,
+  CATALOG,
+  portfolio,
+  netWorth,
+  buyAsset,
+  sellAsset,
+  investIndex,
+  withdrawIndex,
 } from '@living/simulation-core';
 
 describe('LIVEIT native life: financial actions', () => {
@@ -42,7 +49,9 @@ describe('LIVEIT native life: financial actions', () => {
     expect(a).toEqual(b);
     expect(seed.portfolio?.indexPence).toBe(10000);
     expect(a.portfolio?.indexPence).toBe(10800); // year 1 uses 1.08
-    expect(a.history.some(x => x.text.includes('simulated market cycle'))).toBe(true);
+    expect(
+      a.history.some((x) => x.text.includes('simulated market cycle')),
+    ).toBe(true);
     expect(a.player.ageDays).toBe(seed.player.ageDays + 365);
   });
   it('retains invested assets through further age-ups and withdrawals', () => {

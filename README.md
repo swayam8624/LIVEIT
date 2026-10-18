@@ -117,13 +117,14 @@ still require hands-on tests. Only use materials whose terms you have verified.
 
 This gameplay branch adds meaningful gameplay rather than a static mockup: an explorable isometric neighborhood map with five destinations, twenty authored choice events, a career direction, independent NPC life milestones, and **A Place for Second Chances**, a second original 11-scene / three-ending narrative connected to the Amelia reunion. Consequences modify trust, wellbeing, finances, skill, stress, reputation, connections, memories, and saved world history.
 
-Free Life is now best played by choosing a destination, spending time working/studying/socializing/resting, opening the city encounter when a new opportunity appears, and making one of the event's trade-off decisions. Events appear as *game time* advances: there are no ads, energy, paid-choice gates or real-time waiting.
+Free Life is now best played by choosing a destination, spending time working/studying/socializing/resting, opening the city encounter when a new opportunity appears, and making one of the event's trade-off decisions. Events appear as _game time_ advances: there are no ads, energy, paid-choice gates or real-time waiting.
 
 Free/open graphics in this branch are **actually bundled and pinned**:
+
 - 4 Kenney CC0 UI control icons;
 - 15 Kenney CC0 city tile pieces;
 - 9 Kenney CC0 isometric building pieces (5 currently visible in the main city map).
-All 28 source assets have exact Git blob hashes, pinned upstream commit information and credits in `assets/kenney_ui_provenance.json` and `assets/kenney_city_provenance.json`. Source files remain owned by their respective original authors; the LIVEIT repository itself is not automatically CC0.
+  All 28 source assets have exact Git blob hashes, pinned upstream commit information and credits in `assets/kenney_ui_provenance.json` and `assets/kenney_city_provenance.json`. Source files remain owned by their respective original authors; the LIVEIT repository itself is not automatically CC0.
 
 Do not merge or publish without green foundation checks, visual screenshots and a review of original asset rights. Physical iOS and Android devices are still untested. The public creator marketplace, remote accounts, UGC moderation, full-body rigs, advanced story editing and real store distribution have not yet been implemented.
 

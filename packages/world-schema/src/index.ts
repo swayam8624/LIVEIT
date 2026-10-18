@@ -53,75 +53,118 @@ export const ProgressSchema = z
  * lazily upgraded when a city action is performed.
  */
 export const DistrictSchema = z.enum([
-  'riverside', 'university', 'market', 'studio', 'gardens',
+  'riverside',
+  'university',
+  'market',
+  'studio',
+  'gardens',
 ]);
 export const CareerPathSchema = z.enum([
-  'undecided', 'technology', 'creative', 'business', 'community',
+  'undecided',
+  'technology',
+  'creative',
+  'business',
+  'community',
 ]);
-export const EmploymentSchema = z.object({
-  field: CareerPathSchema.exclude(['undecided']),
-  stage: z.enum(['applied','employed','senior','lead']),
-  company: z.string().min(1).max(80),
-  jobTitle: z.string().min(1).max(80),
-  salaryAnnual: z.number().int().min(0).max(100000000),
-  experience: z.number().int().min(0).max(20000),
-  interviews: z.number().int().min(0).max(1000),
-  hiredDay: z.number().int().nonnegative().nullable(),
-  lastPromotionDay: z.number().int().nonnegative().nullable(),
-}).strict();
+export const EmploymentSchema = z
+  .object({
+    field: CareerPathSchema.exclude(['undecided']),
+    stage: z.enum(['applied', 'employed', 'senior', 'lead']),
+    company: z.string().min(1).max(80),
+    jobTitle: z.string().min(1).max(80),
+    salaryAnnual: z.number().int().min(0).max(100000000),
+    experience: z.number().int().min(0).max(20000),
+    interviews: z.number().int().min(0).max(1000),
+    hiredDay: z.number().int().nonnegative().nullable(),
+    lastPromotionDay: z.number().int().nonnegative().nullable(),
+  })
+  .strict();
 export type Employment = z.infer<typeof EmploymentSchema>;
 
-export const CityStateSchema = z.object({
-  district: DistrictSchema,
-  careerPath: CareerPathSchema,
-  employment: EmploymentSchema.optional(),
-  reputation: z.number().int().min(0).max(100),
-  stress: z.number().int().min(0).max(100),
-  connections: z.number().int().min(0).max(100),
-  housing: z.enum(['shared_flat', 'own_flat', 'townhouse']),
-  milestones: z.array(z.string().min(1).max(80)).max(150),
-  opportunities: z.array(z.object({
-    id: z.string().min(1).max(80),
-    offeredDay: z.number().int().nonnegative(),
-    expiresDay: z.number().int().nonnegative(),
-  }).strict()).max(3),
-  resolved: z.array(z.string().min(1).max(80)).max(1000),
-}).strict();
+export const CityStateSchema = z
+  .object({
+    district: DistrictSchema,
+    careerPath: CareerPathSchema,
+    employment: EmploymentSchema.optional(),
+    reputation: z.number().int().min(0).max(100),
+    stress: z.number().int().min(0).max(100),
+    connections: z.number().int().min(0).max(100),
+    housing: z.enum(['shared_flat', 'own_flat', 'townhouse']),
+    milestones: z.array(z.string().min(1).max(80)).max(150),
+    opportunities: z
+      .array(
+        z
+          .object({
+            id: z.string().min(1).max(80),
+            offeredDay: z.number().int().nonnegative(),
+            expiresDay: z.number().int().nonnegative(),
+          })
+          .strict(),
+      )
+      .max(3),
+    resolved: z.array(z.string().min(1).max(80)).max(1000),
+  })
+  .strict();
 export type CityState = z.infer<typeof CityStateSchema>;
 export type District = z.infer<typeof DistrictSchema>;
 export type CareerPath = z.infer<typeof CareerPathSchema>;
 
 /** Lightweight off-screen NPC simulation; optional for old local saves. */
-export const NPCLifeSchema = z.object({
-  characterId: z.string().min(1),
-  occupation: z.string().min(1).max(100),
-  currentGoal: z.string().min(1).max(200),
-  mood: z.enum(['hopeful', 'busy', 'anxious', 'content', 'restless']),
-  milestones: z.array(z.string().min(1).max(120)).max(80),
-}).strict();
+export const NPCLifeSchema = z
+  .object({
+    characterId: z.string().min(1),
+    occupation: z.string().min(1).max(100),
+    currentGoal: z.string().min(1).max(200),
+    mood: z.enum(['hopeful', 'busy', 'anxious', 'content', 'restless']),
+    milestones: z.array(z.string().min(1).max(120)).max(80),
+  })
+  .strict();
 export type NPCLife = z.infer<typeof NPCLifeSchema>;
 
 /** Persisted financial assets remain optional for all legacy version-one saves. */
-export const PortfolioSchema = z.object({
-  indexPence: z.number().int().min(0).max(100000000),
-  owned: z.array(z.object({
-    id: z.enum(['bicycle', 'car', 'flat', 'townhouse']),
-    dayBought: z.number().int().nonnegative(),
-  }).strict()).max(4),
-}).strict().superRefine((portfolio, ctx) => {
-  if (new Set(portfolio.owned.map(asset => asset.id)).size !== portfolio.owned.length)
-    ctx.addIssue({ code: 'custom', message: 'An asset cannot be owned twice' });
-});
+export const PortfolioSchema = z
+  .object({
+    indexPence: z.number().int().min(0).max(100000000),
+    owned: z
+      .array(
+        z
+          .object({
+            id: z.enum(['bicycle', 'car', 'flat', 'townhouse']),
+            dayBought: z.number().int().nonnegative(),
+          })
+          .strict(),
+      )
+      .max(4),
+  })
+  .strict()
+  .superRefine((portfolio, ctx) => {
+    if (
+      new Set(portfolio.owned.map((asset) => asset.id)).size !==
+      portfolio.owned.length
+    )
+      ctx.addIssue({
+        code: 'custom',
+        message: 'An asset cannot be owned twice',
+      });
+  });
 export type Portfolio = z.infer<typeof PortfolioSchema>;
 
 /** Optional life-director state; absence keeps old save files valid. */
-export const LifeMomentStateSchema = z.object({
-  pendingId: z.string().max(100).nullable(),
-  seen: z.array(z.object({
-    id: z.string().min(1).max(100),
-    day: z.number().int().nonnegative(),
-  }).strict()).max(100),
-}).strict();
+export const LifeMomentStateSchema = z
+  .object({
+    pendingId: z.string().max(100).nullable(),
+    seen: z
+      .array(
+        z
+          .object({
+            id: z.string().min(1).max(100),
+            day: z.number().int().nonnegative(),
+          })
+          .strict(),
+      )
+      .max(100),
+  })
+  .strict();
 export type LifeMomentState = z.infer<typeof LifeMomentStateSchema>;
 
 export const WorldSchema = z

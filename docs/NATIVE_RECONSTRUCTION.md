@@ -61,6 +61,7 @@ Long-term memory belongs in **local SQLite** (facts, episodes, vector embeddings
 **AI characters:** local memory + model-provider abstraction + server-side proxy; configurable personalities and mature fictional dialogue for adults with consent/age verification. Do not add hidden app-review evasion switches. Prohibit any sexual content involving minors, exploitation, nonconsensual intimate material, grooming and deceptive impersonation. Store-distributed content must meet applicable Apple/Google policies. Adults-only preferences do not override store rules.
 
 **Key external constraints (reviewed 2026-10-18):**
+
 - Apple App Review Guidelines §1.1.4 restrict pornographic content; §1.2 warns about apps primarily used for random/anonymous chat and requires filtering, reports and blocks.
 - Apple clarified restrictions against nonconsensual intimate images and hidden prohibited features on 2026-10-16.
 - Google Play's AI content rules require in-app user reporting.
@@ -68,15 +69,15 @@ Long-term memory belongs in **local SQLite** (facts, episodes, vector embeddings
 
 ## Build gates (must all be demonstrable)
 
-| Gate | Proof |
-|---|---|
-| A. Native bootstrap | Boot/launch on iOS simulator and Android emulator; no webview-as-game |
-| B. Interesting life loop | Birth → school → job → relationship → assets → death/heir; minimum ten independently repeatable lives |
-| C. Story | 15-minute complete expressive chapter, branching consequences across scenes, no placeholder portraits |
-| D. Memory | 200-turn seeded recall/contradiction/knowledge tests; data persists after restart |
-| E. Social | Two physical/simulated clients exchange real messages, block/report, disconnect/resume, handle no-match honestly |
-| F. Services | Token auth, room isolation, message replay/idempotency, abuse throttling and privacy deletion in integration tests |
-| G. Performance | 60 fps target, accessible controls, measured cold start and input latency on a mid-tier phone |
-| H. Content | Rights-checked content, human-edited routes, replay analysis and legally sound art provenance |
+| Gate                     | Proof                                                                                                              |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| A. Native bootstrap      | Boot/launch on iOS simulator and Android emulator; no webview-as-game                                              |
+| B. Interesting life loop | Birth → school → job → relationship → assets → death/heir; minimum ten independently repeatable lives              |
+| C. Story                 | 15-minute complete expressive chapter, branching consequences across scenes, no placeholder portraits              |
+| D. Memory                | 200-turn seeded recall/contradiction/knowledge tests; data persists after restart                                  |
+| E. Social                | Two physical/simulated clients exchange real messages, block/report, disconnect/resume, handle no-match honestly   |
+| F. Services              | Token auth, room isolation, message replay/idempotency, abuse throttling and privacy deletion in integration tests |
+| G. Performance           | 60 fps target, accessible controls, measured cold start and input latency on a mid-tier phone                      |
+| H. Content               | Rights-checked content, human-edited routes, replay analysis and legally sound art provenance                      |
 
 The current branch's small asset feature **only** advances Gate B. Until D/E/F pass, neither AI chat nor anonymous chat should appear as fabricated "online" gameplay.

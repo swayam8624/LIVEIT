@@ -6,20 +6,20 @@
 
 ## Inventory grounded in the archived code
 
-| Domain | OpenLife source | LIVEIT target |
-|---|---|---|
-| Life/player progression | `Person`, `Player`, age-up and yearly menu | deterministic annual transition, birth→death, visible consequence reel |
-| Family & social | `Parent`, `Child`, `Friend`, `Spouse`, `Ex`, `makeFriend`, `loveMenu` | persistent family graph, birth/adoption, NPC autonomy, courtship and breaks |
-| Education & work | `university`, `uniApplication`, `jobInterview`, `Job`, `CoWorker`, `freelanceWork` | school grades, scholarships, working contract and job ladder |
-| Investing | `Bond`, `Crypto`, `Metal`, `IndexFund`, `Stock`; `investMenu` | ledger-based playable instruments with stochastic macro regimes and reproducible seed |
-| Housing | `House`, `buyHouse`, `houseInteract` | rent, mortgages, property upkeep/depreciation, moving |
-| Vehicles | `Vehicle`, `Car`, `Boat`, `Plane`, dealerships/docks/hangar | purchase, resale, upkeep, optional travel interactions |
-| Law & justice | `Offence`, `adultCrime`, `robBank`, `lawsuit`, `prison` | crime risks, court outcomes, incarceration, reputation |
-| Health | `Surgeon`, `doctorMenu`, `rehab`, illness states | symptoms, conditions, healthcare access, recovery and mortality |
-| Fame/creator | `OpenTube`, `createChannel`, `openTube` | content-creator reputation/economy route |
-| Legacy & progression | `Achievement`, `grantAchievement`, `die`, ribbons, lifetime statistics | achievements, multiple endings, heirs, unlocked traits and Life Recap |
-| Special routes | `myLab`, `researchLab`, `emigrate`, `adoption` | researcher, immigration, family and extraordinary outcome arcs |
-| Save/load | `saveGame`, `loadGame`, converters | schema migrations, event log, offline persistence, backed-up snapshots |
+| Domain                  | OpenLife source                                                                    | LIVEIT target                                                                         |
+| ----------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Life/player progression | `Person`, `Player`, age-up and yearly menu                                         | deterministic annual transition, birth→death, visible consequence reel                |
+| Family & social         | `Parent`, `Child`, `Friend`, `Spouse`, `Ex`, `makeFriend`, `loveMenu`              | persistent family graph, birth/adoption, NPC autonomy, courtship and breaks           |
+| Education & work        | `university`, `uniApplication`, `jobInterview`, `Job`, `CoWorker`, `freelanceWork` | school grades, scholarships, working contract and job ladder                          |
+| Investing               | `Bond`, `Crypto`, `Metal`, `IndexFund`, `Stock`; `investMenu`                      | ledger-based playable instruments with stochastic macro regimes and reproducible seed |
+| Housing                 | `House`, `buyHouse`, `houseInteract`                                               | rent, mortgages, property upkeep/depreciation, moving                                 |
+| Vehicles                | `Vehicle`, `Car`, `Boat`, `Plane`, dealerships/docks/hangar                        | purchase, resale, upkeep, optional travel interactions                                |
+| Law & justice           | `Offence`, `adultCrime`, `robBank`, `lawsuit`, `prison`                            | crime risks, court outcomes, incarceration, reputation                                |
+| Health                  | `Surgeon`, `doctorMenu`, `rehab`, illness states                                   | symptoms, conditions, healthcare access, recovery and mortality                       |
+| Fame/creator            | `OpenTube`, `createChannel`, `openTube`                                            | content-creator reputation/economy route                                              |
+| Legacy & progression    | `Achievement`, `grantAchievement`, `die`, ribbons, lifetime statistics             | achievements, multiple endings, heirs, unlocked traits and Life Recap                 |
+| Special routes          | `myLab`, `researchLab`, `emigrate`, `adoption`                                     | researcher, immigration, family and extraordinary outcome arcs                        |
+| Save/load               | `saveGame`, `loadGame`, converters                                                 | schema migrations, event log, offline persistence, backed-up snapshots                |
 
 This is a **mechanics inventory**, not an assertion that each upstream mechanic is balanced, complete or bug-free. Audit each function's state mutation, probability, UI wiring, and tests before adapting it.
 
@@ -27,7 +27,7 @@ This is a **mechanics inventory**, not an assertion that each upstream mechanic 
 
 1. OpenLife combines rules, UI, input, text, persistence and randomness in one file. Do not transplant its global state, direct `input()` menus or scattered random calls.
 2. Multiple game domains use procedural mutable Python objects and ad-hoc save transitions. LIVEIT must reject malformed states and preserve legacy save migration.
-3. LIVEIT v1 has a similar *smaller* problem: the player `App.tsx` still coordinates navigation, scene, persistence, world and user actions. Split by domain instead of growing the component.
+3. LIVEIT v1 has a similar _smaller_ problem: the player `App.tsx` still coordinates navigation, scene, persistence, world and user actions. Split by domain instead of growing the component.
 4. A million generated generic events is less valuable than 150 meaningful, tested, reactive events. Use eligibility/cooldown chains and record durable consequences.
 5. Do not copy game titles, art, dialogues, copyrighted assets, or UI from BitLife/Episode/Character.AI. Similar mechanical systems can be original.
 
