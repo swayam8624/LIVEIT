@@ -114,6 +114,16 @@ export const PortfolioSchema = z.object({
 });
 export type Portfolio = z.infer<typeof PortfolioSchema>;
 
+/** Optional life-director state; absence keeps old save files valid. */
+export const LifeMomentStateSchema = z.object({
+  pendingId: z.string().max(100).nullable(),
+  seen: z.array(z.object({
+    id: z.string().min(1).max(100),
+    day: z.number().int().nonnegative(),
+  }).strict()).max(100),
+}).strict();
+export type LifeMomentState = z.infer<typeof LifeMomentStateSchema>;
+
 export const WorldSchema = z
   .object({
     schemaVersion: z.literal(1),
@@ -129,6 +139,7 @@ export const WorldSchema = z
     city: CityStateSchema.optional(),
     npcLives: z.array(NPCLifeSchema).max(100).optional(),
     portfolio: PortfolioSchema.optional(),
+    lifeMoments: LifeMomentStateSchema.optional(),
   })
   .strict()
   .superRefine((w, ctx) => {
