@@ -83,7 +83,7 @@ export function CityWorld({
     <View style={styles.root}>
       <View style={styles.heading}>
         <View style={{ flex: 1, gap: 3 }}>
-          <Text style={styles.eyebrow}>BELLWEATHER  /  FREE ROAM</Text>
+          <Text style={styles.eyebrow}>BELLWEATHER / FREE ROAM</Text>
           <Text style={styles.title}>EXPLORE THE CITY</Text>
           <Text style={styles.caption}>
             Go somewhere. Meet someone. Choose what matters.
@@ -98,7 +98,7 @@ export function CityWorld({
         </View>
       </View>
       <View style={styles.mapControls}>
-        <Text style={styles.eyebrow}>WORLD MAP  ·  DISTRICT SELECT</Text>
+        <Text style={styles.eyebrow}>WORLD MAP · DISTRICT SELECT</Text>
         <Pressable
           accessibilityRole="button"
           onPress={() => setShowDistrictCards((v) => !v)}
@@ -352,7 +352,12 @@ const styles = StyleSheet.create({
     gap: 3,
     minWidth: 170,
   },
-  hudLabel: { fontFamily: t.font.hud, color: t.muted, letterSpacing: 0.7, fontSize: 9 },
+  hudLabel: {
+    fontFamily: t.font.hud,
+    color: t.muted,
+    letterSpacing: 0.7,
+    fontSize: 9,
+  },
   hudValue: { color: t.amber, fontSize: 22, fontWeight: '800' },
   districts: { gap: 10, paddingVertical: 3, paddingHorizontal: 1 },
   district: {
@@ -437,7 +442,12 @@ const styles = StyleSheet.create({
     minHeight: 58,
   },
   optionPressed: { backgroundColor: t.neonDeep },
-  optionIndex: { fontFamily: t.font.hud, color: t.neon, fontWeight: '800', fontSize: 11 },
+  optionIndex: {
+    fontFamily: t.font.hud,
+    color: t.neon,
+    fontWeight: '800',
+    fontSize: 11,
+  },
   optionText: { flex: 1, color: t.ink, fontSize: 14, lineHeight: 22 },
   arrow: { color: t.amber, fontSize: 20 },
   note: { color: t.muted, fontSize: 11, lineHeight: 17 },
