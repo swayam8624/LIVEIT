@@ -71,6 +71,31 @@ std::vector<CityBlock> generateCity(uint32_t seed) {
   return blocks;
 }
 
+// Same std430 32-byte ABI as the character shader: pose.xy=screen position,
+// pose.z=scale, pose.w=emotion and dimensions contain palette/style selectors.
+std::vector<CityBlock> generateActors(const std::string& mode, uint32_t expression) {
+  auto actor = [](float x, float y, float scale, float emotion,
+                  float skin, float hair, float outfit, float hairstyle) -> CityBlock {
+    return {{{x,y,scale,emotion}},{{skin,hair,outfit,hairstyle}}};
+  };
+  if (mode == "portrait")
+    return {actor(.50f,.52f,1.13f,static_cast<float>(expression),4,3,2,7)};
+  if (mode == "conversation")
+    return {
+      actor(.28f,.55f,.88f,static_cast<float>(expression),4,3,2,7),
+      actor(.73f,.55f,.88f,1.f,8,5,6,9),
+    };
+  if (mode == "cast")
+    return {
+      actor(.12f,.62f,.57f,0.f,0,0,1,0),
+      actor(.31f,.62f,.57f,1.f,4,4,3,5),
+      actor(.50f,.62f,.57f,3.f,8,2,6,9),
+      actor(.69f,.62f,.57f,6.f,10,8,4,7),
+      actor(.88f,.62f,.57f,9.f,6,10,8,12),
+    };
+  throw std::runtime_error("Unknown rendering mode: " + mode);
+}
+
 std::vector<uint32_t> readShader(const std::string& path) {
   std::ifstream file(path, std::ios::binary | std::ios::ate);
   if (!file) throw std::runtime_error("Shader not found: " + path);
@@ -188,6 +213,13 @@ int main(int argc, char** argv) {
     const uint32_t width = argc > 2 ? static_cast<uint32_t>(std::stoul(argv[2])) : 512u;
     const uint32_t height = argc > 3 ? static_cast<uint32_t>(std::stoul(argv[3])) : 320u;
     const bool night = argc > 4 ? std::string(argv[4]) != "day" : true;
+    const std::string sceneMode = argc > 5 ? argv[5] : "city";
+    const uint32_t expression = argc > 6 ? static_cast<uint32_t>(std::stoul(argv[6])) : 0u;
+    if (sceneMode != "city" && sceneMode != "portrait" &&
+        sceneMode != "conversation" && sceneMode != "cast")
+      throw std::runtime_error("mode must be city, portrait, conversation or cast");
+    if (expression > 11u) throw std::runtime_error("expression must be 0..11");
+
     if (width < 64 || height < 64 || width > 2048 || height > 2048)
       throw std::runtime_error("Width and height must be 64–2048 pixels");
 
@@ -265,7 +297,9 @@ int main(int argc, char** argv) {
     VkQueue queue = VK_NULL_HANDLE;
     vkGetDeviceQueue(device, computeFamily, 0, &queue);
 
-    const auto blocks = generateCity(0xb311);
+    const auto blocks = sceneMode == "city"
+                            ? generateCity(0xb311)
+                            : generateActors(sceneMode, expression);
     const VkDeviceSize pixelBytes = static_cast<VkDeviceSize>(width) * height * sizeof(uint32_t);
     GpuBuffer pixelBuffer = makeBuffer(device, physical, pixelBytes);
     GpuBuffer blockBuffer = makeBuffer(device, physical, blocks.size() * sizeof(CityBlock),
@@ -300,7 +334,9 @@ int main(int argc, char** argv) {
     require(vkCreatePipelineLayout(device, &pipelineLayoutInfo, nullptr, &pipelineLayout),
             "vkCreatePipelineLayout");
 
-    auto shaderBytes = readShader(LIVEIT_CITY_SHADER_PATH);
+    auto shaderBytes = readShader(sceneMode == "city"
+                                       ? LIVEIT_CITY_SHADER_PATH
+                                       : LIVEIT_ACTORS_SHADER_PATH);
     VkShaderModuleCreateInfo shaderInfo{};
     shaderInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
     shaderInfo.codeSize = shaderBytes.size() * sizeof(uint32_t);
@@ -378,7 +414,7 @@ int main(int argc, char** argv) {
     vkCmdBindDescriptorSets(command, VK_PIPELINE_BIND_POINT_COMPUTE,
                             pipelineLayout, 0, 1, &set, 0, nullptr);
     Configuration cfg{width, height, static_cast<uint32_t>(blocks.size()),
-                      night ? 1u : 0u, 0.73f, 79.0f, 117.0f, 0.9f};
+                      night ? 1u : 0u, sceneMode == "city" ? .73f : 1.f, 79.0f, 117.0f, 0.9f};
     vkCmdPushConstants(command, pipelineLayout, VK_SHADER_STAGE_COMPUTE_BIT,
                        0, sizeof(cfg), &cfg);
     vkCmdDispatch(command, (width + 7u) / 8u, (height + 7u) / 8u, 1u);
@@ -409,7 +445,7 @@ int main(int argc, char** argv) {
     destroyBuffer(device, blockBuffer);
     vkDestroyDevice(device, nullptr);
     vkDestroyInstance(instance, nullptr);
-    std::cout << "Rendered " << width << "x" << height << " city via Vulkan -> "
+    std::cout << "Rendered " << width << "x" << height << " " << sceneMode << " via Vulkan -> "
               << outPath << "\n";
     return 0;
   } catch (const std::exception& error) {
