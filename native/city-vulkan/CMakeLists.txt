@@ -15,7 +15,16 @@ add_custom_command(
   VERBATIM
 )
 
-add_custom_target(city_shader DEPENDS ${CITY_SHADER_BINARY})
+set(ACTORS_SHADER_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/shaders/actors.comp)
+set(ACTORS_SHADER_BINARY ${CMAKE_CURRENT_BINARY_DIR}/actors.comp.spv)
+add_custom_command(
+  OUTPUT ${ACTORS_SHADER_BINARY}
+  COMMAND ${GLSLC_EXECUTABLE} ${ACTORS_SHADER_SOURCE} -o ${ACTORS_SHADER_BINARY}
+  DEPENDS ${ACTORS_SHADER_SOURCE}
+  COMMENT "Compile all-character Vulkan 2.5D stage to SPIR-V"
+  VERBATIM
+)
+add_custom_target(city_shader DEPENDS ${CITY_SHADER_BINARY} ${ACTORS_SHADER_BINARY})
 add_executable(city_vulkan src/main.cpp)
 add_dependencies(city_vulkan city_shader)
 target_compile_features(city_vulkan PRIVATE cxx_std_17)
@@ -32,3 +41,11 @@ add_test(NAME city_vulkan_day
   COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/city-day.ppm 256 160 day)
 add_test(NAME city_vulkan_night
   COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/city-night.ppm 256 160 night)
+add_test(NAME actors_vulkan_portrait
+  COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/actor-portrait.ppm 320 400 day portrait 1)
+add_test(NAME actors_vulkan_emotion
+  COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/actor-emotion.ppm 320 400 day portrait 8)
+add_test(NAME actors_vulkan_conversation
+  COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/actor-conversation.ppm 512 320 night conversation 2)
+add_test(NAME actors_vulkan_cast
+  COMMAND city_vulkan ${CMAKE_CURRENT_BINARY_DIR}/actor-cast.ppm 512 320 day cast 1)
