@@ -44,25 +44,6 @@ type Mission = LifeMission;
 function safeText(text: string): string {
   return text.trim().slice(0, 500);
 }
-function npcFallback(text: string, player: string): string {
-  const query = text.toLowerCase();
-  if (/work|job|money|rent|career/.test(query))
-    return 'Bellweather has opportunity, but not every job is worth your time. What kind of work would make you proud, ' + player + '?';
-  if (/friend|lonely|love|relationship|date/.test(query))
-    return 'I have seen friendships begin with a tiny conversation like this. Tell me what you actually need from someone.';
-  if (/story|mission|quest|adventure/.test(query))
-    return 'A story does not have to happen somewhere else. We can make a promise, visit a place, or change a life right here. What would you want to do?';
-  if (/hello|hi|hey|morning|evening/.test(query))
-    return 'Hey, ' + player + '. The market feels different today. What is on your mind?';
-  return 'I am listening. Tell me more about that, or ask me something about our lives here.';
-}
-
-
-/**
- * Web Ollama talks to the computer running this browser. On actual phones use
- * your Mac's LAN address instead of "localhost". No cloud model is involved.
- * Generated text is intentionally NEVER allowed to mutate authoritative saves.
- */
 async function npcFromLocalModel(
   endpoint: string, model: string, history: Message[], player: string, month: number,
 ): Promise<string> {
@@ -855,7 +836,7 @@ export function ArcadePixelLife({
                 <Pressable style={[s.add,{backgroundColor:'#a6d7b7'}]} onPress={() => { void (async () => {
                   setAiStatus('Checking Ollama…');
                   try {
-                    const res = await fetch(endpoint.trim().replace(/\\/+$/, '') + '/api/tags');
+                    const res = await fetch(endpoint.trim().replace(/\/+$/, '') + '/api/tags');
                     if (!res.ok) throw new Error('HTTP ' + res.status);
                     const data: unknown = await res.json();
                     const models = (data as {models?:Array<{name?:string}>}).models ?? [];
