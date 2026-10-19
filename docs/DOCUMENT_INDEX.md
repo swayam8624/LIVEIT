@@ -4,6 +4,8 @@
 
 ## Read / implement in this order
 
+> **Browse all planned assets:** [LIVEIT Asset Atlas — 1,481 searchable entries and 110-item first playable filter](../content/production-assets/ASSET_ATLAS.html). The atlas shows planned work and acceptance metadata, not completed images.
+
 | Priority | File                                                               | Owns                                                                                                                                                                                                                                    | Status                                                                         |
 | -------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | 1        | [GDS-001](LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md)                       | The visual identity, color, pixel sampling, 3D conversation animation, haptics, identity, accessibility and visual QA targets                                                                                                           | Final design specification, not code proof                                     |
