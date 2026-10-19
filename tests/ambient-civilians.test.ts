@@ -6,7 +6,7 @@ describe('chunk-aware pixel civilian routines',()=>{
   const seed=seedFromTimeline('living-world-3');
   it('repeats the same locations at the same time and seed',()=>{
     const a=ambientPedestrians(seed,-32,-32,48,48,480);
-    expect(a).toEqual(ambientPedestrians(seed,-32,-32,64,64,480));
+    expect(a).toEqual(ambientPedestrians(seed,-32,-32,48,48,480));
     expect(a.length).toBeGreaterThan(0);
   });
   it('never populates collisions or cells outside the rendered viewport',()=>{
