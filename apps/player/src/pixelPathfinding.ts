@@ -67,7 +67,8 @@ export function findTileRoute(
   }
   if (!found) return [];
   const route: TilePoint[] = [];
-  let cursor = key(goal), root = key(start);
+  let cursor = key(goal);
+  const root = key(start);
   while (cursor!==root) {
     const [x,y] = cursor.split(',').map(Number);
     route.push({x:x!, y:y!});
