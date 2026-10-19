@@ -16,6 +16,9 @@ import {
   advanceCalendarMonth,
   createBirthWorld,
   performChildhoodActivity,
+  performDailyActivity,
+  type DailyActivityId,
+  type ActivityZone,
   actOnRelationship,
   type RelationshipAction,
   skipToAge,
@@ -426,6 +429,17 @@ export default function App() {
           paused={sceneOpen}
           onTalk={openEncounter}
           onStoryStart={openOfficialStory}
+          onDailyActivity={(id: DailyActivityId, offset: number, location: ActivityZone): string => {
+            const current = latestSave.current;
+            if (!current) return 'No active life to update.';
+            try {
+              const next = performDailyActivity(current.life, id, offset, location);
+              update(next);
+              return next.history[next.history.length - 1]?.text ?? 'Activity completed.';
+            } catch (error) {
+              return error instanceof Error ? error.message : 'The activity was not completed.';
+            }
+          }}
           onRelationship={(action: RelationshipAction, offset: number): string => {
             const current = latestSave.current;
             if (!current) return 'No saved character.';
