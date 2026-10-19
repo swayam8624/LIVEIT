@@ -38,7 +38,7 @@ export const StorySchema = z
     title: z.string().min(1).max(100),
     description: z.string().max(500),
     compatibleWorlds: z.array(z.literal('modern_life_v1')).min(1),
-    minAge: z.number().int().min(18).max(100),
+    minAge: z.number().int().min(0).max(100),
     permissions: z
       .object({
         relationshipTargets: z.array(z.string()).max(10),
