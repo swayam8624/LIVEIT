@@ -3,6 +3,7 @@
 **Canonical product direction, 19 October 2026: RETRO TO LIVE IN, CINEMATIC TO FEEL, TACTILE TO CONTROL.** The actual first-generation handheld RPG inspiration applies to ordinary **top-down pixel-art movement**. Premium **real 3D** applies to important conversations, authored narratives, relationships and life moments. A tactile native HUD, sidebar, outcome widgets and an in-world communications device connect both. This supersedes earlier drafts that made all city exploration fully 3D/isometric or made all acting merely 2.5D cutouts.
 
 **Read these three canonical specifications first, in order:**
+
 1. [GDS-001 — Graphics Design Specification](LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md): final visual style, accessibility and acceptance frames.
 2. [GDS-002 — Screen & Mode Blueprint](LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md), and [browsable atlas](design/LIVEIT_SCREEN_ATLAS.html): all 43 target screens, UI states, responsive views, interactions and journeys.
 3. [ENG-003 — Hybrid Renderer Architecture](LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md), and [render graph](design/LIVEIT_RENDER_GRAPH.mmd): the platform GPU, asset, movement and persistent state interfaces.
@@ -13,7 +14,7 @@ Historical [Vulkan city compute prototype](VULKAN_CITY_RENDERING.md) still matte
 
 The player lives a long, branching life: walk the town, enter homes, workplaces, schools, cafés, parks and shops; make day-to-day life choices, work and learn, grow older, own meaningful things and cultivate relationships. Important interactions open an actual smooth 3D cinematic with expressive actors, clothing and lighting matching the overworld. Story chapters use this same cinematic stage, or isolated timelines when selected. NPC identities/memories and the player persist across both visual styles, even after save/restart.
 
-The HUD feels like a game—not a productivity app: compact top stats, collapsible navigation sidebar, accessible thumb controls, in-game phone with *distinctly labeled* AI NPC and consented human contacts, meaningful haptics, timely progress feedback and truthful "what happened" widgets. A choice's new money/trust/status is never asserted before the deterministic domain engine and save coordinator commit it. Social contact is not fabricated: no sham online users or AI disguised as humans, and platform restrictions against primarily random anonymous chat must be respected. Real human communication requires moderation/consent/report/block, and can be separately disabled until compliant.
+The HUD feels like a game—not a productivity app: compact top stats, collapsible navigation sidebar, accessible thumb controls, in-game phone with _distinctly labeled_ AI NPC and consented human contacts, meaningful haptics, timely progress feedback and truthful "what happened" widgets. A choice's new money/trust/status is never asserted before the deterministic domain engine and save coordinator commit it. Social contact is not fabricated: no sham online users or AI disguised as humans, and platform restrictions against primarily random anonymous chat must be respected. Real human communication requires moderation/consent/report/block, and can be separately disabled until compliant.
 
 The renderer never mutates the simulation, advances calendar time per rendered frame, generates free money, chooses a story route or invents memories. The authoritative life/story domain stays in versioned TypeScript. A validated stable Character/Appearance ID can resolve to a 2D sprite and 3D rig using the same cosmetic selections and age.
 
@@ -37,7 +38,7 @@ A single C++ Vulkan renderer has two separate GPU render pipelines under a commo
 
 Native integration target: local Expo module; Kotlin Android SurfaceView/ANativeWindow + Vulkan surface/swapchain; Swift + Objective-C++ iOS CAMetalLayer + MoltenVK and portability support; verified on physical devices with resize/background/recovery. App's native accessible UI overlays gameplay. No WebGL/WebView/Expo Go/offscreen-PNG trick substitutes for a live native Vulkan scene.
 
-Existing implementation includes TypeScript RenderFrame schemas and source-of-truth state adapters, versioned visual-pack schemas and stage verification, C++ headless Vulkan compute shaders and a React Native illustrated *fallback*. It **does not yet have** a playable free-roam tile engine, production sprite atlas, rigged 3D actor stage, device swapchain module or audited on-demand pack downloads.
+Existing implementation includes TypeScript RenderFrame schemas and source-of-truth state adapters, versioned visual-pack schemas and stage verification, C++ headless Vulkan compute shaders and a React Native illustrated _fallback_. It **does not yet have** a playable free-roam tile engine, production sprite atlas, rigged 3D actor stage, device swapchain module or audited on-demand pack downloads.
 
 ## Growing, commercially usable asset universe
 
