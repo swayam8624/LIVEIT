@@ -16,6 +16,8 @@ import {
   advanceCalendarMonth,
   createBirthWorld,
   performChildhoodActivity,
+  actOnRelationship,
+  type RelationshipAction,
   skipToAge,
   type ChildhoodActivity,
   performWorldActivity,
@@ -424,6 +426,17 @@ export default function App() {
           paused={sceneOpen}
           onTalk={openEncounter}
           onStoryStart={openOfficialStory}
+          onRelationship={(action: RelationshipAction, offset: number): string => {
+            const current = latestSave.current;
+            if (!current) return 'No saved character.';
+            try {
+              const next = actOnRelationship(current.life, action, offset);
+              update(next);
+              return next.history[next.history.length - 1]?.text ?? 'Relationship updated.';
+            } catch (err) {
+              return err instanceof Error ? err.message : 'Could not change this relationship.';
+            }
+          }
           onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
           onChildAction={(activity: ChildhoodActivity, offset: number) =>
             applyWorldAction((w) => performChildhoodActivity(w, activity, offset))}
