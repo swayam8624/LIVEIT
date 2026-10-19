@@ -468,7 +468,6 @@ export default function App() {
             applyWorldAction((w) => skipToAge(w, years))}
           onActivity={(activity: WorldActivity, dayOffset: number) =>
             applyWorldAction((w) => performWorldActivity(w, activity, dayOffset))}
-          onNavigate={(destination) => setTab(destination)}
         />
         {sceneOpen ? (
           <View style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0,
