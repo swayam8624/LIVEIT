@@ -74,10 +74,6 @@ export function CityWorld({
   onAction: (operation: (world: World) => World) => void;
   onTalk?: () => void;
 }) {
-  const visual = selectVisualPresentation(
-    'pixel-overworld',
-    CURRENT_VISUAL_CAPABILITY,
-  );
   const [focused, setFocused] = useState<string | null>(null);
   const [careerOpen, setCareerOpen] = useState(false);
   const [showDistrictCards, setShowDistrictCards] = useState(false);
