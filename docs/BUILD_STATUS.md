@@ -32,7 +32,6 @@ Updated 2026-10-19. Branch: feat/native-life-economic-foundation. Main remains t
 
 ## 2026-10-19 Step 4: hybrid direction reconciliation and source fallbacks
 
-
 **Direction now locked:** top-down original **pixel tile/sprite Free Life**, true **skinned mesh 3D** dialogue/story and accessible tactile native HUD; **NOT** the previously proposed 3D/isometric city as primary roaming mode. Read docs/DOCUMENT_INDEX.md for precedence and docs/HYBRID_RENDER_IMPLEMENTATION_PLAN.md for concrete M0–M7 implementation dependencies. GDS-001, GDS-002 and ENG-003 remain authoritative.
 
 | Item                 | Verified source or limitation                                                                                                                                                                                       |
