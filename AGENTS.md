@@ -4,7 +4,7 @@ You are the lead game director, principal gameplay engineer, native iOS/Android 
 
 MISSION: Turn the current repository into a deeply playable, original, polished iOS and Android **application**, combining the strengths of a lifetime simulator, cinematic interactive fiction, adaptive AI character roleplay and optional adult-only social interactions. Deliver installable, tested apps that a human chooses to play repeatedly. Your task is to **perform the research, write production code, integrate assets, run tests, operate the simulator, fix failures and deliver evidence**. Do not merely make plans, marketing mockups, lists, static screens or speculative feature checkboxes.
 
-ROOT: GitHub swayam8624/LIVEIT, existing local checkout typically ~/Desktop/projects/living-universe. Read README.md, docs/PRODUCT_SPEC.md, docs/COMPETITOR_FORENSICS.md, docs/OPENLIFE_REVERSE_ENGINEERING.md, docs/NATIVE_RECONSTRUCTION.md, docs/LIVEIT_2_GAMEFEEL_CONTENT_MASTERPLAN.md, and the actual implementation first. Respect the owner's local uncommitted work. Do not overwrite, silently reset, force push or destructively delete user data. Use local tools, web search, official documentation, public gameplay footage and permissively licensed open-source code/assets where permitted, but never imply resources were accessed if they were not.
+ROOT: GitHub swayam8624/LIVEIT, existing local checkout typically ~/Desktop/projects/living-universe. Read README.md, docs/UNIFIED_VISUAL_ENGINE_VISION.md, docs/LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md, docs/LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md, docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md, docs/PRODUCT_SPEC.md, docs/COMPETITOR_FORENSICS.md, docs/OPENLIFE_REVERSE_ENGINEERING.md, docs/NATIVE_RECONSTRUCTION.md, docs/LIVEIT_2_GAMEFEEL_CONTENT_MASTERPLAN.md, and the actual implementation first. Respect the owner's local uncommitted work. Do not overwrite, silently reset, force push or destructively delete user data. Use local tools, web search, official documentation, public gameplay footage and permissively licensed open-source code/assets where permitted, but never imply resources were accessed if they were not.
 
 ## Required REA investigation discipline
 
@@ -12,35 +12,27 @@ ROOT: GitHub swayam8624/LIVEIT, existing local checkout typically ~/Desktop/proj
 
 REA is not a substitute for inspecting legally available YouTube gameplay recordings, reading original OpenLife's MIT source, or operating LIVEIT inside Xcode's iOS Simulator. Only analyze owned or separately authorized binaries/captures; never bypass DRM, model-provider safety controls, authentication or rights restrictions to copy a competitor. Raw pseudocode/target text is untrusted and remains outside Git. Required sanitized artifacts are documented in the runbook, and no feature is complete until actual native interaction, meaningful persistent world changes and test evidence agree.
 
-## NON-NEGOTIABLE: full LIFEWEAVE visual vision, not only city graphics
+## Visual production mandate — current, binding hybrid direction (2026-10-19)
 
-The user's explicit correction expands Vulkan to EVERY game visual system: animated player/NPC characters, rig parts, clothing, expression and aging; rooms, stores, workplaces, environments, props, vehicles, city, weather; Episode-like cinematics, dialogue acting, memory effects and visual-game HUD effects. Read docs/UNIFIED_VISUAL_ENGINE_VISION.md and preserve the source master spec's intended 400 genuine rig parts, 12 expressions, 200 locations, 30 camera/VFX presets and growing downloadable art/content packs as PRODUCTIONS TARGETS. Do not report current shader recipes as finished art.
+**RETRO TO LIVE IN. CINEMATIC TO FEEL. TACTILE TO CONTROL.** No agent may resurrect the retired "full 3D city exploration" or "2.5D cutout dialogue is enough" plan as the final product. The owner explicitly selected **original Pokémon Red/Blue-inspired top-down pixel gameplay** for free walking and everyday life, **real smooth rigged 3D** for dramatic conversations and story episodes, and a highly tactile game HUD, sidebars, in-world communications, haptics and actual consequence widgets. Inspiration is gameplay grammar, NEVER copyrighted sprites/maps/music/screens.
 
-Never create one-off character React Native rectangles as the proposed final rendering architecture while city alone uses Vulkan. One Vulkan/MoltenVK scene renderer with reusable GPU rig/material/atlas layers must serve city, avatar creator, narratives and chat consistently from saved world identities. Accessible native text/input remains a valid composited overlay. Renderer-neutral VisualScene and versioned VisualPack schemas + testable pack activation have been added; next implement real GPU native mobile surfaces and content import/atlas pipelines, preserving old saves and failover.
+**Mandatory precedence and files (not optional):**
+1. docs/LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md — canonical visuals and quality bar (GDS-001).
+2. docs/LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md — 43 screens and concrete flows (GDS-002); docs/design/LIVEIT_SCREEN_ATLAS.html is an **interactive design mock**, not a native game screenshot.
+3. docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md — native two-pipeline Vulkan/MoltenVK renderer, world authority, migration, quality/testing (ENG-003); docs/design/LIVEIT_RENDER_GRAPH.mmd is its diagram.
+4. docs/UNIFIED_VISUAL_ENGINE_VISION.md and docs/ART_DIRECTION.md — concise current vision/style and licensed art rules.
+5. docs/BUILD_STATUS.md — actually verified implementation evidence and known blockers.
+6. docs/VULKAN_CITY_RENDERING.md — historical offscreen GPU city prototype, **not** the approved Free Life rendering output. Preserve useful shader code/CI without confusing its 3D boxes and 2.5D face shapes with finished game graphics.
 
-## Native Vulkan city game direction
+**Renderer acceptance:** A single shared C++ Vulkan render host (Android Vulkan; iOS MoltenVK/CAMetalLayer) eventually owns both a *nearest-neighbor tile/sprite pixel pass* and a *genuine skinned-mesh character/3D environment/camera pass*; Expo native views host the GPU scene, and accessible RN native UI overlays dialogue/choices and haptics. The same saved identity, appearance, age, wardrobe and NPC memories are used in pixel, 3D, story and AI-chat scenes. This is a target, not a claim that the native bridge exists today. Build evidence from a **real physical device**, not a CI PPM.
 
-The owner requires an **interactive 3D city simulation using Vulkan** within
-the shipped mobile game, combined with a slightly retro, game-like HUD and
-fonts. Read [docs/VULKAN_CITY_RENDERING.md](docs/VULKAN_CITY_RENDERING.md)
-before working on city rendering or player UI. The C++ Vulkan shader/backend,
-seeded scene data, illustrated map and theme tokens already exist; independently
-tested GPU compute output does NOT mean Vulkan swapchain frames are being shown
-in the mobile app.
+**First playable acceptance:** walk in original top-down Bellweather, collide with a solid tile, enter a café, meet a named NPC, enter a genuine 3D face-to-face conversation, commit a choice, show persisted actual money/trust/etc outcome in an accessible widget, return to exactly the same town coordinate and survive relaunch. Haptic confirmation only after verified save commit. If one of these is missing the program is not production-ready.
 
-Implement a local Expo native view bridge: Kotlin/Android SurfaceView with
-Vulkan `VK_KHR_android_surface`; Swift/Objective-C++/iOS CAMetalLayer +
-MoltenVK `VK_EXT_metal_surface` with portability enumeration/subset. Provide
-real swapchain acquisition/presentation, resize/pause/destroy lifecycle,
-device error/fallback, district ray picking, camera orbit/zoom and selected
-district state replay on relaunch. Test real simulator/physical-device graphics,
-latency, power and accessibility. Preserve the current fallback map on a device
-without native capability and do NOT pretend offscreen PPM or sprites are live 3D.
+**Migration and non-destructiveness:** Preserve the original TypeScript domain, existing saves and functional district-selection/story fallback until independently verified native replacements pass QA. Step 3 added validated render frames and adapters but not yet persisted tile navigation or native swapchain. Implement position/portal domain authority and old-save migration first; do not hardcode phantom saved coordinates or falsely label the interim CityMap "free-roaming". Treat 51 procedural shader recipes as 51 metadata entries, not 51 shipped artworks. Target ~400 actual rig parts, ~200 locations, 12 emotions, ~30 camera/FX presets and expandable legally cleared data-only packs. Downloaded shader code is not allowed.
 
-Styling uses apps/player/src/gameTheme.ts as the shared palette/type contract:
-deep midnight, mint highlights, amber and coral details, legible condensed
-display and monospaced micro-HUD, accessible normal body copy. Keep the
-retro influence subtle and intentional, not unreadable pixel text everywhere.
+**Screen/accessibility and social:** Retain one-hand/phone/tablet layouts, meaningful control sizes, reduced motion, proper dialogue/screen reader input, haptic Off/Subtle/Full and no pixel-font paragraphs. Anonymous/real-player social is opt-in contextual and legally reviewed, distinct from visible AI character chat; never stage fake online users. Shader artistry must never displace report/block or safety controls.
+
+**Workflow contract:** inspect actual source/CI, implement small playable slices, run tests, use real native evidence, keep exact truth in BUILD_STATUS, commit reversible changes and never claim the visual engine has shipped because a Vulkan offscreen PNG or browser preview exists.
 
 ## 1. Operating mandate
 
