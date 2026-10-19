@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* global process, AbortController, setTimeout, clearTimeout, console, fetch */
 /**
  * LIVEIT local Ollama diagnostics. Does not fake an NPC response.
  *
