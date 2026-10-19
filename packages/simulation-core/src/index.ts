@@ -205,7 +205,10 @@ export function setCharacterAppearance(
  */
 export function advanceCalendarMonth(input: World): World {
   const w = structuredClone(WorldSchema.parse(input));
-  const days = 30;
+  // Align month boundaries to the existing 365-day age model. Exactly
+  // twelve hourly month ticks equal one birthday, despite 30/31-day months.
+  const monthIndex = Math.floor((w.player.ageDays * 12) / 365);
+  const days = Math.ceil(((monthIndex + 1) * 365) / 12) - w.player.ageDays;
   for (let i = 0; i < days; i++) {
     w.day += 1;
     w.player.ageDays += 1;
