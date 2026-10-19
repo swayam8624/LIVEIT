@@ -1,55 +1,25 @@
-# LIVEIT Art Direction — Authoritative Hybrid Visual Bible
+# LIVEIT — Pixel-Only Art Direction V2
 
-**Current direction (19 October 2026): RETRO TO LIVE IN. CINEMATIC TO FEEL. TACTILE TO CONTROL.** This supersedes the quiet editorial/2.5D aesthetic and interim all-3D/isometric-city proposals. Primary authority: [GDS-001](LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md), [GDS-002](LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md), [ENG-003](LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md) and [unified vision](UNIFIED_VISUAL_ENGINE_VISION.md).
+**Approved 2026-10-19. All prior hybrid and 3D direction is RETIRED.** Detailed authority: [PIXEL_ONLY_DIRECTION_V2](PIXEL_ONLY_DIRECTION_V2.md). All art, screens, stories and city travel are original **2D retro pixel art**. Prior ENG-003 3D actor plans, ART-005 3D catalogs and cinematic GLB rigs are historical only.
 
-## Two visual worlds, one persistent identity
+## Everyday world
 
-**EVERYDAY PIXEL OVERWORLD.** A rich, original, top-down handheld-RPG-inspired walkable town, made from authored 16×16 logical environment tiles, pixel NPCs, enterable homes/shops/schools, city/weather/time changes and real collisions. Four cardinal walk directions initially; adults roughly 16×24 logical pixels. Foot-based sprite anchors, authored 2D occlusion, roof fade, safe collision maps. Original colorful Bellweather districts (riverside, university, market, studio and gardens). Nearest-neighbor integer pixel scaling where possible, no TAA/bilinear blurring. 30/60Hz logical movement and fixed-step world physics distinct from frame refresh. The inspiration from Pokémon Red/Blue is the legibility, grid travel, top-down map and charming exploration _principles_, not Nintendo imagery, sprites, sounds, maps, text or UI trade dress. This is NOT a 3D/isometric city and NOT a passive district-card picture.
+Original 16×16 source tiles, cardinal walk cycles, walkable interiors/market/school/hospital, portrait-safe camera, colliders and useful interaction masks. Pixel sprites with body, hair, outfit, accessory modular layers, deterministic life-stage changes and palette shifts. Smooth movement and subtle weather effects without smoothing the pixels themselves.
 
-**IMPORTANT CINEMATIC 3D.** A major story/NPC encounter crosses from pixel play into genuine, smoothly rendered, original **3D geometry**: skinned mesh actors, facial blendshapes, skeletal poses, expressive hair/clothing, rich interior/set materials, camera director and artist-controlled lighting. Painterly comic and slightly anime-adjacent original style, clear skin/hair and natural shadows, gentle depth of field and rim. Twelve canonical expressions (neutral, happy, sad, angry, flirty, shocked, scared, smug, crying, embarrassed, tired, thoughtful), breath/blink/eye gaze, speech-related mouth/face motion and body gestures. Routine town hellos stay in a pixel bubble. 3D should never be faked by enlarging a sprite or claiming that the current procedural 2.5D circles/ellipses are a rig.
+## Important story and emotional dialogue
 
-**TACTILE SYSTEM HUD.** Midnight/mint/amber/coral retro-futurist game surfaces support status orbs, real money/stats, navigation drawers, in-world phone, anonymous/social permissions, choice cards and factual "what changed" event widgets. Use short mono/condensed labels, properly sized readable body/dialogue text, accessible native text fields/screen-reader semantics, thumb-sized controls and haptics only at meaningful commits. GPU handles visual art/effects; meaningful controls and moderated chat remain actual native UI.
+**Large expressive 2D pixel portraits and staged animated scenes**, not 3D. Author 64×96 / 96×128 style portrait bust variants as useful working sizes, compatible with the saved character's small overworld sprite. Each key character needs blink frames, mouth talking frames, gestures, eye direction and 12 named emotional variations. Original pixel café/house/event foreground/background layers, cinematic 2D parallax, timing and lighting are what make the story premium. Allow multiple characters, speaker focus, reaction cuts, animated dialogue dock, choice cards and a factual outcome widget; preserve reduced motion and legible native text.
 
-**ONE IDENTITY.** Same saved player/NPC identity, age, outfit, hair/skin, accessories and life events feed the pixel sprite atlas resolver and the true 3D rig/material resolver, including cinematic camera, phone portrait and memory/legacy views. Changing clothes does not independently create a new person in another mode. No skin, body or appearance style grants a game advantage.
+## Game HUD
 
-## Palette ownership and presentation
+Retro-futurist panel pixel edges, original icon language, intuitive thumb controls, compact life stats and in-world phone/chat, event cards, accessible dialogue/choices, meaningful haptics after committed state. Preserve the established HUD palette as a starting point: midnight #101827, mint #97E6AC, amber #FFD28A, coral #F49A82 and warm legible cream #F5F2D9. World district palettes need not all look identical to the HUD.
 
-The current shared gameTheme palette is **HUD**, not a rule that makes every room teal:
+## Actual downloadable/source formats
 
-| Token        | Value   | Intended use                         |
-| ------------ | ------- | ------------------------------------ |
-| Dark         | #101827 | UI console backing                   |
-| Raised panel | #223449 | Selectable surfaces                  |
-| Ink          | #F5F2D9 | Readable primary text                |
-| Muted        | #B6C6C8 | Secondary text (minimum readability) |
-| Border       | #507174 | Selection and frames                 |
-| Mint         | #97E6AC | Positive action / focus              |
-| Amber        | #FFD28A | Discovery and milestone              |
-| Coral        | #F49A82 | Human connection                     |
-| Danger       | #FF7588 | Actual error                         |
+PNG sprite atlases/layered source Aseprite .ase/.aseprite, Tiled .tmx/.tsx/.json maps (with collision/spawn/portals), background pixel PNG, safe font TTF/OTF + licenses, sound .wav/.ogg/.flac source converted when feasible to M4A/AAC mobile audio, MP3/M4A originals, UI graphics and 2D shader/palette parameters. Do not add .blend/.fbx/.glb/.gltf/3D/photorealistic PBR scene content. Only user-reviewed public-repository redistributable assets may be staged via [intake script](../tools/intake_pixel_assets.py).
 
-World art has district-specific palettes, day/night weather and life-stage grading (childhood warmth, teenage energy, adult diversity, midlife grounding, elder warmth rather than automatic bleakness). 3D materials use correct linear/sRGB handling, art-directed skin-lighting QA for all supported tones, eye and face visibility, shadows and toned bloom. Pixel textures use nearest filtering and pixel-aware lighting/weather; 3D textures use mipmapped linear/anisotropic sampling. Those pipelines must remain distinct.
+## Current reality and QA
 
-## Production formats and requirements
+Current isometric district selector and static-ish RN illustrated StoryPlayer are fallback/prototypes, not pixel-complete free roaming. Pixel art needs actual asset files, proper frame tags, tile collision and portal tests, accessible story rendering and real phone captures. Existing 28 Kenney fallback assets and 51 procedural recipes do not automatically satisfy the new art standards. Old 3D demo can remain as archived technical history but not run as part of the production game.
 
-**Pixel:** original raster tile atlas, four-direction idle/walk/interact strips, intentional layering and feet anchor, collision/door masks, collision test map, atlas guard pixels and palette variants, QA at native 1× and presentation 2–4×. Default map tiles 16px; sprite footprints around 16×24; four frames per walking direction is the initial target.
-
-**3D:** original licensed sculpt/mesh, GLB/glTF export with bone/face rig + expressions, outfit/hat/hair attachment rules, realistic-enough eye lines, age morph variations, PBR/toon material definitions, genuine environment props, camera/lighting presets, mobile LOD and prefetch. Existing 2.5D plates can be background layers behind actual 3D rigs if useful, but cannot replace 3D faces for important scenes.
-
-**HUD:** crisp original icons, scalable accessible fonts with correct commercial licenses, nine-slice panels, arcade-like stat chips, safe-area adaptive sidebars, contextual choice/outcome widgets and short diegetic pixel labels. Avoid hard-to-read pixel paragraphs or rasterized report/block controls.
-
-**Asset contract:** all content needs creator/source/license/rights record, human review, version, SHA-256 for external files, rig/map slots, animation/collision metadata and validated dependencies. Production ambition ~400 genuine customizable rig parts, ~200 reusable scene locations, 12 expressions, ~30 camera/VFX presets. Current **51 shader-backed manifest entries are procedural definitions, not 51 finished artworks**. Future signed downloadable packs are DATA, not executable new SPIR-V.
-
-## Motion, interaction and reference checks
-
-Pixel roaming should feel smoothly responsive without blur; do not add per-step haptics. Pixel-to-3D handoff uses matched wardrobe silhouette and purposeful iris/mosaic reveal, design warm target approximately 450–750ms after resources loaded, cold load honest about delay. Choice states idle/armed/pending/committed/failed, with a confirmation haptic only after saved outcome. Widget shows _actual_ changes to trust, money, reputation, journal—not random rewards. Respect reduced motion, skip, haptics Off/Subtle/Full and accessible 44pt/48dp targets. Grief or death does not trigger celebratory fireworks.
-
-Required visual acceptance set: walkable original Bellweather tile street; an enterable pixel home; player/NPC walk/collision; rain/night pixel palette; identical pixel/3D person with same hair/outfit; actual 3D café face acting; meaningful choice dock; factual outcome after restart; child/adult/elder identity; in-game phone distinguishing NPC AI from actual consent-based humans; missing-pack recovery; and faithful memories. Every capture must have saved fixture/scene ID, device/resolution and source-asset rights.
-
-## Prototype truth and historical styles
-
-The current React Native CityMap/CityWorld is an **illustrated isometric district-selection FALLBACK**, not free-walk pixel gameplay. The headless Vulkan city.comp raycaster is a valid offscreen Vulkan proof but not the intended tile/sprite render pass. The headless actors.comp procedural graphics are GPU images but not mesh-rigged 3D cinema. Legacy RN StoryPlayer, AvatarPortrait and the current art placeholders remain useful until functioning native views replace them; don't delete their gameplay pathways. No phone Vulkan/MoltenVK surface has been proven.
-
-Superseded historical options, preserved only as context: warm editorial all-2.5D; single low-poly city renderer; "modern indie 60%/retro 40%" as a uniform world rule; defaulting to Skia/WebGL in place of the required native Vulkan target. The original 2.5D character illustrations and existing CC0 props can remain legal fallback art, not final visuals. Never copy proprietary game source assets or unlicensed story art.
-
-If style is changed later, GDS-001/002, ENG-003, this file and agent instructions must be reconciled together; no silent visual-direction reversals.
+View the active asset checklist: [pixel-v2 requirements](../content/production-assets/pixel-v2/required-assets.json).
