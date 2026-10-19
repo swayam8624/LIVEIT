@@ -120,10 +120,10 @@ export function PixelTown({ world, onTalk }: { world: World; onTalk?: () => void
           accessibilityLabel={npcHere ? 'Talk to Amelia' : tile.portal ? 'Café door' : actorHere ? 'Player' : undefined}
           style={s.tile}
         >
-          <Image resizeMode="stretch" source={{ uri: pixelArt[sourceKey] }} style={s.image} />
+          <Image resizeMode="stretch" source={pixelArt[sourceKey]} style={s.image} />
           {actorHere || npcHere ? (
             <Image
-              source={{ uri: actorArt(actorHere ? 1 : 2, actorHere ? position.facing : 'down') }}
+              source={actorArt(actorHere ? 1 : 2, actorHere ? position.facing : 'down')}
               resizeMode="stretch"
               style={s.image}
             />
