@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chunkOf, worldCell, visibleWorldTiles, seedFromTimeline, biomeAt } from '../apps/player/src/proceduralWorld';
+import { chunkOf, worldCell, visibleWorldTiles, seedFromTimeline, biomeAt, validInfinitePosition } from '../apps/player/src/proceduralWorld';
 import { pixelCell } from '../apps/player/src/pixelTownLogic';
 describe('procedural infinite world coordinate model', () => {
   const seed=seedFromTimeline('birth-A');
@@ -23,6 +23,15 @@ describe('procedural infinite world coordinate model', () => {
       expect(['road','crosswalk']).toContain(worldCell('street',x,-25,seed).terrain);
       expect(worldCell('street',x,-25,seed).solid).toBe(false);
     }
+  });
+  it('restores distant and negative travel positions instead of forgetting them',()=>{
+    const east={place:'street',x:4096,y:7,facing:'right'};
+    const west={place:'street',x:-39,y:-25,facing:'left'};
+    expect(validInfinitePosition(east,seed)).toBe(true);
+    expect(validInfinitePosition(west,seed)).toBe(true);
+    expect(validInfinitePosition({...east,x:4.2},seed)).toBe(false);
+    expect(validInfinitePosition({...east,facing:'diagonal'},seed)).toBe(false);
+    expect(validInfinitePosition({place:'street',x:10,y:7,facing:'up'},seed)).toBe(false);
   });
   it('bounds visible tile memory independent of how far player traveled',()=>{
     const a=visibleWorldTiles('street',-200000,99990,15,18,seed);
