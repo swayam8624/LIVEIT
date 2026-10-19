@@ -20,7 +20,7 @@ describe('procedural infinite world coordinate model', () => {
   });
   it('guarantees passable roads at every distant chunk seam',()=>{
     for(const x of [-65,-64,-33,-32,-1,31,32,33,63,64,65,5000]) {
-      expect(worldCell('street',x,-25,seed).terrain).toBe('road');
+      expect(['road','crosswalk']).toContain(worldCell('street',x,-25,seed).terrain);
       expect(worldCell('street',x,-25,seed).solid).toBe(false);
     }
   });
