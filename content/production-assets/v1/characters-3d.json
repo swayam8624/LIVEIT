@@ -10436,10 +10436,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.base-rig.teen-neutral",
@@ -10454,10 +10451,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.base-rig.adult-neutral",
@@ -10472,10 +10466,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.base-rig.midlife-neutral",
@@ -10490,10 +10481,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.base-rig.elder-neutral",
@@ -10508,10 +10496,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.neutral",
@@ -10526,10 +10511,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.happy",
@@ -10544,10 +10526,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.sad",
@@ -10562,10 +10541,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.angry",
@@ -10580,10 +10556,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.flirty",
@@ -10598,10 +10571,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.shocked",
@@ -10616,10 +10586,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.scared",
@@ -10634,10 +10601,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.smug",
@@ -10652,10 +10616,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.crying",
@@ -10670,10 +10631,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.embarrassed",
@@ -10688,10 +10646,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.tired",
@@ -10706,10 +10661,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.facial-expression.thoughtful",
@@ -10724,10 +10676,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "rig_attach",
-        "device_render"
-      ]
+      "qa": ["rig_attach", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.idle-breathe",
@@ -10742,11 +10691,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.idle-blink",
@@ -10761,11 +10706,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.idle-look-left",
@@ -10780,11 +10721,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.idle-look-right",
@@ -10799,11 +10736,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.listen-soft",
@@ -10818,11 +10751,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.listen-tense",
@@ -10837,11 +10766,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.talk-neutral",
@@ -10856,11 +10781,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.talk-excited",
@@ -10875,11 +10796,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.talk-quiet",
@@ -10894,11 +10811,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.turn-left",
@@ -10913,11 +10826,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.turn-right",
@@ -10932,11 +10841,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.walk-in",
@@ -10951,11 +10856,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.walk-out",
@@ -10970,11 +10871,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.sit-down",
@@ -10989,11 +10886,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.stand-up",
@@ -11008,11 +10901,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.nod",
@@ -11027,11 +10916,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.shake-head",
@@ -11046,11 +10931,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.laugh-soft",
@@ -11065,11 +10946,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.laugh-open",
@@ -11084,11 +10961,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.cry-quiet",
@@ -11103,11 +10976,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.cry-open",
@@ -11122,11 +10991,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.angry-breath",
@@ -11141,11 +11006,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.gesture-wave",
@@ -11160,11 +11021,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.gesture-point",
@@ -11179,11 +11036,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.gesture-offer",
@@ -11198,11 +11051,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.gesture-refuse",
@@ -11217,11 +11066,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.gesture-ponder",
@@ -11236,11 +11081,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.gesture-shrug",
@@ -11255,11 +11096,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.gesture-reach",
@@ -11274,11 +11111,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.gesture-recoil",
@@ -11293,11 +11126,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.embrace-permissioned",
@@ -11312,11 +11141,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.celebrate",
@@ -11331,11 +11156,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.apologize",
@@ -11350,11 +11171,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.lean-in",
@@ -11369,11 +11186,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.lean-away",
@@ -11388,11 +11201,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.smile-release",
@@ -11407,11 +11216,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.startle",
@@ -11426,11 +11231,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.pause-uncertain",
@@ -11445,11 +11246,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.hand-to-face",
@@ -11464,11 +11261,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     },
     {
       "id": "liveit.prod.v1.character-animation.turn-back",
@@ -11483,11 +11276,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "skeleton_valid",
-        "expression_transition",
-        "device_render"
-      ]
+      "qa": ["skeleton_valid", "expression_transition", "device_render"]
     }
   ]
 }
