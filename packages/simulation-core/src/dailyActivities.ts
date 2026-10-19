@@ -75,11 +75,16 @@ const byId = new Map<string, DailyActivity>(DAILY_ACTIVITIES.map(item => [item.i
 const clamp100 = (n: number) => Math.max(0, Math.min(100, n));
 const prefix = (day: number) => 'daily-life:' + day + ':';
 
-export function activitiesForAge(ageDays: number, zone?: ActivityZone): DailyActivity[] {
+export function activitiesForAge(
+  ageDays: number, zone?: ActivityZone,
+): Array<DailyActivity & { id: DailyActivityId }> {
   const years = ageDays / 365;
-  return DAILY_ACTIVITIES.filter(a => years >= a.minYears &&
+  // Widen the literal object union to the documented optional-property
+  // contract, while preserving the exact union of valid activity IDs.
+  const catalog: readonly DailyActivity[] = DAILY_ACTIVITIES;
+  return catalog.filter(a => years >= a.minYears &&
     (a.maxYears === undefined || years < a.maxYears) &&
-    (!zone || !a.zone || a.zone === zone));
+    (!zone || !a.zone || a.zone === zone)) as Array<DailyActivity & { id: DailyActivityId }>;
 }
 export function dailyActivitiesUsed(w: World, dayOffset: number): number {
   const marker=prefix(w.day+dayOffset);
