@@ -1,5 +1,8 @@
 # LIVEIT BUILD STATUS — observed, not aspirational
 
+> **2026-10-19 owner pivot:** LIVEIT is now entirely **2D retro pixel art** including expressive animated dialogue portraits, dramatic layered story scenes, town roaming, characters and HUD. Native rigged 3D, mesh/morph acting and 3D set catalogs are **retired**. New docs: [Pixel-only V2](PIXEL_ONLY_DIRECTION_V2.md), and the user ZIP/audio importer [tools/intake_pixel_assets.py](../tools/intake_pixel_assets.py). Current 3D files are legacy experiments, not production acceptance. No downloaded user archives have yet been imported via this new workflow; published app remains illustrated fallback until pixel-game implementation.
+
+
 Updated 2026-10-19. Branch: feat/native-life-economic-foundation. Main remains the earlier foundation. PR: https://github.com/swayam8624/LIVEIT/pull/8
 
 | Area                 | Reality                                                                                                                                      | Evidence / next gate                                                                                                 |
