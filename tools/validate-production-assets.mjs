@@ -5,7 +5,7 @@
  * third-party files or actual on-device artistic quality. Those require review.
  */
 import process from 'node:process';
-import { readFileSync, existsSync, statSync, realpathSync, lstatSync } from 'node:fs';
+import { readFileSync, existsSync, realpathSync, lstatSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { dirname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
