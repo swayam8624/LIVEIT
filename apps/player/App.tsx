@@ -17,6 +17,12 @@ import {
   createBirthWorld,
   performChildhoodActivity,
   performDailyActivity,
+  performSchoolAction,
+  applyForJob,
+  attendJobInterview,
+  requestPromotion,
+  resignFromJob,
+  type SchoolAction,
   recordNPCConversation,
   type SocialNPC,
   type DailyActivityId,
@@ -438,6 +444,32 @@ export default function App() {
               const next=recordNPCConversation(current.life,npc,userText,reply,offset);
               update(next);
             });
+          }}
+          onSchoolAction={(action: SchoolAction, offset: number): string => {
+            const current=latestSave.current;
+            if(!current) return 'No active life.';
+            try {
+              const next=performSchoolAction(current.life,action,offset);
+              update(next);
+              return next.history.at(-1)?.text ?? 'School decision recorded.';
+            } catch(error) {
+              return error instanceof Error ? error.message : 'Unable to complete school action.';
+            }
+          }}
+          onCareerAction={(action: 'technology'|'creative'|'business'|'community'|'interview'|'promotion'|'resign'): string => {
+            const current=latestSave.current;
+            if(!current) return 'No active life.';
+            try {
+              const before=current.life;
+              const next=action==='interview' ? attendJobInterview(before) :
+                action==='promotion' ? requestPromotion(before) :
+                action==='resign' ? resignFromJob(before) :
+                applyForJob(before,action);
+              update(next);
+              return next.history.at(-1)?.text ?? 'Career updated.';
+            } catch(error) {
+              return error instanceof Error ? error.message : 'Career choice could not be completed.';
+            }
           }}
           onDailyActivity={(id: DailyActivityId, offset: number, location: ActivityZone): string => {
             const current = latestSave.current;
