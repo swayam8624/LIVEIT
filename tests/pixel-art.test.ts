@@ -22,7 +22,7 @@ function crc32(bytes: Buffer): number {
 describe('bundled user-provided CC0 pixels', () => {
   it('has correctly attributed public-domain source and at least 24 usable frames', () => {
     expect(source).toContain('LICENSE-CC0.txt');
-    expect(source).toContain('pulse-everyday-streets-16x16.zip');
+    expect(source).toContain('https://edfaygo.itch.io/pulse-everyday-streets-1616');
     expect(entries.length).toBeGreaterThanOrEqual(24);
   });
 
