@@ -102,6 +102,44 @@ async function npcFromLocalModel(
   }
 }
 
+
+/** A shaded roof/awning with restrained readable signage built from shapes.
+ * Artwork is original game UI; the underlying streets remain Pulse CC0 PNGs.
+ */
+function PixelBuilding({
+  x, y, w, h, roof, accent, label,
+}: {
+  x: number; y: number; w: number; h: number;
+  roof: string; accent: string; label: string;
+}) {
+  const width = w * TILE;
+  const height = h * TILE;
+  return (
+    <View pointerEvents="none" style={{
+      position:'absolute', left:x*TILE-5, top:y*TILE-11,
+      width:width+10, height, backgroundColor:'#322b3a',
+      borderWidth:6, borderColor:'#292331',
+      shadowColor:'#17141b', shadowOffset:{width:9,height:13},
+      shadowOpacity:0.48, shadowRadius:3, elevation:7,
+    }}>
+      <View style={{ position:'absolute',left:0,right:0,top:0,
+        bottom:12,backgroundColor:roof,borderBottomWidth:9,borderBottomColor:accent }}>
+        <View style={{height:10,backgroundColor:'#ffffff23',margin:10}}/>
+        <View style={{position:'absolute',top:'25%',left:12,right:12,
+          height:3,backgroundColor:'#1a172733'}}/>
+        <View style={{position:'absolute',bottom:'27%',left:12,right:12,
+          height:3,backgroundColor:'#1a172733'}}/>
+      </View>
+      <View style={{position:'absolute',bottom:1,left:width*0.15,right:width*0.15,
+        backgroundColor:'#281f32',paddingVertical:6,paddingHorizontal:5,
+        borderWidth:2,borderColor:'#eab77e'}}>
+        <Text numberOfLines={1} style={{textAlign:'center',fontSize:12,
+          fontWeight:'900',letterSpacing:1.3,color:'#fff0c6'}}>{label}</Text>
+      </View>
+    </View>
+  );
+}
+
 export function ArcadePixelLife({
   world, onTalk, onAdvanceMonth, onNavigate, onActivity, paused = false,
 }: {
@@ -403,7 +441,9 @@ export function ArcadePixelLife({
       }
       if (timestamp - lastUi > 1000) {
         setClock(clockRef.current);
-        glow.setValue(0.04 + 0.19 * Math.pow(Math.sin(Math.PI * clockRef.current / MONTH_MS), 2));
+        const dayPhase = (clockRef.current % (MONTH_MS / 30)) / (MONTH_MS / 30);
+        const solar = Math.cos((dayPhase - 0.5) * Math.PI * 2);
+        glow.setValue(0.025 + 0.25 * Math.max(0, -solar));
         lastUi = timestamp;
       }
       if (timestamp - lastSave > 2200) {
@@ -588,6 +628,16 @@ export function ArcadePixelLife({
           style={[s.map, { width: worldWidth, height: worldHeight },
             { transform: camera.getTranslateTransform() }]}>
           {tiles}
+          {place === 'street' ? (
+            <>
+              <PixelBuilding x={3} y={2} w={6} h={4} roof="#a45a53"
+                accent="#e3a769" label="MARKET CAFÉ" />
+              <PixelBuilding x={20} y={2} w={8} h={6} roof="#6b7d89"
+                accent="#ebc785" label="THE GENERAL STORE" />
+              <PixelBuilding x={3} y={15} w={8} h={6} roof="#7b5985"
+                accent="#d7a5ac" label="BELLWEATHER HOMES" />
+            </>
+          ) : null}
           <View style={[s.npcShadow, { left: npc.x * TILE + 8, top: npc.y * TILE + 37 }]} />
           {modernNPC ? (
             <View style={{ position: 'absolute', left: npc.x * TILE,
@@ -629,7 +679,9 @@ export function ArcadePixelLife({
         <View style={s.topHud} pointerEvents="box-none">
           <View style={s.brand}>
             <Text style={s.brandName}>LIVEIT <Text style={{color: COLORS.gold}}>✦</Text></Text>
-            <Text style={s.sub}>{place === 'street' ? 'BELLWEATHER MARKET' : 'THE OLD CAFÉ'}</Text>
+            <Text style={s.sub}>{place === 'cafe' ? 'THE OLD CAFÉ' : zone === 'garden'
+              ? 'BELLWEATHER GARDENS' : zone === 'market'
+                ? 'MARKET / SHOPS' : 'BELLWEATHER CITY'}</Text>
           </View>
           <View style={s.clockBox}>
             <Text style={s.clockText}>☀ {clockLabel}</Text>
