@@ -32,6 +32,7 @@ import {
 } from '@living/simulation-core';
 import type { CareerPath, World } from '@living/world-schema';
 import { CityMap } from './CityMap';
+import { CURRENT_VISUAL_CAPABILITY, selectVisualPresentation } from './visualPresentation';
 import { gameTheme as t, districtColors } from './gameTheme';
 
 const CAREERS: {
@@ -72,6 +73,7 @@ export function CityWorld({
   world: World;
   onAction: (operation: (world: World) => World) => void;
 }) {
+  const visual = selectVisualPresentation('pixel-overworld', CURRENT_VISUAL_CAPABILITY);
   const [focused, setFocused] = useState<string | null>(null);
   const [careerOpen, setCareerOpen] = useState(false);
   const [showDistrictCards, setShowDistrictCards] = useState(false);
@@ -80,11 +82,11 @@ export function CityWorld({
   const selected =
     events.find((event) => event.id === focused) ?? events[0] ?? null;
   return (
-    <View style={styles.root}>
+    <View style={styles.root} accessibilityLabel={visual.accessibilityLabel}>
       <View style={styles.heading}>
         <View style={{ flex: 1, gap: 3 }}>
-          <Text style={styles.eyebrow}>BELLWEATHER / FREE ROAM</Text>
-          <Text style={styles.title}>EXPLORE THE CITY</Text>
+          <Text style={styles.eyebrow}>BELLWEATHER / DISTRICT PREVIEW</Text>
+          <Text style={styles.title}>VISIT THE CITY</Text>
           <Text style={styles.caption}>
             Go somewhere. Meet someone. Choose what matters.
           </Text>
