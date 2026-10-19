@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
-import { validateProductionCatalog } from '../tools/validate-production-assets.mjs';
 
 const directory = resolve(process.cwd(), 'content/production-assets/v1');
 const read = (file: string) =>
@@ -10,7 +10,12 @@ const read = (file: string) =>
   };
 
 describe('LIVEIT production asset inventory — exact aspirational vs shipped boundary', () => {
-  const result = validateProductionCatalog();
+  const result = JSON.parse(
+    execFileSync(process.execPath, ['tools/validate-production-assets.mjs', '--json'], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    }),
+  ) as { planned: number; released: number; existingPrototypeImages: number; tinyPreviews: number; priorities: Record<string, number> };
 
   it('validates all 1481 planned entries, production priorities and zero completed art', () => {
     expect(result.planned).toBe(1481);
