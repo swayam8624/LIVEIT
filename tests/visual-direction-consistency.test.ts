@@ -44,7 +44,7 @@ describe('hybrid visual doctrine stays consistent across the repository', () => 
     const status = fromRoot('docs/BUILD_STATUS.md');
     const historical = fromRoot('docs/VULKAN_CITY_RENDERING.md');
     expect(readme).toMatch(/district selector/i);
-    expect(readme).toMatch(/do not exist in the phone player yet/i);
+    expect(readme).toMatch(/not\*\* exist in the phone player yet/i);
     expect(status).toMatch(/native view/i);
     expect(status).toMatch(/DISTRICT PREVIEW/);
     expect(historical).toMatch(/ARCHIVED TECHNICAL SLICE/);
