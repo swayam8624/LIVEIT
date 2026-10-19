@@ -1,6 +1,6 @@
 # LIVEIT
 
-A shared life simulator and interactive story engine. Foundation Sprint 001 implements **A New Beginning**: a new life in Bellweather and an unfinished conversation with Amelia.
+An original native iOS/Android life simulator and interactive-story game. **Target art: pixel-crisp top-down everyday exploration, beautifully rigged 3D dramatic conversations and tactile accessible game HUD.** The current playable foundation includes Bellweather district selection and authored stories; the full walkable pixel/3D native renderer remains under construction.
 
 ## Run LIVEIT on iPhone Simulator (primary development path)
 
@@ -69,20 +69,29 @@ implementation. Its findings feed into
 [build-status ledger](docs/BUILD_STATUS.md). These are instructions;
 installation, outside-app decompilation and full game parity are not claimed.
 
-## Vulkan 3D city and retro-game UI
+## Current graphics target: pixel free-roam + true 3D conversations
 
-Bellweather now has a **deterministic 3D city geometry model** and a more
-game-like, midnight/mint/amber native player theme. The offline iPhone/Android
-map has functional zoom, day/night preview, current game-day display,
-event hotspots and district navigation.
+**RETRO TO LIVE IN. CINEMATIC TO FEEL. TACTILE TO CONTROL.** The production rendering direction is original classic-handheld top-down **pixel** streets/interiors and NPC navigation for ordinary daily life, with **genuine smooth rigged 3D** cinematic dialogue, story chapters and significant life moments. The common character identity/appearance/age must remain consistent across modes. The UI is a responsive retro-futurist native game HUD with thumb controls, sidebars, contextual choices, "what changed" outcome widgets and meaningful haptics.
 
-An independently buildable **Vulkan compute city renderer** is in
-[native/city-vulkan](native/city-vulkan). Its shader generates genuine day and
-night 3D city preview images through Vulkan, with a headless Mesa CI smoke test.
-The [full native integration contract](docs/VULKAN_CITY_RENDERING.md)
-explains the next surface/view bridge work. **Current mobile Free Life still
-uses the React Native illustrated fallback, not a live Vulkan swapchain**;
-we do not claim an in-app native Vulkan view is complete.
+**Current runnable reality:** The existing React Native city view still shows **an illustrated isometric district selector** with zoom/lighting preview and real district/event choices. StoryPlayer still uses React Native illustrations. These are valuable FALLBACKS; the full pixel navigation, native GPU swapchain and 3D mesh-rig characters do **not** exist in the phone player yet.
+
+Independent Vulkan C++/SPIR-V compute tests in [native/city-vulkan](native/city-vulkan) can render seed-generated 3D buildings and 2.5D actor illustrations into PPM files in software or hardware Vulkan. They validate shader execution, **not** a live Vulkan app viewport or production 3D rigged dialogue. The future shared renderer uses Android Vulkan and iOS MoltenVK and keeps accessible native HUD text.
+
+**Follow the specifications in order:**
+- [Step 1 · Final graphics bible](docs/LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md)
+- [Step 2 · All 43 screens and interaction states](docs/LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md) and [browsable screen atlas](docs/design/LIVEIT_SCREEN_ATLAS.html)
+- [Step 3 · Architecture and native implementation gates](docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md)
+- [Current unified vision](docs/UNIFIED_VISUAL_ENGINE_VISION.md) and [art direction](docs/ART_DIRECTION.md)
+- [Honest build status](docs/BUILD_STATUS.md)
+- [Historical Vulkan city proof](docs/VULKAN_CITY_RENDERING.md)
+
+For the only current independently runnable Vulkan proof:
+
+    cmake -S native/city-vulkan -B build/city-vulkan
+    cmake --build build/city-vulkan
+    ctest --test-dir build/city-vulkan --output-on-failure
+
+Do not describe this command as the game rendering inside an iPhone. For a proper native player run, use the iOS/Android commands above and separately confirm the actual installed view and actions.
 
 ## Play the slice
 
@@ -162,7 +171,7 @@ still require hands-on tests. Only use materials whose terms you have verified.
 
 ## Expanded Bellweather gameplay (living-city branch)
 
-This gameplay branch adds meaningful gameplay rather than a static mockup: an explorable isometric neighborhood map with five destinations, twenty authored choice events, a career direction, independent NPC life milestones, and **A Place for Second Chances**, a second original 11-scene / three-ending narrative connected to the Amelia reunion. Consequences modify trust, wellbeing, finances, skill, stress, reputation, connections, memories, and saved world history.
+This gameplay branch adds meaningful gameplay rather than a static mockup: an illustrated isometric neighborhood selector with five destinations, twenty authored choice events, a career direction, independent NPC life milestones, and **A Place for Second Chances**, a second original 11-scene / three-ending narrative connected to the Amelia reunion. Consequences modify trust, wellbeing, finances, skill, stress, reputation, connections, memories, and saved world history.
 
 Free Life is now best played by choosing a destination, spending time working/studying/socializing/resting, opening the city encounter when a new opportunity appears, and making one of the event's trade-off decisions. Events appear as _game time_ advances: there are no ads, energy, paid-choice gates or real-time waiting.
 
