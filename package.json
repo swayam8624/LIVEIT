@@ -22,7 +22,9 @@
     "test": "vitest run",
     "build:player": "npm run build -w @living/player",
     "build:studio": "npm run build -w @living/creator-studio",
-    "check": "npm run format:check && npm run lint && npm run typecheck && npm test"
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test",
+    "assets:validate": "node tools/validate-production-assets.mjs",
+    "assets:summary": "node tools/validate-production-assets.mjs --json"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
