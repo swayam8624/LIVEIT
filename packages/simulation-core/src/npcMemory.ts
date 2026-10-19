@@ -1,4 +1,4 @@
-import { WorldSchema, record, type World } from '@living/world-schema';
+import { WorldSchema, type World } from '@living/world-schema';
 
 export const SOCIAL_NPCS = {
   amelia: { name:'Amelia', role:'adult friend', voice:
