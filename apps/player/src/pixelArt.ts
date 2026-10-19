@@ -1,39 +1,46 @@
+import type { ImageSourcePropType } from 'react-native';
+
 /**
- * 16x16 CC0 pixel PNGs, reproduced verbatim as base64 from the user-uploaded
- * Pulse Everyday Streets 16x16 archive, LICENSE-CC0.txt.
- * https://edfaygo.itch.io/pulse-everyday-streets-1616
- *
- * Bundled offline as data URLs; later asset-import pipeline should replace
- * these with optimized PNG atlases while retaining the exact rights ledger.
+ * Actual 16x16 CC0 PNG assets bundled statically by Metro.
+ * Source: https://edfaygo.itch.io/pulse-everyday-streets-1616
+ * Publisher: Pulse Everyday Streets 16x16, LICENSE-CC0.txt.
+ * Authored files and license details in ../assets/pixel/pulse/README.md.
+ * Static require() is necessary for Android/iOS/Web offline image bundling.
  */
-const png = (data: string) => 'data:image/png;base64,' + data;
+/* eslint-disable @typescript-eslint/no-require-imports */
 export const pixelArt = {
- grass: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDElEQVR4nKVTMQ6CQBAcL9QXCktiKHiDMcZQWPoA4gt8grW1T/AFxgdYUhAKHkFBCCUFuQ9oYeY87g41cZvL7dzszi7DbHlaPwBgvpDoW6VPO6Zw8Q8ZAMQUOF/Ij2Tigkk+YvBeF91HXPiSZuckjTA0Clm28+LCnsmUSwWH4x6X89WLCxKzbOfMXBcdwljicr5qJbaCwN64uZMkjXQRnn2rMDQKYSzHCvKq1JWH5l0kjF/3JI00HsZS444P2IkjAdBKvvrAJOdVqWfmOD4fzGhlJlmEsnk3lZrvHR9w2yRzdgCoi875WoHPB0kaYbvaAChHHQ/HPW63+28+yKvSkWuT+1aNd2DH1N9p4k+VvfEdoP4ZKAAAAABJRU5ErkJggg=='),
- walk: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAfUlEQVR4nO2SwQnDMAxFX4OGEF4pnijQYzdK1ki2ENqiPTkoje0eegt5F8F/H2yEHtPz9eYPBCDnsVmY56XrBWBdN1QVd8fMSCnt85cXADOjzChj3vICHEJVbZZrXoBDGGWh5wcAd+f7J5Gel1gsL7Wo+dMSa/T8fQeXuIMPWaLBW5VR5mEAAAAASUVORK5CYII='),
- road: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAsUlEQVR4nMWSMQ6DMAxFPz4ApGKPIuUKDMzc/wpIiB3h5AJ0smWJpFE7UG/Ws/Nt53fTvFwA4F4j9m1FPzhIzucBiRonm/gQkRNrsW2ucQKgiRTt26rFLU45MXyItzGt4ifeTfNy5cS6GwBVtmG5fYwAqIKE5D5E9IO7cWn2IYLsQUSZz0PHbHGSneyupa+rcZLd5Lql5hpv+kCUc+LffWCv/5wPSgf8ygf2n1v8/z54A+Tl/8xE9S/WAAAAAElFTkSuQmCC'),
- floor: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyUlEQVR4nLWSsQ2DMBREH8g1BSVyYWUIihQRU6SKogyVAVJniIgCpaBmABeIkoIFksrkg40EUrjO+j5b9/5Fr/vlg9Dj+eZ2PrJWqqwajE6xbY/RKQBl1QBgdEpZ2/FykRts249no1NiaZ4PbdtT5AaTJaPZfeLm0fV0mETYKrUlb4iPcnkBbDf8ImRJ8BHJDCBeMrusIUkW+zJY0wmvB3KVMM0cWrWSQ6803eCZJSvYm8GSJJtgD+adD8n54uCwtthu8PJK/a0HX9x+fe9Cw+B0AAAAAElFTkSuQmCC'),
- carpet: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR4nO2SMQrDMAxFX4wPUEwQPoLxUDz1GD17ppAjGBFMb9BOFsniDF2jTbwv6Utoer7eX/4ID/AIQsoF1YpIZFsXUi5s68Kn6ZA7wBKRiGo1ccqFK+4BS3pn1Urbq9kccQeYrS5ueyXM0UQj7gDrDFhRF13x0w2OO4c5IhK54v44QbWebPYY8en+g/sPgB/PFxMEjCsX+gAAAABJRU5ErkJggg=='),
- crosswalk: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/0lEQVR4nO2SsWoDMRBEX/wBkoz74+AgkDZccVUghwkYUqRxKjcu/UUu3bhylSK/YzCurrCxpB9QCrHHnjEk7jON2NUwml0NddOmrjul6Wyeuu6U6qZNddP2tfSk1rzHp+c0AlgsV2w3axbLFQBuPBnUAP5yHvBi8BRlxcN0Nk/bzbonvn989pfSf3l9w1jH99duwAMYibIgBo+xDi1qrOMaMfgsIHYFRVkhY8kpZN031hGDzw40joc9QC8qp4jo3RjrsgMNUdYO9BiySDee3HagdyBkGUs78JdzdnBrNv0S5C8Up7ofg+c/B3/MQVFW9+Xg2sHxsL8vB/ql33LwA7+O+gqb/6DrAAAAAElFTkSuQmCC'),
- tree: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0ElEQVR4nK1Tuw2DMBB9IEawLFeIwlUGSJlhGCMDMIaHSZkZKJAry2KGOIV1yJ8zKcKrTk9+794dB/AnOo6Uagoc791WvR844ThLvp1BKI0OA6mmMM4SSgu4dQcAKC0AAG7dYz1H7v1EIJOexPflljUjcVlTQkqbjVAKKAlxxCstYOHrHbSMztCXgrRrWqdI+YEj0yW2TLIE3m2dNb6a89h+klBpAWv88Smzw/h1B9bExaV3cHqJDx1X9Fo/lTAboQT3kOOaBpdBqim0fqzL8AVRclh8nUN8qwAAAABJRU5ErkJggg=='),
- door: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAa0lEQVR4nGNgGGjACGOISSj8J0XjqxcPGBkYGBhYkAU91JiI0rzj1j84m4WQAkIWYDWAgYGBgY2NDYX/69cvrOqIczMewIhLAj1QYYFGkgs6YpQYMhwE8LoArwEPnrzDq5mgAcSAgQ/EYQAAumYZilj1raIAAAAASUVORK5CYII='),
- window: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbUlEQVR4nGNgGGjACGOISSj8J0XjqxcPGBkYGBhYkAU91JiI0rzj1j84mwWfJDaAbgmGAQwMDAwHDh3AqtnBzgFDDKebHewcGJ49f8Hw7PkLrBrxugDdFbhchNMAfDYSNIDYmMBqAKEYGAU0AgCAuhxIDA/KowAAAABJRU5ErkJggg=='),
- bench: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhklEQVR4nGNgGAWMMIaYhMJ/UjS+evGAkYGBgYEFWbAjRokozRVL7sHZTNgUPHjyjuHBk3cYbGwAxQUHTj1ANejZJ6xsnAY4mCngtAkZ7LiFxwvYnIzMR5fD6QV0JxPlhR23/mF3MzFATELhv5dfBMG04OUX8R85zWCNRrJdQExqJFYd0QAAJAI9oifTVB8AAAAASUVORK5CYII='),
- chair: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAqklEQVR4nGNgGGjAiE1QTELhPzbxVy8eYKjHEBCTUPg/Z9kGrLalRAVgGMKEy2lqKnIMQucmMAidm8CgpiKHSxkDCy6JW3ceMTAYFTAwMDAwvLvzCKcBAx8GKByYZmx+Vn/dwLD5YxKGQVjD4BbUzzCDbt15xHCLAVMzViAmofD/xqN3cLxp3wU4jS1sKA5EvEBMQgGrrcgAZ0JiYGBgCAqLImgJbb1ADAAAyuJYj+hzUg8AAAAASUVORK5CYII='),
- table: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAdElEQVR4nGNgGAUUA0Z0ATEJhf/4NLx68QBFDws2RR0xSjgNqFjC8B/ZECZcCh88eQenYRgbwOoCBgYGBgUZIQaZYz8YZBi4GBgYGBieWHGQZsCDJ+8YHshBDMIHsAaihxp2n+249Y+4QNxx6x9eW0cBKgAAatYls9oc0+UAAAAASUVORK5CYII='),
- plant: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAr0lEQVR4nGNgGPKAEZugmITCf2zir148wFDPgk2jXJIYg4SKCMOLO28YGBgYGCRURBgYGBgYTlUx/Ec3iBFZs1ySGIoGdAAz8NG8V3BDmNAVwWyGKYbR13bdw2owC7pmdBfADBRS4oPzHzG8gsujBAq2MEA27FTVNQacYYDNIHSALRYwwgCXZlxyLNgULlGSwmpAzL1nGGIYLoCBS+/eYWUTbYCekBBWNjqgOBApBgAM4Eb5bVYftgAAAABJRU5ErkJggg=='),
- shelf: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxElEQVR4nGNgGGjAiMwRk1D4T4ymVy8ewPWxoEt6qDHh1bzj1j8UPoYBDAwMDDF/JLBqXsLyAkMMp3WzmF4wZOiYwdlyFZ+wqsNqQIaOGUPaPwkGEalTcI23eJZgNQAjEIkJA+RAxKr6hpMEQ1UJF0NIwzqGIxp+DN/+4Q4XrAbI7XnB4LXFhYGjJotBROoUQ0sZF8OPlml09AK602FeItoLHDVZDNt89jA8cpFgmMX0gqHGbhqD1xYX2ngBIyWiJ1WaAwCdJk3r/y25GQAAAABJRU5ErkJggg=='),
- bush: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkklEQVR4nGNgGAUUA0ZsgmISCv+xib968QBDPQs2jWZtWgwv7rxhkFARgdMMDAwMp6oY/qMbxIKs2axNC69zYfKnqhj+wwxhQlf04s4bBgYGBritMBpdHgYwDMCmCJ2PDFDC4MWdNwzv7n1iEFLiY7i26x6GYpgcMkAJVVggyiWJYbXt0bxXDAwMqIFIcTQOAwAAscU6yhXq67MAAAAASUVORK5CYII='),
- lamp: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAb0lEQVR4nGNgGGjAiEtCTELhPzL/1YsHONVi1fz/bN7//x+OIPDZvP/ohjIwMDAwkeReLIA2XkA2BJuzkQFeLwSFRRG0hOIwGHgDKI4FrIJiEgr/0QNw3aplWA3B6YVHD+7BaRibJBdgEycrMRECAJCeNrAzoAtGAAAAAElFTkSuQmCC'),
- n1_down: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5ElEQVR4nGNgGGjAiE1QTELhPzbxVy8eYKjHEBCTUPjPwfAFq20/GHgwDGHB5TQFEQ4U/oM3P7Cqw2qAgggHQ4KNBorYgiM3GG68wVTLhMsFDAwMDBUb7qDQ2ABWA268gTisI0AFTsPE0AE8QMQkFP4zGZkwcMnI4HMUw7cnTxj+nTsDD0wMFwgoKDAIKCjgNQQZYPXChwcP4LZ9e/IErwEoHvt37gzDByQvYPPOv3NnUPhYE5KcgRsDAwMDw6MLuxgYGBgYkPlEJyRk8OLaAZxyWA1A1gCzEVf+wArEJBT+E6sBACQ7Sq1l/wWTAAAAAElFTkSuQmCC'),
- n1_up: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuUlEQVR4nMVTuwoCMRAcD4tDLCWkCJJPEPEb/GgrPyAEK7E8ZItDrpTjqsRKSS67Rzqnm9nX7JIA/8aKE5W2kdNffVfkF4LSNrZ4s9MmbIsmTZXPBaylgN21Ge+Gic1jHcyLJU108BhEY3IDpW1sjidsjFksaIhi8O53THaFkQgjkcizhtVeBWTLBu8AY4o1Uh68y2LsQ9ofzgCA5+0CAEj5/CFVnbu/X8UY2yAt+E6U/gcLpW2sLfgAYnM/6WnhJjIAAAAASUVORK5CYII='),
- n1_left: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA4ElEQVR4nGNgGGjAiE1QTELhPzbxVy8eYKjHEBCTUPjPwfAFq20/GHgwDGHCprAhwIBBQYQDjmGAg+ELhuuwGsDAwMCQYKPBkGCjwXDjDQvcQGwApwEw0BGgQroXKjbcwRC78YYFfyCKSSj8ZzIyYeCSkcHrom9PnjD8O3cGbhgLAR/AgYCCAtwAZIA3DL49eQLX8OHBA6xqUFzw79wZBgYkL6B758ODBxA1SABnSpQzcGNgYGBgeHRhFwMyGz0giQqDF9cO4JTDmpTZ2Njg/CePbjHCUh/ReQHGxqYBHQAAMPRT6t64sNcAAAAASUVORK5CYII='),
- n1_right: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVR4nMVSvQqCUBT+lAYJBwcRB5EzRDRKNDY3+wg9RmNjj+Pc1AOINDU5SDiIk0OIOGiDeLHu6Tp24MI9373nO9/5Af5tGgc6LvUcXhaZ9F8CHJd6Ay82WwNTItFVwWQb4pzDgCVdcCDZBo77DU5Riku4YgNZBWWRaQ1M4c8FswqGGuUmnqKUJRANcVzq9e0OS89TZqzzHF0Si2bq3x8sIlhEs9JHkwgAoMoyka3OcyXBRw+6JEY1KYErp0viD59dJD84AACe9yumd24T2T0oHjelbKWCUQUwjNTz12KkbdtKKliCX4Qj6fTtDfEMUYmvH9SzAAAAAElFTkSuQmCC'),
- n2_down: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0UlEQVR4nGNgGGjAiE1QTELhPzbxVy8eYKjHEBCTUPjPwfAFq20/GHgwDGEiyp14AAsuiYYAA1T+hgtY1eF1QcWGOyg00Qb8YOBhYGBgYOgIUIHTMDF0AA8QMQmF/2UNPQxqair4HMVw69Ydhq6GEnhgYrhATUWOQU1FjoGBgYGBoyaLgaMmC6+BWL1w684jvJqQAYoXGBgYGOYs24BXQ0pUAAMDAyJRYU1IYhJyUEWPoGIIPnpCwpkOkMGHdy9wymE1AFkDzEZc+QMrgHiDOA0AMHlBjvhpwtsAAAAASUVORK5CYII='),
- n2_up: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAApElEQVR4nGNgGGjAiE1QTELhPzbxVy8eYKjHEBCTUPjPwfAFq20/GHgwDGEiyp14wMAbwIJN8AcDD9EGwANETELhf1lDD4OamgpeDbdu3WHoaiiBByZWL9y6dYfh1q07OPnIgOIwQPECAwMDw5xlG/BqSIkKYGBgQCQqrAlJTEIOqugRVAzBR09IWGMBHXx49wKnHFYDkDXAbMSVP7ACiDeI0wAA5RU8hv2NbPsAAAAASUVORK5CYII='),
- n2_left: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA10lEQVR4nMVTsQ6CMBQ8jCEMzE0nwtB05lOYnf0EYxw7GuMnODvzPU0HQxyIg3FgYMNBikAflc2bXq/Xe73mFfg3AopkPG0p/lHdHL1DMJ62EWqyW4PYMVlRQpVnpEGE2rkdaWBNVJ6hQTxr6DWwOOairxdHOBTG4ajDwOARGU/bvTpDSjHVjKC1wUnterOfESykSCBF4vBeA60NtP7E0aYkNaMIAHC5Ft6bbDc5gO9QzU4i40knLDGspw+59rbr8HpWs3vkKIdh2K/vpQ5svMV/wdbUgSnetWJOIf9b3zYAAAAASUVORK5CYII='),
- n2_right: png('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2UlEQVR4nMVToQ7CMBB9IwjE9FJBmomlmk+ZRvMJhExOEsInoNH7nqZimWomCAKxzAyzlpG7dTieal/v3r1e7oB/I+LIRKQDx7e2JvGESEQ6bPBiq3WIicjq1+Qy37H8mmXHhKIyOOfZXAh10No66hD7+1IyEeBEHIrKsAK+IYlIh1N5hVLhqlobXMqjbyZxoDIJlclF6w5EAAC0aXw1rXnrDl9fAIDbvQomHPY5gM9QsYOUCDkGNZieuUlk5+D5sEEXUwR3obV1tJXK70Xf98QFKzAn6ESnb2/uOlEf3ek7BwAAAABJRU5ErkJggg=='),
-} as const;
+  grass: require('../assets/pixel/pulse/grass.png'),
+  walk: require('../assets/pixel/pulse/walk.png'),
+  road: require('../assets/pixel/pulse/road.png'),
+  floor: require('../assets/pixel/pulse/floor.png'),
+  carpet: require('../assets/pixel/pulse/carpet.png'),
+  crosswalk: require('../assets/pixel/pulse/crosswalk.png'),
+  tree: require('../assets/pixel/pulse/tree.png'),
+  door: require('../assets/pixel/pulse/door.png'),
+  window: require('../assets/pixel/pulse/window.png'),
+  bench: require('../assets/pixel/pulse/bench.png'),
+  chair: require('../assets/pixel/pulse/chair.png'),
+  table: require('../assets/pixel/pulse/table.png'),
+  plant: require('../assets/pixel/pulse/plant.png'),
+  shelf: require('../assets/pixel/pulse/shelf.png'),
+  bush: require('../assets/pixel/pulse/bush.png'),
+  lamp: require('../assets/pixel/pulse/lamp.png'),
+  n1_down: require('../assets/pixel/pulse/n1_down.png'),
+  n1_up: require('../assets/pixel/pulse/n1_up.png'),
+  n1_left: require('../assets/pixel/pulse/n1_left.png'),
+  n1_right: require('../assets/pixel/pulse/n1_right.png'),
+  n2_down: require('../assets/pixel/pulse/n2_down.png'),
+  n2_up: require('../assets/pixel/pulse/n2_up.png'),
+  n2_left: require('../assets/pixel/pulse/n2_left.png'),
+  n2_right: require('../assets/pixel/pulse/n2_right.png'),
+} as const satisfies Record<string, ImageSourcePropType>;
+/* eslint-enable @typescript-eslint/no-require-imports */
+
 export type PixelArtKey = keyof typeof pixelArt;
-export function actorArt(kind: 1 | 2, facing: 'up' | 'down' | 'left' | 'right'): string {
- return pixelArt[('n' + kind + '_' + facing) as PixelArtKey];
+
+export function actorArt(
+  kind: 1 | 2,
+  facing: 'up' | 'down' | 'left' | 'right',
+): ImageSourcePropType {
+  return pixelArt[('n' + kind + '_' + facing) as PixelArtKey];
 }
