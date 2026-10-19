@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
-import { lifeStageOf, relationshipStatus, DAILY_ACTIVITIES, activitiesForAge, dailyActivitiesUsed,
+import { lifeStageOf, relationshipStatus, activitiesForAge, dailyActivitiesUsed,
   SOCIAL_NPCS, canTalkTo, buildNPCSystemPrompt,
   type DailyActivityId, type ActivityZone, type RelationshipAction, type SocialNPC,
   type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
@@ -764,6 +764,11 @@ export function ArcadePixelLife({
           <HudButton title="✧" detail="STORIES" onPress={() => {pauseMovement(); setPanel('stories');}} />
           <HudButton title="★" detail="ACTIVITY" onPress={() => {pauseMovement(); setActivityFeedback(''); setPanel('activities');}} />
           <HudButton title="♫" detail="PEOPLE" onPress={() => onNavigate('people')} />
+          {canTalkTo(world,'parent_mara') ? (
+            <HudButton title="⌂" detail="FAMILY" onPress={() => {
+              pauseMovement(); openNPCChat('parent_mara');
+            }} />
+          ) : null}
           <HudButton title="⚙" detail="LOCAL AI" onPress={() => {pauseMovement(); setPanel('settings');}} />
         </View>
         {ageYears < 18 ? (
@@ -850,8 +855,8 @@ export function ArcadePixelLife({
           <View style={s.modal}>
             <View style={s.modalHead}>
               <View>
-                <Text style={s.modalTitle}>{panel === 'talk' ? 'AMELIA' : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : panel === 'activities' ? 'LIVE YOUR DAY' : 'LOCAL CONVERSATION ENGINE'}</Text>
-                <Text style={s.sub}>{panel === 'talk' ? 'A real conversation, not a three-choice menu.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : panel === 'activities' ? 'Actual activities change your life, not just a progress bar.' : 'Runs on your machine. Never required to play.'}</Text>
+                <Text style={s.modalTitle}>{panel === 'talk' ? SOCIAL_NPCS[currentNpc].name.toUpperCase() : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : panel === 'activities' ? 'LIVE YOUR DAY' : 'LOCAL CONVERSATION ENGINE'}</Text>
+                <Text style={s.sub}>{panel === 'talk' ? 'A real local-model conversation with remembered life events.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : panel === 'activities' ? 'Actual activities change your life, not just a progress bar.' : 'Runs on your machine. Never required to play.'}</Text>
               </View>
               <Pressable accessibilityLabel="Close panel" onPress={() => setPanel('none')} style={s.close}><Text style={s.closeText}>✕</Text></Pressable>
             </View>
@@ -860,25 +865,29 @@ export function ArcadePixelLife({
                 <ScrollView style={s.messages} contentContainerStyle={{paddingVertical: 12, gap: 10}}>
                   {messages.map((message, i) => (
                     <View key={i} style={[s.bubble, message.speaker === 'player' ? s.mine : s.theirs]}>
-                      <Text style={s.speaker}>{message.speaker === 'player' ? world.player.name : 'AMELIA'}</Text>
+                      <Text style={s.speaker}>{message.speaker === 'player' ? world.player.name : SOCIAL_NPCS[currentNpc].name.toUpperCase()}</Text>
                       <Text style={s.bubbleText}>{message.text}</Text>
                     </View>
                   ))}
-                  {waiting && <Text style={s.waitText}>Amelia is thinking…</Text>}
+                  {chatLoading && <Text style={s.waitText}>Restoring this character's saved conversation…</Text>}
+                  {waiting && <Text style={s.waitText}>{SOCIAL_NPCS[currentNpc].name} is thinking…</Text>}
                 </ScrollView>
                 <Text style={s.mode}>{modelMode === 'local' ? '● ' + localModel.toUpperCase() + ' · CONNECTED' : modelMode === 'error' ? '● LOCAL AI OFFLINE — MESSAGE NOT SENT' : '○ LOCAL AI NOT YET VERIFIED'}</Text>
                 {aiError ? <Text accessibilityRole="alert" style={[s.help,{color:'#ffbbad',marginBottom:8}]}>{aiError}</Text> : null}
                 <View style={s.suggestions}>
-                  {['How has your week been?', 'Do you know any work?', 'What should we do together?'].map(text =>
+                  {(currentNpc==='amelia'
+                    ? ['How has your week been?', 'Do you know any work?', 'What should we do together?']
+                    : ['What do you remember about me?', 'How has our family been?', 'Can we talk about something?']
+                   ).map(text =>
                     <Pressable key={text} style={s.suggestion} onPress={() => void submit(text)}><Text style={s.suggestionText}>{text}</Text></Pressable>)}
                 </View>
                 <View style={s.composer}>
                   <TextInput multiline style={s.composerInput}
-                    value={draft} onChangeText={setDraft} placeholder="Say anything to Amelia…"
+                    value={draft} onChangeText={setDraft} placeholder={'Say anything to '+SOCIAL_NPCS[currentNpc].name+'…'}
                     placeholderTextColor="#8e9c9e" maxLength={500} />
-                  <Pressable onPress={() => void submit()} disabled={waiting || !draft.trim()} style={s.send}><Text style={s.sendText}>SEND ↗</Text></Pressable>
+                  <Pressable onPress={() => void submit()} disabled={chatLoading || waiting || !draft.trim()} style={s.send}><Text style={s.sendText}>SEND ↗</Text></Pressable>
                 </View>
-                {ageYears >= 18 ? (
+                {currentNpc === 'amelia' && ageYears >= 18 ? (
                   <View style={{paddingTop:10,gap:6}}>
                     <Text style={s.speaker}>LIVING RELATIONSHIPS · {relationshipStatus(world).toUpperCase()}</Text>
                     <Text style={s.help}>AMELIA TRUST {world.relationships.find(r=>r.characterId==='amelia')?.trust ?? 0}% · Affection requires mutual trust and adult consent. Intimate scenes fade to black.</Text>
@@ -900,7 +909,16 @@ export function ArcadePixelLife({
                     {relationshipNotice ? <Text style={[s.help,{color:'#ffe2a6'}]}>{relationshipNotice}</Text> : null}
                   </View>
                 ) : null}
-                <Pressable style={s.storyLink} onPress={onTalk}><Text style={s.storyLinkText}>✦ Begin / continue Amelia's authored story mission →</Text></Pressable>
+                {currentNpc === 'amelia' ? (
+                  <Pressable style={s.storyLink} onPress={onTalk}>
+                    <Text style={s.storyLinkText}>✦ Begin / continue Amelia's authored story mission →</Text>
+                  </Pressable>
+                ) : (
+                  <Text style={[s.help,{marginTop:8}]}>
+                    {SOCIAL_NPCS[currentNpc].name}'s conversation now remembers
+                    your previous chats and relevant events from your actual saved life.
+                  </Text>
+                )}
               </>
             ) : panel === 'missions' ? (
               <ScrollView style={s.messages} contentContainerStyle={{gap: 12, paddingVertical: 12}}>
