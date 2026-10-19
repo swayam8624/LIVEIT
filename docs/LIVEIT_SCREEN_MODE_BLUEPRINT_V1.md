@@ -1,5 +1,7 @@
 # LIVEIT — Screen & Mode Design Blueprint (GDS-002)
 
+> **ARCHIVED 3D/HYBRID PLANNING DOCUMENT:** The owner changed LIVEIT to **100% expressive 2D retro pixel art** on 2026-10-19. Its former 3D cinematic/model requirements below are superseded by [PIXEL_ONLY_DIRECTION_V2](PIXEL_ONLY_DIRECTION_V2.md) and [active pixel-v2 requirements](../content/production-assets/pixel-v2/required-assets.json). Do not implement 3D from this document.
+
 **Step 2 of 5, after GDS-001:** detailed visual screen specifications, responsive geometry, navigation, screen states and interactions. **Status: design only**, not proof these screens are implemented. Superseded aesthetic: an isometric low-poly Vulkan city as the primary Free Life world. The committed [GDS-001](LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md) is authoritative: ORIGINAL handheld-era **top-down pixel overworld**, premium **smooth stylized 3D** for significant conversations/stories, and **tactile widgets and HUD** as the shared interaction layer. Preserved gameplay source: simulation, city districts, stories, saved identity, memories; new visuals must not change world facts.
 
 **Purpose:** every screen must be designable, implementable, testable and navigable without guessing about gestures, overlays, empty/error states, mobile breakpoints or UI layering. This spec deliberately lists **target screens** beyond the current repo; only a few existing RN screens currently work. No copyrighted Pokémon/Episode/BitLife artwork or screen cloning is authorized.
