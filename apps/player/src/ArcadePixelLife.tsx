@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
-import { lifeStageOf, type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
+import { lifeStageOf, relationshipStatus, type RelationshipAction, type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
 import { OFFICIAL_STORIES } from '@living/content';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
@@ -125,7 +125,7 @@ function PixelBuilding({
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onChildAction, onSkipChildhood, onStoryStart, paused = false,
+  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, paused = false,
 }: {
   world: World;
   paused?: boolean;
@@ -135,6 +135,7 @@ export function ArcadePixelLife({
   onChildAction: (activity: ChildhoodActivity, dayOffset: number) => void;
   onSkipChildhood: (years: 2 | 5 | 13 | 18) => void;
   onStoryStart: (id: string) => void;
+  onRelationship: (action: RelationshipAction, dayOffset: number) => string;
   onNavigate: (where: 'stories' | 'people' | 'journal' | 'life') => void;
 }) {
   const { width, height } = useWindowDimensions();
@@ -181,6 +182,7 @@ export function ArcadePixelLife({
   const [modelMode, setModelMode] = useState<'unknown' | 'local' | 'error'>('unknown');
   const [aiError, setAiError] = useState('');
   const [aiStatus, setAiStatus] = useState('Local model not checked.');
+  const [relationshipNotice, setRelationshipNotice] = useState('');
   const [waiting, setWaiting] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [movement, setMovement] = useState<Point>({ x: 0, y: 0 });
@@ -822,6 +824,28 @@ export function ArcadePixelLife({
                     placeholderTextColor="#8e9c9e" maxLength={500} />
                   <Pressable onPress={() => void submit()} disabled={waiting || !draft.trim()} style={s.send}><Text style={s.sendText}>SEND ↗</Text></Pressable>
                 </View>
+                {ageYears >= 18 ? (
+                  <View style={{paddingTop:10,gap:6}}>
+                    <Text style={s.speaker}>LIVING RELATIONSHIPS · {relationshipStatus(world).toUpperCase()}</Text>
+                    <Text style={s.help}>AMELIA TRUST {world.relationships.find(r=>r.characterId==='amelia')?.trust ?? 0}% · Affection requires mutual trust and adult consent. Intimate scenes fade to black.</Text>
+                    <View style={{flexDirection:'row',flexWrap:'wrap',gap:7}}>
+                      {([
+                        ['befriend','♡ BOND'],['ask_date','☕ DATE'],['kiss','♥ KISS'],
+                        ['be_intimate','☾ PRIVATE TIME'],['propose','✧ PROPOSE'],
+                        ['marry','✦ MARRY'],['break_up','↶ BREAK UP'],
+                      ] as const).map(([id,label])=>(
+                        <Pressable key={id} accessibilityRole="button"
+                          onPress={()=>{
+                            const day=Math.min(29,Math.floor(clockRef.current/(MONTH_MS/30)));
+                            setRelationshipNotice(onRelationship(id,day));
+                          }} style={s.suggestion}>
+                          <Text style={s.suggestionText}>{label}</Text>
+                        </Pressable>
+                      ))}
+                    </View>
+                    {relationshipNotice ? <Text style={[s.help,{color:'#ffe2a6'}]}>{relationshipNotice}</Text> : null}
+                  </View>
+                ) : null}
                 <Pressable style={s.storyLink} onPress={onTalk}><Text style={s.storyLinkText}>✦ Begin / continue Amelia's authored story mission →</Text></Pressable>
               </>
             ) : panel === 'missions' ? (
