@@ -14,6 +14,7 @@
 | 4        | [Hybrid Implementation Plan](HYBRID_RENDER_IMPLEMENTATION_PLAN.md) | M0–M7 build order, target files, domain migration, on-device acceptance                                                       | Implementation schedule and checklist, not shipped |
 | Primary  | [Unified Product Vision](UNIFIED_VISUAL_ENGINE_VISION.md)          | The whole game across Free Life, Story, NPCs, AI/social and art identity                                                      | Updated hybrid product direction                   |
 | Primary  | [Art Direction](ART_DIRECTION.md)                                  | Pixel assets and smooth 3D character style; production assets, colors, font, provenance                                       | Updated hybrid art rules                           |
+| 5 | [ART-005 Asset Production Bible](ASSET_PRODUCTION_BIBLE_V1.md) | Pixel art, 400 3D rig parts, 200 3D settings, HUD/audio/shaders, licensing and QA; see [catalog](../content/production-assets/v1/catalog-index.json), [110-item starter kit](../content/production-assets/v1/first-playable-slice.json) | Production inventory complete as PLANNED entries; no new artwork files created |
 | Progress | [BUILD STATUS](BUILD_STATUS.md)                                    | What has _actually_ compiled, rendered, installed or been tested                                                              | Must be evidence-backed per exact commit           |
 | Agent    | [AGENTS.md](../AGENTS.md)                                          | Binding coding/research/gating duties                                                                                         | Must follow this authority order                   |
 
@@ -27,7 +28,7 @@ Other documents remain useful as historical or domain-specific references, subje
 
 ## Precedence rule and safe future revisions
 
-For graphics: **GDS-001 wins over all older prose**. For screen/navigation: **GDS-002**. For native pipeline ABI, state/asset/ownership: **ENG-003**. For current truth: **the verified runtime and BUILD_STATUS**, never the wish list. The complete user LIFEWEAVE source remains the baseline for game-system breadth; visual revisions made 2026-10-19 override its old Unity/all-2.5D rendering proposals without deleting the long-term life-simulation goal.
+For actual art inventory, acquisition, formats, pack licensing and production QA: **ART-005**. For graphics: **GDS-001 wins over all older prose**. For screen/navigation: **GDS-002**. For native pipeline ABI, state/asset/ownership: **ENG-003**. For current truth: **the verified runtime and BUILD_STATUS**, never the wish list. The complete user LIFEWEAVE source remains the baseline for game-system breadth; visual revisions made 2026-10-19 override its old Unity/all-2.5D rendering proposals without deleting the long-term life-simulation goal.
 
 Do not treat the words "Vulkan city", "isometric" or "2.5D" in prototype source and old evidence files as the shipping Free Roam art choice. The existing React Native district selection and illustrated story flows remain fallback screens until production equivalents pass genuine iOS/Android checks. A generated UI atlas, offscreen shader PPM or passing npm test is not visual proof of the running native phone app.
 
