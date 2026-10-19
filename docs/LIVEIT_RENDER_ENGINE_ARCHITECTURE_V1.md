@@ -1,5 +1,7 @@
 # LIVEIT — Unified Hybrid Rendering Architecture (ENG-003)
 
+> **ARCHIVED 3D/HYBRID PLANNING DOCUMENT:** The owner changed LIVEIT to **100% expressive 2D retro pixel art** on 2026-10-19. Its former 3D cinematic/model requirements below are superseded by [PIXEL_ONLY_DIRECTION_V2](PIXEL_ONLY_DIRECTION_V2.md) and [active pixel-v2 requirements](../content/production-assets/pixel-v2/required-assets.json). Do not implement 3D from this document.
+
 **Status:** Step 3 of 5, architecture locked and TypeScript interface-contract prototype added. This does not claim native mobile renderer, walkable overworld, 3D actors or downloadable assets are currently shipped.
 
 **Authoritative design:** GDS-001 in docs/LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md and GDS-002 in docs/LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md. The user explicitly wants original early-Pokémon-like top-down pixel exploration, smooth modern **true-3D** conversations, and dense tactile Life/Story/HUD/Phone interfaces, all populated by the **same persistent, aging human identities**. Those decisions supersede the previous isometric low-poly town or procedural 2.5D faces as the final art output. Retain their Vulkan demo as technical groundwork and test evidence.
