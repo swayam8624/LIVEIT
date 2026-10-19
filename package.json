@@ -26,7 +26,8 @@
     "assets:intake": "python3 tools/intake_pixel_assets.py",
     "assets:validate:legacy": "node tools/validate-production-assets.mjs",
     "assets:validate": "python3 tools/validate_pixel_assets.py",
-    "assets:summary": "python3 tools/validate_pixel_assets.py --json"
+    "assets:summary": "python3 tools/validate_pixel_assets.py --json",
+    "ai:check": "node tools/check_local_llm.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
