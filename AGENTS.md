@@ -17,6 +17,7 @@ REA is not a substitute for inspecting legally available YouTube gameplay record
 **RETRO TO LIVE IN. CINEMATIC TO FEEL. TACTILE TO CONTROL.** No agent may resurrect the retired "full 3D city exploration" or "2.5D cutout dialogue is enough" plan as the final product. The owner explicitly selected **original Pokémon Red/Blue-inspired top-down pixel gameplay** for free walking and everyday life, **real smooth rigged 3D** for dramatic conversations and story episodes, and a highly tactile game HUD, sidebars, in-world communications, haptics and actual consequence widgets. Inspiration is gameplay grammar, NEVER copyrighted sprites/maps/music/screens.
 
 **Mandatory precedence and files (not optional):**
+
 1. docs/LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md — canonical visuals and quality bar (GDS-001).
 2. docs/LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md — 43 screens and concrete flows (GDS-002); docs/design/LIVEIT_SCREEN_ATLAS.html is an **interactive design mock**, not a native game screenshot.
 3. docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md — native two-pipeline Vulkan/MoltenVK renderer, world authority, migration, quality/testing (ENG-003); docs/design/LIVEIT_RENDER_GRAPH.mmd is its diagram.
@@ -24,7 +25,7 @@ REA is not a substitute for inspecting legally available YouTube gameplay record
 5. docs/BUILD_STATUS.md — actually verified implementation evidence and known blockers.
 6. docs/VULKAN_CITY_RENDERING.md — historical offscreen GPU city prototype, **not** the approved Free Life rendering output. Preserve useful shader code/CI without confusing its 3D boxes and 2.5D face shapes with finished game graphics.
 
-**Renderer acceptance:** A single shared C++ Vulkan render host (Android Vulkan; iOS MoltenVK/CAMetalLayer) eventually owns both a *nearest-neighbor tile/sprite pixel pass* and a *genuine skinned-mesh character/3D environment/camera pass*; Expo native views host the GPU scene, and accessible RN native UI overlays dialogue/choices and haptics. The same saved identity, appearance, age, wardrobe and NPC memories are used in pixel, 3D, story and AI-chat scenes. This is a target, not a claim that the native bridge exists today. Build evidence from a **real physical device**, not a CI PPM.
+**Renderer acceptance:** A single shared C++ Vulkan render host (Android Vulkan; iOS MoltenVK/CAMetalLayer) eventually owns both a _nearest-neighbor tile/sprite pixel pass_ and a _genuine skinned-mesh character/3D environment/camera pass_; Expo native views host the GPU scene, and accessible RN native UI overlays dialogue/choices and haptics. The same saved identity, appearance, age, wardrobe and NPC memories are used in pixel, 3D, story and AI-chat scenes. This is a target, not a claim that the native bridge exists today. Build evidence from a **real physical device**, not a CI PPM.
 
 **First playable acceptance:** walk in original top-down Bellweather, collide with a solid tile, enter a café, meet a named NPC, enter a genuine 3D face-to-face conversation, commit a choice, show persisted actual money/trust/etc outcome in an accessible widget, return to exactly the same town coordinate and survive relaunch. Haptic confirmation only after verified save commit. If one of these is missing the program is not production-ready.
 
