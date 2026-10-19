@@ -1,3 +1,5 @@
+export { SOCIAL_NPCS, canTalkTo, buildNPCSystemPrompt, recordNPCConversation } from './npcMemory';
+export type { SocialNPC } from './npcMemory';
 import { applyLifeMilestones } from './lifeMilestones';
 export { applyLifeMilestones, LIFE_MILESTONES } from './lifeMilestones';
 export type { LifeMilestone } from './lifeMilestones';
