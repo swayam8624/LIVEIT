@@ -192,3 +192,39 @@ export function setCharacterAppearance(
   world.player.appearance = AppearanceSchema.parse(appearance);
   return WorldSchema.parse(world);
 }
+
+
+/**
+ * Advance one calendar month without pretending the player spent 30 days
+ * resting, studying or socializing. Salary is paid on approximately 22
+ * workdays, bills accrue daily, passive NPC lives tick, and neglected
+ * relationships change gradually. One call = 30 simulated days.
+ *
+ * The UI triggers this only after 60 actual active gameplay minutes. The
+ * elapsed fraction is persisted separately so old v1 saves do not break.
+ */
+export function advanceCalendarMonth(input: World): World {
+  const w = structuredClone(WorldSchema.parse(input));
+  const days = 30;
+  for (let i = 0; i < days; i++) {
+    w.day += 1;
+    w.player.ageDays += 1;
+    tickNPCs(w);
+    const workday = w.day % 7 < 5;
+    if (workday && w.player.career === 'employed') {
+      const contract = w.city?.employment;
+      w.player.money += contract && contract.stage !== 'applied'
+        ? Math.round(contract.salaryAnnual / 260)
+        : 12000;
+    }
+    w.player.money = Math.max(-100000000,
+      Math.min(100000000, w.player.money - 2800));
+    if (w.day % 7 === 0) {
+      for (const relation of w.relationships)
+        if (w.day - relation.lastContactDay >= 7)
+          relation.trust = Math.max(0, relation.trust - 1);
+    }
+  }
+  record(w, 'simulation', 'A month passes in Bellweather. Your life continues while the town changes around you.');
+  return WorldSchema.parse(w);
+}
