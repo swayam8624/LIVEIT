@@ -156,7 +156,7 @@ export function ArcadePixelLife({
   const zoneRef = useRef(zone);
   const [clock, setClock] = useState(0);
   const [notice, setNotice] = useState('Walk up to Amelia and press TALK. Explore the market and café.');
-  const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings' | 'stories' | 'activities'>('none');
+  const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings' | 'stories' | 'activities' | 'people' | 'journal'>('none');
   const [activityFeedback, setActivityFeedback] = useState('');
   const [currentNpc, setCurrentNpc] = useState<SocialNPC>('amelia');
   const currentNpcRef = useRef<SocialNPC>('amelia');
@@ -763,7 +763,8 @@ export function ArcadePixelLife({
           <HudButton title="☷" detail="MISSION" onPress={() => {pauseMovement(); setPanel('missions');}} />
           <HudButton title="✧" detail="STORIES" onPress={() => {pauseMovement(); setPanel('stories');}} />
           <HudButton title="★" detail="ACTIVITY" onPress={() => {pauseMovement(); setActivityFeedback(''); setPanel('activities');}} />
-          <HudButton title="♫" detail="PEOPLE" onPress={() => onNavigate('people')} />
+          <HudButton title="♫" detail="PEOPLE" onPress={() => {pauseMovement();setPanel('people');}} />
+          <HudButton title="▤" detail="JOURNAL" onPress={() => {pauseMovement();setPanel('journal');}} />
           {canTalkTo(world,'parent_mara') ? (
             <HudButton title="⌂" detail="FAMILY" onPress={() => {
               pauseMovement(); openNPCChat('parent_mara');
@@ -855,8 +856,8 @@ export function ArcadePixelLife({
           <View style={s.modal}>
             <View style={s.modalHead}>
               <View>
-                <Text style={s.modalTitle}>{panel === 'talk' ? SOCIAL_NPCS[currentNpc].name.toUpperCase() : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : panel === 'activities' ? 'LIVE YOUR DAY' : 'LOCAL CONVERSATION ENGINE'}</Text>
-                <Text style={s.sub}>{panel === 'talk' ? 'A real local-model conversation with remembered life events.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : panel === 'activities' ? 'Actual activities change your life, not just a progress bar.' : 'Runs on your machine. Never required to play.'}</Text>
+                <Text style={s.modalTitle}>{panel === 'talk' ? SOCIAL_NPCS[currentNpc].name.toUpperCase() : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : panel === 'activities' ? 'LIVE YOUR DAY' : panel === 'people' ? 'PEOPLE IN YOUR LIFE' : panel === 'journal' ? 'YOUR LIFE JOURNAL' : 'LOCAL CONVERSATION ENGINE'}</Text>
+                <Text style={s.sub}>{panel === 'talk' ? 'A real local-model conversation with remembered life events.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : panel === 'activities' ? 'Actual activities change your life, not just a progress bar.' : panel === 'people' ? 'Every connection lives in the same save and has its own history.' : panel === 'journal' ? 'An honest record of the life you have actually lived.' : 'Runs on your machine. Never required to play.'}</Text>
               </View>
               <Pressable accessibilityLabel="Close panel" onPress={() => setPanel('none')} style={s.close}><Text style={s.closeText}>✕</Text></Pressable>
             </View>
@@ -965,6 +966,66 @@ export function ArcadePixelLife({
                 <TextInput style={[s.field, {minHeight: 90}]} multiline value={missionDescription} onChangeText={setMissionDescription} placeholder="What would you like to accomplish?" placeholderTextColor="#a1a4ad" maxLength={500}/>
                 <Pressable style={s.add} onPress={saveMission}><Text style={s.addText}>+ ADD TO MY LIFE</Text></Pressable>
                 <Pressable style={s.storyLink} onPress={onTalk}><Text style={s.storyLinkText}>Play the official Amelia quest →</Text></Pressable>
+              </ScrollView>
+            ) : panel === 'people' ? (
+              <ScrollView style={s.messages} contentContainerStyle={{gap:10,paddingBottom:16}}>
+                <Text style={s.help}>
+                  Friends and family are part of your real timeline. Trust changes
+                  through activities, story choices and successful local-model
+                  conversations. Each person has an independent chat history.
+                </Text>
+                {(Object.keys(SOCIAL_NPCS) as SocialNPC[]).filter(id=>
+                  world.relationships.some(r=>r.characterId===id)
+                ).map(npc=>{
+                  const person=SOCIAL_NPCS[npc];
+                  const relation=world.relationships.find(r=>r.characterId===npc)!;
+                  const available=canTalkTo(world,npc);
+                  const needsVisit=npc==='amelia' && !isNearNpc();
+                  return (
+                    <View key={npc} style={s.quest}>
+                      <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',gap:8}}>
+                        <View style={{flex:1}}>
+                          <Text style={s.questTitle}>♥ {person.name.toUpperCase()}</Text>
+                          <Text style={s.help}>{person.role} · TRUST {relation.trust}/100</Text>
+                          <Text style={s.mode}>LAST CONTACT: DAY {relation.lastContactDay}</Text>
+                        </View>
+                        <Pressable accessibilityRole="button"
+                          disabled={!available || needsVisit}
+                          onPress={()=>openNPCChat(npc)}
+                          style={[s.suggestion,(!available||needsVisit)&&{opacity:0.45}]}>
+                          <Text style={s.suggestionText}>
+                            {!available ? 'AGE LOCKED' : needsVisit ? 'VISIT NPC' : 'TALK ↗'}
+                          </Text>
+                        </Pressable>
+                      </View>
+                    </View>
+                  );
+                })}
+                <Text style={s.help}>
+                  More family members, friendships, colleagues and neighbors
+                  will become available through life events and world encounters.
+                </Text>
+              </ScrollView>
+            ) : panel === 'journal' ? (
+              <ScrollView style={s.messages} contentContainerStyle={{gap:9,paddingBottom:18}}>
+                <Text style={s.mode}>
+                  {world.player.name.toUpperCase()} · {stage.toUpperCase()} · DAY {world.day} ·
+                  {' '}{world.memories.length} SAVED MEMORIES
+                </Text>
+                <Text style={s.speaker}>LIFE EVENTS</Text>
+                {world.history.slice(-60).reverse().map(entry=>(
+                  <View key={entry.id} style={[s.quest,{padding:10}]}>
+                    <Text style={s.mode}>DAY {entry.day} · {entry.kind.toUpperCase()}</Text>
+                    <Text style={s.bubbleText}>{entry.text}</Text>
+                  </View>
+                ))}
+                <Text style={s.speaker}>REMEMBERED MOMENTS</Text>
+                {world.memories.slice(-24).reverse().map(entry=>(
+                  <View key={entry.id} style={[s.quest,{padding:10}]}>
+                    <Text style={s.mode}>{entry.subject.toUpperCase()} · DAY {entry.day}</Text>
+                    <Text style={s.help}>{entry.text}</Text>
+                  </View>
+                ))}
               </ScrollView>
             ) : panel === 'activities' ? (
               <ScrollView style={s.messages}
