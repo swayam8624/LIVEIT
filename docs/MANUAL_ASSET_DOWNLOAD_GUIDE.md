@@ -1,5 +1,7 @@
 # LIVEIT — Manual/Account-Gated Asset Download Guide (19 October 2026)
 
+> **PIXEL-ONLY CURRENT DIRECTION:** The owner has retired all 3D assets. Only pixel art, 2D animated dialogue portraits, backgrounds, game HUD, source-licensed audio and fonts are needed. **Ignore all 3D downloads listed later in this historical source directory.** Use [PIXEL_ONLY_DIRECTION_V2](PIXEL_ONLY_DIRECTION_V2.md), [pixel-v2 requirements](../content/production-assets/pixel-v2/required-assets.json) and [the intake script](../tools/intake_pixel_assets.py).
+
 Verified initial source shortlist for the 1,481-item LIVEIT production catalog and selected 110-item first playable kit. **These are acquisition recommendations, not downloaded files, successful tested game assets or license clearance of each component.** Link checking cannot establish which sources a particular Codex session is blocked from accessing; links marked MANUAL are known click/login/large/custom-license candidates. Before raw files go into a _public_ GitHub repo, check the license bundled with the exact downloaded item, any trademarks/model releases, license date and that site's actual source-file redistribution rights.
 
 ## Download handling — very important
