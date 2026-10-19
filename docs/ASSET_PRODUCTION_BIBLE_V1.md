@@ -14,6 +14,8 @@ No downloaded textures, meshes, sounds, font files or third-party materials have
 
 ## 2. Canonical machine-readable files and counts
 
+The [self-contained searchable Asset Atlas](../content/production-assets/ASSET_ATLAS.html) lets artists and engineers filter every planned item by category/priority or only the 110 first-playable IDs. It is deliberately metadata-only and can be opened locally without a server.
+
 | Catalog                | Item classes                                                      |                Count | Where                                           |
 | ---------------------- | ----------------------------------------------------------------- | -------------------: | ----------------------------------------------- |
 | 3D people              | interchangeable custom rig parts                                  |              **400** | content/production-assets/v1/characters-3d.json |
