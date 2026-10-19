@@ -5,7 +5,7 @@ export type AmbientPedestrian=Readonly<{
   id:string;
   x:number;
   y:number;
-  look:number;
+  look:1|2;
   facing:Facing;
   shift:'commute'|'work'|'leisure'|'home';
 }>;
@@ -51,7 +51,7 @@ export function ambientPedestrians(
       if(worldCell('street',x,y,seed).solid)continue;
       if(x===10 && y===7)continue; // canonical Amelia spawn
       results.push({id:seed+':'+cx+':'+cy+':'+i,x,y,
-        facing,look:(hash>>>13)%5,shift});
+        facing,look:(hash>>>13)%2===0?1:2,shift});
     }
   }
   return results;
