@@ -617,7 +617,7 @@ export default function App() {
                       ))}
                     </View>
                   </GameStage>
-                  <CityWorld world={world!} onAction={applyWorldAction} />
+                  <CityWorld world={world!} onAction={applyWorldAction} onTalk={openEncounter} />
                   <View style={s.stats}>
                     <Stat
                       label="YOUR SAVINGS"
