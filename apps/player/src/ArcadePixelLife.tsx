@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
+import type { WorldActivity } from '@living/simulation-core';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
 import { MISSION_GOALS, missionExpired, newMission, parseMissions, resolveMissionEvent,
@@ -102,12 +103,13 @@ async function npcFromLocalModel(
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onNavigate, paused = false,
+  world, onTalk, onAdvanceMonth, onNavigate, onActivity, paused = false,
 }: {
   world: World;
   paused?: boolean;
   onTalk: () => void;
   onAdvanceMonth: () => void;
+  onActivity: (activity: WorldActivity, dayOffset: number) => void;
   onNavigate: (where: 'stories' | 'people' | 'journal' | 'life') => void;
 }) {
   const { width, height } = useWindowDimensions();
@@ -119,6 +121,8 @@ export function ArcadePixelLife({
   const tileWindowRef = useRef(tileWindow);
   const [place, setPlace] = useState<PixelPlace>('street');
   const [facing, setFacing] = useState<Facing>('down');
+  const [zone, setZone] = useState<'cafe' | 'market' | 'garden' | 'street'>('street');
+  const zoneRef = useRef(zone);
   const [clock, setClock] = useState(0);
   const [notice, setNotice] = useState('Walk up to Amelia and press TALK. Explore the market and café.');
   const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings'>('none');
@@ -349,6 +353,13 @@ export function ArcadePixelLife({
         routeRef.current = []; talkAfterWalk.current = false;
         setPlace('street'); setNotice('Back in Bellweather market.');
       }
+      const currentZone = p.place === 'cafe' ? 'cafe'
+        : p.x >= 17 && p.y >= 14 ? 'garden'
+        : p.x >= 19 && p.y <= 13 ? 'market' : 'street';
+      if (zoneRef.current !== currentZone) {
+        zoneRef.current = currentZone;
+        setZone(currentZone);
+      }
       if (p.place === 'street' && p.x >= 17 && p.y >= 14 &&
           lastZone.current !== 'garden') {
         lastZone.current = 'garden';
@@ -498,6 +509,30 @@ export function ArcadePixelLife({
     walkVector.current = next;
     setMovement(next);
   };
+  const interact = () => {
+    if (!loaded || panel !== 'none' || paused) return;
+    const interaction: WorldActivity | null = zone === 'cafe' ? 'cafe'
+      : zone === 'garden' ? 'garden'
+      : zone === 'market' ? 'gig' : null;
+    if (!interaction) {
+      setNotice('Walk to the market for work, the garden to rest, or the café for coffee.');
+      return;
+    }
+    const offset = Math.min(29, Math.floor(clockRef.current / (MONTH_MS / 30)));
+    const marker = 'free-life-action:' + (world.day + offset) + ':' + interaction;
+    if (world.facts.includes(marker)) {
+      setNotice('You have already done that today. Try another activity!');
+      return;
+    }
+    if (interaction === 'cafe' && world.player.money < 450) {
+      setNotice('You need £4.50 to buy coffee.');
+      return;
+    }
+    onActivity(interaction, offset);
+    setNotice(interaction === 'gig' ? 'Market shift completed — £35 earned.'
+      : interaction === 'cafe' ? 'Coffee break — wellbeing restored.'
+      : 'A peaceful afternoon in the gardens.');
+  };
   const tapToWalk = (localX: number, localY: number) => {
     if (!loaded || paused || panel !== 'none') return;
     const p = hero.current;
@@ -604,6 +639,7 @@ export function ArcadePixelLife({
         </View>
         <View style={s.leftButtons}>
           <HudButton title="☷" detail="MISSION" onPress={() => {pauseMovement(); setPanel('missions');}} />
+          <HudButton title="✧" detail="STORIES" onPress={() => onNavigate('stories')} />
           <HudButton title="♫" detail="PEOPLE" onPress={() => onNavigate('people')} />
           <HudButton title="⚙" detail="LOCAL AI" onPress={() => {pauseMovement(); setPanel('settings');}} />
         </View>
@@ -617,7 +653,11 @@ export function ArcadePixelLife({
             </View>
             <View style={s.actions}>
               <Pressable onPress={startChat} style={s.talkButton} accessibilityRole="button" accessibilityLabel="Talk to nearby NPC"><Text style={s.talkIcon}>✦</Text><Text style={s.actionLabel}>TALK</Text></Pressable>
-              <Pressable onPress={() => {pauseMovement(); onNavigate('stories');}} style={s.storyButton} accessibilityRole="button" accessibilityLabel="Open story missions"><Text style={s.talkIcon}>✧</Text><Text style={s.actionLabel}>STORY</Text></Pressable>
+              <Pressable onPress={interact} style={s.storyButton} accessibilityRole="button"
+                accessibilityLabel={zone === 'market' ? 'Work a market shift' : zone === 'garden' ? 'Rest in the garden' : zone === 'cafe' ? 'Buy coffee' : 'Explore'}>
+                <Text style={s.talkIcon}>{zone === 'market' ? '⚒' : zone === 'garden' ? '☘' : zone === 'cafe' ? '☕' : '✧'}</Text>
+                <Text style={s.actionLabel}>{zone === 'market' ? 'WORK' : zone === 'garden' ? 'REST' : zone === 'cafe' ? 'BUY' : 'ACT'}</Text>
+              </Pressable>
             </View>
           </View>
           <View style={s.quickbar}>
