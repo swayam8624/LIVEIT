@@ -19,3 +19,6 @@ test-results/
 assets/local-intake/
 assets/private-licensed/
 assets/manual-inbox/review/
+
+# Owner-installed licensed art. Never push nonredistributable packs.
+apps/player/assets/private/
