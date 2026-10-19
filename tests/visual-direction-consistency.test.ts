@@ -37,7 +37,7 @@ describe('current 100% pixel-only owner direction remains canonical', () => {
   it('keeps imported pixels and game audio rights-checked', () => {
     const readme = fromRoot('README.md');
     const agent = fromRoot('AGENTS.md');
-    expect(readme).toContain('tools/intake_pixel_assets.py');
+    expect(readme).toContain('assets:intake');
     expect(agent).toContain('tools/intake_pixel_assets.py');
     expect(existsSync(resolve(process.cwd(), 'tools/validate_pixel_assets.py'))).toBe(true);
   });
