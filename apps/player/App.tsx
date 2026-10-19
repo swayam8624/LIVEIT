@@ -28,6 +28,7 @@ import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
 import { GameStage } from './src/GameStage';
+import { pixelArt } from './src/pixelArt';
 import { CityWorld } from './src/CityWorld';
 import { AvatarEditor } from './src/AvatarEditor';
 import { AvatarPortrait } from './src/AvatarPortrait';
@@ -48,9 +49,8 @@ const serif = t.font.display;
 const gold = t.amber;
 // Console-like headers and navigation, readable modern body copy.
 const mono = t.font.hud;
-// Metro bundles this original, locally stored character portrait offline.
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const ameliaPortrait = require('./assets/amelia-portrait.jpg');
+// Same CC0 directional pixel character asset as the overworld, never a photo.
+const ameliaPortrait = pixelArt.n2_down;
 const money = (n: number) =>
   new Intl.NumberFormat('en-GB', {
     style: 'currency',
@@ -837,6 +837,7 @@ export default function App() {
                                 ) : (
                                   <Image
                                     source={ameliaPortrait}
+                                    resizeMode="contain"
                                     style={s.avatarImage}
                                     accessibilityLabel="Amelia Chen's portrait"
                                   />
@@ -1058,6 +1059,7 @@ export default function App() {
                             {amelia ? (
                               <Image
                                 source={ameliaPortrait}
+                                resizeMode="contain"
                                 style={s.profilePortrait}
                                 accessibilityLabel="Amelia Chen's illustrated portrait"
                               />
