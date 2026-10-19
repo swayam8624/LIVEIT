@@ -14,6 +14,10 @@ import {
   createWorld,
   advanceLife,
   advanceCalendarMonth,
+  createBirthWorld,
+  performChildhoodActivity,
+  skipToAge,
+  type ChildhoodActivity,
   performWorldActivity,
   type WorldActivity,
   setCharacterAppearance,
@@ -357,7 +361,7 @@ export default function App() {
       persist({
         version: 1,
         active: 'life',
-        life: createWorld(name, 'main', pronouns, appearance),
+        life: createBirthWorld(name, 'main-' + Date.now().toString(36), pronouns, appearance),
         story: null,
       });
       setReset(false);
@@ -398,6 +402,10 @@ export default function App() {
           paused={sceneOpen}
           onTalk={openEncounter}
           onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
+          onChildAction={(activity: ChildhoodActivity, offset: number) =>
+            applyWorldAction((w) => performChildhoodActivity(w, activity, offset))}
+          onSkipChildhood={(years: 2 | 5 | 13 | 18) =>
+            applyWorldAction((w) => skipToAge(w, years))}
           onActivity={(activity: WorldActivity, dayOffset: number) =>
             applyWorldAction((w) => performWorldActivity(w, activity, dayOffset))}
           onNavigate={(destination) => setTab(destination)}
@@ -506,9 +514,9 @@ export default function App() {
                 A life worth{wide ? '\n' : ' '}remembering.
               </Text>
               <Text style={s.subtitle}>
-                You’re 23, newly arrived in Bellweather. There’s £1,800 in your
-                account, a city to discover, and someone from your past just
-                around the corner.
+                You will be born in Bellweather. Grow from infancy into childhood,
+                choose your own path through school and adulthood, and build
+                a life whose relationships and memories actually matter.
               </Text>
               <Text style={s.fieldLabel}>WHAT SHOULD WE CALL YOU?</Text>
               <TextInput
@@ -539,7 +547,7 @@ export default function App() {
                   label={
                     reset
                       ? 'Create new life & replace save →'
-                      : 'Begin your life →'
+                      : 'Begin at birth →'
                   }
                   disabled={!name.trim()}
                   onPress={newLife}
