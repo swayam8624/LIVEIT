@@ -1,12 +1,13 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
+import { pixelArt } from '../apps/player/src/pixelArt';
 
 const source = readFileSync(
   resolve(process.cwd(), 'apps/player/src/pixelArt.ts'),
   'utf8',
 );
-const entries = [...source.matchAll(/([a-zA-Z0-9_]+): png\('([A-Za-z0-9+/=]+)'\)/g)];
+const entries = Object.entries(pixelArt);
 
 function crc32(bytes: Buffer): number {
   let n = 0xffffffff;
@@ -28,8 +29,9 @@ describe('bundled user-provided CC0 pixels', () => {
 
   it('every embedded image is a complete 16x16 PNG with correct CRCs', () => {
     const ids = new Set<string>();
-    for (const [, name, base64] of entries) {
-      if (!name || !base64) throw new Error('Invalid embedded sprite entry');
+    for (const [name, uri] of entries) {
+      expect(uri).toMatch(/^data:image\/png;base64,/);
+      const base64 = uri.slice('data:image/png;base64,'.length);
       expect(ids.has(name)).toBe(false);
       ids.add(name);
       const image = Buffer.from(base64, 'base64');
