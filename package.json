@@ -24,7 +24,9 @@
     "build:studio": "npm run build -w @living/creator-studio",
     "check": "npm run format:check && npm run lint && npm run typecheck && npm test",
     "assets:intake": "python3 tools/intake_pixel_assets.py",
-    "assets:validate:legacy": "node tools/validate-production-assets.mjs"
+    "assets:validate:legacy": "node tools/validate-production-assets.mjs",
+    "assets:validate": "python3 tools/validate_pixel_assets.py",
+    "assets:summary": "python3 tools/validate_pixel_assets.py --json"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
