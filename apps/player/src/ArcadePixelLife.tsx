@@ -9,6 +9,7 @@ import type { World } from '@living/world-schema';
 import type { WorldActivity } from '@living/simulation-core';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
+import { modernSpriteColumn } from './spriteDirections';
 import { MISSION_GOALS, missionExpired, newMission, parseMissions, resolveMissionEvent,
   type LifeMission, type MissionGoal, type MissionEvent } from './missionGoals';
 import {
@@ -375,11 +376,11 @@ export function ArcadePixelLife({
         facingRef.current = nextFacing;
         setFacing(previous => previous === nextFacing ? previous : nextFacing);
         bob.setValue(Math.sin(timestamp / 70) * 2);
-        const faceOffset = modernPlayer ? ({ left: 0, up: 1, right: 2, down: 3 } as const)[nextFacing] * 6 : 0;
+        const faceOffset = modernPlayer ? modernSpriteColumn(nextFacing, 0) : 0;
         frameOffset.setValue(-TILE * (faceOffset + (Math.floor(timestamp / 125) % (modernPlayer ? 6 : 4))));
       } else {
         bob.setValue(Math.sin(timestamp / 440) * 0.7);
-        frameOffset.setValue(modernPlayer ? -TILE * ({ left: 0, up: 1, right: 2, down: 3 } as const)[facingRef.current] * 6 : 0);
+        frameOffset.setValue(modernPlayer ? -TILE * modernSpriteColumn(facingRef.current, 0) : 0);
       }
       // Portal transitions need to be detected by entering a tile, not by
       // colliding with the café's solid façade.
