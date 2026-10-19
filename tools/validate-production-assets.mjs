@@ -220,7 +220,8 @@ export function validateProductionCatalog() {
     'first playable kit must remain a feasible bounded curated subset');
   for (const id of first.assetIds) assert(ids.has(id), 'first playable kit references unknown asset ' + id);
   const firstCategories = countItems(assets.filter((asset) => selected.has(asset.id)), 'category');
-  assert(JSON.stringify(firstCategories) === JSON.stringify(first.countsByCategory),
+  assert(Object.keys(firstCategories).length === Object.keys(first.countsByCategory).length &&
+    Object.entries(firstCategories).every(([kind, count]) => first.countsByCategory[kind] === count),
     'first playable category counts out of sync');
   assert(first.status === 'planned-unbuilt' && first.notShippingYet === true,
     'first playable kit is only a plan until mobile QA');
