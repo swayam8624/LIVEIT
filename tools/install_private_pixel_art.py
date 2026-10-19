@@ -23,6 +23,9 @@ import zipfile
 
 SPRITES = {
     "Adam_run_16x16.png": "player_modern",
+    "Alex_run_16x16.png": "player_modern_alex",
+    "Bob_run_16x16.png": "player_modern_bob",
+    "Amelia_run_16x16.png": "player_modern_amelia",
     "Amelia_idle_anim_16x16.png": "npc_modern",
 }
 SHEET_ROOT = "Modern tiles_Free/Characters_free/"
