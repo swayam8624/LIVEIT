@@ -4,10 +4,7 @@
   "scope": "Original production pixel sprites/tiles/maps. Historic 15 Kenney isometric tiles are already present in the repository, but do not satisfy these top-down authored tile requirements.",
   "design": {
     "tilePx": 16,
-    "adultFootprintPx": [
-      16,
-      24
-    ],
+    "adultFootprintPx": [16, 24],
     "directions": 4,
     "mainActorFramesEachDirection": 6,
     "crowdActorFramesEachDirection": 3,
