@@ -27,8 +27,8 @@ export type PixelCell = Readonly<{
   solid: boolean;
   portal?: PixelPlace;
 }>;
-export const STREET_WIDTH = 19;
-export const STREET_HEIGHT = 14;
+export const STREET_WIDTH = 30;
+export const STREET_HEIGHT = 23;
 export const CAFE_WIDTH = 12;
 export const CAFE_HEIGHT = 10;
 export const INITIAL_POSITION: PixelPosition = {
@@ -67,6 +67,53 @@ export function pixelCell(place: PixelPlace, x: number, y: number): PixelCell {
     const cross = ((x >= 13 && x <= 14) && y >= 9 && y <= 12) ||
       (y >= 10 && y <= 11 && x >= 10 && x <= 16);
     return { terrain: cross ? 'crosswalk' : 'road', solid: false };
+  }
+  // The east side opens into a second neighborhood and a garden district.
+  // All cells are deterministic so saved positions and collisions are stable.
+  // Pixel props use the existing CC0 tileset and no external network assets.
+  if (x >= 20 && x <= 27 && y >= 2 && y <= 8) {
+    if (y === 8 && (x === 22 || x === 25)) {
+      return { terrain: 'walk', prop: 'window', solid: true };
+    }
+    if (x === 24 && y === 8) {
+      return { terrain: 'walk', prop: 'door', solid: true };
+    }
+    if (y === 2 || x === 20 || x === 27) {
+      return { terrain: 'carpet', prop: 'shelf', solid: true };
+    }
+    return { terrain: 'carpet', solid: true };
+  }
+  if (x >= 3 && x <= 10 && y >= 15 && y <= 21) {
+    if (y === 21 && (x === 5 || x === 8)) {
+      return { terrain: 'walk', prop: 'window', solid: true };
+    }
+    if (y === 21 && x === 7) {
+      return { terrain: 'walk', prop: 'door', solid: true };
+    }
+    return { terrain: 'carpet', solid: true };
+  }
+  if (x >= 17 && x <= 28 && y >= 14 && y <= 21) {
+    if ((x === 18 || x === 27) && (y === 15 || y === 20))
+      return { terrain: 'grass', prop: 'tree', solid: true };
+    if ((x === 20 && y === 18) || (x === 25 && y === 17))
+      return { terrain: 'grass2', prop: 'bench', solid: true };
+    if ((x === 22 && y === 16) || (x === 26 && y === 19))
+      return { terrain: 'grass', prop: 'bush', solid: true };
+    if (y === 17 || x === 23)
+      return { terrain: 'walk', solid: false };
+    return { terrain: (x + y) % 4 === 0 ? 'grass2' : 'grass', solid: false };
+  }
+  if ((x === 22 && y === 9) || (x === 27 && y === 13)
+      || (x === 2 && y === 17)) {
+    return { terrain: 'walk', prop: 'lamp', solid: true };
+  }
+  if ((x === 20 && y === 12) || (x === 28 && y === 11)
+      || (x === 12 && y === 18)) {
+    return { terrain: 'walk', prop: 'plant', solid: true };
+  }
+  if ((x === 19 && y === 4) || (x === 28 && y === 4)
+      || (x === 16 && y === 18)) {
+    return { terrain: 'grass', prop: 'tree', solid: true };
   }
   if (x >= 3 && x <= 8 && y >= 2 && y <= 6) {
     if (x === 5 && y === 6) return { terrain: 'walk', prop: 'door', solid: false, portal: 'cafe' };
