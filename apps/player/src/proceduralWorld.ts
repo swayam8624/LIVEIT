@@ -1,4 +1,4 @@
-import { pixelCell, STREET_WIDTH, STREET_HEIGHT, type PixelCell, type PixelPlace } from './pixelTownLogic';
+import { pixelCell, npcAt, validPixelPosition, STREET_WIDTH, STREET_HEIGHT, type PixelCell, type PixelPlace, type PixelPosition } from './pixelTownLogic';
 
 export const CHUNK_SIZE = 32;
 /** Mathematical floor division works for negative infinite map coordinates. */
@@ -76,4 +76,19 @@ export function visibleWorldTiles(
   for(let y=top;y<top+rows;y++) for(let x=left;x<left+cols;x++)
     tiles.push({x,y,cell:worldCell(place,x,y,seed)});
   return tiles;
+}
+
+/** Saved player positions must use the SAME collision rules as the infinite
+ * map renderer. The original town validator intentionally rejects off-map
+ * coordinates; use it only for local café saves, never for street travel. */
+export function validInfinitePosition(value: unknown, seed: number): value is PixelPosition {
+  if(!value || typeof value!=='object')return false;
+  const p=value as Partial<PixelPosition>;
+  if(p.place==='cafe')return validPixelPosition(value);
+  if(p.place!=='street'||!['up','down','left','right'].includes(p.facing??''))return false;
+  if(!Number.isSafeInteger(p.x)||!Number.isSafeInteger(p.y))return false;
+  const x=p.x as number,y=p.y as number;
+  if(worldCell('street',x,y,seed).solid)return false;
+  const npc=npcAt('street');
+  return !(x===npc.x && y===npc.y);
 }
