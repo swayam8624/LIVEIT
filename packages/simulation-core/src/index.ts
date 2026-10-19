@@ -1,3 +1,5 @@
+export { DAILY_ACTIVITIES, activitiesForAge, dailyActivitiesUsed, performDailyActivity } from './dailyActivities';
+export type { DailyActivity, DailyActivityId, ActivityZone } from './dailyActivities';
 export { actOnRelationship, relationshipStatus } from './relationshipLife';
 export type { RelationshipAction, RelationshipStatus } from './relationshipLife';
 export { createBirthWorld, lifeStageOf, performChildhoodActivity, skipToAge } from './birthLife';
