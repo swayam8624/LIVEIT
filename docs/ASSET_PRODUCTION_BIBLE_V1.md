@@ -6,7 +6,7 @@
 
 ## 1. Truth and scope
 
-The independent production catalog lives under [content/production-assets/v1](../content/production-assets/v1). It contains **1,481 planned work items**. A work item represents a distinct authored deliverable or explicitly identified technical behavior/record; it is not guaranteed to correspond 1:1 to one output file and is not evidence that the artwork exists. It covers **400** proposed interchangeable mesh/material *parts* (not 400 complete NPC models), **200** distinct 3D stage location templates, 55 pixel character sprite families, 302 individual top-down tile designs and all primary HUD, music, SFX, GPU shader and animation libraries.
+The independent production catalog lives under [content/production-assets/v1](../content/production-assets/v1). It contains **1,481 planned work items**. A work item represents a distinct authored deliverable or explicitly identified technical behavior/record; it is not guaranteed to correspond 1:1 to one output file and is not evidence that the artwork exists. It covers **400** proposed interchangeable mesh/material _parts_ (not 400 complete NPC models), **200** distinct 3D stage location templates, 55 pixel character sprite families, 302 individual top-down tile designs and all primary HUD, music, SFX, GPU shader and animation libraries.
 
 **Existing binaries in GitHub at inspection:** 28 pinned Kenney CC0 PNGs in the historic isometric district-map/UI fallback, with source blob SHA-1/provenance in assets/kenney_city_provenance.json and assets/kenney_ui_provenance.json; two miniature concept JPEG previews (Amelia portrait and dusk café), subject to separate rights/final-art review. Existing content/visual-packs/core/manifest.json contains 51 procedural shader-backed **metadata recipes**, not 51 independently finished character parts. The present pixel tile atlas, true glTF rigged 3D actor set and cinematic 3D location set each have **zero verified production items**. See [exact machine-readable baseline audit](../content/production-assets/v1/existing-repo-audit.json). Git blob SHA-1 from the existing provenance is not a SHA-256 of a runtime binary and must never be mislabeled as one.
 
@@ -14,35 +14,36 @@ No downloaded textures, meshes, sounds, font files or third-party materials have
 
 ## 2. Canonical machine-readable files and counts
 
-| Catalog | Item classes | Count | Where |
-|---|---|---:|---|
-| 3D people | interchangeable custom rig parts | **400** | content/production-assets/v1/characters-3d.json |
-| 3D people | age-stage base rigs, emotions, action clips | 5 + 12 + 40 = **57** | same |
-| 3D environments | named, artist-distinct cinematic locations | **200** | locations-3d.json |
-| 3D environment props | furniture/electronics/street/domestic/school/clinic/nature | **90** | locations-3d.json |
-| Pixel environment | original individual 16px top-down tile designs | **302** | pixel-world.json |
-| Pixel maps | 8 authored map archetypes per district × 5 districts | **40** | pixel-world.json |
-| Pixel actors | player age stages (5), named cast (20), lightweight crowd (30) | **55 families** | pixel-world.json |
-| Pixel visual weather | dedicated pixel-grid-aware effects | **16** | pixel-world.json |
-| HUD | screen panels, choice states, nav/status widgets and visual icons | **105** | hud-audio-fx.json |
-| Audio | gameplay/UI/ambience sound cues | **73** | hud-audio-fx.json |
-| Music | 27 thematic compositions/stems | **27** | hud-audio-fx.json |
-| Shaders | app-bundled Vulkan/SPIR-V material/pixel/render families | **30** | hud-audio-fx.json |
-| Screen/scene visual FX | original in-world, 3D and HUD effect presets | **40** | hud-audio-fx.json |
-| Camera direction | separately staged camera/storyboard shot presets | **30** | hud-audio-fx.json |
-| Haptics | semantic device patterns, settings-gated | **12** | hud-audio-fx.json |
-| Typography | commercial redistribution-approved font roles | **4** | hud-audio-fx.json |
-| **Planned total** | | **1,481** | catalog-index.json |
+| Catalog                | Item classes                                                      |                Count | Where                                           |
+| ---------------------- | ----------------------------------------------------------------- | -------------------: | ----------------------------------------------- |
+| 3D people              | interchangeable custom rig parts                                  |              **400** | content/production-assets/v1/characters-3d.json |
+| 3D people              | age-stage base rigs, emotions, action clips                       | 5 + 12 + 40 = **57** | same                                            |
+| 3D environments        | named, artist-distinct cinematic locations                        |              **200** | locations-3d.json                               |
+| 3D environment props   | furniture/electronics/street/domestic/school/clinic/nature        |               **90** | locations-3d.json                               |
+| Pixel environment      | original individual 16px top-down tile designs                    |              **302** | pixel-world.json                                |
+| Pixel maps             | 8 authored map archetypes per district × 5 districts              |               **40** | pixel-world.json                                |
+| Pixel actors           | player age stages (5), named cast (20), lightweight crowd (30)    |      **55 families** | pixel-world.json                                |
+| Pixel visual weather   | dedicated pixel-grid-aware effects                                |               **16** | pixel-world.json                                |
+| HUD                    | screen panels, choice states, nav/status widgets and visual icons |              **105** | hud-audio-fx.json                               |
+| Audio                  | gameplay/UI/ambience sound cues                                   |               **73** | hud-audio-fx.json                               |
+| Music                  | 27 thematic compositions/stems                                    |               **27** | hud-audio-fx.json                               |
+| Shaders                | app-bundled Vulkan/SPIR-V material/pixel/render families          |               **30** | hud-audio-fx.json                               |
+| Screen/scene visual FX | original in-world, 3D and HUD effect presets                      |               **40** | hud-audio-fx.json                               |
+| Camera direction       | separately staged camera/storyboard shot presets                  |               **30** | hud-audio-fx.json                               |
+| Haptics                | semantic device patterns, settings-gated                          |               **12** | hud-audio-fx.json                               |
+| Typography             | commercial redistribution-approved font roles                     |                **4** | hud-audio-fx.json                               |
+| **Planned total**      |                                                                   |            **1,481** | catalog-index.json                              |
 
 All 1,481 planned work items are initialized **status="planned"** with no claimed binary, source license approval, artist or rights proof. These are substantially more granular than the original headline aspirations; a model/mesh may require multiple files and a shader may require multiple SPIR-V platform variants.
 
-Priority labels: **P0 = 723 records** (front-loaded foundational needs and early expansion), **P1 = 501**, **P2 = 257**. This is a prioritized backlog, **not** a requirement to create 723 items before the first playable build. The first playable *vertical slice* is a much smaller artist-approved subset, described below.
+Priority labels: **P0 = 723 records** (front-loaded foundational needs and early expansion), **P1 = 501**, **P2 = 257**. This is a prioritized backlog, **not** a requirement to create 723 items before the first playable build. The first playable _vertical slice_ is a much smaller artist-approved subset, described below.
 
 ## 3. Pixel overworld: exact atlas and tile production
 
 **Visual rule:** authoritative top-down 2D, tile grid with 16×16 logical source pixels; main actor small-scale 16×24 logical-pixel footprint, contact at the feet. At minimum four cardinal orientations (north/east/south/west), four walking frames per direction, plus idle/interact where the cast supports it. All map art is original and rendered in a 1:1 pixel-aligned logical target then nearest-neighbor scaled when feasible. Avoid bilinear filtering, blurry downsampling, generic HD illustrations reduced to pixel size, and photographed proprietary tiles.
 
 **Tile source library:**
+
 - 77 shared outdoor foundations: paths, grass, walls, roof, water, crossing, street signage, traffic and navigation debugging.
 - 45 original indoor source tiles: flooring, wall and window/door trim, roof occluders, table/bed/kitchen/clinic/classroom furniture at world scale.
 - 36 individually named specialized top-down tiles for each district (Riverside, University, Market, Studio, Gardens): 180 themed tiles total. These are physically authored distinctions such as dock planks, ferry ropes, science laboratory/dorm motifs, produce stalls and public transit, film set/lighting pieces, gardens/pond/veterinary details.
@@ -60,25 +61,25 @@ Each sprite exports a layer order, feet pivot, body collision box, palette index
 
 The exact 400 distinct parts are individually named in characters-3d.json. Each must be an **artist-authored geometry/topology or independently authored decal/skin overlay part** with actual source and shippable runtime data. A mere palette recolor does **not** satisfy an additional numbered part. Separately list material palette variations later with shared geometry IDs.
 
-| Rig part family | Distinct artistic targets |
-|---|---:|
-| Face mesh forms | 24 |
-| Eye shape components | 24 |
-| Eyebrow forms | 20 |
-| Nose meshes/morphs | 18 |
-| Mouth/lip meshes/morphs | 18 |
-| Ear shapes | 12 |
-| Hairstyle geometry | 60 |
-| Facial hair parts | 20 |
-| Tops/tunic/shirts | 48 |
-| Bottoms/trousers/skirts | 32 |
-| Jackets/coats/outerwear | 24 |
-| Shoes | 22 |
-| Accessories | 36 |
-| Headwear | 16 |
-| Body proportion mesh adaptors | 16 |
-| Real skin/scar/freckle/age overlays | 10 |
-| **Total unique parts** | **400** |
+| Rig part family                     | Distinct artistic targets |
+| ----------------------------------- | ------------------------: |
+| Face mesh forms                     |                        24 |
+| Eye shape components                |                        24 |
+| Eyebrow forms                       |                        20 |
+| Nose meshes/morphs                  |                        18 |
+| Mouth/lip meshes/morphs             |                        18 |
+| Ear shapes                          |                        12 |
+| Hairstyle geometry                  |                        60 |
+| Facial hair parts                   |                        20 |
+| Tops/tunic/shirts                   |                        48 |
+| Bottoms/trousers/skirts             |                        32 |
+| Jackets/coats/outerwear             |                        24 |
+| Shoes                               |                        22 |
+| Accessories                         |                        36 |
+| Headwear                            |                        16 |
+| Body proportion mesh adaptors       |                        16 |
+| Real skin/scar/freckle/age overlays |                        10 |
+| **Total unique parts**              |                   **400** |
 
 Additionally plan **five age-stage foundational rig states** (child, teen, young adult, midlife, elder; compatible reusable skeleton family where technically possible), **12 named facial expressions** and **40 animation clips** (idle breathe/blink/look, listening, speech, turn, walk-in/out, sit/stand, emotion response, hand gestures, etc). None of those is counted toward the 400 interchangeable parts.
 
@@ -123,6 +124,7 @@ Design per GDS-002 at 320pt/390pt phones and tablets. Build reusable nine-slice 
 ## 8. Actual first playable asset kit (small enough to finish)
 
 The first **playable production vertical slice** should consist of:
+
 - an original 40–60 authored top-down tile subset (road, building, grass, doors, café and interior furniture) selected from pixel-world.json, plus **one** bounded Bellweather Market map with collisions and a usable café doorway;
 - one player base sprite family and one named NPC (Amelia) with four directions, four walks and idle/interaction; enough outfit/hair choices to visibly match the cinematic look;
 - two legitimate source-approved 3D human meshes (player + Amelia), one real café scene/room with actor markers, current outfits and hair, at least neutral/happy/sad/angry/tired expressions initially, with all 12 expression IDs specified and completed before claiming the full expression milestone;
@@ -172,15 +174,15 @@ Production lifecycle is audited for EACH catalog item:
 
 **Verify the exact asset page and downloaded archive before acquiring it.** "Free" may mean free to play, free personal-use, free to download but not redistribute, CC0, a specific custom license, or something that changed since an older FAQ.
 
-| Source | Present evidence / legal caution | Recommended use |
-|---|---|---|
-| **Original artist-authored LIVEIT commissions or owned original work** | Obtain explicit assignment or perpetual worldwide commercial game distribution, adaptation, porting, marketplace and sublicense provisions in writing; retain invoice/rights statement | BEST for hero player/NPC rigs, original tile language, branded HUD and core theme |
-| **Kenney** (https://kenney.nl/assets; https://kenney.nl/support) | Kenney confirms assets on its asset pages use **CC0**, including commercial use without obligatory attribution; repository already contains 28 pinned UI/isometric PNGs, see provenance JSON | Interim HUD/icon and material blockouts; do not pretend existing isometric Kenney props are final top-down pixel tiles |
-| **Poly Haven** (https://polyhaven.com/license) | Its assets are **CC0** per published policy; inspect specific downloaded HDRI/texture/model and original source/format | Neutral lighting/HDRI and texture helpers for polished 3D, not final character-face direction by default |
+| Source                                                                                                                         | Present evidence / legal caution                                                                                                                                                                                                                                                                        | Recommended use                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Original artist-authored LIVEIT commissions or owned original work**                                                         | Obtain explicit assignment or perpetual worldwide commercial game distribution, adaptation, porting, marketplace and sublicense provisions in writing; retain invoice/rights statement                                                                                                                  | BEST for hero player/NPC rigs, original tile language, branded HUD and core theme                                                                    |
+| **Kenney** (https://kenney.nl/assets; https://kenney.nl/support)                                                               | Kenney confirms assets on its asset pages use **CC0**, including commercial use without obligatory attribution; repository already contains 28 pinned UI/isometric PNGs, see provenance JSON                                                                                                            | Interim HUD/icon and material blockouts; do not pretend existing isometric Kenney props are final top-down pixel tiles                               |
+| **Poly Haven** (https://polyhaven.com/license)                                                                                 | Its assets are **CC0** per published policy; inspect specific downloaded HDRI/texture/model and original source/format                                                                                                                                                                                  | Neutral lighting/HDRI and texture helpers for polished 3D, not final character-face direction by default                                             |
 | **Quaternius** (https://quaternius.com/faq.html and https://github.com/Quaternius/quaternius.github.io/blob/main/license.html) | **Caution as of 2026:** older official FAQ says CC0, while newer **QAL v1.0 updated 2026-08-28** grants commercial game use but **restricts standalone resale/redistribution of original/modified assets**. Resolve applicable terms for the exact pack/download and date; DO NOT blindly import as CC0 | 3D blockout candidates only after per-pack legal confirmation; avoid republishing a third-party asset as a standalone downloadable LIVEIT asset pack |
-| **OpenGameArt** (https://opengameart.org/node/5571) | Per-work licenses may be CC0, CC-BY, OGA-BY, GPL or others. Attribution, derivative or DRM restrictions can apply. Choose exact compatible license and store proof | Selectively licensed SFX/pixel filler, not a wholesale undifferentiated import |
-| **Google Fonts** (https://developers.google.com/fonts) | Source platform indicates open-source commercial fonts, but must record each font's specific license, source file/author, OFL notices and bundled distribution requirements | HUD/display/body/pixel font candidates, no font files downloaded in this step |
-| **Blender and Khronos tooling** (https://www.blender.org/, https://www.khronos.org/gltf/, https://www.khronos.org/ktx/) | Tools/formats, not blanket rights to any character/assets encountered online. glTF 2.0 models and KTX2 textures still need item-level copyright rights | Original rig/model/texture export and GPU compression pipeline |
+| **OpenGameArt** (https://opengameart.org/node/5571)                                                                            | Per-work licenses may be CC0, CC-BY, OGA-BY, GPL or others. Attribution, derivative or DRM restrictions can apply. Choose exact compatible license and store proof                                                                                                                                      | Selectively licensed SFX/pixel filler, not a wholesale undifferentiated import                                                                       |
+| **Google Fonts** (https://developers.google.com/fonts)                                                                         | Source platform indicates open-source commercial fonts, but must record each font's specific license, source file/author, OFL notices and bundled distribution requirements                                                                                                                             | HUD/display/body/pixel font candidates, no font files downloaded in this step                                                                        |
+| **Blender and Khronos tooling** (https://www.blender.org/, https://www.khronos.org/gltf/, https://www.khronos.org/ktx/)        | Tools/formats, not blanket rights to any character/assets encountered online. glTF 2.0 models and KTX2 textures still need item-level copyright rights                                                                                                                                                  | Original rig/model/texture export and GPU compression pipeline                                                                                       |
 
 Creative Commons CC0 still does not remove third-party trademark/privacy/personality rights. A photo or likeness could require model consent. No Nintendo, Episode or other competitor-proprietary art is authorized. Existing preview JPEGs require provenance/redistribution review before final commercial use. Do not place fonts/assets under unverified "MIT" just because the shader prototype used that identifier.
 
@@ -191,6 +193,7 @@ Creative Commons CC0 still does not remove third-party trademark/privacy/persona
 Original ambitious constraints retained for engineering validation, not as guaranteed measured facts: core app target under approximately **150MB** where feasible, native runtime memory envelope around **600MB** mid-tier, 60fps high/medium and 30fps battery saver. Source masters are NOT part of install size. Installed premium 3D content can be split into separately requested/streamed packs.
 
 Provisional per-asset budgets to profile and revise by platform:
+
 - pixel tile atlas page: 1024×1024 or 2048×2048 RGBA8 source atlas, guard pixels, nearest-sampled. A **1024² RGBA8 page is 4MiB uncompressed**, a **2048² page is 16MiB uncompressed**; page count and LOD remain constrained.
 - 3D mobile hero model: first target at most ~20–35k visible triangles for closeup actor and appropriate LOD reductions; actual frame time, expression shapes and material draw calls decide tier, not an arbitrary polygon boast.
 - background NPC 3D geometry LOD and outfit cloth simplified; first scene two hero actors and café should hold frame budget on a real mid-device without thermal runaway.
@@ -204,6 +207,7 @@ Simple production load estimate (non-binding): The 400 rig-piece goal + 200 dist
 ## 12. Creator Studio and content packs
 
 Asset studio should gain:
+
 - item search/filter by stable ID, family, slot, source format, production wave and status, with "blocked on license" prominent;
 - import original/approved assets, preview 1×/3× pixel sprite animations and the same character's true 3D turntable, eye/face/age/outfit checks;
 - collision/tile map editor that previews physically walkable map routes, portal anchors and actor movement, not just background image;
@@ -216,6 +220,7 @@ Note the existing Next.js Creator Studio can author/edit story JSON; these nativ
 ## 13. QC and release signoff
 
 Before marking an item **qa-passed**:
+
 1. Distinct original look checked against style bible and competitor-copyright risk; original source is in source storage with own author/rights.
 2. Correct asset shape/format, runtime metadata and canonical ID verified; hash recorded for actual final bytes.
 3. Cross-platform import test: Vulkan/Android and Vulkan→MoltenVK/iOS when relevant. HUD audio/haptic asset tested on real OS semantics; fail on black views.
@@ -235,9 +240,10 @@ The tracked [validator](../tools/validate-production-assets.mjs) reads all four 
     npm run assets:summary
     npm run check
 
-In production progression the validator must be extended to compute real on-disk SHA-256 for promoted/QA/released runtime bytes, verify an allowlisted licensed rights/status taxonomy, guard symlinks/large files and confirm source licenses; current script's main purpose is safe and truthful *planned* inventory lifecycle. Test it on CI. Do not mark a shader/procedural definition as a finished character just to improve percentage metrics.
+In production progression the validator must be extended to compute real on-disk SHA-256 for promoted/QA/released runtime bytes, verify an allowlisted licensed rights/status taxonomy, guard symlinks/large files and confirm source licenses; current script's main purpose is safe and truthful _planned_ inventory lifecycle. Test it on CI. Do not mark a shader/procedural definition as a finished character just to improve percentage metrics.
 
 The item lists are catalog targets and can be expanded without modifying gameplay reducers. When adding legitimate assets:
+
 - add full entry and category target changes to catalog-index.json intentionally;
 - supply source files, exact provenance, art/animation/geometry shape and device QA proof;
 - build runtime manifest only for validated items and keep source/derived asset references separate;
