@@ -1,3 +1,5 @@
+> **Visual production direction revised on 19 October 2026:** this 2026-10-17 roadmap remains useful for gameplay, free-life events, story authoring, content operations and user experience but its rendering options and "2.5D as production" suggestions are historical. Authoritative current graphics: [GDS-001](LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md) (top-down crisp pixel overworld + actual 3D cinematic faces), [GDS-002](LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md), [ENG-003](LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md). Do not execute a Skia/2.5D renderer evaluation as if it overrode those decisions. Existing game/domain state and release QA rules below remain valid.
+
 # LIVEIT 2.0: Game-Feel Rebuild, Story Library, and Creator Platform
 
 Prepared: 2026-10-17. Planning artifact; **not a claim that the features described here exist yet**.
@@ -24,7 +26,7 @@ Success is not measured in how many buttons are visible or how many story JSON f
 
 ### Critical rebuild decisions
 
-Retain shared TypeScript schemas, deterministic simulation, consequence engine, narrative core, continuity/save format and CI; redesign the player presentation and most feature flows. Do **not** start by replacing the app with a custom C++ engine. Benchmark Expo/React Native Skia + Reanimated sprites, or a thin dedicated full-screen game-view layer where necessary. Only adopt another renderer when the vertical slice proves React Native unable to sustain the target.
+Retain shared TypeScript schemas, deterministic simulation, consequence engine, narrative core, continuity/save format and CI; redesign player visuals/flows **without** throwing away the game rules. The selected long-term production graphics engine is a shared C++ Vulkan/MoltenVK native renderer, with a dedicated **sharp top-down pixel tile/sprite pass** for Free Life and a **real mesh/skeletal 3D scene pass** for important conversations/stories; RN continues to own accessible HUD and temporary fallback. Implement the native module and persistent pixel navigation incrementally with actual device evidence. Do not switch to Unity, Skia-only graphics or offscreen screenshot rendering by assumption.
 
 Split `App.tsx` into `app/navigation`, `app/bootstrap`, `app/save-coordinator`, `features/life`, `features/story-player`, `features/people`, `features/library`, `features/studio-bridge`, and `ui/game-primitives`. Introduce an atomic action dispatcher with a single authoritative state update + durable save queue and idempotent action IDs. Store migrations must preserve all v1 player progress.
 
@@ -104,7 +106,7 @@ Episode's own directing documentation describes character placement, animation, 
 
 ### Animation asset strategy
 
-**First playable production tier**: original/licensed 2.5D environment plates at optimized resolution, separate foreground/midground/background, two rig-ready humanoid characters with body parts or cutout sprites and 6 expressions each, idle blink/breath, 5 basic poses, walk-in/fade/turn/react, a limited camera-pan vocabulary, simple shadows, music/ambience toggle, optional haptics and voice-off default. Reuse rigs and outfits rather than commissioning unique full drawings for every line. Test different skin tones, proportions, hair types, mobility and fashion without stretch artifacts.
+**Updated first production visual tier:** one original 16px tile city street and café with actual walk/collision/door interaction; a pixel player/NPC with four-direction animation; and two **real skinned 3D character rigs** in a genuine 3D café set with at least basic eye/blink/face/gesture animation, author-approved lighting, camera, story dialogue dock, music/ambience toggle, optional haptics and voice-off default. Author 12 named expression controls as a growing rig goal. Preserve scene/age/outfit state from the same saved identity; deliver real native Vulkan and MoltenVK frames before calling this released. Existing 2.5D cutouts may remain temporary accessibility/fallback artwork but are not the production cinematic requirement.
 
 **Longer-term tier**: scalable rigs, lip-sync, prop interactions, richer gesturing, group staging, rain/reflections and authored cinematic cutscenes. Keep deterministic timeline tests independent of rendering. A clean story with basic expressive animation beats a huge catalog with broken poses.
 
