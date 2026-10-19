@@ -35,6 +35,12 @@ REA is not a substitute for inspecting legally available YouTube gameplay record
 
 **Workflow contract:** inspect actual source/CI, implement small playable slices, run tests, use real native evidence, keep exact truth in BUILD_STATUS, commit reversible changes and never claim the visual engine has shipped because a Vulkan offscreen PNG or browser preview exists.
 
+## STEP 5 mandatory asset-production rules (ART-005, 2026-10-19)
+
+Before generating or importing ANY visual/audio asset, read docs/ASSET_PRODUCTION_BIBLE_V1.md and content/production-assets/v1/catalog-index.json, locate its stable ID in the four production catalog files, and inspect the 110-item first-playable-slice.json for the initial slice. The catalog has **1,481 PLANNED work items, not 1,481 existing art files**. The 400 genuinely different rig parts and 200 genuinely different 3D scenes are future authoring targets, not palette renamings or procedural face circles. Existing repo rights audit lists 28 Kenney CC0 fallback PNGs and 51 shader-backed metadata recipes; do not count them as finished pixel town or full rigged actors.
+
+Every promoted asset needs actual source file, author, license/sublicensing/redistribution proof, final output file and SHA-256, format and rig/atlas compatibility, QA evidence and native device capture before marked ready. Downloaded data packs must not ship executable SPIR-V/native code; app-bundled vetted shaders are the only executable graphics path. Beware newer Quaternius 2026 QAL licensing conflicts with its older FAQ CC0 statement; verify rights for the exact asset. Run npm run assets:validate, npm run check and native image/animation tests. The first playable scope is a Bellweather market street, café, Amelia in original pixel and 3D forms, factual confirmed outcome widget/haptic and persisted return tile.
+
 ## 1. Operating mandate
 
 1. Start by inspecting actual code, git status, dependencies, current worktrees, CI failures, iOS/Xcode configuration, simulator availability and runtime screenshots. Document any uncertainty without blocking useful work.
