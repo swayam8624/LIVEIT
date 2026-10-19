@@ -239,7 +239,13 @@ export function advanceCalendarMonth(input: World): World {
     const years = w.player.ageDays / 365;
     record(w, 'simulation', 'Birthday! ' + w.player.name + ' turns ' + years + '.');
     if (years === 5) w.facts.push('school:primary_started');
-    if (years === 13) w.facts.push('school:secondary_started');
+    if (years === 13) {
+      w.facts.push('school:secondary_started');
+      if (!w.relationships.some(r=>r.characterId==='amelia'))
+        w.relationships.push({characterId:'amelia',trust:35,lastContactDay:w.day});
+      if (!w.relationships.some(r=>r.characterId==='noah'))
+        w.relationships.push({characterId:'noah',trust:55,lastContactDay:w.day});
+    }
     if (years === 18) w.facts.push('life_stage:adult');
   }
   record(w, 'simulation', 'A month passes in Bellweather. Your life continues while the town changes around you.');
