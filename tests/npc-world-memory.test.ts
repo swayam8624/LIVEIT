@@ -24,7 +24,7 @@ describe('world-grounded local NPC memories',()=>{
     expect(prompted).toContain('Mara');
     expect(prompted).toContain('You reached toward Mara');
     expect(prompted).toContain('relationship trust');
-    expect(prompted).not.toContain('edited stats, assigned a quest or took a game action.');
+    expect(prompted).toContain('Never claim you transferred money');
   });
 
   it('records only complete exchanges as persistent real-life memories',()=>{
