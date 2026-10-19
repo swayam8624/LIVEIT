@@ -122,7 +122,8 @@ export function StoryPlayer({
             speaking={speakerIsPlayer}
             reducedMotion={reducedMotion}
             label={'Customized pixel player in ' + scene.mood + ' scene'}
-          />        </View>
+          />
+        </View>
         {scene.speaker.toLowerCase() === 'amelia' ? (
           <View style={[styles.npcActor, compact && styles.npcActorCompact]}>
             <PixelPortrait
