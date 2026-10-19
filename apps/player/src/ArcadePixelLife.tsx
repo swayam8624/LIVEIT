@@ -228,7 +228,7 @@ export function ArcadePixelLife({
       reply = npcFallback(sentence, world.player.name);
     }
     setModelMode(connected ? 'local' : 'authored');
-    setMessages(existing => [...existing, { speaker: 'npc', text: reply }].slice(-80));
+    setMessages(existing => [...existing, { speaker: 'npc' as const, text: reply }].slice(-80));
     busyRef.current = false;
     setWaiting(false);
   }, [draft, endpoint, world.player.ageDays, world.player.name]);
