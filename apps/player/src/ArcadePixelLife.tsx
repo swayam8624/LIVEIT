@@ -14,6 +14,7 @@ import { OFFICIAL_STORIES } from '@living/content';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
 import { modernSpriteColumn } from './spriteDirections';
+import { ambientPedestrians } from './ambientPedestrians';
 import { worldCell, seedFromTimeline, visibleWorldTiles, biomeAt, chunkOf, validInfinitePosition } from './proceduralWorld';
 import { MISSION_GOALS, missionExpired, newMission, parseMissions, resolveMissionEvent,
   type LifeMission, type MissionGoal, type MissionEvent } from './missionGoals';
@@ -608,6 +609,11 @@ export function ArcadePixelLife({
   const hour = Math.floor(inGameMinute / 60);
   const minute = inGameMinute % 60;
   const clockLabel = String(hour).padStart(2, '0') + ':' + String(minute).padStart(2, '0');
+  const pedestrians=useMemo(()=>place==='street'
+    ? ambientPedestrians(worldSeed,tileWindow.left,tileWindow.top,
+      tileWindow.cols,tileWindow.rows,inGameMinute) : [],
+    [place,worldSeed,tileWindow.left,tileWindow.top,tileWindow.cols,tileWindow.rows,
+      Math.floor(inGameMinute/20)]);
   const monthPart = Math.floor(clock / MONTH_MS * 100);
   const pauseMovement = () => {
     walkVector.current = { x: 0, y: 0 };
@@ -699,6 +705,15 @@ export function ArcadePixelLife({
           style={[s.map, { width: worldWidth, height: worldHeight, overflow: 'visible' },
             { transform: camera.getTranslateTransform() }]}>
           {tiles}
+          {pedestrians.map(person=>(
+            <View key={person.id} pointerEvents="none"
+              style={{position:'absolute',left:person.x*TILE,
+                top:person.y*TILE,width:TILE,height:TILE}}>
+              <Image source={actorArt(person.look,person.facing)}
+                resizeMode="stretch"
+                style={[{width:TILE,height:TILE},crisp]}/>
+            </View>
+          ))}
           {place === 'street' ? (
             <>
               <PixelBuilding x={3} y={2} w={6} h={4} roof="#a45a53"
