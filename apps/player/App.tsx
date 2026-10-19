@@ -30,7 +30,7 @@ import {
   type Appearance,
   type World,
 } from '@living/world-schema';
-import { reunion, bookshop, findOfficialStory } from '@living/content';
+import { reunion, bookshop, firstMorning, OFFICIAL_STORIES, findOfficialStory } from '@living/content';
 import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
@@ -355,18 +355,40 @@ export default function App() {
       setSceneOpen(true);
     });
   }
+  function openOfficialStory(id: string) {
+    run(() => {
+      const chosen = OFFICIAL_STORIES.find(story => story.id === id);
+      const current = latestSave.current;
+      if (!chosen || !current) throw new Error('Story is unavailable.');
+      const prior = current.life.progress.find(p => p.storyId === id);
+      if (prior?.completed) throw new Error('This story is already completed in your life.');
+      const next = startStory(current.life, chosen);
+      setAuthored(chosen);
+      persist({
+        ...current, active: 'life', life: next,
+        activeStoryId: chosen.id, sceneDismissed: false,
+      });
+      setTab('life');
+      setSceneOpen(true);
+    });
+  }
   function newLife() {
     setAuthored(reunion);
     run(() => {
+      const born = createBirthWorld(name, 'main-' + Date.now().toString(36), pronouns, appearance);
+      const opening = startStory(born, firstMorning);
+      setAuthored(firstMorning);
       persist({
         version: 1,
         active: 'life',
-        life: createBirthWorld(name, 'main-' + Date.now().toString(36), pronouns, appearance),
+        life: opening,
         story: null,
+        activeStoryId: firstMorning.id,
+        sceneDismissed: false,
       });
       setReset(false);
       setTab('life');
-      setSceneOpen(false);
+      setSceneOpen(true);
     });
   }
   function playImported(story: Story) {
@@ -401,6 +423,7 @@ export default function App() {
           world={save.life}
           paused={sceneOpen}
           onTalk={openEncounter}
+          onStoryStart={openOfficialStory}
           onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
           onChildAction={(activity: ChildhoodActivity, offset: number) =>
             applyWorldAction((w) => performChildhoodActivity(w, activity, offset))}
