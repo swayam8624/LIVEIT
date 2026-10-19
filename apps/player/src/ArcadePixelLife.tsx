@@ -127,7 +127,7 @@ function PixelBuilding({
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onDailyActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, onNPCConversation, paused = false,
+  world, onTalk, onAdvanceMonth, onActivity, onDailyActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, onNPCConversation, paused = false,
 }: {
   world: World;
   paused?: boolean;
@@ -140,7 +140,6 @@ export function ArcadePixelLife({
   onSkipChildhood: (years: 2 | 5 | 13 | 18) => void;
   onStoryStart: (id: string) => void;
   onRelationship: (action: RelationshipAction, dayOffset: number) => string;
-  onNavigate: (where: 'stories' | 'people' | 'journal' | 'life') => void;
 }) {
   const { width, height } = useWindowDimensions();
   const worldSeed = useMemo(() => seedFromTimeline(world.timelineId), [world.timelineId]);
