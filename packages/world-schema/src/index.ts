@@ -3,6 +3,8 @@ export * from './visual-pack-activation';
 export * from './visual-assets';
 import { z } from 'zod';
 import { AppearanceSchema } from './appearance';
+import { HouseholdSchema, SchoolSchema } from './lifeSystems';
+export * from './lifeSystems';
 export * from './appearance';
 export const CharacterSchema = z
   .object({
@@ -186,6 +188,8 @@ export const WorldSchema = z
     npcLives: z.array(NPCLifeSchema).max(100).optional(),
     portfolio: PortfolioSchema.optional(),
     lifeMoments: LifeMomentStateSchema.optional(),
+    household: HouseholdSchema.optional(),
+    school: SchoolSchema.optional(),
   })
   .strict()
   .superRefine((w, ctx) => {
