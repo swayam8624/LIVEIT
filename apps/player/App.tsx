@@ -35,7 +35,7 @@ import { pixelArt } from './src/pixelArt';
 import { CityWorld } from './src/CityWorld';
 import { ArcadePixelLife } from './src/ArcadePixelLife';
 import { AvatarEditor } from './src/AvatarEditor';
-import { AvatarPortrait } from './src/AvatarPortrait';
+import { PixelPortrait as AvatarPortrait } from './src/PixelPortrait';
 import { LifeDashboard } from './src/LifeDashboard';
 import { StoryPlayer } from './src/StoryPlayer';
 import { gameTheme as t } from './src/gameTheme';
