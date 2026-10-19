@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Animated, Image, Platform, Pressable, ScrollView, StyleSheet, Text,
+  type ImageSourcePropType, type ImageStyle,
   TextInput, View, useWindowDimensions,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -20,7 +21,7 @@ import {
  * disk writes, NPC inference and timeline transitions NEVER run at frame rate.
  * This keeps touch and keyboard input independent of the visible world refresh.
  */
-const TILE = 48;
+const TILE = 64; // 4x the source pixels; covers mobile viewports
 const SPEED = 3.5;             // tiles per second, independent of monitor Hz
 const MONTH_MS = 60 * 60 * 1000; // one real gameplay hour = 30 simulated days
 const COLORS = {
@@ -132,6 +133,11 @@ export function ArcadePixelLife({
   const camera = useRef(new Animated.ValueXY()).current;
   const bob = useRef(new Animated.Value(0)).current;
   const frameOffset = useRef(new Animated.Value(0)).current;
+  const facingRef = useRef<Facing>('down');
+  const localArt = pixelArt as Record<string, ImageSourcePropType>;
+  const modernPlayer = localArt.player_modern;
+  const modernNPC = localArt.npc_modern;
+  const crisp = Platform.OS === 'web' ? ({ imageRendering: 'pixelated' } as unknown as ImageStyle) : undefined;
   const glow = useRef(new Animated.Value(0.1)).current;
   const clockRef = useRef(0);
   const monthRef = useRef(onAdvanceMonth);
@@ -269,12 +275,14 @@ export function ArcadePixelLife({
         if (!blocks(p.x, p.y + dy)) p.y += dy;
         const nextFacing: Facing = Math.abs(vx) > Math.abs(vy)
           ? vx > 0 ? 'right' : 'left' : vy > 0 ? 'down' : 'up';
+        facingRef.current = nextFacing;
         setFacing(previous => previous === nextFacing ? previous : nextFacing);
         bob.setValue(Math.sin(timestamp / 70) * 2);
-        frameOffset.setValue(-TILE * (Math.floor(timestamp / 125) % 4));
+        const faceOffset = modernPlayer ? ({ left: 0, up: 1, right: 2, down: 3 } as const)[nextFacing] * 6 : 0;
+        frameOffset.setValue(-TILE * (faceOffset + (Math.floor(timestamp / 125) % (modernPlayer ? 6 : 4))));
       } else {
         bob.setValue(Math.sin(timestamp / 440) * 0.7);
-        frameOffset.setValue(0);
+        frameOffset.setValue(modernPlayer ? -TILE * ({ left: 0, up: 1, right: 2, down: 3 } as const)[facingRef.current] * 6 : 0);
       }
       // Portal transitions need to be detected by entering a tile, not by
       // colliding with the café's solid façade.
@@ -330,7 +338,7 @@ export function ArcadePixelLife({
       cancelAnimationFrame(frame);
       void AsyncStorage.setItem(gameKey + '.elapsed', String(clockRef.current)).catch(() => {});
     };
-  }, [bob, camera, frameOffset, gameKey, glow, loaded, panel, pose, size.height, size.width]);
+  }, [bob, camera, frameOffset, gameKey, glow, loaded, modernPlayer, panel, pose, size.height, size.width]);
 
   // Browser-only physical keyboard support. Text inputs must never move
   // the avatar; mobile touch pads write the same movement vector.
@@ -368,12 +376,12 @@ export function ArcadePixelLife({
         ? tile.prop as PixelArtKey : tile.terrain === 'grass2' ? 'grass' : tile.terrain;
       elements.push(
         <Image key={x + ':' + y} source={pixelArt[source]} resizeMode="stretch"
-          style={{ position: 'absolute', left: x * TILE, top: y * TILE,
-            width: TILE, height: TILE }} />
+          style={[{ position: 'absolute', left: x * TILE, top: y * TILE,
+            width: TILE, height: TILE }, crisp]} />
       );
     }
     return elements;
-  }, [place]);
+  }, [crisp, place]);
 
   const npc = npcAt(place);
   const worldWidth = (place === 'street' ? STREET_WIDTH : CAFE_WIDTH) * TILE;
@@ -417,20 +425,36 @@ export function ArcadePixelLife({
             { transform: camera.getTranslateTransform() }]}>
           {tiles}
           <View style={[s.npcShadow, { left: npc.x * TILE + 8, top: npc.y * TILE + 37 }]} />
-          <Image source={actorArt(2, 'down')} resizeMode="stretch"
-            style={{ position: 'absolute', left: npc.x * TILE, top: npc.y * TILE,
-              width: TILE, height: TILE }} />
-          <Animated.View style={[s.hero, {
-            transform: [
+          {modernNPC ? (
+            <View style={{ position: 'absolute', left: npc.x * TILE,
+              top: (npc.y - 1) * TILE, width: TILE, height: TILE * 2,
+              overflow: 'hidden' }}>
+              <Image source={modernNPC} resizeMode="stretch" style={[{
+                position: 'absolute', left: -18 * TILE, top: 0,
+                width: TILE * 24, height: TILE * 2,
+              }, crisp]} />
+            </View>
+          ) : (
+            <Image source={actorArt(2, 'down')} resizeMode="stretch"
+              style={[{ position: 'absolute', left: npc.x * TILE,
+                top: npc.y * TILE, width: TILE, height: TILE }, crisp]} />
+          )}
+          <Animated.View style={[s.hero,
+            modernPlayer ? { top: -TILE, height: TILE * 2 } : null,
+            { transform: [
               ...pose.getTranslateTransform(),
               { translateY: bob },
-            ],
-          }]}>
+            ] },
+          ]}>
             <View style={s.heroShadow} />
-            <View style={{ width: TILE, height: TILE, overflow: 'hidden' }}>
-              <Animated.Image source={pixelArt[('n1_' + facing + '_sheet') as PixelArtKey]}
-                resizeMode="stretch" style={{ width: TILE * 4, height: TILE,
-                  transform: [{ translateX: frameOffset }] }} />
+            <View style={{ width: TILE, height: modernPlayer ? TILE * 2 : TILE,
+              overflow: 'hidden' }}>
+              <Animated.Image
+                source={modernPlayer || pixelArt[('n1_' + facing + '_sheet') as PixelArtKey]}
+                resizeMode="stretch"
+                style={[{ width: TILE * (modernPlayer ? 24 : 4),
+                  height: TILE * (modernPlayer ? 2 : 1),
+                  transform: [{ translateX: frameOffset }] }, crisp]} />
             </View>
           </Animated.View>
         </Animated.View>
