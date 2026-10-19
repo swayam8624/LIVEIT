@@ -13,6 +13,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   createWorld,
   advanceLife,
+  advanceCalendarMonth,
   setCharacterAppearance,
   type Activity,
 } from '@living/simulation-core';
@@ -30,6 +31,7 @@ import { LocalStoryLibrary } from './src/LocalStoryLibrary';
 import { GameStage } from './src/GameStage';
 import { pixelArt } from './src/pixelArt';
 import { CityWorld } from './src/CityWorld';
+import { ArcadePixelLife } from './src/ArcadePixelLife';
 import { AvatarEditor } from './src/AvatarEditor';
 import { AvatarPortrait } from './src/AvatarPortrait';
 import { LifeDashboard } from './src/LifeDashboard';
@@ -384,6 +386,17 @@ export default function App() {
         <Text style={s.small}>Opening your world…</Text>
       </View>
     );
+  // The life view is a fullscreen game, not a card above the map.
+  if (save && !reset && save.active === 'life' && tab === 'life' && !sceneOpen) {
+    return (
+      <ArcadePixelLife
+        world={save.life}
+        onTalk={openEncounter}
+        onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
+        onNavigate={(destination) => setTab(destination)}
+      />
+    );
+  }
   return (
     <View style={s.app}>
       <View style={[s.header, { paddingHorizontal: wide ? 48 : 22 }]}>
