@@ -137,6 +137,8 @@ A polished small slice beats hundreds of thumbnails or generated data recipes th
 
 **Mini-slice item IDs should be resolved from the catalog by their real names**, e.g. pixel tile road-asphalt/shared and market cafe, cinematic location market coffeehouse, pixel sprite named amelia, character rig hair and outfit part, camera two-shot and single close-up. Catalog priority P0 means backlog priority, NOT that each P0 item must ship in the first milestone. Keep a release manifest of the actual selected IDs once files exist.
 
+**Exact first playable selection:** The [110-item machine-readable first kit](../content/production-assets/v1/first-playable-slice.json) lists the stable IDs that artists and engineers can start on for Bellweather's pixel street→café→3D Amelia talk. The kit contains 28 tiles, 2 collision/portal maps, 2 pixel actor families, 1 real 3D room, 1 base rig, 11 unique rig parts, 4 actual props, 4 cameras, 5 face expressions, 5 motion clips, 12 shader families, 22 HUD units, 8 SFX, 2 music tracks and 3 haptic patterns. This is a list of **unbuilt targets**, not 110 shipped assets. These five first-slice face expressions are an initial acting milestone; all 12 remain in the full production target.
+
 ## 9. Asset production pipeline: from idea to verified device
 
 Production lifecycle is audited for EACH catalog item:
