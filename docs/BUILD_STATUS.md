@@ -18,7 +18,20 @@ Updated 2026-10-19. Branch: feat/native-life-economic-foundation. Main remains t
 | Playtesting          | No verified external 10-minute playtest or retention metrics                                                                                 | First iOS simulator quality baseline required                                                                        |
 | Research             | Competitor/feature dossier grounded in public official pages plus archived OpenLife code                                                     | Real gameplay video timestamp ledger is yet to be completed, must never be faked                                     |
 
+## 2026-10-19 Step 5: licensed production asset inventory and first playable kit
+
+**Delivered as design/metadata/code tooling, NOT actual new art binaries:** [ART-005 Asset Production Bible](ASSET_PRODUCTION_BIBLE_V1.md), [production catalog index](../content/production-assets/v1/catalog-index.json), four individually named JSON inventories, [110-item Bellweather café starter kit](../content/production-assets/v1/first-playable-slice.json), [offline searchable HTML atlas](../content/production-assets/ASSET_ATLAS.html) and tools/validate-production-assets.mjs / tests/production-assets.test.ts. The full catalog contains **1,481 planned distinct work items**: 400 rig parts, 200 cinematographic scene layouts, 90 props, 302 pixel tiles, 40 pixel maps, 55 pixel sprite families, 16 pixel effects, 105 HUD components, 73 SFX, 27 music tracks, 30 bundled shader families, 40 VFX, 30 camera presets, 12 haptic recipes, 4 fonts, 5 base rigs, 12 emotions and 40 action clips. Priority waves: P0 723, P1 501, P2 257.
+
+**Current original art baseline:** 28 pinned Kenney CC0 UI/isometric PNG images with Git blob source provenance, two tiny placeholder JPEGs with final commercial rights still needing review, and 51 procedural shader-backed metadata recipes. **Zero** confirmed production original top-down tile atlases, genuine rigged 3D actors, fully authored 3D cinematic sets, produced soundtrack packs, or approved downloadable art bundle. The 1,481 planned entries are NOT 1,481 completed assets; author/licensing/QA output paths remain null by design.
+
+**Validation policy:** npm run assets:validate checks IDs, source counts, artist/licensing/QA evidence gates for status promotions, and the staged selected kit. npm run check triggers asset inventory regression tests. It does not magically supply licenses or do physical phone QA. No external art downloads or licensed font binaries added. The Quaternius FAQ/2026 QAL conflict is documented in ART-005 for item-specific legal review.
+
+**Latest verified evidence from nearby revision:** Foundation checks [run 39221958456](https://github.com/swayam8624/LIVEIT/actions/runs/39221958456) and Vulkan compute smoke [run 39221958435](https://github.com/swayam8624/LIVEIT/actions/runs/39221958435) both reported success at source commit 6d57845e518. Re-run and cite the exact latest SHA for the final HTML atlas/docs-only changes; do not count pending/action_required jobs as passes. Native simulator smoke remains unverified as a complete successful install-and-playable-live-Vulkan test.
+
+**Next actual art implementation:** Produce selected original tile/sprite files for walkable Bellweather, one authentic 3D player + Amelia rig, a real 3D café and matching wardrobe, validate exact hashes and rights, integrate real on-device Vulkan/MoltenVK passes and capture end-to-end outcome/reload evidence. Do not expand to 200 cinematic sets before this works.
+
 ## 2026-10-19 Step 4: hybrid direction reconciliation and source fallbacks
+
 
 **Direction now locked:** top-down original **pixel tile/sprite Free Life**, true **skinned mesh 3D** dialogue/story and accessible tactile native HUD; **NOT** the previously proposed 3D/isometric city as primary roaming mode. Read docs/DOCUMENT_INDEX.md for precedence and docs/HYBRID_RENDER_IMPLEMENTATION_PLAN.md for concrete M0–M7 implementation dependencies. GDS-001, GDS-002 and ENG-003 remain authoritative.
 
