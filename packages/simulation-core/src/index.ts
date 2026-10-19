@@ -1,3 +1,5 @@
+export { createBirthWorld, lifeStageOf, performChildhoodActivity, skipToAge } from './birthLife';
+export type { ChildhoodActivity, LifeStage } from './birthLife';
 export {
   buildPixelRenderFrame,
   buildCinematicRenderFrame,
@@ -220,13 +222,25 @@ export function advanceCalendarMonth(input: World): World {
         ? Math.round(contract.salaryAnnual / 260)
         : 12000;
     }
-    w.player.money = Math.max(-100000000,
-      Math.min(100000000, w.player.money - 2800));
+    // A newborn/child does not personally pay the household bills. Adult
+    // expenses start at 18; guardian finances will be a separate family ledger.
+    if (w.player.ageDays >= 18 * 365) {
+      w.player.money = Math.max(-100000000,
+        Math.min(100000000, w.player.money - 2800));
+    }
     if (w.day % 7 === 0) {
       for (const relation of w.relationships)
         if (w.day - relation.lastContactDay >= 7)
           relation.trust = Math.max(0, relation.trust - 1);
     }
+  }
+  const birthday = w.player.ageDays % 365 === 0;
+  if (birthday && w.player.ageDays <= 18 * 365) {
+    const years = w.player.ageDays / 365;
+    record(w, 'simulation', 'Birthday! ' + w.player.name + ' turns ' + years + '.');
+    if (years === 5) w.facts.push('school:primary_started');
+    if (years === 13) w.facts.push('school:secondary_started');
+    if (years === 18) w.facts.push('life_stage:adult');
   }
   record(w, 'simulation', 'A month passes in Bellweather. Your life continues while the town changes around you.');
   return WorldSchema.parse(w);
@@ -252,6 +266,8 @@ export function performWorldActivity(
     throw new Error('Invalid simulated day');
 
   const w = structuredClone(WorldSchema.parse(input));
+  if (w.player.ageDays < 16 * 365)
+    throw new Error('Work, purchases, and adult-world activities are locked until an age-appropriate stage.');
   const serialDay = w.day + dayOffset;
   const marker = 'free-life-action:' + serialDay + ':' + activity;
   if (w.facts.includes(marker)) throw new Error('Already done today. Explore something else!');
