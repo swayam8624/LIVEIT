@@ -31,11 +31,7 @@ import {
   visitDistrict,
 } from '@living/simulation-core';
 import type { CareerPath, World } from '@living/world-schema';
-import { CityMap } from './CityMap';
-import {
-  CURRENT_VISUAL_CAPABILITY,
-  selectVisualPresentation,
-} from './visualPresentation';
+import { PixelTown } from './PixelTown';
 import { gameTheme as t, districtColors } from './gameTheme';
 
 const CAREERS: {
@@ -72,14 +68,12 @@ const CAREERS: {
 export function CityWorld({
   world,
   onAction,
+  onTalk,
 }: {
   world: World;
   onAction: (operation: (world: World) => World) => void;
+  onTalk?: () => void;
 }) {
-  const visual = selectVisualPresentation(
-    'pixel-overworld',
-    CURRENT_VISUAL_CAPABILITY,
-  );
   const [focused, setFocused] = useState<string | null>(null);
   const [careerOpen, setCareerOpen] = useState(false);
   const [showDistrictCards, setShowDistrictCards] = useState(false);
@@ -88,10 +82,10 @@ export function CityWorld({
   const selected =
     events.find((event) => event.id === focused) ?? events[0] ?? null;
   return (
-    <View style={styles.root} accessibilityLabel={visual.accessibilityLabel}>
+    <View style={styles.root} accessibilityLabel="Bellweather playable pixel town and city opportunities">
       <View style={styles.heading}>
         <View style={{ flex: 1, gap: 3 }}>
-          <Text style={styles.eyebrow}>BELLWEATHER / DISTRICT PREVIEW</Text>
+          <Text style={styles.eyebrow}>BELLWEATHER / PIXEL FREE ROAM</Text>
           <Text style={styles.title}>VISIT THE CITY</Text>
           <Text style={styles.caption}>
             Go somewhere. Meet someone. Choose what matters.
@@ -106,25 +100,19 @@ export function CityWorld({
         </View>
       </View>
       <View style={styles.mapControls}>
-        <Text style={styles.eyebrow}>WORLD MAP · DISTRICT SELECT</Text>
+        <Text style={styles.eyebrow}>WORLD MAP · INTERACTIVE PIXEL LIFE</Text>
         <Pressable
           accessibilityRole="button"
           onPress={() => setShowDistrictCards((v) => !v)}
           style={styles.mapToggle}
         >
           <Text style={styles.mapToggleText}>
-            {showDistrictCards ? '◈ CITY VIEW' : '▤ DISTRICT LIST'}
+            {showDistrictCards ? '◈ BACK TO STREET' : '▤ DISTRICT TRAVEL'}
           </Text>
         </Pressable>
       </View>
       {!showDistrictCards ? (
-        <CityMap
-          selected={city.district}
-          day={world.day}
-          hotspots={events.map((event) => event.district)}
-          onVisit={(district) => onAction((w) => visitDistrict(w, district))}
-        />
-      ) : (
+        <PixelTown world={world} onTalk={onTalk} />      ) : (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}

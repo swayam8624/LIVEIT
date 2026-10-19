@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import {
   AccessibilityInfo,
   Animated,
-  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -10,17 +9,12 @@ import {
   View,
   useWindowDimensions,
 } from 'react-native';
-import { type World } from '@living/world-schema';
+import { DEFAULT_APPEARANCE, type World } from '@living/world-schema';
 import { type Story } from '@living/story-schema';
 import { conditionMet, currentScene } from '@living/narrative-core';
-import { AvatarPortrait } from './AvatarPortrait';
+import { PixelPortrait, AMELIA_PIXEL_APPEARANCE } from './PixelPortrait';
 import { GameStage } from './GameStage';
 import { gameTheme as t } from './gameTheme';
-
-// Licensed original concept portrait bundled offline for the official Amelia
-// episodes. Creator stories can choose a different character actor manifest.
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const ameliaImage = require('../assets/amelia-portrait.jpg');
 
 /**
  * Current illustrated fallback for the pixel-only cinematic dialogue direction:
@@ -92,7 +86,7 @@ export function StoryPlayer({
       testID="story-stage"
       accessibilityLabel={
         story.title +
-        ' — illustrated story stage; expressive pixel portrait assets pending'
+        ' — animated pixel character story stage'
       }
       style={styles.shell}
     >
@@ -121,19 +115,24 @@ export function StoryPlayer({
         ]}
       >
         <View style={styles.playerActor}>
-          <AvatarPortrait
-            appearance={world.player.appearance}
+          <PixelPortrait
+            appearance={world.player.appearance ?? DEFAULT_APPEARANCE}
             size={compact ? 154 : 217}
-            expression={moodExpression}
-            label={'Customized player character in ' + scene.mood + ' scene'}
+            mood={moodExpression}
+            speaking={speakerIsPlayer}
+            reducedMotion={reducedMotion}
+            label={'Customized pixel player in ' + scene.mood + ' scene'}
           />
         </View>
         {scene.speaker.toLowerCase() === 'amelia' ? (
           <View style={[styles.npcActor, compact && styles.npcActorCompact]}>
-            <Image
-              source={ameliaImage}
-              style={[styles.npcImage, compact && styles.npcImageCompact]}
-              accessibilityLabel="Amelia's illustrated portrait"
+            <PixelPortrait
+              appearance={AMELIA_PIXEL_APPEARANCE}
+              size={compact ? 154 : 217}
+              mood={moodExpression}
+              speaking={scene.speaker.toLowerCase() === 'amelia'}
+              reducedMotion={reducedMotion}
+              label={'Amelia, animated pixel portrait'}
             />
           </View>
         ) : !speakerIsPlayer && scene.speaker.toLowerCase() !== 'narrator' ? (
@@ -301,17 +300,15 @@ const styles = StyleSheet.create({
   actorsCompact: { left: 8, right: 8, top: 92, height: 218 },
   playerActor: { alignSelf: 'flex-end' },
   npcActor: {
-    width: 190,
-    height: 235,
-    borderRadius: 90,
+    width: 195,
+    height: 260,
+    borderRadius: 7,
     overflow: 'hidden',
     borderWidth: 2,
     borderColor: t.border,
     backgroundColor: t.panel,
   },
-  npcImage: { width: 190, height: 235, resizeMode: 'cover' },
-  npcActorCompact: { width: 136, height: 180, borderRadius: 66 },
-  npcImageCompact: { width: 136, height: 180 },
+  npcActorCompact: { width: 147, height: 194, borderRadius: 6 },
   npcUnknown: {
     width: 150,
     height: 195,
