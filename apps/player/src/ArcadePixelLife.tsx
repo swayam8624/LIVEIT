@@ -7,7 +7,8 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
 import { lifeStageOf, relationshipStatus, DAILY_ACTIVITIES, activitiesForAge, dailyActivitiesUsed,
-  type DailyActivityId, type ActivityZone, type RelationshipAction,
+  SOCIAL_NPCS, canTalkTo, buildNPCSystemPrompt,
+  type DailyActivityId, type ActivityZone, type RelationshipAction, type SocialNPC,
   type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
 import { OFFICIAL_STORIES } from '@living/content';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
@@ -49,7 +50,7 @@ function safeText(text: string): string {
   return text.trim().slice(0, 500);
 }
 async function npcFromLocalModel(
-  endpoint: string, model: string, history: Message[], player: string, month: number,
+  endpoint: string, model: string, history: Message[], world: World, npc: SocialNPC,
 ): Promise<string> {
   const url = endpoint.trim().replace(/\/+$/, '') + '/api/chat';
   if (!/^https?:\/\//i.test(url)) throw Error('Invalid local Ollama URL');
@@ -68,8 +69,7 @@ async function npcFromLocalModel(
         messages: [
           {
             role: 'system',
-            content: 'You are Amelia, a believable 24-year-old person in Bellweather, a contemporary town. You are not a virtual assistant. Your personal plans, relationships, hopes, boundaries, and past change as months pass. You are talking directly to ' + player +
-              ', who is age ' + month + ' months. Reply naturally with 2–6 substantive sentences where appropriate; avoid filler, repeat questions and excessive affirmation. Remember actual things in the conversation, ask at most one thoughtful question, and sometimes disagree. Never claim to have completed a quest, paid money, changed health or edited the game. No stage directions, no /think, no system messages.',
+            content: buildNPCSystemPrompt(world, npc),
           },
           ...history.slice(-28).map(item => ({
             role: item.speaker === 'player' ? 'user' : 'assistant',
@@ -127,7 +127,7 @@ function PixelBuilding({
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onDailyActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, paused = false,
+  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onDailyActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, onNPCConversation, paused = false,
 }: {
   world: World;
   paused?: boolean;
@@ -135,6 +135,7 @@ export function ArcadePixelLife({
   onAdvanceMonth: () => void;
   onActivity: (activity: WorldActivity, dayOffset: number) => void;
   onDailyActivity: (id: DailyActivityId, dayOffset: number, location: ActivityZone) => string;
+  onNPCConversation: (npc: SocialNPC, userText: string, reply: string, dayOffset: number) => void;
   onChildAction: (activity: ChildhoodActivity, dayOffset: number) => void;
   onSkipChildhood: (years: 2 | 5 | 13 | 18) => void;
   onStoryStart: (id: string) => void;
@@ -157,6 +158,9 @@ export function ArcadePixelLife({
   const [notice, setNotice] = useState('Walk up to Amelia and press TALK. Explore the market and café.');
   const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings' | 'stories' | 'activities'>('none');
   const [activityFeedback, setActivityFeedback] = useState('');
+  const [currentNpc, setCurrentNpc] = useState<SocialNPC>('amelia');
+  const currentNpcRef = useRef<SocialNPC>('amelia');
+  const [chatLoading, setChatLoading] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [draft, setDraft] = useState('');
   const [missionTitle, setMissionTitle] = useState('');
@@ -222,12 +226,13 @@ export function ArcadePixelLife({
     Promise.all([
       AsyncStorage.getItem(gameKey + '.location'),
       AsyncStorage.getItem(gameKey + '.elapsed'),
+      AsyncStorage.getItem(gameKey + '.chat.amelia'),
       AsyncStorage.getItem(gameKey + '.chat'),
       AsyncStorage.getItem(gameKey + '.missions'),
       AsyncStorage.getItem('liveit.localOllamaEndpoint'),
       AsyncStorage.getItem('liveit.localOllamaModel'),
       AsyncStorage.getItem(gameKey + '.pixelAvatar'),
-    ]).then(([location, elapsed, transcript, quests, customEndpoint, customModel, savedAvatar]) => {
+    ]).then(([location, elapsed, transcript, legacyTranscript, quests, customEndpoint, customModel, savedAvatar]) => {
       if (!active) return;
       try {
         const p: unknown = location ? JSON.parse(location) : INITIAL_POSITION;
@@ -242,7 +247,7 @@ export function ArcadePixelLife({
         ? Math.min(progress, MONTH_MS - 1) : 0;
       setClock(clockRef.current);
       try {
-        const saved: unknown = transcript ? JSON.parse(transcript) : [];
+        const saved: unknown = transcript || legacyTranscript ? JSON.parse(transcript || legacyTranscript || '[]') : [];
         if (Array.isArray(saved)) {
           setMessages(saved.filter((m): m is Message =>
             m !== null && typeof m === 'object' &&
@@ -264,8 +269,9 @@ export function ArcadePixelLife({
 
   useEffect(() => {
     if (!loaded) return;
-    void AsyncStorage.setItem(gameKey + '.chat', JSON.stringify(messages.slice(-80))).catch(() => {});
-  }, [gameKey, loaded, messages]);
+    if (chatLoading) return;
+    void AsyncStorage.setItem(gameKey + '.chat.' + currentNpc, JSON.stringify(messages.slice(-80))).catch(() => {});
+  }, [chatLoading, currentNpc, gameKey, loaded, messages]);
   useEffect(() => {
     if (!loaded) return;
     void AsyncStorage.setItem(gameKey + '.missions', JSON.stringify(missions.slice(-500))).catch(() => {});
