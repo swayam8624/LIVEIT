@@ -7,6 +7,8 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
+import { MISSION_GOALS, missionExpired, newMission, parseMissions, resolveMissionEvent,
+  type LifeMission, type MissionGoal, type MissionEvent } from './missionGoals';
 import {
   INITIAL_POSITION, STREET_WIDTH, STREET_HEIGHT, CAFE_WIDTH, CAFE_HEIGHT,
   npcAt, pixelCell, validPixelPosition,
@@ -34,7 +36,7 @@ const COLORS = {
 };
 type Point = { x: number; y: number };
 type Message = { speaker: 'player' | 'npc'; text: string };
-type Mission = { id: string; title: string; description: string; createdAge: number; expiresAge?: number; completed: boolean };
+type Mission = LifeMission;
 
 function safeText(text: string): string {
   return text.trim().slice(0, 500);
@@ -51,13 +53,7 @@ function npcFallback(text: string, player: string): string {
     return 'Hey, ' + player + '. The market feels different today. What is on your mind?';
   return 'I am listening. Tell me more about that, or ask me something about our lives here.';
 }
-function validMission(x: unknown): x is Mission {
-  if (!x || typeof x !== 'object') return false;
-  const m = x as Partial<Mission>;
-  return typeof m.id === 'string' && typeof m.title === 'string' &&
-    typeof m.description === 'string' && typeof m.createdAge === 'number' &&
-    typeof m.completed === 'boolean' && (m.expiresAge === undefined || (typeof m.expiresAge === 'number' && Number.isInteger(m.expiresAge)));
-}
+
 
 /**
  * Web Ollama talks to the computer running this browser. On actual phones use
@@ -125,6 +121,24 @@ export function ArcadePixelLife({
   const [missionTitle, setMissionTitle] = useState('');
   const [missionDescription, setMissionDescription] = useState('');
   const [missions, setMissions] = useState<Mission[]>([]);
+  const [missionGoal, setMissionGoal] = useState<MissionGoal>('meet');
+  const [missionTerm, setMissionTerm] = useState<'birthday' | 'five' | 'lifetime'>('birthday');
+  const missionRef = useRef<Mission[]>([]);
+  missionRef.current = missions;
+  const ageRef = useRef(0);
+  ageRef.current = Math.floor((world.player.ageDays * 12) / 365);
+  // These sidecar goals have no authority to change the core save themselves.
+  const missionEvent = useCallback((event: MissionEvent) => {
+    const { missions: next, newlyCompleted } = resolveMissionEvent(
+      missionRef.current, event, ageRef.current,
+    );
+    if (!newlyCompleted.length) return;
+    missionRef.current = next;
+    setMissions(next);
+    setNotice('✦ MISSION COMPLETE: ' + newlyCompleted.map(m => m.title).join(', '));
+  }, []);
+  const lastZone = useRef('');
+
   const [endpoint, setEndpoint] = useState('http://localhost:11434');
   const [modelMode, setModelMode] = useState<'authored' | 'local'>('authored');
   const [waiting, setWaiting] = useState(false);
@@ -187,7 +201,7 @@ export function ArcadePixelLife({
       } catch { /* No conversation history yet. */ }
       try {
         const saved: unknown = quests ? JSON.parse(quests) : [];
-        if (Array.isArray(saved)) setMissions(saved.filter(validMission).slice(-60));
+        if (Array.isArray(saved)) setMissions(parseMissions(saved));
       } catch { /* No created missions yet. */ }
       if (customEndpoint) setEndpoint(customEndpoint);
       setLoaded(true);
@@ -201,7 +215,7 @@ export function ArcadePixelLife({
   }, [gameKey, loaded, messages]);
   useEffect(() => {
     if (!loaded) return;
-    void AsyncStorage.setItem(gameKey + '.missions', JSON.stringify(missions.slice(-60))).catch(() => {});
+    void AsyncStorage.setItem(gameKey + '.missions', JSON.stringify(missions.slice(-500))).catch(() => {});
   }, [gameKey, loaded, missions]);
 
   const isNearNpc = useCallback(() => {
@@ -213,12 +227,13 @@ export function ArcadePixelLife({
       setNotice('Move near Amelia to begin a conversation.');
       return;
     }
+    missionEvent('meet');
     setPanel('talk');
     if (chatRef.current.length === 0) setMessages([{
       speaker: 'npc',
       text: 'Oh, hey! I thought I recognized you. How have you been?',
     }]);
-  }, [isNearNpc]);
+  }, [isNearNpc, missionEvent]);
 
   const submit = useCallback(async (suggested?: string) => {
     const sentence = safeText(suggested ?? draft);
@@ -227,6 +242,9 @@ export function ArcadePixelLife({
     chatRef.current = updated;
     setMessages(updated);
     setDraft('');
+    if (/\b(work|job|career|employment|rent|earnings)\b/i.test(sentence)) {
+      missionEvent('work');
+    }
     busyRef.current = true;
     setWaiting(true);
     let reply = '';
@@ -242,7 +260,7 @@ export function ArcadePixelLife({
     setMessages(existing => [...existing, { speaker: 'npc' as const, text: reply }].slice(-80));
     busyRef.current = false;
     setWaiting(false);
-  }, [draft, endpoint, world.player.ageDays, world.player.name]);
+  }, [draft, endpoint, missionEvent, world.player.ageDays, world.player.name]);
 
   // No setState inside the 60/120 Hz world loop. The movement animation and
   // following camera remain smooth even if no React component re-renders.
@@ -294,9 +312,17 @@ export function ArcadePixelLife({
       if (terrain.portal === 'cafe') {
         p.place = 'cafe'; p.x = 5; p.y = 8;
         setPlace('cafe'); setNotice('The café smells of coffee and rain.');
+        missionEvent('cafe');
       } else if (terrain.portal === 'street') {
         p.place = 'street'; p.x = 5; p.y = 7;
         setPlace('street'); setNotice('Back in Bellweather market.');
+      }
+      if (p.place === 'street' && p.x >= 17 && p.y >= 14 &&
+          lastZone.current !== 'garden') {
+        lastZone.current = 'garden';
+        missionEvent('garden');
+      } else if (!(p.place === 'street' && p.x >= 17 && p.y >= 14)) {
+        lastZone.current = '';
       }
       pose.setValue({ x: p.x * TILE, y: p.y * TILE });
       const worldWidth = (p.place === 'street' ? STREET_WIDTH : CAFE_WIDTH) * TILE;
@@ -311,6 +337,7 @@ export function ArcadePixelLife({
         if (clockRef.current >= MONTH_MS) {
           clockRef.current -= MONTH_MS;
           monthRef.current();
+          missionEvent('month');
         }
       }
       if (timestamp - lastUi > 1000) {
@@ -342,7 +369,7 @@ export function ArcadePixelLife({
       cancelAnimationFrame(frame);
       void AsyncStorage.setItem(gameKey + '.elapsed', String(clockRef.current)).catch(() => {});
     };
-  }, [bob, camera, frameOffset, gameKey, glow, loaded, modernPlayer, panel, paused, pose, size.height, size.width]);
+  }, [bob, camera, frameOffset, gameKey, glow, loaded, missionEvent, modernPlayer, panel, paused, pose, size.height, size.width]);
 
   // Browser-only physical keyboard support. Text inputs must never move
   // the avatar; mobile touch pads write the same movement vector.
@@ -409,13 +436,21 @@ export function ArcadePixelLife({
   const saveMission = () => {
     const title = safeText(missionTitle).slice(0, 80);
     if (!title) return;
-    setMissions(previous => [...previous, {
-      id: String(Date.now()), title,
-      description: safeText(missionDescription),
-      createdAge: ageMonths, expiresAge: (Math.floor(ageMonths / 12) + 1) * 12,
-      completed: false,
-    }].slice(-60));
+    const term = missionTerm === 'lifetime'
+      ? null : missionTerm === 'five'
+        ? Math.floor(ageMonths / 12) + 5 : undefined;
+    const goal = newMission(String(Date.now()) + ':' + Math.random().toString(36).slice(2, 7),
+      title, missionDescription, missionGoal, ageMonths, term);
+    setMissions(previous => [...previous, goal].slice(-500));
     setMissionTitle(''); setMissionDescription('');
+    setNotice('New mission added: ' + title);
+  };
+  const togglePersonal = (id: string) => {
+    setMissions(all => all.map(m =>
+      m.id === id && m.goal === 'personal' && !missionExpired(m, ageMonths)
+        ? { ...m, completed: !m.completed, completedAge: !m.completed ? ageMonths : undefined }
+        : m,
+    ));
   };
 
   return (
@@ -538,15 +573,43 @@ export function ArcadePixelLife({
               <ScrollView style={s.messages} contentContainerStyle={{gap: 12, paddingVertical: 12}}>
                 <Text style={s.help}>Missions live inside your Free Life and stay available until completed. They never replace your character or reset the world.</Text>
                 {missions.map(m => (
-                  <Pressable key={m.id} onPress={() => setMissions(all => all.map(a => a.id === m.id ? {...a, completed: !a.completed} : a))}
-                    disabled={!m.completed && m.expiresAge !== undefined && ageMonths >= m.expiresAge}
-                    style={[s.quest, (m.completed || (m.expiresAge !== undefined && ageMonths >= m.expiresAge)) && { opacity: 0.55 }]}>
-                    <Text style={s.questTitle}>{m.completed ? '✓ ' : m.expiresAge !== undefined && ageMonths >= m.expiresAge ? '⌛ EXPIRED · ' : '◇ '}{m.title}</Text>
+                  <Pressable key={m.id} onPress={() => togglePersonal(m.id)}
+                    disabled={(m.goal ?? 'personal') !== 'personal' || missionExpired(m, ageMonths)}
+                    style={[s.quest, (m.completed || missionExpired(m, ageMonths)) && { opacity: 0.55 }]}>
+                    <Text style={s.questTitle}>{m.completed ? '✓ ' : missionExpired(m, ageMonths) ? '⌛ EXPIRED · ' : '◇ '}{m.title}</Text>
                     <Text style={s.help}>{m.description || 'Explore and make your own meaning.'}</Text>
+                    <Text style={s.mode}>{MISSION_GOALS.find(g => g.id === (m.goal ?? 'personal'))?.label ?? 'Personal objective'} · {m.expiresAge === undefined ? 'LIFETIME' : 'UNTIL AGE ' + Math.floor(m.expiresAge / 12)}</Text>
                   </Pressable>
                 ))}
-                <Text style={s.help}>New personal missions stay active through this age year and expire on your next birthday. Completed missions remain in your journal.</Text>
+                <Text style={s.help}>Missions belong to your Free Life, not a separate campaign. Complete physical objectives by playing; personally defined tasks can be marked manually. Choose when a new mission expires.</Text>
                 <Text style={s.speaker}>CREATE A MISSION</Text>
+                <Text style={s.help}>WHAT COUNTS AS COMPLETION?</Text>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
+                  {MISSION_GOALS.map(goal => (
+                    <Pressable accessibilityRole="button"
+                      accessibilityState={{ selected: goal.id === missionGoal }}
+                      key={goal.id} onPress={() => setMissionGoal(goal.id)}
+                      style={[s.suggestion, goal.id === missionGoal ? { backgroundColor: '#74516c' } : null]}>
+                      <Text style={s.suggestionText}>{goal.label}</Text>
+                    </Pressable>
+                  ))}
+                </View>
+                <Text style={s.help}>{MISSION_GOALS.find(g => g.id === missionGoal)?.hint}</Text>
+                <Text style={s.speaker}>HOW LONG IS THIS MISSION AVAILABLE?</Text>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
+                  {([
+                    ['birthday', 'Until next birthday'],
+                    ['five', 'Five years'],
+                    ['lifetime', 'Whole lifetime'],
+                  ] as const).map(([id, label]) => (
+                    <Pressable key={id} onPress={() => setMissionTerm(id)}
+                      accessibilityRole="button"
+                      accessibilityState={{selected: missionTerm === id}}
+                      style={[s.suggestion, missionTerm === id ? {backgroundColor:'#74516c'} : null]}>
+                      <Text style={s.suggestionText}>{label}</Text>
+                    </Pressable>
+                  ))}
+                </View>
                 <TextInput style={s.field} value={missionTitle} onChangeText={setMissionTitle} placeholder="Mission title" placeholderTextColor="#a1a4ad" maxLength={80} />
                 <TextInput style={[s.field, {minHeight: 90}]} multiline value={missionDescription} onChangeText={setMissionDescription} placeholder="What would you like to accomplish?" placeholderTextColor="#a1a4ad" maxLength={500}/>
                 <Pressable style={s.add} onPress={saveMission}><Text style={s.addText}>+ ADD TO MY LIFE</Text></Pressable>
