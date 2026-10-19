@@ -102,7 +102,7 @@ export function settleHouseholdAndSchoolMonth(w:World):void {
   const school=w.school;
   if(!school||school.phase==='graduated')return;
   const age=Math.floor(w.player.ageDays/365);
-  if(age>=18 && school.phase!=='graduated'){
+  if(age>=18){
     school.phase='graduated';
     school.graduatedWith=clamp(Math.round((school.grade*0.75+school.attendance*0.25)-
       school.discipline*0.15));
