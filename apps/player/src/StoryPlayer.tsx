@@ -90,7 +90,10 @@ export function StoryPlayer({
   return (
     <View
       testID="story-stage"
-      accessibilityLabel={story.title + ' — illustrated story stage; expressive pixel portrait assets pending'}
+      accessibilityLabel={
+        story.title +
+        ' — illustrated story stage; expressive pixel portrait assets pending'
+      }
       style={styles.shell}
     >
       <GameStage
