@@ -10,6 +10,7 @@ import type { WorldActivity } from '@living/simulation-core';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
 import { modernSpriteColumn } from './spriteDirections';
+import { worldCell, seedFromTimeline, visibleWorldTiles, biomeAt, chunkOf } from './proceduralWorld';
 import { MISSION_GOALS, missionExpired, newMission, parseMissions, resolveMissionEvent,
   type LifeMission, type MissionGoal, type MissionEvent } from './missionGoals';
 import {
@@ -133,6 +134,7 @@ export function ArcadePixelLife({
   onNavigate: (where: 'stories' | 'people' | 'journal' | 'life') => void;
 }) {
   const { width, height } = useWindowDimensions();
+  const worldSeed = useMemo(() => seedFromTimeline(world.timelineId), [world.timelineId]);
   const [size, setSize] = useState({ width, height });
   // Moving tile window: prefetch a two-tile border around the viewport.
   // Rendering the entire 30x23 town creates hundreds of native Image nodes
@@ -327,7 +329,7 @@ export function ArcadePixelLife({
       const cx = Math.floor(x + 0.5);
       const cy = Math.floor(y + 0.5);
       const n = npcAt(p);
-      return pixelCell(p, cx, cy).solid || (n.x === cx && n.y === cy);
+      return worldCell(p, cx, cy, worldSeed).solid || (n.x === cx && n.y === cy);
     };
     const render = (timestamp: number) => {
       if (!active) return;
@@ -376,7 +378,7 @@ export function ArcadePixelLife({
       }
       // Portal transitions need to be detected by entering a tile, not by
       // colliding with the café's solid façade.
-      const terrain = pixelCell(p.place, Math.floor(p.x + 0.5), Math.floor(p.y + 0.5));
+      const terrain = worldCell(p.place, Math.floor(p.x + 0.5), Math.floor(p.y + 0.5), worldSeed);
       if (terrain.portal === 'cafe') {
         p.place = 'cafe'; p.x = 5; p.y = 8;
         routeRef.current = []; talkAfterWalk.current = false;
@@ -401,15 +403,21 @@ export function ArcadePixelLife({
       } else if (!(p.place === 'street' && p.x >= 17 && p.y >= 14)) {
         lastZone.current = '';
       }
-      const colsNeeded = Math.min(p.place === 'street' ? STREET_WIDTH : CAFE_WIDTH,
-        Math.max(1, Math.ceil(size.width / TILE) + 4));
-      const rowsNeeded = Math.min(p.place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT,
-        Math.max(1, Math.ceil(size.height / TILE) + 4));
+      const colsNeeded = p.place === 'street'
+        ? Math.ceil(size.width / TILE) + 4
+        : Math.min(CAFE_WIDTH, Math.ceil(size.width / TILE) + 4);
+      const rowsNeeded = p.place === 'street'
+        ? Math.ceil(size.height / TILE) + 4
+        : Math.min(CAFE_HEIGHT, Math.ceil(size.height / TILE) + 4);
       const nextWindow = {
-        left: Math.min(Math.max(0, Math.floor(p.x) - Math.floor(colsNeeded / 2)),
-          (p.place === 'street' ? STREET_WIDTH : CAFE_WIDTH) - colsNeeded),
-        top: Math.min(Math.max(0, Math.floor(p.y) - Math.floor(rowsNeeded / 2)),
-          (p.place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT) - rowsNeeded),
+        left: p.place === 'street'
+          ? Math.floor(p.x) - Math.floor(colsNeeded / 2)
+          : Math.min(Math.max(0, Math.floor(p.x) - Math.floor(colsNeeded / 2)),
+            CAFE_WIDTH - colsNeeded),
+        top: p.place === 'street'
+          ? Math.floor(p.y) - Math.floor(rowsNeeded / 2)
+          : Math.min(Math.max(0, Math.floor(p.y) - Math.floor(rowsNeeded / 2)),
+            CAFE_HEIGHT - rowsNeeded),
         cols: colsNeeded, rows: rowsNeeded,
       };
       const oldWindow = tileWindowRef.current;
@@ -421,10 +429,14 @@ export function ArcadePixelLife({
       pose.setValue({ x: p.x * TILE, y: p.y * TILE });
       const worldWidth = (p.place === 'street' ? STREET_WIDTH : CAFE_WIDTH) * TILE;
       const worldHeight = (p.place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT) * TILE;
-      const cameraX = Math.min(0, Math.max(size.width - worldWidth,
-        size.width / 2 - (p.x + 0.5) * TILE));
-      const cameraY = Math.min(0, Math.max(size.height - worldHeight,
-        size.height / 2 - (p.y + 0.5) * TILE));
+      const cameraX = p.place === 'street'
+        ? size.width / 2 - (p.x + 0.5) * TILE
+        : Math.min(0, Math.max(size.width - worldWidth,
+          size.width / 2 - (p.x + 0.5) * TILE));
+      const cameraY = p.place === 'street'
+        ? size.height / 2 - (p.y + 0.5) * TILE
+        : Math.min(0, Math.max(size.height - worldHeight,
+          size.height / 2 - (p.y + 0.5) * TILE));
       cameraPoint.current = { x: cameraX, y: cameraY };
       camera.setValue(cameraPoint.current);
       if (dt > 0) {
@@ -466,7 +478,7 @@ export function ArcadePixelLife({
       cancelAnimationFrame(frame);
       void AsyncStorage.setItem(gameKey + '.elapsed', String(clockRef.current)).catch(() => {});
     };
-  }, [bob, camera, frameOffset, gameKey, glow, loaded, missionEvent, modernPlayer, panel, paused, pose, size.height, size.width, startChat]);
+  }, [bob, camera, frameOffset, gameKey, glow, loaded, missionEvent, modernPlayer, panel, paused, pose, size.height, size.width, startChat, worldSeed]);
 
   // Browser-only physical keyboard support. Text inputs must never move
   // the avatar; mobile touch pads write the same movement vector.
@@ -497,17 +509,10 @@ export function ArcadePixelLife({
 
   // Spatial map tiles are created only when changing between the two maps.
   const tiles = useMemo(() => {
-    const columns = place === 'street' ? STREET_WIDTH : CAFE_WIDTH;
-    const rows = place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT;
     const elements: React.ReactElement[] = [];
-    const startY = Math.min(tileWindow.top, rows - 1);
-    const endY = Math.min(rows, startY + tileWindow.rows);
-    const startX = Math.min(tileWindow.left, columns - 1);
-    const endX = Math.min(columns, startX + tileWindow.cols);
-    for (let y = startY; y < endY; y++) for (let x = startX; x < endX; x++) {
-      const tile = pixelCell(place, x, y);
-      // Never let a prop replace the floor underneath. Trees, buildings,
-      // furniture and lamps have their own transparent sprite layers.
+    for (const {x,y,cell:tile} of visibleWorldTiles(
+      place,tileWindow.left,tileWindow.top,tileWindow.cols,tileWindow.rows,worldSeed
+    )) {
       const base: PixelArtKey = tile.terrain === 'grass2' ? 'grass' : tile.terrain;
       const frame = { position: 'absolute' as const, left: x * TILE,
         top: y * TILE, width: TILE, height: TILE };
@@ -523,11 +528,11 @@ export function ArcadePixelLife({
       );
     }
     return elements;
-  }, [crisp, place, tileWindow.cols, tileWindow.left, tileWindow.rows, tileWindow.top]);
+  }, [crisp, place, tileWindow.cols, tileWindow.left, tileWindow.rows, tileWindow.top, worldSeed]);
 
   const npc = npcAt(place);
-  const worldWidth = (place === 'street' ? STREET_WIDTH : CAFE_WIDTH) * TILE;
-  const worldHeight = (place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT) * TILE;
+  const worldWidth = (place === 'street' ? 1 : CAFE_WIDTH) * TILE;
+  const worldHeight = (place === 'street' ? 1 : CAFE_HEIGHT) * TILE;
   const ageMonths = Math.floor((world.player.ageDays * 12) / 365);
   const dayWithinMonth = Math.min(30, Math.floor(clock / (MONTH_MS / 30)) + 1);
   const inGameMinute = Math.floor(((clock / (MONTH_MS / 30)) % 1) * 1440);
@@ -621,7 +626,7 @@ export function ArcadePixelLife({
         if (w !== size.width || h !== size.height) setSize({ width: w, height: h });
       }}>
         <Animated.View pointerEvents="none"
-          style={[s.map, { width: worldWidth, height: worldHeight },
+          style={[s.map, { width: worldWidth, height: worldHeight, overflow: 'visible' },
             { transform: camera.getTranslateTransform() }]}>
           {tiles}
           {place === 'street' ? (
