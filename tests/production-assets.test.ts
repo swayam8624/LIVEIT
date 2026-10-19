@@ -11,18 +11,30 @@ const read = (file: string) =>
 
 describe('LIVEIT production asset inventory — exact aspirational vs shipped boundary', () => {
   const result = JSON.parse(
-    execFileSync(process.execPath, ['tools/validate-production-assets.mjs', '--json'], {
-      cwd: process.cwd(),
-      encoding: 'utf8',
-    }),
-  ) as { planned: number; released: number; existingPrototypeImages: number; tinyPreviews: number; priorities: Record<string, number> };
+    execFileSync(
+      process.execPath,
+      ['tools/validate-production-assets.mjs', '--json'],
+      {
+        cwd: process.cwd(),
+        encoding: 'utf8',
+      },
+    ),
+  ) as {
+    planned: number;
+    released: number;
+    existingPrototypeImages: number;
+    tinyPreviews: number;
+    priorities: Record<string, number>;
+  };
 
   it('validates all 1481 planned entries, production priorities and zero completed art', () => {
     expect(result.planned).toBe(1481);
     expect(result.released).toBe(0);
     expect(result.existingPrototypeImages).toBe(28);
     expect(result.tinyPreviews).toBe(2);
-    expect(Object.values(result.priorities).reduce((a, b) => a + b, 0)).toBe(1481);
+    expect(Object.values(result.priorities).reduce((a, b) => a + b, 0)).toBe(
+      1481,
+    );
   });
 
   it('requires individually named 400 rig pieces, not palette-color-only variants', () => {
@@ -31,7 +43,9 @@ describe('LIVEIT production asset inventory — exact aspirational vs shipped bo
     );
     expect(rig.length).toBe(400);
     expect(new Set(rig.map((entry) => entry.id)).size).toBe(400);
-    expect(rig.every((entry) => entry.expectedDistinctGeometry === true)).toBe(true);
+    expect(rig.every((entry) => entry.expectedDistinctGeometry === true)).toBe(
+      true,
+    );
     expect(rig.some((entry) => entry.status !== 'planned')).toBe(false);
   });
 
@@ -63,18 +77,24 @@ describe('LIVEIT production asset inventory — exact aspirational vs shipped bo
     expect(tiles.length).toBe(302);
     expect(families.length).toBe(55);
     expect(tiles.every((entry) => entry.tileSizePx === 16)).toBe(true);
-    expect(families.every((entry) => Number(entry.framesRequired) >= 12)).toBe(true);
+    expect(families.every((entry) => Number(entry.framesRequired) >= 12)).toBe(
+      true,
+    );
   });
 
   it('requires real 3D acting expressions, camera shots and non-executable downloadable shaders', () => {
     const characters = read('characters-3d.json').entries;
     const visuals = read('hud-audio-fx.json').entries;
-    expect(characters.filter((entry) => entry.category === 'facial-expression')).toHaveLength(12);
-    expect(visuals.filter((entry) => entry.category === 'camera')).toHaveLength(30);
     expect(
-      visuals.filter((entry) => entry.category === 'shader').every(
-        (entry) => entry.implementationType === 'precompiled-app-only',
-      ),
+      characters.filter((entry) => entry.category === 'facial-expression'),
+    ).toHaveLength(12);
+    expect(visuals.filter((entry) => entry.category === 'camera')).toHaveLength(
+      30,
+    );
+    expect(
+      visuals
+        .filter((entry) => entry.category === 'shader')
+        .every((entry) => entry.implementationType === 'precompiled-app-only'),
     ).toBe(true);
   });
 
