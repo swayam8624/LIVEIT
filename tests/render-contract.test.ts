@@ -43,8 +43,12 @@ describe('hybrid LIVEIT rendering contract (no active native view yet)', () => {
       expect(frame.timelineId).toBe(world.timelineId);
       expect(frame.gameDay).toBe(world.day);
     }
-    expect(pixel.actors[0]!.appearance).toEqual(threeD.scene.actors[0]!.appearance);
-    expect(pixel.actors[0]!.appearance).toEqual(chat.scene.actors[0]!.appearance);
+    expect(pixel.actors[0]!.appearance).toEqual(
+      threeD.scene.actors[0]!.appearance,
+    );
+    expect(pixel.actors[0]!.appearance).toEqual(
+      chat.scene.actors[0]!.appearance,
+    );
     expect(pixel.actors[0]!.ageYears).toBe(threeD.scene.actors[0]!.ageYears);
     expect(pixel.actors[0]!.spriteAtlas).toBe(pose.spriteAtlas);
     expect(pose.x).toBe(8); // immutable presentation adapter
@@ -55,22 +59,31 @@ describe('hybrid LIVEIT rendering contract (no active native view yet)', () => {
     const other = buildPixelRenderFrame(world, { ...pose, x: 51, y: -3 }, 1);
     expect(other.actors[0]!.position).toEqual({ x: 51, y: -3 });
     expect(world.city).not.toHaveProperty('position');
-    expect(() => buildPixelRenderFrame(world, { ...pose, x: NaN }, 1)).toThrow();
+    expect(() =>
+      buildPixelRenderFrame(world, { ...pose, x: NaN }, 1),
+    ).toThrow();
   });
 
   it('rejects missing player, duplicate actor and invalid scene day', () => {
     const world = createWorld();
     const pixel = buildPixelRenderFrame(world, pose, 3);
     const missing: PixelRenderFrame = {
-      ...pixel, playerEntityId: 'different-entity',
+      ...pixel,
+      playerEntityId: 'different-entity',
     };
     expect(GameRenderFrameSchema.safeParse(missing).success).toBe(false);
-    const duplicated = { ...pixel, actors: [...pixel.actors, pixel.actors[0]!] };
+    const duplicated = {
+      ...pixel,
+      actors: [...pixel.actors, pixel.actors[0]!],
+    };
     expect(GameRenderFrameSchema.safeParse(duplicated).success).toBe(false);
     const cinema = buildCinematicRenderFrame(world, 3);
-    expect(GameRenderFrameSchema.safeParse({
-      ...cinema, gameDay: world.day + 1,
-    }).success).toBe(false);
+    expect(
+      GameRenderFrameSchema.safeParse({
+        ...cinema,
+        gameDay: world.day + 1,
+      }).success,
+    ).toBe(false);
   });
 
   it('only recognizes current scene-revision input from the correct player', () => {
@@ -85,10 +98,18 @@ describe('hybrid LIVEIT rendering contract (no active native view yet)', () => {
       inputSequence: 8,
     });
     expect(isFreshRendererIntent(frame, cmd)).toBe(true);
-    expect(isFreshRendererIntent({ ...frame, sceneRevision: 14 }, cmd)).toBe(false);
-    expect(isFreshRendererIntent(buildCinematicRenderFrame(world, 13), cmd)).toBe(false);
-    expect(RenderUserIntentSchema.safeParse({ ...cmd, dx: 1, dy: 1 }).success).toBe(false);
-    expect(RenderUserIntentSchema.safeParse({ ...cmd, dx: 0, dy: 0 }).success).toBe(false);
+    expect(isFreshRendererIntent({ ...frame, sceneRevision: 14 }, cmd)).toBe(
+      false,
+    );
+    expect(
+      isFreshRendererIntent(buildCinematicRenderFrame(world, 13), cmd),
+    ).toBe(false);
+    expect(
+      RenderUserIntentSchema.safeParse({ ...cmd, dx: 1, dy: 1 }).success,
+    ).toBe(false);
+    expect(
+      RenderUserIntentSchema.safeParse({ ...cmd, dx: 0, dy: 0 }).success,
+    ).toBe(false);
   });
 
   it('plans integer-scale nearest-neighbor viewport sizing and safe narrow crops', () => {
@@ -121,14 +142,25 @@ describe('hybrid LIVEIT rendering contract (no active native view yet)', () => {
       haptic: 'none' as const,
     };
     expect(OutcomeReceiptSchema.safeParse(base).success).toBe(true);
-    expect(OutcomeReceiptSchema.safeParse({
-      ...base, haptic: 'confirmation',
-    }).success).toBe(false);
-    expect(OutcomeReceiptSchema.safeParse({
-      ...base, status: 'failed', haptic: 'confirmation',
-    }).success).toBe(false);
-    expect(OutcomeReceiptSchema.safeParse({
-      ...base, status: 'committed', haptic: 'confirmation',
-    }).success).toBe(true);
+    expect(
+      OutcomeReceiptSchema.safeParse({
+        ...base,
+        haptic: 'confirmation',
+      }).success,
+    ).toBe(false);
+    expect(
+      OutcomeReceiptSchema.safeParse({
+        ...base,
+        status: 'failed',
+        haptic: 'confirmation',
+      }).success,
+    ).toBe(false);
+    expect(
+      OutcomeReceiptSchema.safeParse({
+        ...base,
+        status: 'committed',
+        haptic: 'confirmation',
+      }).success,
+    ).toBe(true);
   });
 });

@@ -45,15 +45,17 @@ export function buildPixelRenderFrame(
     tileMap: pose.tileMap,
     camera: { centerX: pose.cameraX, centerY: pose.cameraY, zoom: 1 },
     ambient: 'day',
-    actors: [{
-      entityId: world.player.id,
-      appearance: world.player.appearance ?? DEFAULT_APPEARANCE,
-      ageYears,
-      position: { x: pose.x, y: pose.y },
-      facing: pose.facing,
-      animation: 'idle',
-      spriteAtlas: pose.spriteAtlas,
-    }],
+    actors: [
+      {
+        entityId: world.player.id,
+        appearance: world.player.appearance ?? DEFAULT_APPEARANCE,
+        ageYears,
+        position: { x: pose.x, y: pose.y },
+        facing: pose.facing,
+        animation: 'idle',
+        spriteAtlas: pose.spriteAtlas,
+      },
+    ],
   });
 }
 

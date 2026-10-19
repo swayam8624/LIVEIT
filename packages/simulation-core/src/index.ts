@@ -1,4 +1,7 @@
-export { buildPixelRenderFrame, buildCinematicRenderFrame } from './render-adapter';
+export {
+  buildPixelRenderFrame,
+  buildCinematicRenderFrame,
+} from './render-adapter';
 export type { PixelWorldPose } from './render-adapter';
 export { buildVisualScene } from './visual-scene';
 export type { CastMember } from './visual-scene';
