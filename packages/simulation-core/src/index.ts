@@ -231,3 +231,49 @@ export function advanceCalendarMonth(input: World): World {
   record(w, 'simulation', 'A month passes in Bellweather. Your life continues while the town changes around you.');
   return WorldSchema.parse(w);
 }
+
+
+export type WorldActivity = 'cafe' | 'gig' | 'garden';
+
+/**
+ * A free-roam action belongs to an in-game *day*, not a year-advancing
+ * dashboard shortcut. The walk clock owns time. The action cannot repeatedly
+ * mint money by tapping the same button dozens of times each simulated day.
+ *
+ * The marker is authoritative and travels with the existing strict v1 save.
+ * NPC model responses cannot call this API: actions require a real UI tap.
+ */
+export function performWorldActivity(
+  input: World, activity: WorldActivity, dayOffset: number,
+): World {
+  if (!['cafe', 'gig', 'garden'].includes(activity))
+    throw new Error('Invalid world action');
+  if (!Number.isInteger(dayOffset) || dayOffset < 0 || dayOffset > 29)
+    throw new Error('Invalid simulated day');
+
+  const w = structuredClone(WorldSchema.parse(input));
+  const serialDay = w.day + dayOffset;
+  const marker = 'free-life-action:' + serialDay + ':' + activity;
+  if (w.facts.includes(marker)) throw new Error('Already done today. Explore something else!');
+  if (w.facts.length >= 9900) {
+    // Preserve story facts and memories; only old activity cooldown markers
+    // are recyclable once the campaign becomes multi-decade-long.
+    w.facts = w.facts.filter(f => !f.startsWith('free-life-action:')).slice(-9000);
+  }
+  if (activity === 'cafe') {
+    if (w.player.money < 450) throw new Error('Not enough cash for a café visit.');
+    w.player.money -= 450;
+    w.player.wellbeing = Math.min(100, w.player.wellbeing + 2);
+    record(w, 'simulation', 'Bought coffee and took a quiet break at the Bellweather café.');
+  } else if (activity === 'gig') {
+    w.player.money = Math.min(100000000, w.player.money + 3500);
+    w.player.skill = Math.min(100, w.player.skill + 1);
+    w.player.wellbeing = Math.max(0, w.player.wellbeing - 2);
+    record(w, 'simulation', 'Completed a short market gig and earned £35.');
+  } else {
+    w.player.wellbeing = Math.min(100, w.player.wellbeing + 5);
+    record(w, 'simulation', 'Spent the afternoon resting in Bellweather gardens.');
+  }
+  w.facts.push(marker);
+  return WorldSchema.parse(w);
+}
