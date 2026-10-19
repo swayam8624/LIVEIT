@@ -22,6 +22,9 @@ import {
  * This keeps touch and keyboard input independent of the visible world refresh.
  */
 const TILE = 64; // 4x the source pixels; covers mobile viewports
+const CRISP_STYLE: ImageStyle | undefined = Platform.OS === 'web'
+  ? ({ imageRendering: 'pixelated' } as unknown as ImageStyle)
+  : undefined;
 const SPEED = 3.5;             // tiles per second, independent of monitor Hz
 const MONTH_MS = 60 * 60 * 1000; // one real gameplay hour = 30 simulated days
 const COLORS = {
@@ -137,7 +140,7 @@ export function ArcadePixelLife({
   const localArt = pixelArt as Record<string, ImageSourcePropType>;
   const modernPlayer = localArt.player_modern;
   const modernNPC = localArt.npc_modern;
-  const crisp = Platform.OS === 'web' ? ({ imageRendering: 'pixelated' } as unknown as ImageStyle) : undefined;
+  const crisp = CRISP_STYLE;
   const glow = useRef(new Animated.Value(0.1)).current;
   const clockRef = useRef(0);
   const monthRef = useRef(onAdvanceMonth);
