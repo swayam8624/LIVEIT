@@ -75,7 +75,7 @@ class PixelIntakeTest(unittest.TestCase):
                 self.assertFalse((sandbox / "escape.png").exists())
                 self.assertFalse((output / "legal-city.zip").exists())
                 self.assertTrue((output / "SOURCE.json").is_file())
-                with patch.object(validator, "IMPORTED", public), redirect_stdout(io.StringIO()):
+                with patch.object(validator, "IMPORTED", public), patch("sys.argv", ["validate_pixel_assets.py"]), redirect_stdout(io.StringIO()):
                     self.assertEqual(validator.main(), 0)
 
     def test_loose_sound_is_accepted_but_restricted_license_is_not(self):
