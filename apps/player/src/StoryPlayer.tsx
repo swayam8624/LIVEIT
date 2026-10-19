@@ -9,7 +9,11 @@ import {
   View,
   useWindowDimensions,
 } from 'react-native';
-import { DEFAULT_APPEARANCE, type World, type Appearance } from '@living/world-schema';
+import {
+  DEFAULT_APPEARANCE,
+  type World,
+  type Appearance,
+} from '@living/world-schema';
 import { type Story } from '@living/story-schema';
 import { conditionMet, currentScene } from '@living/narrative-core';
 import { PixelPortrait, AMELIA_PIXEL_APPEARANCE } from './PixelPortrait';
@@ -23,13 +27,19 @@ import { gameTheme as t } from './gameTheme';
  */
 const MARA_PIXEL_APPEARANCE: Appearance = {
   ...DEFAULT_APPEARANCE,
-  skinTone: 'caramel', hair: 'bob', hairColor: 'chestnut',
-  outfit:'cozy', outfitColor:'plum',
+  skinTone: 'caramel',
+  hair: 'bob',
+  hairColor: 'chestnut',
+  outfit: 'cozy',
+  outfitColor: 'plum',
 };
 const TEACHER_PIXEL_APPEARANCE: Appearance = {
   ...DEFAULT_APPEARANCE,
-  skinTone:'tan',hair:'sidepart',hairColor:'black',
-  outfit:'smart',outfitColor:'teal',
+  skinTone: 'tan',
+  hair: 'sidepart',
+  hairColor: 'black',
+  outfit: 'smart',
+  outfitColor: 'teal',
 };
 export function StoryPlayer({
   world,
@@ -95,8 +105,7 @@ export function StoryPlayer({
     <View
       testID="story-stage"
       accessibilityLabel={
-        story.title +
-        ' — animated pixel character story stage'
+        story.title + ' — animated pixel character story stage'
       }
       style={styles.shell}
     >
@@ -134,12 +143,16 @@ export function StoryPlayer({
             label={'Customized pixel player in ' + scene.mood + ' scene'}
           />
         </View>
-        {['amelia','mara','teacher'].includes(scene.speaker.toLowerCase()) ? (
+        {['amelia', 'mara', 'teacher'].includes(scene.speaker.toLowerCase()) ? (
           <View style={[styles.npcActor, compact && styles.npcActorCompact]}>
             <PixelPortrait
-              appearance={scene.speaker.toLowerCase() === 'mara'
-                ? MARA_PIXEL_APPEARANCE : scene.speaker.toLowerCase() === 'teacher'
-                  ? TEACHER_PIXEL_APPEARANCE : AMELIA_PIXEL_APPEARANCE}
+              appearance={
+                scene.speaker.toLowerCase() === 'mara'
+                  ? MARA_PIXEL_APPEARANCE
+                  : scene.speaker.toLowerCase() === 'teacher'
+                    ? TEACHER_PIXEL_APPEARANCE
+                    : AMELIA_PIXEL_APPEARANCE
+              }
               size={compact ? 154 : 217}
               mood={moodExpression}
               speaking

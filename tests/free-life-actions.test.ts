@@ -23,20 +23,30 @@ describe('world-space daily interactions', () => {
     expect(coffee.player.wellbeing).toBe(74);
     const garden = performWorldActivity(coffee, 'garden', 0);
     expect(garden.player.wellbeing).toBe(79);
-    expect(decodeSave(encodeSave({version:1,active:'life',life:garden,story:null})).life).toEqual(garden);
+    expect(
+      decodeSave(
+        encodeSave({ version: 1, active: 'life', life: garden, story: null }),
+      ).life,
+    ).toEqual(garden);
   });
 
   it('rejects untrusted input and preserves the previous state', () => {
     const start = createWorld();
     for (const offset of [-1, 30, 0.5, NaN])
       expect(() => performWorldActivity(start, 'gig', offset)).toThrow();
-    expect(() => performWorldActivity(start, 'cash_machine' as 'gig', 0)).toThrow();
-    expect(start.facts.some(f => f.startsWith('free-life-action:'))).toBe(false);
+    expect(() =>
+      performWorldActivity(start, 'cash_machine' as 'gig', 0),
+    ).toThrow();
+    expect(start.facts.some((f) => f.startsWith('free-life-action:'))).toBe(
+      false,
+    );
   });
 
   it('does not permit coffee when funds are insufficient', () => {
     const start = createWorld();
     start.player.money = 0;
-    expect(() => performWorldActivity(start, 'cafe', 0)).toThrow('Not enough cash');
+    expect(() => performWorldActivity(start, 'cafe', 0)).toThrow(
+      'Not enough cash',
+    );
   });
 });

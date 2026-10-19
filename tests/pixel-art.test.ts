@@ -29,7 +29,10 @@ function crc32(bytes: Buffer): number {
 
 describe('native-bundled Pulse CC0 pixel art', () => {
   it('has original source provenance, uses static native resources and bundles 24 sprites', () => {
-    const provenance = readFileSync(resolve(process.cwd(), directory, 'README.md'), 'utf8');
+    const provenance = readFileSync(
+      resolve(process.cwd(), directory, 'README.md'),
+      'utf8',
+    );
     expect(provenance).toContain('CC0');
     expect(provenance).toContain('edfaygo.itch.io/pulse-everyday-streets-1616');
     expect(source).not.toContain('data:image/png;base64,');

@@ -43,7 +43,13 @@ import {
   type Appearance,
   type World,
 } from '@living/world-schema';
-import { reunion, bookshop, firstMorning, OFFICIAL_STORIES, findOfficialStory } from '@living/content';
+import {
+  reunion,
+  bookshop,
+  firstMorning,
+  OFFICIAL_STORIES,
+  findOfficialStory,
+} from '@living/content';
 import { parseStory, type Story } from '@living/story-schema';
 import { LOCAL_STORIES_KEY } from './src/LocalStoryLibrary';
 import { LocalStoryLibrary } from './src/LocalStoryLibrary';
@@ -370,16 +376,20 @@ export default function App() {
   }
   function openOfficialStory(id: string) {
     run(() => {
-      const chosen = OFFICIAL_STORIES.find(story => story.id === id);
+      const chosen = OFFICIAL_STORIES.find((story) => story.id === id);
       const current = latestSave.current;
       if (!chosen || !current) throw new Error('Story is unavailable.');
-      const prior = current.life.progress.find(p => p.storyId === id);
-      if (prior?.completed) throw new Error('This story is already completed in your life.');
+      const prior = current.life.progress.find((p) => p.storyId === id);
+      if (prior?.completed)
+        throw new Error('This story is already completed in your life.');
       const next = startStory(current.life, chosen);
       setAuthored(chosen);
       persist({
-        ...current, active: 'life', life: next,
-        activeStoryId: chosen.id, sceneDismissed: false,
+        ...current,
+        active: 'life',
+        life: next,
+        activeStoryId: chosen.id,
+        sceneDismissed: false,
       });
       setTab('life');
       setSceneOpen(true);
@@ -388,7 +398,12 @@ export default function App() {
   function newLife() {
     setAuthored(reunion);
     run(() => {
-      const born = createBirthWorld(name, 'main-' + Date.now().toString(36), pronouns, appearance);
+      const born = createBirthWorld(
+        name,
+        'main-' + Date.now().toString(36),
+        pronouns,
+        appearance,
+      );
       const opening = startStory(born, firstMorning);
       setAuthored(firstMorning);
       persist({
@@ -437,74 +452,141 @@ export default function App() {
           paused={sceneOpen}
           onTalk={openEncounter}
           onStoryStart={openOfficialStory}
-          onNPCConversation={(npc: SocialNPC, userText: string, reply: string, offset: number) => {
-            const current=latestSave.current;
-            if(!current) return;
-            run(()=>{
-              const next=recordNPCConversation(current.life,npc,userText,reply,offset);
+          onNPCConversation={(
+            npc: SocialNPC,
+            userText: string,
+            reply: string,
+            offset: number,
+          ) => {
+            const current = latestSave.current;
+            if (!current) return;
+            run(() => {
+              const next = recordNPCConversation(
+                current.life,
+                npc,
+                userText,
+                reply,
+                offset,
+              );
               update(next);
             });
           }}
           onSchoolAction={(action: SchoolAction, offset: number): string => {
-            const current=latestSave.current;
-            if(!current) return 'No active life.';
+            const current = latestSave.current;
+            if (!current) return 'No active life.';
             try {
-              const next=performSchoolAction(current.life,action,offset);
+              const next = performSchoolAction(current.life, action, offset);
               update(next);
               return next.history.at(-1)?.text ?? 'School decision recorded.';
-            } catch(error) {
-              return error instanceof Error ? error.message : 'Unable to complete school action.';
+            } catch (error) {
+              return error instanceof Error
+                ? error.message
+                : 'Unable to complete school action.';
             }
           }}
-          onCareerAction={(action: 'technology'|'creative'|'business'|'community'|'interview'|'promotion'|'resign'): string => {
-            const current=latestSave.current;
-            if(!current) return 'No active life.';
+          onCareerAction={(
+            action:
+              | 'technology'
+              | 'creative'
+              | 'business'
+              | 'community'
+              | 'interview'
+              | 'promotion'
+              | 'resign',
+          ): string => {
+            const current = latestSave.current;
+            if (!current) return 'No active life.';
             try {
-              const before=current.life;
-              const next=action==='interview' ? attendJobInterview(before) :
-                action==='promotion' ? requestPromotion(before) :
-                action==='resign' ? resignFromJob(before) :
-                applyForJob(before,action);
+              const before = current.life;
+              const next =
+                action === 'interview'
+                  ? attendJobInterview(before)
+                  : action === 'promotion'
+                    ? requestPromotion(before)
+                    : action === 'resign'
+                      ? resignFromJob(before)
+                      : applyForJob(before, action);
               update(next);
               return next.history.at(-1)?.text ?? 'Career updated.';
-            } catch(error) {
-              return error instanceof Error ? error.message : 'Career choice could not be completed.';
+            } catch (error) {
+              return error instanceof Error
+                ? error.message
+                : 'Career choice could not be completed.';
             }
           }}
-          onDailyActivity={(id: DailyActivityId, offset: number, location: ActivityZone): string => {
+          onDailyActivity={(
+            id: DailyActivityId,
+            offset: number,
+            location: ActivityZone,
+          ): string => {
             const current = latestSave.current;
             if (!current) return 'No active life to update.';
             try {
-              const next = performDailyActivity(current.life, id, offset, location);
+              const next = performDailyActivity(
+                current.life,
+                id,
+                offset,
+                location,
+              );
               update(next);
-              return next.history[next.history.length - 1]?.text ?? 'Activity completed.';
+              return (
+                next.history[next.history.length - 1]?.text ??
+                'Activity completed.'
+              );
             } catch (error) {
-              return error instanceof Error ? error.message : 'The activity was not completed.';
+              return error instanceof Error
+                ? error.message
+                : 'The activity was not completed.';
             }
           }}
-          onRelationship={(action: RelationshipAction, offset: number): string => {
+          onRelationship={(
+            action: RelationshipAction,
+            offset: number,
+          ): string => {
             const current = latestSave.current;
             if (!current) return 'No saved character.';
             try {
               const next = actOnRelationship(current.life, action, offset);
               update(next);
-              return next.history[next.history.length - 1]?.text ?? 'Relationship updated.';
+              return (
+                next.history[next.history.length - 1]?.text ??
+                'Relationship updated.'
+              );
             } catch (err) {
-              return err instanceof Error ? err.message : 'Could not change this relationship.';
+              return err instanceof Error
+                ? err.message
+                : 'Could not change this relationship.';
             }
           }}
           onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
           onChildAction={(activity: ChildhoodActivity, offset: number) =>
-            applyWorldAction((w) => performChildhoodActivity(w, activity, offset))}
+            applyWorldAction((w) =>
+              performChildhoodActivity(w, activity, offset),
+            )
+          }
           onSkipChildhood={(years: 2 | 5 | 13 | 18) =>
-            applyWorldAction((w) => skipToAge(w, years))}
+            applyWorldAction((w) => skipToAge(w, years))
+          }
           onActivity={(activity: WorldActivity, dayOffset: number) =>
-            applyWorldAction((w) => performWorldActivity(w, activity, dayOffset))}
+            applyWorldAction((w) =>
+              performWorldActivity(w, activity, dayOffset),
+            )
+          }
         />
         {sceneOpen ? (
-          <View style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0,
-            backgroundColor: '#131421f2' }}>
-            <ScrollView contentContainerStyle={{ padding: 8, paddingBottom: 32 }}>
+          <View
+            style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              top: 0,
+              bottom: 0,
+              backgroundColor: '#131421f2',
+            }}
+          >
+            <ScrollView
+              contentContainerStyle={{ padding: 8, paddingBottom: 32 }}
+            >
               <StoryPlayer
                 world={save.life}
                 story={authored}
@@ -605,9 +687,10 @@ export default function App() {
                 A life worth{wide ? '\n' : ' '}remembering.
               </Text>
               <Text style={s.subtitle}>
-                You will be born in Bellweather. Grow from infancy into childhood,
-                choose your own path through school and adulthood, and build
-                a life whose relationships and memories actually matter.
+                You will be born in Bellweather. Grow from infancy into
+                childhood, choose your own path through school and adulthood,
+                and build a life whose relationships and memories actually
+                matter.
               </Text>
               <Text style={s.fieldLabel}>WHAT SHOULD WE CALL YOU?</Text>
               <TextInput
@@ -761,7 +844,11 @@ export default function App() {
                       ))}
                     </View>
                   </GameStage>
-                  <CityWorld world={world!} onAction={applyWorldAction} onTalk={openEncounter} />
+                  <CityWorld
+                    world={world!}
+                    onAction={applyWorldAction}
+                    onTalk={openEncounter}
+                  />
                   <View style={s.stats}>
                     <Stat
                       label="YOUR SAVINGS"

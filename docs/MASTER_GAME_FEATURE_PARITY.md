@@ -1,6 +1,6 @@
 # LIVEIT — Feature-by-feature master acceptance checklist
 
-> October 2026. An original game inspired by *categories* from BitLife, Episode and pseudonymous chat, not a copy of their copyrighted assets or scripts. Their proprietary features change; this is a living scope ledger, not a claim to catalog every historical product expansion.
+> October 2026. An original game inspired by _categories_ from BitLife, Episode and pseudonymous chat, not a copy of their copyrighted assets or scripts. Their proprietary features change; this is a living scope ledger, not a claim to catalog every historical product expansion.
 
 > Baselines: https://apps.apple.com/in/app/bitlife-life-simulator/id1374403536 · https://home.episodeinteractive.com/ · https://episodesupport.zendesk.com/hc/en-us/sections/360008483713-Writer-s-Portal-Guides · https://anonychat.app/how-it-works · https://anonychat.app/safety
 
@@ -9,7 +9,6 @@
 ## Ordered implementation waves
 
 P0: game identity / facing / genuine LLM / birth / streamed tile world. P1: families, activities, ordinary relationships, life integrated story. P2: age-gated romance, adult family, school, career, money and health. P3: advanced Episode authoring, NPC memory, pets, housing. P4: specialist jobs, fame, crime, large content inventory. P5: opt-in adults-only REAL-user anonymous chat with moderation and privacy. P6: instrumented iOS/Android release quality.
-
 
 ## 00 Foundation
 

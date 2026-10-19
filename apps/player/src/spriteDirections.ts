@@ -5,7 +5,8 @@
  */
 export const MODERN_DIRECTIONS = { right: 0, up: 1, left: 2, down: 3 } as const;
 export function modernSpriteColumn(
-  facing: keyof typeof MODERN_DIRECTIONS, phase: number,
+  facing: keyof typeof MODERN_DIRECTIONS,
+  phase: number,
 ): number {
   const step = Number.isFinite(phase) ? Math.abs(Math.floor(phase)) % 6 : 0;
   return MODERN_DIRECTIONS[facing] * 6 + step;

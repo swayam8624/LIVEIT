@@ -16,7 +16,9 @@ describe('continuous world calendar', () => {
     expect(month.player.money).toBe(93200);
     expect(month.relationships[0]!.trust).toBeLessThan(35);
     expect(WorldSchema.parse(month)).toEqual(month);
-    const copy = decodeSave(encodeSave({ version: 1, active: 'life', life: month, story: null }));
+    const copy = decodeSave(
+      encodeSave({ version: 1, active: 'life', life: month, story: null }),
+    );
     expect(copy.life).toEqual(month);
   });
 
@@ -29,7 +31,9 @@ describe('continuous world calendar', () => {
 
   it('is deterministic and does not mutate the input', () => {
     const original = createWorld();
-    expect(advanceCalendarMonth(original)).toEqual(advanceCalendarMonth(original));
+    expect(advanceCalendarMonth(original)).toEqual(
+      advanceCalendarMonth(original),
+    );
     expect(original.day).toBe(0);
   });
 
@@ -40,6 +44,8 @@ describe('continuous world calendar', () => {
       player: { ...original.player, career: 'employed' as const },
     };
     const month = advanceCalendarMonth(employed);
-    expect(month.player.money).toBeGreaterThan(advanceCalendarMonth(original).player.money);
+    expect(month.player.money).toBeGreaterThan(
+      advanceCalendarMonth(original).player.money,
+    );
   });
 });

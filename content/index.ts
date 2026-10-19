@@ -470,56 +470,244 @@ export const bookshop = parseStory({
  * and memory ledger as Free Life. Never present adult romance to children.
  */
 export const firstMorning = parseStory({
-  schemaVersion:1,id:'official.first-morning',version:1,
-  title:'The First Morning',description:'Before words, there was warmth, light, and a voice you learned to recognize.',
-  compatibleWorlds:['modern_life_v1'],minAge:0,
-  permissions:{relationshipTargets:['parent_mara'],memoryTargets:['parent_mara']},
-  entry:'morning',
-  scenes:[
-    {id:'morning',speaker:'Mara',mood:'warm',text:'Sunlight falls across your blanket. A familiar voice speaks softly. Mara has hardly slept, but she smiles when you look at her. Your whole world is a warm room and the people who care for you.',ending:false,choices:[
-      {id:'reach',label:'Reach toward that familiar voice',next:'holding',conditions:[],effects:[
-        {operation:'adjust_relationship',target:'parent_mara',value:8},
-        {operation:'add_memory',target:'parent_mara',fact:'first_reach',text:'You reached toward Mara on the morning your life began.'}]},
-      {id:'watch',label:'Watch the light move across the room',next:'light',conditions:[],effects:[
-        {operation:'add_memory',target:'parent_mara',fact:'first_light',text:'Your earliest memory is the warm morning light in Bellweather.'}]}
-    ]},
-    {id:'holding',speaker:'Mara',mood:'warm',text:'Mara lifts you and settles into the rocking chair. There are no promises about the person you will become. Only a promise to be here while you do.',ending:true,choices:[]},
-    {id:'light',speaker:'Narrator',mood:'reflective',text:'Beyond the glass, Bellweather wakes. Buses pass. Someone carries bread from a bakery. The world is enormous, and you have all your life to discover it.',ending:true,choices:[]}
-  ]
+  schemaVersion: 1,
+  id: 'official.first-morning',
+  version: 1,
+  title: 'The First Morning',
+  description:
+    'Before words, there was warmth, light, and a voice you learned to recognize.',
+  compatibleWorlds: ['modern_life_v1'],
+  minAge: 0,
+  permissions: {
+    relationshipTargets: ['parent_mara'],
+    memoryTargets: ['parent_mara'],
+  },
+  entry: 'morning',
+  scenes: [
+    {
+      id: 'morning',
+      speaker: 'Mara',
+      mood: 'warm',
+      text: 'Sunlight falls across your blanket. A familiar voice speaks softly. Mara has hardly slept, but she smiles when you look at her. Your whole world is a warm room and the people who care for you.',
+      ending: false,
+      choices: [
+        {
+          id: 'reach',
+          label: 'Reach toward that familiar voice',
+          next: 'holding',
+          conditions: [],
+          effects: [
+            {
+              operation: 'adjust_relationship',
+              target: 'parent_mara',
+              value: 8,
+            },
+            {
+              operation: 'add_memory',
+              target: 'parent_mara',
+              fact: 'first_reach',
+              text: 'You reached toward Mara on the morning your life began.',
+            },
+          ],
+        },
+        {
+          id: 'watch',
+          label: 'Watch the light move across the room',
+          next: 'light',
+          conditions: [],
+          effects: [
+            {
+              operation: 'add_memory',
+              target: 'parent_mara',
+              fact: 'first_light',
+              text: 'Your earliest memory is the warm morning light in Bellweather.',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'holding',
+      speaker: 'Mara',
+      mood: 'warm',
+      text: 'Mara lifts you and settles into the rocking chair. There are no promises about the person you will become. Only a promise to be here while you do.',
+      ending: true,
+      choices: [],
+    },
+    {
+      id: 'light',
+      speaker: 'Narrator',
+      mood: 'reflective',
+      text: 'Beyond the glass, Bellweather wakes. Buses pass. Someone carries bread from a bakery. The world is enormous, and you have all your life to discover it.',
+      ending: true,
+      choices: [],
+    },
+  ],
 });
 export const firstSchoolDay = parseStory({
-  schemaVersion:1,id:'official.first-school-day',version:1,
-  title:'The Blue Backpack',description:'Your first day at school asks a question no adult can answer for you.',
-  compatibleWorlds:['modern_life_v1'],minAge:5,
-  permissions:{relationshipTargets:['parent_mara'],memoryTargets:['parent_mara']},
-  entry:'gate',
-  scenes:[
-    {id:'gate',speaker:'Mara',mood:'reflective',text:'The straps of your blue backpack keep slipping from your shoulders. At the school gate, Mara notices you watching the other children. “You can be brave and afraid at the same time,” she says. “What would you like me to do?”',ending:false,choices:[
-      {id:'stay',label:'Ask Mara to stay until you find a friend',next:'playground',conditions:[],effects:[{operation:'adjust_relationship',target:'parent_mara',value:6},{operation:'add_memory',target:'parent_mara',fact:'school_first_friend',text:'Mara stayed at the gate while you found your courage.'}]},
-      {id:'go',label:'Walk inside on your own',next:'hallway',conditions:[],effects:[{operation:'add_memory',target:'parent_mara',fact:'school_independence',text:'You walked into your first school day alone and curious.'}]}
-    ]},
-    {id:'playground',speaker:'Narrator',mood:'warm',text:'A child offers you half the space on a swing. You ask their name. It is a tiny beginning, but by lunchtime you are laughing.',ending:true,choices:[]},
-    {id:'hallway',speaker:'Teacher',mood:'reflective',text:'The hall smells of paper and new pencils. A teacher kneels to show you your classroom. Through the window you can still see the gate, but you no longer need to look.',ending:true,choices:[]}
-  ]
+  schemaVersion: 1,
+  id: 'official.first-school-day',
+  version: 1,
+  title: 'The Blue Backpack',
+  description:
+    'Your first day at school asks a question no adult can answer for you.',
+  compatibleWorlds: ['modern_life_v1'],
+  minAge: 5,
+  permissions: {
+    relationshipTargets: ['parent_mara'],
+    memoryTargets: ['parent_mara'],
+  },
+  entry: 'gate',
+  scenes: [
+    {
+      id: 'gate',
+      speaker: 'Mara',
+      mood: 'reflective',
+      text: 'The straps of your blue backpack keep slipping from your shoulders. At the school gate, Mara notices you watching the other children. “You can be brave and afraid at the same time,” she says. “What would you like me to do?”',
+      ending: false,
+      choices: [
+        {
+          id: 'stay',
+          label: 'Ask Mara to stay until you find a friend',
+          next: 'playground',
+          conditions: [],
+          effects: [
+            {
+              operation: 'adjust_relationship',
+              target: 'parent_mara',
+              value: 6,
+            },
+            {
+              operation: 'add_memory',
+              target: 'parent_mara',
+              fact: 'school_first_friend',
+              text: 'Mara stayed at the gate while you found your courage.',
+            },
+          ],
+        },
+        {
+          id: 'go',
+          label: 'Walk inside on your own',
+          next: 'hallway',
+          conditions: [],
+          effects: [
+            {
+              operation: 'add_memory',
+              target: 'parent_mara',
+              fact: 'school_independence',
+              text: 'You walked into your first school day alone and curious.',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'playground',
+      speaker: 'Narrator',
+      mood: 'warm',
+      text: 'A child offers you half the space on a swing. You ask their name. It is a tiny beginning, but by lunchtime you are laughing.',
+      ending: true,
+      choices: [],
+    },
+    {
+      id: 'hallway',
+      speaker: 'Teacher',
+      mood: 'reflective',
+      text: 'The hall smells of paper and new pencils. A teacher kneels to show you your classroom. Through the window you can still see the gate, but you no longer need to look.',
+      ending: true,
+      choices: [],
+    },
+  ],
 });
 export const thirteenSummers = parseStory({
-  schemaVersion:1,id:'official.thirteen-summers',version:1,
-  title:'The Last Summer Before Everything',description:'A friendship, a family conversation, and the first real choice about your future.',
-  compatibleWorlds:['modern_life_v1'],minAge:13,
-  permissions:{relationshipTargets:['parent_mara'],memoryTargets:['parent_mara']},
-  entry:'dinner',
-  scenes:[
-    {id:'dinner',speaker:'Mara',mood:'reflective',text:'On the last Sunday of summer, you tell Mara that you want to spend more time with your friends and less time being told who to become. The room goes quiet, but she does not interrupt.',ending:false,choices:[
-      {id:'honest',label:'Explain what independence means to you',next:'understood',conditions:[],effects:[{operation:'adjust_relationship',target:'parent_mara',value:8},{operation:'add_memory',target:'parent_mara',fact:'teen_honesty',text:'You explained your need for independence without pushing your family away.'}]},
-      {id:'leave',label:'Head outside before the argument grows',next:'street',conditions:[],effects:[{operation:'adjust_relationship',target:'parent_mara',value:-3},{operation:'add_memory',target:'parent_mara',fact:'teen_distance',text:'You left the conversation unfinished to make space for yourself.'}]}
-    ]},
-    {id:'understood',speaker:'Mara',mood:'warm',text:'“I can give you space,” she says. “But I still want you to come home for dinner.” You agree. Independence turns out to be something you practice together.',ending:true,choices:[]},
-    {id:'street',speaker:'Narrator',mood:'reflective',text:'The evening air smells of rain. You walk along the same streets you once explored with smaller shoes. The town has not changed, but your place in it has.',ending:true,choices:[]}
-  ]
+  schemaVersion: 1,
+  id: 'official.thirteen-summers',
+  version: 1,
+  title: 'The Last Summer Before Everything',
+  description:
+    'A friendship, a family conversation, and the first real choice about your future.',
+  compatibleWorlds: ['modern_life_v1'],
+  minAge: 13,
+  permissions: {
+    relationshipTargets: ['parent_mara'],
+    memoryTargets: ['parent_mara'],
+  },
+  entry: 'dinner',
+  scenes: [
+    {
+      id: 'dinner',
+      speaker: 'Mara',
+      mood: 'reflective',
+      text: 'On the last Sunday of summer, you tell Mara that you want to spend more time with your friends and less time being told who to become. The room goes quiet, but she does not interrupt.',
+      ending: false,
+      choices: [
+        {
+          id: 'honest',
+          label: 'Explain what independence means to you',
+          next: 'understood',
+          conditions: [],
+          effects: [
+            {
+              operation: 'adjust_relationship',
+              target: 'parent_mara',
+              value: 8,
+            },
+            {
+              operation: 'add_memory',
+              target: 'parent_mara',
+              fact: 'teen_honesty',
+              text: 'You explained your need for independence without pushing your family away.',
+            },
+          ],
+        },
+        {
+          id: 'leave',
+          label: 'Head outside before the argument grows',
+          next: 'street',
+          conditions: [],
+          effects: [
+            {
+              operation: 'adjust_relationship',
+              target: 'parent_mara',
+              value: -3,
+            },
+            {
+              operation: 'add_memory',
+              target: 'parent_mara',
+              fact: 'teen_distance',
+              text: 'You left the conversation unfinished to make space for yourself.',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'understood',
+      speaker: 'Mara',
+      mood: 'warm',
+      text: '“I can give you space,” she says. “But I still want you to come home for dinner.” You agree. Independence turns out to be something you practice together.',
+      ending: true,
+      choices: [],
+    },
+    {
+      id: 'street',
+      speaker: 'Narrator',
+      mood: 'reflective',
+      text: 'The evening air smells of rain. You walk along the same streets you once explored with smaller shoes. The town has not changed, but your place in it has.',
+      ending: true,
+      choices: [],
+    },
+  ],
 });
 
 /** Bundled stories can always be resumed offline without a local story import. */
-export const OFFICIAL_STORIES = [firstMorning, firstSchoolDay, thirteenSummers, reunion, bookshop] as const;
+export const OFFICIAL_STORIES = [
+  firstMorning,
+  firstSchoolDay,
+  thirteenSummers,
+  reunion,
+  bookshop,
+] as const;
 export function findOfficialStory(id: string) {
   return OFFICIAL_STORIES.find((story) => story.id === id);
 }

@@ -15,11 +15,16 @@ describe('current 100% pixel-only owner direction remains canonical', () => {
   ];
 
   it('keeps the new pixel-only source of truth, active catalog and history', () => {
-    for (const file of authorities) expect(existsSync(resolve(process.cwd(), file)), file).toBe(true);
+    for (const file of authorities)
+      expect(existsSync(resolve(process.cwd(), file)), file).toBe(true);
     const index = fromRoot('docs/DOCUMENT_INDEX.md');
     expect(index).toMatch(/PIXEL ART/i);
     expect(index).toMatch(/superseded|retir/i);
-    expect(existsSync(resolve(process.cwd(), 'docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md'))).toBe(true);
+    expect(
+      existsSync(
+        resolve(process.cwd(), 'docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md'),
+      ),
+    ).toBe(true);
   });
 
   it('requires the living city and expressive dialogue to be only 2D pixel scenes', () => {
@@ -39,7 +44,9 @@ describe('current 100% pixel-only owner direction remains canonical', () => {
     const agent = fromRoot('AGENTS.md');
     expect(readme).toContain('assets:intake');
     expect(agent).toContain('tools/intake_pixel_assets.py');
-    expect(existsSync(resolve(process.cwd(), 'tools/validate_pixel_assets.py'))).toBe(true);
+    expect(
+      existsSync(resolve(process.cwd(), 'tools/validate_pixel_assets.py')),
+    ).toBe(true);
   });
 
   it('has a real 2D walking stage and a still-authoritative story engine', () => {
