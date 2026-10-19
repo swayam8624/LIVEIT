@@ -6,7 +6,9 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
-import { lifeStageOf, relationshipStatus, type RelationshipAction, type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
+import { lifeStageOf, relationshipStatus, DAILY_ACTIVITIES, activitiesForAge, dailyActivitiesUsed,
+  type DailyActivityId, type ActivityZone, type RelationshipAction,
+  type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
 import { OFFICIAL_STORIES } from '@living/content';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
@@ -125,13 +127,14 @@ function PixelBuilding({
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, paused = false,
+  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onDailyActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, paused = false,
 }: {
   world: World;
   paused?: boolean;
   onTalk: () => void;
   onAdvanceMonth: () => void;
   onActivity: (activity: WorldActivity, dayOffset: number) => void;
+  onDailyActivity: (id: DailyActivityId, dayOffset: number, location: ActivityZone) => string;
   onChildAction: (activity: ChildhoodActivity, dayOffset: number) => void;
   onSkipChildhood: (years: 2 | 5 | 13 | 18) => void;
   onStoryStart: (id: string) => void;
@@ -152,7 +155,8 @@ export function ArcadePixelLife({
   const zoneRef = useRef(zone);
   const [clock, setClock] = useState(0);
   const [notice, setNotice] = useState('Walk up to Amelia and press TALK. Explore the market and café.');
-  const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings' | 'stories'>('none');
+  const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings' | 'stories' | 'activities'>('none');
+  const [activityFeedback, setActivityFeedback] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
   const [draft, setDraft] = useState('');
   const [missionTitle, setMissionTitle] = useState('');
@@ -709,6 +713,7 @@ export function ArcadePixelLife({
         <View style={s.leftButtons}>
           <HudButton title="☷" detail="MISSION" onPress={() => {pauseMovement(); setPanel('missions');}} />
           <HudButton title="✧" detail="STORIES" onPress={() => {pauseMovement(); setPanel('stories');}} />
+          <HudButton title="★" detail="ACTIVITY" onPress={() => {pauseMovement(); setActivityFeedback(''); setPanel('activities');}} />
           <HudButton title="♫" detail="PEOPLE" onPress={() => onNavigate('people')} />
           <HudButton title="⚙" detail="LOCAL AI" onPress={() => {pauseMovement(); setPanel('settings');}} />
         </View>
@@ -796,8 +801,8 @@ export function ArcadePixelLife({
           <View style={s.modal}>
             <View style={s.modalHead}>
               <View>
-                <Text style={s.modalTitle}>{panel === 'talk' ? 'AMELIA' : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : 'LOCAL CONVERSATION ENGINE'}</Text>
-                <Text style={s.sub}>{panel === 'talk' ? 'A real conversation, not a three-choice menu.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : 'Runs on your machine. Never required to play.'}</Text>
+                <Text style={s.modalTitle}>{panel === 'talk' ? 'AMELIA' : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : panel === 'activities' ? 'LIVE YOUR DAY' : 'LOCAL CONVERSATION ENGINE'}</Text>
+                <Text style={s.sub}>{panel === 'talk' ? 'A real conversation, not a three-choice menu.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : panel === 'activities' ? 'Actual activities change your life, not just a progress bar.' : 'Runs on your machine. Never required to play.'}</Text>
               </View>
               <Pressable accessibilityLabel="Close panel" onPress={() => setPanel('none')} style={s.close}><Text style={s.closeText}>✕</Text></Pressable>
             </View>
@@ -893,6 +898,71 @@ export function ArcadePixelLife({
                 <TextInput style={[s.field, {minHeight: 90}]} multiline value={missionDescription} onChangeText={setMissionDescription} placeholder="What would you like to accomplish?" placeholderTextColor="#a1a4ad" maxLength={500}/>
                 <Pressable style={s.add} onPress={saveMission}><Text style={s.addText}>+ ADD TO MY LIFE</Text></Pressable>
                 <Pressable style={s.storyLink} onPress={onTalk}><Text style={s.storyLinkText}>Play the official Amelia quest →</Text></Pressable>
+              </ScrollView>
+            ) : panel === 'activities' ? (
+              <ScrollView style={s.messages}
+                contentContainerStyle={{gap:10,paddingVertical:8,paddingBottom:22}}>
+                <Text style={s.help}>
+                  Choose what to do today. Four activities per in-game day, then explore
+                  until time advances. Your age and your physical location unlock
+                  different things. Everything changes the actual saved life.
+                </Text>
+                <Text style={s.mode}>
+                  {stage.toUpperCase()} · {zone.toUpperCase()} ·
+                  {' '}{Math.max(0,4-dailyActivitiesUsed(world,
+                    Math.min(29,Math.floor(clockRef.current/(MONTH_MS/30)))))} ACTIVITIES LEFT TODAY
+                </Text>
+                {activityFeedback ? (
+                  <View style={[s.quest,{backgroundColor:'#413d4b'}]}>
+                    <Text style={s.bubbleText}>{activityFeedback}</Text>
+                  </View>
+                ) : null}
+                {activitiesForAge(world.player.ageDays).map(activity=>{
+                  const availableHere=!activity.zone || activity.zone===zone;
+                  const serial=world.day+Math.min(29,
+                    Math.floor(clockRef.current/(MONTH_MS/30)));
+                  const alreadyDone=world.facts.includes(
+                    'daily-life:'+serial+':'+activity.id);
+                  const exhausted=dailyActivitiesUsed(world,
+                    Math.min(29,Math.floor(clockRef.current/(MONTH_MS/30))))>=4;
+                  const unaffordable=(activity.cost??0)>world.player.money && ageYears>=18;
+                  const canDo=availableHere && !alreadyDone && !exhausted && !unaffordable;
+                  return (
+                    <Pressable key={activity.id} accessibilityRole="button"
+                      accessibilityLabel={activity.label}
+                      disabled={!canDo}
+                      onPress={()=>{
+                        const day=Math.min(29,Math.floor(clockRef.current/(MONTH_MS/30)));
+                        const feedback=onDailyActivity(activity.id,day,zone);
+                        setActivityFeedback(feedback);
+                        setNotice(feedback);
+                      }}
+                      style={[s.quest,!canDo && {opacity:0.48}]}>
+                      <View style={{flexDirection:'row',justifyContent:'space-between',gap:8}}>
+                        <Text style={s.questTitle}>{activity.icon} {activity.label}</Text>
+                        <Text style={s.mode}>
+                          {activity.earnings ? '+£'+(activity.earnings/100).toFixed(0) :
+                            activity.cost ? '£'+(activity.cost/100).toFixed(2) : 'FREE'}
+                        </Text>
+                      </View>
+                      <Text style={s.help}>{activity.description}</Text>
+                      <Text style={s.mode}>
+                        {alreadyDone ? '✓ DONE TODAY' :
+                          !availableHere ? 'VISIT '+activity.zone?.toUpperCase() :
+                            exhausted ? 'NEED REST' :
+                              unaffordable ? 'NOT ENOUGH MONEY' :
+                                activity.group.toUpperCase()+' · TAP TO DO'}
+                        {activity.skill ? ' · SKILL +'+activity.skill : ''}
+                        {activity.wellbeing ? ' · WELLBEING '+(activity.wellbeing>0?'+':'')+activity.wellbeing : ''}
+                      </Text>
+                    </Pressable>
+                  );
+                })}
+                <Text style={s.help}>
+                  More unlock as you age: family, school, friends, volunteering,
+                  employment, creativity, relationships and travel. Your world
+                  remains playable between each activity.
+                </Text>
               </ScrollView>
             ) : panel === 'stories' ? (
               <ScrollView style={s.messages} contentContainerStyle={{gap:12,padding:4,paddingBottom:16}}>
