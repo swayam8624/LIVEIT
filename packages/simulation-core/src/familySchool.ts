@@ -122,7 +122,7 @@ export function settleHouseholdAndSchoolMonth(w:World):void {
     if(school.lastTermMonth<month) {
       // Engagement and attendance influence grades, while missed school
       // reduces opportunities rather than forcing progress by age alone.
-      const monthlyChange=Math.round((school.engagement-50)/24+
+      const monthlyChange=Math.trunc((school.engagement-50)/24+
         (school.attendance-85)/20-school.discipline/30);
       school.grade=clamp(school.grade+Math.max(-4,Math.min(3,monthlyChange)));
       school.lastTermMonth=month;
