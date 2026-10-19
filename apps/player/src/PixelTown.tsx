@@ -24,19 +24,25 @@ export function PixelTown({ world, onTalk }: { world: World; onTalk?: () => void
   const [ready, setReady] = useState(false);
   const [message, setMessage] = useState('Walk through Bellweather. Find Amelia or enter the café.');
   const pendingWrite = useRef<Promise<unknown>>(Promise.resolve());
+  const currentPosition = useRef<PixelPosition>(INITIAL_POSITION);
+  const holdTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     let mounted = true;
     setReady(false);
+    currentPosition.current = INITIAL_POSITION;
     setPosition(INITIAL_POSITION);
     void AsyncStorage.getItem(storageKey).then((raw) => {
       if (!mounted) return;
       let loaded: unknown = INITIAL_POSITION;
       try { loaded = raw ? JSON.parse(raw) : INITIAL_POSITION; } catch { /* corrupt data */ }
-      setPosition(validPixelPosition(loaded) ? loaded : INITIAL_POSITION);
+      const next = validPixelPosition(loaded) ? loaded : INITIAL_POSITION;
+      currentPosition.current = next;
+      setPosition(next);
       setReady(true);
     }).catch(() => {
       if (mounted) {
+        currentPosition.current = INITIAL_POSITION;
         setReady(true);
         setMessage('Walking works, but local coordinate storage is unavailable.');
       }
@@ -46,7 +52,8 @@ export function PixelTown({ world, onTalk }: { world: World; onTalk?: () => void
 
   const move = (direction: Facing) => {
     if (!ready) return;
-    const result = movePixel(position, direction);
+    const result = movePixel(currentPosition.current, direction);
+    currentPosition.current = result.position;
     setPosition(result.position);
     const snapshot = JSON.stringify(result.position);
     pendingWrite.current = pendingWrite.current.catch(() => undefined)
@@ -58,6 +65,21 @@ export function PixelTown({ world, onTalk }: { world: World; onTalk?: () => void
     else if (result.event === 'blocked') setMessage('That way is blocked.');
     else setMessage('Move beside Amelia to talk. The café door is on the south wall.');
   };
+
+  // Long-press movement remains deterministic: each repeat reads the latest
+  // tile ref, rather than a stale React render captured at press time.
+  const stopHeldWalk = () => {
+    if (holdTimer.current) clearInterval(holdTimer.current);
+    holdTimer.current = null;
+  };
+  const startHeldWalk = (direction: Facing) => {
+    stopHeldWalk();
+    if (!ready) return;
+    holdTimer.current = setInterval(() => move(direction), 135);
+  };
+  useEffect(() => () => {
+    if (holdTimer.current) clearInterval(holdTimer.current);
+  }, []);
 
   const talk = () => {
     if (!ready) return;
@@ -129,9 +151,9 @@ export function PixelTown({ world, onTalk }: { world: World; onTalk?: () => void
       <View style={s.notice} accessibilityLiveRegion="polite"><Text style={s.noticeText}>{message}</Text></View>
       <View style={s.controls}>
         <View>
-          <View style={s.padRow}><View style={s.empty} /><Pad direction="up" glyph="▲" disabled={!ready} onPress={() => move('up')} /><View style={s.empty} /></View>
-          <View style={s.padRow}><Pad direction="left" glyph="◀" disabled={!ready} onPress={() => move('left')} /><View style={s.empty} /><Pad direction="right" glyph="▶" disabled={!ready} onPress={() => move('right')} /></View>
-          <View style={s.padRow}><View style={s.empty} /><Pad direction="down" glyph="▼" disabled={!ready} onPress={() => move('down')} /><View style={s.empty} /></View>
+          <View style={s.padRow}><View style={s.empty} /><Pad direction="up" glyph="▲" disabled={!ready} onPress={() => move('up')} onLongPress={() => startHeldWalk('up')} onPressOut={stopHeldWalk} /><View style={s.empty} /></View>
+          <View style={s.padRow}><Pad direction="left" glyph="◀" disabled={!ready} onPress={() => move('left')} onLongPress={() => startHeldWalk('left')} onPressOut={stopHeldWalk} /><View style={s.empty} /><Pad direction="right" glyph="▶" disabled={!ready} onPress={() => move('right')} onLongPress={() => startHeldWalk('right')} onPressOut={stopHeldWalk} /></View>
+          <View style={s.padRow}><View style={s.empty} /><Pad direction="down" glyph="▼" disabled={!ready} onPress={() => move('down')} onLongPress={() => startHeldWalk('down')} onPressOut={stopHeldWalk} /><View style={s.empty} /></View>
         </View>
         <Pressable accessibilityRole="button" accessibilityLabel="Talk to Amelia" disabled={!ready} onPress={talk} style={s.talk}>
           <Text style={s.talkLetter}>A</Text><Text style={s.talkLabel}>TALK</Text>
@@ -142,12 +164,13 @@ export function PixelTown({ world, onTalk }: { world: World; onTalk?: () => void
     </View>
   );
 }
-function Pad({ direction, glyph, onPress, disabled }: {
-  direction: Facing; glyph: string; onPress: () => void; disabled: boolean;
+function Pad({ direction, glyph, onPress, onLongPress, onPressOut, disabled }: {
+  direction: Facing; glyph: string; onPress: () => void; onLongPress: () => void; onPressOut: () => void; disabled: boolean;
 }) {
   return (
     <Pressable testID={'pixel-move-' + direction} accessibilityRole="button" accessibilityLabel={'Walk ' + direction}
-      disabled={disabled} onPress={onPress} style={({ pressed }) => [s.pad, pressed && { opacity: 0.6 }]}>
+      disabled={disabled} onPress={onPress} onLongPress={onLongPress} onPressOut={onPressOut}
+      delayLongPress={310} style={({ pressed }) => [s.pad, pressed && { opacity: 0.6 }]}>
       <Text style={s.padText}>{glyph}</Text>
     </Pressable>
   );
