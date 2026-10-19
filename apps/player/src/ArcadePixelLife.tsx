@@ -191,7 +191,9 @@ export function ArcadePixelLife({
   const [endpoint, setEndpoint] = useState('http://localhost:11434');
   const [localModel, setLocalModel] = useState('qwen3:4b');
   const [pixelAvatar, setPixelAvatar] = useState<'adam'|'alex'|'bob'|'amelia'>('adam');
-  const [modelMode, setModelMode] = useState<'authored' | 'local'>('authored');
+  const [modelMode, setModelMode] = useState<'unknown' | 'local' | 'error'>('unknown');
+  const [aiError, setAiError] = useState('');
+  const [aiStatus, setAiStatus] = useState('Local model not checked.');
   const [waiting, setWaiting] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [movement, setMovement] = useState<Point>({ x: 0, y: 0 });
@@ -300,24 +302,33 @@ export function ArcadePixelLife({
     chatRef.current = updated;
     setMessages(updated);
     setDraft('');
-    if (/\b(work|job|career|employment|rent|earnings)\b/i.test(sentence)) {
-      missionEvent('work');
-    }
     busyRef.current = true;
     setWaiting(true);
-    let reply = '';
-    let connected = false;
+    setAiError('');
     try {
-      reply = await npcFromLocalModel(endpoint, localModel, updated, world.player.name,
+      const reply = await npcFromLocalModel(endpoint, localModel, updated, world.player.name,
         Math.floor(world.player.ageDays / 30));
-      connected = true;
-    } catch {
-      reply = npcFallback(sentence, world.player.name);
+      setModelMode('local');
+      setAiStatus('Connected to ' + localModel);
+      setMessages(existing => [...existing, { speaker: 'npc' as const, text: reply }].slice(-80));
+      if (/\b(work|job|career|employment|rent|earnings)\b/i.test(sentence)) {
+        missionEvent('work');
+      }
+    } catch (cause) {
+      // Never impersonate an LLM with a handful of canned responses. Restore
+      // unsent text and make the failure and remedy explicitly visible.
+      setMessages(updated.slice(0, -1));
+      chatRef.current = updated.slice(0, -1);
+      setDraft(sentence);
+      setModelMode('error');
+      const reason = cause instanceof Error ? cause.message : String(cause);
+      setAiError('Cannot reach local ' + localModel + ' at ' + endpoint +
+        '. ' + reason + '. Start Ollama and allow the app origin, or correct the LAN URL in LOCAL AI.');
+      setAiStatus('Disconnected — no AI reply was generated.');
+    } finally {
+      busyRef.current = false;
+      setWaiting(false);
     }
-    setModelMode(connected ? 'local' : 'authored');
-    setMessages(existing => [...existing, { speaker: 'npc' as const, text: reply }].slice(-80));
-    busyRef.current = false;
-    setWaiting(false);
   }, [draft, endpoint, localModel, missionEvent, world.player.ageDays, world.player.name]);
 
   // No setState inside the 60/120 Hz world loop. The movement animation and
@@ -745,7 +756,8 @@ export function ArcadePixelLife({
                   ))}
                   {waiting && <Text style={s.waitText}>Amelia is thinking…</Text>}
                 </ScrollView>
-                <Text style={s.mode}>{modelMode === 'local' ? '● ' + localModel.toUpperCase() + ' · LOCAL' : '○ OFFLINE WRITTEN RESPONSES'}</Text>
+                <Text style={s.mode}>{modelMode === 'local' ? '● ' + localModel.toUpperCase() + ' · CONNECTED' : modelMode === 'error' ? '● LOCAL AI OFFLINE — MESSAGE NOT SENT' : '○ LOCAL AI NOT YET VERIFIED'}</Text>
+                {aiError ? <Text accessibilityRole="alert" style={[s.help,{color:'#ffbbad',marginBottom:8}]}>{aiError}</Text> : null}
                 <View style={s.suggestions}>
                   {['How has your week been?', 'Do you know any work?', 'What should we do together?'].map(text =>
                     <Pressable key={text} style={s.suggestion} onPress={() => void submit(text)}><Text style={s.suggestionText}>{text}</Text></Pressable>)}
@@ -840,6 +852,24 @@ export function ArcadePixelLife({
                 <Text style={s.speaker}>OLLAMA BASE URL</Text>
                 <TextInput autoCapitalize="none" autoCorrect={false} style={s.field} value={endpoint} onChangeText={setEndpoint} placeholder="http://192.168.1.100:11434" placeholderTextColor="#919da3"/>
                 <Pressable style={s.add} onPress={() => {void AsyncStorage.multiSet([['liveit.localOllamaEndpoint', endpoint], ['liveit.localOllamaModel', localModel], [gameKey + '.pixelAvatar', pixelAvatar]]); setPanel('none');}}><Text style={s.addText}>SAVE LOCAL CONNECTION</Text></Pressable>
+                <Pressable style={[s.add,{backgroundColor:'#a6d7b7'}]} onPress={() => { void (async () => {
+                  setAiStatus('Checking Ollama…');
+                  try {
+                    const res = await fetch(endpoint.trim().replace(/\\/+$/, '') + '/api/tags');
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    const data: unknown = await res.json();
+                    const models = (data as {models?:Array<{name?:string}>}).models ?? [];
+                    if (!models.some(item => item.name === localModel))
+                      throw new Error(localModel + ' is not installed. Run: ollama pull ' + localModel);
+                    setAiStatus('Connected: ' + localModel + ' is installed and reachable.');
+                    setAiError(''); setModelMode('local');
+                  } catch(e) {
+                    setAiStatus('Connection failed: ' + (e instanceof Error ? e.message : String(e)));
+                    setModelMode('error');
+                  }
+                })(); }}><Text style={s.addText}>TEST ACTUAL OLLAMA CONNECTION</Text></Pressable>
+                <Text style={s.help}>{aiStatus}</Text>
+                <Text style={s.help}>On Mac web: run ollama serve and open this game from a permitted origin. For browser CORS launch the Ollama process with OLLAMA_ORIGINS=http://localhost:8081 (restart the daemon if already running). On your phone use the Mac's LAN address and bind Ollama to the LAN network deliberately; do not expose port 11434 to the public Internet.</Text>
                 <Text style={s.help}>Model output is dialogue only. Money, identity, relationships, mission completion and saved facts remain controlled by the deterministic game engine.</Text>
               </View>
             )}
