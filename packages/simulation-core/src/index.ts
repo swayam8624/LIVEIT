@@ -1,3 +1,6 @@
+import { applyLifeMilestones } from './lifeMilestones';
+export { applyLifeMilestones, LIFE_MILESTONES } from './lifeMilestones';
+export type { LifeMilestone } from './lifeMilestones';
 export { DAILY_ACTIVITIES, activitiesForAge, dailyActivitiesUsed, performDailyActivity } from './dailyActivities';
 export type { DailyActivity, DailyActivityId, ActivityZone } from './dailyActivities';
 export { actOnRelationship, relationshipStatus } from './relationshipLife';
@@ -234,7 +237,9 @@ export function advanceCalendarMonth(input: World): World {
     }
     if (w.day % 7 === 0) {
       for (const relation of w.relationships)
-        if (w.day - relation.lastContactDay >= 7)
+        if (!relation.characterId.startsWith('parent_') &&
+            w.player.ageDays >= 5*365 &&
+            w.day - relation.lastContactDay >= 7)
           relation.trust = Math.max(0, relation.trust - 1);
     }
   }
@@ -252,6 +257,7 @@ export function advanceCalendarMonth(input: World): World {
     }
     if (years === 18) w.facts.push('life_stage:adult');
   }
+  applyLifeMilestones(w);
   record(w, 'simulation', 'A month passes in Bellweather. Your life continues while the town changes around you.');
   return WorldSchema.parse(w);
 }
