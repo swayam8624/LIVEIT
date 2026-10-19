@@ -17,6 +17,8 @@ import {
   createBirthWorld,
   performChildhoodActivity,
   performDailyActivity,
+  recordNPCConversation,
+  type SocialNPC,
   type DailyActivityId,
   type ActivityZone,
   actOnRelationship,
@@ -429,6 +431,14 @@ export default function App() {
           paused={sceneOpen}
           onTalk={openEncounter}
           onStoryStart={openOfficialStory}
+          onNPCConversation={(npc: SocialNPC, userText: string, reply: string, offset: number) => {
+            const current=latestSave.current;
+            if(!current) return;
+            run(()=>{
+              const next=recordNPCConversation(current.life,npc,userText,reply,offset);
+              update(next);
+            });
+          }}
           onDailyActivity={(id: DailyActivityId, offset: number, location: ActivityZone): string => {
             const current = latestSave.current;
             if (!current) return 'No active life to update.';
