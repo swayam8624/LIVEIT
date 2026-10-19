@@ -7,6 +7,7 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
+import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
 import { MISSION_GOALS, missionExpired, newMission, parseMissions, resolveMissionEvent,
   type LifeMission, type MissionGoal, type MissionEvent } from './missionGoals';
 import {
@@ -151,6 +152,9 @@ export function ArcadePixelLife({
   const [loaded, setLoaded] = useState(false);
   const [movement, setMovement] = useState<Point>({ x: 0, y: 0 });
   const walkVector = useRef<Point>({ x: 0, y: 0 });
+  const routeRef = useRef<TilePoint[]>([]);
+  const talkAfterWalk = useRef(false);
+  const cameraPoint = useRef<Point>({ x: 0, y: 0 });
   const keys = useRef(new Set<string>());
   const hero = useRef({ x: INITIAL_POSITION.x, y: INITIAL_POSITION.y, place: INITIAL_POSITION.place });
   const pose = useRef(new Animated.ValueXY()).current;
@@ -293,10 +297,28 @@ export function ArcadePixelLife({
       last = timestamp;
       const p = hero.current;
       const pad = walkVector.current;
-      const vx = Number(keys.current.has('ArrowRight') || keys.current.has('KeyD')) -
+      let vx = Number(keys.current.has('ArrowRight') || keys.current.has('KeyD')) -
         Number(keys.current.has('ArrowLeft') || keys.current.has('KeyA')) + pad.x;
-      const vy = Number(keys.current.has('ArrowDown') || keys.current.has('KeyS')) -
+      let vy = Number(keys.current.has('ArrowDown') || keys.current.has('KeyS')) -
         Number(keys.current.has('ArrowUp') || keys.current.has('KeyW')) + pad.y;
+      if (Math.hypot(vx, vy) === 0 && routeRef.current.length) {
+        const step = routeRef.current[0]!;
+        const dx = step.x - p.x, dy = step.y - p.y;
+        const distance = Math.hypot(dx, dy);
+        if (distance <= 0.08) {
+          p.x = step.x; p.y = step.y;
+          routeRef.current.shift();
+          if (routeRef.current.length === 0 && talkAfterWalk.current) {
+            talkAfterWalk.current = false;
+            startChat();
+          }
+        } else {
+          // Avoid overshooting a waypoint on high-refresh-rate devices.
+          const factor = Math.min(1, distance / Math.max(dt * SPEED, 0.0001));
+          vx = dx / distance * factor;
+          vy = dy / distance * factor;
+        }
+      }
       const magnitude = Math.hypot(vx, vy);
       if (magnitude > 0) {
         const dx = (vx / magnitude) * dt * SPEED;
@@ -319,10 +341,12 @@ export function ArcadePixelLife({
       const terrain = pixelCell(p.place, Math.floor(p.x + 0.5), Math.floor(p.y + 0.5));
       if (terrain.portal === 'cafe') {
         p.place = 'cafe'; p.x = 5; p.y = 8;
+        routeRef.current = []; talkAfterWalk.current = false;
         setPlace('cafe'); setNotice('The café smells of coffee and rain.');
         missionEvent('cafe');
       } else if (terrain.portal === 'street') {
         p.place = 'street'; p.x = 5; p.y = 7;
+        routeRef.current = []; talkAfterWalk.current = false;
         setPlace('street'); setNotice('Back in Bellweather market.');
       }
       if (p.place === 'street' && p.x >= 17 && p.y >= 14 &&
@@ -356,7 +380,8 @@ export function ArcadePixelLife({
         size.width / 2 - (p.x + 0.5) * TILE));
       const cameraY = Math.min(0, Math.max(size.height - worldHeight,
         size.height / 2 - (p.y + 0.5) * TILE));
-      camera.setValue({ x: cameraX, y: cameraY });
+      cameraPoint.current = { x: cameraX, y: cameraY };
+      camera.setValue(cameraPoint.current);
       if (dt > 0) {
         clockRef.current += dt * 1000;
         if (clockRef.current >= MONTH_MS) {
@@ -394,7 +419,7 @@ export function ArcadePixelLife({
       cancelAnimationFrame(frame);
       void AsyncStorage.setItem(gameKey + '.elapsed', String(clockRef.current)).catch(() => {});
     };
-  }, [bob, camera, frameOffset, gameKey, glow, loaded, missionEvent, modernPlayer, panel, paused, pose, size.height, size.width]);
+  }, [bob, camera, frameOffset, gameKey, glow, loaded, missionEvent, modernPlayer, panel, paused, pose, size.height, size.width, startChat]);
 
   // Browser-only physical keyboard support. Text inputs must never move
   // the avatar; mobile touch pads write the same movement vector.
@@ -406,7 +431,8 @@ export function ArcadePixelLife({
         (target.isContentEditable || ['INPUT', 'TEXTAREA'].includes(target.tagName))) return;
       if (paused || panel !== 'none') return;
       if (['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyW','KeyA','KeyS','KeyD'].includes(e.code)) {
-        e.preventDefault(); keys.current.add(e.code);
+        e.preventDefault(); routeRef.current = []; talkAfterWalk.current = false;
+        keys.current.add(e.code);
       }
       if (e.code === 'KeyE' && panel === 'none') startChat();
     };
@@ -467,9 +493,35 @@ export function ArcadePixelLife({
     setMovement({ x: 0, y: 0 });
   };
   const direction = (x: number, y: number) => {
+    routeRef.current = []; talkAfterWalk.current = false;
     const next = { x, y };
     walkVector.current = next;
     setMovement(next);
+  };
+  const tapToWalk = (localX: number, localY: number) => {
+    if (!loaded || paused || panel !== 'none') return;
+    const p = hero.current;
+    const tap = {
+      x: Math.floor((localX - cameraPoint.current.x) / TILE),
+      y: Math.floor((localY - cameraPoint.current.y) / TILE),
+    };
+    const from = { x: Math.round(p.x), y: Math.round(p.y) };
+    const npc = npcAt(p.place);
+    const talking = tap.x === npc.x && tap.y === npc.y;
+    const target = targetForTap(p.place, tap, from);
+    if (!target) {
+      setNotice('That destination is blocked. Tap a clear path instead.');
+      return;
+    }
+    const path = findTileRoute(p.place, from, target);
+    if (!path.length && (target.x !== from.x || target.y !== from.y)) {
+      setNotice('No route there yet. Try a different street.');
+      return;
+    }
+    routeRef.current = path;
+    talkAfterWalk.current = talking;
+    if (talking && !path.length) startChat();
+    else setNotice(talking ? 'Walking over to Amelia…' : 'Tap-to-walk · touch directions to steer manually');
   };
   const saveMission = () => {
     const title = safeText(missionTitle).slice(0, 80);
@@ -536,6 +588,9 @@ export function ArcadePixelLife({
           </Animated.View>
         </Animated.View>
         <Animated.View pointerEvents="none" style={[s.daylight, { opacity: glow }]} />
+        <Pressable accessibilityRole="button" accessibilityLabel="Tap town to walk or tap Amelia to talk"
+          onPress={(event) => tapToWalk(event.nativeEvent.locationX, event.nativeEvent.locationY)}
+          style={StyleSheet.absoluteFill} />
         <View style={s.topHud} pointerEvents="box-none">
           <View style={s.brand}>
             <Text style={s.brandName}>LIVEIT <Text style={{color: COLORS.gold}}>✦</Text></Text>
