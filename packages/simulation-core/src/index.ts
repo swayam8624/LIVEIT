@@ -1,3 +1,5 @@
+export { actOnRelationship, relationshipStatus } from './relationshipLife';
+export type { RelationshipAction, RelationshipStatus } from './relationshipLife';
 export { createBirthWorld, lifeStageOf, performChildhoodActivity, skipToAge } from './birthLife';
 export type { ChildhoodActivity, LifeStage } from './birthLife';
 export {
