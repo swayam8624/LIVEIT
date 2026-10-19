@@ -61,29 +61,29 @@ function npcFallback(text: string, player: string): string {
  * Generated text is intentionally NEVER allowed to mutate authoritative saves.
  */
 async function npcFromLocalModel(
-  endpoint: string, history: Message[], player: string, month: number,
+  endpoint: string, model: string, history: Message[], player: string, month: number,
 ): Promise<string> {
   const url = endpoint.trim().replace(/\/+$/, '') + '/api/chat';
   if (!/^https?:\/\//i.test(url)) throw Error('Invalid local Ollama URL');
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 14000);
+  const timer = setTimeout(() => controller.abort(), 40000);
   try {
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       signal: controller.signal,
       body: JSON.stringify({
-        model: 'qwen3:0.6b',
+        model,
         stream: false,
         think: false,
-        options: { temperature: 0.75, num_predict: 180 },
+        options: { temperature: 0.75, num_predict: 380, num_ctx: 4096 },
         messages: [
           {
             role: 'system',
-            content: 'You are Amelia, a believable 24-year-old inhabitant of Bellweather, a contemporary town. You have your own plans, feelings and memory. You are talking directly to ' + player +
-              ', who is age ' + month + ' months. Speak naturally in 1–4 sentences. Carry the conversation forward, ask useful follow-up questions and remember recent context. Never claim to have completed a quest, paid money, changed health or edited the game. No stage directions, no /think, no system messages.',
+            content: 'You are Amelia, a believable 24-year-old person in Bellweather, a contemporary town. You are not a virtual assistant. Your personal plans, relationships, hopes, boundaries, and past change as months pass. You are talking directly to ' + player +
+              ', who is age ' + month + ' months. Reply naturally with 2–6 substantive sentences where appropriate; avoid filler, repeat questions and excessive affirmation. Remember actual things in the conversation, ask at most one thoughtful question, and sometimes disagree. Never claim to have completed a quest, paid money, changed health or edited the game. No stage directions, no /think, no system messages.',
           },
-          ...history.slice(-16).map(item => ({
+          ...history.slice(-28).map(item => ({
             role: item.speaker === 'player' ? 'user' : 'assistant',
             content: item.text,
           })),
@@ -145,6 +145,7 @@ export function ArcadePixelLife({
   const lastZone = useRef('');
 
   const [endpoint, setEndpoint] = useState('http://localhost:11434');
+  const [localModel, setLocalModel] = useState('qwen3:4b');
   const [modelMode, setModelMode] = useState<'authored' | 'local'>('authored');
   const [waiting, setWaiting] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -181,7 +182,8 @@ export function ArcadePixelLife({
       AsyncStorage.getItem(gameKey + '.chat'),
       AsyncStorage.getItem(gameKey + '.missions'),
       AsyncStorage.getItem('liveit.localOllamaEndpoint'),
-    ]).then(([location, elapsed, transcript, quests, customEndpoint]) => {
+      AsyncStorage.getItem('liveit.localOllamaModel'),
+    ]).then(([location, elapsed, transcript, quests, customEndpoint, customModel]) => {
       if (!active) return;
       try {
         const p: unknown = location ? JSON.parse(location) : INITIAL_POSITION;
@@ -209,6 +211,7 @@ export function ArcadePixelLife({
         if (Array.isArray(saved)) setMissions(parseMissions(saved));
       } catch { /* No created missions yet. */ }
       if (customEndpoint) setEndpoint(customEndpoint);
+      if (customModel && ['qwen3:0.6b','qwen3:1.7b','qwen3:4b'].includes(customModel)) setLocalModel(customModel);
       setLoaded(true);
     }).catch(() => setLoaded(true));
     return () => { active = false; };
@@ -255,7 +258,7 @@ export function ArcadePixelLife({
     let reply = '';
     let connected = false;
     try {
-      reply = await npcFromLocalModel(endpoint, updated, world.player.name,
+      reply = await npcFromLocalModel(endpoint, localModel, updated, world.player.name,
         Math.floor(world.player.ageDays / 30));
       connected = true;
     } catch {
@@ -265,7 +268,7 @@ export function ArcadePixelLife({
     setMessages(existing => [...existing, { speaker: 'npc' as const, text: reply }].slice(-80));
     busyRef.current = false;
     setWaiting(false);
-  }, [draft, endpoint, missionEvent, world.player.ageDays, world.player.name]);
+  }, [draft, endpoint, localModel, missionEvent, world.player.ageDays, world.player.name]);
 
   // No setState inside the 60/120 Hz world loop. The movement animation and
   // following camera remain smooth even if no React component re-renders.
@@ -591,7 +594,7 @@ export function ArcadePixelLife({
                   ))}
                   {waiting && <Text style={s.waitText}>Amelia is thinking…</Text>}
                 </ScrollView>
-                <Text style={s.mode}>{modelMode === 'local' ? '● QWEN3 LOCAL' : '○ OFFLINE WRITTEN RESPONSES'}</Text>
+                <Text style={s.mode}>{modelMode === 'local' ? '● ' + localModel.toUpperCase() + ' · LOCAL' : '○ OFFLINE WRITTEN RESPONSES'}</Text>
                 <View style={s.suggestions}>
                   {['How has your week been?', 'Do you know any work?', 'What should we do together?'].map(text =>
                     <Pressable key={text} style={s.suggestion} onPress={() => void submit(text)}><Text style={s.suggestionText}>{text}</Text></Pressable>)}
@@ -652,10 +655,22 @@ export function ArcadePixelLife({
               </ScrollView>
             ) : (
               <View style={{gap:12}}>
-                <Text style={s.help}>On your Mac, run: ollama pull qwen3:0.6b, then ollama serve. On an iPhone, enter the Mac's LAN IP (not localhost). If unavailable, the game uses clearly labelled offline dialogue.</Text>
+                <Text style={s.help}>The default is qwen3:4b (already downloaded on some development machines). On your Mac run: ollama pull qwen3:4b, then ollama serve. On an iPhone, enter the Mac's LAN IP (not localhost). If unavailable, the game uses clearly labelled offline dialogue.</Text>
+                <Text style={s.speaker}>MODEL QUALITY / LATENCY</Text>
+                <View style={{flexDirection:'row', flexWrap:'wrap', gap:8}}>
+                  {(['qwen3:0.6b','qwen3:1.7b','qwen3:4b'] as const).map(model => (
+                    <Pressable key={model} accessibilityRole="button"
+                      accessibilityState={{selected:localModel===model}}
+                      onPress={() => setLocalModel(model)}
+                      style={[s.suggestion, localModel===model ? {backgroundColor:'#74516c'} : null]}>
+                      <Text style={s.suggestionText}>{model}</Text>
+                    </Pressable>
+                  ))}
+                </View>
+                <Text style={s.help}>0.6B is quickest; 1.7B balances quality and speed; 4B generally handles longer context better but takes more RAM. All run on your machine, not a paid cloud API.</Text>
                 <Text style={s.speaker}>OLLAMA BASE URL</Text>
                 <TextInput autoCapitalize="none" autoCorrect={false} style={s.field} value={endpoint} onChangeText={setEndpoint} placeholder="http://192.168.1.100:11434" placeholderTextColor="#919da3"/>
-                <Pressable style={s.add} onPress={() => {void AsyncStorage.setItem('liveit.localOllamaEndpoint', endpoint); setPanel('none');}}><Text style={s.addText}>SAVE LOCAL CONNECTION</Text></Pressable>
+                <Pressable style={s.add} onPress={() => {void AsyncStorage.multiSet([['liveit.localOllamaEndpoint', endpoint], ['liveit.localOllamaModel', localModel]]); setPanel('none');}}><Text style={s.addText}>SAVE LOCAL CONNECTION</Text></Pressable>
                 <Text style={s.help}>Model output is dialogue only. Money, identity, relationships, mission completion and saved facts remain controlled by the deterministic game engine.</Text>
               </View>
             )}
