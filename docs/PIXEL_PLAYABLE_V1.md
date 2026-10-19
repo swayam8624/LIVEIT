@@ -6,7 +6,7 @@
 
 - **24 Git-tracked, native-bundled 16×16 PNG files** in apps/player/assets/pixel/pulse/; original Pulse Everyday Streets CC0 art, source provenance and automated PNG signature/dimension/chunk-CRC verification. No photo or 3D asset in the current new gameplay slice.
 - **19×14 Bellweather Market and 12×10 café** deterministic 2D tile collision maps. Working furniture collisions, entry/exit portals and Amelia interaction. tests/pixel-town.test.ts covers stepping, portals and position verification.
-- **Four-way D-pad**, including hold-to-walk repeats, player viewport, adjacent TALK interaction, descriptive status and local coordinate storage with queued writes to AsyncStorage.
+- **Four-way D-pad**, including hold-to-walk repeats, plus web-preview keyboard **WASD / arrow keys** and **E to talk**, with active text-field exclusion and key-repeat throttling. Player viewport, adjacent TALK interaction, descriptive status and local coordinate storage with queued writes to AsyncStorage.
 - **Story integration:** Amelia talk starts the existing reunion narrative. The authoritative story engine still owns conditions, choices, relationships and saves. No fake trust/money changes.
 - **Fully 2D emotional stage:** original original pixel-block café background, city window, warm lamp, palette moods, and character pixel busts with saved appearance colors and basic blink/speaking mouth (subject to reduced-motion settings). Not yet 12 individually illustrated emotion animations.
 - GameStage no longer renders the old photographic cafe JPG. The whole product remains 100% pixel direction; old 3D and isometric code may be retained for build compatibility but are not active goals.
@@ -22,7 +22,7 @@ Your original checkout at ~/Desktop/projects/living-universe has substantial unc
     npm ci
     npm run web -w @living/player
 
-Open the Expo local web URL (often localhost:8081), start/load Free Life and visit the pixel city. At (11,8), walk up once, then TALK beside Amelia at (10,7). Enter the café from street (5,7) into doorway (5,6); exit from café (5,8) down through doorway (5,9). Invalid paths and NPC position are blocked, and tile positions persist across reopening this same timeline. Physical-device and simulator gameplay still require direct evidence.
+Open the Expo local web URL (often localhost:8081), start/load Free Life and visit the pixel city. At (11,8), walk up once (keyboard W/↑, or D-pad UP), then TALK (keyboard E) beside Amelia at (10,7). Enter the café from street (5,7) into doorway (5,6); exit from café (5,8) down through doorway (5,9). Invalid paths and NPC position are blocked, and tile positions persist across reopening this same timeline. Physical-device and simulator gameplay still require direct evidence.
 
 ## Fast batch import of the six already-verified CC0 ZIPs
 
