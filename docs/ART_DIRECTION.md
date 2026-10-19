@@ -4,7 +4,7 @@
 
 ## Two visual worlds, one persistent identity
 
-**EVERYDAY PIXEL OVERWORLD.** A rich, original, top-down handheld-RPG-inspired walkable town, made from authored 16×16 logical environment tiles, pixel NPCs, enterable homes/shops/schools, city/weather/time changes and real collisions. Four cardinal walk directions initially; adults roughly 16×24 logical pixels. Foot-based sprite anchors, authored 2D occlusion, roof fade, safe collision maps. Original colorful Bellweather districts (riverside, university, market, studio and gardens). Nearest-neighbor integer pixel scaling where possible, no TAA/bilinear blurring. 30/60Hz logical movement and fixed-step world physics distinct from frame refresh. The inspiration from Pokémon Red/Blue is the legibility, grid travel, top-down map and charming exploration *principles*, not Nintendo imagery, sprites, sounds, maps, text or UI trade dress. This is NOT a 3D/isometric city and NOT a passive district-card picture.
+**EVERYDAY PIXEL OVERWORLD.** A rich, original, top-down handheld-RPG-inspired walkable town, made from authored 16×16 logical environment tiles, pixel NPCs, enterable homes/shops/schools, city/weather/time changes and real collisions. Four cardinal walk directions initially; adults roughly 16×24 logical pixels. Foot-based sprite anchors, authored 2D occlusion, roof fade, safe collision maps. Original colorful Bellweather districts (riverside, university, market, studio and gardens). Nearest-neighbor integer pixel scaling where possible, no TAA/bilinear blurring. 30/60Hz logical movement and fixed-step world physics distinct from frame refresh. The inspiration from Pokémon Red/Blue is the legibility, grid travel, top-down map and charming exploration _principles_, not Nintendo imagery, sprites, sounds, maps, text or UI trade dress. This is NOT a 3D/isometric city and NOT a passive district-card picture.
 
 **IMPORTANT CINEMATIC 3D.** A major story/NPC encounter crosses from pixel play into genuine, smoothly rendered, original **3D geometry**: skinned mesh actors, facial blendshapes, skeletal poses, expressive hair/clothing, rich interior/set materials, camera director and artist-controlled lighting. Painterly comic and slightly anime-adjacent original style, clear skin/hair and natural shadows, gentle depth of field and rim. Twelve canonical expressions (neutral, happy, sad, angry, flirty, shocked, scared, smug, crying, embarrassed, tired, thoughtful), breath/blink/eye gaze, speech-related mouth/face motion and body gestures. Routine town hellos stay in a pixel bubble. 3D should never be faked by enlarging a sprite or claiming that the current procedural 2.5D circles/ellipses are a rig.
 
@@ -16,17 +16,17 @@
 
 The current shared gameTheme palette is **HUD**, not a rule that makes every room teal:
 
-| Token | Value | Intended use |
-|---|---|---|
-| Dark | #101827 | UI console backing |
-| Raised panel | #223449 | Selectable surfaces |
-| Ink | #F5F2D9 | Readable primary text |
-| Muted | #B6C6C8 | Secondary text (minimum readability) |
-| Border | #507174 | Selection and frames |
-| Mint | #97E6AC | Positive action / focus |
-| Amber | #FFD28A | Discovery and milestone |
-| Coral | #F49A82 | Human connection |
-| Danger | #FF7588 | Actual error |
+| Token        | Value   | Intended use                         |
+| ------------ | ------- | ------------------------------------ |
+| Dark         | #101827 | UI console backing                   |
+| Raised panel | #223449 | Selectable surfaces                  |
+| Ink          | #F5F2D9 | Readable primary text                |
+| Muted        | #B6C6C8 | Secondary text (minimum readability) |
+| Border       | #507174 | Selection and frames                 |
+| Mint         | #97E6AC | Positive action / focus              |
+| Amber        | #FFD28A | Discovery and milestone              |
+| Coral        | #F49A82 | Human connection                     |
+| Danger       | #FF7588 | Actual error                         |
 
 World art has district-specific palettes, day/night weather and life-stage grading (childhood warmth, teenage energy, adult diversity, midlife grounding, elder warmth rather than automatic bleakness). 3D materials use correct linear/sRGB handling, art-directed skin-lighting QA for all supported tones, eye and face visibility, shadows and toned bloom. Pixel textures use nearest filtering and pixel-aware lighting/weather; 3D textures use mipmapped linear/anisotropic sampling. Those pipelines must remain distinct.
 
@@ -42,7 +42,7 @@ World art has district-specific palettes, day/night weather and life-stage gradi
 
 ## Motion, interaction and reference checks
 
-Pixel roaming should feel smoothly responsive without blur; do not add per-step haptics. Pixel-to-3D handoff uses matched wardrobe silhouette and purposeful iris/mosaic reveal, design warm target approximately 450–750ms after resources loaded, cold load honest about delay. Choice states idle/armed/pending/committed/failed, with a confirmation haptic only after saved outcome. Widget shows *actual* changes to trust, money, reputation, journal—not random rewards. Respect reduced motion, skip, haptics Off/Subtle/Full and accessible 44pt/48dp targets. Grief or death does not trigger celebratory fireworks.
+Pixel roaming should feel smoothly responsive without blur; do not add per-step haptics. Pixel-to-3D handoff uses matched wardrobe silhouette and purposeful iris/mosaic reveal, design warm target approximately 450–750ms after resources loaded, cold load honest about delay. Choice states idle/armed/pending/committed/failed, with a confirmation haptic only after saved outcome. Widget shows _actual_ changes to trust, money, reputation, journal—not random rewards. Respect reduced motion, skip, haptics Off/Subtle/Full and accessible 44pt/48dp targets. Grief or death does not trigger celebratory fireworks.
 
 Required visual acceptance set: walkable original Bellweather tile street; an enterable pixel home; player/NPC walk/collision; rain/night pixel palette; identical pixel/3D person with same hair/outfit; actual 3D café face acting; meaningful choice dock; factual outcome after restart; child/adult/elder identity; in-game phone distinguishing NPC AI from actual consent-based humans; missing-pack recovery; and faithful memories. Every capture must have saved fixture/scene ID, device/resolution and source-asset rights.
 
