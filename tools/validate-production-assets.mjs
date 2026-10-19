@@ -34,10 +34,14 @@ const validPath = (value) => {
 const verifyLocalFile = (path, id) => {
   assert(validPath(path), 'invalid local evidence path ' + id + ': ' + path);
   const resolved = resolve(ROOT, path);
-  assert(existsSync(resolved) && lstatSync(resolved).isFile(),
-    'source/QA evidence file missing or is not regular: ' + id + ': ' + path);
-  assert(realpathSync(resolved).startsWith(ROOT + sep),
-    'evidence path points outside repository: ' + id + ': ' + path);
+  assert(
+    existsSync(resolved) && lstatSync(resolved).isFile(),
+    'source/QA evidence file missing or is not regular: ' + id + ': ' + path,
+  );
+  assert(
+    realpathSync(resolved).startsWith(ROOT + sep),
+    'evidence path points outside repository: ' + id + ': ' + path,
+  );
 };
 
 const statuses = new Set([
@@ -149,8 +153,11 @@ export function validateProductionCatalog() {
         typeof asset.sourceFile === 'string' && validPath(asset.sourceFile),
         'source file path invalid: ' + asset.id,
       );
-      assert(typeof asset.licenseId === 'string' && asset.licenseId.trim().length > 1,
-        'exact license identifier required on sourced asset: ' + asset.id);
+      assert(
+        typeof asset.licenseId === 'string' &&
+          asset.licenseId.trim().length > 1,
+        'exact license identifier required on sourced asset: ' + asset.id,
+      );
       verifyLocalFile(asset.sourceFile, asset.id);
       verifyLocalFile(asset.licenseEvidence, asset.id);
       if (asset.status === 'qa-passed' || asset.status === 'released') {
@@ -168,8 +175,13 @@ export function validateProductionCatalog() {
         );
         for (const path of [asset.assetFile, ...asset.qaEvidence])
           verifyLocalFile(path, asset.id);
-        const actualDigest = createHash('sha256').update(readFileSync(resolve(ROOT, asset.assetFile))).digest('hex');
-        assert(actualDigest === asset.sha256, 'binary SHA-256 mismatch: ' + asset.id);
+        const actualDigest = createHash('sha256')
+          .update(readFileSync(resolve(ROOT, asset.assetFile)))
+          .digest('hex');
+        assert(
+          actualDigest === asset.sha256,
+          'binary SHA-256 mismatch: ' + asset.id,
+        );
         const old = seenFiles.get(asset.assetFile);
         assert(
           !old || old === asset.id,
