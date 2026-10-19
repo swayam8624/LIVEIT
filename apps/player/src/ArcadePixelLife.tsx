@@ -189,6 +189,7 @@ export function ArcadePixelLife({
 
   const [endpoint, setEndpoint] = useState('http://localhost:11434');
   const [localModel, setLocalModel] = useState('qwen3:4b');
+  const [pixelAvatar, setPixelAvatar] = useState<'adam'|'alex'|'bob'|'amelia'>('adam');
   const [modelMode, setModelMode] = useState<'authored' | 'local'>('authored');
   const [waiting, setWaiting] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -205,7 +206,7 @@ export function ArcadePixelLife({
   const frameOffset = useRef(new Animated.Value(0)).current;
   const facingRef = useRef<Facing>('down');
   const localArt = pixelArt as Record<string, ImageSourcePropType>;
-  const modernPlayer = localArt.player_modern;
+  const modernPlayer = (pixelAvatar === 'adam' ? localArt.player_modern : localArt['player_modern_' + pixelAvatar]) || localArt.player_modern;
   const modernNPC = localArt.npc_modern;
   const crisp = CRISP_STYLE;
   const glow = useRef(new Animated.Value(0.1)).current;
@@ -229,7 +230,8 @@ export function ArcadePixelLife({
       AsyncStorage.getItem(gameKey + '.missions'),
       AsyncStorage.getItem('liveit.localOllamaEndpoint'),
       AsyncStorage.getItem('liveit.localOllamaModel'),
-    ]).then(([location, elapsed, transcript, quests, customEndpoint, customModel]) => {
+      AsyncStorage.getItem(gameKey + '.pixelAvatar'),
+    ]).then(([location, elapsed, transcript, quests, customEndpoint, customModel, savedAvatar]) => {
       if (!active) return;
       try {
         const p: unknown = location ? JSON.parse(location) : INITIAL_POSITION;
@@ -258,6 +260,7 @@ export function ArcadePixelLife({
       } catch { /* No created missions yet. */ }
       if (customEndpoint) setEndpoint(customEndpoint);
       if (customModel && ['qwen3:0.6b','qwen3:1.7b','qwen3:4b'].includes(customModel)) setLocalModel(customModel);
+      if (savedAvatar && ['adam','alex','bob','amelia'].includes(savedAvatar)) setPixelAvatar(savedAvatar as 'adam'|'alex'|'bob'|'amelia');
       setLoaded(true);
     }).catch(() => setLoaded(true));
     return () => { active = false; };
@@ -803,6 +806,24 @@ export function ArcadePixelLife({
             ) : (
               <View style={{gap:12}}>
                 <Text style={s.help}>The default is qwen3:4b (already downloaded on some development machines). On your Mac run: ollama pull qwen3:4b, then ollama serve. On an iPhone, enter the Mac's LAN IP (not localhost). If unavailable, the game uses clearly labelled offline dialogue.</Text>
+                <Text style={s.speaker}>YOUR WALKABLE PIXEL AVATAR</Text>
+                {localArt.player_modern ? (
+                  <View style={{flexDirection:'row',flexWrap:'wrap',gap:7}}>
+                    {(['adam','alex','bob','amelia'] as const).map(name => (
+                      <Pressable accessibilityRole="button" key={name}
+                        accessibilityState={{selected:pixelAvatar===name}}
+                        onPress={() => setPixelAvatar(name)}
+                        style={[s.suggestion,pixelAvatar===name ? {backgroundColor:'#74516c'} : null]}>
+                        <Text style={s.suggestionText}>{name.toUpperCase()}</Text>
+                      </Pressable>
+                    ))}
+                  </View>
+                ) : <Text style={s.help}>Using the public CC0 pixel character.
+                  Install your Modern Interiors ZIP locally to unlock four
+                  additional animated character sheets; no raw art is uploaded.</Text>}
+                <Text style={s.help}>Sprite selection is an interim override.
+                  Full hairstyle, outfit and skin palette mapping from Character Creator
+                  remains an unfinished part of the art system.</Text>
                 <Text style={s.speaker}>MODEL QUALITY / LATENCY</Text>
                 <View style={{flexDirection:'row', flexWrap:'wrap', gap:8}}>
                   {(['qwen3:0.6b','qwen3:1.7b','qwen3:4b'] as const).map(model => (
@@ -817,7 +838,7 @@ export function ArcadePixelLife({
                 <Text style={s.help}>0.6B is quickest; 1.7B balances quality and speed; 4B generally handles longer context better but takes more RAM. All run on your machine, not a paid cloud API.</Text>
                 <Text style={s.speaker}>OLLAMA BASE URL</Text>
                 <TextInput autoCapitalize="none" autoCorrect={false} style={s.field} value={endpoint} onChangeText={setEndpoint} placeholder="http://192.168.1.100:11434" placeholderTextColor="#919da3"/>
-                <Pressable style={s.add} onPress={() => {void AsyncStorage.multiSet([['liveit.localOllamaEndpoint', endpoint], ['liveit.localOllamaModel', localModel]]); setPanel('none');}}><Text style={s.addText}>SAVE LOCAL CONNECTION</Text></Pressable>
+                <Pressable style={s.add} onPress={() => {void AsyncStorage.multiSet([['liveit.localOllamaEndpoint', endpoint], ['liveit.localOllamaModel', localModel], [gameKey + '.pixelAvatar', pixelAvatar]]); setPanel('none');}}><Text style={s.addText}>SAVE LOCAL CONNECTION</Text></Pressable>
                 <Text style={s.help}>Model output is dialogue only. Money, identity, relationships, mission completion and saved facts remain controlled by the deterministic game engine.</Text>
               </View>
             )}
