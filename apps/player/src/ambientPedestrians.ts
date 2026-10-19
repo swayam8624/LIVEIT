@@ -33,19 +33,21 @@ export function ambientPedestrians(
       const hash=tileHash(seed^0x525449, cx*17+i*37,cy*13+i*53);
       // Every resident follows a repeatable daily loop on public sidewalks.
       // Use the same global roads as the chunk generator: no seam seams.
-      const localX=hash%CHUNK_SIZE;
+      // Generate a deterministic *sidewalk* resident rather than rolling
+      // arbitrary solid building tiles. The global grid uses x%16=6/9
+      // for publicly walkable pavements across chunk seams.
+      const localX=(((hash>>>9)%2)===0?6:9)+(((hash>>>12)%2)*16);
       const localY=(hash>>>7)%CHUNK_SIZE;
       const t=Math.floor(minuteOfDay/20);
-      let x=cx*CHUNK_SIZE+localX;
+      const x=cx*CHUNK_SIZE+localX;
       let y=cy*CHUNK_SIZE+localY;
       let facing:Facing='down';
-      const direction=(hash>>>18)%4;
-      // Commutes and leisurely walks follow predictable daily 20-minute
-      // stepping; they avoid solid tiles, checking the authoritative map.
+      // Daily pedestrian walking is independent of camera and order of
+      // discovery. Movement is bounded to the current chunk sidewalks.
       if(shift!=='home'){
         const displacement=(t+(hash>>>25))%7-3;
-        if(direction<2){x+=displacement;facing=displacement<0?'left':'right';}
-        else{y+=displacement;facing=displacement<0?'up':'down';}
+        y=cy*CHUNK_SIZE+((localY+displacement+CHUNK_SIZE)%CHUNK_SIZE);
+        facing=displacement<0?'up':'down';
       }
       if(x<left||x>=left+cols||y<top||y>=top+rows)continue;
       if(worldCell('street',x,y,seed).solid)continue;
