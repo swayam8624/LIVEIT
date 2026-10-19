@@ -108,7 +108,7 @@ function Stat({
   );
 }
 export default function App() {
-  const { width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
   const wide = width >= 1000;
   const [save, setSave] = useState<Save | null>(null);
   const latestSave = useRef<Save | null>(null);
@@ -320,7 +320,7 @@ export default function App() {
         activeStoryId: bookshop.id,
         sceneDismissed: false,
       });
-      setTab('stories');
+      setTab('life');
       setSceneOpen(true);
     });
   }
@@ -375,7 +375,7 @@ export default function App() {
         activeStoryId: story.id,
         sceneDismissed: false,
       });
-      setTab('stories');
+      setTab('life');
       setSceneOpen(true);
     });
   }
@@ -386,15 +386,43 @@ export default function App() {
         <Text style={s.small}>Opening your world…</Text>
       </View>
     );
-  // The life view is a fullscreen game, not a card above the map.
-  if (save && !reset && save.active === 'life' && tab === 'life' && !sceneOpen) {
+  // Keep authored story scenes inside the SAME Free Life gameplay session.
+  // The world stays mounted behind the conversation; clock and movement pause.
+  if (save && !reset && save.active === 'life' && tab === 'life') {
     return (
-      <ArcadePixelLife
-        world={save.life}
-        onTalk={openEncounter}
-        onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
-        onNavigate={(destination) => setTab(destination)}
-      />
+      <View style={{ width, height, backgroundColor: '#151c26' }}>
+        <ArcadePixelLife
+          world={save.life}
+          paused={sceneOpen}
+          onTalk={openEncounter}
+          onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
+          onNavigate={(destination) => setTab(destination)}
+        />
+        {sceneOpen ? (
+          <View style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0,
+            backgroundColor: '#131421f2' }}>
+            <ScrollView contentContainerStyle={{ padding: 8, paddingBottom: 32 }}>
+              <StoryPlayer
+                world={save.life}
+                story={authored}
+                integrated
+                onChoose={(choiceId) =>
+                  applyWorldAction((w) => choose(w, authored, choiceId))
+                }
+                onClose={() => {
+                  const current = latestSave.current;
+                  if (current) persist({ ...current, sceneDismissed: true });
+                  setSceneOpen(false);
+                }}
+                onFinish={() => {
+                  setSceneOpen(false);
+                  setTab('life');
+                }}
+              />
+            </ScrollView>
+          </View>
+        ) : null}
+      </View>
     );
   }
   return (
