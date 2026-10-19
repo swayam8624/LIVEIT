@@ -7,6 +7,7 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
 import { lifeStageOf, type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
+import { OFFICIAL_STORIES } from '@living/content';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
 import { modernSpriteColumn } from './spriteDirections';
@@ -124,7 +125,7 @@ function PixelBuilding({
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onChildAction, onSkipChildhood, paused = false,
+  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onChildAction, onSkipChildhood, onStoryStart, paused = false,
 }: {
   world: World;
   paused?: boolean;
@@ -133,6 +134,7 @@ export function ArcadePixelLife({
   onActivity: (activity: WorldActivity, dayOffset: number) => void;
   onChildAction: (activity: ChildhoodActivity, dayOffset: number) => void;
   onSkipChildhood: (years: 2 | 5 | 13 | 18) => void;
+  onStoryStart: (id: string) => void;
   onNavigate: (where: 'stories' | 'people' | 'journal' | 'life') => void;
 }) {
   const { width, height } = useWindowDimensions();
@@ -149,7 +151,7 @@ export function ArcadePixelLife({
   const zoneRef = useRef(zone);
   const [clock, setClock] = useState(0);
   const [notice, setNotice] = useState('Walk up to Amelia and press TALK. Explore the market and café.');
-  const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings'>('none');
+  const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings' | 'stories'>('none');
   const [messages, setMessages] = useState<Message[]>([]);
   const [draft, setDraft] = useState('');
   const [missionTitle, setMissionTitle] = useState('');
@@ -704,7 +706,7 @@ export function ArcadePixelLife({
         </View>
         <View style={s.leftButtons}>
           <HudButton title="☷" detail="MISSION" onPress={() => {pauseMovement(); setPanel('missions');}} />
-          <HudButton title="✧" detail="STORIES" onPress={() => onNavigate('stories')} />
+          <HudButton title="✧" detail="STORIES" onPress={() => {pauseMovement(); setPanel('stories');}} />
           <HudButton title="♫" detail="PEOPLE" onPress={() => onNavigate('people')} />
           <HudButton title="⚙" detail="LOCAL AI" onPress={() => {pauseMovement(); setPanel('settings');}} />
         </View>
@@ -792,8 +794,8 @@ export function ArcadePixelLife({
           <View style={s.modal}>
             <View style={s.modalHead}>
               <View>
-                <Text style={s.modalTitle}>{panel === 'talk' ? 'AMELIA' : panel === 'missions' ? 'YOUR MISSIONS' : 'LOCAL CONVERSATION ENGINE'}</Text>
-                <Text style={s.sub}>{panel === 'talk' ? 'A real conversation, not a three-choice menu.' : panel === 'missions' ? 'Make any day into an adventure.' : 'Runs on your machine. Never required to play.'}</Text>
+                <Text style={s.modalTitle}>{panel === 'talk' ? 'AMELIA' : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : 'LOCAL CONVERSATION ENGINE'}</Text>
+                <Text style={s.sub}>{panel === 'talk' ? 'A real conversation, not a three-choice menu.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : 'Runs on your machine. Never required to play.'}</Text>
               </View>
               <Pressable accessibilityLabel="Close panel" onPress={() => setPanel('none')} style={s.close}><Text style={s.closeText}>✕</Text></Pressable>
             </View>
@@ -867,6 +869,26 @@ export function ArcadePixelLife({
                 <TextInput style={[s.field, {minHeight: 90}]} multiline value={missionDescription} onChangeText={setMissionDescription} placeholder="What would you like to accomplish?" placeholderTextColor="#a1a4ad" maxLength={500}/>
                 <Pressable style={s.add} onPress={saveMission}><Text style={s.addText}>+ ADD TO MY LIFE</Text></Pressable>
                 <Pressable style={s.storyLink} onPress={onTalk}><Text style={s.storyLinkText}>Play the official Amelia quest →</Text></Pressable>
+              </ScrollView>
+            ) : panel === 'stories' ? (
+              <ScrollView style={s.messages} contentContainerStyle={{gap:12,padding:4,paddingBottom:16}}>
+                <Text style={s.help}>Stories unlock as you grow, starting with your first morning. Each choice changes your family or relationships in the same Free Life. More chapters are being written.</Text>
+                {OFFICIAL_STORIES.map(story => {
+                  const progress = world.progress.find(p=>p.storyId===story.id);
+                  const locked = ageYears < story.minAge;
+                  const finished = Boolean(progress?.completed);
+                  return (
+                    <Pressable key={story.id} accessibilityRole="button"
+                      disabled={locked || finished}
+                      onPress={() => {setPanel('none');onStoryStart(story.id);}}
+                      style={[s.quest,(locked || finished) && {opacity:0.5}]}>
+                      <Text style={s.questTitle}>{finished ? '✓ ' : locked ? '🔒 ' : '✦ '}{story.title}</Text>
+                      <Text style={s.help}>{story.description}</Text>
+                      <Text style={s.mode}>{finished ? 'COMPLETED' :
+                        locked ? 'UNLOCKS AT AGE '+story.minAge : progress ? 'RESUME CHAPTER' : 'AVAILABLE NOW'}</Text>
+                    </Pressable>
+                  );
+                })}
               </ScrollView>
             ) : (
               <View style={{gap:12}}>
