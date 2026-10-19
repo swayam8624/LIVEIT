@@ -1,13 +1,17 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { pixelArt } from '../apps/player/src/pixelArt';
 
+const directory = 'apps/player/assets/pixel/pulse';
 const source = readFileSync(
   resolve(process.cwd(), 'apps/player/src/pixelArt.ts'),
   'utf8',
 );
-const entries = Object.entries(pixelArt);
+const entries = [
+  ...source.matchAll(
+    /([a-zA-Z0-9_]+):\s*require\(\s*'\.\.\/assets\/pixel\/pulse\/([a-zA-Z0-9_]+)\.png'\s*\)/g,
+  ),
+];
 
 function crc32(bytes: Buffer): number {
   let n = 0xffffffff;
@@ -20,21 +24,27 @@ function crc32(bytes: Buffer): number {
   return (n ^ 0xffffffff) >>> 0;
 }
 
-describe('bundled user-provided CC0 pixels', () => {
-  it('has correctly attributed public-domain source and at least 24 usable frames', () => {
-    expect(source).toContain('LICENSE-CC0.txt');
-    expect(source).toContain('https://edfaygo.itch.io/pulse-everyday-streets-1616');
-    expect(entries.length).toBeGreaterThanOrEqual(24);
+describe('native-bundled Pulse CC0 pixel art', () => {
+  it('has original source provenance, uses static native resources and bundles 24 sprites', () => {
+    const provenance = readFileSync(resolve(process.cwd(), directory, 'README.md'), 'utf8');
+    expect(provenance).toContain('CC0');
+    expect(provenance).toContain('edfaygo.itch.io/pulse-everyday-streets-1616');
+    expect(source).not.toContain('data:image/png;base64,');
+    expect(entries.length).toBe(24);
   });
 
-  it('every embedded image is a complete 16x16 PNG with correct CRCs', () => {
+  it('ships actual 16x16 PNG files with valid chunk CRCs, not placeholder URIs', () => {
     const ids = new Set<string>();
-    for (const [name, uri] of entries) {
-      expect(uri).toMatch(/^data:image\/png;base64,/);
-      const base64 = uri.slice('data:image/png;base64,'.length);
+    for (const match of entries) {
+      const name = match[1];
+      const file = match[2];
+      if (!name || !file) throw new Error('Invalid sprite source declaration');
+      expect(name).toBe(file);
       expect(ids.has(name)).toBe(false);
       ids.add(name);
-      const image = Buffer.from(base64, 'base64');
+      const path = resolve(process.cwd(), directory, file + '.png');
+      expect(existsSync(path), path).toBe(true);
+      const image = readFileSync(path);
       expect(image.subarray(0, 8)).toEqual(
         Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]),
       );
