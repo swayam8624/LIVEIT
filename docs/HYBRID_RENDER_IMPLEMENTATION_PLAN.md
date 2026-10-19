@@ -55,7 +55,7 @@ The temporary illustrated map and story stages remain available until each repla
 
 **Proposed source:** native/liveit-render/{include,src,shaders}, apps/player/modules/liveit-render/{android,ios,src}.
 
-**Work:** refactor headless Vulkan only as *development test harness*; a new shared C++ runtime with Vulkan instance/device, surface, swapchain, queue, multi-frame submit/present, dirty chunk atlas uploads, logical pixel target, nearest presentation, visibility sorting and pixel lighting/weather. Wrap in Android Kotlin ExpoView SurfaceView + JNI, iOS Swift ExpoView CAMetalLayer + Objective-C++/MoltenVK, proper slices/linker flags, teardown/recreate, debug validation. JS props use the validated render-contract.ts messages; avoid heavy JSON per vsync. Read render capability callbacks, not an assumed file/existence check.
+**Work:** refactor headless Vulkan only as _development test harness_; a new shared C++ runtime with Vulkan instance/device, surface, swapchain, queue, multi-frame submit/present, dirty chunk atlas uploads, logical pixel target, nearest presentation, visibility sorting and pixel lighting/weather. Wrap in Android Kotlin ExpoView SurfaceView + JNI, iOS Swift ExpoView CAMetalLayer + Objective-C++/MoltenVK, proper slices/linker flags, teardown/recreate, debug validation. JS props use the validated render-contract.ts messages; avoid heavy JSON per vsync. Read render capability callbacks, not an assumed file/existence check.
 
 **Acceptance:** on real iPhone and Android, installed app displays **actual Vulkan-composited top-down world**; documented device names/driver, drawable lifecycle, scene frame and screenshots; background/foreground and resize 50x safely; no native memory corruption.
 
@@ -73,7 +73,7 @@ The temporary illustrated map and story stages remain available until each repla
 
 **Proposed source:** apps/player/src/game/SceneHandoff, choice dock/OutcomeQueue/Haptics service, narrative-core and save coordinator transaction additions.
 
-**Work:** walk→approach→interact→warm assets→transition→conversation→choose→save ack→accurate outcome widget→return to same pixel tile. Exact event IDs and scene revisions, bounded queues, stale input rejection, lifecycle resume. Settings Off/Subtle/Full and Reduce Motion; only *committed* choices produce confirmation haptic. Grief context avoids cheerful cues.
+**Work:** walk→approach→interact→warm assets→transition→conversation→choose→save ack→accurate outcome widget→return to same pixel tile. Exact event IDs and scene revisions, bounded queues, stale input rejection, lifecycle resume. Settings Off/Subtle/Full and Reduce Motion; only _committed_ choices produce confirmation haptic. Grief context avoids cheerful cues.
 
 **Acceptance:** full 3D Amelia café interaction after pixel-world meeting, trust delta matches world and journal, same coordinates/appearance remain after force-close. Error/retry and 10x rapid taps cannot double-pay or double-choice.
 
@@ -101,15 +101,15 @@ Add actual native module event decoding plus generation verification before perm
 
 ## Phase gates / signoffs
 
-| Gate | Test and proof | Current |
-|---|---|---|
-| A: existing gameplay remains intact | TypeScript Vite/Vitest + Metro/web + existing local save | Partial; follow latest exact CI |
-| B: domain pixel position real | deterministic collisions/portal + old-save migration | NOT IMPLEMENTED |
-| C: GPU pixel tiles playable | native Vulkan/Metal through MoltenVK, on-device screenshots and input | NOT IMPLEMENTED |
-| D: 3D story actors | actual glTF skeleton/face animation rendered on devices | NOT IMPLEMENTED |
-| E: scene conversion | pixel→3D→same position + saved consequence + haptic | NOT IMPLEMENTED |
-| F: pack delivery | licensed/hashes/signed indices/atomic store and rollback | SCHEMA ONLY |
-| G: human social safety | verified real contacts, consent, report/block and store compliance | NOT IMPLEMENTED |
+| Gate                                | Test and proof                                                        | Current                         |
+| ----------------------------------- | --------------------------------------------------------------------- | ------------------------------- |
+| A: existing gameplay remains intact | TypeScript Vite/Vitest + Metro/web + existing local save              | Partial; follow latest exact CI |
+| B: domain pixel position real       | deterministic collisions/portal + old-save migration                  | NOT IMPLEMENTED                 |
+| C: GPU pixel tiles playable         | native Vulkan/Metal through MoltenVK, on-device screenshots and input | NOT IMPLEMENTED                 |
+| D: 3D story actors                  | actual glTF skeleton/face animation rendered on devices               | NOT IMPLEMENTED                 |
+| E: scene conversion                 | pixel→3D→same position + saved consequence + haptic                   | NOT IMPLEMENTED                 |
+| F: pack delivery                    | licensed/hashes/signed indices/atomic store and rollback              | SCHEMA ONLY                     |
+| G: human social safety              | verified real contacts, consent, report/block and store compliance    | NOT IMPLEMENTED                 |
 
 The old native/city-vulkan PPM CI is an **offscreen GPU proof**, not gates C/D.
 
