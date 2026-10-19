@@ -16,7 +16,10 @@ import { conditionMet, currentScene } from '@living/narrative-core';
 import { AvatarPortrait } from './AvatarPortrait';
 import { GameStage } from './GameStage';
 import { gameTheme as t } from './gameTheme';
-import { CURRENT_VISUAL_CAPABILITY, selectVisualPresentation } from './visualPresentation';
+import {
+  CURRENT_VISUAL_CAPABILITY,
+  selectVisualPresentation,
+} from './visualPresentation';
 
 // Licensed original concept portrait bundled offline for the official Amelia
 // episodes. Creator stories can choose a different character actor manifest.
@@ -43,7 +46,10 @@ export function StoryPlayer({
   onClose: () => void;
   onFinish: () => void;
 }) {
-  const visual = selectVisualPresentation('cinematic-3d', CURRENT_VISUAL_CAPABILITY);
+  const visual = selectVisualPresentation(
+    'cinematic-3d',
+    CURRENT_VISUAL_CAPABILITY,
+  );
   const { width } = useWindowDimensions();
   const compact = width < 600;
   const scene = currentScene(world, story);

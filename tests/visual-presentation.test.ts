@@ -34,12 +34,12 @@ describe('LIVEIT hybrid runtime graphics fallback policy', () => {
   } as const satisfies VisualCapability;
 
   it('requires an active generation, supported mode and verified asset readiness', () => {
-    expect(
-      selectVisualPresentation('pixel-overworld', surface).renderer,
-    ).toBe('native-vulkan');
-    expect(
-      selectVisualPresentation('cinematic-3d', surface).renderer,
-    ).toBe('native-vulkan');
+    expect(selectVisualPresentation('pixel-overworld', surface).renderer).toBe(
+      'native-vulkan',
+    );
+    expect(selectVisualPresentation('cinematic-3d', surface).renderer).toBe(
+      'native-vulkan',
+    );
     expect(
       selectVisualPresentation('cinematic-3d', {
         ...surface,
@@ -71,9 +71,7 @@ describe('LIVEIT hybrid runtime graphics fallback policy', () => {
       ...surface,
       backend: 'ios-moltenvk',
     };
-    expect(
-      selectVisualPresentation('cinematic-3d', ios).status,
-    ).toBe('ready');
+    expect(selectVisualPresentation('cinematic-3d', ios).status).toBe('ready');
     expect(
       selectVisualPresentation('cinematic-3d', {
         state: 'unavailable',

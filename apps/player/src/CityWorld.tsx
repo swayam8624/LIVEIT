@@ -32,7 +32,10 @@ import {
 } from '@living/simulation-core';
 import type { CareerPath, World } from '@living/world-schema';
 import { CityMap } from './CityMap';
-import { CURRENT_VISUAL_CAPABILITY, selectVisualPresentation } from './visualPresentation';
+import {
+  CURRENT_VISUAL_CAPABILITY,
+  selectVisualPresentation,
+} from './visualPresentation';
 import { gameTheme as t, districtColors } from './gameTheme';
 
 const CAREERS: {
@@ -73,7 +76,10 @@ export function CityWorld({
   world: World;
   onAction: (operation: (world: World) => World) => void;
 }) {
-  const visual = selectVisualPresentation('pixel-overworld', CURRENT_VISUAL_CAPABILITY);
+  const visual = selectVisualPresentation(
+    'pixel-overworld',
+    CURRENT_VISUAL_CAPABILITY,
+  );
   const [focused, setFocused] = useState<string | null>(null);
   const [careerOpen, setCareerOpen] = useState(false);
   const [showDistrictCards, setShowDistrictCards] = useState(false);
