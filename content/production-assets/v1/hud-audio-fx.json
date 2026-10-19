@@ -28,12 +28,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.title-plaque",
@@ -49,12 +44,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.top-status-strip",
@@ -70,12 +60,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.avatar-frame",
@@ -91,12 +76,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.age-orb",
@@ -112,12 +92,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.age-year-wheel",
@@ -133,12 +108,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.money-counter",
@@ -154,12 +124,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.health-heart",
@@ -175,12 +140,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.energy-bar",
@@ -196,12 +156,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.wellbeing-bar",
@@ -217,12 +172,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.stress-bar",
@@ -238,12 +188,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.experience-meter",
@@ -259,12 +204,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.reputation-meter",
@@ -280,12 +220,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.career-badge",
@@ -301,12 +236,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.school-badge",
@@ -322,12 +252,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.skills-grid",
@@ -343,12 +268,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.family-tree-node",
@@ -364,12 +284,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.relationship-thread",
@@ -385,12 +300,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.relationship-heart",
@@ -406,12 +316,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.journal-tab",
@@ -427,12 +332,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.memory-ticket",
@@ -448,12 +348,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.memory-date-stamp",
@@ -469,12 +364,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.choice-card-idle",
@@ -490,12 +380,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.choice-card-focused",
@@ -511,12 +396,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.choice-card-armed",
@@ -532,12 +412,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.choice-card-pending",
@@ -553,12 +428,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.choice-card-confirmed",
@@ -574,12 +444,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.choice-card-failed",
@@ -595,12 +460,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.outcome-widget",
@@ -616,12 +476,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.outcome-delta-up",
@@ -637,12 +492,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.outcome-delta-down",
@@ -658,12 +508,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.outcome-neutral",
@@ -679,12 +524,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.opportunity-alert",
@@ -700,12 +540,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.error-warning",
@@ -721,12 +556,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.success-tick",
@@ -742,12 +572,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.toast-host",
@@ -763,12 +588,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.notebook-frame",
@@ -784,12 +604,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.life-sidebar",
@@ -805,12 +620,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.phone-sidebar",
@@ -826,12 +636,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.phone-status-bar",
@@ -847,12 +652,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.ai-verified-label",
@@ -868,12 +668,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.human-contact-label",
@@ -889,12 +684,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.safety-block",
@@ -910,12 +700,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.safety-report",
@@ -931,12 +716,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.privacy-mask",
@@ -952,12 +732,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.unread-badge",
@@ -973,12 +748,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.quest-pip",
@@ -994,12 +764,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.action-dialogue",
@@ -1015,12 +780,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.action-enter",
@@ -1036,12 +796,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.action-walk",
@@ -1057,12 +812,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.dpad-up",
@@ -1078,12 +828,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.dpad-down",
@@ -1099,12 +844,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.dpad-left",
@@ -1120,12 +860,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.dpad-right",
@@ -1141,12 +876,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.touch-route-target",
@@ -1162,12 +892,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.map-minimap-border",
@@ -1183,12 +908,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.map-marker-player",
@@ -1204,12 +924,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.map-marker-npc",
@@ -1225,12 +940,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.map-marker-home",
@@ -1246,12 +956,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.map-marker-job",
@@ -1267,12 +972,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.map-marker-story",
@@ -1288,12 +988,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.inventory-slot",
@@ -1309,12 +1004,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.item-card",
@@ -1330,12 +1020,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.wardrobe-tab",
@@ -1351,12 +1036,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.avatar-rotate",
@@ -1372,12 +1052,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.asset-pack-download",
@@ -1393,12 +1068,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.asset-pack-verify",
@@ -1414,12 +1084,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.storage-meter",
@@ -1435,12 +1100,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.connection-offline",
@@ -1456,12 +1116,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.voice-caption",
@@ -1477,12 +1132,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.pause-menu",
@@ -1498,12 +1148,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.skip-button",
@@ -1519,12 +1164,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.settings-slider",
@@ -1540,12 +1180,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.sound-toggle",
@@ -1561,12 +1196,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.haptics-toggle",
@@ -1582,12 +1212,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.reduce-motion-icon",
@@ -1603,12 +1228,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.accessibility-focus-ring",
@@ -1624,12 +1244,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.loading-spinner",
@@ -1645,12 +1260,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.save-pending",
@@ -1666,12 +1276,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.save-committed",
@@ -1687,12 +1292,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.save-failed",
@@ -1708,12 +1308,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.legacy-frame",
@@ -1729,12 +1324,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.chapter-divider",
@@ -1750,12 +1340,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.story-book-cover-frame",
@@ -1771,12 +1356,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.story-choice-index",
@@ -1792,12 +1372,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.dialogue-speaker-frame",
@@ -1813,12 +1388,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.cinema-history",
@@ -1834,12 +1404,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.cafe-entry-tooltip",
@@ -1855,12 +1420,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.timeline-card",
@@ -1876,12 +1436,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.transit-ticket",
@@ -1897,12 +1452,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.portal-arrow",
@@ -1918,12 +1468,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.achievement-seal",
@@ -1939,12 +1484,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.calendar-date",
@@ -1960,12 +1500,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.weather-label",
@@ -1981,12 +1516,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.location-tag",
@@ -2002,12 +1532,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.day-night-icon",
@@ -2023,12 +1548,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.joystick-base",
@@ -2044,12 +1564,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.joystick-thumb",
@@ -2065,12 +1580,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.narrative-progress",
@@ -2086,12 +1596,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.social-consent-badge",
@@ -2107,12 +1612,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.moderator-action",
@@ -2128,12 +1628,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.close-button",
@@ -2149,12 +1644,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.back-button",
@@ -2170,12 +1660,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.tab-selected",
@@ -2191,12 +1676,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.hud.tab-idle",
@@ -2212,12 +1692,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "a11y_state",
-        "touch_target",
-        "readable_320pt",
-        "source_license"
-      ]
+      "qa": ["a11y_state", "touch_target", "readable_320pt", "source_license"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-press",
@@ -2233,11 +1708,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-release",
@@ -2253,11 +1724,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-focus",
@@ -2273,11 +1740,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-confirm",
@@ -2293,11 +1756,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-error",
@@ -2313,11 +1772,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-disabled",
@@ -2333,11 +1788,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-tab",
@@ -2353,11 +1804,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-scroll-detent",
@@ -2373,11 +1820,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-open-drawer",
@@ -2393,11 +1836,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-close-drawer",
@@ -2413,11 +1852,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-open-phone",
@@ -2433,11 +1868,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-message-received",
@@ -2453,11 +1884,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-message-sent",
@@ -2473,11 +1900,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-message-failed",
@@ -2493,11 +1916,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-age-wheel",
@@ -2513,11 +1932,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-advance-year",
@@ -2533,11 +1948,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-achievement",
@@ -2553,11 +1964,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-memory-add",
@@ -2573,11 +1980,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-relationship-up",
@@ -2593,11 +1996,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-relationship-down",
@@ -2613,11 +2012,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-career-job",
@@ -2633,11 +2028,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-purchase",
@@ -2653,11 +2044,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-sell",
@@ -2673,11 +2060,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-cash-negative",
@@ -2693,11 +2076,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-opportunity",
@@ -2713,11 +2092,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-time-expire",
@@ -2733,11 +2108,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-story-choice",
@@ -2753,11 +2124,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-story-branch",
@@ -2773,11 +2140,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-stats-change",
@@ -2793,11 +2156,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-content-download",
@@ -2813,11 +2172,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-content-ready",
@@ -2833,11 +2188,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ui-collision",
@@ -2853,11 +2204,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.footstep-paving",
@@ -2873,11 +2220,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.footstep-grass",
@@ -2893,11 +2236,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.footstep-wood",
@@ -2913,11 +2252,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.footstep-waterfront",
@@ -2933,11 +2268,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.door-open",
@@ -2953,11 +2284,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.door-close",
@@ -2973,11 +2300,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.cafe-bell",
@@ -2993,11 +2316,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.rain-droplets",
@@ -3013,11 +2332,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.street-traffic",
@@ -3033,11 +2348,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.market-crowd",
@@ -3053,11 +2364,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.river-water",
@@ -3073,11 +2380,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.university-chatter",
@@ -3093,11 +2396,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.studio-air",
@@ -3113,11 +2412,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.gardens-birds",
@@ -3133,11 +2428,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.night-crickets",
@@ -3153,11 +2444,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.scene-iris",
@@ -3173,11 +2460,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.scene-wipe",
@@ -3193,11 +2476,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.scene-reveal",
@@ -3213,11 +2492,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.cinema-camera-shift",
@@ -3233,11 +2508,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.cinema-gaze",
@@ -3253,11 +2524,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.cinema-tense-stinger",
@@ -3273,11 +2540,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.cinema-relief-stinger",
@@ -3293,11 +2556,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.cinema-apology",
@@ -3313,11 +2572,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.cinema-celebration",
@@ -3333,11 +2588,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.cinema-sad-quiet",
@@ -3353,11 +2604,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.legacy-quiet-wind",
@@ -3373,11 +2620,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.hospital-waiting",
@@ -3393,11 +2636,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.home-kettle",
@@ -3413,11 +2652,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.job-computer",
@@ -3433,11 +2668,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.school-bell",
@@ -3453,11 +2684,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.transit-door",
@@ -3473,11 +2700,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.transit-ticket",
@@ -3493,11 +2716,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.weather-thunder-distant",
@@ -3513,11 +2732,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.wind-autumn",
@@ -3533,11 +2748,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.snow-footfall",
@@ -3553,11 +2764,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.ferry-horn",
@@ -3573,11 +2780,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.bicycle-bell",
@@ -3593,11 +2796,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.phone-vibrate-sim",
@@ -3613,11 +2812,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.message-silence",
@@ -3633,11 +2828,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.success-neutral",
@@ -3653,11 +2844,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.sfx.failure-soft",
@@ -3673,11 +2860,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.title-main",
@@ -3693,11 +2876,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.home-day",
@@ -3713,11 +2892,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.home-night",
@@ -3733,11 +2908,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.riverside-day",
@@ -3753,11 +2924,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.riverside-night",
@@ -3773,11 +2940,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.university-day",
@@ -3793,11 +2956,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.university-night",
@@ -3813,11 +2972,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.market-day",
@@ -3833,11 +2988,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.market-night",
@@ -3853,11 +3004,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.studio-day",
@@ -3873,11 +3020,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.studio-night",
@@ -3893,11 +3036,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.gardens-day",
@@ -3913,11 +3052,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.gardens-night",
@@ -3933,11 +3068,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.cafe-idle",
@@ -3953,11 +3084,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.meeting-new-person",
@@ -3973,11 +3100,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.relationship-warm",
@@ -3993,11 +3116,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.relationship-distance",
@@ -4013,11 +3132,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.career-interview",
@@ -4033,11 +3148,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.career-progress",
@@ -4053,11 +3164,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.school-milestone",
@@ -4073,11 +3180,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.story-tension",
@@ -4093,11 +3196,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.story-resolution",
@@ -4113,11 +3212,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.story-quiet",
@@ -4133,11 +3228,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.memory-reflection",
@@ -4153,11 +3244,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.elder-afternoon",
@@ -4173,11 +3260,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.legacy-rest",
@@ -4193,11 +3276,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.music.credits-theme",
@@ -4213,11 +3292,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-tile-instance",
@@ -4233,11 +3308,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-sprite-instance",
@@ -4253,11 +3324,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-atlas-sampler",
@@ -4273,11 +3340,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-depth-roof",
@@ -4293,11 +3356,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-id-pick",
@@ -4313,11 +3372,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-ambience-lut",
@@ -4333,11 +3388,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-weather-rain",
@@ -4353,11 +3404,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-weather-snow",
@@ -4373,11 +3420,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-window-emissive",
@@ -4393,11 +3436,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-palette-dither",
@@ -4413,11 +3452,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-crisp-blit",
@@ -4433,11 +3468,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-transition-mosaic",
@@ -4453,11 +3484,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.pixel-transition-iris",
@@ -4473,11 +3500,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-skeletal-skin",
@@ -4493,11 +3516,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-morph-face",
@@ -4513,11 +3532,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-pbr-toon",
@@ -4533,11 +3548,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-hair-material",
@@ -4553,11 +3564,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-eyes",
@@ -4573,11 +3580,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-shadow-depth",
@@ -4593,11 +3596,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-rim-light",
@@ -4613,11 +3612,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-transparent",
@@ -4633,11 +3628,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-light-composite",
@@ -4653,11 +3644,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-selective-bloom",
@@ -4673,11 +3660,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-tonemap",
@@ -4693,11 +3676,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-depth-focus",
@@ -4713,11 +3692,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-ink-outline",
@@ -4733,11 +3708,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-weather-particles",
@@ -4753,11 +3724,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.cinema-transition-dissolve",
@@ -4773,11 +3740,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.shared-gpu-id",
@@ -4793,11 +3756,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.shader.shared-debug-visualizer",
@@ -4813,11 +3772,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "spirv_val",
-        "mobile_vulkan",
-        "no_pack_executables"
-      ]
+      "qa": ["spirv_val", "mobile_vulkan", "no_pack_executables"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-walk-dust",
@@ -4833,11 +3788,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-door-iris",
@@ -4853,11 +3804,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-rain-splash",
@@ -4873,11 +3820,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-snow-flurry",
@@ -4893,11 +3836,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-autumn-leaves",
@@ -4913,11 +3852,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-morning-sun",
@@ -4933,11 +3868,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-night-window",
@@ -4953,11 +3884,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-river-sheen",
@@ -4973,11 +3900,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-npc-emote",
@@ -4993,11 +3916,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.pixel-select-outline",
@@ -5013,11 +3932,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-eye-glint",
@@ -5033,11 +3948,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-face-tear",
@@ -5053,11 +3964,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-hair-backlight",
@@ -5073,11 +3980,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-dialogue-beat",
@@ -5093,11 +3996,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-memory-ink",
@@ -5113,11 +4012,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-muted-sepia",
@@ -5133,11 +4028,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-confession-shimmer",
@@ -5153,11 +4044,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-quiet-spotlight",
@@ -5173,11 +4060,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-fog-soft",
@@ -5193,11 +4076,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-window-rain",
@@ -5213,11 +4092,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-ambient-dust",
@@ -5233,11 +4108,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-camera-cut",
@@ -5253,11 +4124,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-pan",
@@ -5273,11 +4140,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-dolly",
@@ -5293,11 +4156,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-rack-focus",
@@ -5313,11 +4172,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-push-in",
@@ -5333,11 +4188,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-pull-out",
@@ -5353,11 +4204,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-two-shot-swap",
@@ -5373,11 +4220,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-over-shoulder",
@@ -5393,11 +4236,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-grief-fade",
@@ -5413,11 +4252,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.cinema-time-passage",
@@ -5433,11 +4268,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-stats-rise",
@@ -5453,11 +4284,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-stats-fall",
@@ -5473,11 +4300,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-choice-ring",
@@ -5493,11 +4316,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-relationship-thread",
@@ -5513,11 +4332,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-income-receipt",
@@ -5533,11 +4348,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-haptic-indicator",
@@ -5553,11 +4364,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-chat-unread",
@@ -5573,11 +4380,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-toast-slide",
@@ -5593,11 +4396,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.vfx.hud-milestone-ring",
@@ -5613,11 +4412,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.establishing-wide",
@@ -5633,11 +4428,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.establishing-interior",
@@ -5653,11 +4444,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.two-shot-neutral",
@@ -5673,11 +4460,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.two-shot-intimate",
@@ -5693,11 +4476,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.two-shot-tense",
@@ -5713,11 +4492,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.over-shoulder-left",
@@ -5733,11 +4508,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.over-shoulder-right",
@@ -5753,11 +4524,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.closeup-person-one",
@@ -5773,11 +4540,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.closeup-person-two",
@@ -5793,11 +4556,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.reaction-close",
@@ -5813,11 +4572,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.reaction-listen",
@@ -5833,11 +4588,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.insert-object",
@@ -5853,11 +4604,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.insert-hands",
@@ -5873,11 +4620,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.walking-enter",
@@ -5893,11 +4636,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.walking-exit",
@@ -5913,11 +4652,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.sitting-symmetric",
@@ -5933,11 +4668,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.sitting-asymmetric",
@@ -5953,11 +4684,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.standing-confront",
@@ -5973,11 +4700,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.window-side-light",
@@ -5993,11 +4716,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.doorway-reveal",
@@ -6013,11 +4732,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.conversation-triangle",
@@ -6033,11 +4748,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.three-person-blocking",
@@ -6053,11 +4764,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.family-table",
@@ -6073,11 +4780,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.hospital-bed",
@@ -6093,11 +4796,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.job-interview",
@@ -6113,11 +4812,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.school-principal",
@@ -6133,11 +4828,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.memory-mirror",
@@ -6153,11 +4844,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.age-transition",
@@ -6173,11 +4860,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.legacy-silhouette",
@@ -6193,11 +4876,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.camera.story-finale-wide",
@@ -6213,11 +4892,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.haptic.menu-select",
@@ -6233,11 +4908,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.choice-armed",
@@ -6253,11 +4924,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.choice-commit",
@@ -6273,11 +4940,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.action-error",
@@ -6293,11 +4956,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.important-alert",
@@ -6313,11 +4972,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.relationship-pulse",
@@ -6333,11 +4988,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.purchase-committed",
@@ -6353,11 +5004,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.age-milestone",
@@ -6373,11 +5020,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.world-interact",
@@ -6393,11 +5036,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.download-ready",
@@ -6413,11 +5052,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.social-message-optin",
@@ -6433,11 +5068,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.haptic.soft-warning",
@@ -6453,11 +5084,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "user_preference",
-        "no_unconfirmed_success",
-        "device_test"
-      ]
+      "qa": ["user_preference", "no_unconfirmed_success", "device_test"]
     },
     {
       "id": "liveit.prod.v1.font.display-licensed",
@@ -6473,11 +5100,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.font.body-licensed",
@@ -6493,11 +5116,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.font.hud-mono-licensed",
@@ -6513,11 +5132,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     },
     {
       "id": "liveit.prod.v1.font.diegetic-pixel-licensed",
@@ -6533,11 +5148,7 @@
       "sha256": null,
       "creator": null,
       "licenseEvidence": null,
-      "qa": [
-        "source_license",
-        "phone_smoke",
-        "audio_levels"
-      ]
+      "qa": ["source_license", "phone_smoke", "audio_levels"]
     }
   ]
 }
