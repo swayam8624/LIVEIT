@@ -36,6 +36,7 @@ type Field = Exclude<CareerPath, 'undecided'>;
 
 export function applyForJob(input: World, field: Field): World {
   const w = structuredClone(WorldSchema.parse(input));
+  if(w.player.ageDays < 18*365)throw new Error('Professional careers require age 18 or older.');
   const c = w.city ?? (w.city = initialCityState());
   const role = fields[field];
   if (!role) throw new Error('Unknown career path');
@@ -70,6 +71,7 @@ export function applyForJob(input: World, field: Field): World {
 
 export function attendJobInterview(input: World): World {
   const w = structuredClone(WorldSchema.parse(input));
+  if(w.player.ageDays < 18*365)throw new Error('Professional careers require age 18 or older.');
   const c = w.city;
   const employment = c?.employment;
   if (!employment || employment.stage !== 'applied')
@@ -109,6 +111,7 @@ export function attendJobInterview(input: World): World {
 
 export function requestPromotion(input: World): World {
   const w = structuredClone(WorldSchema.parse(input));
+  if(w.player.ageDays < 18*365)throw new Error('Professional careers require age 18 or older.');
   const c = w.city;
   const job = c?.employment;
   if (!job || job.stage === 'applied')
@@ -139,6 +142,7 @@ export function requestPromotion(input: World): World {
 
 export function resignFromJob(input: World): World {
   const w = structuredClone(WorldSchema.parse(input));
+  if(w.player.ageDays < 18*365)throw new Error('Professional careers require age 18 or older.');
   const c = w.city;
   if (!c?.employment || c.employment.stage === 'applied')
     throw new Error('You have no position to resign from.');
