@@ -11,6 +11,7 @@
 The world is a simulation with multiple cameras and render styles, **not** a 2D game sending pretend screenshots to an unrelated 3D cutscene app. World truth lives only in versioned deterministic TypeScript life/narrative simulation and its persisted domain data. A native GPU renderer can display/interpolate/pick, but can never invent trust, money, age, NPC identity, human contacts, authored branches, legitimate inventory, mortality or saved scene state.
 
 A user should:
+
 - walk a hand-authored 16px tile town;
 - enter a walkable home or café;
 - approach a named NPC, see a short pixel-world prompt;
@@ -24,16 +25,16 @@ Any engine implementation that cannot complete this loop is a prototype, not the
 
 ## 1. Reality baseline and migration discipline
 
-| Current on feature branch | Existing implementation | Required future destination |
-|---|---|---|
-| World and choices | packages/simulation-core, narrative-core, save-system; day/world data and identity | preserve them, add persisted location, tile pose and collision/interaction state without deleting legacy saves |
-| City graphics | apps/player/src/CityMap.tsx & CityWorld.tsx illustrate/choose districts, no walking | introduce atlas-based top-down walkable, navigable actual pixel city and interiors |
-| GPU proof | native/city-vulkan is a C++17 headless Vulkan compute CLI and pixel-buffer PPM output; shaders/city.comp raycasts rough city and shaders/actors.comp draws procedural 2.5D faces | reusable swapchain renderer and **two real-time graphics passes**: tile/sprite raster world plus true mesh/skeletal 3D cinema |
-| Story UI | StoryPlayer.tsx, GameStage.tsx, AvatarPortrait.tsx are RN art placeholders | keep functioning story state and accessible dialogue while replacing actor stage with native 3D viewport |
-| Appearance | world-schema/src/appearance.ts has saved cosmetic enums; buildVisualScene creates canonical actor appearances | deterministic appearance resolver into artist-approved 2D sprite variants and 3D mesh/rig/material slots |
-| Pack handling | visual-assets.ts schemas, prepareVisualPackActivation validates SHA-256 byte sizes/dep graph; 51 procedural recipe metadata items | signed/versioned pack publication, real atlases/models and on-device downloaded storage with atomic activation and rollback |
-| Rendering ABI | world-schema/src/render-contract.ts and simulation-core/src/render-adapter.ts added in Step 3 | live native Expo module, queue/frame IPC, GPU asset resource binding, actual click/gesture events and lifecycle integration |
-| Social/messaging | no real multiplayer or server AI chat | explicit separately labeled AI and human systems; separate secure transport, identity/consent and moderation, always outside render engine |
+| Current on feature branch | Existing implementation                                                                                                                                                          | Required future destination                                                                                                                |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| World and choices         | packages/simulation-core, narrative-core, save-system; day/world data and identity                                                                                               | preserve them, add persisted location, tile pose and collision/interaction state without deleting legacy saves                             |
+| City graphics             | apps/player/src/CityMap.tsx & CityWorld.tsx illustrate/choose districts, no walking                                                                                              | introduce atlas-based top-down walkable, navigable actual pixel city and interiors                                                         |
+| GPU proof                 | native/city-vulkan is a C++17 headless Vulkan compute CLI and pixel-buffer PPM output; shaders/city.comp raycasts rough city and shaders/actors.comp draws procedural 2.5D faces | reusable swapchain renderer and **two real-time graphics passes**: tile/sprite raster world plus true mesh/skeletal 3D cinema              |
+| Story UI                  | StoryPlayer.tsx, GameStage.tsx, AvatarPortrait.tsx are RN art placeholders                                                                                                       | keep functioning story state and accessible dialogue while replacing actor stage with native 3D viewport                                   |
+| Appearance                | world-schema/src/appearance.ts has saved cosmetic enums; buildVisualScene creates canonical actor appearances                                                                    | deterministic appearance resolver into artist-approved 2D sprite variants and 3D mesh/rig/material slots                                   |
+| Pack handling             | visual-assets.ts schemas, prepareVisualPackActivation validates SHA-256 byte sizes/dep graph; 51 procedural recipe metadata items                                                | signed/versioned pack publication, real atlases/models and on-device downloaded storage with atomic activation and rollback                |
+| Rendering ABI             | world-schema/src/render-contract.ts and simulation-core/src/render-adapter.ts added in Step 3                                                                                    | live native Expo module, queue/frame IPC, GPU asset resource binding, actual click/gesture events and lifecycle integration                |
+| Social/messaging          | no real multiplayer or server AI chat                                                                                                                                            | explicit separately labeled AI and human systems; separate secure transport, identity/consent and moderation, always outside render engine |
 
 Never call CI-rendered PPM screenshots proof that an iPhone has shown a Vulkan frame. Do not delete useful existing components before the real replacement passes device QA; fallback and feature flags remain available during transition.
 
@@ -84,6 +85,7 @@ Never call CI-rendered PPM screenshots proof that an iPhone has shown a Vulkan f
 Rendering is **read-only** relative to the life simulation. An NPC AI may suggest speech/expression intents, but those are data under moderation and author-schema constraints, not arbitrary GPU shader snippets or game commands.
 
 Boundaries:
+
 - Domain may be run headless and tested on Node, independent of GPU, clock, network, Android, React or Xcode.
 - Navigation grid/collision and bounded movement are domain/gameplay; the renderer may predict cosmetic interpolation only.
 - Native code owns GPU device, texture allocation, animation interpolation, frame pacing and pointer ray tests; does not own authoritative stats or story choices.
@@ -150,6 +152,7 @@ The module names/paths are proposed next implementation locations, not claims th
 ## 4. Renderer schema: what is already executable in Step 3
 
 The new world-schema/render-contract.ts defines:
+
 - PixelRenderFrameSchema: protocolVersion=1, timelineId, sceneRevision, day, playerEntityId, resource location ID, 16px tiles, logical camera, map ID, actor stable IDs, ages, saved appearance, facing, sprite atlas/pose, ambient lighting.
 - CinematicRenderFrameSchema: identical world stamp plus existing VisualSceneSchema (actors, place, age, outfit/appearance, expression, camera, lighting, props), checked against player identity and world day.
 - GameRenderFrameSchema: validated union of both visual registers; no GPU execution occurs during validation.
@@ -162,6 +165,7 @@ The new world-schema/render-contract.ts defines:
 The simulation-core/render-adapter.ts supplies buildPixelRenderFrame and buildCinematicRenderFrame. The former requires an **explicit real navigation pose argument** because current World v1 does not persist x/y or facing; it MUST NOT invent a supposedly saved location. The latter reuses buildVisualScene to keep the same saved identity and appearance in story and chat. These are data-contract helpers, NOT an iOS/Android native renderer.
 
 Production hardening before binary/FFI binding:
+
 - Add stable scene-pack and tile collision-map hash, tile/world-space coordinate conventions and authoritative NPC roster.
 - Add strict resource ID resolution against installed asset index; current adapter uses expected future tilemap/atlas IDs that may not yet exist; fail visibly, never secretly pretend a missing pack rendered.
 - Bound frame actor counts and payload bytes; reject NaN/Infinity, oversized ID lists, duplicate actor IDs, invalid choice ID and cross-timeline snapshots.
@@ -201,12 +205,14 @@ Do not treat this abbreviated illustrative appearance object as valid schema inp
 ## 5. Coordinate systems and precision
 
 World:
+
 - Pixel town uses authored TileCoord (int32 x/y), world positions in tile units (float/fixed) with x east, y south. Sprite anchors at feet, not texture top-left.
 - Logical art pixels = tile coordinate * 16 + offset; camera centers in logical art pixels, rendered with end-of-frame pixel snap to avoid shimmering.
 - Collider footprints are smaller than visual sprites; actor world position and collision resolution do not derive from GPU alpha.
 - 3D cinematic uses meters and right-handed x-right, y-up, z-forward convention with positive height. A scene attachment holds canonical actor identity and rig root; do not interpolate the 2D x/y directly into facial bones.
 
 Pixel camera:
+
 - GDS-001: 320×256 nominal viewport and 16×16 source tiles, dynamically extend/crop by device ratio. Baseline is a visual design frame, not Game Boy 160×144 resolution.
 - Example target 960×768 physical viewport => scale 3, visible 320×256 art pixels. A taller display can expose more vertical world area while maintaining integer nearest-neighbor scaling.
 - Compute viewport and safe area in **device physical pixels**, not CSS dp. The phone's notch and bottom HUD are excluded before scale selection. Place any fractional remainder as an even letterbox inset/crop (never stretch).
@@ -214,6 +220,7 @@ Pixel camera:
 - Do not use TAA, FXAA, bilinear atlas filtering or mip filtering on pixel-layer art unless an isolated optional effect does not blur edges.
 
 Cinema camera:
+
 - Perspective/orthographic authorable camera, true 3D transform hierarchy; sampled in physical device resolution with dynamic render resolution 0.7–1.0 as chosen.
 - World-space actor positions and camera are used for geometric ray picking; character heads are protected in safe framing when dialogue docks expand or keyboard appears.
 - Smooth sRGB/linear lighting pipeline, standard tonemap and artist controls; do not pixelate 3D cinema to imitate overworld.
@@ -232,6 +239,7 @@ A frame command goes through:
      -> NativeHUDOverlay (real accessible controls)
 
 Asset format:
+
 - Author original environment tiles 16×16, pack to GPU RGBA atlas with padding and controlled UVs (2–4px border extrusion / guard pixels if required); no texel bleeding or half-pixel UV mistakes.
 - Sprite animation atlas: named entities with four cardinal directions and four walks per direction initially, plus idle/interaction; animation frame via fixed gameplay elapsed time, not independent desynchronized frame clocks.
 - Region chunking: suggested 32×32 tiles per chunk with 1-tile overdraw margin; maintain resident center chunks + neighboring chunks; shader draws visible tiles via instancing rather than 2000 draw calls per tile.
@@ -278,6 +286,7 @@ A cinema frame:
       -> NativeDialogueDock/Text/ChoiceWidgets (separate view layer)
 
 Character requirements:
+
 - Model/rig family with consistent named joints (hips/spine/chest/neck/head/arms/hands and facial controls), eyes gaze, eyelids, brow shapes, mouth/lips/cheeks, fingers, hair attachments and cloth/outfit parts.
 - Existing 12 expression names map to a set of weighted facial morph targets and body expression cues. Time-aligned phoneme/viseme mouth blending can be derived from text duration until licensed voice/dialogue exists. Expressions cannot assign XP, trust or change scene speaker.
 - Animations state machine includes idle, listen, speak, laugh, cry, anger, worry, shy, gesture and age/posture variations. Crossfade 100–300ms where emotionally appropriate; no hard snap between poses.
@@ -342,6 +351,7 @@ Define explicit orchestration with monotonically increasing generation tokens an
 On every asynchronous completion, compare generation and sceneRevision with active token, or silently discard stale result. The first successful scene retains the pixel renderer resources warm for quick return if memory permits. When memory pressure is high, release noncritical 3D resources first and reconstruct only after identity and scene packet validation; never discard the authoritative world.
 
 Errors:
+
 - Could not prefetch 3D: keep player position, show accessible dialogue fallback or explicit retry/return—not fake 3D.
 - User cancels before start: discard pending scene and don't commit a choice.
 - GPU device lost mid-dialogue: preserve scene/story choice progress; suspend 3D view, show readable fallback; recreate GPU resources after OS allows.
@@ -372,6 +382,7 @@ Proposed JS API interface:
 The actual generated implementation binds the existing Zod-validated Frame/Quality schema before sending across FFI. Do not pass a new huge JSON frame on every vsync: send whole immutable snapshots only on scene/identity changes, small pose/direction diffs on gameplay fixed ticks, and let the native frame scheduler extrapolate/interpolate presentation. Batch messages and cap queue length (max latest snapshot + bounded priority commands). Render thread never blocks on JS callbacks, networking, disk or React layout.
 
 Platform:
+
 - Kotlin ExpoView wraps an Android SurfaceView. SurfaceHolder.Callback.surfaceCreated/surfaceChanged/surfaceDestroyed owns and transfers ANativeWindow to C++ via JNI. Acquire/release references correctly. On main/UI thread, create/destroy view only, enqueue renderer operations, receive bounded events; on background thread, create Vulkan instance/device/queues/surface/swapchain and render. Surface pause/resume and orientation changes force swapchain rebuild only when safe.
 - Android Vulkan requires extensions VK_KHR_surface, VK_KHR_android_surface, VK_KHR_swapchain (plus device-required supported extensions) and correct transfer to ANativeWindow. Vulkan device and present queue capability checks must succeed; discover formats and present modes, prefer FIFO for safe pacing; handle OUT_OF_DATE/SUBOPTIMAL.
 - iOS Swift ExpoView hosts a CAMetalLayer on UIView. Objective-C++ bridge provides the CAMetalLayer pointer to shared C++ code, creates VkSurfaceKHR using VK_EXT_metal_surface and handles display drawable scale, resize and detach. The view must have correct layer lifecycle/delegate association. MoltenVK.xcframework is bundled/link-verified with correct simulator/device slices and license. Vulkan portability enumeration/subset is probed and enabled **when advertised**, not blindly assumed. See official MoltenVK runtime guide.
@@ -408,6 +419,7 @@ The actual Vulkan presentation logic must use swapchain images, acquire/present,
 ## 11. Timing, animation and frame scheduler
 
 Simulation tick is **authoritative**, rendering interpolation is ephemeral:
+
 - Life/day/annual ticks occur only via explicit player action, never because the app produced 60 frames. No background simulator autonomously drains money because a view kept running.
 - Movement animation fixed tick (recommend 30/60Hz) independent of Vulkan display frame; stable delta-time and cap maximum catch-up ticks after resume to avoid huge teleport loops.
 - Presentation maxFPS configurable 60/30 and respect system power/reduce motion; animation time in render packet uses monotonic frame-time local to view, not absolute Date.now() as a world clock.
@@ -443,6 +455,7 @@ Outcome widgets contain title, type, actual stats/relationship deltas, source ev
 ## 13. Audio and action-to-motion timing
 
 Game UI tactile grammar from GDS-001:
+
 - touch acknowledgment 0–50ms target, short press spring 80–140ms;
 - menus/drawers 160–340ms with semantic focus;
 - warm pixel→cinematic handoff 450–750ms;
@@ -466,6 +479,7 @@ Current WorldSchema schemaVersion=1 and save-system persist main/standalone narr
     }
 
 The above is a PROPOSED v1-compatible optional field. Do not add it to current saves or claim migration completed in this step. Final policy:
+
 - optional default for old lives, valid authored entrance/spawn selected once by deterministic rule; no forced new life;
 - serialized world references content-pack version, scene IDs and current story progress by stable IDs; avoid plain string open-coded arbitrary names in production;
 - save snapshots/ledger use revision monotonicity and idempotency keys. For meaningful choices, use atomic update of world and event metadata or app-level transaction/recovery journal; a screen-only animation does not imply durable save.
@@ -502,6 +516,7 @@ Do not permit content packs to ship runtime SPIR-V/MSL/JNI/Swift scripts. New vi
 ## 16. Real-time performance budget / quality tiers
 
 Targets for first profiled GPU device class (provisional, never asserted measured):
+
 - 60fps target: 16.67ms total frame. Plan CPU game/input/handoff ~1.5–3ms, GPU pixel-world + weather/composite <=5ms, 3D cinema GPU <=9–11ms high tier, headroom for OS/UI/present. These components may overlap, so sum is diagnostic, not arithmetic guarantee.
 - Battery tier: max 30fps, cinematic internal scale ~0.7, simpler shadows/skin/hair, no expensive bloom/DOF. **Pixel layer stays crisp and tile-aligned** (integer world scaling).
 - Balanced tier: target 60fps only when thermal headroom exists; cinema internal scale ~0.85, normal shadows/FX.
@@ -522,19 +537,19 @@ Targets for first profiled GPU device class (provisional, never asserted measure
 
 ## 18. Verification matrix, CI and QA
 
-| Layer | Deterministic test | Required release evidence |
-|---|---|---|
-| Schema/ABI | Vitest validates frame versions, actor identity parity, invalid inputs, stale scenes and receipt states | tests/render-contract.test.ts passing, TypeScript and lint green |
-| World movement | fixed-step collision, doorway/return, tap-route A*, save/restore, blocked/multitouch | scripted seeded action trace and screenshots |
-| Pixel GPU | nearest atlas filtering, no seams at 1x/2x/3x, palette/shadow/weather | PNG/golden captures from true Vulkan and pixel equality/approved tolerance |
-| Cinematic GPU | actual skinned glTF rig and 12 expressions, different outfit/lighting | GPU captures from scene with true 3D geometry, not actors.comp procedural faces |
-| Bridge | native device/swapchain init, resize, background/foreground, loss/rebuild, stale event | iOS simulator + physical iPhone; Android emulator + physical device native logs/captures |
-| Handoff | player↔NPC identity parity, pixel location preserved, exact return | scripted mobile E2E video with real UI interactions |
-| Persistence | idempotency, failed AsyncStorage write, duplicate choice, crash after commit and before widget | durable journal/recovery tests |
-| Assets | pack hashes, license metadata, truncation, duplicate/cycle, budget caps, rollback, offline | validated install/uninstall on actual devices |
-| Haptics / HUD | semantic actions, disabled/reduced motion, focus/accessibility | device haptic instrumentation and TalkBack/VoiceOver manual QA |
-| Performance | frame-time distributions, thermals, memory, power, 10-minute play | measured device reports, not source-code promises |
-| Safety/social | real-vs-AI labeling, no fake contacts, report/block, abuse fallback | QA with multi-client test accounts and policy review |
+| Layer          | Deterministic test                                                                                      | Required release evidence                                                                |
+| -------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Schema/ABI     | Vitest validates frame versions, actor identity parity, invalid inputs, stale scenes and receipt states | tests/render-contract.test.ts passing, TypeScript and lint green                         |
+| World movement | fixed-step collision, doorway/return, tap-route A*, save/restore, blocked/multitouch                    | scripted seeded action trace and screenshots                                             |
+| Pixel GPU      | nearest atlas filtering, no seams at 1x/2x/3x, palette/shadow/weather                                   | PNG/golden captures from true Vulkan and pixel equality/approved tolerance               |
+| Cinematic GPU  | actual skinned glTF rig and 12 expressions, different outfit/lighting                                   | GPU captures from scene with true 3D geometry, not actors.comp procedural faces          |
+| Bridge         | native device/swapchain init, resize, background/foreground, loss/rebuild, stale event                  | iOS simulator + physical iPhone; Android emulator + physical device native logs/captures |
+| Handoff        | player↔NPC identity parity, pixel location preserved, exact return                                      | scripted mobile E2E video with real UI interactions                                      |
+| Persistence    | idempotency, failed AsyncStorage write, duplicate choice, crash after commit and before widget          | durable journal/recovery tests                                                           |
+| Assets         | pack hashes, license metadata, truncation, duplicate/cycle, budget caps, rollback, offline              | validated install/uninstall on actual devices                                            |
+| Haptics / HUD  | semantic actions, disabled/reduced motion, focus/accessibility                                          | device haptic instrumentation and TalkBack/VoiceOver manual QA                           |
+| Performance    | frame-time distributions, thermals, memory, power, 10-minute play                                       | measured device reports, not source-code promises                                        |
+| Safety/social  | real-vs-AI labeling, no fake contacts, report/block, abuse fallback                                     | QA with multi-client test accounts and policy review                                     |
 
 **Existing CI:** .github/workflows/city-vulkan.yml compiles and runs the headless Vulkan compute PPM previews using Mesa Lavapipe, with pixel-change assertions. This is retained as a GPU regression suite but cannot prove the above release gates.
 
@@ -614,7 +629,7 @@ Expo Haptics: https://docs.expo.dev/versions/latest/sdk/haptics/ .
 iOS content/social policy: https://developer.apple.com/app-store/review/guidelines/ .
 World/source of truth: packages/world-schema, packages/simulation-core, apps/player, native/city-vulkan from LIVEIT feature branch and GDS-001/GDS-002.
 
-The expected code already committed for Step 3 is the *typed architecture boundary* (render-contract, render-adapter, tests). The actual mobile swapchain, pixel GPU atlas renderer, 3D rigged actors, haptics, motion stack and storage/location migration are implementation milestones to execute in future steps after this design is accepted. Do not conflate a complete engineering specification with completed application graphics.
+The expected code already committed for Step 3 is the _typed architecture boundary_ (render-contract, render-adapter, tests). The actual mobile swapchain, pixel GPU atlas renderer, 3D rigged actors, haptics, motion stack and storage/location migration are implementation milestones to execute in future steps after this design is accepted. Do not conflate a complete engineering specification with completed application graphics.
 
 ## 22. Handoff to remaining user-requested steps
 
