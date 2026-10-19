@@ -281,9 +281,50 @@ export function ArcadePixelLife({
     const npc = npcAt(hero.current.place);
     return Math.hypot(hero.current.x - npc.x, hero.current.y - npc.y) <= 1.8;
   }, []);
+  const openNPCChat = useCallback((npc: SocialNPC) => {
+    if (!loaded || busyRef.current) return;
+    if (!canTalkTo(world, npc)) {
+      setNotice('This character is not available in your life yet.');
+      return;
+    }
+    setDraft('');
+    setAiError('');
+    // Every NPC owns an independent transcript. Only replies from Ollama
+    // populate the NPC side of a conversation — never canned pseudo-AI text.
+    if (currentNpcRef.current !== npc) {
+      const outgoing=currentNpcRef.current;
+      void AsyncStorage.setItem(gameKey+'.chat.'+outgoing,
+        JSON.stringify(chatRef.current.slice(-80))).catch(()=>{});
+      setChatLoading(true);
+      currentNpcRef.current=npc;
+      setCurrentNpc(npc);
+      chatRef.current=[];
+      setMessages([]);
+      void AsyncStorage.getItem(gameKey+'.chat.'+npc).then(raw=>{
+        if(currentNpcRef.current!==npc) return;
+        let history:Message[]=[];
+        try {
+          const data: unknown=raw ? JSON.parse(raw) : [];
+          if(Array.isArray(data)) {
+            history=data.filter((x):x is Message=>Boolean(x) &&
+              typeof x==='object' &&
+              (x.speaker==='npc'||x.speaker==='player') &&
+              typeof x.text==='string').slice(-80);
+          }
+        } catch {/* Invalid sidecar never corrupts the canonical World. */}
+        chatRef.current=history;
+        setMessages(history);
+        setChatLoading(false);
+      }).catch(()=>{
+        if(currentNpcRef.current===npc)setChatLoading(false);
+      });
+    }
+    setPanel('talk');
+  }, [gameKey, loaded, world]);
+
   const startChat = useCallback(() => {
-    if (world.player.ageDays < 18 * 365) {
-      setNotice('This adult NPC encounter unlocks once you turn 18. Play your childhood and make friends first.');
+    if (!canTalkTo(world, 'amelia')) {
+      setNotice('Amelia is available only after you have met her as an adult.');
       return;
     }
     if (!isNearNpc()) {
@@ -291,16 +332,13 @@ export function ArcadePixelLife({
       return;
     }
     missionEvent('meet');
-    setPanel('talk');
-    if (chatRef.current.length === 0) setMessages([{
-      speaker: 'npc',
-      text: 'Oh, hey! I thought I recognized you. How have you been?',
-    }]);
-  }, [isNearNpc, missionEvent, world.player.ageDays]);
+    openNPCChat('amelia');
+  }, [isNearNpc, missionEvent, openNPCChat, world]);
 
   const submit = useCallback(async (suggested?: string) => {
     const sentence = safeText(suggested ?? draft);
-    if (!sentence || busyRef.current) return;
+    if (!sentence || busyRef.current || chatLoading) return;
+    const npc=currentNpcRef.current;
     const updated = [...chatRef.current, { speaker: 'player' as const, text: sentence }];
     chatRef.current = updated;
     setMessages(updated);
@@ -309,19 +347,24 @@ export function ArcadePixelLife({
     setWaiting(true);
     setAiError('');
     try {
-      const reply = await npcFromLocalModel(endpoint, localModel, updated, world.player.name,
-        Math.floor(world.player.ageDays / 30));
+      const reply = await npcFromLocalModel(endpoint, localModel, updated, world, npc);
       setModelMode('local');
       setAiStatus('Connected to ' + localModel);
-      setMessages(existing => [...existing, { speaker: 'npc' as const, text: reply }].slice(-80));
-      if (/\b(work|job|career|employment|rent|earnings)\b/i.test(sentence)) {
+      const conversation=[...updated,{speaker:'npc' as const,text:reply}].slice(-80);
+      chatRef.current=conversation;
+      setMessages(conversation);
+      // Write real model exchanges into the same canonical save that all
+      // authored stories, family choices and economic actions depend on.
+      const offset=Math.min(29,Math.floor(clockRef.current/(MONTH_MS/30)));
+      onNPCConversation(npc,sentence,reply,offset);
+      if (npc==='amelia' && /\b(work|job|career|employment|rent|earnings)\b/i.test(sentence)) {
         missionEvent('work');
       }
     } catch (cause) {
-      // Never impersonate an LLM with a handful of canned responses. Restore
-      // unsent text and make the failure and remedy explicitly visible.
-      setMessages(updated.slice(0, -1));
-      chatRef.current = updated.slice(0, -1);
+      // No model = no simulated reply and no invented persistent memory.
+      const prior=updated.slice(0,-1);
+      chatRef.current=prior;
+      setMessages(prior);
       setDraft(sentence);
       setModelMode('error');
       const reason = cause instanceof Error ? cause.message : String(cause);
@@ -332,7 +375,7 @@ export function ArcadePixelLife({
       busyRef.current = false;
       setWaiting(false);
     }
-  }, [draft, endpoint, localModel, missionEvent, world.player.ageDays, world.player.name]);
+  }, [chatLoading, draft, endpoint, localModel, missionEvent, onNPCConversation, world]);
 
   // No setState inside the 60/120 Hz world loop. The movement animation and
   // following camera remain smooth even if no React component re-renders.
