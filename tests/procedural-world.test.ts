@@ -9,7 +9,7 @@ describe('procedural infinite world coordinate model', () => {
     expect(chunkOf(0,0)).toEqual({cx:0,cy:0,lx:0,ly:0});
   });
   it('is deterministic and samples far-away tiles without allocating all chunks',()=>{
-    for(const [x,y] of [[-1,0],[409600,12],[-409601,-200000],[31,31],[32,32]]) {
+    for(const [x,y] of ([[-1,0],[409600,12],[-409601,-200000],[31,31],[32,32]] as Array<[number,number]>)) {
       expect(worldCell('street',x,y,seed)).toEqual(worldCell('street',x,y,seed));
       expect(biomeAt(seed,x,y)).toEqual(biomeAt(seed,x,y));
     }
