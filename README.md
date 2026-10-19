@@ -78,6 +78,7 @@ installation, outside-app decompilation and full game parity are not claimed.
 Independent Vulkan C++/SPIR-V compute tests in [native/city-vulkan](native/city-vulkan) can render seed-generated 3D buildings and 2.5D actor illustrations into PPM files in software or hardware Vulkan. They validate shader execution, **not** a live Vulkan app viewport or production 3D rigged dialogue. The future shared renderer uses Android Vulkan and iOS MoltenVK and keeps accessible native HUD text.
 
 **Follow the specifications in order:**
+
 - [Step 1 · Final graphics bible](docs/LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md)
 - [Step 2 · All 43 screens and interaction states](docs/LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md) and [browsable screen atlas](docs/design/LIVEIT_SCREEN_ATLAS.html)
 - [Step 3 · Architecture and native implementation gates](docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md)
