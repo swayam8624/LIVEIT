@@ -767,7 +767,7 @@ export function ArcadePixelLife({
           <HudButton title="★" detail="ACTIVITY" onPress={() => {pauseMovement(); setActivityFeedback(''); setPanel('activities');}} />
           <HudButton title="♫" detail="PEOPLE" onPress={() => {pauseMovement();setPanel('people');}} />
           <HudButton title="▤" detail="JOURNAL" onPress={() => {pauseMovement();setPanel('journal');}} />
-          {world.school && world.school.phase!=='graduated' && (
+          {world.school && world.school.phase!=='graduated' && world.school.phase!=='not_started' && (
             <HudButton title="✎" detail="SCHOOL" onPress={() => {
               pauseMovement();setLifeSystemFeedback('');setPanel('school');
             }} />
