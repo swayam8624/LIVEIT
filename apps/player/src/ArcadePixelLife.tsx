@@ -14,12 +14,12 @@ import { OFFICIAL_STORIES } from '@living/content';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
 import { modernSpriteColumn } from './spriteDirections';
-import { worldCell, seedFromTimeline, visibleWorldTiles, biomeAt, chunkOf } from './proceduralWorld';
+import { worldCell, seedFromTimeline, visibleWorldTiles, biomeAt, chunkOf, validInfinitePosition } from './proceduralWorld';
 import { MISSION_GOALS, missionExpired, newMission, parseMissions, resolveMissionEvent,
   type LifeMission, type MissionGoal, type MissionEvent } from './missionGoals';
 import {
   INITIAL_POSITION, STREET_WIDTH, STREET_HEIGHT, CAFE_WIDTH, CAFE_HEIGHT,
-  npcAt, validPixelPosition,
+  npcAt,
   type Facing, type PixelPlace, type PixelPosition,
 } from './pixelTownLogic';
 
@@ -238,7 +238,7 @@ export function ArcadePixelLife({
       if (!active) return;
       try {
         const p: unknown = location ? JSON.parse(location) : INITIAL_POSITION;
-        if (validPixelPosition(p)) {
+        if (validInfinitePosition(p, worldSeed)) {
           hero.current = { x: p.x, y: p.y, place: p.place };
           setPlace(p.place);
           setFacing(p.facing);
@@ -527,7 +527,7 @@ export function ArcadePixelLife({
           place: p.place, x: Math.round(p.x), y: Math.round(p.y),
           facing: facingNow,
         };
-        if (validPixelPosition(coord))
+        if (validInfinitePosition(coord, worldSeed))
           void AsyncStorage.setItem(gameKey + '.location', JSON.stringify(coord)).catch(() => {});
         lastSave = timestamp;
       }
