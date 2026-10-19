@@ -10,7 +10,6 @@ import { VisualSceneSchema } from './visual-assets';
 const ResourceId = z
   .string()
   .regex(/^[a-z][a-z0-9_-]*(?:[./][a-z0-9_-]+)+$/);
-const NonNegativeFinite = z.number().finite().nonnegative();
 const WorldStamp = {
   protocolVersion: z.literal(1),
   sceneRevision: z.number().int().nonnegative(),
