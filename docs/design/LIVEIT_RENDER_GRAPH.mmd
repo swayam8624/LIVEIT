@@ -1,0 +1,59 @@
+flowchart TB
+  subgraph Gameplay["Authoritative LIVEIT Gameplay"]
+    Input["Touch / Controller / Accessibile UI Intent"]
+    Domain["TypeScript: World + Narrative + NPC Rule Engine"]
+    Save["SaveCoordinator: World Revision and Event Receipt"]
+    Input --> Domain --> Save
+  end
+
+  subgraph Bridge["Validated Render Contract (V1)"]
+    Scene["BuildRenderFrame: Saved Identity and Real Navigation Pose"]
+    State["Transition State Machine + Bounded Mailbox"]
+    Receipt["Outcome Receipt: Pending / Committed / Failed"]
+    Save --> Scene --> State
+    Save --> Receipt
+  end
+
+  subgraph GPU["Shared Vulkan C++ RenderHost"]
+    Surface["Platform Surface + Vulkan Swapchain"]
+    Registry["Verified Asset IDs + GPU Resource Cache"]
+    Pixel["Pixel Overworld Pass: Tiles + Sprites + Pixel Weather"]
+    Cinema["Cinema Pass: Real Mesh + Rig + Face + Lighting"]
+    Transition["Composition, Scene Transitions and Present"]
+    Registry --> Pixel
+    Registry --> Cinema
+    State --> Pixel
+    State --> Cinema
+    Pixel --> Transition
+    Cinema --> Transition
+    Transition --> Surface
+  end
+
+  subgraph Platform["Native Platforms"]
+    Android["Android Kotlin ExpoView + ANativeWindow + Vulkan"]
+    Apple["iOS Swift ExpoView + CAMetalLayer + MoltenVK"]
+    HUD["Accessible RN HUD + Dialogue + Haptics"]
+    Surface --> Android
+    Surface --> Apple
+    Receipt --> HUD
+  end
+
+  Android -. "Visual selection → typed intent" .-> Input
+  Apple -. "Visual selection → typed intent" .-> Input
+
+  subgraph Growth["Data-only Licensed Art and Content"]
+    Packs["Versioned Manifests, Hashes, Provenance, Signature"]
+    Atlases["Original Pixel Atlases and Tilemaps"]
+    Rigs["Licensed glTF Rigs, Animations and Material Textures"]
+    Packs --> Atlases
+    Packs --> Rigs
+    Atlases --> Registry
+    Rigs --> Registry
+  end
+
+  classDef authority fill:#264438,stroke:#97e6ac,color:#f5f2d9
+  classDef proto fill:#223449,stroke:#507174,color:#f5f2d9
+  classDef native fill:#534436,stroke:#ffd28a,color:#f5f2d9
+  class Domain,Save authority
+  class Scene,State,Pixel,Cinema,Registry,Receipt proto
+  class Surface,Android,Apple native

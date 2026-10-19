@@ -1,0 +1,119 @@
+#version 450
+// An actual Vulkan compute renderer, not a CPU-drawn mockup.
+// One invocation per pixel; results are read back to a portable PPM.
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
+layout(set = 0, binding = 0, std430) writeonly buffer Pixels {
+  uint pixels[];
+};
+struct CityBlock {
+  vec4 position; // x, z, height, facadeColorIndex
+  vec4 dimensions; // width, depth, reserved, reserved
+};
+layout(set = 0, binding = 1, std430) readonly buffer CityBlocks {
+  CityBlock blocks[];
+};
+layout(push_constant) uniform Config {
+  uint width;
+  uint height;
+  uint blockCount;
+  uint night;
+  float cameraYaw;
+  float cameraAltitude;
+  float cameraDistance;
+  float exposure;
+} cfg;
+
+float intersectBox(vec3 origin, vec3 direction, vec3 bmin, vec3 bmax) {
+  // Robust slab test with small nonzero denominators for axis-aligned rays.
+  vec3 safe = mix(direction, vec3(0.000001), lessThan(abs(direction), vec3(0.000001)));
+  vec3 t0 = (bmin - origin) / safe;
+  vec3 t1 = (bmax - origin) / safe;
+  vec3 nearV = min(t0, t1);
+  vec3 farV = max(t0, t1);
+  float nearT = max(max(nearV.x, nearV.y), nearV.z);
+  float farT = min(min(farV.x, farV.y), farV.z);
+  return farT >= max(nearT, 0.0) ? max(nearT, 0.001) : 1.0e20;
+}
+uint packColor(vec3 rgb) {
+  uvec3 u = uvec3(clamp(rgb, 0.0, 1.0) * 255.0 + 0.5);
+  return u.x | (u.y << 8) | (u.z << 16) | 0xff000000u;
+}
+void main() {
+  uvec2 px = gl_GlobalInvocationID.xy;
+  if (px.x >= cfg.width || px.y >= cfg.height) return;
+
+  float aspect = float(cfg.width) / float(cfg.height);
+  vec2 uv = (vec2(px) + 0.5) / vec2(cfg.width, cfg.height);
+  vec2 ndc = (uv - 0.5) * 2.0;
+  vec3 camera = vec3(
+    sin(cfg.cameraYaw) * cfg.cameraDistance,
+    cfg.cameraAltitude,
+    cos(cfg.cameraYaw) * cfg.cameraDistance
+  );
+  vec3 forward = normalize(-camera);
+  vec3 right = normalize(cross(forward, vec3(0.0, 1.0, 0.0)));
+  vec3 up = normalize(cross(right, forward));
+  vec3 direction = normalize(forward + right * ndc.x * 0.72 * aspect - up * ndc.y * 0.72);
+
+  vec3 color = mix(
+    cfg.night == 1u ? vec3(0.035, 0.075, 0.14) : vec3(0.27, 0.53, 0.64),
+    cfg.night == 1u ? vec3(0.13, 0.25, 0.36) : vec3(0.61, 0.80, 0.75),
+    clamp(uv.y, 0.0, 1.0)
+  );
+  float depth = 1.0e20;
+  if (direction.y < -0.0001) {
+    float t = -camera.y / direction.y;
+    if (t > 0.0 && t < depth) {
+      vec3 p = camera + direction * t;
+      depth = t;
+      float avenue = min(abs(p.x), abs(p.z));
+      float path = min(abs(mod(p.x + 4.5, 9.0) - 4.5),
+                       abs(mod(p.z + 4.5, 9.0) - 4.5));
+      color = vec3(0.18, 0.36, 0.33);
+      if (avenue < 3.6 || path < 0.65) color = vec3(0.13, 0.19, 0.24);
+      if (p.x < -37.5 && p.z > -13.0) color = vec3(0.12, 0.35, 0.48);
+      if (abs(p.x) < 0.11 || abs(p.z) < 0.11) color = vec3(0.72, 0.63, 0.40);
+    }
+  }
+  vec3 facade[5] = vec3[5](
+    vec3(0.24, 0.50, 0.61),
+    vec3(0.37, 0.37, 0.59),
+    vec3(0.73, 0.46, 0.34),
+    vec3(0.52, 0.36, 0.53),
+    vec3(0.29, 0.56, 0.41)
+  );
+  for (uint i = 0u; i < cfg.blockCount; ++i) {
+    CityBlock b = blocks[i];
+    vec3 bmin = vec3(
+      b.position.x - b.dimensions.x * 0.5,
+      0.0,
+      b.position.y - b.dimensions.y * 0.5
+    );
+    vec3 bmax = vec3(
+      b.position.x + b.dimensions.x * 0.5,
+      b.position.z,
+      b.position.y + b.dimensions.y * 0.5
+    );
+    float t = intersectBox(camera, direction, bmin, bmax);
+    if (t < depth) {
+      depth = t;
+      vec3 p = camera + direction * t;
+      vec3 lit = facade[int(uint(b.position.w) % 5u)];
+      // Roof, sunlit facade, shadow facade.
+      if (abs(p.y - bmax.y) < 0.065) lit *= 1.24;
+      else if (abs(p.x - bmin.x) < 0.065 || abs(p.x - bmax.x) < 0.065) lit *= 0.73;
+      // Warm emissive windows: deterministic coordinates, no texture assets.
+      vec3 local = p - bmin;
+      bool winX = fract(local.x * 0.37) > 0.12 && fract(local.x * 0.37) < 0.68;
+      bool winZ = fract(local.z * 0.37) > 0.12 && fract(local.z * 0.37) < 0.68;
+      bool winY = fract(local.y * 0.32) > 0.32 && fract(local.y * 0.32) < 0.6;
+      if (cfg.night == 1u && winY && (winX || winZ) && abs(p.y - bmax.y) > 0.08) {
+        float lightOn = fract(sin(float(i) * 91.13 + floor(local.y * 0.3) * 57.3) * 43758.5);
+        if (lightOn > 0.37) lit = vec3(1.0, 0.76, 0.41);
+      }
+      color = lit;
+    }
+  }
+  if (cfg.night == 1u) color *= cfg.exposure;
+  pixels[px.y * cfg.width + px.x] = packColor(color);
+}

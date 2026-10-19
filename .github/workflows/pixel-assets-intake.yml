@@ -1,0 +1,29 @@
+name: Pixel asset intake safety
+
+on:
+  push:
+    paths:
+      - 'tools/intake_pixel_assets.py'
+      - 'tools/validate_pixel_assets.py'
+      - 'tools/test_intake_pixel_assets.py'
+      - 'assets/imported/**'
+      - '.github/workflows/pixel-assets-intake.yml'
+  pull_request:
+    paths:
+      - 'tools/intake_pixel_assets.py'
+      - 'tools/validate_pixel_assets.py'
+      - 'tools/test_intake_pixel_assets.py'
+      - 'assets/imported/**'
+      - '.github/workflows/pixel-assets-intake.yml'
+
+jobs:
+  pixel-asset-intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Python scripts compile
+        run: python3 -m py_compile tools/intake_pixel_assets.py tools/validate_pixel_assets.py tools/test_intake_pixel_assets.py
+      - name: Scan/import ZIP, path-traversal and licensing smoke tests
+        run: python3 -m unittest discover -s tools -p 'test_intake_pixel_assets.py' -v
+      - name: Validate all approved public 2D and audio imports
+        run: python3 tools/validate_pixel_assets.py --json

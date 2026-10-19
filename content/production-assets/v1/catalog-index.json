@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "liveit.production.v1",
+  "version": "2026-10-19",
+  "branch": "feat/native-life-economic-foundation",
+  "authority": [
+    "docs/LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md",
+    "docs/LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md",
+    "docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md",
+    "docs/ASSET_PRODUCTION_BIBLE_V1.md"
+  ],
+  "status": "all-planned-not-acquired",
+  "sourceFiles": [
+    "characters-3d.json",
+    "locations-3d.json",
+    "pixel-world.json",
+    "hud-audio-fx.json"
+  ],
+  "sourceFileCounts": {
+    "characters-3d.json": 457,
+    "locations-3d.json": 290,
+    "pixel-world.json": 413,
+    "hud-audio-fx.json": 321
+  },
+  "itemsPlanned": 1481,
+  "itemsReleased": 0,
+  "categoryTargets": {
+    "character-rig-part": 400,
+    "base-rig": 5,
+    "facial-expression": 12,
+    "character-animation": 40,
+    "cinematic-location": 200,
+    "cinematic-prop": 90,
+    "pixel-tile": 302,
+    "pixel-map": 40,
+    "pixel-sprite-family": 55,
+    "pixel-weather": 16,
+    "hud": 105,
+    "sfx": 73,
+    "music": 27,
+    "shader": 30,
+    "vfx": 40,
+    "camera": 30,
+    "haptic": 12,
+    "font": 4
+  },
+  "productionWaves": {
+    "P0": 723,
+    "P1": 501,
+    "P2": 257
+  },
+  "milestoneGoals": {
+    "customizationParts": 400,
+    "distinctCinematicLocations": 200,
+    "cinematicExpressions": 12,
+    "cinematicCameraPresets": 30,
+    "pixelWorldTilePx": 16,
+    "minimumPixelActorFamilies": 55
+  },
+  "initialVerifiedPrototypeAudit": "existing-repo-audit.json",
+  "disclaimer": "Catalog units are individually specified work items, not delivered unique binary files. No planned entry has source/licensing proof or a completed runtime asset; distinct parts and locations require actual authored work and device QA."
+}

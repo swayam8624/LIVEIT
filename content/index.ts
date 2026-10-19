@@ -205,91 +205,262 @@ export const bookshop = parseStory({
   id: 'official.the-bookshop',
   version: 1,
   title: 'A Place for Second Chances',
-  description: 'The opening night of Amelia’s bookshop. Old friendships and new obligations collide.',
+  description:
+    'The opening night of Amelia’s bookshop. Old friendships and new obligations collide.',
   compatibleWorlds: ['modern_life_v1'],
   minAge: 18,
   permissions: { relationshipTargets: ['amelia'], memoryTargets: ['amelia'] },
   entry: 'doorway',
   scenes: [
     {
-      id: 'doorway', speaker: 'Amelia', mood: 'reflective',
+      id: 'doorway',
+      speaker: 'Amelia',
+      mood: 'reflective',
       text: 'The brass bell above the door rings. Amelia stands behind a stack of books, pencil tucked behind one ear. "You made it. I wasn’t sure you would."',
-      ending: false, choices: [
-        { id: 'early', label: '"I said I would. What needs doing?"', next: 'backroom', conditions: [], effects: [trust(5), memory('bookshop_early','You arrived early and offered to help Amelia open her bookshop.')] },
-        { id: 'look', label: '"I wanted to see what you built."', next: 'aisle', conditions: [], effects: [trust(2)] },
-        { id: 'carry', label: '"That stack looks dangerous. Let me help."', next: 'rush', conditions: [], effects: [trust(4)] },
+      ending: false,
+      choices: [
+        {
+          id: 'early',
+          label: '"I said I would. What needs doing?"',
+          next: 'backroom',
+          conditions: [],
+          effects: [
+            trust(5),
+            memory(
+              'bookshop_early',
+              'You arrived early and offered to help Amelia open her bookshop.',
+            ),
+          ],
+        },
+        {
+          id: 'look',
+          label: '"I wanted to see what you built."',
+          next: 'aisle',
+          conditions: [],
+          effects: [trust(2)],
+        },
+        {
+          id: 'carry',
+          label: '"That stack looks dangerous. Let me help."',
+          next: 'rush',
+          conditions: [],
+          effects: [trust(4)],
+        },
       ],
     },
     {
-      id: 'backroom', speaker: 'Amelia', mood: 'warm',
+      id: 'backroom',
+      speaker: 'Amelia',
+      mood: 'warm',
       text: '"That box goes under the window. And please don’t look at the ledger." She looks exhausted, and for a moment she resembles the girl you studied with years ago.',
-      ending: false, choices: [
-        { id: 'ledger', label: '"You can tell me if things are hard."', next: 'customer', conditions: [], effects: [trust(5)] },
-        { id: 'joke', label: '"I promise I only judge terrible book titles."', next: 'opening', conditions: [], effects: [trust(3)] },
+      ending: false,
+      choices: [
+        {
+          id: 'ledger',
+          label: '"You can tell me if things are hard."',
+          next: 'customer',
+          conditions: [],
+          effects: [trust(5)],
+        },
+        {
+          id: 'joke',
+          label: '"I promise I only judge terrible book titles."',
+          next: 'opening',
+          conditions: [],
+          effects: [trust(3)],
+        },
       ],
     },
     {
-      id: 'aisle', speaker: 'Amelia', mood: 'reflective',
+      id: 'aisle',
+      speaker: 'Amelia',
+      mood: 'reflective',
       text: 'Books in three languages line the narrow aisle. A child is already reading on the floor. "I wanted people to feel welcome, even if they came in just to be somewhere warm."',
-      ending: false, choices: [
-        { id: 'admire', label: '"Then you’ve already succeeded."', next: 'opening', conditions: [], effects: [trust(4)] },
-        { id: 'remember', label: '"You used to draw floor plans in lectures."', next: 'quiet', conditions: [], effects: [memory('bookshop_old_days','You remembered the plans Amelia used to sketch in university.')] },
+      ending: false,
+      choices: [
+        {
+          id: 'admire',
+          label: '"Then you’ve already succeeded."',
+          next: 'opening',
+          conditions: [],
+          effects: [trust(4)],
+        },
+        {
+          id: 'remember',
+          label: '"You used to draw floor plans in lectures."',
+          next: 'quiet',
+          conditions: [],
+          effects: [
+            memory(
+              'bookshop_old_days',
+              'You remembered the plans Amelia used to sketch in university.',
+            ),
+          ],
+        },
       ],
     },
     {
-      id: 'rush', speaker: 'Amelia', mood: 'tense',
+      id: 'rush',
+      speaker: 'Amelia',
+      mood: 'tense',
       text: 'A tower of books topples beside a customer. You catch most of them. Amelia stands frozen for a second before whispering, "I have no idea what I’m doing."',
-      ending: false, choices: [
-        { id: 'steady', label: '"You don’t have to know everything tonight."', next: 'opening', conditions: [], effects: [trust(6)] },
-        { id: 'organize', label: '"I’ll handle the queue. Take a minute."', next: 'crisis', conditions: [], effects: [trust(4)] },
+      ending: false,
+      choices: [
+        {
+          id: 'steady',
+          label: '"You don’t have to know everything tonight."',
+          next: 'opening',
+          conditions: [],
+          effects: [trust(6)],
+        },
+        {
+          id: 'organize',
+          label: '"I’ll handle the queue. Take a minute."',
+          next: 'crisis',
+          conditions: [],
+          effects: [trust(4)],
+        },
       ],
     },
     {
-      id: 'customer', speaker: 'Narrator', mood: 'reflective',
+      id: 'customer',
+      speaker: 'Narrator',
+      mood: 'reflective',
       text: 'A customer wants a signed first edition that was promised but never delivered. Behind the counter, Amelia’s hands tremble slightly.',
-      ending: false, choices: [
-        { id: 'admit', label: 'Explain the mistake honestly', next: 'opening', conditions: [], effects: [trust(4), memory('bookshop_honesty','You helped Amelia handle a disappointed customer honestly.')] },
-        { id: 'improvise', label: 'Offer another book and a personal note', next: 'quiet', conditions: [], effects: [trust(2)] },
+      ending: false,
+      choices: [
+        {
+          id: 'admit',
+          label: 'Explain the mistake honestly',
+          next: 'opening',
+          conditions: [],
+          effects: [
+            trust(4),
+            memory(
+              'bookshop_honesty',
+              'You helped Amelia handle a disappointed customer honestly.',
+            ),
+          ],
+        },
+        {
+          id: 'improvise',
+          label: 'Offer another book and a personal note',
+          next: 'quiet',
+          conditions: [],
+          effects: [trust(2)],
+        },
       ],
     },
     {
-      id: 'opening', speaker: 'Amelia', mood: 'warm',
+      id: 'opening',
+      speaker: 'Amelia',
+      mood: 'warm',
       text: 'By eight o’clock the shop is crowded. Someone raises a glass. Amelia catches your eye over the heads of strangers, then turns to give the briefest speech you have ever heard.',
-      ending: false, choices: [
-        { id: 'cheer', label: 'Join the crowd celebrating her work', next: 'grand_opening', conditions: [], effects: [trust(6), memory('bookshop_celebration','You stood beside Amelia as the bookshop came alive.')] },
-        { id: 'after', label: 'Stay to help when the guests leave', next: 'late_night', conditions: [], effects: [trust(8), memory('bookshop_afterhours','You remained after closing to help Amelia finish the evening.')] },
+      ending: false,
+      choices: [
+        {
+          id: 'cheer',
+          label: 'Join the crowd celebrating her work',
+          next: 'grand_opening',
+          conditions: [],
+          effects: [
+            trust(6),
+            memory(
+              'bookshop_celebration',
+              'You stood beside Amelia as the bookshop came alive.',
+            ),
+          ],
+        },
+        {
+          id: 'after',
+          label: 'Stay to help when the guests leave',
+          next: 'late_night',
+          conditions: [],
+          effects: [
+            trust(8),
+            memory(
+              'bookshop_afterhours',
+              'You remained after closing to help Amelia finish the evening.',
+            ),
+          ],
+        },
       ],
     },
     {
-      id: 'quiet', speaker: 'Amelia', mood: 'reflective',
+      id: 'quiet',
+      speaker: 'Amelia',
+      mood: 'reflective',
       text: 'You find her by the back window after the crowd thins. "I built this place because I was tired of being afraid. Funny how opening it made me afraid all over again."',
-      ending: false, choices: [
-        { id: 'sit', label: '"Then I’ll sit with you for a little while."', next: 'late_night', conditions: [], effects: [trust(6)] },
-        { id: 'goodbye', label: '"You should be proud. I’ll leave you to it."', next: 'separate', conditions: [], effects: [trust(1)] },
+      ending: false,
+      choices: [
+        {
+          id: 'sit',
+          label: '"Then I’ll sit with you for a little while."',
+          next: 'late_night',
+          conditions: [],
+          effects: [trust(6)],
+        },
+        {
+          id: 'goodbye',
+          label: '"You should be proud. I’ll leave you to it."',
+          next: 'separate',
+          conditions: [],
+          effects: [trust(1)],
+        },
       ],
     },
     {
-      id: 'crisis', speaker: 'Amelia', mood: 'tense',
+      id: 'crisis',
+      speaker: 'Amelia',
+      mood: 'tense',
       text: 'The card machine stops working. A customer complains loudly. You can take charge of the crowd, but Amelia has already asked everyone to be patient.',
-      ending: false, choices: [
-        { id: 'back', label: 'Back up her decision', next: 'grand_opening', conditions: [], effects: [trust(5)] },
-        { id: 'takeover', label: 'Take over the situation yourself', next: 'separate', conditions: [], effects: [trust(-5), memory('bookshop_boundaries','You overstepped while trying to rescue the opening night.')] },
+      ending: false,
+      choices: [
+        {
+          id: 'back',
+          label: 'Back up her decision',
+          next: 'grand_opening',
+          conditions: [],
+          effects: [trust(5)],
+        },
+        {
+          id: 'takeover',
+          label: 'Take over the situation yourself',
+          next: 'separate',
+          conditions: [],
+          effects: [
+            trust(-5),
+            memory(
+              'bookshop_boundaries',
+              'You overstepped while trying to rescue the opening night.',
+            ),
+          ],
+        },
       ],
     },
     {
-      id: 'grand_opening', speaker: 'Amelia', mood: 'warm',
+      id: 'grand_opening',
+      speaker: 'Amelia',
+      mood: 'warm',
       text: '"Thank you," she says as the final guests leave. The bell above the door rings one last time. A city can feel enormous until someone makes a little place for you in it.',
-      ending: true, choices: [],
+      ending: true,
+      choices: [],
     },
     {
-      id: 'late_night', speaker: 'Amelia', mood: 'warm',
+      id: 'late_night',
+      speaker: 'Amelia',
+      mood: 'warm',
       text: 'You finish stacking chairs long after midnight. She switches off the sign, leaving only the reading lamps. Neither of you rushes toward the door.',
-      ending: true, choices: [],
+      ending: true,
+      choices: [],
     },
     {
-      id: 'separate', speaker: 'Narrator', mood: 'reflective',
+      id: 'separate',
+      speaker: 'Narrator',
+      mood: 'reflective',
       text: 'From across the street, the windows glow like a lantern. You leave Amelia to her new life, knowing that caring for someone does not always mean being beside them.',
-      ending: true, choices: [],
+      ending: true,
+      choices: [],
     },
   ],
 });
@@ -297,5 +468,5 @@ export const bookshop = parseStory({
 /** Bundled stories can always be resumed offline without a local story import. */
 export const OFFICIAL_STORIES = [reunion, bookshop] as const;
 export function findOfficialStory(id: string) {
-  return OFFICIAL_STORIES.find(story => story.id === id);
+  return OFFICIAL_STORIES.find((story) => story.id === id);
 }

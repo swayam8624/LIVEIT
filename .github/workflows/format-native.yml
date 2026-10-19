@@ -1,0 +1,34 @@
+name: Normalize entire LIVEIT workspace formatting
+on:
+  push:
+    branches:
+      - feat/native-life-economic-foundation
+permissions:
+  contents: write
+concurrency:
+  group: liveit-native-format
+  cancel-in-progress: false
+jobs:
+  format:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Format the complete tracked workspace
+        run: npx prettier --write .
+      - name: Commit formatting only if necessary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u
+          if ! git diff --cached --quiet; then
+            git commit -m "style: format native life reconstruction"
+            git push origin HEAD:feat/native-life-economic-foundation
+          fi

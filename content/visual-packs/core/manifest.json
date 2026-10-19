@@ -1,0 +1,1178 @@
+{
+  "schemaVersion": 1,
+  "id": "liveit.core-visuals",
+  "revision": 1,
+  "title": "LIVEIT Core GPU Visual Language — procedural prototypes",
+  "style": "liveit-retro-cinematic-2p5d-v1",
+  "minGameVersion": "0.1.0",
+  "dependencies": [],
+  "assets": [
+    {
+      "id": "liveit.shader.city",
+      "kind": "shader",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "tags": ["vulkan", "procedural", "prototype"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "parameters": {
+          "source": "native/city-vulkan/shaders/city.comp"
+        }
+      }
+    },
+    {
+      "id": "liveit.shader.actors",
+      "kind": "shader",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "tags": ["vulkan", "procedural", "prototype"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "parameters": {
+          "source": "native/city-vulkan/shaders/actors.comp"
+        }
+      }
+    },
+    {
+      "id": "liveit.rig.prototype",
+      "kind": "rig",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "actor",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "rendering": "2.5d procedural actor",
+          "parts": "head,face,hair,neck,arms,torso,eyes,brows,mouth"
+        }
+      }
+    },
+    {
+      "id": "liveit.animation.idle",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "actor",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "breathing": true,
+          "blinking": true
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.neutral",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 0,
+          "name": "neutral"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.happy",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 1,
+          "name": "happy"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.sad",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 2,
+          "name": "sad"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.angry",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 3,
+          "name": "angry"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.flirty",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 4,
+          "name": "flirty"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.shocked",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 5,
+          "name": "shocked"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.scared",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 6,
+          "name": "scared"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.smug",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 7,
+          "name": "smug"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.crying",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 8,
+          "name": "crying"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.embarrassed",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 9,
+          "name": "embarrassed"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.tired",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 10,
+          "name": "tired"
+        }
+      }
+    },
+    {
+      "id": "liveit.expression.thoughtful",
+      "kind": "animation",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "face",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "expression": 11,
+          "name": "thoughtful"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-navy",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 0,
+          "name": "navy"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-charcoal",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 1,
+          "name": "charcoal"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-forest",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 2,
+          "name": "forest"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-burgundy",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 3,
+          "name": "burgundy"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-cream",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 4,
+          "name": "cream"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-plum",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 5,
+          "name": "plum"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-teal",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 6,
+          "name": "teal"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-rose",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 7,
+          "name": "rose"
+        }
+      }
+    },
+    {
+      "id": "liveit.outfit.palette-gold",
+      "kind": "outfit",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "outfit",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "outfitPalette": 8,
+          "name": "gold"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-porcelain",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 0,
+          "name": "porcelain"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-ivory",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 1,
+          "name": "ivory"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-peach",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 2,
+          "name": "peach"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-sand",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 3,
+          "name": "sand"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-golden",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 4,
+          "name": "golden"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-olive",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 5,
+          "name": "olive"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-tan",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 6,
+          "name": "tan"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-caramel",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 7,
+          "name": "caramel"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-cocoa",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 8,
+          "name": "cocoa"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-mahogany",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 9,
+          "name": "mahogany"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-umber",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 10,
+          "name": "umber"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.skin-espresso",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "skin",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "skinPalette": 11,
+          "name": "espresso"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-midnight",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 0,
+          "name": "midnight"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-black",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 1,
+          "name": "black"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-espresso",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 2,
+          "name": "espresso"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-chestnut",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 3,
+          "name": "chestnut"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-auburn",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 4,
+          "name": "auburn"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-copper",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 5,
+          "name": "copper"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-blonde",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 6,
+          "name": "blonde"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-ash",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 7,
+          "name": "ash"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-silver",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 8,
+          "name": "silver"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-rose",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 9,
+          "name": "rose"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-blue",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 10,
+          "name": "blue"
+        }
+      }
+    },
+    {
+      "id": "liveit.material.hair-violet",
+      "kind": "material",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "hair",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "hairPalette": 11,
+          "name": "violet"
+        }
+      }
+    },
+    {
+      "id": "liveit.architecture.bellweather-block",
+      "kind": "architecture",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "city",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.city",
+        "parameters": {
+          "baseMaterial": "procedural",
+          "blockType": "extruded"
+        }
+      }
+    },
+    {
+      "id": "liveit.location.bellweather",
+      "kind": "location",
+      "tier": "core",
+      "revision": 1,
+      "dependencies": [],
+      "style": "liveit-retro-cinematic-2p5d-v1",
+      "slot": "world",
+      "tags": ["vulkan", "procedural", "shader-backed"],
+      "license": {
+        "spdx": "MIT",
+        "author": "LIVEIT original prototype",
+        "source": "https://github.com/swayam8624/LIVEIT"
+      },
+      "implementation": {
+        "kind": "procedural",
+        "shader": "liveit.shader.actors",
+        "parameters": {
+          "view": "isometric",
+          "nightLighting": true
+        }
+      }
+    }
+  ]
+}

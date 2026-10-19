@@ -1,0 +1,1956 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LIVEIT — Step 2 Screen & Mode Atlas</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1421;
+        --ink: #f5f2d9;
+        --soft: #b6c6c8;
+        --mint: #97e6ac;
+        --amber: #ffd28a;
+        --coral: #f49a82;
+        --line: #507174;
+        --panel: #1a2737;
+        --raised: #223449;
+        --blue: #2b617a;
+        --danger: #ff7588;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          14px/1.45 system-ui,
+          -apple-system,
+          Arial,
+          sans-serif;
+      }
+      body {
+        background:
+          radial-gradient(circle at 80% -5%, #244557 0%, transparent 35%),
+          #0b1421;
+      }
+      button {
+        font: inherit;
+        cursor: pointer;
+      }
+      a {
+        color: var(--mint);
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid var(--amber);
+        outline-offset: 3px;
+      }
+      .shell {
+        display: grid;
+        grid-template-columns: 275px minmax(370px, 1fr) 276px;
+        max-width: 1540px;
+        min-height: 100vh;
+        margin: auto;
+      }
+      .nav {
+        border-right: 1px solid #355368;
+        padding: 24px 17px;
+        background: #101b2a;
+        position: sticky;
+        top: 0;
+        align-self: start;
+        height: 100vh;
+        overflow-y: auto;
+      }
+      .brand {
+        font-family: Impact, 'Arial Narrow', sans-serif;
+        font-size: 33px;
+        letter-spacing: 3px;
+        color: var(--mint);
+      }
+      .kicker,
+      .smallmeta,
+      .idtag,
+      .tiny {
+        font:
+          10px/1.4 ui-monospace,
+          Menlo,
+          Consolas,
+          monospace;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .kicker {
+        color: var(--amber);
+      }
+      .muted {
+        color: var(--soft);
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      .nav h2 {
+        font:
+          12px ui-monospace,
+          monospace;
+        letter-spacing: 1px;
+        margin: 22px 0 8px;
+        color: var(--soft);
+      }
+      .navgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .navbutton {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        text-align: left;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        color: #cbd4d5;
+        background: transparent;
+        padding: 8px 9px;
+        width: 100%;
+      }
+      .navbutton:hover {
+        background: #203446;
+      }
+      .navbutton.selected {
+        background: #244538;
+        color: var(--mint);
+        border-color: #6bbd95;
+      }
+      .navbutton .idtag {
+        font-size: 9px;
+        color: var(--amber);
+        min-width: 30px;
+      }
+      .navbutton b {
+        font-size: 12px;
+        font-weight: 650;
+      }
+      .main {
+        padding: 28px 28px 45px;
+        min-width: 0;
+      }
+      .heading {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: end;
+        margin-bottom: 20px;
+      }
+      .heading h1 {
+        font:
+          900 clamp(24px, 3vw, 36px) Impact,
+          'Arial Narrow',
+          sans-serif;
+        letter-spacing: 0.4px;
+      }
+      .heading p {
+        max-width: 590px;
+        color: var(--soft);
+        font-size: 12px;
+        margin-top: 8px;
+      }
+      .modebadge {
+        border: 1px solid #507174;
+        color: var(--mint);
+        background: #19392f;
+        padding: 6px 10px;
+        border-radius: 4px;
+        flex: none;
+      }
+      .stage {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+      .phone {
+        width: 390px;
+        max-width: 100%;
+        aspect-ratio: 390/844;
+        border: 10px solid #2d414d;
+        border-radius: 38px;
+        background: var(--bg);
+        box-shadow:
+          0 0 0 2px #62818a,
+          0 24px 50px #0008;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transform: translateZ(0);
+      }
+      .notch {
+        height: 24px;
+        flex: none;
+        background: #0d1827;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px 17px 4px;
+        font:
+          8px ui-monospace,
+          monospace;
+        color: #b6c6c8;
+      }
+      .screen {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+        background: #101827;
+      }
+      .screen .top {
+        height: 55px;
+        flex: none;
+        padding: 9px 12px;
+        background: #162636;
+        border-bottom: 2px solid #557c77;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+      }
+      .logomark {
+        font:
+          900 18px Impact,
+          'Arial Narrow',
+          sans-serif;
+        letter-spacing: 1px;
+        color: var(--mint);
+      }
+      .status {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        font:
+          9px ui-monospace,
+          monospace;
+        color: var(--ink);
+      }
+      .statmini {
+        border: 1px solid #5b7770;
+        background: #213b40;
+        padding: 5px 6px;
+        border-radius: 3px;
+        white-space: nowrap;
+      }
+      .pixels {
+        flex: 1;
+        min-height: 0;
+        position: relative;
+        background: #547d6d;
+        overflow: hidden;
+      }
+      .pixelart {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        image-rendering: pixelated;
+        display: block;
+      }
+      .pixelhint {
+        position: absolute;
+        left: 12px;
+        top: 10px;
+        right: 12px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        pointer-events: none;
+      }
+      .pixelhint span {
+        background: #102330e8;
+        border: 1px solid #93c6a2;
+        color: #fff5d7;
+        padding: 5px 7px;
+        font:
+          9px ui-monospace,
+          monospace;
+      }
+      .bottomhud {
+        flex: none;
+        background: #172c39;
+        border-top: 2px solid #66877f;
+        padding: 9px 12px 11px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+      .hudrow {
+        display: flex;
+        justify-content: space-between;
+        gap: 7px;
+        align-items: center;
+      }
+      .hudbtn {
+        background: #234439;
+        border: 2px solid #96d99c;
+        color: #f5f2d9;
+        border-radius: 4px;
+        padding: 8px 9px;
+        font:
+          700 11px ui-monospace,
+          monospace;
+        white-space: nowrap;
+      }
+      .hudbtn:active {
+        transform: translateY(2px);
+      }
+      .hudbtn.warm {
+        background: #5a4038;
+        border-color: #e5a977;
+      }
+      .hudbtn.sub {
+        background: #233546;
+        border-color: #688a89;
+      }
+      .hudbtn.fill {
+        flex: 1;
+      }
+      .dpad {
+        display: grid;
+        grid-template-columns: repeat(3, 26px);
+        grid-template-rows: repeat(2, 24px);
+        gap: 2px;
+      }
+      .dpad i {
+        background: #344e55;
+        border: 1px solid #7f9f93;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        font-style: normal;
+      }
+      .dpad i:nth-child(1) {
+        grid-column: 2;
+      }
+      .dpad i:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+      }
+      .dpad i:nth-child(3) {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      .dpad i:nth-child(4) {
+        grid-row: 2;
+        grid-column: 3;
+      }
+      .safefoot {
+        height: 14px;
+        flex: none;
+        background: #101b29;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .safefoot:after {
+        content: '';
+        width: 78px;
+        height: 3px;
+        background: #6b8983;
+        border-radius: 4px;
+      }
+      .paper {
+        flex: 1;
+        overflow: hidden;
+        padding: 13px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: linear-gradient(150deg, #1c3240, #101a2b 68%);
+      }
+      .paper.scroll {
+        overflow: auto;
+      }
+      .sectionheading {
+        font:
+          900 21px Impact,
+          'Arial Narrow',
+          sans-serif;
+        letter-spacing: 0.5px;
+      }
+      .subheading {
+        font:
+          700 12px ui-monospace,
+          monospace;
+        color: var(--amber);
+      }
+      .card {
+        background: #223449;
+        border: 1px solid #537975;
+        border-radius: 7px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: none;
+      }
+      .card.soft {
+        background: #1b2936;
+      }
+      .card.focus {
+        border-color: var(--mint);
+        background: #234438;
+      }
+      .card.warn {
+        border-color: #b77875;
+      }
+      .card h3 {
+        font-size: 13px;
+      }
+      .card p {
+        font-size: 11px;
+        color: #ccdad9;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 7px;
+      }
+      .row.gap {
+        justify-content: flex-start;
+      }
+      .twocol {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .meter {
+        height: 8px;
+        border-radius: 2px;
+        background: #0b1726;
+        border: 1px solid #52726c;
+        overflow: hidden;
+      }
+      .meter > i {
+        height: 100%;
+        display: block;
+        background: var(--mint);
+      }
+      .meter.amber > i {
+        background: var(--amber);
+      }
+      .badge {
+        font:
+          700 9px ui-monospace,
+          monospace;
+        color: var(--amber);
+        border: 1px solid #947b51;
+        padding: 3px 6px;
+        background: #383329;
+      }
+      .badge.mint {
+        color: var(--mint);
+        border-color: #669b73;
+        background: #23423c;
+      }
+      .divline {
+        height: 1px;
+        background: #355361;
+        margin: 4px 0;
+      }
+      .pixelportrait {
+        width: 85px;
+        height: 95px;
+        border: 3px solid #779c82;
+        flex: none;
+        background: #407365;
+        image-rendering: pixelated;
+        overflow: hidden;
+      }
+      .pixelportrait svg {
+        height: 100%;
+        width: 100%;
+        image-rendering: pixelated;
+      }
+      .dialog {
+        padding: 12px;
+        background: #142539e8;
+        border-top: 2px solid #9eb8a2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .dialog label {
+        color: var(--amber);
+        font:
+          700 11px ui-monospace,
+          monospace;
+      }
+      .dialog p {
+        font-size: 14px;
+        line-height: 1.55;
+      }
+      .cinema {
+        flex: 1;
+        min-height: 0;
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            ellipse at 63% 16%,
+            #d69e6f 0,
+            #593e58 25%,
+            transparent 55%
+          ),
+          linear-gradient(#334a63, #121f36 62%, #1c313d);
+      }
+      .cinema:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 38%;
+        background: repeating-linear-gradient(
+          90deg,
+          #1b2b34 0,
+          #1b2b34 36px,
+          #233a3e 37px,
+          #223b3b 41px
+        );
+        opacity: 0.7;
+      }
+      .scenehud {
+        position: absolute;
+        left: 9px;
+        top: 9px;
+        right: 9px;
+        z-index: 4;
+        display: flex;
+        justify-content: space-between;
+      }
+      .scenehud span {
+        background: #0f1b2ad9;
+        border: 1px solid #6d8c85;
+        padding: 5px 7px;
+        color: #f5f2d9;
+        font:
+          10px ui-monospace,
+          monospace;
+      }
+      .actor {
+        position: absolute;
+        bottom: 5%;
+        width: 37%;
+        height: 76%;
+        filter: drop-shadow(4px 14px 14px #0007);
+      }
+      .actor.left {
+        left: 7%;
+      }
+      .actor.right {
+        right: 3%;
+        transform: scaleX(-1);
+      }
+      .actor .body {
+        position: absolute;
+        width: 100%;
+        height: 45%;
+        bottom: 0;
+        background: linear-gradient(85deg, #1c3946, #53787b 43%, #29434c 95%);
+        border-radius: 46% 46% 14% 12%;
+        box-shadow: inset -13px 0 18px #0715209a;
+      }
+      .actor.right .body {
+        background: linear-gradient(95deg, #513e66, #ba7d7e 55%, #58344e);
+      }
+      .actor .neck {
+        position: absolute;
+        bottom: 40%;
+        height: 16%;
+        width: 28%;
+        left: 36%;
+        background: #bd886d;
+        border-radius: 35%;
+      }
+      .actor .head {
+        position: absolute;
+        bottom: 51%;
+        left: 18%;
+        width: 65%;
+        height: 36%;
+        background: radial-gradient(
+          circle at 28% 24%,
+          #f6c9aa,
+          #cb9474 55%,
+          #9f6858 90%
+        );
+        border-radius: 48% 47% 45% 45%;
+        box-shadow: inset -15px 0 16px #6f4d4a9c;
+      }
+      .actor.right .head {
+        background: radial-gradient(
+          circle at 23% 25%,
+          #bd8c69,
+          #93644b 57%,
+          #5e3e3d 95%
+        );
+      }
+      .actor .hair {
+        position: absolute;
+        bottom: 78%;
+        left: 12%;
+        width: 75%;
+        height: 19%;
+        border-radius: 75% 65% 14% 20%;
+        background: #30202b;
+        box-shadow: 9px 13px 0 #2a1a25;
+      }
+      .actor.right .hair {
+        background: #6e4d39;
+      }
+      .actor .eyes {
+        position: absolute;
+        bottom: 68%;
+        left: 37%;
+        font-size: 15px;
+        color: #392932;
+        z-index: 2;
+        letter-spacing: 8px;
+      }
+      .actor .line {
+        position: absolute;
+        bottom: 62%;
+        left: 46%;
+        width: 22%;
+        height: 3px;
+        border-radius: 80%;
+        background: #703e47;
+      }
+      .actor.right .line {
+        transform: rotate(-8deg);
+      }
+      .cinelabel {
+        position: absolute;
+        bottom: 14px;
+        left: 12px;
+        background: #14212ee2;
+        border: 1px solid #527c76;
+        padding: 5px 7px;
+        font:
+          9px ui-monospace,
+          monospace;
+        color: #ffd28a;
+        z-index: 6;
+      }
+      .bigchoice {
+        background: #253a45;
+        border: 1px solid #799889;
+        padding: 10px 11px;
+        display: flex;
+        gap: 8px;
+        font:
+          700 12px ui-monospace,
+          monospace;
+        color: #eeeadd;
+      }
+      .bigchoice b {
+        color: #97e6ac;
+      }
+      .bigchoice.selected {
+        background: #235344;
+        border-color: #9eeba8;
+      }
+      .phonepanel {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+        overflow: auto;
+      }
+      .thread {
+        background: #1e3340;
+        padding: 9px;
+        border: 1px solid #47676b;
+        max-width: 84%;
+        font-size: 12px;
+      }
+      .thread.me {
+        align-self: flex-end;
+        background: #285448;
+        border-color: #6bab86;
+      }
+      .composer {
+        margin-top: auto;
+        border: 1px solid #5e817a;
+        background: #0d1b29;
+        padding: 10px;
+        font-size: 12px;
+        color: #b6c6c8;
+      }
+      .iconbox {
+        width: 32px;
+        height: 32px;
+        background: #365d5a;
+        display: grid;
+        place-items: center;
+        border: 1px solid #64918a;
+        border-radius: 4px;
+        flex: none;
+        font-size: 18px;
+      }
+      .footnav {
+        border-top: 1px solid #526c71;
+        margin-top: auto;
+        padding: 9px 0 2px;
+        display: flex;
+        justify-content: space-between;
+        color: var(--soft);
+        font:
+          10px ui-monospace,
+          monospace;
+      }
+      .monitor {
+        padding: 25px 12px;
+        position: sticky;
+        top: 0;
+        align-self: start;
+        height: 100vh;
+        overflow-y: auto;
+        border-left: 1px solid #355368;
+        background: #101c2b;
+      }
+      .monitor h2 {
+        font:
+          900 18px Impact,
+          'Arial Narrow',
+          sans-serif;
+        letter-spacing: 0.7px;
+        color: var(--amber);
+      }
+      .monitor p {
+        color: var(--soft);
+        font-size: 12px;
+        margin-top: 7px;
+      }
+      .inspect {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+      .inspect dt {
+        font:
+          10px ui-monospace,
+          monospace;
+        color: var(--mint);
+        letter-spacing: 0.5px;
+      }
+      .inspect dd {
+        margin: 3px 0 0;
+        color: #dae3dc;
+        font-size: 12px;
+      }
+      .featuregroup {
+        border-top: 1px solid #355361;
+        padding: 12px 0;
+      }
+      .alerttext {
+        color: var(--coral);
+        font-size: 11px;
+        margin-top: 12px;
+      }
+      .legend {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 17px;
+      }
+      .legend > span {
+        border: 1px solid #557a6e;
+        padding: 4px 7px;
+        font:
+          10px ui-monospace,
+          monospace;
+      }
+      .cta {
+        background: #214b3d;
+        border: 1px solid #6ab187;
+        color: var(--mint);
+        padding: 8px 10px;
+        border-radius: 4px;
+      }
+      @media (max-width: 1190px) {
+        .shell {
+          grid-template-columns: 200px minmax(340px, 1fr);
+        }
+        .monitor {
+          grid-column: 2;
+          position: static;
+          height: auto;
+          border-left: 0;
+          border-top: 1px solid #355368;
+        }
+        .nav {
+          padding: 15px 9px;
+        }
+        .main {
+          padding: 22px 12px;
+        }
+        .heading {
+          flex-wrap: wrap;
+        }
+      }
+      @media (max-width: 720px) {
+        .shell {
+          display: block;
+        }
+        .nav {
+          position: static;
+          height: auto;
+          border: 0;
+          border-bottom: 1px solid #355368;
+          max-height: 210px;
+          overflow: auto;
+        }
+        .nav h2 {
+          margin: 8px 0 4px;
+        }
+        .navgroup {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .navbutton {
+          width: auto;
+          padding: 6px;
+        }
+        .navbutton b {
+          font-size: 11px;
+        }
+        .main {
+          padding: 18px 8px;
+        }
+        .heading {
+          padding: 0 9px;
+        }
+        .phone {
+          width: 390px;
+        }
+        .monitor {
+          padding: 18px;
+        }
+        .stage {
+          justify-content: center;
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .navbutton,
+        .hudbtn {
+          transition:
+            background 0.15s,
+            border-color 0.15s,
+            transform 0.12s;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="nav" aria-label="Atlas screen navigation">
+        <div class="brand">✦ LIVEIT</div>
+        <div class="kicker">DESIGN ATLAS / STEP 02</div>
+        <p class="muted" style="font-size: 12px; margin-top: 7px">
+          Original schematic UI comps. Not game screenshots or actual Vulkan
+          frames.
+        </p>
+        <div id="nav"></div>
+      </aside>
+      <main class="main">
+        <div class="heading">
+          <div>
+            <div class="kicker" id="eyebrow">MODE / PIXEL WORLD</div>
+            <h1 id="title">Free Roam — Bellweather</h1>
+            <p id="subtitle">
+              Clickable atlas demonstrating visual composition and how different
+              screen families feel. Target designs, not shipped UI.
+            </p>
+          </div>
+          <div class="modebadge smallmeta" id="mode">PIXEL</div>
+        </div>
+        <div class="stage">
+          <div class="phone" aria-label="Illustrative design in a phone frame">
+            <div class="notch"><span>11:57</span><span>▴ ▰ ●</span></div>
+            <div class="screen" id="preview"></div>
+            <div class="safefoot"></div>
+          </div>
+        </div>
+        <div class="legend">
+          <span>● ORIGINAL SCHEMATIC</span><span>◇ SAMPLE WORLD DATA</span
+          ><span>✦ NOT A WORKING GAME</span>
+        </div>
+      </main>
+      <aside class="monitor">
+        <h2>VISUAL INSPECTOR</h2>
+        <p>
+          All examples derive from the Step 2 screen/mode blueprint and Step 1
+          graphics bible. Touch destinations in the previews navigate between
+          design examples.
+        </p>
+        <div id="inspector"></div>
+        <p class="alerttext">
+          These comps intentionally use abstract character silhouettes and pixel
+          SVG diagrams. The final premium conversation renderer must use true
+          rigged 3D, not these CSS mock figures.
+        </p>
+        <p style="margin-top: 18px">
+          <a href="../LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md"
+            >Full 43-screen specification →</a
+          >
+        </p>
+      </aside>
+    </div>
+    <script>
+      (function () {
+        'use strict';
+        const groups = [
+          { name: 'WELCOME & CHARACTER', ids: ['S01', 'S02', 'S03'] },
+          {
+            name: 'PIXEL LIFE WORLD',
+            ids: ['S04', 'S05', 'S07', 'S06', 'S11'],
+          },
+          { name: '3D STORY & CONSEQUENCE', ids: ['S08', 'S09', 'S10', 'S23'] },
+          { name: 'LIFE & PEOPLE', ids: ['S12', 'S13', 'S15', 'S17', 'S19'] },
+          {
+            name: 'STORIES, CHAT & HISTORY',
+            ids: ['S21', 'S24', 'S25', 'S26', 'S27', 'S28'],
+          },
+          { name: 'SYSTEMS & RECOVERY', ids: ['S30', 'S31', 'S32', 'S37'] },
+        ];
+        const screens = [
+          {
+            id: 'S01',
+            title: 'Title / Continue Life',
+            group: 'system',
+            kind: 'title',
+            detail:
+              'A two-format title composition: the pixel Bellweather world beneath a window hinting at beautiful 3D. Continue is never disabled if a compatible save exists.',
+            control:
+              'Continue → pixel world, Start Life → setup, Stories → library.',
+            states:
+              'Fresh install, valid save, corrupt save, returning from cinematic scene.',
+          },
+          {
+            id: 'S02',
+            title: 'Create Your Life',
+            group: 'system',
+            kind: 'create',
+            detail:
+              'Name and pronouns in an easy-to-read compact form; the portrait previews exactly the same identity used in pixel and cinematic modes.',
+            control:
+              'Name, pronouns, character editor and confirm only when valid.',
+            states:
+              'Empty/invalid name; existing-save confirmation; keyboard and accessibility labels.',
+          },
+          {
+            id: 'S03',
+            title: 'Avatar — Pixel ⇄ 3D',
+            group: 'hybrid',
+            kind: 'avatar',
+            detail:
+              'One editable appearance/identity with two matching artistic representations: sharp pixel sprite on the left, lit 3D face/body on the right.',
+            control:
+              'Customize face, body, hair and outfit; switch preset/age preview; revert/save.',
+            states:
+              'Unavailable downloaded part, unsupported rig, old save, age mismatch.',
+          },
+          {
+            id: 'S04',
+            title: 'Free Roam — Daylight',
+            group: 'pixel',
+            kind: 'world',
+            detail:
+              'The anchor gameplay mode: original top-down 16-pixel tiles, walking citizens, open doors, easy thumb controls, small widgets and optional menus.',
+            control:
+              'Walk, interact, Age Up, Map, Phone, Menu. Buttons below are navigable atlas links.',
+            states:
+              'Collision, NPC busy, weather, blocked entrance, touch route.',
+          },
+          {
+            id: 'S05',
+            title: 'Enterable Pixel Interior',
+            group: 'pixel',
+            kind: 'interior',
+            detail:
+              'A real room with tile furniture, clear door/exit collider and a meaningful place-specific activity. UI chrome stays minimal.',
+            control:
+              'Move, approach a person/item, inspect, do an activity, exit.',
+            states:
+              'Door locked, room unvisited, activity blocked, interrupted save.',
+          },
+          {
+            id: 'S07',
+            title: 'NPC Approach / Quick Talk',
+            group: 'pixel',
+            kind: 'npc',
+            detail:
+              'Interaction remains in the pixel overworld for quick small talk. Deeper conversation triggers the cinematic 3D scene.',
+            control: 'Quick Talk, Talk Deeply, inspect NPC, dismiss.',
+            states:
+              'Unknown NPC, busy, not in range, cannot speak, no authored branch.',
+          },
+          {
+            id: 'S06',
+            title: 'District Transit / Map',
+            group: 'system',
+            kind: 'map',
+            detail:
+              'Map is a fast-travel overlay, never a replacement for being able to walk in an open pixel world.',
+            control:
+              'Inspect discovered district, route, time/cost preview, confirm.',
+            states:
+              'Locked location, fare unavailable, invalid route, traveling.',
+          },
+          {
+            id: 'S11',
+            title: 'Age Up / Year in Review',
+            group: 'hybrid',
+            kind: 'age',
+            detail:
+              'A grounded life milestone montage over familiar pixel geometry, a date/age wheel and genuine event summaries. Major events can branch into 3D.',
+            control: 'Advance once, inspect changes, skip visuals, continue.',
+            states:
+              'No major events, multiple events, loss/death, motion disabled.',
+          },
+          {
+            id: 'S08',
+            title: 'Cinematic 3D Conversation',
+            group: 'cinematic',
+            kind: 'dialog',
+            detail:
+              'True stylized 3D is the shipping target. The actors must match the pixel identity. Dialogue remains scalable accessible text below the image.',
+            control:
+              'Next, History, Auto, Leave with safe save, important choice.',
+            states:
+              'Long dialogue, missing render asset, low FPS, reduced motion.',
+          },
+          {
+            id: 'S09',
+            title: 'Cinematic Choice Dock',
+            group: 'cinematic',
+            kind: 'choices',
+            detail:
+              'The same acting continues while 2–4 meaningful choices appear. Known costs and authored tone tags only; no fake success odds.',
+            control: 'Arm, commit, inspect, cancel if allowed.',
+            states:
+              'Commit pending, disabled choice, double tap, destructive confirmation.',
+          },
+          {
+            id: 'S10',
+            title: 'What Changed? Widget',
+            group: 'system',
+            kind: 'outcome',
+            detail:
+              'A truthful outcome appears over the ongoing scene. It references the exact committed simulation event.',
+            control: 'Dismiss, view Memory, inspect person.',
+            states:
+              'No state delta, save in progress, error, grief, multiple changes.',
+          },
+          {
+            id: 'S23',
+            title: 'Full Cinematic Story Mode',
+            group: 'cinematic',
+            kind: 'story',
+            detail:
+              'Visual-novel chapters switch camera angles, use two or more rigged actors and environmental staging; the narrative state persists.',
+            control: 'Next, pause, choices, history, chapter exit.',
+            states:
+              'Restored mid-chapter, missing import, multiple endings, low GPU quality.',
+          },
+          {
+            id: 'S12',
+            title: 'Life Dashboard',
+            group: 'system',
+            kind: 'life',
+            detail:
+              'Stats are tactile game widgets; main world always remains accessible. This is not a scrolling office dashboard.',
+            control:
+              'Career, Education, Money, People, Character, return to city.',
+            states:
+              'Debt, zero wellbeing, old save defaults, rapid time skips.',
+          },
+          {
+            id: 'S13',
+            title: 'Career / Real Job Progress',
+            group: 'system',
+            kind: 'career',
+            detail:
+              'Readable job applications, current position, interview track and real income, with strong pixel environment references.',
+            control: 'Apply, interview, work, request promotion, resign.',
+            states:
+              'Unemployed, hired, rejected, no qualifications, duplicated tap.',
+          },
+          {
+            id: 'S15',
+            title: 'People & Relationships',
+            group: 'system',
+            kind: 'people',
+            detail:
+              'Relationships presented as meaningful threads/constellation rather than generic contacts; named person visual matches 3D cinematic rig.',
+            control: 'Meet, inspect, view memories, call NPC if allowed.',
+            states: 'Estranged, no contact, deceased, trust unknown, blocked.',
+          },
+          {
+            id: 'S17',
+            title: 'Home / Inventory',
+            group: 'pixel',
+            kind: 'home',
+            detail:
+              'A walkable pixel house with personal possessions; owned assets tie back to authoritative economy and wardrobe.',
+            control:
+              'Equip, decorate, store, enter/leave, purchase with receipt.',
+            states:
+              'Ownership validation, empty slot, moving object, missing content pack.',
+          },
+          {
+            id: 'S19',
+            title: 'Money & Property',
+            group: 'system',
+            kind: 'finance',
+            detail:
+              'A playful financial ledger with precise current balance and owned items, not invented gains.',
+            control: 'Buy/sell, inspect monthly costs, receipts and portfolio.',
+            states:
+              'Negative money, insufficient funds, maintenance, duplicated order.',
+          },
+          {
+            id: 'S21',
+            title: 'Story Library',
+            group: 'system',
+            kind: 'library',
+            detail:
+              'Original illustrated dramatic covers, chapter status, continuity selectors and browse filters.',
+            control: 'Start, resume, read description, return to life.',
+            states:
+              'Imported unavailable, partially played, completed, offline.',
+          },
+          {
+            id: 'S24',
+            title: 'In-World Phone / Messages',
+            group: 'system',
+            kind: 'phone',
+            detail:
+              'A game-like phone drawer: separate AI NPCs, in-world messages, and permitted real-player contacts, clearly distinguished.',
+            control:
+              'Open AI thread, inspect real contact status, search, close.',
+            states: 'No chats, offline, new message, human feature disabled.',
+          },
+          {
+            id: 'S25',
+            title: 'AI Character Conversation',
+            group: 'cinematic',
+            kind: 'ai',
+            detail:
+              'Smooth live 3D portrait above a real text composer. Prominently label AI; show memory permissions and service state.',
+            control: 'Write, send, regenerate if supported, memory settings.',
+            states:
+              'Provider unavailable, recall unknown, blocked safety result, disconnected.',
+          },
+          {
+            id: 'S26',
+            title: 'Human Contact Consent',
+            group: 'system',
+            kind: 'social',
+            detail:
+              'Real-player interactions must be opt-in and grounded in game context. This is intentionally not a random-anonymous-chat roulette screen.',
+            control:
+              'Accept contextual invite, decline, privacy, report/block.',
+            states:
+              'No contacts, moderation failure, offline, policy-disabled.',
+          },
+          {
+            id: 'S27',
+            title: 'Real Contact Thread',
+            group: 'system',
+            kind: 'human',
+            detail:
+              'Human status and real delivery indicators, separate from AI. Visible block/report at all times.',
+            control: 'Message, mute, report, block, leave.',
+            states: 'Reconnect, consent withdrawn, offline, malformed message.',
+          },
+          {
+            id: 'S28',
+            title: 'Memory Journal',
+            group: 'system',
+            kind: 'memory',
+            detail:
+              'Actual saved event IDs become a chronological life scrapbook of tiny pixel vignettes with optional 3D flashback.',
+            control: 'Browse, filter, inspect, flashback when reconstructable.',
+            states:
+              'Empty history, lost story asset, false inferred event prohibited.',
+          },
+          {
+            id: 'S30',
+            title: 'Legacy & Remembrance',
+            group: 'hybrid',
+            kind: 'legacy',
+            detail:
+              'Quiet reflective treatment of mortality and inheritance: a warm cinematic still, family memories and retained timeline.',
+            control:
+              'Review life, view descendants, begin heir life if available.',
+            states:
+              'No successor, grief, save corruption, no invented happy reward.',
+          },
+          {
+            id: 'S31',
+            title: 'Settings & Accessibility',
+            group: 'system',
+            kind: 'settings',
+            detail:
+              'Readable preference toggles and graphical previews rather than decorative unlabelled controls. Separate haptics, motion and text settings.',
+            control:
+              'Haptics Off/Subtle/Full, reduced motion, text size, sound, quality.',
+            states: 'Unsupported haptic motor, no permission, low power.',
+          },
+          {
+            id: 'S32',
+            title: 'Growing Visual Asset Packs',
+            group: 'system',
+            kind: 'packs',
+            detail:
+              'Honest installed/downloadable packs, attribution, verified size and hash. No executing arbitrary downloaded graphics code.',
+            control: 'Inspect, install, validate, remove, storage budgets.',
+            states: 'Airplane mode, digest mismatch, no disk, rollback.',
+          },
+          {
+            id: 'S37',
+            title: 'Offline & Safe Recovery',
+            group: 'system',
+            kind: 'error',
+            detail:
+              'Shows the last valid world frame and clear non-destructive recovery actions. No fake saved-success state.',
+            control: 'Retry, continue offline, restore safely.',
+            states:
+              'Save failure, shader/device loss, missing downloaded content.',
+          },
+        ];
+        const byId = Object.fromEntries(screens.map((s) => [s.id, s]));
+        const nav = document.getElementById('nav');
+        const preview = document.getElementById('preview');
+        function h(s) {
+          return String(s).replace(
+            /[&<>"]/g,
+            (ch) =>
+              ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch],
+          );
+        }
+        function B(label, to, cls) {
+          return (
+            '<button class="hudbtn ' +
+            (cls || '') +
+            '" data-go="' +
+            h(to) +
+            '">' +
+            h(label) +
+            '</button>'
+          );
+        }
+        function C(title, body, style) {
+          return (
+            '<div class="card ' +
+            (style || '') +
+            '"><h3>' +
+            h(title) +
+            '</h3><p>' +
+            body +
+            '</p></div>'
+          );
+        }
+        function H(name, detail) {
+          return (
+            '<div class="top"><div><div class="logomark">✦ LIVEIT</div><div class="tiny muted">' +
+            h(name) +
+            '</div></div><div class="status">' +
+            (detail ||
+              '<span class="statmini">AGE 23</span><span class="statmini">£1,800</span>') +
+            '</div></div>'
+          );
+        }
+        function foot() {
+          return '<div class="footnav"><span>◈ LIFE</span><span>✧ STORIES</span><span>♡ PEOPLE</span><span>◷ MEMORY</span></div>';
+        }
+        function portrait() {
+          return (
+            '<svg viewBox="0 0 16 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">' +
+            '<rect width="16" height="20" fill="#3c6761"/><rect x="4" y="3" width="8" height="8" fill="#33252e"/>' +
+            '<rect x="5" y="5" width="6" height="6" fill="#d5a16f"/><rect x="6" y="7" width="1" height="1" fill="#211a28"/><rect x="9" y="7" width="1" height="1" fill="#211a28"/>' +
+            '<rect x="4" y="11" width="8" height="6" fill="#6d9b86"/><rect x="3" y="12" width="2" height="5" fill="#d5a16f"/><rect x="11" y="12" width="2" height="5" fill="#d5a16f"/>' +
+            '<rect x="5" y="17" width="2" height="3" fill="#263247"/><rect x="9" y="17" width="2" height="3" fill="#263247"/></svg>'
+          );
+        }
+        function townMap(interior, night) {
+          const grass = night ? '#37575c' : '#739f73',
+            alt = night ? '#426b70' : '#88aa7a',
+            road = interior ? '#a8886a' : night ? '#52646a' : '#afa78a';
+          let out =
+            '<svg class="pixelart" viewBox="0 0 320 256" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" aria-label="Original top-down pixel map concept">';
+          for (let y = 0; y < 16; y++)
+            for (let x = 0; x < 20; x++) {
+              let color = (x + y) % 4 === 0 ? alt : grass;
+              if (interior) {
+                color =
+                  x < 2 || y < 2 || x > 17 || y > 13 ? '#576c78' : '#c4ad8a';
+              } else if (x === 9 || x === 10 || y === 7 || y === 8)
+                color = road;
+              else if (x < 3) color = night ? '#2f566b' : '#4284a0';
+              out +=
+                '<rect x="' +
+                x * 16 +
+                '" y="' +
+                y * 16 +
+                '" width="16" height="16" fill="' +
+                color +
+                '"/>';
+            }
+          if (interior) {
+            out +=
+              '<rect x="38" y="48" width="86" height="44" fill="#694b47"/><rect x="46" y="53" width="72" height="30" fill="#b8877d"/><rect x="50" y="58" width="18" height="18" fill="#eed4a6"/>';
+            out +=
+              '<rect x="195" y="36" width="80" height="55" fill="#3e5551"/><rect x="203" y="44" width="62" height="42" fill="#7b9d91"/><rect x="216" y="56" width="34" height="18" fill="#ffdda0"/>';
+            out +=
+              '<rect x="33" y="167" width="48" height="35" fill="#b87762"/><rect x="41" y="174" width="32" height="22" fill="#f6c892"/>';
+            out +=
+              '<rect x="140" y="223" width="40" height="30" fill="#665d5b"/>';
+          } else {
+            function house(x, y, col) {
+              out +=
+                '<rect x="' +
+                (x + 3) +
+                '" y="' +
+                (y + 6) +
+                '" width="54" height="42" fill="' +
+                col +
+                '"/>' +
+                '<rect x="' +
+                x +
+                '" y="' +
+                y +
+                '" width="60" height="16" fill="#775963"/><rect x="' +
+                (x + 20) +
+                '" y="' +
+                (y + 31) +
+                '" width="15" height="17" fill="#413e4a"/>' +
+                '<rect x="' +
+                (x + 6) +
+                '" y="' +
+                (y + 23) +
+                '" width="11" height="11" fill="#f3c47f"/><rect x="' +
+                (x + 41) +
+                '" y="' +
+                (y + 23) +
+                '" width="11" height="11" fill="#f3c47f"/>';
+            }
+            house(50, 23, night ? '#566b78' : '#b77e69');
+            house(218, 30, night ? '#536b75' : '#729a9d');
+            house(54, 160, night ? '#536a5c' : '#ab915f');
+            house(230, 160, night ? '#52645e' : '#8985ab');
+            for (let i = 0; i < 8; i++) {
+              const x = (i * 47 + 19) % 316,
+                y = (i * 73 + 91) % 245;
+              if (x > 151 && x < 190) continue;
+              out +=
+                '<rect x="' +
+                x +
+                '" y="' +
+                y +
+                '" width="16" height="16" fill="#3a6f56"/><rect x="' +
+                (x + 5) +
+                '" y="' +
+                (y + 16) +
+                '" width="6" height="7" fill="#776b4f"/>';
+            }
+          }
+          out +=
+            '<rect x="158" y="116" width="14" height="16" fill="#392837"/><rect x="160" y="120" width="10" height="9" fill="#ca9a75"/><rect x="157" y="132" width="16" height="14" fill="#425f7c"/><rect x="158" y="146" width="5" height="7" fill="#23283b"/><rect x="168" y="146" width="5" height="7" fill="#23283b"/>';
+          out +=
+            '<rect x="203" y="114" width="12" height="10" fill="#583d3f"/><rect x="203" y="124" width="12" height="12" fill="#a86d80"/><rect x="204" y="136" width="4" height="6" fill="#262c40"/><rect x="212" y="136" width="4" height="6" fill="#262c40"/>';
+          out +=
+            '<rect x="201" y="95" width="18" height="15" fill="#ffe197"/><text x="210" y="106" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#162833">!</text>';
+          if (night) {
+            out +=
+              '<rect width="320" height="256" fill="#102a4c" opacity=".27"/>';
+            out +=
+              '<rect x="42" y="39" width="27" height="14" fill="#ffd28a" opacity=".35"/>';
+          }
+          return out + '</svg>';
+        }
+        function scene(people) {
+          return (
+            '<div class="cinema"><div class="scenehud"><span>✧ CINEMATIC MODE</span><span>3D / DESIGN COMP</span></div>' +
+            '<div class="actor left"><div class="body"></div><div class="neck"></div><div class="head"></div><div class="hair"></div><div class="eyes">• •</div><div class="line"></div></div>' +
+            (people === 1
+              ? ''
+              : '<div class="actor right"><div class="body"></div><div class="neck"></div><div class="head"></div><div class="hair"></div><div class="eyes">• •</div><div class="line"></div></div>') +
+            '<span class="cinelabel">COMPOSITION PLACEHOLDER · STYLIZED 3D TARGET</span></div>'
+          );
+        }
+        function portraitRow() {
+          return (
+            '<div class="row gap"><div class="pixelportrait">' +
+            portrait() +
+            '</div><div style="flex:1"><div class="subheading">ALEX MORGAN</div><div class="tiny muted">AGE 23 / BELLWEATHER</div><div class="divline"></div><div class="tiny">LOOK: GOLDEN SKIN / ESPRESSO HAIR</div><div class="tiny" style="color:var(--mint)">SAME ID IN PIXEL + 3D</div></div></div>'
+          );
+        }
+        function menuWorld(kind) {
+          const interior = kind === 'interior';
+          const bubble = kind === 'npc';
+          return (
+            H(interior ? 'HOME / ROOM 01' : 'BELLWEATHER / MARKET') +
+            '<div class="pixels">' +
+            townMap(interior, kind === 'night') +
+            '<div class="pixelhint"><span>DAY 041 · ' +
+            (interior ? 'HOME' : 'MARKET') +
+            '</span><span>☀ 19°C</span></div>' +
+            (bubble
+              ? '<div style="position:absolute;top:43%;left:22%;right:16%;background:#162938e8;border:2px solid #97e6ac;padding:11px;font-size:12px"><strong style="color:#ffd28a">AMELIA</strong><p style="margin-top:6px">“You came back to this street?”</p><div class="row" style="margin-top:8px">' +
+                B('DEEP TALK', 'S08', 'fill') +
+                B('QUICK', 'S10', 'sub') +
+                '</div></div>'
+              : '') +
+            '</div><div class="bottomhud"><div class="row"><div class="dpad"><i>↑</i><i>←</i><i>↓</i><i>→</i></div><div class="row gap">' +
+            B(
+              interior ? '↩ EXIT' : 'A TALK',
+              interior ? 'S04' : 'S07',
+              'fill',
+            ) +
+            B('MAP', 'S06', 'sub') +
+            '</div></div><div class="hudrow">' +
+            B('☰ LIFE', 'S12', 'sub') +
+            B('AGE UP ▶', 'S11', 'warm') +
+            B('☏ 2', 'S24', 'sub') +
+            '</div></div>'
+          );
+        }
+        function layout(s) {
+          switch (s.kind) {
+            case 'title':
+              return (
+                '<div class="paper" style="justify-content:space-between"><div style="text-align:center;margin-top:26px"><div class="kicker">WELCOME TO BELLWEATHER</div><div style="font:900 54px Impact, sans-serif;color:#97e6ac;margin-top:8px">LIVEIT</div><p style="font-size:15px;color:#f5f2d9;margin:8px 25px">Every choice becomes a life.</p></div><div style="height:37%;border:2px solid #8ba98b;overflow:hidden">' +
+                townMap(false, true) +
+                '</div><div class="card">' +
+                B('▶ CONTINUE LIFE', 'S04', 'fill') +
+                B('＋ CREATE NEW LIFE', 'S02', 'sub') +
+                B('✧ STORIES', 'S21', 'sub') +
+                '</div></div>'
+              );
+            case 'create':
+              return (
+                H(
+                  'CREATE NEW LIFE',
+                  '<span class=statmini>CHAPTER ZERO</span>',
+                ) +
+                '<div class="paper">' +
+                C(
+                  'Who will you become?',
+                  'One persistent identity, two beautiful visual worlds.',
+                  'focus',
+                ) +
+                portraitRow() +
+                C('YOUR NAME', 'Alex Morgan  ·  Editable text field mock') +
+                C('PRONOUNS', 'THEY/THEM  |  SHE/HER  |  HE/HIM') +
+                '<div class="row gap">' +
+                B('CUSTOMIZE LOOK', 'S03', 'fill') +
+                '</div><div style="margin-top:auto">' +
+                B('BEGIN MY LIFE →', 'S04', 'fill') +
+                '</div></div>'
+              );
+            case 'avatar':
+              return (
+                H('CHARACTER CREATOR', '<span class=statmini>1 / 5</span>') +
+                '<div class="paper"><div class="sectionheading">ONE CHARACTER. TWO WORLDS.</div><div class="twocol"><div class="card"><span class="kicker">PIXEL IDENTITY</span><div style="height:150px;background:#638d7a;display:grid;place-items:center"><div style="height:130px;width:108px;image-rendering:pixelated">' +
+                portrait() +
+                '</div></div></div><div class="card"><span class="kicker">3D IDENTITY</span><div style="height:150px;background:radial-gradient(#be9475,#3d4456);border-radius:45% 45% 10% 10%;display:grid;place-items:center"><div style="width:63px;height:84px;border-radius:50%;background:radial-gradient(at 32% 22%,#ffd1a6,#ae795d);box-shadow:0 -17px #342936,0 55px #476e78"></div></div></div></div><div class="subheading">HAIR · FACE · BODY · SKIN · CLOTHES</div><div class="row gap"><span class="badge mint">HAIR</span><span class="badge">EYES</span><span class="badge">OUTFIT</span><span class="badge">AGE</span></div>' +
+                C(
+                  'CURRENT LOOK',
+                  'Espresso waves · Golden skin · Navy streetwear',
+                ) +
+                B('SAVE APPEARANCE', 'S04', 'fill') +
+                '</div>'
+              );
+            case 'world':
+            case 'interior':
+            case 'npc':
+              return menuWorld(s.kind);
+            case 'map':
+              return (
+                H('WORLD MAP', '<span class=statmini>5 DISTRICTS</span>') +
+                '<div class="paper"><div class="sectionheading">BELLWEATHER</div><div class="card" style="height:55%;padding:0;overflow:hidden">' +
+                townMap(false, false) +
+                '</div>' +
+                C(
+                  'SELECT A DESTINATION',
+                  'Riverside · University · Market · Studio · Gardens',
+                ) +
+                '<div class="row gap">' +
+                B('VISIT MARKET', 'S04', 'fill') +
+                B('BACK', 'S04', 'sub') +
+                '</div></div>'
+              );
+            case 'age':
+              return (
+                H('YEAR IN REVIEW', '<span class=statmini>AGE 24</span>') +
+                '<div class="paper"><div class="kicker">EVERY YEAR LEAVES A MARK</div><div style="text-align:center;margin:18px"><div style="font:900 70px Impact,sans-serif;color:#ffd28a">24</div><div class="tiny">AGE • NEW YEAR • 365 DAYS</div></div>' +
+                C(
+                  'THE CITY KEPT MOVING',
+                  'You spent another year in Bellweather. What changed is preserved in your history.',
+                  'focus',
+                ) +
+                C('WORK & MONEY', 'Income recorded · Costs recorded') +
+                C('RELATIONSHIPS', 'A conversation changed a connection.') +
+                B('VIEW CONSEQUENCES', 'S10', 'fill') +
+                '<div style="margin-top:auto">' +
+                B('BACK TO MY LIFE', 'S04', 'sub') +
+                '</div></div>'
+              );
+            case 'dialog':
+              return (
+                H(
+                  'STORY / BELLWEATHER',
+                  '<span class=statmini>♥ AMELIA</span>',
+                ) +
+                scene(2) +
+                '<div class="dialog"><label>AMELIA</label><p>“I waited. I did not know if you would ever come back.”</p><div class="row gap">' +
+                B('✧ NEXT', 'S09', 'fill') +
+                B('☷ HISTORY', 'S28', 'sub') +
+                B('LEAVE', 'S04', 'sub') +
+                '</div></div>'
+              );
+            case 'choices':
+              return (
+                H('SCENE 03 / DECISION', '<span class=statmini>PAUSED</span>') +
+                scene(2) +
+                '<div class="dialog"><label>YOUR RESPONSE</label><div class="bigchoice selected"><b>01</b> Tell Amelia the truth</div><div class="bigchoice"><b>02</b> Ask for time</div><div class="bigchoice"><b>03</b> Leave gently</div>' +
+                B('CONFIRM CHOICE', 'S10', 'fill') +
+                '</div>'
+              );
+            case 'outcome':
+              return (
+                H(
+                  'REAL CONSEQUENCES',
+                  '<span class=statmini>EVENT 041</span>',
+                ) +
+                '<div class="paper"><div class="sectionheading">WHAT CHANGED?</div>' +
+                C(
+                  '♡ RELATIONSHIP / AMELIA',
+                  'Trust +12 · New shared memory. Source: confirmed world event.',
+                  'focus',
+                ) +
+                C('◇ JOURNAL ENTRY', '“We spoke honestly.”') +
+                C(
+                  'THE REST OF YOUR LIFE CONTINUES',
+                  'No random bonus. Only persisted facts, actions and consequences.',
+                ) +
+                '<div class="row gap">' +
+                B('VIEW MEMORY', 'S28', 'fill') +
+                B('DONE', 'S04', 'sub') +
+                '</div></div>'
+              );
+            case 'story':
+              return (
+                H(
+                  'STORY / CHAPTER 01',
+                  '<span class=statmini>SCENE 3/7</span>',
+                ) +
+                scene(2) +
+                '<div class="dialog"><label>THE SPACE BETWEEN</label><p>“There are things neither of us said.”</p>' +
+                B('CONTINUE THE SCENE', 'S09', 'fill') +
+                '</div>'
+              );
+            case 'life':
+              return (
+                H('MY LIFE', '<span class=statmini>LEVEL 23</span>') +
+                '<div class="paper scroll">' +
+                portraitRow() +
+                '<div class="twocol">' +
+                C('SAVINGS', '£1,800') +
+                C('WELLBEING', '72 / 100') +
+                '</div>' +
+                C(
+                  'LIFE PROGRESS',
+                  '<div class=meter><i style=width:54%></i></div><div class=tiny>STUDY / WORK / PLAY</div>',
+                ) +
+                C(
+                  'TODAY',
+                  'Your city is open. People remember the way you treat them.',
+                ) +
+                '<div class="row gap">' +
+                B('CAREER', 'S13', 'fill') +
+                B('PEOPLE', 'S15', 'sub') +
+                '</div><div class="row gap">' +
+                B('HOME', 'S17', 'fill') +
+                B('MONEY', 'S19', 'sub') +
+                '</div>' +
+                B('BACK TO CITY', 'S04', 'fill') +
+                foot() +
+                '</div>'
+              );
+            case 'career':
+              return (
+                H('LIFE / CAREER', '<span class=statmini>£1,800</span>') +
+                '<div class="paper">' +
+                C(
+                  'JOB STATUS',
+                  'Software Developer · Fictional Bellweather employer',
+                  'focus',
+                ) +
+                C(
+                  'EXPERIENCE',
+                  '<div class=meter><i style=width:54%></i></div><div class=tiny>Current progression 54%</div>',
+                ) +
+                C(
+                  'AVAILABLE ACTIONS',
+                  'Work shift · Request promotion · Apply to opening',
+                ) +
+                '<div class="row gap">' +
+                B('WORK', 'S10', 'fill') +
+                B('BACK', 'S12', 'sub') +
+                '</div></div>'
+              );
+            case 'people':
+              return (
+                H('PEOPLE & FAMILY', '<span class=statmini>2 CONTACTS</span>') +
+                '<div class="paper">' +
+                C(
+                  '♡ AMELIA',
+                  'Trust 35 / 100. Longstanding friendship. Last meaningful event recorded.',
+                  'focus',
+                ) +
+                C(
+                  '♡ NOAH',
+                  'Trust 55 / 100. Shared social time affects wellbeing.',
+                ) +
+                '<div class="row gap">' +
+                B('TALK TO AMELIA', 'S08', 'fill') +
+                B('MEMORIES', 'S28', 'sub') +
+                '</div></div>'
+              );
+            case 'home':
+              return (
+                H('HOME / PERSONAL', '<span class=statmini>MY ROOM</span>') +
+                '<div class="pixels">' +
+                townMap(true, false) +
+                '</div><div class="bottomhud">' +
+                C(
+                  'INVENTORY',
+                  'Own, equip and use objects; appearance shared with 3D.',
+                ) +
+                '<div class="row gap">' +
+                B('WARDROBE', 'S03', 'fill') +
+                B('↩ EXIT', 'S04', 'sub') +
+                '</div></div>'
+              );
+            case 'finance':
+              return (
+                H('MONEY & PROPERTY', '<span class=statmini>LEDGER</span>') +
+                '<div class="paper"><div class="sectionheading">YOUR FINANCES</div><div style="font:900 45px Impact,sans-serif;color:#ffd28a">£1,800</div>' +
+                C('PROPERTY', 'Ownable items are real portfolio entries.') +
+                C('LIVING COSTS', 'Expenses are recorded by simulation time.') +
+                C(
+                  'TRANSACTION HISTORY',
+                  'Every completed transfer creates one ledger event.',
+                ) +
+                B('BACK TO LIFE', 'S12', 'fill') +
+                '</div>'
+              );
+            case 'library':
+              return (
+                H('STORIES', '<span class=statmini>LIBRARY</span>') +
+                '<div class="paper">' +
+                C(
+                  '✧ THE SPACE BETWEEN',
+                  'Original reunion story · Partial build · Resume or explore your own route.',
+                  'focus',
+                ) +
+                C(
+                  '✧ BOOKSHOP',
+                  'Original additional story · Prerequisites apply.',
+                ) +
+                C(
+                  'YOUR LIBRARY',
+                  'Imported authored stories require validation and compatible content.',
+                ) +
+                '<div class="row gap">' +
+                B('START / RESUME', 'S23', 'fill') +
+                B('BACK TO CITY', 'S04', 'sub') +
+                '</div></div>'
+              );
+            case 'phone':
+              return (
+                H('IN-WORLD PHONE', '<span class=statmini>2 UNREAD</span>') +
+                '<div class="paper"><div class="sectionheading">YOUR CONNECTIONS</div>' +
+                C(
+                  '◈ NPC MESSAGES',
+                  'In-world authored contacts and scenario updates.',
+                ) +
+                C(
+                  '✧ AI CHARACTERS',
+                  'Labeled computer-generated responses, with bounded memory controls.',
+                  'focus',
+                ) +
+                C(
+                  '♧ REAL CONTACTS',
+                  'Opt-in contextual human communication; separate permissions and report/block.',
+                ) +
+                '<div class="row gap">' +
+                B('AI CHAT', 'S25', 'fill') +
+                B('HUMAN', 'S26', 'sub') +
+                '</div>' +
+                B('↩ BACK TO CITY', 'S04', 'sub') +
+                '</div>'
+              );
+            case 'ai':
+              return (
+                H('AI CHARACTER', '<span class=statmini>AI · EXPLICIT</span>') +
+                scene(1) +
+                '<div class="dialog"><label>AI-POWERED CHARACTER</label><p>“I remember what you chose to tell me.”</p><div class="composer">Type a message… (design only)</div><div class="row gap">' +
+                B('MEMORY', 'S28', 'sub') +
+                B('PHONE', 'S24', 'sub') +
+                '</div></div>'
+              );
+            case 'social':
+              return (
+                H(
+                  'REAL CONTACTS',
+                  '<span class=statmini>CONSENT REQUIRED</span>',
+                ) +
+                '<div class="paper">' +
+                C(
+                  '♧ HUMAN INTERACTIONS',
+                  'Only permitted context-based, opt-in social play. Not an open random chat roulette.',
+                  'focus',
+                ) +
+                C(
+                  'YOUR PRIVACY',
+                  'Players choose when to accept an invitation. Reporting and blocking must always be visible.',
+                ) +
+                C(
+                  'CONNECTION STATUS',
+                  'NOT CONNECTED · NO HUMAN IS SIMULATED',
+                ) +
+                '<div class="row gap">' +
+                B('DEMO THREAD UI', 'S27', 'fill') +
+                B('BACK', 'S24', 'sub') +
+                '</div></div>'
+              );
+            case 'human':
+              return (
+                H('HUMAN CONTACT', '<span class=statmini>DESIGN ONLY</span>') +
+                '<div class="paper"><div class="kicker">SAMPLE THREAD — NOT REAL/CONNECTED</div><div class="phonepanel"><div class="thread">Sample human message layout.</div><div class="thread me">Example outgoing response.</div><div class="thread">Delivery and consent are verified on a real backend.</div><div class="composer">Composer inactive in screen atlas</div></div><div class="row gap">' +
+                B('REPORT / BLOCK', 'S26', 'warm') +
+                B('PHONE', 'S24', 'sub') +
+                '</div></div>'
+              );
+            case 'memory':
+              return (
+                H('LIFE MEMORIES', '<span class=statmini>ARCHIVE</span>') +
+                '<div class="paper">' +
+                C(
+                  'DAY 041 · AMELIA',
+                  'You had an honest conversation. Saved trust change.',
+                  'focus',
+                ) +
+                C(
+                  'DAY 037 · WORK',
+                  'A job action was recorded in the ledger.',
+                ) +
+                C(
+                  'YOUR JOURNAL',
+                  'Records reflect events saved by the simulation. Flashback artwork must not invent facts.',
+                ) +
+                '<div class="row gap">' +
+                B('BACK TO CITY', 'S04', 'fill') +
+                B('LIFE HUD', 'S12', 'sub') +
+                '</div></div>'
+              );
+            case 'legacy':
+              return (
+                H(
+                  'LEGACY & REMEMBRANCE',
+                  '<span class=statmini>REFLECTION</span>',
+                ) +
+                '<div class="paper"><div class="kicker">A LIFE REMEMBERED</div><div style="height:38%;background:radial-gradient(circle at 50% 20%,#ba965f,#243a43 60%);border:1px solid #8f8870;display:grid;place-items:center"><div class="sectionheading" style="font-size:28px;text-align:center">EVERY CHOICE<br/>BECOMES A LIFE</div></div>' +
+                C(
+                  'MEMORY ALBUM',
+                  'Events and people appear only as recorded, never invented.',
+                ) +
+                C(
+                  'FAMILY & CONTINUITY',
+                  'Legacy actions depend on real simulation availability.',
+                ) +
+                B('REVIEW JOURNAL', 'S28', 'fill') +
+                '</div>'
+              );
+            case 'settings':
+              return (
+                H('SETTINGS', '<span class=statmini>ACCESSIBILITY</span>') +
+                '<div class="paper">' +
+                C('◈ HAPTICS', 'OFF  /  SUBTLE  /  FULL', 'focus') +
+                C('◈ GAMEPLAY MOTION', 'REDUCE CAMERA MOVEMENT  /  NORMAL') +
+                C(
+                  '◈ TEXT & CONTRAST',
+                  'Readable scalable body text; large touch controls.',
+                ) +
+                C(
+                  '◈ GRAPHICS QUALITY',
+                  'LOW / MEDIUM / HIGH · Pixel world stays crisp',
+                ) +
+                '<div class="row gap">' +
+                B('ASSET PACKS', 'S32', 'fill') +
+                B('RESUME', 'S04', 'sub') +
+                '</div></div>'
+              );
+            case 'packs':
+              return (
+                H(
+                  'CONTENT LIBRARY',
+                  '<span class=statmini>PACK MANAGER</span>',
+                ) +
+                '<div class="paper">' +
+                C(
+                  '✓ CORE VISUALS',
+                  'Installed prototype recipes · 51 definitions, NOT finished art.',
+                  'focus',
+                ) +
+                C(
+                  '◇ ORIGINAL LOCATION PACK',
+                  'Downloadable expansion design target — not installed.',
+                ) +
+                C(
+                  '◈ VERIFY BEFORE ACTIVATION',
+                  'SHA-256, version, license and required dependencies; no downloadable shader executables.',
+                ) +
+                B('BACK TO SETTINGS', 'S31', 'fill') +
+                '</div>'
+              );
+            case 'error':
+              return (
+                H(
+                  'SAFE RECOVERY',
+                  '<span class=statmini style=color:#ff7588>OFFLINE</span>',
+                ) +
+                '<div class="paper">' +
+                C(
+                  'COULD NOT SAVE CHANGES',
+                  'The last valid life remains preserved. Do not exit until the unsaved state is handled.',
+                  'warn',
+                ) +
+                C(
+                  'PLAY OFFLINE',
+                  'The pixel world can remain available when external services fail.',
+                ) +
+                C(
+                  'RENDERER FALLBACK',
+                  'If the Vulkan device is unavailable, show supported accessible graphics instead of a blank scene.',
+                ) +
+                '<div class="row gap">' +
+                B('RETRY', 'S04', 'fill') +
+                B('SETTINGS', 'S31', 'sub') +
+                '</div></div>'
+              );
+            default:
+              return (
+                H('DESIGN MODE', '') +
+                C(
+                  'COMING IN STAGE 2',
+                  'This screen is specified in the full 43-screen blueprint.',
+                )
+              );
+          }
+        }
+        let selected = 'S04';
+        groups.forEach((group) => {
+          const heading = document.createElement('h2');
+          heading.textContent = group.name;
+          nav.appendChild(heading);
+          const box = document.createElement('div');
+          box.className = 'navgroup';
+          group.ids.forEach((id) => {
+            const s = byId[id];
+            if (!s) return;
+            const b = document.createElement('button');
+            b.className = 'navbutton';
+            b.setAttribute('data-id', id);
+            const code = document.createElement('span');
+            code.className = 'idtag';
+            code.textContent = id;
+            const t = document.createElement('b');
+            t.textContent = s.title;
+            b.append(code, t);
+            b.addEventListener('click', () => activate(id));
+            box.appendChild(b);
+          });
+          nav.appendChild(box);
+        });
+        function activate(id) {
+          const s = byId[id];
+          if (!s) return;
+          selected = id;
+          document.querySelectorAll('.navbutton').forEach((b) => {
+            const on = b.dataset.id === id;
+            b.classList.toggle('selected', on);
+            b.setAttribute('aria-current', on ? 'page' : 'false');
+          });
+          document.getElementById('title').textContent = s.title;
+          document.getElementById('mode').textContent = s.group.toUpperCase();
+          document.getElementById('eyebrow').textContent =
+            'SCREEN ' + id + ' / ' + s.group.toUpperCase();
+          document.getElementById('subtitle').textContent = s.detail;
+          preview.innerHTML = layout(s);
+          const details = document.getElementById('inspector');
+          details.innerHTML = '';
+          const dl = document.createElement('dl');
+          dl.className = 'inspect';
+          [
+            ['Screen', id + ' — ' + s.title],
+            ['Mode', s.group.toUpperCase()],
+            ['Interactions', s.control],
+            ['States to design/test', s.states],
+            [
+              'Acceptance',
+              'Full specification: GDS-002. This atlas is a composition mock, not a native rendering or networking test.',
+            ],
+          ].forEach((entry) => {
+            const box = document.createElement('div');
+            box.className = 'featuregroup';
+            const dt = document.createElement('dt');
+            dt.textContent = entry[0];
+            const dd = document.createElement('dd');
+            dd.textContent = entry[1];
+            box.append(dt, dd);
+            dl.appendChild(box);
+          });
+          details.appendChild(dl);
+          history.replaceState(null, '', '#' + id);
+        }
+        preview.addEventListener('click', (event) => {
+          const button = event.target.closest('[data-go]');
+          if (button) activate(button.getAttribute('data-go'));
+        });
+        window.addEventListener('hashchange', () =>
+          activate(location.hash.slice(1) || 'S04'),
+        );
+        activate(byId[location.hash.slice(1)] ? location.hash.slice(1) : 'S04');
+      })();
+    </script>
+  </body>
+</html>

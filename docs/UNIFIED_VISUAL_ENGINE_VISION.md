@@ -1,0 +1,15 @@
+# LIVEIT — Unified Pixel Life and Pixel Story World (V2)
+
+**OWNER'S CURRENT DECISION: 100% 2D RETRO PIXEL ART. NO 3D.** This file replaces the prior hybrid/all-3D visual engine vision. Canonical details: [PIXEL_ONLY_DIRECTION_V2](PIXEL_ONLY_DIRECTION_V2.md), [ART_DIRECTION](ART_DIRECTION.md), and the [active pixel asset requirements](../content/production-assets/pixel-v2/required-assets.json).
+
+**Life Mode:** An original lively, dense top-down handheld-inspired pixel city. Walk the map with smooth four-direction controls, enter buildings, interact with inhabitants and objects, attend school, take jobs, manage money, family, relationships and wellbeing, age and change your appearance. Collision and location data are real domain/save state, not dummy visual choices.
+
+**Stories and deep conversations:** Never switch to 3D. Dramatic episodes and talking scenes are **premium expressive pixel art** with larger multi-layer pixel portraits, acting frames, emotions, mouth/blink motion, clothing identity, cinematic 2D rooms, foreground props, camera cuts, light/palette effects, subtle parallax and expressive reactions. Accessible readable dialogue/choice HUD overlays the pixel stage. A whole character's saved identity maps between overworld sprite and pixel portrait; no generic repeated faces.
+
+**Game-system feel:** UI is an excellent console RPG/life sim rather than a form website: a tactile compact top HUD, life-status meter, sidebar, player inventory, in-world phone, AI-NPC messages distinctly labeled from verified real-human social features, context widgets for what changed, and low-cost haptics only on actual saved commits. Responsive iPhone/Android portrait and tablet safe areas are required.
+
+**Growth:** Any arbitrary number of districts, original tiles, NPC appearance/outfits, locations, modular hair/accessory sprites, authored story episode backgrounds, effects and sounds may be added as safe and rights-reviewed data packs. Existing deterministic simulation/world/story/save code is authoritative; shading cannot award money/relationships/age. Native Vulkan 2D sprite and palette rendering remains technically optional but no 3D rendering passes are on the roadmap.
+
+**Sources:** The owner has many downloaded ZIP packs and sounds. The repo provides [safe interactive intake](../tools/intake_pixel_assets.py) (scan→review license/public redistribution→import approved files), and [verification](../tools/validate_pixel_assets.py). No zip is assumed open/free merely because it was downloaded. Existing 3D historical catalogs are retired, not asset-creation demands.
+
+**First playable proof:** Walk a real top-down Bellweather street, enter a café, meet Amelia in pixel form, play an emotionally expressive large pixel dialogue and meaningful choice, show the true saved outcome, return to the same player tile and survive app restart. Iterate into dozens of stories, city systems, aging, appearance, soundtrack and satisfying choice consequences. Physical-device quality and actual sprite files—not merely plans—establish completion.

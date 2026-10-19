@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import { DISTRICTS } from '@living/simulation-core';
+import {
+  DISTRICTS,
+  generateCityScene,
+  projectCityBlock,
+} from '@living/simulation-core';
 import type { District } from '@living/world-schema';
+import { gameTheme as t } from './gameTheme';
 
-/**
- * A small explorable world map rather than a row of website cards.
- * Isometric buildings licensed CC0-1.0 by Kenney.
- * Positions are normalized to the stage width so touch targets stay stable
- * on portrait phones, tablets and desktop monitors.
- */
-
+/* Original city layout with CC0 Kenney isometric sprite placeholders. */
 /* eslint-disable @typescript-eslint/no-require-imports */
 const buildings = [
   require('../assets/buildings/building-002.png'),
@@ -18,103 +17,360 @@ const buildings = [
   require('../assets/buildings/building-010.png'),
   require('../assets/buildings/building-000.png'),
 ];
-const groundTiles = [
-  require('../assets/city/tile-000.png'),
-  require('../assets/city/tile-004.png'),
-  require('../assets/city/tile-010.png'),
-  require('../assets/city/tile-012.png'),
-];
 /* eslint-enable @typescript-eslint/no-require-imports */
 
-const positions = [
-  { x: 0.19, y: 0.2 },
-  { x: 0.51, y: 0.14 },
-  { x: 0.82, y: 0.25 },
-  { x: 0.34, y: 0.66 },
-  { x: 0.70, y: 0.68 },
+const landmarks = [
+  { x: 0.18, y: 0.27 },
+  { x: 0.49, y: 0.16 },
+  { x: 0.81, y: 0.3 },
+  { x: 0.32, y: 0.69 },
+  { x: 0.73, y: 0.71 },
 ] as const;
+
+const preview = generateCityScene(0xb311);
+
 export function CityMap({
   selected,
   onVisit,
+  day,
+  hotspots,
 }: {
   selected: District;
   onVisit: (district: District) => void;
+  day: number;
+  hotspots: readonly District[];
 }) {
   const [width, setWidth] = useState(350);
+  const [zoom, setZoom] = useState(1);
+  const [night, setNight] = useState(true);
   const compact = width < 520;
-  const height = compact ? 340 : 430;
-  const sprite = compact ? 83 : 126;
-  const hit = compact ? 116 : 171;
+  const height = compact ? 405 : 500;
+  const spriteSize = compact ? 62 : 84;
+  const markerSize = compact ? 113 : 142;
+  const blocks = useMemo(
+    () =>
+      preview.blocks
+        .filter((_, index) => index % 2 === 0)
+        .map((block) => ({
+          block,
+          position: projectCityBlock(block, width, height, zoom),
+        }))
+        .sort((a, b) => a.block.x + a.block.z - (b.block.x + b.block.z)),
+    [width, height, zoom],
+  );
   return (
     <View
-      accessibilityLabel="Explorable Bellweather isometric city map"
-      style={[styles.map, { height }]}
-      onLayout={(event) => setWidth(event.nativeEvent.layout.width)}
+      testID="city-viewport"
+      accessibilityLabel="Illustrated Bellweather district selection map, not a free-roaming pixel world"
+      style={[styles.viewport, { height }, night ? styles.night : styles.day]}
+      onLayout={(e) => {
+        const next = Math.round(e.nativeEvent.layout.width);
+        if (next > 0 && next !== width) setWidth(next);
+      }}
     >
-      <View pointerEvents="none" style={styles.mapGrid}>
-        {[0, 1, 2, 3, 4, 5].map((row) => (
-          <View key={row} style={styles.roadRow}>
-            {[0, 1, 2, 3, 4, 5, 6].map((col) => (
-              <Image
-                key={col}
-                source={groundTiles[(row + col) % groundTiles.length]}
-                style={{ width: compact ? 56 : 84, height: compact ? 56 : 84, opacity: 0.18 }}
-                resizeMode="contain"
-              />
-            ))}
-          </View>
-        ))}
+      <View pointerEvents="none" style={styles.skyline} />
+      <View pointerEvents="none" style={styles.island}>
+        <View style={styles.avenueVertical} />
+        <View style={styles.avenueHorizontal} />
+        <View style={styles.river} />
+        {blocks.map(({ block, position }) => {
+          const size = (spriteSize * position.scale * zoom) / 1.35;
+          return (
+            <Image
+              key={block.id}
+              source={buildings[block.palette]}
+              accessibilityLabel={`3D-style illustration of ${block.district} building`}
+              resizeMode="contain"
+              style={{
+                position: 'absolute',
+                width: size,
+                height: size,
+                left: position.left - size / 2,
+                top: position.top - size / 2,
+                opacity: night ? 0.83 : 0.95,
+              }}
+            />
+          );
+        })}
       </View>
-      <View pointerEvents="none" style={styles.mapCaption}>
-        <Text style={styles.kicker}>✦ CITY OF BELLWEATHER</Text>
-        <Text style={styles.subtitle}>Five neighborhoods. A lifetime of possibilities.</Text>
+      <View style={styles.header}>
+        <View style={styles.titleGroup} pointerEvents="none">
+          <Text style={styles.hud}>◆ BELLWEATHER / DAY {day + 1}</Text>
+          <Text style={styles.heading}>CHOOSE YOUR DISTRICT</Text>
+        </View>
+        <View style={styles.toolbar}>
+          <Pressable
+            testID="city-camera-zoom-out"
+            accessibilityRole="button"
+            accessibilityLabel="Zoom city map out"
+            disabled={zoom <= 0.8}
+            onPress={() =>
+              setZoom((value) => Math.max(0.8, +(value - 0.2).toFixed(1)))
+            }
+            style={({ pressed }) => [styles.control, pressed && styles.pressed]}
+          >
+            <Text style={styles.controlText}>−</Text>
+          </Pressable>
+          <Text style={styles.zoom}>{Math.round(zoom * 100)}%</Text>
+          <Pressable
+            testID="city-camera-zoom-in"
+            accessibilityRole="button"
+            accessibilityLabel="Zoom city map in"
+            disabled={zoom >= 1.4}
+            onPress={() =>
+              setZoom((value) => Math.min(1.4, +(value + 0.2).toFixed(1)))
+            }
+            style={({ pressed }) => [styles.control, pressed && styles.pressed]}
+          >
+            <Text style={styles.controlText}>+</Text>
+          </Pressable>
+        </View>
       </View>
       {DISTRICTS.map((district, index) => {
-        const pos = positions[index]!;
+        const pos = landmarks[index]!;
         const active = selected === district.id;
         return (
           <Pressable
             key={district.id}
+            testID={`city-district-${district.id}`}
             accessibilityRole="button"
             accessibilityLabel={'Travel to ' + district.title}
             accessibilityState={{ selected: active }}
             onPress={() => onVisit(district.id)}
             style={({ pressed }) => [
-              styles.mapStop,
+              styles.landmark,
               {
-                width: hit,
-                left: Math.max(0, Math.min(width - hit, width * pos.x - hit / 2)),
-                top: height * pos.y - (compact ? 26 : 28),
+                width: markerSize,
+                left: Math.max(
+                  0,
+                  Math.min(width - markerSize, width * pos.x - markerSize / 2),
+                ),
+                top: height * pos.y - (compact ? 27 : 38),
               },
-              pressed && { opacity: 0.82 },
+              pressed && styles.pressed,
             ]}
           >
-            <Image source={buildings[index]} style={{ width: sprite, height: sprite }} resizeMode="contain" />
-            <View style={[styles.mapLabel, active && styles.mapLabelSelected]}>
-              <Text style={styles.mapName} numberOfLines={1}>{district.title}</Text>
-              <Text style={styles.mapActivity} numberOfLines={1}>{active ? '● YOUR LOCATION' : 'TAP TO VISIT ↗'}</Text>
+            <Image
+              source={buildings[index]}
+              style={{ width: compact ? 62 : 88, height: compact ? 57 : 83 }}
+              resizeMode="contain"
+            />
+            <View style={[styles.districtBadge, active && styles.active]}>
+              <Text
+                style={[styles.districtTitle, active && styles.activeTitle]}
+                numberOfLines={1}
+              >
+                {district.title.toUpperCase()}
+              </Text>
+              <Text style={styles.districtAction}>
+                {active
+                  ? '◆ CURRENT LOCATION'
+                  : hotspots.includes(district.id)
+                    ? '✦ EVENT AVAILABLE'
+                    : '○ ENTER DISTRICT'}
+              </Text>
             </View>
           </Pressable>
         );
       })}
-      <View pointerEvents="none" style={styles.mapFooter}>
-        <Text style={styles.mapFooterText}>EXPLORE THE CITY   ·   THERE ARE NO TRAVEL TICKETS</Text>
+      <View style={styles.footer}>
+        <Text style={styles.instructions}>◈ SELECT A BUILDING TO TRAVEL</Text>
+        <Pressable
+          testID="city-toggle-lighting"
+          accessibilityRole="button"
+          accessibilityLabel={
+            night ? 'Preview city in daylight' : 'Preview city at night'
+          }
+          onPress={() => setNight((value) => !value)}
+          style={({ pressed }) => [
+            styles.lightToggle,
+            pressed && styles.pressed,
+          ]}
+        >
+          <Text style={styles.lightText}>{night ? '☾ NIGHT' : '☼ DAY'}</Text>
+        </Pressable>
       </View>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
-  map: { width: '100%', borderRadius: 17, backgroundColor: '#1a2c3d', overflow: 'hidden', borderWidth: 1, borderColor: '#886c58', position: 'relative' },
-  mapGrid: { position: 'absolute', left: -40, top: 13, right: 0, bottom: 0, opacity: 0.7, transform: [{ rotate: '-11deg' }] },
-  roadRow: { flexDirection: 'row', gap: 2, marginTop: -4 },
-  mapCaption: { position: 'absolute', left: 14, top: 13, right: 14 },
-  kicker: { color: '#f5c68f', letterSpacing: 2, fontSize: 11, fontWeight: '800' },
-  subtitle: { color: '#c6d2de', fontSize: 10, marginTop: 3 },
-  mapStop: { position: 'absolute', alignItems: 'center', gap: 1, minHeight: 105, justifyContent: 'center', zIndex: 2 },
-  mapLabel: { backgroundColor: 'rgba(9,19,31,.92)', borderColor: '#6e8597', borderWidth: 1, paddingVertical: 5, paddingHorizontal: 8, alignItems: 'center', borderRadius: 8, minWidth: 101 },
-  mapLabelSelected: { backgroundColor: '#55342e', borderColor: '#f3bd7c', borderWidth: 2 },
-  mapName: { color: '#fff0dc', fontSize: 11, fontWeight: '800' },
-  mapActivity: { color: '#f4c68a', fontSize: 8, fontWeight: '800', marginTop: 2, letterSpacing: 0.3 },
-  mapFooter: { position: 'absolute', bottom: 8, left: 10, right: 10 },
-  mapFooterText: { color: '#d0c6b8', fontSize: 9, letterSpacing: 1, textAlign: 'center' },
+  viewport: {
+    width: '100%',
+    borderRadius: 10,
+    overflow: 'hidden',
+    borderWidth: 2,
+    borderColor: t.border,
+    position: 'relative',
+  },
+  night: { backgroundColor: '#14283A' },
+  day: { backgroundColor: '#4A7685' },
+  skyline: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: '23%',
+    height: '33%',
+    backgroundColor: 'rgba(62,117,119,0.25)',
+    transform: [{ skewY: '-7deg' }],
+  },
+  island: {
+    position: 'absolute',
+    width: '130%',
+    height: '80%',
+    left: '-15%',
+    top: '19%',
+    backgroundColor: '#355B58',
+    borderWidth: 2,
+    borderColor: '#5D9582',
+    borderRadius: 26,
+    transform: [{ rotate: '-2deg' }],
+    overflow: 'hidden',
+  },
+  avenueVertical: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: '46%',
+    width: '11%',
+    backgroundColor: '#283D4D',
+    transform: [{ rotate: '39deg' }],
+    borderLeftWidth: 3,
+    borderRightWidth: 3,
+    borderColor: '#819D8B',
+  },
+  avenueHorizontal: {
+    position: 'absolute',
+    top: '49%',
+    left: '-10%',
+    width: '120%',
+    height: '9%',
+    backgroundColor: '#293E4C',
+    transform: [{ rotate: '-22deg' }],
+    borderTopWidth: 2,
+    borderBottomWidth: 2,
+    borderColor: '#728B83',
+  },
+  river: {
+    position: 'absolute',
+    left: '-7%',
+    bottom: '5%',
+    height: '15%',
+    width: '140%',
+    backgroundColor: '#2C7089',
+    transform: [{ rotate: '-13deg' }],
+    borderTopWidth: 3,
+    borderColor: '#66B9BF',
+  },
+  header: {
+    position: 'absolute',
+    top: 10,
+    left: 10,
+    right: 10,
+    flexDirection: 'row',
+    gap: 6,
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  },
+  titleGroup: {
+    flexShrink: 1,
+    gap: 5,
+    backgroundColor: 'rgba(12,25,35,0.88)',
+    padding: 9,
+    borderWidth: 1,
+    borderColor: '#577B73',
+  },
+  hud: {
+    color: t.neon,
+    fontFamily: t.font.hud,
+    fontSize: 9,
+    letterSpacing: 0.5,
+  },
+  heading: {
+    color: t.ink,
+    fontFamily: t.font.display,
+    fontSize: 14,
+    fontWeight: '900',
+  },
+  toolbar: {
+    flexDirection: 'row',
+    gap: 3,
+    alignItems: 'center',
+    backgroundColor: '#122435',
+    padding: 3,
+    borderWidth: 1,
+    borderColor: '#628A81',
+  },
+  control: {
+    minWidth: 29,
+    minHeight: 31,
+    backgroundColor: t.panelRaised,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  controlText: { color: t.ink, fontSize: 20, fontWeight: '800' },
+  pressed: { opacity: 0.72 },
+  zoom: { fontSize: 9, color: t.amber, fontFamily: t.font.hud },
+  landmark: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 0,
+    minHeight: 90,
+  },
+  districtBadge: {
+    minWidth: 99,
+    alignItems: 'center',
+    paddingVertical: 6,
+    paddingHorizontal: 5,
+    borderRadius: 3,
+    borderWidth: 1,
+    backgroundColor: 'rgba(13,24,37,0.96)',
+    borderColor: '#85A09A',
+  },
+  active: { borderColor: t.neon, borderWidth: 2, backgroundColor: '#18453F' },
+  districtTitle: {
+    color: t.ink,
+    fontSize: 9,
+    fontFamily: t.font.hud,
+    fontWeight: '800',
+  },
+  activeTitle: { color: t.neon },
+  districtAction: {
+    color: t.amber,
+    fontSize: 7,
+    fontFamily: t.font.hud,
+    marginTop: 4,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 9,
+    left: 10,
+    right: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: 5,
+  },
+  instructions: {
+    color: t.ink,
+    fontSize: 8,
+    fontFamily: t.font.hud,
+    backgroundColor: '#132337DD',
+    padding: 6,
+    flexShrink: 1,
+  },
+  lightToggle: {
+    backgroundColor: '#193F43',
+    borderWidth: 1,
+    borderColor: t.neon,
+    padding: 8,
+    minHeight: 30,
+  },
+  lightText: {
+    color: t.neon,
+    fontFamily: t.font.hud,
+    fontSize: 10,
+    fontWeight: '800',
+  },
 });

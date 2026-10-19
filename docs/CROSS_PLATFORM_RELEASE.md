@@ -62,7 +62,7 @@ Production credentials, app identity, ownership of `studio.livinguniverse.player
 - Finalize privacy policy and in-app privacy settings. Any future accounts, cloud sync, moderation logs or user-generated content processing change the personal-data map and require updated notices.
 - Obtain legal review of artwork, AI-generation licenses, creator-upload rights, user-generated content moderation, reporting, takedowns/appeals and age classifications.
 - Confirm app-store policies for UGC creation, payments, in-app purchases and family eligibility; no real-money paywalls, loot boxes or advertising SDKs should be introduced to normal progression.
-- Produce approved screenshots from tested physical devices. Automated desktop/mobile *browser* screenshots do not count as native-device tests.
+- Produce approved screenshots from tested physical devices. Automated desktop/mobile _browser_ screenshots do not count as native-device tests.
 - Confirm public hosting and service uptime monitoring before inviting outside creators.
 
 ## EAS configuration references

@@ -13,7 +13,9 @@ const STORAGE_KEY = 'liveit:creator-draft:v1';
 export default function Studio() {
   const [raw, setRaw] = useState(() => JSON.stringify(reunion, null, 2));
   const [selected, setSelected] = useState(reunion.entry);
-  const [previewWorld, setPreviewWorld] = useState<World>(() => createWorld('Preview Player', 'creator.preview'));
+  const [previewWorld, setPreviewWorld] = useState<World>(() =>
+    createWorld('Preview Player', 'creator.preview'),
+  );
   const [message, setMessage] = useState(
     'Your work is stored locally in this browser.',
   );
@@ -70,7 +72,9 @@ export default function Studio() {
       return null;
     }
   }, [previewWorld, story]);
-  const previewTrust = previewWorld.relationships.find(p => p.characterId === 'amelia')?.trust ?? 0;
+  const previewTrust =
+    previewWorld.relationships.find((p) => p.characterId === 'amelia')?.trust ??
+    0;
   const previewMemoryCount = previewWorld.memories.length;
 
   function createStory() {
@@ -249,7 +253,10 @@ export default function Studio() {
       ),
     });
   }
-  function addChoiceEffect(index: number, kind: 'build-trust' | 'damage-trust' | 'memory' | 'clear') {
+  function addChoiceEffect(
+    index: number,
+    kind: 'build-trust' | 'damage-trust' | 'memory' | 'clear',
+  ) {
     if (!story || !scene) return;
     const current = scene.choices[index];
     if (!current) return;
@@ -264,29 +271,50 @@ export default function Studio() {
     if (kind === 'memory') {
       const target = story.permissions.memoryTargets[0];
       if (!target) {
-        setMessage('Add an authorized memory target in the advanced story permissions.');
+        setMessage(
+          'Add an authorized memory target in the advanced story permissions.',
+        );
         return;
       }
-      const fact = ('creator_' + scene.id + '_' + current.id + '_' + current.effects.length)
-        .replace(/[^a-zA-Z0-9_]/g, '_').slice(0, 80);
+      const fact = (
+        'creator_' +
+        scene.id +
+        '_' +
+        current.id +
+        '_' +
+        current.effects.length
+      )
+        .replace(/[^a-zA-Z0-9_]/g, '_')
+        .slice(0, 80);
       updateChoice(index, {
-        effects: [...current.effects, {
-          operation: 'add_memory', target, fact,
-          text: 'You chose: ' + current.label.slice(0, 200),
-        }],
+        effects: [
+          ...current.effects,
+          {
+            operation: 'add_memory',
+            target,
+            fact,
+            text: 'You chose: ' + current.label.slice(0, 200),
+          },
+        ],
       });
       return;
     }
     const target = story.permissions.relationshipTargets[0];
     if (!target) {
-      setMessage('Add an authorized relationship target in the advanced story permissions.');
+      setMessage(
+        'Add an authorized relationship target in the advanced story permissions.',
+      );
       return;
     }
     updateChoice(index, {
-      effects: [...current.effects, {
-        operation: 'adjust_relationship', target,
-        value: kind === 'build-trust' ? 5 : -5,
-      }],
+      effects: [
+        ...current.effects,
+        {
+          operation: 'adjust_relationship',
+          target,
+          value: kind === 'build-trust' ? 5 : -5,
+        },
+      ],
     });
   }
 
@@ -340,7 +368,9 @@ export default function Studio() {
   }
   function resetPreview() {
     setPreviewWorld(createWorld('Preview Player', 'creator.preview'));
-    setMessage('Preview reset. Try a different path and compare its consequences.');
+    setMessage(
+      'Preview reset. Try a different path and compare its consequences.',
+    );
   }
   function playPreviewChoice(choiceId: string) {
     if (!story) return;
@@ -348,9 +378,15 @@ export default function Studio() {
       // Exactly the same guards and atomic consequence engine as the player.
       const next = choose(previewWorld, story, choiceId);
       setPreviewWorld(next);
-      setMessage('Choice executed using the actual simulation and story runtime.');
+      setMessage(
+        'Choice executed using the actual simulation and story runtime.',
+      );
     } catch (error) {
-      setMessage(error instanceof Error ? 'Preview: ' + error.message : 'Preview could not advance.');
+      setMessage(
+        error instanceof Error
+          ? 'Preview: ' + error.message
+          : 'Preview could not advance.',
+      );
     }
   }
 
@@ -539,15 +575,47 @@ export default function Studio() {
                     </label>
                     <small>
                       Consequences:{' '}
-                      {choice.effects.map(e => e.operation === 'adjust_relationship'
-                        ? `${e.target} trust ${e.value > 0 ? '+' : ''}${e.value}`
-                        : `remember: ${e.fact}`).join(' · ') || 'No state changes'}
+                      {choice.effects
+                        .map((e) =>
+                          e.operation === 'adjust_relationship'
+                            ? `${e.target} trust ${e.value > 0 ? '+' : ''}${e.value}`
+                            : `remember: ${e.fact}`,
+                        )
+                        .join(' · ') || 'No state changes'}
                     </small>
-                    <div className="effect-controls" aria-label="Add game consequences">
-                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'build-trust')}>+5 trust</button>
-                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'damage-trust')}>−5 trust</button>
-                      <button type="button" className="secondary" onClick={() => addChoiceEffect(index, 'memory')}>+ Memory</button>
-                      <button type="button" className="secondary" disabled={choice.effects.length === 0} onClick={() => addChoiceEffect(index, 'clear')}>Clear effects</button>
+                    <div
+                      className="effect-controls"
+                      aria-label="Add game consequences"
+                    >
+                      <button
+                        type="button"
+                        className="secondary"
+                        onClick={() => addChoiceEffect(index, 'build-trust')}
+                      >
+                        +5 trust
+                      </button>
+                      <button
+                        type="button"
+                        className="secondary"
+                        onClick={() => addChoiceEffect(index, 'damage-trust')}
+                      >
+                        −5 trust
+                      </button>
+                      <button
+                        type="button"
+                        className="secondary"
+                        onClick={() => addChoiceEffect(index, 'memory')}
+                      >
+                        + Memory
+                      </button>
+                      <button
+                        type="button"
+                        className="secondary"
+                        disabled={choice.effects.length === 0}
+                        onClick={() => addChoiceEffect(index, 'clear')}
+                      >
+                        Clear effects
+                      </button>
                     </div>
                   </div>
                 ))
@@ -594,13 +662,26 @@ export default function Studio() {
             </div>
           </div>
           <div className="preview-stats" aria-label="Preview simulation state">
-            <span>AMELIA TRUST <strong data-testid="preview-trust">{previewTrust}/100</strong></span>
-            <span>MEMORIES <strong data-testid="preview-memory-count">{previewMemoryCount}</strong></span>
-            <span>DAY <strong>{previewWorld.day + 1}</strong></span>
+            <span>
+              AMELIA TRUST{' '}
+              <strong data-testid="preview-trust">{previewTrust}/100</strong>
+            </span>
+            <span>
+              MEMORIES{' '}
+              <strong data-testid="preview-memory-count">
+                {previewMemoryCount}
+              </strong>
+            </span>
+            <span>
+              DAY <strong>{previewWorld.day + 1}</strong>
+            </span>
           </div>
           <div className="preview-choices">
             {!previewScene ? (
-              <p>The edited story no longer matches the active preview. Restart the preview to run its latest graph.</p>
+              <p>
+                The edited story no longer matches the active preview. Restart
+                the preview to run its latest graph.
+              </p>
             ) : previewScene.ending ? (
               <p>
                 ✦ Ending reached. The player’s story remains saved in its
@@ -611,8 +692,17 @@ export default function Studio() {
                 <button
                   key={choice.id}
                   type="button"
-                  disabled={!choice.conditions.every(c => conditionMet(previewWorld, c))}
-                  title={choice.conditions.length ? 'Requires conditions: ' + JSON.stringify(choice.conditions) : undefined}
+                  disabled={
+                    !choice.conditions.every((c) =>
+                      conditionMet(previewWorld, c),
+                    )
+                  }
+                  title={
+                    choice.conditions.length
+                      ? 'Requires conditions: ' +
+                        JSON.stringify(choice.conditions)
+                      : undefined
+                  }
                   onClick={() => playPreviewChoice(choice.id)}
                 >
                   {choice.label} <span>›</span>
@@ -621,10 +711,10 @@ export default function Studio() {
             )}
           </div>
           <p className="scene-help">
-            This preview uses the same validated choice, condition and consequence
-            engine as the player. Trust and memories change immediately; restart
-            to compare another path. Export JSON to verify persistence in the
-            player itself.
+            This preview uses the same validated choice, condition and
+            consequence engine as the player. Trust and memories change
+            immediately; restart to compare another path. Export JSON to verify
+            persistence in the player itself.
           </p>
         </section>
       </div>
