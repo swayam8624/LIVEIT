@@ -45,6 +45,7 @@ const clamp=(n:number)=>Math.max(0,Math.min(100,n));
  * Never accept a model's generated milestone IDs as authority.
  */
 export function applyLifeMilestones(w: World): string[] {
+  if(!w.facts.includes('life_origin:born_in_bellweather')) return [];
   const month=Math.floor(w.player.ageDays*12/365);
   const happened:string[]=[];
   for(const entry of LIFE_MILESTONES){
