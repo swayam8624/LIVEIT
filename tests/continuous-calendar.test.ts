@@ -9,15 +9,22 @@ describe('continuous world calendar', () => {
     const month = advanceCalendarMonth(original);
     expect(original.day).toBe(0);
     expect(original.player.ageDays).toBe(23 * 365);
-    expect(month.day).toBe(30);
-    expect(month.player.ageDays).toBe(23 * 365 + 30);
+    expect(month.day).toBe(31);
+    expect(month.player.ageDays).toBe(23 * 365 + 31);
     expect(month.player.name).toBe('Jordan');
     expect(month.player.wellbeing).toBe(original.player.wellbeing);
-    expect(month.player.money).toBe(96000);
+    expect(month.player.money).toBe(93200);
     expect(month.relationships[0]!.trust).toBeLessThan(35);
     expect(WorldSchema.parse(month)).toEqual(month);
     const copy = decodeSave(encodeSave({ version: 1, active: 'life', life: month, story: null }));
     expect(copy.life).toEqual(month);
+  });
+
+  it('twelve active-play months add up to exactly one birthday', () => {
+    let world = createWorld();
+    for (let i = 0; i < 12; i++) world = advanceCalendarMonth(world);
+    expect(world.player.ageDays).toBe(24 * 365);
+    expect(world.day).toBe(365);
   });
 
   it('is deterministic and does not mutate the input', () => {
