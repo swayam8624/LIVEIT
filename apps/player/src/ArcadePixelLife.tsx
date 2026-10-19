@@ -30,7 +30,7 @@ const COLORS = {
 };
 type Point = { x: number; y: number };
 type Message = { speaker: 'player' | 'npc'; text: string };
-type Mission = { id: string; title: string; description: string; createdAge: number; completed: boolean };
+type Mission = { id: string; title: string; description: string; createdAge: number; expiresAge?: number; completed: boolean };
 
 function safeText(text: string): string {
   return text.trim().slice(0, 500);
@@ -52,7 +52,7 @@ function validMission(x: unknown): x is Mission {
   const m = x as Partial<Mission>;
   return typeof m.id === 'string' && typeof m.title === 'string' &&
     typeof m.description === 'string' && typeof m.createdAge === 'number' &&
-    typeof m.completed === 'boolean';
+    typeof m.completed === 'boolean' && (m.expiresAge === undefined || (typeof m.expiresAge === 'number' && Number.isInteger(m.expiresAge)));
 }
 
 /**
@@ -378,7 +378,7 @@ export function ArcadePixelLife({
   const npc = npcAt(place);
   const worldWidth = (place === 'street' ? STREET_WIDTH : CAFE_WIDTH) * TILE;
   const worldHeight = (place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT) * TILE;
-  const ageMonths = Math.floor(world.player.ageDays / 30);
+  const ageMonths = Math.floor((world.player.ageDays * 12) / 365);
   const dayWithinMonth = Math.min(30, Math.floor(clock / (MONTH_MS / 30)) + 1);
   const inGameMinute = Math.floor(((clock / (MONTH_MS / 30)) % 1) * 1440);
   const hour = Math.floor(inGameMinute / 60);
@@ -400,7 +400,8 @@ export function ArcadePixelLife({
     setMissions(previous => [...previous, {
       id: String(Date.now()), title,
       description: safeText(missionDescription),
-      createdAge: ageMonths, completed: false,
+      createdAge: ageMonths, expiresAge: (Math.floor(ageMonths / 12) + 1) * 12,
+      completed: false,
     }].slice(-60));
     setMissionTitle(''); setMissionDescription('');
   };
@@ -441,7 +442,7 @@ export function ArcadePixelLife({
           </View>
           <View style={s.clockBox}>
             <Text style={s.clockText}>☀ {clockLabel}</Text>
-            <Text style={s.sub}>DAY {dayWithinMonth}/30 · AGE {(ageMonths / 12).toFixed(1)}</Text>
+            <Text style={s.sub}>DAY {dayWithinMonth}/30 · AGE {Math.floor(ageMonths / 12)}y {ageMonths % 12}m</Text>
             <View style={s.clockTrack}><View style={[s.clockFill, {width: monthPart + '%'}]} /></View>
           </View>
         </View>
@@ -510,11 +511,13 @@ export function ArcadePixelLife({
                 <Text style={s.help}>Missions live inside your Free Life and stay available until completed. They never replace your character or reset the world.</Text>
                 {missions.map(m => (
                   <Pressable key={m.id} onPress={() => setMissions(all => all.map(a => a.id === m.id ? {...a, completed: !a.completed} : a))}
-                    style={[s.quest, m.completed && { opacity: 0.55 }]}>
-                    <Text style={s.questTitle}>{m.completed ? '✓ ' : '◇ '}{m.title}</Text>
+                    disabled={!m.completed && m.expiresAge !== undefined && ageMonths >= m.expiresAge}
+                    style={[s.quest, (m.completed || (m.expiresAge !== undefined && ageMonths >= m.expiresAge)) && { opacity: 0.55 }]}>
+                    <Text style={s.questTitle}>{m.completed ? '✓ ' : m.expiresAge !== undefined && ageMonths >= m.expiresAge ? '⌛ EXPIRED · ' : '◇ '}{m.title}</Text>
                     <Text style={s.help}>{m.description || 'Explore and make your own meaning.'}</Text>
                   </Pressable>
                 ))}
+                <Text style={s.help}>New personal missions stay active through this age year and expire on your next birthday. Completed missions remain in your journal.</Text>
                 <Text style={s.speaker}>CREATE A MISSION</Text>
                 <TextInput style={s.field} value={missionTitle} onChangeText={setMissionTitle} placeholder="Mission title" placeholderTextColor="#a1a4ad" maxLength={80} />
                 <TextInput style={[s.field, {minHeight: 90}]} multiline value={missionDescription} onChangeText={setMissionDescription} placeholder="What would you like to accomplish?" placeholderTextColor="#a1a4ad" maxLength={500}/>
