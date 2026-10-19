@@ -70,7 +70,7 @@ export function resolveMissionEvent(
  */
 export function newMission(
   id: string, title: string, description: string, goal: MissionGoal,
-  ageMonths: number, throughAge?: number,
+  ageMonths: number, throughAge?: number | null,
 ): LifeMission {
   const clean = title.trim().slice(0, 80);
   if (!clean) throw new Error('A mission must have a title.');
@@ -82,7 +82,8 @@ export function newMission(
     description: description.trim().slice(0, 500),
     createdAge: ageMonths,
     // The user can choose an extended age-bound mission.
-    expiresAge: throughAge && throughAge > ageMonths ? throughAge * 12 : birthday,
+    expiresAge: throughAge === null ? undefined :
+      (throughAge !== undefined && throughAge * 12 > ageMonths ? throughAge * 12 : birthday),
     goal,
     completed: false,
   };
