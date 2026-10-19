@@ -1,3 +1,6 @@
+import { settleHouseholdAndSchoolMonth } from './familySchool';
+export { initialHousehold,initialSchool,performSchoolAction } from './familySchool';
+export type { SchoolAction } from './familySchool';
 export { SOCIAL_NPCS, canTalkTo, buildNPCSystemPrompt, recordNPCConversation } from './npcMemory';
 export type { SocialNPC } from './npcMemory';
 import { applyLifeMilestones } from './lifeMilestones';
@@ -259,6 +262,7 @@ export function advanceCalendarMonth(input: World): World {
     }
     if (years === 18) w.facts.push('life_stage:adult');
   }
+  settleHouseholdAndSchoolMonth(w);
   applyLifeMilestones(w);
   record(w, 'simulation', 'A month passes in Bellweather. Your life continues while the town changes around you.');
   return WorldSchema.parse(w);
