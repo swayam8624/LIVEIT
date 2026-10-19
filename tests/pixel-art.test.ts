@@ -28,7 +28,7 @@ describe('bundled user-provided CC0 pixels', () => {
 
   it('every embedded image is a complete 16x16 PNG with correct CRCs', () => {
     const ids = new Set<string>();
-    for (const [_, name, base64] of entries) {
+    for (const [, name, base64] of entries) {
       expect(ids.has(name)).toBe(false);
       ids.add(name);
       const image = Buffer.from(base64, 'base64');
