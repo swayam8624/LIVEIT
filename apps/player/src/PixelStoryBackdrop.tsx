@@ -162,7 +162,7 @@ export function PixelStoryBackdrop({
       ))}
       {/* A few actual source PNG fragments tie the story color language to the town. */}
       <Image
-        source={{ uri: pixelArt.plant }}
+        source={pixelArt.plant}
         resizeMode="stretch"
         style={{ position: 'absolute', top: Math.round(298 * scale), left: Math.round(284 * scale), width: Math.round(24 * scale), height: Math.round(24 * scale) }}
       />
