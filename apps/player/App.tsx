@@ -436,7 +436,7 @@ export default function App() {
             } catch (err) {
               return err instanceof Error ? err.message : 'Could not change this relationship.';
             }
-          }
+          }}
           onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
           onChildAction={(activity: ChildhoodActivity, offset: number) =>
             applyWorldAction((w) => performChildhoodActivity(w, activity, offset))}
