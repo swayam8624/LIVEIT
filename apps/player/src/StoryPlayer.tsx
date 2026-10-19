@@ -16,6 +16,7 @@ import { conditionMet, currentScene } from '@living/narrative-core';
 import { AvatarPortrait } from './AvatarPortrait';
 import { GameStage } from './GameStage';
 import { gameTheme as t } from './gameTheme';
+import { CURRENT_VISUAL_CAPABILITY, selectVisualPresentation } from './visualPresentation';
 
 // Licensed original concept portrait bundled offline for the official Amelia
 // episodes. Creator stories can choose a different character actor manifest.
@@ -23,7 +24,7 @@ import { gameTheme as t } from './gameTheme';
 const ameliaImage = require('../assets/amelia-portrait.jpg');
 
 /**
- * A full-stage visual-novel player: actors and dialogue share the SAME stage.
+ * Illustrated fallback visual-novel stage until a true 3D native renderer is verified:
  * No website cards or separate text columns. Shared narrative core decides
  * all choices and consequences; this component handles presentation only.
  */
@@ -42,6 +43,7 @@ export function StoryPlayer({
   onClose: () => void;
   onFinish: () => void;
 }) {
+  const visual = selectVisualPresentation('cinematic-3d', CURRENT_VISUAL_CAPABILITY);
   const { width } = useWindowDimensions();
   const compact = width < 600;
   const scene = currentScene(world, story);
@@ -90,7 +92,7 @@ export function StoryPlayer({
   return (
     <View
       testID="story-stage"
-      accessibilityLabel={story.title + ' interactive cinematic scene'}
+      accessibilityLabel={story.title + ' — ' + visual.accessibilityLabel}
       style={styles.shell}
     >
       <GameStage
