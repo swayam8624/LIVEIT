@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Image, Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
+import { Image, Platform, Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
@@ -91,6 +91,44 @@ export function PixelTown({ world, onTalk }: { world: World; onTalk?: () => void
     else setMessage('Amelia is ready to talk, but the story callback is missing.');
   };
 
+  // Keyboard play for browser/desktop preview; ignore focused form elements
+  // and modifiers so user input and application shortcuts are not hijacked.
+  // Ref callbacks avoid recreating listeners or capturing an old tile position.
+  const moveRef = useRef(move);
+  moveRef.current = move;
+  const talkRef = useRef(talk);
+  talkRef.current = talk;
+  const keyTime = useRef(0);
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !ready || typeof window === 'undefined') return;
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+      const target = event.target;
+      if (target instanceof HTMLElement &&
+        (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))) return;
+      const map: Record<string, Facing> = {
+        ArrowUp: 'up', KeyW: 'up',
+        ArrowDown: 'down', KeyS: 'down',
+        ArrowLeft: 'left', KeyA: 'left',
+        ArrowRight: 'right', KeyD: 'right',
+      };
+      const direction = map[event.code];
+      if (direction) {
+        event.preventDefault();
+        const now = Date.now();
+        if (now - keyTime.current >= 115) {
+          keyTime.current = now;
+          moveRef.current(direction);
+        }
+      } else if (event.code === 'KeyE') {
+        event.preventDefault();
+        talkRef.current();
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [ready]);
+
   const mapWidth = position.place === 'street' ? STREET_WIDTH : CAFE_WIDTH;
   const mapHeight = position.place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT;
   const left = Math.min(Math.max(0, position.x - Math.floor(cols / 2)), Math.max(0, mapWidth - cols));
@@ -160,7 +198,7 @@ export function PixelTown({ world, onTalk }: { world: World; onTalk?: () => void
         </Pressable>
         <View><Text style={s.eyebrow}>AMELIA</Text><Text style={s.hint}>{isNpcAdjacent(position) ? '● NEAR YOU' : '○ FIND HER'}</Text><Text style={s.hint}>TAP DOORS</Text></View>
       </View>
-      <Text style={s.footer}>CC0 pixel art · Real collisions · Position saved locally</Text>
+      <Text style={s.footer}>CC0 art · WASD / arrow keys on web · E to talk · Local save</Text>
     </View>
   );
 }
