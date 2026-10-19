@@ -31,15 +31,15 @@ Use these for interaction/design critique, not asset copying.
 | Game-first screen | Implemented initial slice | \`App.tsx\` uses \`ArcadePixelLife\` for Free Life. |
 | Sprite actor | Implemented | 4-frame CC0 directional PNG sheets; optional **locally installed** Modern 24-frame art. |
 | Game loop | Implemented | \`requestAnimationFrame\`, delta-time movement, GPU-style Animated transforms for player and camera. |
-| Input | Implemented first pass | WASD/arrows; on-screen held directional pad and TALK. Touch pathfinding and gamepad pending. |
-| World | Implemented small prototype | Connected street/café, expanded market, neighborhood and garden; deterministic tile collision. |
+| Input | Implemented first pass | WASD/arrows, held thumb-pad, tap-to-walk with BFS obstacle avoidance, tap an NPC to approach for conversation. Gamepad pending. |
+| World | Implemented small prototype | Connected street/café, expanded market, shops, housing and gardens; camera-local tile culling; layered terrain/props and shaded building signage. |
 | Game clock | Implemented first pass | 60 active real minutes / one simulated calendar month; 12 monthly ticks / 365-day birthday; saves progress. |
 | World economy | Basic | Monthly cost, employed wages, NPC ticks and relationship decay. Full per-shift work simulation pending. |
-| NPC free text | Implemented adapter | Type or quick-prompts; local \`qwen3:0.6b\` through Ollama; if unreachable uses explicit authored responses. |
+| NPC free text | Implemented adapter | Type or quick-prompts; choose local \`qwen3:0.6b\`, \`qwen3:1.7b\` or \`qwen3:4b\` through Ollama; if unreachable uses explicit authored fallback. |
 | Story integration | Implemented UI bridge | Story scenes open as an overlay over the paused Free Life world, choices applied to original life. |
-| Custom missions | Implemented journal | Type title/objective, store in active life timeline, completion toggle, birthday expiration. |
-| Original ZIPs | Partially integrated | CC0 Pulse sprites publicly bundled; noncommercial Modern installer makes local sprite override; raw restricted packs remain out of GitHub. |
-| Validation | CI | \`npm run check\`, browser export and native Expo bundle are run in GitHub Actions; real device touch/perf QA still required. |
+| Custom missions | Implemented first pass | Type title, pick validated in-world goal, complete by real travel/talk/month events or manually, choose birthday/five-year/lifetime expiry, store in current life. |
+| Original ZIPs | Partially integrated | CC0 Pulse walk sheets bundled; private Modern installer optionally adds Adam/Alex/Bob/Amelia pixel walk cycles; nonredistributable raw packs remain off GitHub. |
+| Validation | CI | \`npm run check\` and web/Studio export run in GitHub Actions. iOS simulator and physical-device FPS/gesture QA are separate and must be confirmed before claiming readiness. |
 
 ## Gameplay laws
 
@@ -145,3 +145,39 @@ ollama serve
 \`\`\`
 
 Avoid \`npm audit fix --force\` until dependencies have been reviewed.
+
+
+### Verified gameplay interaction rules (new)
+
+- **Walk/tap to go:** the pathfinder is tested against logical terrain,
+  walls and NPC collision. Tapping Amelia routes to an accessible adjacent
+  tile. The target can be abandoned at any time by using the joystick/keys.
+- **Context action:** inside the café buy a £4.50 drink (+2 wellbeing);
+  in the market take a £35 gig (+1 skill, -2 wellbeing); in the gardens
+  rest (+5 wellbeing). Each type is capped at one per virtual day. This
+  runs through the validated life domain and existing save, *without* fake
+  aging per button press.
+- **Missions:** validated goals become complete only after travel,
+  talking, work discussion or an actual month tick. Completion always
+  affects the same active life. Arbitrary written mission objectives can
+  be manually marked, never auto-completed by model hallucinations.
+- **Dialogue:** local Ollama qwen3 supports ongoing typed turns and saves
+  recent history. Its output cannot directly modify finances/age/quests.
+  On iOS/Android the LAN access and app permission must be configured;
+  an on-device packaged language model has not yet shipped.
+- **Pixel visuals:** the character studio now shows a pixel character,
+  while the world uses static PNGs with an animated player walk cycle.
+  The locally installed Modern optional sprites permit choosing among
+  four premade avatars; this is not equivalent to full per-pixel
+  skin/hair/body/custom-outfit rigging.
+- **Performance:** the render tree culls off-screen tiles and updates
+  camera and sprite transforms each animation frame. This is *not*
+  measured 60/120 FPS evidence; profile real devices.
+
+### Acceptance still pending
+
+A real-device playthrough must verify safe-area placement, touch movement,
+1-hour clock scaling, foreground/background suspension, restart at saved
+location, iOS networking to local Ollama, zero-stall conversation fallback,
+all mission completion events and renderer frame timings on warm hardware.
+The present PR is a feature branch, not a finished commercial game.
