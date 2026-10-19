@@ -4,6 +4,7 @@
  * This validates planned asset metadata and basic release gates, NOT rights in
  * third-party files or actual on-device artistic quality. Those require review.
  */
+import process from 'node:process';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { dirname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
