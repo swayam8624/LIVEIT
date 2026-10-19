@@ -61,7 +61,7 @@ export function CityMap({
   return (
     <View
       testID="city-viewport"
-      accessibilityLabel="Explorable isometric Bellweather with selectable neighborhoods"
+      accessibilityLabel="Illustrated Bellweather district selection map, not a free-roaming pixel world"
       style={[styles.viewport, { height }, night ? styles.night : styles.day]}
       onLayout={(e) => {
         const next = Math.round(e.nativeEvent.layout.width);
