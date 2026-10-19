@@ -14,6 +14,8 @@ import {
   createWorld,
   advanceLife,
   advanceCalendarMonth,
+  performWorldActivity,
+  type WorldActivity,
   setCharacterAppearance,
   type Activity,
 } from '@living/simulation-core';
@@ -396,6 +398,8 @@ export default function App() {
           paused={sceneOpen}
           onTalk={openEncounter}
           onAdvanceMonth={() => applyWorldAction(advanceCalendarMonth)}
+          onActivity={(activity: WorldActivity, dayOffset: number) =>
+            applyWorldAction((w) => performWorldActivity(w, activity, dayOffset))}
           onNavigate={(destination) => setTab(destination)}
         />
         {sceneOpen ? (
