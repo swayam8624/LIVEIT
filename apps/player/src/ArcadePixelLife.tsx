@@ -105,9 +105,10 @@ async function npcFromLocalModel(
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onNavigate,
+  world, onTalk, onAdvanceMonth, onNavigate, paused = false,
 }: {
   world: World;
+  paused?: boolean;
   onTalk: () => void;
   onAdvanceMonth: () => void;
   onNavigate: (where: 'stories' | 'people' | 'journal' | 'life') => void;
@@ -246,7 +247,7 @@ export function ArcadePixelLife({
   // No setState inside the 60/120 Hz world loop. The movement animation and
   // following camera remain smooth even if no React component re-renders.
   useEffect(() => {
-    if (!loaded || panel !== 'none') return;
+    if (!loaded || panel !== 'none' || paused) return;
     let active = true;
     let frame = 0;
     let last = 0;
@@ -341,7 +342,7 @@ export function ArcadePixelLife({
       cancelAnimationFrame(frame);
       void AsyncStorage.setItem(gameKey + '.elapsed', String(clockRef.current)).catch(() => {});
     };
-  }, [bob, camera, frameOffset, gameKey, glow, loaded, modernPlayer, panel, pose, size.height, size.width]);
+  }, [bob, camera, frameOffset, gameKey, glow, loaded, modernPlayer, panel, paused, pose, size.height, size.width]);
 
   // Browser-only physical keyboard support. Text inputs must never move
   // the avatar; mobile touch pads write the same movement vector.
