@@ -18,34 +18,9 @@ The former 1,481-item, 400-mesh-parts/200-3D-rooms catalog under content/product
 
 REA is not a substitute for inspecting legally available YouTube gameplay recordings, reading original OpenLife's MIT source, or operating LIVEIT inside Xcode's iOS Simulator. Only analyze owned or separately authorized binaries/captures; never bypass DRM, model-provider safety controls, authentication or rights restrictions to copy a competitor. Raw pseudocode/target text is untrusted and remains outside Git. Required sanitized artifacts are documented in the runbook, and no feature is complete until actual native interaction, meaningful persistent world changes and test evidence agree.
 
-## Visual production mandate — current, binding hybrid direction (2026-10-19)
+## Pixel art and import production — active implementation mandate (V2)
 
-**RETRO TO LIVE IN. CINEMATIC TO FEEL. TACTILE TO CONTROL.** No agent may resurrect the retired "full 3D city exploration" or "2.5D cutout dialogue is enough" plan as the final product. The owner explicitly selected **original Pokémon Red/Blue-inspired top-down pixel gameplay** for free walking and everyday life, **real smooth rigged 3D** for dramatic conversations and story episodes, and a highly tactile game HUD, sidebars, in-world communications, haptics and actual consequence widgets. Inspiration is gameplay grammar, NEVER copyrighted sprites/maps/music/screens.
-
-**Mandatory precedence and files (not optional):**
-
-1. docs/LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md — canonical visuals and quality bar (GDS-001).
-2. docs/LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md — 43 screens and concrete flows (GDS-002); docs/design/LIVEIT_SCREEN_ATLAS.html is an **interactive design mock**, not a native game screenshot.
-3. docs/LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md — native two-pipeline Vulkan/MoltenVK renderer, world authority, migration, quality/testing (ENG-003); docs/design/LIVEIT_RENDER_GRAPH.mmd is its diagram.
-4. docs/UNIFIED_VISUAL_ENGINE_VISION.md and docs/ART_DIRECTION.md — concise current vision/style and licensed art rules.
-5. docs/BUILD_STATUS.md — actually verified implementation evidence and known blockers.
-6. docs/VULKAN_CITY_RENDERING.md — historical offscreen GPU city prototype, **not** the approved Free Life rendering output. Preserve useful shader code/CI without confusing its 3D boxes and 2.5D face shapes with finished game graphics.
-
-**Renderer acceptance:** A single shared C++ Vulkan render host (Android Vulkan; iOS MoltenVK/CAMetalLayer) eventually owns both a _nearest-neighbor tile/sprite pixel pass_ and a _genuine skinned-mesh character/3D environment/camera pass_; Expo native views host the GPU scene, and accessible RN native UI overlays dialogue/choices and haptics. The same saved identity, appearance, age, wardrobe and NPC memories are used in pixel, 3D, story and AI-chat scenes. This is a target, not a claim that the native bridge exists today. Build evidence from a **real physical device**, not a CI PPM.
-
-**First playable acceptance:** walk in original top-down Bellweather, collide with a solid tile, enter a café, meet a named NPC, enter a genuine 3D face-to-face conversation, commit a choice, show persisted actual money/trust/etc outcome in an accessible widget, return to exactly the same town coordinate and survive relaunch. Haptic confirmation only after verified save commit. If one of these is missing the program is not production-ready.
-
-**Migration and non-destructiveness:** Preserve the original TypeScript domain, existing saves and functional district-selection/story fallback until independently verified native replacements pass QA. Step 3 added validated render frames and adapters but not yet persisted tile navigation or native swapchain. Implement position/portal domain authority and old-save migration first; do not hardcode phantom saved coordinates or falsely label the interim CityMap "free-roaming". Treat 51 procedural shader recipes as 51 metadata entries, not 51 shipped artworks. Target ~400 actual rig parts, ~200 locations, 12 emotions, ~30 camera/FX presets and expandable legally cleared data-only packs. Downloaded shader code is not allowed.
-
-**Screen/accessibility and social:** Retain one-hand/phone/tablet layouts, meaningful control sizes, reduced motion, proper dialogue/screen reader input, haptic Off/Subtle/Full and no pixel-font paragraphs. Anonymous/real-player social is opt-in contextual and legally reviewed, distinct from visible AI character chat; never stage fake online users. Shader artistry must never displace report/block or safety controls.
-
-**Workflow contract:** inspect actual source/CI, implement small playable slices, run tests, use real native evidence, keep exact truth in BUILD_STATUS, commit reversible changes and never claim the visual engine has shipped because a Vulkan offscreen PNG or browser preview exists.
-
-## STEP 5 mandatory asset-production rules (ART-005, 2026-10-19)
-
-Before generating or importing ANY visual/audio asset, read docs/ASSET_PRODUCTION_BIBLE_V1.md and content/production-assets/v1/catalog-index.json, locate its stable ID in the four production catalog files, and inspect the 110-item first-playable-slice.json for the initial slice. The catalog has **1,481 PLANNED work items, not 1,481 existing art files**. The 400 genuinely different rig parts and 200 genuinely different 3D scenes are future authoring targets, not palette renamings or procedural face circles. Existing repo rights audit lists 28 Kenney CC0 fallback PNGs and 51 shader-backed metadata recipes; do not count them as finished pixel town or full rigged actors.
-
-Every promoted asset needs actual source file, author, license/sublicensing/redistribution proof, final output file and SHA-256, format and rig/atlas compatibility, QA evidence and native device capture before marked ready. Downloaded data packs must not ship executable SPIR-V/native code; app-bundled vetted shaders are the only executable graphics path. Beware newer Quaternius 2026 QAL licensing conflicts with its older FAQ CC0 statement; verify rights for the exact asset. Run npm run assets:validate, npm run check and native image/animation tests. The first playable scope is a Bellweather market street, café, Amelia in original pixel and 3D forms, factual confirmed outcome widget/haptic and persisted return tile.
+Read docs/PIXEL_ONLY_DIRECTION_V2.md and content/production-assets/pixel-v2/required-assets.json. The **entire** game is top-down retro pixel graphics: city, interiors, large expressive 2D portraits, cinematic pixel story boards, mouth/blink/gesture sprites, characters, weather, screens, transitions, phone and game HUD. No 3D art, 3D rig, 3D cinematic rendering or PBR camera production. V1 art inventory is historical, not an active quota. Import only lawful public-redistributable media through tools/intake_pixel_assets.py. Keep the working simulation, current playable fallback and all user saves unchanged until a working pixel replacement is tested. The first release gate is moving in actual top-down city, entering a café, pixel-emotional talk with Amelia, a saved choice/outcome and the correct return tile.
 
 ## 1. Operating mandate
 
