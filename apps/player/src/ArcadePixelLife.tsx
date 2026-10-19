@@ -595,12 +595,12 @@ export function ArcadePixelLife({
     const from = { x: Math.round(p.x), y: Math.round(p.y) };
     const npc = npcAt(p.place);
     const talking = tap.x === npc.x && tap.y === npc.y;
-    const target = targetForTap(p.place, tap, from);
+    const target = targetForTap(p.place, tap, from, worldSeed);
     if (!target) {
       setNotice('That destination is blocked. Tap a clear path instead.');
       return;
     }
-    const path = findTileRoute(p.place, from, target);
+    const path = findTileRoute(p.place, from, target, worldSeed);
     if (!path.length && (target.x !== from.x || target.y !== from.y)) {
       setNotice('No route there yet. Try a different street.');
       return;
