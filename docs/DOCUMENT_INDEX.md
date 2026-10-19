@@ -1,5 +1,8 @@
 # LIVEIT Documentation Authority & Build Roadmap
 
+> **CURRENT OVERRIDING OWNER DIRECTION: 100% PIXEL ART.** Read [Pixel-only Direction V2](PIXEL_ONLY_DIRECTION_V2.md) first. It retires *every* old 3D actor/room/render requirement below. The old GDS/ENG/ART files and 1,481-item catalog are historical and do not define current asset production.
+
+
 **Current as of 2026-10-19.** This index resolves formerly conflicting graphics proposals. LIVEIT is a native mobile life-simulation and interactive-fiction game: **top-down pixel overworld** for ordinary roaming, **true smooth skinned 3D** for important conversations/stories, **tactile accessible game HUD** across both. Vulkan on Android and Vulkan→MoltenVK on iOS are the intended shared GPU platforms.
 
 ## Read / implement in this order
