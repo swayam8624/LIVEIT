@@ -9,7 +9,7 @@ import type { World } from '@living/world-schema';
 import { lifeStageOf, relationshipStatus, activitiesForAge, dailyActivitiesUsed,
   SOCIAL_NPCS, canTalkTo, buildNPCSystemPrompt,
   type DailyActivityId, type ActivityZone, type RelationshipAction, type SocialNPC,
-  type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
+  type ChildhoodActivity, type WorldActivity, type SchoolAction } from '@living/simulation-core';
 import { OFFICIAL_STORIES } from '@living/content';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
@@ -127,7 +127,7 @@ function PixelBuilding({
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onActivity, onDailyActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, onNPCConversation, paused = false,
+  world, onTalk, onAdvanceMonth, onActivity, onDailyActivity, onChildAction, onSkipChildhood, onStoryStart, onRelationship, onNPCConversation, onSchoolAction, onCareerAction, paused = false,
 }: {
   world: World;
   paused?: boolean;
@@ -136,6 +136,8 @@ export function ArcadePixelLife({
   onActivity: (activity: WorldActivity, dayOffset: number) => void;
   onDailyActivity: (id: DailyActivityId, dayOffset: number, location: ActivityZone) => string;
   onNPCConversation: (npc: SocialNPC, userText: string, reply: string, dayOffset: number) => void;
+  onSchoolAction: (action: SchoolAction, dayOffset: number) => string;
+  onCareerAction: (action: 'technology'|'creative'|'business'|'community'|'interview'|'promotion'|'resign') => string;
   onChildAction: (activity: ChildhoodActivity, dayOffset: number) => void;
   onSkipChildhood: (years: 2 | 5 | 13 | 18) => void;
   onStoryStart: (id: string) => void;
@@ -155,8 +157,9 @@ export function ArcadePixelLife({
   const zoneRef = useRef(zone);
   const [clock, setClock] = useState(0);
   const [notice, setNotice] = useState('Walk up to Amelia and press TALK. Explore the market and café.');
-  const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings' | 'stories' | 'activities' | 'people' | 'journal'>('none');
+  const [panel, setPanel] = useState<'none' | 'talk' | 'missions' | 'settings' | 'stories' | 'activities' | 'people' | 'journal' | 'school' | 'career' | 'household'>('none');
   const [activityFeedback, setActivityFeedback] = useState('');
+  const [lifeSystemFeedback, setLifeSystemFeedback] = useState('');
   const [currentNpc, setCurrentNpc] = useState<SocialNPC>('amelia');
   const currentNpcRef = useRef<SocialNPC>('amelia');
   const [chatLoading, setChatLoading] = useState(false);
@@ -764,6 +767,21 @@ export function ArcadePixelLife({
           <HudButton title="★" detail="ACTIVITY" onPress={() => {pauseMovement(); setActivityFeedback(''); setPanel('activities');}} />
           <HudButton title="♫" detail="PEOPLE" onPress={() => {pauseMovement();setPanel('people');}} />
           <HudButton title="▤" detail="JOURNAL" onPress={() => {pauseMovement();setPanel('journal');}} />
+          {world.school && world.school.phase!=='graduated' && (
+            <HudButton title="✎" detail="SCHOOL" onPress={() => {
+              pauseMovement();setLifeSystemFeedback('');setPanel('school');
+            }} />
+          )}
+          {world.player.ageDays>=18*365 && (
+            <HudButton title="£" detail="CAREER" onPress={() => {
+              pauseMovement();setLifeSystemFeedback('');setPanel('career');
+            }} />
+          )}
+          {world.household && (
+            <HudButton title="⌂" detail="HOME" onPress={() => {
+              pauseMovement();setPanel('household');
+            }} />
+          )}
           {canTalkTo(world,'parent_mara') ? (
             <HudButton title="⌂" detail="FAMILY" onPress={() => {
               pauseMovement(); openNPCChat('parent_mara');
@@ -855,8 +873,8 @@ export function ArcadePixelLife({
           <View style={s.modal}>
             <View style={s.modalHead}>
               <View>
-                <Text style={s.modalTitle}>{panel === 'talk' ? SOCIAL_NPCS[currentNpc].name.toUpperCase() : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : panel === 'activities' ? 'LIVE YOUR DAY' : panel === 'people' ? 'PEOPLE IN YOUR LIFE' : panel === 'journal' ? 'YOUR LIFE JOURNAL' : 'LOCAL CONVERSATION ENGINE'}</Text>
-                <Text style={s.sub}>{panel === 'talk' ? 'A real local-model conversation with remembered life events.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : panel === 'activities' ? 'Actual activities change your life, not just a progress bar.' : panel === 'people' ? 'Every connection lives in the same save and has its own history.' : panel === 'journal' ? 'An honest record of the life you have actually lived.' : 'Runs on your machine. Never required to play.'}</Text>
+                <Text style={s.modalTitle}>{panel === 'talk' ? SOCIAL_NPCS[currentNpc].name.toUpperCase() : panel === 'missions' ? 'YOUR MISSIONS' : panel === 'stories' ? 'LIFE EPISODES' : panel === 'activities' ? 'LIVE YOUR DAY' : panel === 'people' ? 'PEOPLE IN YOUR LIFE' : panel === 'journal' ? 'YOUR LIFE JOURNAL' : panel === 'school' ? 'SCHOOL & FRIENDSHIPS' : panel === 'career' ? 'CAREERS & WORK' : panel === 'household' ? 'FAMILY HOUSEHOLD' : 'LOCAL CONVERSATION ENGINE'}</Text>
+                <Text style={s.sub}>{panel === 'talk' ? 'A real local-model conversation with remembered life events.' : panel === 'missions' ? 'Make any day into an adventure.' : panel === 'stories' ? 'Original, age-aware stories inside your one lifelong save.' : panel === 'activities' ? 'Actual activities change your life, not just a progress bar.' : panel === 'people' ? 'Every connection lives in the same save and has its own history.' : panel === 'journal' ? 'An honest record of the life you have actually lived.' : panel === 'school' ? 'Every choice changes your real grade, attendance and future.' : panel === 'career' ? 'Apply, interview, gain experience and earn promotions.' : panel === 'household' ? 'Guardians pay the household bills; children have separate personal finances.' : 'Runs on your machine. Never required to play.'}</Text>
               </View>
               <Pressable accessibilityLabel="Close panel" onPress={() => setPanel('none')} style={s.close}><Text style={s.closeText}>✕</Text></Pressable>
             </View>
@@ -965,6 +983,101 @@ export function ArcadePixelLife({
                 <TextInput style={[s.field, {minHeight: 90}]} multiline value={missionDescription} onChangeText={setMissionDescription} placeholder="What would you like to accomplish?" placeholderTextColor="#a1a4ad" maxLength={500}/>
                 <Pressable style={s.add} onPress={saveMission}><Text style={s.addText}>+ ADD TO MY LIFE</Text></Pressable>
                 <Pressable style={s.storyLink} onPress={onTalk}><Text style={s.storyLinkText}>Play the official Amelia quest →</Text></Pressable>
+              </ScrollView>
+            ) : panel === 'school' ? (
+              <ScrollView style={s.messages} contentContainerStyle={{gap:10,paddingBottom:16}}>
+                <Text style={s.speaker}>
+                  {(world.school?.phase ?? 'Not enrolled').toUpperCase()} ·
+                  AGE {ageYears}
+                </Text>
+                <Text style={s.help}>
+                  Your effort, classroom attendance and friendships determine
+                  your school experience and final qualification.
+                  Decisions are saved immediately.
+                </Text>
+                {world.school && (
+                  <>
+                    <Text style={s.mode}>GRADES {world.school.grade}/100 · ATTENDANCE {world.school.attendance}/100</Text>
+                    <Text style={s.mode}>ENGAGEMENT {world.school.engagement}/100 · DISCIPLINE {world.school.discipline}/100</Text>
+                    <Text style={s.mode}>CLUB: {(world.school.club??'none').toUpperCase()} · STUDY SESSIONS {world.school.studySessions}</Text>
+                  </>
+                )}
+                {lifeSystemFeedback ? <Text style={s.help}>{lifeSystemFeedback}</Text> : null}
+                {([
+                  ['study','STUDY FOR EXAMS','Improve grades through practice'],
+                  ['attend_class','ATTEND LESSON','Be present and build attendance'],
+                  ['make_friend','MAKE FRIEND','Build a real relationship with a classmate'],
+                  ['ask_help','ASK A TEACHER','Get guidance when school is difficult'],
+                  ['join_science','SCIENCE CLUB','Experiment, build and solve problems'],
+                  ['join_arts','ART CLUB','Draw, paint and collaborate'],
+                  ['join_music','MUSIC CLUB','Practise with other musicians'],
+                  ['join_sports','SPORTS CLUB','Train and join a team'],
+                  ['skip_class','SKIP CLASS','Miss an important lesson; face consequences'],
+                ] as Array<[SchoolAction,string,string]>).map(([id,label,description])=>(
+                  <Pressable key={id} accessibilityRole="button"
+                    onPress={() => {
+                      const offset=Math.min(29,Math.floor(clockRef.current/(MONTH_MS/30)));
+                      const result=onSchoolAction(id,offset);
+                      setLifeSystemFeedback(result);setNotice(result);
+                    }}
+                    style={s.quest}>
+                    <Text style={s.questTitle}>✎ {label}</Text>
+                    <Text style={s.help}>{description}</Text>
+                  </Pressable>
+                ))}
+              </ScrollView>
+            ) : panel === 'career' ? (
+              <ScrollView style={s.messages} contentContainerStyle={{gap:10,paddingBottom:16}}>
+                <Text style={s.help}>Professional careers require adulthood. Choose a field,
+                  interview for the position, grow your skills and request promotions.
+                  Employment belongs to your real save — not an isolated minigame.</Text>
+                <Text style={s.mode}>CURRENT JOB: {world.city?.employment?.jobTitle??'Unemployed'}</Text>
+                <Text style={s.mode}>COMPANY: {world.city?.employment?.company??'—'} ·
+                  {' '}{(world.city?.employment?.stage??'seeking').toUpperCase()}</Text>
+                <Text style={s.mode}>SALARY: £{((world.city?.employment?.salaryAnnual??0)/100).toFixed(0)}/YEAR ·
+                  {' '}SKILL {world.player.skill}/100</Text>
+                {lifeSystemFeedback ? <Text style={s.help}>{lifeSystemFeedback}</Text> : null}
+                {([
+                  ['technology','SOFTWARE & TECHNOLOGY'],
+                  ['creative','CREATIVE STUDIO'],
+                  ['business','BUSINESS & SALES'],
+                  ['community','CIVIC & COMMUNITY'],
+                  ['interview','ATTEND INTERVIEW'],
+                  ['promotion','REQUEST PROMOTION'],
+                  ['resign','RESIGN FROM JOB'],
+                ] as Array<['technology'|'creative'|'business'|'community'|'interview'|'promotion'|'resign',string]>).map(([action,label])=>(
+                  <Pressable key={action} accessibilityRole="button" style={s.quest}
+                    onPress={()=>{
+                      const result=onCareerAction(action);
+                      setLifeSystemFeedback(result);setNotice(result);
+                    }}>
+                    <Text style={s.questTitle}>◆ {label}</Text>
+                  </Pressable>
+                ))}
+              </ScrollView>
+            ) : panel === 'household' ? (
+              <ScrollView style={s.messages} contentContainerStyle={{gap:12,paddingBottom:16}}>
+                <Text style={s.speaker}>THE FAMILY HOME</Text>
+                <Text style={s.help}>Home, care and money affect childhood. This budget belongs
+                  to the household, not the newborn's wallet.</Text>
+                {world.household ? (
+                  <>
+                    <Text style={s.questTitle}>HOME: {world.household.home.replace('_',' ').toUpperCase()}</Text>
+                    <Text style={s.mode}>HOUSEHOLD SAVINGS: £{(world.household.balancePence/100).toFixed(2)}</Text>
+                    <Text style={s.mode}>MONTHLY INCOME: £{(world.household.incomePence/100).toFixed(2)}</Text>
+                    <Text style={s.mode}>MONTHLY BILLS: £{(world.household.expensesPence/100).toFixed(2)}</Text>
+                    <Text style={s.mode}>DEPENDENTS: {world.household.dependents} · MONTHS BEHIND: {world.household.arrearsMonths}</Text>
+                    <Text style={s.help}>Each month household income and expenses settle once.
+                      A shortfall becomes part of the family's lived history.</Text>
+                  </>
+                ) : <Text style={s.help}>Household ledger unavailable in this legacy save.</Text>}
+                <Text style={s.speaker}>GUARDIANS AND FRIENDS</Text>
+                {world.relationships.filter(r=>r.characterId.startsWith('parent_')).map(r=>(
+                  <View key={r.characterId} style={s.quest}>
+                    <Text style={s.questTitle}>{r.characterId==='parent_mara'?'MARA':'ELI'} · TRUST {r.trust}/100</Text>
+                    <Text style={s.help}>Last contact: day {r.lastContactDay}</Text>
+                  </View>
+                ))}
               </ScrollView>
             ) : panel === 'people' ? (
               <ScrollView style={s.messages} contentContainerStyle={{gap:10,paddingBottom:16}}>
