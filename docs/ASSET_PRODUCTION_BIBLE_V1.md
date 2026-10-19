@@ -1,5 +1,7 @@
 # LIVEIT — Asset Production Bible and Expandable Library (ART-005)
 
+> **ARCHIVED 3D/HYBRID PLANNING DOCUMENT:** The owner changed LIVEIT to **100% expressive 2D retro pixel art** on 2026-10-19. Its former 3D cinematic/model requirements below are superseded by [PIXEL_ONLY_DIRECTION_V2](PIXEL_ONLY_DIRECTION_V2.md) and [active pixel-v2 requirements](../content/production-assets/pixel-v2/required-assets.json). Do not implement 3D from this document.
+
 **Step 5 of the approved 5-step LIVEIT visual program. Status: production specification and inventory metadata, NOT 1,481 finished artwork files. Version: 1.0, 19 October 2026.**
 
 **Binding upstream:** [GDS-001](LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md) → [GDS-002](LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md) → [ENG-003](LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md) → [hybrid implementation plan](HYBRID_RENDER_IMPLEMENTATION_PLAN.md). The user's final design is **original top-down handheld-RPG-inspired pixel gameplay**, **genuinely rigged 3D emotional/cinematic scenes**, and **tactile game HUD/social widgets** sharing the same saved ages, faces, clothes, relationships and world facts. Android Vulkan and iOS MoltenVK are the target native GPU APIs. Do not copy Pokémon character sheets, ROMs, font artwork, proprietary music, Episode costumes, branded UI/trade dress or other protected game art.
