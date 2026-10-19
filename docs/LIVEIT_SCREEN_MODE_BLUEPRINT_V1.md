@@ -535,72 +535,75 @@ Each row below is a **design target**; "existing" means a code pathway with some
 
 **State/acceptance:** never automatically share private NPC/human chat. **Current repo status:** not implemented.
 
-
-
 ## E. Mode state contracts and transitions (not merely navigation labels)
 
-| Source → Destination | Visual transition | State preserved | Cancel/failure path |
-|---|---|---|---|
-| S04 overworld → S07 NPC bubble | world camera eases a few px; interact affordance outlines NPC; short compact bubble | actor tile coordinate, facing, NPC ID, current date | actor out of range closes bubble; player still at original tile |
-| S07 → S08 3D talk | optional 1–3tile pixel mosaic iris to matched 3D wardrobe/pose, audio bed crossfade | world action paused, one character identity, age, outfit, props, scene and story ID | shader/pack unavailable uses accessible dialogue fallback and no fake 3D |
-| S08 → S09 choices | actor expression/blink continues; dock expands and camera reframes | speaker and NPC emotional context, last valid story node | cancel/back only when authored; blocking choice persists |
-| S09 → S10 outcome | choose card locks, others dim, world commit occurs once; widget animates only after authoritative result | exact world deltas, event IDs, save revision | pending saving, error, retry and idempotency visibly different |
-| S10 → S04 return | close widget, reverse pixel/3D aperture, player resumes same tile/facing | world position, completed consequence, NPC route | emergency bypass retains state; no duplicate choice |
-| S04 → S05 building | feet hit valid entrance collider; roof fades, indoor scene snaps to matching entrance | location ID, world time, avatar and NPC state | locked door stays outside with status |
-| S04 → S06 transit | map zooms from player marker into labeled schematic with real cost/time | old position until confirmation | canceled route returns to original location |
-| S04 → S11 Age Up | world dims slightly, calendar dial time shift with skippable animation | pre-advance world snapshot; one atomic age result | no input duplicates; interrupted animation restores committed result without duplicating it |
-| S04 → S24 Phone | right drawer slides over paused/continuing pixel view according to chosen action | gameplay camera, queued notifications, draft message | offline banner, drawer closes without moving player |
-| S24 → S25 AI thread | character 3D portrait animates while text thread remains native | NPC identity, memory authority and consent | provider unavailable explicitly shown |
-| S24 → S27 Real thread | human-chat UI remains clearly labeled as human; no forced 3D character illusion | authenticated scope, consent, send idempotency | disconnect/revoke shows honest status, report/block always accessible |
-| S08/S23 → S29 flashback | muted ink/cel transition, dated archival title visible | current life frozen, recalled scene from known events | no reconstructable scene offers text journal, never fabricated visuals |
-| S04 → S12/S13 etc | context panel docks from left; world remains visible or stops only if necessary | player position and HUD state | back returns to exact world viewport |
-| S04 → S37 safe recovery | preserve last valid rendered scene as background and show error semantics | previously committed save and pending revisions | no destructive retry, opt-in recovery |
-| S38/S39 creator → S23 preview | device-frame preview with source model selection; never edits player save | creator draft, test fixture, content manifest | return to draft with validation issues unchanged |
+| Source → Destination           | Visual transition                                                                                        | State preserved                                                                     | Cancel/failure path                                                                         |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| S04 overworld → S07 NPC bubble | world camera eases a few px; interact affordance outlines NPC; short compact bubble                      | actor tile coordinate, facing, NPC ID, current date                                 | actor out of range closes bubble; player still at original tile                             |
+| S07 → S08 3D talk              | optional 1–3tile pixel mosaic iris to matched 3D wardrobe/pose, audio bed crossfade                      | world action paused, one character identity, age, outfit, props, scene and story ID | shader/pack unavailable uses accessible dialogue fallback and no fake 3D                    |
+| S08 → S09 choices              | actor expression/blink continues; dock expands and camera reframes                                       | speaker and NPC emotional context, last valid story node                            | cancel/back only when authored; blocking choice persists                                    |
+| S09 → S10 outcome              | choose card locks, others dim, world commit occurs once; widget animates only after authoritative result | exact world deltas, event IDs, save revision                                        | pending saving, error, retry and idempotency visibly different                              |
+| S10 → S04 return               | close widget, reverse pixel/3D aperture, player resumes same tile/facing                                 | world position, completed consequence, NPC route                                    | emergency bypass retains state; no duplicate choice                                         |
+| S04 → S05 building             | feet hit valid entrance collider; roof fades, indoor scene snaps to matching entrance                    | location ID, world time, avatar and NPC state                                       | locked door stays outside with status                                                       |
+| S04 → S06 transit              | map zooms from player marker into labeled schematic with real cost/time                                  | old position until confirmation                                                     | canceled route returns to original location                                                 |
+| S04 → S11 Age Up               | world dims slightly, calendar dial time shift with skippable animation                                   | pre-advance world snapshot; one atomic age result                                   | no input duplicates; interrupted animation restores committed result without duplicating it |
+| S04 → S24 Phone                | right drawer slides over paused/continuing pixel view according to chosen action                         | gameplay camera, queued notifications, draft message                                | offline banner, drawer closes without moving player                                         |
+| S24 → S25 AI thread            | character 3D portrait animates while text thread remains native                                          | NPC identity, memory authority and consent                                          | provider unavailable explicitly shown                                                       |
+| S24 → S27 Real thread          | human-chat UI remains clearly labeled as human; no forced 3D character illusion                          | authenticated scope, consent, send idempotency                                      | disconnect/revoke shows honest status, report/block always accessible                       |
+| S08/S23 → S29 flashback        | muted ink/cel transition, dated archival title visible                                                   | current life frozen, recalled scene from known events                               | no reconstructable scene offers text journal, never fabricated visuals                      |
+| S04 → S12/S13 etc              | context panel docks from left; world remains visible or stops only if necessary                          | player position and HUD state                                                       | back returns to exact world viewport                                                        |
+| S04 → S37 safe recovery        | preserve last valid rendered scene as background and show error semantics                                | previously committed save and pending revisions                                     | no destructive retry, opt-in recovery                                                       |
+| S38/S39 creator → S23 preview  | device-frame preview with source model selection; never edits player save                                | creator draft, test fixture, content manifest                                       | return to draft with validation issues unchanged                                            |
 
 **Interaction ownership:** keyboard/text input and native dialogs take focus before world movement inputs. When a choice dock, recovery or report modal is active, moving the pixel player is disabled. A secondary drawer may allow gameplay to continue only in an explicit low-focus nonblocking state. All three representations share the same saved character ID; 3D facial expressions may represent emotion but never create a new world event.
 
 ## F. Component-level visual and haptic states
 
-| Component | Required states | Motion / haptic | Data contract |
-|---|---|---|---|
-| Primary arcade button | idle, focus, pressed, disabled, loading, committed, failed | <50ms press appearance; selection/light haptic only when enabled, confirmation on commit | one callback, duplicate tap guard |
-| Age Up orb | ready, progress, saving, complete, blocked | 600–1400ms, skippable; category-sensitive feedback | stored age days + changed event ledger |
-| Story choice card | focus, hover/controller, armed, committed, branch-loading, resolved, unavailable | card closes in 160–260ms, haptic commit; 3D actor reacts | author choice ID and atomic effect |
-| Outcome toast/widget | queued, visible, expanded, dismissed, pinned | short slide; never auto-success before storage confirms | exact event ID and real net deltas |
-| NPC marker | offscreen, within range, talkable, busy, quest, blocking, gone | 1px pixel outline and subtle icon; no per-frame haptic | live NPC world ID |
-| Phone inbox chip | unread, read, offline, restricted, hidden | badge scale only if opted in, no interrupting 3D drama | distinct NPC/AI/human origin |
-| Social report/block | open, selecting, submitted, failed, confirmed | quiet modal, no gamified animation | audit-safe moderation action |
-| Download pack card | not-installed, queued, downloading, verifying, activating, installed, failed, rolled-back | readable progress, error text, cancel | digest, version, license, storage bytes |
-| Avatar part selector | default, selected, preview-draft, incompatible, locked-download | show pixel+3D same change before commit, light tick | appearance slot and manifest variant ID |
-| Dialogue dock | hidden, typing, complete line, history, choice, skip, error | text-tied mouth actuation and native type speed, can instantly reveal | script/AI source label, accessible text |
-| Walk control | neutral, direction, sprint, blocked, movement-disabled | 0–100ms respond; no haptic per step | logical tile collision + world position |
-| Save status | dirty, saving, saved, retry, conflict, read-only | unobtrusive small icon, errors announced | on-disk revision and actual result |
+| Component             | Required states                                                                           | Motion / haptic                                                                          | Data contract                           |
+| --------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------- |
+| Primary arcade button | idle, focus, pressed, disabled, loading, committed, failed                                | <50ms press appearance; selection/light haptic only when enabled, confirmation on commit | one callback, duplicate tap guard       |
+| Age Up orb            | ready, progress, saving, complete, blocked                                                | 600–1400ms, skippable; category-sensitive feedback                                       | stored age days + changed event ledger  |
+| Story choice card     | focus, hover/controller, armed, committed, branch-loading, resolved, unavailable          | card closes in 160–260ms, haptic commit; 3D actor reacts                                 | author choice ID and atomic effect      |
+| Outcome toast/widget  | queued, visible, expanded, dismissed, pinned                                              | short slide; never auto-success before storage confirms                                  | exact event ID and real net deltas      |
+| NPC marker            | offscreen, within range, talkable, busy, quest, blocking, gone                            | 1px pixel outline and subtle icon; no per-frame haptic                                   | live NPC world ID                       |
+| Phone inbox chip      | unread, read, offline, restricted, hidden                                                 | badge scale only if opted in, no interrupting 3D drama                                   | distinct NPC/AI/human origin            |
+| Social report/block   | open, selecting, submitted, failed, confirmed                                             | quiet modal, no gamified animation                                                       | audit-safe moderation action            |
+| Download pack card    | not-installed, queued, downloading, verifying, activating, installed, failed, rolled-back | readable progress, error text, cancel                                                    | digest, version, license, storage bytes |
+| Avatar part selector  | default, selected, preview-draft, incompatible, locked-download                           | show pixel+3D same change before commit, light tick                                      | appearance slot and manifest variant ID |
+| Dialogue dock         | hidden, typing, complete line, history, choice, skip, error                               | text-tied mouth actuation and native type speed, can instantly reveal                    | script/AI source label, accessible text |
+| Walk control          | neutral, direction, sprint, blocked, movement-disabled                                    | 0–100ms respond; no haptic per step                                                      | logical tile collision + world position |
+| Save status           | dirty, saving, saved, retry, conflict, read-only                                          | unobtrusive small icon, errors announced                                                 | on-disk revision and actual result      |
 
 **Haptic semantics:** selection on discrete focus, one medium confirmation for substantial committed choice, subtle positive/warning only when context appropriate; grief/death neutral by default. Do not vibrate per tile step, letter, scroll tick, NPC idle animation, frame or frequent currency update. Reduce Motion removes zoom/shake/fast aperture and preserves all world facts.
 
 ## G. UI layout/overlay priority and input focus by form factor
 
 ### Narrow portrait 320–359pt
+
 - top compact age/currency only with expandable stat chip and location on separate narrow caption; do not horizontally clip even with large names.
 - bottom primary actions collapse to menu, interact and phone; joystick can be virtual or gesture-based; Age Up moves to explicit thumb drawer if spatial conflicts arise.
 - dialogue dock uses 16–18sp text and a maximum visible height that keeps eyes visible; choices scroll within own panel; focused input and keyboard bring composer above home indicator.
 - overlay width = safe screen width minus 12–16pt margins. Do not pin both sidebars.
 
 ### Standard portrait 360–599pt
+
 - status strip 48–56pt; world fills flexible area with original tile pixel density; in-city HUD occupies bottom ~112–168pt depending on virtual-pad setting, respecting home indicator.
 - left menu and right phone slide over world, max ~80–88% width, dark backdrop; one at a time; swipe dismissal and icon/back restore.
 - 3D conversation image stays ~52–65% of screen, with dynamic dock lower part; 12–24pt safe vertical text spacing; camera framing adjusts for keyboard/choice panel.
 
 ### Tablet / landscape >=600pt
+
 - world takes central 55–70%; context sidebar 208–280pt, optional phone/notifications rail 260–340pt if width >=1000; no overlay of central gameplay by default.
-- default cinematic scene 16:9 or author-defined 2.35:1 *within* available view; safe dialogue dock can sit beside or beneath it, not cover critical faces.
+- default cinematic scene 16:9 or author-defined 2.35:1 _within_ available view; safe dialogue dock can sit beside or beneath it, not cover critical faces.
 - multi-input focus switching (mouse, controller, keyboard, touch) has visual selected state; no hover-exclusive functionality.
 
 ### Creator desktop >=1024pt
+
 - left content rail ~240px; center timeline/viewport flexible min 560px; inspector 280–340px; bottom debug and validation bar 64–120px.
 - preview emulates 320/390/430 phone widths with true safe areas and scales content, not text raster.
 
 ### Orientation & OS interruptions
+
 - restoring from background, switching tabs, incoming calls, keyboard presentation and notification permission changes never duplicate simulation choices.
 - stage camera recomputes view safe region when rotated; pixel map rescales by tiles, not bilinear stretching; 3D frame composition uses camera rigs to keep eyes above the dock.
 
@@ -622,18 +625,18 @@ Each row below is a **design target**; "existing" means a code pathway with some
 
 ## I. Current repo mapping and implementation truth
 
-| Screen family | Existing starting code | Gap |
-|---|---|---|
-| New life / editor S02/S03 | apps/player/App.tsx + AvatarEditor.tsx / AvatarPortrait.tsx | no pixel↔3D true render parity or introduction loop |
-| Free roam S04/S06/S33 | CityWorld.tsx + CityMap.tsx, generated city scene | map/district cards, NOT walkable pixel world, no collision/door/interior |
-| Life/career/widgets S10–S20/S34/S35 | LifeDashboard.tsx, simulation-core moments/portfolio/city | only partial action panels, no unified HUD widget state machine or true haptics |
-| Dialogue S08/S09/S21–S23 | StoryPlayer.tsx, GameStage.tsx, narrative-core | current illustrated prototype, no live rigged native 3D world |
-| People/memory S15/S28 | App.tsx people & journal tabs | cards and logs exist but graph/flashback/legacy not built |
-| Communications S24–S27/S40 | no actual real-player or AI provider-backed messaging | must build with safety controls, consent and API-backend separation |
-| Settings/asset/storage S31/S32/S36/S37 | simple status/errors and asset-pack schema | UI and actual staged downloads/cache missing |
-| Creator S38/S39 | apps/creator-studio | existing web editing, no authored 3D rig/tile/live preview pipeline |
+| Screen family                          | Existing starting code                                      | Gap                                                                             |
+| -------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| New life / editor S02/S03              | apps/player/App.tsx + AvatarEditor.tsx / AvatarPortrait.tsx | no pixel↔3D true render parity or introduction loop                             |
+| Free roam S04/S06/S33                  | CityWorld.tsx + CityMap.tsx, generated city scene           | map/district cards, NOT walkable pixel world, no collision/door/interior        |
+| Life/career/widgets S10–S20/S34/S35    | LifeDashboard.tsx, simulation-core moments/portfolio/city   | only partial action panels, no unified HUD widget state machine or true haptics |
+| Dialogue S08/S09/S21–S23               | StoryPlayer.tsx, GameStage.tsx, narrative-core              | current illustrated prototype, no live rigged native 3D world                   |
+| People/memory S15/S28                  | App.tsx people & journal tabs                               | cards and logs exist but graph/flashback/legacy not built                       |
+| Communications S24–S27/S40             | no actual real-player or AI provider-backed messaging       | must build with safety controls, consent and API-backend separation             |
+| Settings/asset/storage S31/S32/S36/S37 | simple status/errors and asset-pack schema                  | UI and actual staged downloads/cache missing                                    |
+| Creator S38/S39                        | apps/creator-studio                                         | existing web editing, no authored 3D rig/tile/live preview pipeline             |
 
-Design-only **screen atlas**: [docs/design/LIVEIT_SCREEN_ATLAS.html](design/LIVEIT_SCREEN_ATLAS.html) contains schematic compositions for principal modes; it is not a production build or claimed final render. The atlas should be browsed locally from a checked-out repo and visually reviewed across narrow, standard and tablet widths. The full 43-item list above is the completeness authority; atlas uses representative screen *families*, not 43 separate production images.
+Design-only **screen atlas**: [docs/design/LIVEIT_SCREEN_ATLAS.html](design/LIVEIT_SCREEN_ATLAS.html) contains schematic compositions for principal modes; it is not a production build or claimed final render. The atlas should be browsed locally from a checked-out repo and visually reviewed across narrow, standard and tablet widths. The full 43-item list above is the completeness authority; atlas uses representative screen _families_, not 43 separate production images.
 
 ## J. Design review signoff gates (before Step 3 architecture)
 
