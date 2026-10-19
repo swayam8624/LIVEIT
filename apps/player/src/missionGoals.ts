@@ -35,13 +35,13 @@ export function parseMissions(input: unknown): LifeMission[] {
     return typeof m.id === 'string' && m.id.length <= 120 &&
       typeof m.title === 'string' && m.title.length > 0 && m.title.length <= 80 &&
       typeof m.description === 'string' && m.description.length <= 500 &&
-      Number.isSafeInteger(m.createdAge) && m.createdAge! >= 0 &&
+      typeof m.createdAge === 'number' && Number.isSafeInteger(m.createdAge) && m.createdAge >= 0 &&
       (m.expiresAge === undefined ||
-        (Number.isSafeInteger(m.expiresAge) && m.expiresAge >= 0)) &&
+        (typeof m.expiresAge === 'number' && Number.isSafeInteger(m.expiresAge) && m.expiresAge >= 0)) &&
       (m.goal === undefined || MISSION_GOALS.some(g => g.id === m.goal)) &&
       typeof m.completed === 'boolean' &&
       (m.completedAge === undefined ||
-        (Number.isSafeInteger(m.completedAge) && m.completedAge >= 0));
+        (typeof m.completedAge === 'number' && Number.isSafeInteger(m.completedAge) && m.completedAge >= 0));
   }).slice(-500);
 }
 
