@@ -94,6 +94,16 @@ For the only current independently runnable Vulkan proof:
 
 Do not describe this command as the game rendering inside an iPhone. For a proper native player run, use the iOS/Android commands above and separately confirm the actual installed view and actions.
 
+## Original asset production catalog (Step 5)
+
+The approved visual roadmap now includes a **machine-readable catalog of 1,481 PLANNED production work items**, including 400 separately named 3D rig parts, 200 distinct cinematic environments, 302 original top-down pixel tiles, 55 sprite families and the supporting HUD/audio/VFX/shader/camera library. Naming an asset in JSON does not create its actual geometry, sprite, sound or rights.
+
+- [Art Production Bible — ART-005](docs/ASSET_PRODUCTION_BIBLE_V1.md): rigorous source formats, art direction, commercial rights intake, GPU conversion and QA.
+- [Catalog totals](content/production-assets/v1/catalog-index.json), [3D character inventory](content/production-assets/v1/characters-3d.json), [200 3D locations/props](content/production-assets/v1/locations-3d.json), [pixel world inventory](content/production-assets/v1/pixel-world.json) and [HUD/audio/camera/shader inventory](content/production-assets/v1/hud-audio-fx.json).
+- [First playable Bellweather café kit](content/production-assets/v1/first-playable-slice.json): 110 planned starter work items, selected from the full catalog.
+- [Actual current-repo asset audit](content/production-assets/v1/existing-repo-audit.json): 28 Kenney CC0 fallback PNGs, two tiny concept JPGs and 51 procedural prototype recipes, not a finished 3D or pixel production library.
+- Validator: npm run assets:validate. Summary: npm run assets:summary. CI also runs the catalog regression tests.
+
 ## Play the slice
 
 1. Choose a name and pronouns, then **Begin your life**.
