@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { World } from '@living/world-schema';
-import type { WorldActivity } from '@living/simulation-core';
+import { lifeStageOf, type ChildhoodActivity, type WorldActivity } from '@living/simulation-core';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import { findTileRoute, targetForTap, type TilePoint } from './pixelPathfinding';
 import { modernSpriteColumn } from './spriteDirections';
@@ -15,7 +15,7 @@ import { MISSION_GOALS, missionExpired, newMission, parseMissions, resolveMissio
   type LifeMission, type MissionGoal, type MissionEvent } from './missionGoals';
 import {
   INITIAL_POSITION, STREET_WIDTH, STREET_HEIGHT, CAFE_WIDTH, CAFE_HEIGHT,
-  npcAt, pixelCell, validPixelPosition,
+  npcAt, validPixelPosition,
   type Facing, type PixelPlace, type PixelPosition,
 } from './pixelTownLogic';
 
@@ -124,13 +124,15 @@ function PixelBuilding({
 }
 
 export function ArcadePixelLife({
-  world, onTalk, onAdvanceMonth, onNavigate, onActivity, paused = false,
+  world, onTalk, onAdvanceMonth, onNavigate, onActivity, onChildAction, onSkipChildhood, paused = false,
 }: {
   world: World;
   paused?: boolean;
   onTalk: () => void;
   onAdvanceMonth: () => void;
   onActivity: (activity: WorldActivity, dayOffset: number) => void;
+  onChildAction: (activity: ChildhoodActivity, dayOffset: number) => void;
+  onSkipChildhood: (years: 2 | 5 | 13 | 18) => void;
   onNavigate: (where: 'stories' | 'people' | 'journal' | 'life') => void;
 }) {
   const { width, height } = useWindowDimensions();
@@ -266,6 +268,10 @@ export function ArcadePixelLife({
     return Math.hypot(hero.current.x - npc.x, hero.current.y - npc.y) <= 1.8;
   }, []);
   const startChat = useCallback(() => {
+    if (world.player.ageDays < 18 * 365) {
+      setNotice('This adult NPC encounter unlocks once you turn 18. Play your childhood and make friends first.');
+      return;
+    }
     if (!isNearNpc()) {
       setNotice('Move near Amelia to begin a conversation.');
       return;
@@ -276,7 +282,7 @@ export function ArcadePixelLife({
       speaker: 'npc',
       text: 'Oh, hey! I thought I recognized you. How have you been?',
     }]);
-  }, [isNearNpc, missionEvent]);
+  }, [isNearNpc, missionEvent, world.player.ageDays]);
 
   const submit = useCallback(async (suggested?: string) => {
     const sentence = safeText(suggested ?? draft);
@@ -534,6 +540,10 @@ export function ArcadePixelLife({
   const worldWidth = (place === 'street' ? 1 : CAFE_WIDTH) * TILE;
   const worldHeight = (place === 'street' ? 1 : CAFE_HEIGHT) * TILE;
   const ageMonths = Math.floor((world.player.ageDays * 12) / 365);
+  const stage = lifeStageOf(world.player.ageDays);
+  const ageYears = Math.floor(world.player.ageDays / 365);
+  const openChunk = chunkOf(tileWindow.left, tileWindow.top);
+  const biome = biomeAt(worldSeed, tileWindow.left, tileWindow.top);
   const dayWithinMonth = Math.min(30, Math.floor(clock / (MONTH_MS / 30)) + 1);
   const inGameMinute = Math.floor(((clock / (MONTH_MS / 30)) % 1) * 1440);
   const hour = Math.floor(inGameMinute / 60);
@@ -551,6 +561,7 @@ export function ArcadePixelLife({
     setMovement(next);
   };
   const interact = () => {
+    if (ageYears < 16) { setNotice('Market shifts and purchases unlock as you grow older.'); return; }
     if (!loaded || panel !== 'none' || paused) return;
     const interaction: WorldActivity | null = zone === 'cafe' ? 'cafe'
       : zone === 'garden' ? 'garden'
@@ -687,6 +698,7 @@ export function ArcadePixelLife({
           <View style={s.clockBox}>
             <Text style={s.clockText}>☀ {clockLabel}</Text>
             <Text style={s.sub}>DAY {dayWithinMonth}/30 · AGE {Math.floor(ageMonths / 12)}y {ageMonths % 12}m</Text>
+            <Text style={s.sub}>{stage.toUpperCase()} · {biome.toUpperCase()} · {openChunk.cx},{openChunk.cy}</Text>
             <View style={s.clockTrack}><View style={[s.clockFill, {width: monthPart + '%'}]} /></View>
           </View>
         </View>
@@ -696,6 +708,60 @@ export function ArcadePixelLife({
           <HudButton title="♫" detail="PEOPLE" onPress={() => onNavigate('people')} />
           <HudButton title="⚙" detail="LOCAL AI" onPress={() => {pauseMovement(); setPanel('settings');}} />
         </View>
+        {ageYears < 18 ? (
+          <View style={{
+            position:'absolute',left:90,right:10,top:105,maxWidth:440,
+            backgroundColor:'#292235ef',borderWidth:2,borderColor:'#f2c483',
+            borderRadius:12,padding:12,gap:9,
+          }}>
+            <Text style={{fontSize:18,fontWeight:'900',color:'#ffdda4'}}>
+              {stage === 'infant' ? 'YOUR FIRST YEARS' :
+                stage === 'toddler' ? 'DISCOVER CHILDHOOD' :
+                stage === 'child' ? 'SCHOOL & FRIENDS' : 'YOUR TEEN YEARS'}
+            </Text>
+            <Text style={{color:'#fff0cc',fontSize:12,lineHeight:19}}>
+              {stage === 'infant' ? 'You were born in Bellweather. Your parents look after you while you learn to explore your world.'
+                : stage === 'toddler' ? 'Meet people, play, and discover what you love.'
+                : stage === 'child' ? 'Your days revolve around family, school, friends and curiosity.'
+                : 'Adolescence brings independence, friendships, school and decisions about your future.'}
+            </Text>
+            <Text style={{color:'#e3d2c1',fontSize:11}}>
+              WELLBEING {world.player.wellbeing}% · LEARNING {world.player.skill} · FAMILY {world.relationships[0]?.trust ?? 0}%
+            </Text>
+            <View style={{flexDirection:'row',flexWrap:'wrap',gap:6}}>
+              {([
+                ['bond','♥ FAMILY'],['play','✦ PLAY'],['rest','☾ REST'],
+                ...(ageYears>=2 ? [['learn','⌁ LEARN']] : []),
+                ...(ageYears>=5 ? [['study','✎ STUDY'],['make_friend','☻ FRIENDS']] : []),
+              ] as Array<[ChildhoodActivity,string]>).map(([activity,label])=>(
+                <Pressable key={activity} accessibilityRole="button"
+                  onPress={() => {
+                    const dayOffset=Math.min(29,Math.floor(clockRef.current/(MONTH_MS/30)));
+                    const tag='child_act:'+(world.day+dayOffset)+':'+activity;
+                    if(world.facts.includes(tag)) {
+                      setNotice('You already did '+label.toLowerCase()+' today. Enjoy something else.');
+                    } else {
+                      onChildAction(activity,dayOffset);
+                      setNotice(label+' — your childhood memory and stats have changed.');
+                    }
+                  }}
+                  style={{backgroundColor:'#6e536d',paddingHorizontal:10,paddingVertical:9,borderRadius:8}}>
+                  <Text style={{color:'#fff4db',fontWeight:'800',fontSize:12}}>{label}</Text>
+                </Pressable>
+              ))}
+            </View>
+            <Text style={{color:'#e3d2c1',fontSize:10}}>Active game time: one real hour ages one month. Optional skips preserve an age-appropriate milestone history.</Text>
+            <View style={{flexDirection:'row',flexWrap:'wrap',gap:6}}>
+              {([2,5,13,18] as const).filter(a=>a>ageYears).map(years=>(
+                <Pressable key={years} onPress={()=>onSkipChildhood(years)} accessibilityRole="button"
+                  style={{borderWidth:1,borderColor:'#b99a79',borderRadius:7,padding:7}}>
+                  <Text style={{color:'#ffe6ae',fontSize:10,fontWeight:'800'}}>SKIP TO {years}Y</Text>
+                </Pressable>
+              ))}
+            </View>
+          </View>
+        ) : null}
+
         <View style={s.bottomHud} pointerEvents="box-none">
           <View style={s.toast}><Text style={s.toastText} numberOfLines={2}>{notice}</Text></View>
           <View style={s.controlRow}>
