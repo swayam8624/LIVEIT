@@ -1,5 +1,30 @@
 # LIVEIT
 
+> **ACTIVE DIRECTION (19 Oct 2026): 100% PIXEL ART.** The owner retired **all** 3D graphics, 3D models, cinematic 3D actors, rigged meshes and glTF content. Both free-roam and emotionally rich dialogue/story scenes use original expressive layered 2D pixel art. [Pixel-only spec V2](docs/PIXEL_ONLY_DIRECTION_V2.md) overrides any stale 3D plans elsewhere in this repository. Current fallback is not yet a complete walkable pixel game.
+
+## Import your downloaded ZIPs, pixel art and sounds
+
+The built-in safe intake tool scans your Mac Downloads, has you approve each pack's actual license and public GitHub redistribution rights, then extracts supported assets into Git-tracked, source-attributed folders **without pushing raw ZIPs or 3D files**.
+
+```bash
+cd ~/Desktop/projects/living-universe
+git fetch origin
+git switch feat/native-life-economic-foundation
+git pull --ff-only
+npm run assets:intake -- --source "$HOME/Downloads" --scan
+npm run assets:intake -- --review
+npm run assets:intake -- --import-approved
+git status --short
+du -sh assets/imported
+# Commit only after inspecting files and public redistribution terms:
+git add assets/imported
+git commit -m "assets(pixel): import approved sprites tiles UI and audio"
+git push origin feat/native-life-economic-foundation
+```
+
+The local review report is in **assets/local-intake/reviews.json**, ignored by Git. If a source's raw files cannot legally be redistributed, do NOT approve it for the public repository. Originals remain in Downloads. PNG art is preserved losslessly, and if ffmpeg exists, WAV/OGG/FLAC sound is converted to mobile-readable AAC/M4A. Existing historic 3D inventory is **not an active target**.
+
+
 An original native iOS/Android life simulator and interactive-story game. **Target art: pixel-crisp top-down everyday exploration, beautifully rigged 3D dramatic conversations and tactile accessible game HUD.** The current playable foundation includes Bellweather district selection and authored stories; the full walkable pixel/3D native renderer remains under construction.
 
 ## Run LIVEIT on iPhone Simulator (primary development path)
