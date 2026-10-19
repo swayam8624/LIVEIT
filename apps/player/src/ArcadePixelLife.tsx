@@ -111,6 +111,11 @@ export function ArcadePixelLife({
 }) {
   const { width, height } = useWindowDimensions();
   const [size, setSize] = useState({ width, height });
+  // Moving tile window: prefetch a two-tile border around the viewport.
+  // Rendering the entire 30x23 town creates hundreds of native Image nodes
+  // even when only about ten tiles are visible across a mobile screen.
+  const [tileWindow, setTileWindow] = useState({ left: 0, top: 0, cols: 14, rows: 21 });
+  const tileWindowRef = useRef(tileWindow);
   const [place, setPlace] = useState<PixelPlace>('street');
   const [facing, setFacing] = useState<Facing>('down');
   const [clock, setClock] = useState(0);
@@ -324,6 +329,23 @@ export function ArcadePixelLife({
       } else if (!(p.place === 'street' && p.x >= 17 && p.y >= 14)) {
         lastZone.current = '';
       }
+      const colsNeeded = Math.min(p.place === 'street' ? STREET_WIDTH : CAFE_WIDTH,
+        Math.max(1, Math.ceil(size.width / TILE) + 4));
+      const rowsNeeded = Math.min(p.place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT,
+        Math.max(1, Math.ceil(size.height / TILE) + 4));
+      const nextWindow = {
+        left: Math.min(Math.max(0, Math.floor(p.x) - Math.floor(colsNeeded / 2)),
+          (p.place === 'street' ? STREET_WIDTH : CAFE_WIDTH) - colsNeeded),
+        top: Math.min(Math.max(0, Math.floor(p.y) - Math.floor(rowsNeeded / 2)),
+          (p.place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT) - rowsNeeded),
+        cols: colsNeeded, rows: rowsNeeded,
+      };
+      const oldWindow = tileWindowRef.current;
+      if (oldWindow.left !== nextWindow.left || oldWindow.top !== nextWindow.top ||
+          oldWindow.cols !== nextWindow.cols || oldWindow.rows !== nextWindow.rows) {
+        tileWindowRef.current = nextWindow;
+        setTileWindow(nextWindow);
+      }
       pose.setValue({ x: p.x * TILE, y: p.y * TILE });
       const worldWidth = (p.place === 'street' ? STREET_WIDTH : CAFE_WIDTH) * TILE;
       const worldHeight = (p.place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT) * TILE;
@@ -379,6 +401,7 @@ export function ArcadePixelLife({
       const target = e.target;
       if (target instanceof HTMLElement &&
         (target.isContentEditable || ['INPUT', 'TEXTAREA'].includes(target.tagName))) return;
+      if (paused || panel !== 'none') return;
       if (['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyW','KeyA','KeyS','KeyD'].includes(e.code)) {
         e.preventDefault(); keys.current.add(e.code);
       }
@@ -394,25 +417,37 @@ export function ArcadePixelLife({
       window.removeEventListener('keyup', up);
       window.removeEventListener('blur', blur);
     };
-  }, [panel, startChat]);
+  }, [panel, paused, startChat]);
 
   // Spatial map tiles are created only when changing between the two maps.
   const tiles = useMemo(() => {
     const columns = place === 'street' ? STREET_WIDTH : CAFE_WIDTH;
     const rows = place === 'street' ? STREET_HEIGHT : CAFE_HEIGHT;
     const elements: React.ReactElement[] = [];
-    for (let y = 0; y < rows; y++) for (let x = 0; x < columns; x++) {
+    const startY = Math.min(tileWindow.top, rows - 1);
+    const endY = Math.min(rows, startY + tileWindow.rows);
+    const startX = Math.min(tileWindow.left, columns - 1);
+    const endX = Math.min(columns, startX + tileWindow.cols);
+    for (let y = startY; y < endY; y++) for (let x = startX; x < endX; x++) {
       const tile = pixelCell(place, x, y);
-      const source: PixelArtKey = tile.prop && tile.prop in pixelArt
-        ? tile.prop as PixelArtKey : tile.terrain === 'grass2' ? 'grass' : tile.terrain;
+      // Never let a prop replace the floor underneath. Trees, buildings,
+      // furniture and lamps have their own transparent sprite layers.
+      const base: PixelArtKey = tile.terrain === 'grass2' ? 'grass' : tile.terrain;
+      const frame = { position: 'absolute' as const, left: x * TILE,
+        top: y * TILE, width: TILE, height: TILE };
       elements.push(
-        <Image key={x + ':' + y} source={pixelArt[source]} resizeMode="stretch"
-          style={[{ position: 'absolute', left: x * TILE, top: y * TILE,
-            width: TILE, height: TILE }, crisp]} />
+        <View key={x + ':' + y} pointerEvents="none" style={frame}>
+          <Image source={pixelArt[base]} resizeMode="stretch"
+            style={[{ position: 'absolute', width: TILE, height: TILE }, crisp]} />
+          {tile.prop && tile.prop in pixelArt
+            ? <Image source={pixelArt[tile.prop]} resizeMode="stretch"
+                style={[{ position: 'absolute', width: TILE, height: TILE }, crisp]} />
+            : null}
+        </View>,
       );
     }
     return elements;
-  }, [crisp, place]);
+  }, [crisp, place, tileWindow.cols, tileWindow.left, tileWindow.rows, tileWindow.top]);
 
   const npc = npcAt(place);
   const worldWidth = (place === 'street' ? STREET_WIDTH : CAFE_WIDTH) * TILE;
