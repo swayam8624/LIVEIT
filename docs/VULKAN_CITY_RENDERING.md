@@ -1,3 +1,5 @@
+> **ARCHIVED TECHNICAL SLICE — not the current visual specification (updated 19 October 2026).** The successful Vulkan 3D building raycast and procedural 2.5D actor shaders remain reproducible *offscreen GPU tests*. The LIVEIT target after Steps 1–3 is original **top-down, pixel-crisp 2D tile/sprite daily play**, *genuinely rigged 3D* important conversations/stories and a semantic tactile HUD. Read [GDS-001](LIVEIT_GRAPHICS_DESIGN_SPEC_V1.md), [GDS-002](LIVEIT_SCREEN_MODE_BLUEPRINT_V1.md) and [ENG-003](LIVEIT_RENDER_ENGINE_ARCHITECTURE_V1.md) for binding platform, scene, shader pass and release gates. The "3D city" and camera-orbit tasks below are historical prototype exploration, not tasks to ship as the pixel overworld.
+
 > **Scope correction:** This file documents ONLY one city-focused vertical slice. The full product mandate is [UNIFIED_VISUAL_ENGINE_VISION.md](UNIFIED_VISUAL_ENGINE_VISION.md). Vulkan must render all character rigs, outfits, expressions, interiors, story cinematic stages, props and FX through a shared asset-backed native scene renderer, not city alone. The independently tested actors.comp procedural Vulkan portrait/conversation/cast stage is another prototype, not a production rigged art atlas.
 
 # LIVEIT City Sim: Vulkan renderer + retro-native UI
@@ -33,7 +35,7 @@ ctest --test-dir build/city-vulkan --output-on-failure
 
 Use Preview/ImageMagick/GIMP to view or convert PPM. The CLI prints which actual Vulkan physical device ran. Generated images stay in `build/` and can be fetched as CI artifacts, not committed into the React Native build by default. Set `VK_ICD_FILENAMES` only to a verified available ICD JSON if no device enumerates. `xcrun` alone does not provide desktop Vulkan.
 
-## Required native in-app implementation (next build gate)
+## Historical native Vulkan surface checklist — superseded by ENG-003 hybrid bridge
 
 The iPhone and Android renderer surface cannot be a conventional `expo-gl`/WebGL view; that would render via OpenGL ES, **not Vulkan**. Build a local **Expo Modules API** view using the official tutorials: <https://docs.expo.dev/modules/native-view-tutorial/> and <https://docs.expo.dev/more/create-expo-module/>.
 
@@ -46,7 +48,7 @@ The iPhone and Android renderer surface cannot be a conventional `expo-gl`/WebGL
 
 **Do not claim the above six tasks are implemented until verified.**
 
-## Art direction: 60% modern indie / 40% arcade nostalgia
+## Historical city-prototype art direction (not the final hybrid aesthetic)
 
 - Shape language: compact beveled-looking panels, 1–2px borders, small 3–5px radii for HUD buttons; preserve readable touch targets (44px minimum).
 - Palette: background `#101827`, raised `#223449`, neon `#97E6AC`, amber `#FFD28A`, coral `#F49A82`, text `#F5F2D9`, muted `#B6C6C8`, border `#507174`. City water `#2B617A`, parks `#427969`.
