@@ -212,6 +212,19 @@ export function validateProductionCatalog() {
     'sprite population planning regressed',
   );
 
+  const first = read('first-playable-slice.json');
+  assert(first.schemaVersion === 1 && Array.isArray(first.assetIds), 'invalid first playable kit');
+  const selected = new Set(first.assetIds);
+  assert(selected.size === first.assetIds.length, 'duplicate first playable ID');
+  assert(first.assetIds.length >= 80 && first.assetIds.length <= 140,
+    'first playable kit must remain a feasible bounded curated subset');
+  for (const id of first.assetIds) assert(ids.has(id), 'first playable kit references unknown asset ' + id);
+  const firstCategories = countItems(assets.filter((asset) => selected.has(asset.id)), 'category');
+  assert(JSON.stringify(firstCategories) === JSON.stringify(first.countsByCategory),
+    'first playable category counts out of sync');
+  assert(first.status === 'planned-unbuilt' && first.notShippingYet === true,
+    'first playable kit is only a plan until mobile QA');
+
   const audit = read('existing-repo-audit.json');
   assert(
     audit.existing.length === 28 && audit.preview.length === 2,
