@@ -1,5 +1,7 @@
 # LIVEIT — definitive graphics design specification (GDS-001)
 
+> **ARCHIVED 3D/HYBRID PLANNING DOCUMENT:** The owner changed LIVEIT to **100% expressive 2D retro pixel art** on 2026-10-19. Its former 3D cinematic/model requirements below are superseded by [PIXEL_ONLY_DIRECTION_V2](PIXEL_ONLY_DIRECTION_V2.md) and [active pixel-v2 requirements](../content/production-assets/pixel-v2/required-assets.json). Do not implement 3D from this document.
+
 **Design title:** A Life in Two Dimensions and a Thousand Feelings  
 **Tagline:** Retro to live in. Cinematic to feel. Tactile to control.  
 **Version:** 1.0 — approved for production specification, not a claim of finished implementation  
