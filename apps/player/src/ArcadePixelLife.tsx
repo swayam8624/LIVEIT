@@ -131,6 +131,7 @@ export function ArcadePixelLife({
   const pose = useRef(new Animated.ValueXY()).current;
   const camera = useRef(new Animated.ValueXY()).current;
   const bob = useRef(new Animated.Value(0)).current;
+  const frameOffset = useRef(new Animated.Value(0)).current;
   const glow = useRef(new Animated.Value(0.1)).current;
   const clockRef = useRef(0);
   const monthRef = useRef(onAdvanceMonth);
@@ -270,8 +271,10 @@ export function ArcadePixelLife({
           ? vx > 0 ? 'right' : 'left' : vy > 0 ? 'down' : 'up';
         setFacing(previous => previous === nextFacing ? previous : nextFacing);
         bob.setValue(Math.sin(timestamp / 70) * 2);
+        frameOffset.setValue(-TILE * (Math.floor(timestamp / 125) % 4));
       } else {
         bob.setValue(Math.sin(timestamp / 440) * 0.7);
+        frameOffset.setValue(0);
       }
       // Portal transitions need to be detected by entering a tile, not by
       // colliding with the café's solid façade.
@@ -327,7 +330,7 @@ export function ArcadePixelLife({
       cancelAnimationFrame(frame);
       void AsyncStorage.setItem(gameKey + '.elapsed', String(clockRef.current)).catch(() => {});
     };
-  }, [bob, camera, gameKey, glow, loaded, panel, pose, size.height, size.width]);
+  }, [bob, camera, frameOffset, gameKey, glow, loaded, panel, pose, size.height, size.width]);
 
   // Browser-only physical keyboard support. Text inputs must never move
   // the avatar; mobile touch pads write the same movement vector.
@@ -423,8 +426,11 @@ export function ArcadePixelLife({
             ],
           }]}>
             <View style={s.heroShadow} />
-            <Image source={actorArt(1, facing)} resizeMode="stretch"
-              style={{ width: TILE, height: TILE }} />
+            <View style={{ width: TILE, height: TILE, overflow: 'hidden' }}>
+              <Animated.Image source={pixelArt[('n1_' + facing + '_sheet') as PixelArtKey]}
+                resizeMode="stretch" style={{ width: TILE * 4, height: TILE,
+                  transform: [{ translateX: frameOffset }] }} />
+            </View>
           </Animated.View>
         </Animated.View>
         <Animated.View pointerEvents="none" style={[s.daylight, { opacity: glow }]} />
