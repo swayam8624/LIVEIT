@@ -24,7 +24,6 @@ git push origin feat/native-life-economic-foundation
 
 The local review report is in **assets/local-intake/reviews.json**, ignored by Git. If a source's raw files cannot legally be redistributed, do NOT approve it for the public repository. Originals remain in Downloads. PNG art is preserved losslessly, and if ffmpeg exists, WAV/OGG/FLAC sound is converted to mobile-readable AAC/M4A. Existing historic 3D inventory is **not an active target**.
 
-
 An original native iOS/Android life simulator and interactive-story game. **Target art: pixel-crisp top-down everyday exploration, beautifully rigged 3D dramatic conversations and tactile accessible game HUD.** The current playable foundation includes Bellweather district selection and authored stories; the full walkable pixel/3D native renderer remains under construction.
 
 ## Run LIVEIT on iPhone Simulator (primary development path)
