@@ -16,10 +16,11 @@ describe('touch-to-walk Bellweather navigation', () => {
     expect(previous).toEqual({ x: 17, y: 9 });
   });
 
-  it('never invents a path through buildings or outside the map', () => {
+  it('avoids buildings but supports valid procedural terrain beyond town limits', () => {
     const start = { x: INITIAL_POSITION.x, y: INITIAL_POSITION.y };
     expect(findTileRoute('street', start, { x: 4, y: 4 })).toEqual([]);
-    expect(findTileRoute('street', start, { x: -1, y: 0 })).toEqual([]);
+    expect(findTileRoute('street', start, { x: -1, y: 0 }).length).toBeGreaterThan(0);
+    expect(findTileRoute('cafe', {x:5,y:8}, {x:-1,y:0})).toEqual([]);
     expect(targetForTap('street', { x: 4, y: 4 }, start)).toBeNull();
   });
 
