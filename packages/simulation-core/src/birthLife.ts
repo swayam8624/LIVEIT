@@ -1,4 +1,5 @@
 import { createWorld, advanceCalendarMonth } from './index';
+import { initialHousehold, initialSchool } from './familySchool';
 import { WorldSchema, record, type World, type Appearance, DEFAULT_APPEARANCE } from '@living/world-schema';
 type Pronouns = World['player']['pronouns'];
 export type LifeStage = 'infant' | 'toddler' | 'child' | 'teen' | 'adult' | 'senior';
@@ -34,6 +35,8 @@ export function createBirthWorld(
     { characterId: 'parent_eli', trust: 78, lastContactDay: 0 },
   ];
   w.facts = ['life_origin:born_in_bellweather', 'life_stage:infant'];
+  w.household=initialHousehold();
+  w.school=initialSchool();
   w.history = [];
   record(w, 'creation', name + ' was born in Bellweather. Their life begins at day zero.');
   return WorldSchema.parse(w);
