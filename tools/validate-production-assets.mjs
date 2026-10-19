@@ -5,7 +5,8 @@
  * third-party files or actual on-device artistic quality. Those require review.
  */
 import process from 'node:process';
-import { readFileSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, existsSync, statSync, realpathSync, lstatSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -30,6 +31,15 @@ const validPath = (value) => {
   const normalized = resolve(ROOT, value);
   return normalized.startsWith(ROOT + sep);
 };
+const verifyLocalFile = (path, id) => {
+  assert(validPath(path), 'invalid local evidence path ' + id + ': ' + path);
+  const resolved = resolve(ROOT, path);
+  assert(existsSync(resolved) && lstatSync(resolved).isFile(),
+    'source/QA evidence file missing or is not regular: ' + id + ': ' + path);
+  assert(realpathSync(resolved).startsWith(ROOT + sep),
+    'evidence path points outside repository: ' + id + ': ' + path);
+};
+
 const statuses = new Set([
   'planned',
   'sourced',
@@ -139,6 +149,10 @@ export function validateProductionCatalog() {
         typeof asset.sourceFile === 'string' && validPath(asset.sourceFile),
         'source file path invalid: ' + asset.id,
       );
+      assert(typeof asset.licenseId === 'string' && asset.licenseId.trim().length > 1,
+        'exact license identifier required on sourced asset: ' + asset.id);
+      verifyLocalFile(asset.sourceFile, asset.id);
+      verifyLocalFile(asset.licenseEvidence, asset.id);
       if (asset.status === 'qa-passed' || asset.status === 'released') {
         assert(
           typeof asset.assetFile === 'string' && validPath(asset.assetFile),
@@ -152,20 +166,10 @@ export function validateProductionCatalog() {
           Array.isArray(asset.qaEvidence) && asset.qaEvidence.length > 0,
           'missing QA evidence: ' + asset.id,
         );
-        for (const path of [
-          asset.sourceFile,
-          asset.assetFile,
-          ...asset.qaEvidence,
-        ]) {
-          assert(
-            validPath(path) && existsSync(resolve(ROOT, path)),
-            'missing artifact/evidence ' + asset.id + ':' + path,
-          );
-          assert(
-            statSync(resolve(ROOT, path)).isFile(),
-            'expected file ' + asset.id + ':' + path,
-          );
-        }
+        for (const path of [asset.assetFile, ...asset.qaEvidence])
+          verifyLocalFile(path, asset.id);
+        const actualDigest = createHash('sha256').update(readFileSync(resolve(ROOT, asset.assetFile))).digest('hex');
+        assert(actualDigest === asset.sha256, 'binary SHA-256 mismatch: ' + asset.id);
         const old = seenFiles.get(asset.assetFile);
         assert(
           !old || old === asset.id,
