@@ -13,6 +13,9 @@ const entries = [
   ),
 ];
 
+const baseSprites = entries.filter((entry) => !entry[1]?.endsWith('_sheet'));
+const walkSheets = entries.filter((entry) => entry[1]?.endsWith('_sheet'));
+
 function crc32(bytes: Buffer): number {
   let n = 0xffffffff;
   for (const byte of bytes) {
@@ -30,12 +33,23 @@ describe('native-bundled Pulse CC0 pixel art', () => {
     expect(provenance).toContain('CC0');
     expect(provenance).toContain('edfaygo.itch.io/pulse-everyday-streets-1616');
     expect(source).not.toContain('data:image/png;base64,');
-    expect(entries.length).toBe(24);
+    expect(baseSprites.length).toBe(24);
+    expect(walkSheets.length).toBe(4);
+  });
+
+  it('bundles four 64x16 CC0 animation sheets for 4-frame motion', () => {
+    for (const match of walkSheets) {
+      const path = resolve(process.cwd(), directory, match[2] + '.png');
+      expect(existsSync(path)).toBe(true);
+      const image = readFileSync(path);
+      expect(image.readUInt32BE(16)).toBe(64);
+      expect(image.readUInt32BE(20)).toBe(16);
+    }
   });
 
   it('ships actual 16x16 PNG files with valid chunk CRCs, not placeholder URIs', () => {
     const ids = new Set<string>();
-    for (const match of entries) {
+    for (const match of baseSprites) {
       const name = match[1];
       const file = match[2];
       if (!name || !file) throw new Error('Invalid sprite source declaration');
