@@ -1,11 +1,14 @@
 import { CHUNK_SIZE, tileHash, worldCell } from './proceduralWorld';
 import type { Facing } from './pixelTownLogic';
+import { ambientSpriteAssignment } from './spriteIdentity';
 
 export type AmbientPedestrian = Readonly<{
   id: string;
   x: number;
   y: number;
   look: 1 | 2;
+  /** Stable visual key; currently restricted to approved CC0 placeholders. */
+  spriteKey: 'pulse:n1' | 'pulse:n2';
   facing: Facing;
   shift: 'commute' | 'work' | 'leisure' | 'home';
 }>;
@@ -78,12 +81,15 @@ export function ambientPedestrians(
           continue;
         if (worldCell('street', x, y, seed).solid) continue;
         if (x === 10 && y === 7) continue; // canonical Amelia spawn
+        const id = seed + ':' + cx + ':' + cy + ':' + i;
+        const visual = ambientSpriteAssignment(seed, id);
         results.push({
-          id: seed + ':' + cx + ':' + cy + ':' + i,
+          id,
           x,
           y,
           facing,
-          look: (hash >>> 13) % 2 === 0 ? 1 : 2,
+          look: visual.look,
+          spriteKey: visual.spriteKey,
           shift,
         });
       }
