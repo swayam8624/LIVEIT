@@ -1,0 +1,1165 @@
+{
+  "schemaVersion": 1,
+  "runtimeReady": false,
+  "sourceMode": "clean-directional-concept-fallback",
+  "sheet": {
+    "columns": 4,
+    "rows": 16,
+    "frameWidth": 96,
+    "frameHeight": 128
+  },
+  "frames": [
+    {
+      "id": "young-adult-woman/south/contact-a",
+      "stage": "young-adult-woman",
+      "facing": "south",
+      "phase": "contact-a",
+      "file": "young-adult-woman/young-adult-woman-south-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/passing-a",
+      "stage": "young-adult-woman",
+      "facing": "south",
+      "phase": "passing-a",
+      "file": "young-adult-woman/young-adult-woman-south-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/contact-b",
+      "stage": "young-adult-woman",
+      "facing": "south",
+      "phase": "contact-b",
+      "file": "young-adult-woman/young-adult-woman-south-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/passing-b",
+      "stage": "young-adult-woman",
+      "facing": "south",
+      "phase": "passing-b",
+      "file": "young-adult-woman/young-adult-woman-south-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/contact-a",
+      "stage": "young-adult-woman",
+      "facing": "west",
+      "phase": "contact-a",
+      "file": "young-adult-woman/young-adult-woman-west-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/passing-a",
+      "stage": "young-adult-woman",
+      "facing": "west",
+      "phase": "passing-a",
+      "file": "young-adult-woman/young-adult-woman-west-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/contact-b",
+      "stage": "young-adult-woman",
+      "facing": "west",
+      "phase": "contact-b",
+      "file": "young-adult-woman/young-adult-woman-west-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/passing-b",
+      "stage": "young-adult-woman",
+      "facing": "west",
+      "phase": "passing-b",
+      "file": "young-adult-woman/young-adult-woman-west-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/contact-a",
+      "stage": "young-adult-woman",
+      "facing": "east",
+      "phase": "contact-a",
+      "file": "young-adult-woman/young-adult-woman-east-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/passing-a",
+      "stage": "young-adult-woman",
+      "facing": "east",
+      "phase": "passing-a",
+      "file": "young-adult-woman/young-adult-woman-east-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/contact-b",
+      "stage": "young-adult-woman",
+      "facing": "east",
+      "phase": "contact-b",
+      "file": "young-adult-woman/young-adult-woman-east-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/passing-b",
+      "stage": "young-adult-woman",
+      "facing": "east",
+      "phase": "passing-b",
+      "file": "young-adult-woman/young-adult-woman-east-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/contact-a",
+      "stage": "young-adult-woman",
+      "facing": "north",
+      "phase": "contact-a",
+      "file": "young-adult-woman/young-adult-woman-north-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/passing-a",
+      "stage": "young-adult-woman",
+      "facing": "north",
+      "phase": "passing-a",
+      "file": "young-adult-woman/young-adult-woman-north-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/contact-b",
+      "stage": "young-adult-woman",
+      "facing": "north",
+      "phase": "contact-b",
+      "file": "young-adult-woman/young-adult-woman-north-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/passing-b",
+      "stage": "young-adult-woman",
+      "facing": "north",
+      "phase": "passing-b",
+      "file": "young-adult-woman/young-adult-woman-north-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/south/contact-a",
+      "stage": "midlife-adult-woman",
+      "facing": "south",
+      "phase": "contact-a",
+      "file": "midlife-adult-woman/midlife-adult-woman-south-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 512,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/south/passing-a",
+      "stage": "midlife-adult-woman",
+      "facing": "south",
+      "phase": "passing-a",
+      "file": "midlife-adult-woman/midlife-adult-woman-south-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 512,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/south/contact-b",
+      "stage": "midlife-adult-woman",
+      "facing": "south",
+      "phase": "contact-b",
+      "file": "midlife-adult-woman/midlife-adult-woman-south-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 512,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/south/passing-b",
+      "stage": "midlife-adult-woman",
+      "facing": "south",
+      "phase": "passing-b",
+      "file": "midlife-adult-woman/midlife-adult-woman-south-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 512,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/west/contact-a",
+      "stage": "midlife-adult-woman",
+      "facing": "west",
+      "phase": "contact-a",
+      "file": "midlife-adult-woman/midlife-adult-woman-west-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 640,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/west/passing-a",
+      "stage": "midlife-adult-woman",
+      "facing": "west",
+      "phase": "passing-a",
+      "file": "midlife-adult-woman/midlife-adult-woman-west-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 640,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/west/contact-b",
+      "stage": "midlife-adult-woman",
+      "facing": "west",
+      "phase": "contact-b",
+      "file": "midlife-adult-woman/midlife-adult-woman-west-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 640,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/west/passing-b",
+      "stage": "midlife-adult-woman",
+      "facing": "west",
+      "phase": "passing-b",
+      "file": "midlife-adult-woman/midlife-adult-woman-west-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 640,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/east/contact-a",
+      "stage": "midlife-adult-woman",
+      "facing": "east",
+      "phase": "contact-a",
+      "file": "midlife-adult-woman/midlife-adult-woman-east-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 768,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/east/passing-a",
+      "stage": "midlife-adult-woman",
+      "facing": "east",
+      "phase": "passing-a",
+      "file": "midlife-adult-woman/midlife-adult-woman-east-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 768,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/east/contact-b",
+      "stage": "midlife-adult-woman",
+      "facing": "east",
+      "phase": "contact-b",
+      "file": "midlife-adult-woman/midlife-adult-woman-east-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 768,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/east/passing-b",
+      "stage": "midlife-adult-woman",
+      "facing": "east",
+      "phase": "passing-b",
+      "file": "midlife-adult-woman/midlife-adult-woman-east-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 768,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/north/contact-a",
+      "stage": "midlife-adult-woman",
+      "facing": "north",
+      "phase": "contact-a",
+      "file": "midlife-adult-woman/midlife-adult-woman-north-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 896,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/north/passing-a",
+      "stage": "midlife-adult-woman",
+      "facing": "north",
+      "phase": "passing-a",
+      "file": "midlife-adult-woman/midlife-adult-woman-north-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 896,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/north/contact-b",
+      "stage": "midlife-adult-woman",
+      "facing": "north",
+      "phase": "contact-b",
+      "file": "midlife-adult-woman/midlife-adult-woman-north-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 896,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-adult-woman/north/passing-b",
+      "stage": "midlife-adult-woman",
+      "facing": "north",
+      "phase": "passing-b",
+      "file": "midlife-adult-woman/midlife-adult-woman-north-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 896,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/contact-a",
+      "stage": "elder-woman",
+      "facing": "south",
+      "phase": "contact-a",
+      "file": "elder-woman/elder-woman-south-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 1024,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/passing-a",
+      "stage": "elder-woman",
+      "facing": "south",
+      "phase": "passing-a",
+      "file": "elder-woman/elder-woman-south-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 1024,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/contact-b",
+      "stage": "elder-woman",
+      "facing": "south",
+      "phase": "contact-b",
+      "file": "elder-woman/elder-woman-south-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 1024,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/passing-b",
+      "stage": "elder-woman",
+      "facing": "south",
+      "phase": "passing-b",
+      "file": "elder-woman/elder-woman-south-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 1024,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/contact-a",
+      "stage": "elder-woman",
+      "facing": "west",
+      "phase": "contact-a",
+      "file": "elder-woman/elder-woman-west-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 1152,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/passing-a",
+      "stage": "elder-woman",
+      "facing": "west",
+      "phase": "passing-a",
+      "file": "elder-woman/elder-woman-west-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 1152,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/contact-b",
+      "stage": "elder-woman",
+      "facing": "west",
+      "phase": "contact-b",
+      "file": "elder-woman/elder-woman-west-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 1152,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/passing-b",
+      "stage": "elder-woman",
+      "facing": "west",
+      "phase": "passing-b",
+      "file": "elder-woman/elder-woman-west-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 1152,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/contact-a",
+      "stage": "elder-woman",
+      "facing": "east",
+      "phase": "contact-a",
+      "file": "elder-woman/elder-woman-east-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 1280,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/passing-a",
+      "stage": "elder-woman",
+      "facing": "east",
+      "phase": "passing-a",
+      "file": "elder-woman/elder-woman-east-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 1280,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/contact-b",
+      "stage": "elder-woman",
+      "facing": "east",
+      "phase": "contact-b",
+      "file": "elder-woman/elder-woman-east-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 1280,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/passing-b",
+      "stage": "elder-woman",
+      "facing": "east",
+      "phase": "passing-b",
+      "file": "elder-woman/elder-woman-east-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 1280,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/contact-a",
+      "stage": "elder-woman",
+      "facing": "north",
+      "phase": "contact-a",
+      "file": "elder-woman/elder-woman-north-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 1408,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/passing-a",
+      "stage": "elder-woman",
+      "facing": "north",
+      "phase": "passing-a",
+      "file": "elder-woman/elder-woman-north-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 1408,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/contact-b",
+      "stage": "elder-woman",
+      "facing": "north",
+      "phase": "contact-b",
+      "file": "elder-woman/elder-woman-north-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 1408,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/passing-b",
+      "stage": "elder-woman",
+      "facing": "north",
+      "phase": "passing-b",
+      "file": "elder-woman/elder-woman-north-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 1408,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/contact-a",
+      "stage": "elder-man",
+      "facing": "south",
+      "phase": "contact-a",
+      "file": "elder-man/elder-man-south-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 1536,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/passing-a",
+      "stage": "elder-man",
+      "facing": "south",
+      "phase": "passing-a",
+      "file": "elder-man/elder-man-south-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 1536,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/contact-b",
+      "stage": "elder-man",
+      "facing": "south",
+      "phase": "contact-b",
+      "file": "elder-man/elder-man-south-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 1536,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/passing-b",
+      "stage": "elder-man",
+      "facing": "south",
+      "phase": "passing-b",
+      "file": "elder-man/elder-man-south-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 1536,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/contact-a",
+      "stage": "elder-man",
+      "facing": "west",
+      "phase": "contact-a",
+      "file": "elder-man/elder-man-west-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 1664,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/passing-a",
+      "stage": "elder-man",
+      "facing": "west",
+      "phase": "passing-a",
+      "file": "elder-man/elder-man-west-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 1664,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/contact-b",
+      "stage": "elder-man",
+      "facing": "west",
+      "phase": "contact-b",
+      "file": "elder-man/elder-man-west-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 1664,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/passing-b",
+      "stage": "elder-man",
+      "facing": "west",
+      "phase": "passing-b",
+      "file": "elder-man/elder-man-west-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 1664,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/contact-a",
+      "stage": "elder-man",
+      "facing": "east",
+      "phase": "contact-a",
+      "file": "elder-man/elder-man-east-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 1792,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/passing-a",
+      "stage": "elder-man",
+      "facing": "east",
+      "phase": "passing-a",
+      "file": "elder-man/elder-man-east-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 1792,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/contact-b",
+      "stage": "elder-man",
+      "facing": "east",
+      "phase": "contact-b",
+      "file": "elder-man/elder-man-east-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 1792,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/passing-b",
+      "stage": "elder-man",
+      "facing": "east",
+      "phase": "passing-b",
+      "file": "elder-man/elder-man-east-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 1792,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/contact-a",
+      "stage": "elder-man",
+      "facing": "north",
+      "phase": "contact-a",
+      "file": "elder-man/elder-man-north-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 1920,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/passing-a",
+      "stage": "elder-man",
+      "facing": "north",
+      "phase": "passing-a",
+      "file": "elder-man/elder-man-north-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 1920,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/contact-b",
+      "stage": "elder-man",
+      "facing": "north",
+      "phase": "contact-b",
+      "file": "elder-man/elder-man-north-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 1920,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/passing-b",
+      "stage": "elder-man",
+      "facing": "north",
+      "phase": "passing-b",
+      "file": "elder-man/elder-man-north-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 1920,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    }
+  ]
+}

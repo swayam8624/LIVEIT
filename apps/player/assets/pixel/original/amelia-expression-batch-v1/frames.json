@@ -1,0 +1,109 @@
+{
+  "batch": "amelia-expression-batch-v1",
+  "character": "Amelia (adult)",
+  "grid": {
+    "columns": 4,
+    "rows": 3
+  },
+  "frameSize": [96, 128],
+  "sampling": "nearest for preview; source crops Lanczos resized",
+  "runtimeReady": false,
+  "frames": [
+    {
+      "id": "neutral",
+      "file": "neutral-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "joyful",
+      "file": "joyful-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "sad",
+      "file": "sad-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "angry",
+      "file": "angry-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "surprised",
+      "file": "surprised-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "worried",
+      "file": "worried-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "confident",
+      "file": "confident-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "crying",
+      "file": "crying-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "embarrassed",
+      "file": "embarrassed-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "tired",
+      "file": "tired-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "thoughtful",
+      "file": "thoughtful-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    },
+    {
+      "id": "affectionate",
+      "file": "affectionate-96x128.png",
+      "width": 96,
+      "height": 128,
+      "runtimeReady": false,
+      "background": "opaque baked concept background"
+    }
+  ]
+}

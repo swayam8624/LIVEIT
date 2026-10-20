@@ -1,0 +1,616 @@
+{
+  "schemaVersion": 1,
+  "batch": "chat-avatar-acting-v1",
+  "assetFamily": "liveit.pixel.v2.chat-avatar.acting.concept",
+  "description": "Compact named-character chat portraits with age-safe listening, curious, concerned, reassuring, speaking and blink states.",
+  "cell": {
+    "width": 48,
+    "height": 48,
+    "sampling": "nearest-neighbor",
+    "transparentBackground": true
+  },
+  "atlas": {
+    "file": "chat-avatar-acting-atlas-6x4-48.png",
+    "columns": 6,
+    "rows": 4,
+    "sha256": "d11784ccdfc0c2851135b727c50e0e1d406e3cb5b6b6d63272d674031bd07205"
+  },
+  "preview": {
+    "file": "chat-avatar-acting-preview-3x.png",
+    "scale": 3,
+    "sha256": "9c870513678c271bdecc966dcdcd0aab44fca9a79bdf8d039e47d7679aebf625"
+  },
+  "characters": [
+    {
+      "id": "mara",
+      "name": "Mara",
+      "ageGroup": "adult",
+      "role": "adult parent/caregiver",
+      "identity": "short natural curls, rust cardigan, mustard scarf"
+    },
+    {
+      "id": "eli",
+      "name": "Eli",
+      "ageGroup": "adult",
+      "role": "adult parent/caregiver",
+      "identity": "close-cropped dark hair, round glasses, navy jacket"
+    },
+    {
+      "id": "niko",
+      "name": "Niko",
+      "ageGroup": "school-age",
+      "role": "school-age sibling",
+      "identity": "curly ponytail with orange tie, cobalt hoodie"
+    },
+    {
+      "id": "aunt-sol",
+      "name": "Aunt Sol",
+      "ageGroup": "older-adult",
+      "role": "older relative",
+      "identity": "silver braid, plum coat, sage scarf"
+    }
+  ],
+  "states": [
+    "listening",
+    "curious",
+    "concerned",
+    "reassuring",
+    "speaking",
+    "blink"
+  ],
+  "frameCount": 24,
+  "frames": [
+    {
+      "id": "liveit.pixel.v2.chat-avatar.mara.listening",
+      "characterId": "mara",
+      "characterName": "Mara",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "listening",
+      "label": "Listening",
+      "meaning": "calm attention",
+      "durationMs": null,
+      "file": "frames/mara-listening-48x48.png",
+      "x": 0,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "0e09bb90ef905daa713e6ac15b0adc7f68609ce5d3d0ca5501e46b0bdab155ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.mara.curious",
+      "characterId": "mara",
+      "characterName": "Mara",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "curious",
+      "label": "Curious",
+      "meaning": "open question or interest",
+      "durationMs": null,
+      "file": "frames/mara-curious-48x48.png",
+      "x": 48,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "c6b9bfbd91ce98f93ecec5dbd381b5bf142f04efc388b0ff05b70423d873cee6",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.mara.concerned",
+      "characterId": "mara",
+      "characterName": "Mara",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "concerned",
+      "label": "Concerned",
+      "meaning": "gentle worry or empathy",
+      "durationMs": null,
+      "file": "frames/mara-concerned-48x48.png",
+      "x": 96,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "862b11d8396d3ff9682ffee92ca22f0147cbeda00ab2eda0dfd0c11ac440cf27",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.mara.reassuring",
+      "characterId": "mara",
+      "characterName": "Mara",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "reassuring",
+      "label": "Reassuring",
+      "meaning": "warm support",
+      "durationMs": null,
+      "file": "frames/mara-reassuring-48x48.png",
+      "x": 144,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "ca7ea298d3c5c2c6fd72463ff3b39e9db06749e784a0970d6f98bdf85dc6ad3a",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.mara.speaking",
+      "characterId": "mara",
+      "characterName": "Mara",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "speaking",
+      "label": "Speaking",
+      "meaning": "mouth-open speech cue",
+      "durationMs": 120,
+      "file": "frames/mara-speaking-48x48.png",
+      "x": 192,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "96edf7171950e3e12fe99d356ca176ac9e295bdb6e915c256a335996bb9e70aa",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.mara.blink",
+      "characterId": "mara",
+      "characterName": "Mara",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "blink",
+      "label": "Blink",
+      "meaning": "brief closed-eye idle frame",
+      "durationMs": 100,
+      "file": "frames/mara-blink-48x48.png",
+      "x": 240,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "54febefea86923fa81ac847dd150a184c4604cb1c13b2dba93421902e22575b4",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.eli.listening",
+      "characterId": "eli",
+      "characterName": "Eli",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "listening",
+      "label": "Listening",
+      "meaning": "calm attention",
+      "durationMs": null,
+      "file": "frames/eli-listening-48x48.png",
+      "x": 0,
+      "y": 48,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "bb1413e16df0a3b837df95aa172174724782494effd13aeda9fb80a017bafbbb",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.eli.curious",
+      "characterId": "eli",
+      "characterName": "Eli",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "curious",
+      "label": "Curious",
+      "meaning": "open question or interest",
+      "durationMs": null,
+      "file": "frames/eli-curious-48x48.png",
+      "x": 48,
+      "y": 48,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "c9bbaa8484673d441c2a540cd421fa7bb6ee2531852efdd719cab8260bae888d",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.eli.concerned",
+      "characterId": "eli",
+      "characterName": "Eli",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "concerned",
+      "label": "Concerned",
+      "meaning": "gentle worry or empathy",
+      "durationMs": null,
+      "file": "frames/eli-concerned-48x48.png",
+      "x": 96,
+      "y": 48,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "7e68567986874e816dbe382220ee8c5c299f9a49088840b2568a75d6ecea4fbf",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.eli.reassuring",
+      "characterId": "eli",
+      "characterName": "Eli",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "reassuring",
+      "label": "Reassuring",
+      "meaning": "warm support",
+      "durationMs": null,
+      "file": "frames/eli-reassuring-48x48.png",
+      "x": 144,
+      "y": 48,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "cb238135da92bf7faf6a268b39d2a8937027221ab895e4da9a50214aef5ab04e",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.eli.speaking",
+      "characterId": "eli",
+      "characterName": "Eli",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "speaking",
+      "label": "Speaking",
+      "meaning": "mouth-open speech cue",
+      "durationMs": 120,
+      "file": "frames/eli-speaking-48x48.png",
+      "x": 192,
+      "y": 48,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "f4b2aacf454a1f0dc1430eb8344fdf88649534d4f116985eb560016dc13cc736",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.eli.blink",
+      "characterId": "eli",
+      "characterName": "Eli",
+      "ageGroup": "adult",
+      "ageSafety": "all-ages-safe",
+      "state": "blink",
+      "label": "Blink",
+      "meaning": "brief closed-eye idle frame",
+      "durationMs": 100,
+      "file": "frames/eli-blink-48x48.png",
+      "x": 240,
+      "y": 48,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "d636c7e351df5969bda59b2104c361c91b86763177fb7e291cc140b1729fd43f",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.niko.listening",
+      "characterId": "niko",
+      "characterName": "Niko",
+      "ageGroup": "school-age",
+      "ageSafety": "all-ages-safe",
+      "state": "listening",
+      "label": "Listening",
+      "meaning": "calm attention",
+      "durationMs": null,
+      "file": "frames/niko-listening-48x48.png",
+      "x": 0,
+      "y": 96,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "cd6fb02e2a456c6b613ec1737deece1cb501368d10a57a3841a9bc98a9420b42",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.niko.curious",
+      "characterId": "niko",
+      "characterName": "Niko",
+      "ageGroup": "school-age",
+      "ageSafety": "all-ages-safe",
+      "state": "curious",
+      "label": "Curious",
+      "meaning": "open question or interest",
+      "durationMs": null,
+      "file": "frames/niko-curious-48x48.png",
+      "x": 48,
+      "y": 96,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "f9484dfc3fadee26a0406d8605bf7b286fe25e5fd684b8b1f641ab53ff6ac5da",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.niko.concerned",
+      "characterId": "niko",
+      "characterName": "Niko",
+      "ageGroup": "school-age",
+      "ageSafety": "all-ages-safe",
+      "state": "concerned",
+      "label": "Concerned",
+      "meaning": "gentle worry or empathy",
+      "durationMs": null,
+      "file": "frames/niko-concerned-48x48.png",
+      "x": 96,
+      "y": 96,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "10e1a408bb1227319228172acd1ddd5b1b6a2204d091d569b5ce2cea804cd66a",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.niko.reassuring",
+      "characterId": "niko",
+      "characterName": "Niko",
+      "ageGroup": "school-age",
+      "ageSafety": "all-ages-safe",
+      "state": "reassuring",
+      "label": "Reassuring",
+      "meaning": "warm support",
+      "durationMs": null,
+      "file": "frames/niko-reassuring-48x48.png",
+      "x": 144,
+      "y": 96,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "3e6e55a565604bbb6b5ac4608b2208daa84d99abf9360cd1f21929bea7e3072b",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.niko.speaking",
+      "characterId": "niko",
+      "characterName": "Niko",
+      "ageGroup": "school-age",
+      "ageSafety": "all-ages-safe",
+      "state": "speaking",
+      "label": "Speaking",
+      "meaning": "mouth-open speech cue",
+      "durationMs": 120,
+      "file": "frames/niko-speaking-48x48.png",
+      "x": 192,
+      "y": 96,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "880a6470e8d361741969a4e4fa9106c23b7dadfdf52865767569a0b742289bf8",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.niko.blink",
+      "characterId": "niko",
+      "characterName": "Niko",
+      "ageGroup": "school-age",
+      "ageSafety": "all-ages-safe",
+      "state": "blink",
+      "label": "Blink",
+      "meaning": "brief closed-eye idle frame",
+      "durationMs": 100,
+      "file": "frames/niko-blink-48x48.png",
+      "x": 240,
+      "y": 96,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "0b354bb1a8a58bc9e19fd77a8028cb1659030dd523a64e1fc0160fa73aab6fe3",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.aunt-sol.listening",
+      "characterId": "aunt-sol",
+      "characterName": "Aunt Sol",
+      "ageGroup": "older-adult",
+      "ageSafety": "all-ages-safe",
+      "state": "listening",
+      "label": "Listening",
+      "meaning": "calm attention",
+      "durationMs": null,
+      "file": "frames/aunt-sol-listening-48x48.png",
+      "x": 0,
+      "y": 144,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "7254cc33184006c3f6cdaf54f8064b2a5ce2368651a2123ddf29c60f257f2fa2",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.aunt-sol.curious",
+      "characterId": "aunt-sol",
+      "characterName": "Aunt Sol",
+      "ageGroup": "older-adult",
+      "ageSafety": "all-ages-safe",
+      "state": "curious",
+      "label": "Curious",
+      "meaning": "open question or interest",
+      "durationMs": null,
+      "file": "frames/aunt-sol-curious-48x48.png",
+      "x": 48,
+      "y": 144,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "b7b6a67e3b4fc4f0a779b876706c34de98cfc1b416287179e8a1e4069f482599",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.aunt-sol.concerned",
+      "characterId": "aunt-sol",
+      "characterName": "Aunt Sol",
+      "ageGroup": "older-adult",
+      "ageSafety": "all-ages-safe",
+      "state": "concerned",
+      "label": "Concerned",
+      "meaning": "gentle worry or empathy",
+      "durationMs": null,
+      "file": "frames/aunt-sol-concerned-48x48.png",
+      "x": 96,
+      "y": 144,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "d1f183fdfd3f4de961fa401b333d8da8901ccd71fce9c6a2c91987c9e11b2430",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.aunt-sol.reassuring",
+      "characterId": "aunt-sol",
+      "characterName": "Aunt Sol",
+      "ageGroup": "older-adult",
+      "ageSafety": "all-ages-safe",
+      "state": "reassuring",
+      "label": "Reassuring",
+      "meaning": "warm support",
+      "durationMs": null,
+      "file": "frames/aunt-sol-reassuring-48x48.png",
+      "x": 144,
+      "y": 144,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "b4163cfca7cb71b2483cfe8c79725e9f923abdc1046c15ab3d731544a6e8d88b",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.aunt-sol.speaking",
+      "characterId": "aunt-sol",
+      "characterName": "Aunt Sol",
+      "ageGroup": "older-adult",
+      "ageSafety": "all-ages-safe",
+      "state": "speaking",
+      "label": "Speaking",
+      "meaning": "mouth-open speech cue",
+      "durationMs": 120,
+      "file": "frames/aunt-sol-speaking-48x48.png",
+      "x": 192,
+      "y": 144,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "e9a482ad247c0a73f334246e56e37defbd1c8a5774968208d62a5e3ce7adb430",
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.chat-avatar.aunt-sol.blink",
+      "characterId": "aunt-sol",
+      "characterName": "Aunt Sol",
+      "ageGroup": "older-adult",
+      "ageSafety": "all-ages-safe",
+      "state": "blink",
+      "label": "Blink",
+      "meaning": "brief closed-eye idle frame",
+      "durationMs": 100,
+      "file": "frames/aunt-sol-blink-48x48.png",
+      "x": 240,
+      "y": 144,
+      "width": 48,
+      "height": 48,
+      "pivot": {
+        "x": 24,
+        "y": 42
+      },
+      "sha256": "482bb40f4eef0f9aa481cdb0f32f9c5a0ec6e457243e351fe8e4d47a4d06353d",
+      "runtimeReady": false
+    }
+  ],
+  "provenanceFile": "provenance.json",
+  "provenance": {
+    "created": "2026-10-20",
+    "method": "Drawn from original geometric pixel primitives in build_chat_avatars.py; no image generation, web assets, source archives, or copied pixels.",
+    "identityPaletteReferences": [
+      {
+        "file": "../family-portrait-expressions-v1/manifest.json",
+        "sha256": "e9305c0f56b141400ac8b4232af6622e77f93e700e33a726bb8f74675f22eb7b",
+        "role": "text-only character identity and palette reference; not sampled"
+      }
+    ],
+    "sourceFiles": [
+      {
+        "file": "build_chat_avatars.py",
+        "sha256": "2b759a6b71c8d7e687445805e7a391103ef1b3ef7c8c72937232bc8c747ede07"
+      }
+    ]
+  },
+  "runtimeReady": false,
+  "limitations": [
+    "Concept sprites need human pixel-art and identity review at target device scale.",
+    "No chat component consumes these frames yet; timing values are suggestions only.",
+    "Niko's states are ordinary child-safe conversation cues; romance-coded states are intentionally absent."
+  ]
+}

@@ -1,0 +1,844 @@
+{
+  "schemaVersion": 1,
+  "batch": "family-portrait-expressions-v1",
+  "direction": "PIXEL-ONLY",
+  "runtimeReady": false,
+  "frameSize": [96, 96],
+  "pivot": {
+    "x": 48,
+    "y": 92
+  },
+  "characters": [
+    {
+      "id": "parent_mara",
+      "name": "Mara",
+      "role": "adult parent/caregiver",
+      "identity": ["short natural curls", "mustard scarf", "rust cardigan"],
+      "palette": {
+        "skin": "#8b4b32",
+        "hair": "#281a1c",
+        "coat": "#b94d32",
+        "accent": "#e0a33e",
+        "outline": "#241923"
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli",
+      "name": "Eli",
+      "role": "adult parent/caregiver",
+      "identity": [
+        "close-cropped dark hair",
+        "round glasses",
+        "navy work jacket"
+      ],
+      "palette": {
+        "skin": "#ad7047",
+        "hair": "#211c24",
+        "coat": "#29395d",
+        "accent": "#daa13e",
+        "outline": "#191a29"
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko",
+      "name": "Niko",
+      "role": "school-age sibling",
+      "identity": ["curly ponytail", "cobalt hoodie", "orange hair tie"],
+      "palette": {
+        "skin": "#a95a36",
+        "hair": "#2a1a20",
+        "coat": "#2f6dcc",
+        "accent": "#ec7d31",
+        "outline": "#171b2d"
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol",
+      "name": "Aunt Sol",
+      "role": "older relative",
+      "identity": ["silver braid", "plum coat", "sage scarf"],
+      "palette": {
+        "skin": "#a96645",
+        "hair": "#d5c5b5",
+        "coat": "#713c68",
+        "accent": "#a5b887",
+        "outline": "#241d2c"
+      },
+      "runtimeReady": false
+    }
+  ],
+  "emotions": [
+    "neutral",
+    "happy",
+    "sad",
+    "angry",
+    "shocked",
+    "scared",
+    "smug",
+    "crying",
+    "embarrassed",
+    "tired",
+    "thoughtful",
+    "speaking"
+  ],
+  "atlas": {
+    "file": "family-portrait-expressions-atlas-12x4-96x96.png",
+    "columns": [
+      "neutral",
+      "happy",
+      "sad",
+      "angry",
+      "shocked",
+      "scared",
+      "smug",
+      "crying",
+      "embarrassed",
+      "tired",
+      "thoughtful",
+      "speaking"
+    ],
+    "rows": ["parent_mara", "parent_eli", "sibling_niko", "relative_aunt_sol"]
+  },
+  "sourceReferences": [
+    {
+      "file": "../named-family-batch-v1/named-family-portraits-concept-master.png",
+      "purpose": "local original identity and palette study only; not sampled into output",
+      "sha256": "b7c3e06c35564e5ff7c5c1f50f6ef00247273d5353f5224aec392a87b6ceff96"
+    },
+    {
+      "file": "../named-family-batch-v1/characters.json",
+      "purpose": "stable character IDs and identity notes only",
+      "sha256": "50cfab4f854ed7885d7644ca8ae8390a9823d8ed1bcc6817a4f37d0a6119d012"
+    }
+  ],
+  "frames": [
+    {
+      "id": "parent_mara/neutral",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "neutral",
+      "file": "frames/mara/mara-neutral-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/happy",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "happy",
+      "file": "frames/mara/mara-happy-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/sad",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "sad",
+      "file": "frames/mara/mara-sad-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/angry",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "angry",
+      "file": "frames/mara/mara-angry-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/shocked",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "shocked",
+      "file": "frames/mara/mara-shocked-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/scared",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "scared",
+      "file": "frames/mara/mara-scared-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/smug",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "smug",
+      "file": "frames/mara/mara-smug-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/crying",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "crying",
+      "file": "frames/mara/mara-crying-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/embarrassed",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "embarrassed",
+      "file": "frames/mara/mara-embarrassed-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/tired",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "tired",
+      "file": "frames/mara/mara-tired-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/thoughtful",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "thoughtful",
+      "file": "frames/mara/mara-thoughtful-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_mara/speaking",
+      "character": "parent_mara",
+      "displayName": "Mara",
+      "emotion": "speaking",
+      "file": "frames/mara/mara-speaking-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/neutral",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "neutral",
+      "file": "frames/eli/eli-neutral-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/happy",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "happy",
+      "file": "frames/eli/eli-happy-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/sad",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "sad",
+      "file": "frames/eli/eli-sad-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/angry",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "angry",
+      "file": "frames/eli/eli-angry-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/shocked",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "shocked",
+      "file": "frames/eli/eli-shocked-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/scared",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "scared",
+      "file": "frames/eli/eli-scared-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/smug",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "smug",
+      "file": "frames/eli/eli-smug-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/crying",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "crying",
+      "file": "frames/eli/eli-crying-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/embarrassed",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "embarrassed",
+      "file": "frames/eli/eli-embarrassed-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/tired",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "tired",
+      "file": "frames/eli/eli-tired-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/thoughtful",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "thoughtful",
+      "file": "frames/eli/eli-thoughtful-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "parent_eli/speaking",
+      "character": "parent_eli",
+      "displayName": "Eli",
+      "emotion": "speaking",
+      "file": "frames/eli/eli-speaking-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/neutral",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "neutral",
+      "file": "frames/niko/niko-neutral-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/happy",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "happy",
+      "file": "frames/niko/niko-happy-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/sad",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "sad",
+      "file": "frames/niko/niko-sad-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/angry",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "angry",
+      "file": "frames/niko/niko-angry-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/shocked",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "shocked",
+      "file": "frames/niko/niko-shocked-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/scared",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "scared",
+      "file": "frames/niko/niko-scared-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/smug",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "smug",
+      "file": "frames/niko/niko-smug-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/crying",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "crying",
+      "file": "frames/niko/niko-crying-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/embarrassed",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "embarrassed",
+      "file": "frames/niko/niko-embarrassed-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/tired",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "tired",
+      "file": "frames/niko/niko-tired-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/thoughtful",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "thoughtful",
+      "file": "frames/niko/niko-thoughtful-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko/speaking",
+      "character": "sibling_niko",
+      "displayName": "Niko",
+      "emotion": "speaking",
+      "file": "frames/niko/niko-speaking-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/neutral",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "neutral",
+      "file": "frames/aunt-sol/aunt-sol-neutral-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/happy",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "happy",
+      "file": "frames/aunt-sol/aunt-sol-happy-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/sad",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "sad",
+      "file": "frames/aunt-sol/aunt-sol-sad-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/angry",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "angry",
+      "file": "frames/aunt-sol/aunt-sol-angry-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/shocked",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "shocked",
+      "file": "frames/aunt-sol/aunt-sol-shocked-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/scared",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "scared",
+      "file": "frames/aunt-sol/aunt-sol-scared-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/smug",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "smug",
+      "file": "frames/aunt-sol/aunt-sol-smug-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/crying",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "crying",
+      "file": "frames/aunt-sol/aunt-sol-crying-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/embarrassed",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "embarrassed",
+      "file": "frames/aunt-sol/aunt-sol-embarrassed-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/tired",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "tired",
+      "file": "frames/aunt-sol/aunt-sol-tired-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/thoughtful",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "thoughtful",
+      "file": "frames/aunt-sol/aunt-sol-thoughtful-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "relative_aunt_sol/speaking",
+      "character": "relative_aunt_sol",
+      "displayName": "Aunt Sol",
+      "emotion": "speaking",
+      "file": "frames/aunt-sol/aunt-sol-speaking-96x96.png",
+      "width": 96,
+      "height": 96,
+      "pivot": {
+        "x": 48,
+        "y": 92
+      },
+      "runtimeReady": false
+    }
+  ],
+  "sha256": {
+    "atlas": "604ff4a66d893850a0cd2a1d0a8155da287c60460b40a690253d2090ad99cd2d",
+    "frames": {
+      "frames/mara/mara-neutral-96x96.png": "4585234e1ec41df4b02e89a125aaa8fd9119604946f7bca016949a2565561887",
+      "frames/mara/mara-happy-96x96.png": "83bd124b7edbcb44fb9531ef1fdb45b82becab4b0125b234554a7034c9a76682",
+      "frames/mara/mara-sad-96x96.png": "f0fc5df00782d861d9708f6b5e2758db5df589bdbc5d22c09bd35881d76901f1",
+      "frames/mara/mara-angry-96x96.png": "a8c7b99d3cd6401420c50576e88dd434bb9ff74b62daf15fd0740ed15210899b",
+      "frames/mara/mara-shocked-96x96.png": "7f369399e745648250c6a87986d32f9ec56c4a01fce8f9d80ef0ff67817ee8c3",
+      "frames/mara/mara-scared-96x96.png": "6d4f0f7436cb6e4d01abf545dc0600a9d9bf03e86e3bfab0433cb2a6c16f542c",
+      "frames/mara/mara-smug-96x96.png": "0b78af368f2a435b6d92c51eddde3dfce3ab4df95c7b05feb2286f64e8343ac4",
+      "frames/mara/mara-crying-96x96.png": "ea945b8380ebff05dc35c355819c583712845d86d48593e40465ed00c8f6aeba",
+      "frames/mara/mara-embarrassed-96x96.png": "24ec407e42dd3a35047e8b9154d5ab2285f6287708926b87c30be92323dcbe1a",
+      "frames/mara/mara-tired-96x96.png": "f4acfcb7d4a8bcee7d548a3a3968878781db825e251b6f737837e97e7e0d9b8b",
+      "frames/mara/mara-thoughtful-96x96.png": "f9bab33f1c3edd1d225d0500d6f4de6d56a2c528eabab4591a6e243de53562ee",
+      "frames/mara/mara-speaking-96x96.png": "6192fc99985f0b7518a450914651a4c5149c20658257f70c2e1935df5f94cec8",
+      "frames/eli/eli-neutral-96x96.png": "ee34b7784246db22bdd3e94eca7157ad17c81e10165c3230cc4f9c4a1b1b11ec",
+      "frames/eli/eli-happy-96x96.png": "f338961df29ef716dee969822b0c0acf3c6733e34c44cb821d3bf531e122845b",
+      "frames/eli/eli-sad-96x96.png": "9e097711ae3210587b47b6830b40e63e8a0fcf0dbac2e0bac209b1a90905fb70",
+      "frames/eli/eli-angry-96x96.png": "3d9ef04c1d979745b000fbc931c1144cbf81ce8427526ead682ec294014b3bff",
+      "frames/eli/eli-shocked-96x96.png": "c0eaf070896af1a824884d9ab0f315a0585f30cf4632151411df107b5b15597c",
+      "frames/eli/eli-scared-96x96.png": "3febf89c3e65f8409fae2749723ca1aa9a415331f39da31a5e45c5359bc14ae5",
+      "frames/eli/eli-smug-96x96.png": "27e0888df1588fb804196a037ae334fb0892e261ee619e228e9dd400bb337cc7",
+      "frames/eli/eli-crying-96x96.png": "2e3e26c0deb6e3adf5ded82c3dadbcf6235ba8895e95f251a6b7d9aef7cba4e2",
+      "frames/eli/eli-embarrassed-96x96.png": "b6bc9ba5c53daee15710d80b5ebf152b91dc2bb1465cf54f34c1001b1b0314ee",
+      "frames/eli/eli-tired-96x96.png": "50c45f069f9bae20ab48cd22dbc17a111f3ceaa0a8b32ccc5d5b896c2590cdb9",
+      "frames/eli/eli-thoughtful-96x96.png": "f667dfa13d9d315f1e4c4ded331be7bff06f7913390e6545e3cdb4aa88050248",
+      "frames/eli/eli-speaking-96x96.png": "74768723981980d56604a7b64da06c6494dcbb4a6403289b306fa2c811ccdeee",
+      "frames/niko/niko-neutral-96x96.png": "8857000af4b8ee6268c48c9df675f8c2bd390e581a020069b343c637b1da2bd9",
+      "frames/niko/niko-happy-96x96.png": "6c71c3793ff9daa8c892fc6abb01084c14fb478747b7fcaa7c749847ecdf4980",
+      "frames/niko/niko-sad-96x96.png": "dde0534012454e9064ab5085276cfc510d694e60b9024b90a7c9b3cc67866dbb",
+      "frames/niko/niko-angry-96x96.png": "3a34e75b792d9d2bc38338dbaff45095860463fdf8bea9f0c430f02cfb2588b7",
+      "frames/niko/niko-shocked-96x96.png": "8c55b8a1bb1482604f0d67fb688d12dbcc62aac1c18fba4a59e345c6d5f396e0",
+      "frames/niko/niko-scared-96x96.png": "c44a29242da460719eb32f38bd8b3762c5df1db6f309f227cc64db3dba0fe78d",
+      "frames/niko/niko-smug-96x96.png": "823a2b856949f135d26ba393fb849ea9ab7fef2b1366072c8a6b02e17f4a1870",
+      "frames/niko/niko-crying-96x96.png": "4f671fedc0cd379f7a1c08a28323d1434c8471abcc08e79fabac5019fc303a79",
+      "frames/niko/niko-embarrassed-96x96.png": "1cf2f3be78d3378f6a25599a737d5232ff6e7db3d49c1c9e308ab4b5d4f52fbe",
+      "frames/niko/niko-tired-96x96.png": "ff567c5025e6934947e84e94d931eeebb03b5600816a8a4dedcc09f1c30ccf11",
+      "frames/niko/niko-thoughtful-96x96.png": "366098be700be131c6ba87831009745d86f09aecdd0050c2dc9c0e97179c6993",
+      "frames/niko/niko-speaking-96x96.png": "b4583ebd068c4ba7246cb94f3c2630c5c69f6158934e70907e18b9a8d7ac5fbd",
+      "frames/aunt-sol/aunt-sol-neutral-96x96.png": "cc4b59c004ac77d89d09971adad4efdcdd9a647b66142783a4b91076b4f5574d",
+      "frames/aunt-sol/aunt-sol-happy-96x96.png": "68267406a62acd87ddebfdbd197bf66f2edda889e4f3406383705e6b4c64fbe5",
+      "frames/aunt-sol/aunt-sol-sad-96x96.png": "c7fc97d4854287daf68f1cadf6bef26ab9d6b0ebe995b588d234e6712cb57c21",
+      "frames/aunt-sol/aunt-sol-angry-96x96.png": "e75890c09a9ce1640225e8dfb56c14c7ba41ff48c5bce3e1d3c77a5059ca4e9d",
+      "frames/aunt-sol/aunt-sol-shocked-96x96.png": "c305bf224122e6cc8fe47ed016065d7350191b550c6b0dfe1669aa8b01973e98",
+      "frames/aunt-sol/aunt-sol-scared-96x96.png": "3f4b31b8096713509d2e48f1d710a7a5804c940e14eab2807f3dd066ca42696c",
+      "frames/aunt-sol/aunt-sol-smug-96x96.png": "a77db779cc08daac73b8a9c730e3b706e2773665d69349e9284f590b14cb28fe",
+      "frames/aunt-sol/aunt-sol-crying-96x96.png": "0d0a8da9149d2f40c8a5ae071ef27d6c3a04312520a8412beccabf3f000bdeb8",
+      "frames/aunt-sol/aunt-sol-embarrassed-96x96.png": "0c544d3c4d0faf0bd50dc9a1e7d5b31615017e3183025baeb007578abda44e8c",
+      "frames/aunt-sol/aunt-sol-tired-96x96.png": "797ae60decce992868c5193634589746d653f811808d04b728c5e5d4e3fbb81b",
+      "frames/aunt-sol/aunt-sol-thoughtful-96x96.png": "abf1891d20409e897faa8d7aeae9fe8f9d45cb70212ff0b06454ca1900768106",
+      "frames/aunt-sol/aunt-sol-speaking-96x96.png": "ec63d9b8eb985f010681d43632241c0cd97a09996ac1228bbfe019e310b3c11b"
+    }
+  }
+}

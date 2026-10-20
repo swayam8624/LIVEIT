@@ -1,0 +1,276 @@
+{
+  "id": "crowd-office-worker-elder-movement-age-v1",
+  "role": "office-worker",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older worker or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.office-worker",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/office-worker/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "office-worker/elder/south/walk-a",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/office-worker/elder/office-worker-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1f66036aa06d6a5f3e159d7c5199fe52e1efadb7d3edb918c69c8e3e04ccbcf5",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-south-walk-a.png",
+      "sourceSha256": "1c56456306ade218f0fe629c9b2eb9472fb47ed3593c70bfbd51466bc9e1fc9b",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/south/walk-b",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/office-worker/elder/office-worker-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "28649a14b58d88df0546d9169571e9d00d2712894a86ec3f4edc8599b695c4e3",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-south-walk-b.png",
+      "sourceSha256": "07f156ccf5e6dc8237bcdde3d810f9b2c1690bc3025fd201390052ac2b44e819",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/south/idle",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/office-worker/elder/office-worker-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0f04734ce2623b6130fe9f32bc4bc9dd439e58450e5a49af38b22c54213798f7",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-south-idle.png",
+      "sourceSha256": "81824c03643b528222ddd6c92a2f52f2778d3810233a4e452e1b11763cfb2aec",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/west/walk-a",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/office-worker/elder/office-worker-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "12da179986f9c2e30ef4430aca0566758c250681750ae1ee5eb03caaf3ced084",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-west-walk-a.png",
+      "sourceSha256": "0766653f4c19b70f52428adf03b795a2c824c54da8d309ca9a996dfc98082d88",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/west/walk-b",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/office-worker/elder/office-worker-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "65c2aa33f1c3a9e197fc05074b93179e5a28353aa0e808efb2f064170b9b8749",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-west-walk-b.png",
+      "sourceSha256": "32979ced15d50d0de8474823f0324baae743c4a3e38b5007fd1fa122e2121ddb",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/west/idle",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/office-worker/elder/office-worker-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4dc7d1250fced38fe7469a727dfa7a1a68d24a82b049a7710cbc530966c3add8",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-west-idle.png",
+      "sourceSha256": "912369b9d2b8bb1021f220ea754f5fb2a886e1828eb88544bb6a98b97d0a3832",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/east/walk-a",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/office-worker/elder/office-worker-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3c53738ca4e76f0aad884d4fdebf4892965a60b373ad135081e8881919b83933",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-east-walk-a.png",
+      "sourceSha256": "76e6b5288fc8a1765e8962f7905779b8f308cc407f59b0e86599965ec715cb2e",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/east/walk-b",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/office-worker/elder/office-worker-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e75af9d494038df5cf3e8072a95b28eab512ff03028d53848941d3a5097f015f",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-east-walk-b.png",
+      "sourceSha256": "505e740aa6b558f5def2219356c94c85a2be2f104f0ea516b542c6f50bf2cadb",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/east/idle",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/office-worker/elder/office-worker-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f5a9a030d43a04f03e476d936735ae1317aed3a6ae5a4b6af3075b4760caa646",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-east-idle.png",
+      "sourceSha256": "e72df42fe3ed359c08f75c6eb7ea4eea1e4a58d1b3e508eb9fa51b22c701cef2",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/north/walk-a",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/office-worker/elder/office-worker-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b0453f2424ecaea88cd0709dc8ac8de841dbf886806f345c44fb08b3c3baccce",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-north-walk-a.png",
+      "sourceSha256": "7a674ae01b0e67fda162ecdef552fe6a1db9ed5b3754992ef81863ecaf19981c",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/north/walk-b",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/office-worker/elder/office-worker-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0e859d2c2e879e1961f5834c9aa73c8c94891352e931414dc88f0564d9d0b9a9",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-north-walk-b.png",
+      "sourceSha256": "841983fe21240690f380ff457b3490e7578b3738c71c938fea2c72754d7dfd16",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/elder/north/idle",
+      "role": "office-worker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/office-worker/elder/office-worker-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b8b89b031fc6ab4008402bd9fce50df3728feb3359181bc46ae2f4f2b674b7aa",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-north-idle.png",
+      "sourceSha256": "2be5002440255da50754de70bee41d7a91fc8a9fb1cf8fef681b0565f02f5822",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

@@ -1,0 +1,658 @@
+{
+  "schema": "liveit.pixel-tile-atlas/v1",
+  "batchId": "bellweather-tile-concepts-v1",
+  "createdAt": "2026-10-20",
+  "artDirection": "2D top-down retro pixel art; original Bellweather language; nearest-neighbor sampling; no 3D",
+  "tileSizePx": 16,
+  "atlas": {
+    "file": "bellweather-tile-atlas-v1.png",
+    "width": 128,
+    "height": 64,
+    "columns": 8,
+    "rows": 4
+  },
+  "tiles": [
+    {
+      "id": "bellweather.street",
+      "name": "street",
+      "kind": "ground",
+      "atlas": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "column": 0,
+        "row": 0
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "street"
+    },
+    {
+      "id": "bellweather.sidewalk",
+      "name": "sidewalk",
+      "kind": "ground",
+      "atlas": {
+        "x": 16,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "column": 1,
+        "row": 0
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "sidewalk"
+    },
+    {
+      "id": "bellweather.curb-north",
+      "name": "curb-north",
+      "kind": "edge",
+      "atlas": {
+        "x": 32,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "column": 2,
+        "row": 0
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "curb north"
+    },
+    {
+      "id": "bellweather.curb-east",
+      "name": "curb-east",
+      "kind": "edge",
+      "atlas": {
+        "x": 48,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "column": 3,
+        "row": 0
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "curb east"
+    },
+    {
+      "id": "bellweather.crosswalk",
+      "name": "crosswalk",
+      "kind": "marking",
+      "atlas": {
+        "x": 64,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "column": 4,
+        "row": 0
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "crosswalk"
+    },
+    {
+      "id": "bellweather.manhole",
+      "name": "manhole",
+      "kind": "prop",
+      "atlas": {
+        "x": 80,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "column": 5,
+        "row": 0
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "manhole"
+    },
+    {
+      "id": "bellweather.puddle",
+      "name": "puddle",
+      "kind": "weather-accent",
+      "atlas": {
+        "x": 96,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "column": 6,
+        "row": 0
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "puddle"
+    },
+    {
+      "id": "bellweather.storm-drain",
+      "name": "storm-drain",
+      "kind": "prop",
+      "atlas": {
+        "x": 112,
+        "y": 0,
+        "width": 16,
+        "height": 16,
+        "column": 7,
+        "row": 0
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "storm drain"
+    },
+    {
+      "id": "bellweather.grass",
+      "name": "grass",
+      "kind": "ground",
+      "atlas": {
+        "x": 0,
+        "y": 16,
+        "width": 16,
+        "height": 16,
+        "column": 0,
+        "row": 1
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "grass"
+    },
+    {
+      "id": "bellweather.grass-flower",
+      "name": "grass-flower",
+      "kind": "ground",
+      "atlas": {
+        "x": 16,
+        "y": 16,
+        "width": 16,
+        "height": 16,
+        "column": 1,
+        "row": 1
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "grass flower"
+    },
+    {
+      "id": "bellweather.hedge",
+      "name": "hedge",
+      "kind": "edge",
+      "atlas": {
+        "x": 32,
+        "y": 16,
+        "width": 16,
+        "height": 16,
+        "column": 2,
+        "row": 1
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "hedge"
+    },
+    {
+      "id": "bellweather.dirt",
+      "name": "dirt",
+      "kind": "ground",
+      "atlas": {
+        "x": 48,
+        "y": 16,
+        "width": 16,
+        "height": 16,
+        "column": 3,
+        "row": 1
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "dirt"
+    },
+    {
+      "id": "bellweather.brick-wall",
+      "name": "brick-wall",
+      "kind": "building",
+      "atlas": {
+        "x": 64,
+        "y": 16,
+        "width": 16,
+        "height": 16,
+        "column": 4,
+        "row": 1
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "brick wall"
+    },
+    {
+      "id": "bellweather.brick-corner",
+      "name": "brick-corner",
+      "kind": "building-edge",
+      "atlas": {
+        "x": 80,
+        "y": 16,
+        "width": 16,
+        "height": 16,
+        "column": 5,
+        "row": 1
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "brick corner"
+    },
+    {
+      "id": "bellweather.window",
+      "name": "window",
+      "kind": "building-prop",
+      "atlas": {
+        "x": 96,
+        "y": 16,
+        "width": 16,
+        "height": 16,
+        "column": 6,
+        "row": 1
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "window"
+    },
+    {
+      "id": "bellweather.door",
+      "name": "door",
+      "kind": "portal",
+      "atlas": {
+        "x": 112,
+        "y": 16,
+        "width": 16,
+        "height": 16,
+        "column": 7,
+        "row": 1
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "door"
+    },
+    {
+      "id": "bellweather.wood-floor",
+      "name": "wood-floor",
+      "kind": "interior-ground",
+      "atlas": {
+        "x": 0,
+        "y": 32,
+        "width": 16,
+        "height": 16,
+        "column": 0,
+        "row": 2
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "wood floor"
+    },
+    {
+      "id": "bellweather.tile-floor",
+      "name": "tile-floor",
+      "kind": "interior-ground",
+      "atlas": {
+        "x": 16,
+        "y": 32,
+        "width": 16,
+        "height": 16,
+        "column": 1,
+        "row": 2
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "tile floor"
+    },
+    {
+      "id": "bellweather.rug",
+      "name": "rug",
+      "kind": "interior-ground",
+      "atlas": {
+        "x": 32,
+        "y": 32,
+        "width": 16,
+        "height": 16,
+        "column": 2,
+        "row": 2
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "rug"
+    },
+    {
+      "id": "bellweather.counter",
+      "name": "counter",
+      "kind": "furniture",
+      "atlas": {
+        "x": 48,
+        "y": 32,
+        "width": 16,
+        "height": 16,
+        "column": 3,
+        "row": 2
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "counter"
+    },
+    {
+      "id": "bellweather.table",
+      "name": "table",
+      "kind": "furniture",
+      "atlas": {
+        "x": 64,
+        "y": 32,
+        "width": 16,
+        "height": 16,
+        "column": 4,
+        "row": 2
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "table"
+    },
+    {
+      "id": "bellweather.chair",
+      "name": "chair",
+      "kind": "furniture",
+      "atlas": {
+        "x": 80,
+        "y": 32,
+        "width": 16,
+        "height": 16,
+        "column": 5,
+        "row": 2
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "chair"
+    },
+    {
+      "id": "bellweather.shelf",
+      "name": "shelf",
+      "kind": "furniture",
+      "atlas": {
+        "x": 96,
+        "y": 32,
+        "width": 16,
+        "height": 16,
+        "column": 6,
+        "row": 2
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "shelf"
+    },
+    {
+      "id": "bellweather.window-interior",
+      "name": "window-interior",
+      "kind": "interior-prop",
+      "atlas": {
+        "x": 112,
+        "y": 32,
+        "width": 16,
+        "height": 16,
+        "column": 7,
+        "row": 2
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "window interior"
+    },
+    {
+      "id": "bellweather.rain-overlay",
+      "name": "rain-overlay",
+      "kind": "weather-overlay",
+      "atlas": {
+        "x": 0,
+        "y": 48,
+        "width": 16,
+        "height": 16,
+        "column": 0,
+        "row": 3
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "rain overlay"
+    },
+    {
+      "id": "bellweather.snow-overlay",
+      "name": "snow-overlay",
+      "kind": "weather-overlay",
+      "atlas": {
+        "x": 16,
+        "y": 48,
+        "width": 16,
+        "height": 16,
+        "column": 1,
+        "row": 3
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "snow overlay"
+    },
+    {
+      "id": "bellweather.leaf-scatter",
+      "name": "leaf-scatter",
+      "kind": "weather-accent",
+      "atlas": {
+        "x": 32,
+        "y": 48,
+        "width": 16,
+        "height": 16,
+        "column": 2,
+        "row": 3
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "leaf scatter"
+    },
+    {
+      "id": "bellweather.lamp",
+      "name": "lamp",
+      "kind": "prop",
+      "atlas": {
+        "x": 48,
+        "y": 48,
+        "width": 16,
+        "height": 16,
+        "column": 3,
+        "row": 3
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "lamp"
+    },
+    {
+      "id": "bellweather.planter",
+      "name": "planter",
+      "kind": "prop",
+      "atlas": {
+        "x": 64,
+        "y": 48,
+        "width": 16,
+        "height": 16,
+        "column": 4,
+        "row": 3
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "planter"
+    },
+    {
+      "id": "bellweather.bench",
+      "name": "bench",
+      "kind": "prop",
+      "atlas": {
+        "x": 80,
+        "y": 48,
+        "width": 16,
+        "height": 16,
+        "column": 5,
+        "row": 3
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "bench"
+    },
+    {
+      "id": "bellweather.trash-can",
+      "name": "trash-can",
+      "kind": "prop",
+      "atlas": {
+        "x": 96,
+        "y": 48,
+        "width": 16,
+        "height": 16,
+        "column": 6,
+        "row": 3
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "solid",
+      "note": "trash can"
+    },
+    {
+      "id": "bellweather.awning",
+      "name": "awning",
+      "kind": "building-prop",
+      "atlas": {
+        "x": 112,
+        "y": 48,
+        "width": 16,
+        "height": 16,
+        "column": 7,
+        "row": 3
+      },
+      "pivot": {
+        "x": 8,
+        "y": 15
+      },
+      "collision": "passable",
+      "note": "awning"
+    }
+  ],
+  "stagingMap": {
+    "file": "bellweather-staging-map-v1.png",
+    "widthTiles": 16,
+    "heightTiles": 10,
+    "tileSizePx": 16,
+    "layoutNote": "Concept-only exterior path around cafe facade with lower interior suggestion; no runtime portal or collision contract."
+  },
+  "quality": {
+    "concept": true,
+    "runtimeReady": false,
+    "observed": [
+      "exact 16x16 atlas cells",
+      "cohesive Bellweather palette",
+      "street/interior/weather vocabulary"
+    ],
+    "needs": [
+      "artist production pass",
+      "renderer sampling review",
+      "runtime collision tuning",
+      "device performance review"
+    ]
+  },
+  "provenance": {
+    "method": "hand-authored deterministic pixel clusters using Pillow; no image generation or third-party pixels",
+    "prompt": "Original Bellweather 16x16 top-down tile concept for rainy neighborhood cafe street and interior, covering street, sidewalk, grass, brick, window, door, floor, furniture and weather accents with warm brick, teal glass, sage grass, indigo shadow and amber light.",
+    "sources": [],
+    "rights": "Original repository-local concept work; no supplied ZIP archive art, external reference pixels, or third-party assets used."
+  },
+  "files": {
+    "bellweather-tile-atlas-v1Sha256": "1c0214c39e0b8e995ab480e9a49d21ff86e8e02bac8585d54ba17b01c8591140",
+    "bellweather-staging-map-v1Sha256": "9d69185cef4f740c0d32b1dcb67222f05facbba88a9c4760b634cbe1d9f29cee",
+    "bellweather-tile-atlas-preview-6xSha256": "d35864c1b215528be4abb5248f51f2fd2bb8c1d2741e65bbf5de3bd0501989fd",
+    "bellweather-staging-map-preview-4xSha256": "ff33365aa0e0936c8207a3a2fd98f48d3851714aa5ded1923639efec3dc174f5"
+  }
+}

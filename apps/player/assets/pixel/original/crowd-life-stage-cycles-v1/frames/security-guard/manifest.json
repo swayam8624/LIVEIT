@@ -1,0 +1,24 @@
+{
+  "role": "security-guard",
+  "label": "security guard",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+  "description": "broad navy security uniform, cap, badge and shoulder radio",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/security-guard/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/security-guard/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/security-guard/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

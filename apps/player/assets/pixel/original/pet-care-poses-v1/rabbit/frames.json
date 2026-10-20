@@ -1,0 +1,14 @@
+{
+  "animal": "rabbit",
+  "frameSize": [96, 128],
+  "poses": ["idle", "happy", "worried", "sleeping", "care", "recovering"],
+  "frames": [
+    "rabbit-idle-96x128.png",
+    "rabbit-happy-96x128.png",
+    "rabbit-worried-96x128.png",
+    "rabbit-sleeping-96x128.png",
+    "rabbit-care-96x128.png",
+    "rabbit-recovering-96x128.png"
+  ],
+  "runtimeReady": false
+}

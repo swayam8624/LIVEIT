@@ -1,0 +1,276 @@
+{
+  "id": "crowd-office-worker-adult-movement-age-v1",
+  "role": "office-worker",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "working-age office role",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.office-worker",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/office-worker/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "office-worker/adult/south/walk-a",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/office-worker/adult/office-worker-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1c56456306ade218f0fe629c9b2eb9472fb47ed3593c70bfbd51466bc9e1fc9b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-south-walk-a.png",
+      "sourceSha256": "1c56456306ade218f0fe629c9b2eb9472fb47ed3593c70bfbd51466bc9e1fc9b",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/south/walk-b",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/office-worker/adult/office-worker-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "07f156ccf5e6dc8237bcdde3d810f9b2c1690bc3025fd201390052ac2b44e819",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-south-walk-b.png",
+      "sourceSha256": "07f156ccf5e6dc8237bcdde3d810f9b2c1690bc3025fd201390052ac2b44e819",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/south/idle",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/office-worker/adult/office-worker-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "81824c03643b528222ddd6c92a2f52f2778d3810233a4e452e1b11763cfb2aec",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-south-idle.png",
+      "sourceSha256": "81824c03643b528222ddd6c92a2f52f2778d3810233a4e452e1b11763cfb2aec",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/west/walk-a",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/office-worker/adult/office-worker-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0766653f4c19b70f52428adf03b795a2c824c54da8d309ca9a996dfc98082d88",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-west-walk-a.png",
+      "sourceSha256": "0766653f4c19b70f52428adf03b795a2c824c54da8d309ca9a996dfc98082d88",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/west/walk-b",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/office-worker/adult/office-worker-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "32979ced15d50d0de8474823f0324baae743c4a3e38b5007fd1fa122e2121ddb",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-west-walk-b.png",
+      "sourceSha256": "32979ced15d50d0de8474823f0324baae743c4a3e38b5007fd1fa122e2121ddb",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/west/idle",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/office-worker/adult/office-worker-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "912369b9d2b8bb1021f220ea754f5fb2a886e1828eb88544bb6a98b97d0a3832",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-west-idle.png",
+      "sourceSha256": "912369b9d2b8bb1021f220ea754f5fb2a886e1828eb88544bb6a98b97d0a3832",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/east/walk-a",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/office-worker/adult/office-worker-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "76e6b5288fc8a1765e8962f7905779b8f308cc407f59b0e86599965ec715cb2e",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-east-walk-a.png",
+      "sourceSha256": "76e6b5288fc8a1765e8962f7905779b8f308cc407f59b0e86599965ec715cb2e",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/east/walk-b",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/office-worker/adult/office-worker-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "505e740aa6b558f5def2219356c94c85a2be2f104f0ea516b542c6f50bf2cadb",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-east-walk-b.png",
+      "sourceSha256": "505e740aa6b558f5def2219356c94c85a2be2f104f0ea516b542c6f50bf2cadb",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/east/idle",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/office-worker/adult/office-worker-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e72df42fe3ed359c08f75c6eb7ea4eea1e4a58d1b3e508eb9fa51b22c701cef2",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-east-idle.png",
+      "sourceSha256": "e72df42fe3ed359c08f75c6eb7ea4eea1e4a58d1b3e508eb9fa51b22c701cef2",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/north/walk-a",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/office-worker/adult/office-worker-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7a674ae01b0e67fda162ecdef552fe6a1db9ed5b3754992ef81863ecaf19981c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-north-walk-a.png",
+      "sourceSha256": "7a674ae01b0e67fda162ecdef552fe6a1db9ed5b3754992ef81863ecaf19981c",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/north/walk-b",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/office-worker/adult/office-worker-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "841983fe21240690f380ff457b3490e7578b3738c71c938fea2c72754d7dfd16",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-north-walk-b.png",
+      "sourceSha256": "841983fe21240690f380ff457b3490e7578b3738c71c938fea2c72754d7dfd16",
+      "runtimeReady": false
+    },
+    {
+      "id": "office-worker/adult/north/idle",
+      "role": "office-worker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age office role",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/office-worker/adult/office-worker-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2be5002440255da50754de70bee41d7a91fc8a9fb1cf8fef681b0565f02f5822",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/office-worker/office-worker-north-idle.png",
+      "sourceSha256": "2be5002440255da50754de70bee41d7a91fc8a9fb1cf8fef681b0565f02f5822",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

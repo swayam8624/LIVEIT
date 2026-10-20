@@ -1,0 +1,36 @@
+{
+  "role": "runner",
+  "label": "runner",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.runner",
+  "description": "",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/runner/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "child",
+      "manifest": "frames/runner/child/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "teen",
+      "manifest": "frames/runner/teen/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "adult",
+      "manifest": "frames/runner/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/runner/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 48,
+  "runtimeReady": false
+}

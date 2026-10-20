@@ -1,0 +1,1032 @@
+{
+  "schemaVersion": 1,
+  "assetId": "liveit.pixel.pet.rabbit.age-cycles.v1",
+  "species": "rabbit",
+  "source": "rabbit-age-cycles-source.png",
+  "atlas": {
+    "file": "rabbit-age-cycles-atlas.png",
+    "width": 1152,
+    "height": 512,
+    "columns": 12,
+    "rows": 4,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "order": "age groups young/adult/senior; phase columns contact-a/passing-a/contact-b/passing-b; direction rows south/west/east/north"
+  },
+  "sampling": "nearest-neighbor",
+  "forms": ["young", "adult", "senior"],
+  "frames": [
+    {
+      "id": "rabbit-young-south-contact-a",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-young-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "bdc960978c0bda7b73c7fe49941a4cf00c75ffcdb5bc9b6abb7af3e983cdafbb",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-south-passing-a",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-young-south-passing-a.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0cf6d79a0c025895f00ab12816931c5dade42723ca1a8d1fd6de75ec781a7c9c",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-south-contact-b",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-young-south-contact-b.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0dbd5c129d8461d3ba2f453c7a16b5325f5e89f8065510b27c7d8b64c2a8f0cd",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-south-passing-b",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-young-south-passing-b.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "9b80afea7c85039b0a3258f16a2fe0c55967b971e50377f4b8eb913018ebec0a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-west-contact-a",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-young-west-contact-a.png",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "84b78b9f16a6016d585729e3178e12d66abd059a2514c3aa6062730c7e0675dc",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-west-passing-a",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-young-west-passing-a.png",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "b985a494f0e6e196a3eedeab6ec1967af0e5f2ebe13fad0833ac7a8a41669d14",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-west-contact-b",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-young-west-contact-b.png",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "b040b5b98a34c49d6304d234c0808678f51b171a96bc299b5154b6481306154e",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-west-passing-b",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-young-west-passing-b.png",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "4bc789cd11942d41cc159adc461af4e9c94024a2067d95b53ad2b41041aaa254",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-east-contact-a",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-young-east-contact-a.png",
+      "x": 0,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "f73b71a8f25b989dd70cefd668509f263e075e88d99f1dd36a5b855e4a1dbe3e",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-east-passing-a",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-young-east-passing-a.png",
+      "x": 96,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "f60c642ac730044ea0e12af0ea352dba586651b4942d4a5de1860a3e25419eca",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-east-contact-b",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-young-east-contact-b.png",
+      "x": 192,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "c323823bb76d3bca9b0c0ed2200e0387d2fafb2e38d0d3e7d6e3e07a6d1fe403",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-east-passing-b",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-young-east-passing-b.png",
+      "x": 288,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "eb640f8cecd5e66c160eaa5c5d4f04aec958eab64489836bd52e8805e660c148",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-north-contact-a",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-young-north-contact-a.png",
+      "x": 0,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "f5c4cf37a0954a6b3be3443245bb4bfb7fb17c05e3443a2e76e94f5d38d2f030",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-north-passing-a",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-young-north-passing-a.png",
+      "x": 96,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "1d614feda661d9d2b3d86db7d496029edc3d593c9ec28b62e4d85f91aa996329",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-north-contact-b",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-young-north-contact-b.png",
+      "x": 192,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "b02607aca52cdcd37ba1ae409b97e75c9e9858f0cb71f3fafad07d89802bd5a5",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-young-north-passing-b",
+      "species": "rabbit",
+      "age": "young",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-young-north-passing-b.png",
+      "x": 288,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "5ad8201f292e5b9bd1ed636b2d65625d14ad80e601fad3641ee70055d7091b3c",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-south-contact-a",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-adult-south-contact-a.png",
+      "x": 384,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2b89c94d3dce0eb9f10df6cb8872375b9f4b4606b1917c176de7890b50befc20",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-south-passing-a",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-adult-south-passing-a.png",
+      "x": 480,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0661da994dc40fe3d6a59ddaf9d731ae775442690fcfcc8d8effaa55ad5ea3da",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-south-contact-b",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-adult-south-contact-b.png",
+      "x": 576,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "28587948990559e38befeed10c9407a7cfb61274cacdd3dff056dc9f9715e8b6",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-south-passing-b",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-adult-south-passing-b.png",
+      "x": 672,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "93315c038dc7ed9ff03fa955d2552ded6daf7a5c22339876e8f41c34dd42009f",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-west-contact-a",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-adult-west-contact-a.png",
+      "x": 384,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "379c033a642b8c9bee3b954b7cae507f1607dfda4ac2da62a2e77b74949eb2f2",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-west-passing-a",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-adult-west-passing-a.png",
+      "x": 480,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "f6ec37f6185676c6fc3386cfc909734f779b4326187b1f3aaa266d05fe4aa66b",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-west-contact-b",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-adult-west-contact-b.png",
+      "x": 576,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0cdba1137dbb4c0e183957f293b39b5a5569e713e01994ca13c45b5ea5e3f921",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-west-passing-b",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-adult-west-passing-b.png",
+      "x": 672,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "763f7faaddda612437a55e33a979587d6100094846a391b5630d512f65019665",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-east-contact-a",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-adult-east-contact-a.png",
+      "x": 384,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "91706de3dbfe6b19b703b1e0bce98b7f2ffa10b8acab5211acd12fd84d124113",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-east-passing-a",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-adult-east-passing-a.png",
+      "x": 480,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "8521f40b56667d32f614bc0a22141b01edb682fcf4a12e91c1655757349be92d",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-east-contact-b",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-adult-east-contact-b.png",
+      "x": 576,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a5f0c83c5f0c5fc2d135cd2afcb4d7625e0d3e51e45a02ed3018c40e5b3e4cec",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-east-passing-b",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-adult-east-passing-b.png",
+      "x": 672,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "1296dbad96d1bac1977ed22f2e3699287b90982b296c29f347b5ca1d7d818cc0",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-north-contact-a",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-adult-north-contact-a.png",
+      "x": 384,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "fe7598577b0d2bbfbc1c0cc1be56d38b4febc5a3493b1e7db08bec6b173dde42",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-north-passing-a",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-adult-north-passing-a.png",
+      "x": 480,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "6e46c40586ad02ea80e715954ba301f2d1200e868db016151166693a6f4a0ff8",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-north-contact-b",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-adult-north-contact-b.png",
+      "x": 576,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "dd878c40e44009d166016b27a0796b0b0d70f9232c53014c97f502a0e1c27eb1",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-adult-north-passing-b",
+      "species": "rabbit",
+      "age": "adult",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-adult-north-passing-b.png",
+      "x": 672,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "8845750cfd0f7abfc4388a9838831f55110e7046f9f5b3a0810a81968647c9bb",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-south-contact-a",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-senior-south-contact-a.png",
+      "x": 768,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "bb1c8dd8dd70ff6eaa79f32ba3f06305063dd9ee72cabf423eb8cc1fbca9094a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-south-passing-a",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-senior-south-passing-a.png",
+      "x": 864,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "ceda40d586ca6a562817adb079efd3d99058ab77b43509bafbf44a229176f479",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-south-contact-b",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-senior-south-contact-b.png",
+      "x": 960,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0065f78b156b97ff12631b2d61d117d2ab950c9e476c41346a2837f575729d8e",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-south-passing-b",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-senior-south-passing-b.png",
+      "x": 1056,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2e22d645f94c4b1b38f768fea345fc6e0f188e2413490f54ecb6e5f799d1f1a6",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-west-contact-a",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-senior-west-contact-a.png",
+      "x": 768,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "d5ec2e888f4baa55c605f9ff50649d5a5b6d6de12004007b0a69a3f6744f0a60",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-west-passing-a",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-senior-west-passing-a.png",
+      "x": 864,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "b74215e15d9305351b1fed869c776a5b6e22e11f37f64850631bf9518dac12a6",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-west-contact-b",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-senior-west-contact-b.png",
+      "x": 960,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "255508d9f75adeec51976e890ed6fdf5421b34aff437c4f585c929696b1bb7fe",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-west-passing-b",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-senior-west-passing-b.png",
+      "x": 1056,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0f3083c55986a820a92e59bfefc268e5475d54d71d20b57fc478903e89566cf0",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-east-contact-a",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-senior-east-contact-a.png",
+      "x": 768,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2cac877a281aa77b15f763e33cd77302ed6c122408bffe762e50057c3308d241",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-east-passing-a",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-senior-east-passing-a.png",
+      "x": 864,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2a93a86ce2a60d7bde234fa3f95fe46060fd29fc119e2f1aaa170507638b705d",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-east-contact-b",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-senior-east-contact-b.png",
+      "x": 960,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "847f9396905aea3b6e9a0ac713a1f5339d44161793906fbdbad94e1af46d9e33",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-east-passing-b",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-senior-east-passing-b.png",
+      "x": 1056,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2a1867a345b0ab59999c0a05a8a3f8cd10b0ebb7f491b27ac68614fb84370151",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-north-contact-a",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/rabbit/rabbit-senior-north-contact-a.png",
+      "x": 768,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "bb1c8dd8dd70ff6eaa79f32ba3f06305063dd9ee72cabf423eb8cc1fbca9094a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-north-passing-a",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/rabbit/rabbit-senior-north-passing-a.png",
+      "x": 864,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "ceda40d586ca6a562817adb079efd3d99058ab77b43509bafbf44a229176f479",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-north-contact-b",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/rabbit/rabbit-senior-north-contact-b.png",
+      "x": 960,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0065f78b156b97ff12631b2d61d117d2ab950c9e476c41346a2837f575729d8e",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "rabbit-senior-north-passing-b",
+      "species": "rabbit",
+      "age": "senior",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/rabbit/rabbit-senior-north-passing-b.png",
+      "x": 1056,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2e22d645f94c4b1b38f768fea345fc6e0f188e2413490f54ecb6e5f799d1f1a6",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    }
+  ],
+  "runtimeReady": false,
+  "sourceSha256": "bbd2966f9833bc008430cbee1defe7de60f52d00e4be05172925ec27f51374a4",
+  "atlasSha256": "bbd2966f9833bc008430cbee1defe7de60f52d00e4be05172925ec27f51374a4",
+  "previewSha256": "c36fb955dd2b617483d34500bfff0711a4d8e742fa0d9f20f1ba3b404ce7fca5"
+}

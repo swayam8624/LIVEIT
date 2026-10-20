@@ -1,0 +1,106 @@
+{
+  "id": "crowd-archetypes-batch-v2",
+  "kind": "original-pixel-crowd-movement-concepts",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "directions": ["south", "north", "west", "east"],
+  "directionConvention": "north=back, east=right, south=front, west=left; PNG folders retain legacy source names",
+  "phases": ["walk-a", "walk-b", "idle"],
+  "roles": [
+    {
+      "role": "runner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.runner",
+      "manifest": "runner/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "tourist",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.tourist",
+      "manifest": "tourist/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "mechanic",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.mechanic",
+      "manifest": "mechanic/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "artist",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.artist",
+      "manifest": "artist/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "filmmaker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.filmmaker",
+      "manifest": "filmmaker/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "athlete",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.athlete",
+      "manifest": "athlete/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "shopper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.shopper",
+      "manifest": "shopper/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "barista",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.barista",
+      "manifest": "barista/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "pet-walker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.pet-walker",
+      "manifest": "pet-walker/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "market-vendor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.market-vendor",
+      "manifest": "market-vendor/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "contactSheet": {
+    "file": "crowd-archetypes-contact-sheet.png",
+    "scale": 2,
+    "labels": {
+      "roles": [
+        "runner",
+        "tourist",
+        "mechanic",
+        "artist",
+        "filmmaker",
+        "athlete",
+        "shopper",
+        "barista",
+        "pet-walker",
+        "market-vendor"
+      ],
+      "rows": ["south", "north", "west", "east"]
+    },
+    "runtimeReady": false,
+    "sha256": "b909999b70ed7dc3fe490fae63df27e99cabf15b3a4bde506b7e67723876957e"
+  },
+  "provenance": "All pixels are deterministic original drawings authored in build_crowd_archetypes.py; no supplied archive or internet asset was used.",
+  "runtimeReady": false
+}

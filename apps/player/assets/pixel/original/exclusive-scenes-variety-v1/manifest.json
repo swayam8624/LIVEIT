@@ -1,0 +1,291 @@
+{
+  "batch": "exclusive-scenes-variety-v1",
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "paletteLimit": 32,
+  "runtimeReady": false,
+  "sourceOutputs": {
+    "preservedUnmodified": true,
+    "files": [
+      {
+        "file": "sources/first-paycheck-diner-source.png",
+        "role": "preserved-source-output",
+        "width": 1402,
+        "height": 1122,
+        "colorMode": "RGB",
+        "alpha": false,
+        "sha256": "20ca1c9ac43248c7fa2088481243c6ee5c33778e7050aeca0f89a4b8f13dcbbb",
+        "runtimeReady": false
+      },
+      {
+        "file": "sources/reconciliation-bus-stop-source.png",
+        "role": "preserved-source-output",
+        "width": 1402,
+        "height": 1122,
+        "colorMode": "RGB",
+        "alpha": false,
+        "sha256": "952f5914f0ac1d3addaa4cd052f24f80136ba17e903142436599befadd75babd",
+        "runtimeReady": false
+      },
+      {
+        "file": "sources/harvest-table-garden-source.png",
+        "role": "preserved-source-output",
+        "width": 1402,
+        "height": 1122,
+        "colorMode": "RGB",
+        "alpha": false,
+        "sha256": "b8ed4ff10ab014d5fd4fb58d2e9e63e4a83a2e84a25f4b0bd49d38f528a5a48e",
+        "runtimeReady": false
+      },
+      {
+        "file": "sources/fresh-start-apartment-source.png",
+        "role": "preserved-source-output",
+        "width": 1402,
+        "height": 1122,
+        "colorMode": "RGB",
+        "alpha": false,
+        "sha256": "4fb9306aef95f53af86a3eefddf9725f20acd784b71758a836273be54bccd274",
+        "runtimeReady": false
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "first-paycheck-diner",
+      "title": "First paycheck, after closing",
+      "source": "first-paycheck-diner-source.png",
+      "concept": "first-paycheck-diner-32c-320x256.png",
+      "guide": "first-paycheck-diner-layout-guide.png",
+      "mood": "earned relief and quiet pride",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "actorSafeRegion": {
+        "x": 42,
+        "y": 48,
+        "width": 236,
+        "height": 164
+      },
+      "sourceOutput": {
+        "file": "sources/first-paycheck-diner-source.png",
+        "role": "preserved-source-output",
+        "width": 1402,
+        "height": 1122,
+        "colorMode": "RGB",
+        "alpha": false,
+        "sha256": "20ca1c9ac43248c7fa2088481243c6ee5c33778e7050aeca0f89a4b8f13dcbbb",
+        "runtimeReady": false
+      },
+      "files": [
+        {
+          "file": "scenes/first-paycheck-diner-32c-320x256.png",
+          "role": "32-color-320x256-concept",
+          "width": 320,
+          "height": 256,
+          "colorMode": "P",
+          "alpha": false,
+          "sha256": "cc4626fad77bd81de188f87d1c7042f932e77580c9c35678e1f2a0be078eb33a",
+          "runtimeReady": false
+        },
+        {
+          "file": "guides/first-paycheck-diner-layout-guide.png",
+          "role": "transparent-actor-and-dialogue-layout-guide",
+          "width": 320,
+          "height": 256,
+          "colorMode": "RGBA",
+          "alpha": true,
+          "sha256": "bae297da675342375f08372bcc308ed78445b71434407eb5c01ca10132044dab",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    },
+    {
+      "id": "reconciliation-bus-stop",
+      "title": "A difficult reunion after rain",
+      "source": "reconciliation-bus-stop-source.png",
+      "concept": "reconciliation-bus-stop-32c-320x256.png",
+      "guide": "reconciliation-bus-stop-layout-guide.png",
+      "mood": "uncertainty, apology, and cautious hope",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "actorSafeRegion": {
+        "x": 52,
+        "y": 76,
+        "width": 216,
+        "height": 136
+      },
+      "sourceOutput": {
+        "file": "sources/reconciliation-bus-stop-source.png",
+        "role": "preserved-source-output",
+        "width": 1402,
+        "height": 1122,
+        "colorMode": "RGB",
+        "alpha": false,
+        "sha256": "952f5914f0ac1d3addaa4cd052f24f80136ba17e903142436599befadd75babd",
+        "runtimeReady": false
+      },
+      "files": [
+        {
+          "file": "scenes/reconciliation-bus-stop-32c-320x256.png",
+          "role": "32-color-320x256-concept",
+          "width": 320,
+          "height": 256,
+          "colorMode": "P",
+          "alpha": false,
+          "sha256": "847c9bbbf23d2cbc17074cba6189c70f7cd8c44d17ee330c008ae3edb5e9f7c2",
+          "runtimeReady": false
+        },
+        {
+          "file": "guides/reconciliation-bus-stop-layout-guide.png",
+          "role": "transparent-actor-and-dialogue-layout-guide",
+          "width": 320,
+          "height": 256,
+          "colorMode": "RGBA",
+          "alpha": true,
+          "sha256": "6054f6a378cdaf467bb38d22a7bc5e51ae2209dd84400b77b043f1f6e876c763",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    },
+    {
+      "id": "harvest-table-garden",
+      "title": "A shared harvest table",
+      "source": "harvest-table-garden-source.png",
+      "concept": "harvest-table-garden-32c-320x256.png",
+      "guide": "harvest-table-garden-layout-guide.png",
+      "mood": "belonging, generosity, and celebration",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "actorSafeRegion": {
+        "x": 42,
+        "y": 52,
+        "width": 236,
+        "height": 160
+      },
+      "sourceOutput": {
+        "file": "sources/harvest-table-garden-source.png",
+        "role": "preserved-source-output",
+        "width": 1402,
+        "height": 1122,
+        "colorMode": "RGB",
+        "alpha": false,
+        "sha256": "b8ed4ff10ab014d5fd4fb58d2e9e63e4a83a2e84a25f4b0bd49d38f528a5a48e",
+        "runtimeReady": false
+      },
+      "files": [
+        {
+          "file": "scenes/harvest-table-garden-32c-320x256.png",
+          "role": "32-color-320x256-concept",
+          "width": 320,
+          "height": 256,
+          "colorMode": "P",
+          "alpha": false,
+          "sha256": "2354a06f3693ffa5473d81c69aa5a798da59f7d854864a3d12b907fbd81fa833",
+          "runtimeReady": false
+        },
+        {
+          "file": "guides/harvest-table-garden-layout-guide.png",
+          "role": "transparent-actor-and-dialogue-layout-guide",
+          "width": 320,
+          "height": 256,
+          "colorMode": "RGBA",
+          "alpha": true,
+          "sha256": "4a1971cfe721f53b9bebf2fcc008578824f3980f1f16cb9f120108655c8cc19d",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    },
+    {
+      "id": "fresh-start-apartment",
+      "title": "Room to begin again",
+      "source": "fresh-start-apartment-source.png",
+      "concept": "fresh-start-apartment-32c-320x256.png",
+      "guide": "fresh-start-apartment-layout-guide.png",
+      "mood": "grief settling into agency and possibility",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "actorSafeRegion": {
+        "x": 52,
+        "y": 56,
+        "width": 216,
+        "height": 156
+      },
+      "sourceOutput": {
+        "file": "sources/fresh-start-apartment-source.png",
+        "role": "preserved-source-output",
+        "width": 1402,
+        "height": 1122,
+        "colorMode": "RGB",
+        "alpha": false,
+        "sha256": "4fb9306aef95f53af86a3eefddf9725f20acd784b71758a836273be54bccd274",
+        "runtimeReady": false
+      },
+      "files": [
+        {
+          "file": "scenes/fresh-start-apartment-32c-320x256.png",
+          "role": "32-color-320x256-concept",
+          "width": 320,
+          "height": 256,
+          "colorMode": "P",
+          "alpha": false,
+          "sha256": "c36efc00c21694446f345f2a14bd1000331ae7b38336764c573bc397d66b4de9",
+          "runtimeReady": false
+        },
+        {
+          "file": "guides/fresh-start-apartment-layout-guide.png",
+          "role": "transparent-actor-and-dialogue-layout-guide",
+          "width": 320,
+          "height": 256,
+          "colorMode": "RGBA",
+          "alpha": true,
+          "sha256": "529856d626eafc361ee2905c5f0caa3e8e1dac318010cf0dc775bb6de8343276",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    }
+  ],
+  "previews": [
+    {
+      "file": "previews/exclusive-scenes-variety-review-2x.png",
+      "role": "nearest-neighbor-2x-contact-sheet-with-layout-guides",
+      "width": 1280,
+      "height": 1120,
+      "colorMode": "RGB",
+      "alpha": false,
+      "sha256": "b4222b5f95b3f465cd032caf546fac4005e9ee608e4ea91829a7f6aefdd6a8e5",
+      "runtimeReady": false
+    }
+  ],
+  "provenance": {
+    "tool": "built-in image generator",
+    "date": "2026-10-20",
+    "sourceOutputsCopiedWithoutPixelEdits": true,
+    "thirdPartyAssetsUsed": false,
+    "suppliedArchivesUsed": false,
+    "externalReferencesUsed": false,
+    "promptRecord": "prompts.md",
+    "normalizationScript": "build_scene_variety.py",
+    "conceptPolicy": "Each preserved source is resized to 320x256 with Lanczos resampling and quantized to 32 colors without dithering. Preview contact sheet is 2x nearest-neighbor with staging guides overlaid."
+  }
+}

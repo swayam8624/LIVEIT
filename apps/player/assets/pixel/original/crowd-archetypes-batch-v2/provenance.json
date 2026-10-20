@@ -1,0 +1,14 @@
+{
+  "sourceType": "original-authored-pixel-clusters",
+  "builder": "build_crowd_archetypes.py",
+  "builderSha256": "d9c375d66cb28a5acbc4170e27e63fa2a48e5e06e0a48912cec1e643b25f76f8",
+  "directionConvention": {
+    "north": "back",
+    "east": "right",
+    "south": "front",
+    "west": "left"
+  },
+  "externalAssets": [],
+  "license": "Original work; no third-party source pixels incorporated.",
+  "runtimeReady": false
+}

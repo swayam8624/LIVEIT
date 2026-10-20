@@ -1,0 +1,237 @@
+{
+  "id": "crowd-security-guard-movement-v3",
+  "role": "security-guard",
+  "label": "security guard",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+  "description": "broad navy security uniform, cap, badge and shoulder radio",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "security-guard/south/walk-a",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/security-guard/security-guard-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "28d910c3ae2a8bf09ab6faa38089ca6a0d53011b95d763c06ca919eb1ea2b47c",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/south/walk-b",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/security-guard/security-guard-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6470349c145f111b69295b0c59ed8eaea84c5927190df4f7774a24f9b6142904",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/south/idle",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/security-guard/security-guard-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a072f2989bb06abc0937afb0b8bf1b87b8682d5d692cf1c3e7360453d2d758ef",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/west/walk-a",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/security-guard/security-guard-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "84e3e8ffc9c9ac15817a6deab0057bd65b7ee8944f1dff2cf31f9bb231df1a0a",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/west/walk-b",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/security-guard/security-guard-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b9a34f21b66091d422c6a508a1bfe9ce686f31a5cfc60f304c776ec3e9c2c85b",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/west/idle",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/security-guard/security-guard-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "867c09a080194118590f673791287470e777580ae06e8fd03a3e060c45ec2ca8",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/east/walk-a",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/security-guard/security-guard-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "73ccef99f65b8da1841e564cbe626de7f5a209a639808f3b66fae9f1daec64a5",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/east/walk-b",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/security-guard/security-guard-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7200076fcd2c8db4610cf20931621971677b434cbf8fe30f459c5cc42cdd2899",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/east/idle",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/security-guard/security-guard-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6747ec730e1579a9325653485d1037db829fec6f39cb25aa3c667d8d648720fd",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/north/walk-a",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/security-guard/security-guard-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7c38d41fc82817266d291837935943fa2e1112f514313317faaf4c58af78f529",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/north/walk-b",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/security-guard/security-guard-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "860896ca3065ea6ba32749ba45ce8976a23894a5badfe3ea4385ff279c9c8064",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/north/idle",
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/security-guard/security-guard-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "da8936ec8cf6199a200b6f61c6a6804421e149fb80ad8e8ec48791a5f5c316ba",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/security-guard/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "de67012da285efc06105740641c98e3d480f310b3ba302647d3372203c609294",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/security-guard/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "d8bf00fb2f658a6897042fbda8d9862475a740551ba86f507e1c7d85ed129a0b",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

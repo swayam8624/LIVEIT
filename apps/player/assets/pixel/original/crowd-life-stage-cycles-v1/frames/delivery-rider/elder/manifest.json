@@ -1,0 +1,276 @@
+{
+  "id": "crowd-delivery-rider-elder-movement-age-v1",
+  "role": "delivery-rider",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older worker or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.delivery-rider",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/delivery-rider/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "delivery-rider/elder/south/walk-a",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7a3504b0611d924ac61c74798ccbf1d8aa9c192ae1abb762503486b088c7ead7",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-south-walk-a.png",
+      "sourceSha256": "8011c04d91e570048a1e73fbeaa3f4467bc782e83efe9319e2edc074953f93f1",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/south/walk-b",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "895de7ccfa5db6b3b94b1c306bb962df1217288e33ba1558e525b8fcfa9bef45",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-south-walk-b.png",
+      "sourceSha256": "fada83c32ef9a434a3ae12065e596ca541fd8a0a53ca39b3afbe61053d6ca1ad",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/south/idle",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f98cd25ffbf32874202c43966559d3a0fdb64c2ff03e5f5e600b84d826ad8a36",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-south-idle.png",
+      "sourceSha256": "c536a225cba530f8fc97729e7875d2b44250c9d77bfce1883b30771e92731ddb",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/west/walk-a",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f524384a1b3d4222d03c333b6a803b206a3d7717c95d3d0bd792d3c10ce67d36",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-west-walk-a.png",
+      "sourceSha256": "4626ce3673e111a636604a7baff4431674a69d4a8a0bdc82fcab0322771c2179",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/west/walk-b",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "56e1a5284385c47659d39138ffae11dc47011b3ba4994a534fb9b9459175a016",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-west-walk-b.png",
+      "sourceSha256": "77b1269cd5b172597bcd5ca7d0a28c596abfbd46b5be02457bfa0ff0fdbbe5c0",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/west/idle",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "98f9a325d3f16e3193e0789a2bd5e407d459cbbfbc2b0a37f0e4d3c790602768",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-west-idle.png",
+      "sourceSha256": "9279ff4b20541c623eea0e9fe851313f995e53f065c4b7a6622fedf4b4d64f71",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/east/walk-a",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "102737a060be58abcf05ddb9617009803e19ce5929acf7e60657576a25659786",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-east-walk-a.png",
+      "sourceSha256": "c2e4c44ee957a62584624ac0504b47e0935c54c31721e5156bb8c50f962b1703",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/east/walk-b",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b8bc8bba088d755d2b0673cfc0c07cf8f595f202b9d596b328041b28d218e1e6",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-east-walk-b.png",
+      "sourceSha256": "7dc2ba72077ea7a2f8735b2fdabe4d847efdadd322129c180475d47f30f98cd7",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/east/idle",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4ae8732c9b255465c5f3f51fdec5b68f76092ccaedee6ad5a79541c0cacf69c9",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-east-idle.png",
+      "sourceSha256": "6af5f7f6f826a4883d01ef74fa469cae4518aaf375c10eb6ef75dad1c33ffa4e",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/north/walk-a",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6751058a2f329039fd9836046772cfb08790e7aa1c64d55b913f3fd941c9d07e",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-north-walk-a.png",
+      "sourceSha256": "219a19fd1f5d97edb1f09acf2d262cb0cdadd64d2df8bf532f166dbe9c028231",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/north/walk-b",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b63f74c269f0fa95f67e692061be919b49f191e60ccb8dc4fc8683c0dc8f6b84",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-north-walk-b.png",
+      "sourceSha256": "f66f8c12200c3af95a716ba9977d7ea1b58958f7354ce5b419a6ed3773cdf917",
+      "runtimeReady": false
+    },
+    {
+      "id": "delivery-rider/elder/north/idle",
+      "role": "delivery-rider",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/delivery-rider/elder/delivery-rider-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "af39defee6ecd86bc731faad6a0305a6dabb6267e286b35756a2918d904e6b56",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/delivery-rider/delivery-rider-north-idle.png",
+      "sourceSha256": "dd978a4943627d7e16cb3fa5cf9157046f10182fc9de3f21a8eecfe77d43c5fc",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

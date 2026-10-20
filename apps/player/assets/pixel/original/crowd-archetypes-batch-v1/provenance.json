@@ -1,0 +1,16 @@
+{
+  "batch": "crowd-archetypes-batch-v1",
+  "created": "2026-10-20",
+  "method": "Original deterministic pixel clusters authored in Pillow; no external raster, archive, web, or model source was sampled.",
+  "canvas": {
+    "width": 24,
+    "height": 32,
+    "mode": "RGBA",
+    "pivot": {
+      "x": 12,
+      "y": 31
+    }
+  },
+  "style": "24x32 crisp nearest-neighbor clusters, transparent backgrounds, restrained role palettes, independently authored cardinal views.",
+  "rights": "No third-party source content. Safe for project-owned derivative work pending normal art review."
+}

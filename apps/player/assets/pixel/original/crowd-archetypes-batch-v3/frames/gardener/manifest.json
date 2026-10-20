@@ -1,0 +1,237 @@
+{
+  "id": "crowd-gardener-movement-v3",
+  "role": "gardener",
+  "label": "gardener",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+  "description": "wide sun hat, green work shirt, gloves, and watering can",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "gardener/south/walk-a",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/gardener/gardener-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0927fd2cf686b6a37d5aa64b44b57d62eac19dc93051bae19782f3c759b572e6",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/south/walk-b",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/gardener/gardener-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b5c86888eeeb01bafb5dc8f0c243fde6b3b470550815d13f71a74e4d36c43606",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/south/idle",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/gardener/gardener-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d743d5ef797174daa6c278fb7f1c5bbe8ed81c6b48c5f2a4bbec2c35b6eaeb15",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/west/walk-a",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/gardener/gardener-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d4a1d642c61e2de04fa98dacdcb2e29f6118f9aff2840e7f22cd318b1a2d74e6",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/west/walk-b",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/gardener/gardener-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b13009b2cb39d9e9e0448a297c22d320e15a9a04fb690b44f87c2333773550ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/west/idle",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/gardener/gardener-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2840334653284c7350ec8635a1659ba12c0f2b760c914753228d82556ecafc74",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/east/walk-a",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/gardener/gardener-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fe893b9731e194396c204fe13f46f70b289743258ce67a2dbae94584bcca4213",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/east/walk-b",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/gardener/gardener-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bf765066f07119891bd01fef78ebee32cf847a10caa2229be3493195d39766d8",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/east/idle",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/gardener/gardener-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9b2bab4db2ee6acaa382322c02c9fb151c80317845416edecc6cfc73b8d93512",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/north/walk-a",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/gardener/gardener-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e2fb45048ce71abd01efc415853fa9c56c0669e0cf4c47877540d12d18d905e4",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/north/walk-b",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/gardener/gardener-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9e686f8d95f21dc181625cec82c6e93ff13dc2adbdbe58e356b81b09200431f0",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/north/idle",
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/gardener/gardener-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "25694b2c3070fcc95b5218a0177248b0de47ea7a1e06de8f37eb774e46836250",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/gardener/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "9d2c7a228f6d70a66aedf10299fd601e452581fea03a2ac5c6c0737ab627b29d",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/gardener/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "3903e7204aa99f67406bb3153f9ffe4dd8c02e672db5a166961b07ea4d6a722d",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

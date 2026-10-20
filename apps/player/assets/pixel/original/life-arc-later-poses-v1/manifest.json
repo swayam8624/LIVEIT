@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 1,
+  "id": "life-arc-later-poses-v1",
+  "description": "Young-adult and midlife woman idle and everyday-interaction pose studies derived from the linked later-life walk frames.",
+  "logicalFrameSize": [24, 32],
+  "pivot": [12, 31],
+  "stages": ["young-adult-woman", "midlife-woman"],
+  "directions": ["south", "west", "east", "north"],
+  "states": ["idle", "interact"],
+  "runtimeReady": false,
+  "sourcePolicy": "Only local derived frames under ../life-arc-later-cycles-v1/frames were used as visual references.",
+  "sources": [
+    {
+      "file": "../life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-east-contact-a.png",
+      "sha256": "8191b29dfe23c2078af7b4724df9e22840fa66f5e3e7edccd36cf58447c6d157",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-east-passing-a.png",
+      "sha256": "da711d7cd2f21fc88781cabee2d989ddb39385e837ad60436f14aadcc67db5d0",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-north-contact-a.png",
+      "sha256": "a6c73c263a855cb62b4b7b66c2cb88e2d1f0ea9cb3225fecc4f986837875f0a8",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-north-passing-a.png",
+      "sha256": "a63169bcc8e8838870df4674f6fbfe0a9f8a4baf1eaf19b6fb977b01715d170d",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-south-contact-a.png",
+      "sha256": "777b04da054112138ad546712beda3cc85c50acd859d109422d262abe525ed41",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-south-passing-a.png",
+      "sha256": "a1dcbfc0e200206f8f7af7535de869ba4fb5952b8a75631b3741d47d604913c6",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-west-contact-a.png",
+      "sha256": "a7facdd0f60b32010856291c721b9d0f7fc1a6f6c9ea6d127c3448d0287c751b",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-west-passing-a.png",
+      "sha256": "a1bd1ed9c428acfe318c0bea033c9e736b2be95002ae263c19d7cc5b41fd09df",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-east-contact-a.png",
+      "sha256": "b4afe55abac66b29ec1fa092f5e67bbcac80415d7266f7917b31767da542d1ad",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-east-passing-a.png",
+      "sha256": "e2deb3d9aba16c85b2d592cecc0955fa88003611dfe4455213b44ee3b086400f",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-north-contact-a.png",
+      "sha256": "a0661446fcd0b6e3d4415ea9ca0dbce3753d29c152098742c05c9bf4b925e4c6",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-north-passing-a.png",
+      "sha256": "4d7f689f39f760608cd86d5633fb58eafba4d2a58880871ca2938756c73a371c",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-south-contact-a.png",
+      "sha256": "1251f30f0611fb40991bfa18e7cc871495538d29ef50cebd093bd5682ce84779",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-south-passing-a.png",
+      "sha256": "afbe5b52f010001e0f458f2da96ff7736bfdfbd49610233f5c523c567d7753f7",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-west-contact-a.png",
+      "sha256": "991330c994464480623ae9f9ad261554f75a181112d2669b17e711584ddc5492",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-west-passing-a.png",
+      "sha256": "3482ba773cca9f309879bc79482752ecd68ef216d247cad4d5365af4a20f3930",
+      "size": [24, 32],
+      "mode": "RGBA"
+    }
+  ],
+  "frames": [
+    {
+      "id": "young-adult-woman/south/idle",
+      "stage": "young-adult-woman",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/young-adult-woman/young-adult-woman-south-idle.png",
+      "sha256": "bc6b3156c8582de05afd567bacbbcf7eab90f928986122e3f6ed9bcd278048a0",
+      "atlas": {
+        "file": "frames/young-adult-woman/young-adult-woman-atlas.png",
+        "x": 0,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/young-adult-woman/young-adult-woman-south-contact-a.png",
+      "adaptation": "upper-body settling bob"
+    },
+    {
+      "id": "young-adult-woman/south/interact",
+      "stage": "young-adult-woman",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/young-adult-woman/young-adult-woman-south-interact.png",
+      "sha256": "1ea6958450a2ae932f5b100170564c4cd6ee6c79ed681231ef4837789fe18167",
+      "atlas": {
+        "file": "frames/young-adult-woman/young-adult-woman-atlas.png",
+        "x": 24,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/young-adult-woman/young-adult-woman-south-passing-a.png",
+      "adaptation": "directional held-object cue"
+    },
+    {
+      "id": "young-adult-woman/west/idle",
+      "stage": "young-adult-woman",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/young-adult-woman/young-adult-woman-west-idle.png",
+      "sha256": "29b4b999ef3ce613379fa70e8e8f98a6dda1639232a35d8970b834bd7910b002",
+      "atlas": {
+        "file": "frames/young-adult-woman/young-adult-woman-atlas.png",
+        "x": 48,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/young-adult-woman/young-adult-woman-west-contact-a.png",
+      "adaptation": "upper-body settling bob"
+    },
+    {
+      "id": "young-adult-woman/west/interact",
+      "stage": "young-adult-woman",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/young-adult-woman/young-adult-woman-west-interact.png",
+      "sha256": "200f0dd938c8950c7dd3dccffcc1eaa1b9b7888d000639493923c340412b2bf0",
+      "atlas": {
+        "file": "frames/young-adult-woman/young-adult-woman-atlas.png",
+        "x": 72,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/young-adult-woman/young-adult-woman-west-passing-a.png",
+      "adaptation": "directional held-object cue"
+    },
+    {
+      "id": "young-adult-woman/east/idle",
+      "stage": "young-adult-woman",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/young-adult-woman/young-adult-woman-east-idle.png",
+      "sha256": "b01400835029ed450336f2a584467110f733a06d02a24a9882644da961cca397",
+      "atlas": {
+        "file": "frames/young-adult-woman/young-adult-woman-atlas.png",
+        "x": 96,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/young-adult-woman/young-adult-woman-east-contact-a.png",
+      "adaptation": "upper-body settling bob"
+    },
+    {
+      "id": "young-adult-woman/east/interact",
+      "stage": "young-adult-woman",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/young-adult-woman/young-adult-woman-east-interact.png",
+      "sha256": "a915577b714c329addc03dc001ff94b77594b13f46e8c918a070f627fb2742bc",
+      "atlas": {
+        "file": "frames/young-adult-woman/young-adult-woman-atlas.png",
+        "x": 120,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/young-adult-woman/young-adult-woman-east-passing-a.png",
+      "adaptation": "directional held-object cue"
+    },
+    {
+      "id": "young-adult-woman/north/idle",
+      "stage": "young-adult-woman",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/young-adult-woman/young-adult-woman-north-idle.png",
+      "sha256": "c8e725f018d6dbdcacdd4b348a5370818efb9b6444416ea368aea094a1703de0",
+      "atlas": {
+        "file": "frames/young-adult-woman/young-adult-woman-atlas.png",
+        "x": 144,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/young-adult-woman/young-adult-woman-north-contact-a.png",
+      "adaptation": "upper-body settling bob"
+    },
+    {
+      "id": "young-adult-woman/north/interact",
+      "stage": "young-adult-woman",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/young-adult-woman/young-adult-woman-north-interact.png",
+      "sha256": "f11efbf1deb120a54e103cc5c29197ea6fc4fa34eb325df4559f21b1c508ca68",
+      "atlas": {
+        "file": "frames/young-adult-woman/young-adult-woman-atlas.png",
+        "x": 168,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/young-adult-woman/young-adult-woman-north-passing-a.png",
+      "adaptation": "directional held-object cue"
+    },
+    {
+      "id": "midlife-woman/south/idle",
+      "stage": "midlife-woman",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/midlife-woman/midlife-woman-south-idle.png",
+      "sha256": "1593f579201209c7f86c60fd01315f9ebe302a90f0154957a60b7421b4c080a9",
+      "atlas": {
+        "file": "frames/midlife-woman/midlife-woman-atlas.png",
+        "x": 0,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/midlife-woman/midlife-woman-south-contact-a.png",
+      "adaptation": "upper-body settling bob"
+    },
+    {
+      "id": "midlife-woman/south/interact",
+      "stage": "midlife-woman",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/midlife-woman/midlife-woman-south-interact.png",
+      "sha256": "7f474387a72dd6d42c2b936d8299153c4047365b8a1422b1fbf042f7f85b5637",
+      "atlas": {
+        "file": "frames/midlife-woman/midlife-woman-atlas.png",
+        "x": 24,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/midlife-woman/midlife-woman-south-passing-a.png",
+      "adaptation": "directional held-object cue"
+    },
+    {
+      "id": "midlife-woman/west/idle",
+      "stage": "midlife-woman",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/midlife-woman/midlife-woman-west-idle.png",
+      "sha256": "032157fed4d73098bcc7999c69c84ec3fb2d499d76612fe17c21964466be8242",
+      "atlas": {
+        "file": "frames/midlife-woman/midlife-woman-atlas.png",
+        "x": 48,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/midlife-woman/midlife-woman-west-contact-a.png",
+      "adaptation": "upper-body settling bob"
+    },
+    {
+      "id": "midlife-woman/west/interact",
+      "stage": "midlife-woman",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/midlife-woman/midlife-woman-west-interact.png",
+      "sha256": "7eca8711f7cf14289af0113971ecc64a8a269cff077409e7d41d40f5b1e5d108",
+      "atlas": {
+        "file": "frames/midlife-woman/midlife-woman-atlas.png",
+        "x": 72,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/midlife-woman/midlife-woman-west-passing-a.png",
+      "adaptation": "directional held-object cue"
+    },
+    {
+      "id": "midlife-woman/east/idle",
+      "stage": "midlife-woman",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/midlife-woman/midlife-woman-east-idle.png",
+      "sha256": "c4e5792247ff2bc595777ce2e72ac6a6b0acd8d74659543e5eb6c948eeeabb45",
+      "atlas": {
+        "file": "frames/midlife-woman/midlife-woman-atlas.png",
+        "x": 96,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/midlife-woman/midlife-woman-east-contact-a.png",
+      "adaptation": "upper-body settling bob"
+    },
+    {
+      "id": "midlife-woman/east/interact",
+      "stage": "midlife-woman",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/midlife-woman/midlife-woman-east-interact.png",
+      "sha256": "c4106ecb7cc9e2731866a3ad27fcd106be45d97d6e90cc86f3e2a0f64e6e79ae",
+      "atlas": {
+        "file": "frames/midlife-woman/midlife-woman-atlas.png",
+        "x": 120,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/midlife-woman/midlife-woman-east-passing-a.png",
+      "adaptation": "directional held-object cue"
+    },
+    {
+      "id": "midlife-woman/north/idle",
+      "stage": "midlife-woman",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/midlife-woman/midlife-woman-north-idle.png",
+      "sha256": "af078d6fc9c8da7af0ca7b187b86144fc2bcb4b1cbc91d29883ab16bfcfdf76f",
+      "atlas": {
+        "file": "frames/midlife-woman/midlife-woman-atlas.png",
+        "x": 144,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/midlife-woman/midlife-woman-north-contact-a.png",
+      "adaptation": "upper-body settling bob"
+    },
+    {
+      "id": "midlife-woman/north/interact",
+      "stage": "midlife-woman",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/midlife-woman/midlife-woman-north-interact.png",
+      "sha256": "c77352147e284787448b8a1e43341e637a63cf6830e339dbf29d530ec0f2c27f",
+      "atlas": {
+        "file": "frames/midlife-woman/midlife-woman-atlas.png",
+        "x": 168,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "runtimeReady": false,
+      "sourceBatch": "../life-arc-later-cycles-v1",
+      "sourceFrame": "frames/midlife-woman/midlife-woman-north-passing-a.png",
+      "adaptation": "directional held-object cue"
+    }
+  ],
+  "limitations": [
+    "These are deterministic stylized adaptations, not genuinely redrawn anatomy.",
+    "Idle uses a one-pixel upper-body settling bob while retaining the source feet and pivot.",
+    "Interact adds a tiny held-object/greeting cue using colors sampled from the same source frame.",
+    "Human pixel-cluster cleanup, identity continuity review, renderer sampling, collision review, and gameplay integration remain pending."
+  ]
+}

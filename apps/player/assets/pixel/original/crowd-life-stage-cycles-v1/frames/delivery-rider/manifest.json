@@ -1,0 +1,24 @@
+{
+  "role": "delivery-rider",
+  "label": "delivery-rider",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.delivery-rider",
+  "description": "teal jacket, orange helmet, insulated delivery pack",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/delivery-rider/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/delivery-rider/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/delivery-rider/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

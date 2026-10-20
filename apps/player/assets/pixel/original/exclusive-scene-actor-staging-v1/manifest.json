@@ -1,0 +1,1693 @@
+{
+  "schema": "liveit.pixel.exclusive-scene-actor-staging.v1",
+  "generatedBy": "build_actor_staging.js",
+  "runtimeReady": false,
+  "conceptQuality": "isolated concept studies; requires manual pixel cleanup and compositing review",
+  "canvas": {
+    "frame": {
+      "width": 48,
+      "height": 80
+    },
+    "atlas": {
+      "columns": 8,
+      "rows": 6,
+      "width": 384,
+      "height": 480
+    },
+    "previewScale": 2
+  },
+  "directions": ["south", "east", "north", "west"],
+  "sceneAnchors": {
+    "new-parenthood": {
+      "anchor": {
+        "x": 126,
+        "y": 216
+      },
+      "pivot": "bottom-center",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      }
+    },
+    "elder-legacy": {
+      "anchor": {
+        "x": 126,
+        "y": 216
+      },
+      "pivot": "bottom-center",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      }
+    }
+  },
+  "actors": [
+    {
+      "scene": "new-parenthood",
+      "id": "parent-primary",
+      "label": "Parent primary",
+      "poses": ["stand", "hold-baby", "reach"],
+      "runtimeReady": false
+    },
+    {
+      "scene": "new-parenthood",
+      "id": "parent-secondary",
+      "label": "Parent secondary",
+      "poses": ["stand", "soothe", "present-card"],
+      "runtimeReady": false
+    },
+    {
+      "scene": "elder-legacy",
+      "id": "elder-primary",
+      "label": "Elder primary",
+      "poses": ["stand", "seated-memory", "cane-rest"],
+      "runtimeReady": false
+    },
+    {
+      "scene": "elder-legacy",
+      "id": "legacy-listener",
+      "label": "Legacy listener",
+      "poses": ["stand", "kneel-album", "offer-letter"],
+      "runtimeReady": false
+    }
+  ],
+  "frames": [
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "stand",
+      "direction": "south",
+      "file": "new-parenthood/parent-primary/parent-primary-stand-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "647a7993fdeb8238e98470f1ff9e0d6486f8ed513f3eaeef3aea52c7a0416a33"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "stand",
+      "direction": "east",
+      "file": "new-parenthood/parent-primary/parent-primary-stand-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "17df14c896e4e707c3d40c903411136d1f82e15a074207ca16eff6f7900923ac"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "stand",
+      "direction": "north",
+      "file": "new-parenthood/parent-primary/parent-primary-stand-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "63aee108692d16a39f83e1ae29304f5fcab22412fc29753e4ebd3aa23d4e82bc"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "stand",
+      "direction": "west",
+      "file": "new-parenthood/parent-primary/parent-primary-stand-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "d44ec6ff8c96a18d41e0f0c714e7f03fecdb053f8a7b608b010b696c7f77e4b2"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "hold-baby",
+      "direction": "south",
+      "file": "new-parenthood/parent-primary/parent-primary-hold-baby-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "0677c2670573a9b20926c093b27aab9f3747ca1cb7667ab9538ac7f11c16f809"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "hold-baby",
+      "direction": "east",
+      "file": "new-parenthood/parent-primary/parent-primary-hold-baby-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "84ced2a41db3cea0b89216b3456308bbc5748c4cb293e33846b06f47be1e0c25"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "hold-baby",
+      "direction": "north",
+      "file": "new-parenthood/parent-primary/parent-primary-hold-baby-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "3f51b28483e521d030223f894dc026bfd8ef43a49cb6c059aa4d93965f571e1c"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "hold-baby",
+      "direction": "west",
+      "file": "new-parenthood/parent-primary/parent-primary-hold-baby-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "dfd11dc9988731b9f4f0344a921e7a04b80b70a6bf145289d5d382bbbf275e8d"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "reach",
+      "direction": "south",
+      "file": "new-parenthood/parent-primary/parent-primary-reach-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "f2b75386705788b16865e2fbeae0305282f2c79030c1d9c871249d5b3edbbd60"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "reach",
+      "direction": "east",
+      "file": "new-parenthood/parent-primary/parent-primary-reach-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "81b1a5da2df5021c28d567c28dcdffddd34868f2519d876eb02354509c55d7ee"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "reach",
+      "direction": "north",
+      "file": "new-parenthood/parent-primary/parent-primary-reach-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "26caac97875b0aa01b23818a43767b09f6513c10e447dc967271c52fd65cdc36"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-primary",
+      "pose": "reach",
+      "direction": "west",
+      "file": "new-parenthood/parent-primary/parent-primary-reach-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "d99126f8a01b9e3e4462b2eec73e9612680a42186e377c2dbe853199a09929e2"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "stand",
+      "direction": "south",
+      "file": "new-parenthood/parent-secondary/parent-secondary-stand-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "cd898facf1adeef2550c61b1f618af68aa06518c1e1a5d7f5095fa7d156c7f5e"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "stand",
+      "direction": "east",
+      "file": "new-parenthood/parent-secondary/parent-secondary-stand-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "fe00eea8f5dbbd5040b9b8fc069bd7d426c6d2ea86bb3aba79e96c6d1cda5e31"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "stand",
+      "direction": "north",
+      "file": "new-parenthood/parent-secondary/parent-secondary-stand-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "88c081ed34bbb06d2bf7a821b293e100661ebfb3c63eda60f79ec1f96cf7da46"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "stand",
+      "direction": "west",
+      "file": "new-parenthood/parent-secondary/parent-secondary-stand-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "dc90a85743680f54a9c03f8480df6f6c9ec501bc19a22212186b2c03f3a57f1c"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "soothe",
+      "direction": "south",
+      "file": "new-parenthood/parent-secondary/parent-secondary-soothe-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "da5c4285bd27412dadf38f9fd04f459e52d56ba8b96b7441f4868b5bd4b8dcf2"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "soothe",
+      "direction": "east",
+      "file": "new-parenthood/parent-secondary/parent-secondary-soothe-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "a2084e041c5c15767ba6921aeaf08c5c1547eb06fe42226f1ee3c41bdf14507f"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "soothe",
+      "direction": "north",
+      "file": "new-parenthood/parent-secondary/parent-secondary-soothe-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "985755cd5f8f38833ace761073ec6bc21b2d687dee7a9aa3cbc1ccfde7a0fb90"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "soothe",
+      "direction": "west",
+      "file": "new-parenthood/parent-secondary/parent-secondary-soothe-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "bfa328243607f720869c8ad753e9a227fadbb4b5ffbb068f6274b53a54b4f671"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "present-card",
+      "direction": "south",
+      "file": "new-parenthood/parent-secondary/parent-secondary-present-card-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "c1c58d886d5ee69042a4f9b8a557229dcc15c2c17cd08ae0382038c9c4b97d61"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "present-card",
+      "direction": "east",
+      "file": "new-parenthood/parent-secondary/parent-secondary-present-card-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "8f3505d45470afa3de086f239075525efd7e9136618ae7dd0300a99a1283d5ea"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "present-card",
+      "direction": "north",
+      "file": "new-parenthood/parent-secondary/parent-secondary-present-card-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "c5cc1895d97bb110fe20998e86f6322f3c42fa5c3f91a509f7734020a8b3cb91"
+    },
+    {
+      "scene": "new-parenthood",
+      "actor": "parent-secondary",
+      "pose": "present-card",
+      "direction": "west",
+      "file": "new-parenthood/parent-secondary/parent-secondary-present-card-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "682bdf9f861529e426f694d6fdc255696a63a0e30c4bc64af445cf6410d289d3"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "stand",
+      "direction": "south",
+      "file": "elder-legacy/elder-primary/elder-primary-stand-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 3
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "bb5890fdc79fef5ec0f830bcc012c8cef00fa1de42165f1e3dee6760eaf0acb1"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "stand",
+      "direction": "east",
+      "file": "elder-legacy/elder-primary/elder-primary-stand-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 3
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "b39ec6f3f5fc7aedc66e8a0605a4b2ca965baefb496667869242c7b55070cef9"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "stand",
+      "direction": "north",
+      "file": "elder-legacy/elder-primary/elder-primary-stand-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 3
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "9c4b08dd5438296b265d1ecd4a2b3601c32952b81f20f7433aa0ab64e7f6ddf7"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "stand",
+      "direction": "west",
+      "file": "elder-legacy/elder-primary/elder-primary-stand-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 3
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "6652e0db7d14f3a97dd1167fe708a014dbe855ec198036b37d7a70603cfdc08f"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "seated-memory",
+      "direction": "south",
+      "file": "elder-legacy/elder-primary/elder-primary-seated-memory-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 3
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "81f17f97e50342f2c5085c69b4f4f68958e2006c902b7bdea24a3bb2cd22ecbb"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "seated-memory",
+      "direction": "east",
+      "file": "elder-legacy/elder-primary/elder-primary-seated-memory-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 3
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "2eae000d531602f45c5a07dfb6dbb0c1eb086ffe4c24067ea6466b3cba3791f2"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "seated-memory",
+      "direction": "north",
+      "file": "elder-legacy/elder-primary/elder-primary-seated-memory-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 3
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "ac1fd5840742681ab38199ca59820dd72676a49ee33ce5987d129ebbbffcf2b8"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "seated-memory",
+      "direction": "west",
+      "file": "elder-legacy/elder-primary/elder-primary-seated-memory-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 3
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "eb3764193603eacad875d5c4b073d56c811ceb3b3e6c4a9ae450afab50eec360"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "cane-rest",
+      "direction": "south",
+      "file": "elder-legacy/elder-primary/elder-primary-cane-rest-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 4
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "7311635f07b417d55f94c03ba67b304ab3e4a3a9d1bf0ba56da8c6e4f3c7c66f"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "cane-rest",
+      "direction": "east",
+      "file": "elder-legacy/elder-primary/elder-primary-cane-rest-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 4
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "794df42b6ae86af2619e8495c0219a42b9d347be662979c421dbae2f85ceddcc"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "cane-rest",
+      "direction": "north",
+      "file": "elder-legacy/elder-primary/elder-primary-cane-rest-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 4
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "8e013d698a5f38b504cf2dbfd7ff7dee046ff3bc7b8aacb5834f4af118357edc"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "elder-primary",
+      "pose": "cane-rest",
+      "direction": "west",
+      "file": "elder-legacy/elder-primary/elder-primary-cane-rest-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 4
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "d6da436272481ec669ef760849eec3ec6832a2b36b9a9900113a011d5d658823"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "stand",
+      "direction": "south",
+      "file": "elder-legacy/legacy-listener/legacy-listener-stand-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 4
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "db3377c354e66dcd1d2642599ff9b0695b06b4449067a8b58803f84a0ca94931"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "stand",
+      "direction": "east",
+      "file": "elder-legacy/legacy-listener/legacy-listener-stand-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 4
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "a00c04aaf8e2c76b1f7a8c7b1429479b25b6dbc24e450c0b7c8fe132471e19ad"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "stand",
+      "direction": "north",
+      "file": "elder-legacy/legacy-listener/legacy-listener-stand-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 4
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "1d2e3fbfb03c5ac13400234360c00620dc355c5539a4553cb3fb60e5fc04cc7c"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "stand",
+      "direction": "west",
+      "file": "elder-legacy/legacy-listener/legacy-listener-stand-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 4
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "0fb13ed86fbe87ca99c6401fe90caac9afb18d4886c3935c3c41183efa081c4f"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "kneel-album",
+      "direction": "south",
+      "file": "elder-legacy/legacy-listener/legacy-listener-kneel-album-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 5
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "f7e3a9778fba39ee1e07d2bc6c49030867ccb6c684dd6eec835d12248ad21635"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "kneel-album",
+      "direction": "east",
+      "file": "elder-legacy/legacy-listener/legacy-listener-kneel-album-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 5
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "b792926e60ffc74592de133267e7784939ae73b0097b68e0470a151f9ff77f56"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "kneel-album",
+      "direction": "north",
+      "file": "elder-legacy/legacy-listener/legacy-listener-kneel-album-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 5
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "c2102ba97e946b645d0b952dd395bc80d0c4eb2e1d9adb25347cd0da73406351"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "kneel-album",
+      "direction": "west",
+      "file": "elder-legacy/legacy-listener/legacy-listener-kneel-album-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 5
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "70a618cb795f45c1fb4bec9efebc10472a80f6dec163bf6554b8695257a110f3"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "offer-letter",
+      "direction": "south",
+      "file": "elder-legacy/legacy-listener/legacy-listener-offer-letter-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 5
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "2c19ca2eb87e1b70ca4fe9b583166226e436ed0afc1b5aad4260f54ce7b5b777"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "offer-letter",
+      "direction": "east",
+      "file": "elder-legacy/legacy-listener/legacy-listener-offer-letter-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 5
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "042d3e850839263f483e28a1ec7f354c11824bb86b5a564d4258fb270ee3902d"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "offer-letter",
+      "direction": "north",
+      "file": "elder-legacy/legacy-listener/legacy-listener-offer-letter-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 5
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "cbf9d811b079d4a78524e4d1f6f760808fd5e5955b2090b0f6ccdc18391109f2"
+    },
+    {
+      "scene": "elder-legacy",
+      "actor": "legacy-listener",
+      "pose": "offer-letter",
+      "direction": "west",
+      "file": "elder-legacy/legacy-listener/legacy-listener-offer-letter-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 5
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 126,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "7fd2077df0f0a182eccd61f5e2674c1e0442894ad0ef31dd750d1ad7122a155b"
+    }
+  ],
+  "files": [
+    {
+      "file": "actor-staging-atlas.png",
+      "width": 384,
+      "height": 480,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "97f178cd2f2eaca968dc41bf20b99076b4e4bcbfd160c33a746543ef8ed3b429",
+      "runtimeReady": false
+    },
+    {
+      "file": "actor-staging-preview-2x.png",
+      "width": 768,
+      "height": 960,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "fc7b5a2f2cd72d947c24375ba4e831b784ab67772fc055fcc19fb8ba879920a4",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-cane-rest-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "794df42b6ae86af2619e8495c0219a42b9d347be662979c421dbae2f85ceddcc",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-cane-rest-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "8e013d698a5f38b504cf2dbfd7ff7dee046ff3bc7b8aacb5834f4af118357edc",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-cane-rest-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "7311635f07b417d55f94c03ba67b304ab3e4a3a9d1bf0ba56da8c6e4f3c7c66f",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-cane-rest-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "d6da436272481ec669ef760849eec3ec6832a2b36b9a9900113a011d5d658823",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-seated-memory-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "2eae000d531602f45c5a07dfb6dbb0c1eb086ffe4c24067ea6466b3cba3791f2",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-seated-memory-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "ac1fd5840742681ab38199ca59820dd72676a49ee33ce5987d129ebbbffcf2b8",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-seated-memory-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "81f17f97e50342f2c5085c69b4f4f68958e2006c902b7bdea24a3bb2cd22ecbb",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-seated-memory-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "eb3764193603eacad875d5c4b073d56c811ceb3b3e6c4a9ae450afab50eec360",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-stand-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "b39ec6f3f5fc7aedc66e8a0605a4b2ca965baefb496667869242c7b55070cef9",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-stand-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "9c4b08dd5438296b265d1ecd4a2b3601c32952b81f20f7433aa0ab64e7f6ddf7",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-stand-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "bb5890fdc79fef5ec0f830bcc012c8cef00fa1de42165f1e3dee6760eaf0acb1",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/elder-primary/elder-primary-stand-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "6652e0db7d14f3a97dd1167fe708a014dbe855ec198036b37d7a70603cfdc08f",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-kneel-album-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "b792926e60ffc74592de133267e7784939ae73b0097b68e0470a151f9ff77f56",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-kneel-album-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "c2102ba97e946b645d0b952dd395bc80d0c4eb2e1d9adb25347cd0da73406351",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-kneel-album-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "f7e3a9778fba39ee1e07d2bc6c49030867ccb6c684dd6eec835d12248ad21635",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-kneel-album-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "70a618cb795f45c1fb4bec9efebc10472a80f6dec163bf6554b8695257a110f3",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-offer-letter-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "042d3e850839263f483e28a1ec7f354c11824bb86b5a564d4258fb270ee3902d",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-offer-letter-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "cbf9d811b079d4a78524e4d1f6f760808fd5e5955b2090b0f6ccdc18391109f2",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-offer-letter-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "2c19ca2eb87e1b70ca4fe9b583166226e436ed0afc1b5aad4260f54ce7b5b777",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-offer-letter-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "7fd2077df0f0a182eccd61f5e2674c1e0442894ad0ef31dd750d1ad7122a155b",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-stand-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "a00c04aaf8e2c76b1f7a8c7b1429479b25b6dbc24e450c0b7c8fe132471e19ad",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-stand-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "1d2e3fbfb03c5ac13400234360c00620dc355c5539a4553cb3fb60e5fc04cc7c",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-stand-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "db3377c354e66dcd1d2642599ff9b0695b06b4449067a8b58803f84a0ca94931",
+      "runtimeReady": false
+    },
+    {
+      "file": "elder-legacy/legacy-listener/legacy-listener-stand-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "0fb13ed86fbe87ca99c6401fe90caac9afb18d4886c3935c3c41183efa081c4f",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-hold-baby-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "84ced2a41db3cea0b89216b3456308bbc5748c4cb293e33846b06f47be1e0c25",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-hold-baby-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "3f51b28483e521d030223f894dc026bfd8ef43a49cb6c059aa4d93965f571e1c",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-hold-baby-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "0677c2670573a9b20926c093b27aab9f3747ca1cb7667ab9538ac7f11c16f809",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-hold-baby-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "dfd11dc9988731b9f4f0344a921e7a04b80b70a6bf145289d5d382bbbf275e8d",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-reach-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "81b1a5da2df5021c28d567c28dcdffddd34868f2519d876eb02354509c55d7ee",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-reach-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "26caac97875b0aa01b23818a43767b09f6513c10e447dc967271c52fd65cdc36",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-reach-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "f2b75386705788b16865e2fbeae0305282f2c79030c1d9c871249d5b3edbbd60",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-reach-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "d99126f8a01b9e3e4462b2eec73e9612680a42186e377c2dbe853199a09929e2",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-stand-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "17df14c896e4e707c3d40c903411136d1f82e15a074207ca16eff6f7900923ac",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-stand-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "63aee108692d16a39f83e1ae29304f5fcab22412fc29753e4ebd3aa23d4e82bc",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-stand-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "647a7993fdeb8238e98470f1ff9e0d6486f8ed513f3eaeef3aea52c7a0416a33",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-primary/parent-primary-stand-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "d44ec6ff8c96a18d41e0f0c714e7f03fecdb053f8a7b608b010b696c7f77e4b2",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-present-card-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "8f3505d45470afa3de086f239075525efd7e9136618ae7dd0300a99a1283d5ea",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-present-card-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "c5cc1895d97bb110fe20998e86f6322f3c42fa5c3f91a509f7734020a8b3cb91",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-present-card-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "c1c58d886d5ee69042a4f9b8a557229dcc15c2c17cd08ae0382038c9c4b97d61",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-present-card-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "682bdf9f861529e426f694d6fdc255696a63a0e30c4bc64af445cf6410d289d3",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-soothe-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "a2084e041c5c15767ba6921aeaf08c5c1547eb06fe42226f1ee3c41bdf14507f",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-soothe-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "985755cd5f8f38833ace761073ec6bc21b2d687dee7a9aa3cbc1ccfde7a0fb90",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-soothe-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "da5c4285bd27412dadf38f9fd04f459e52d56ba8b96b7441f4868b5bd4b8dcf2",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-soothe-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "bfa328243607f720869c8ad753e9a227fadbb4b5ffbb068f6274b53a54b4f671",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-stand-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "fe00eea8f5dbbd5040b9b8fc069bd7d426c6d2ea86bb3aba79e96c6d1cda5e31",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-stand-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "88c081ed34bbb06d2bf7a821b293e100661ebfb3c63eda60f79ec1f96cf7da46",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-stand-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "cd898facf1adeef2550c61b1f618af68aa06518c1e1a5d7f5095fa7d156c7f5e",
+      "runtimeReady": false
+    },
+    {
+      "file": "new-parenthood/parent-secondary/parent-secondary-stand-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "dc90a85743680f54a9c03f8480df6f6c9ec501bc19a22212186b2c03f3a57f1c",
+      "runtimeReady": false
+    }
+  ],
+  "provenance": {
+    "authoredInRepo": true,
+    "thirdPartyAssetsUsed": false,
+    "suppliedArchivesUsed": false,
+    "externalReferencesUsed": false,
+    "sourceReferences": ["exclusive-scene-depth-v2", "exclusive-scenes-v1"],
+    "sourceReferencesUse": "palette and staging conventions only; no source pixels copied",
+    "date": "2026-10-20"
+  }
+}

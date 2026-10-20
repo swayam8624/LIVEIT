@@ -1,0 +1,145 @@
+{
+  "batch": "exclusive-scenes-v2",
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "runtimeReady": false,
+  "sourceOutputs": {
+    "width": 1402,
+    "height": 1122,
+    "colorMode": "RGB",
+    "preservedUnmodified": true
+  },
+  "scenes": [
+    {
+      "id": "garden-graduation",
+      "title": "Garden graduation",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "files": [
+        {
+          "file": "garden-graduation-composite-source.png",
+          "role": "source-output",
+          "width": 1402,
+          "height": 1122,
+          "alpha": false,
+          "sha256": "24b8fea0545e73e7af8c55d806cab5450fd17479deacade4e1332c0b084f1d5d",
+          "runtimeReady": false
+        },
+        {
+          "file": "garden-graduation-composite-v2.png",
+          "role": "composite-concept",
+          "width": 320,
+          "height": 256,
+          "alpha": false,
+          "sha256": "b04591d718b2f39aeb12d0ac9b287bbfb36ad1919f06d6e054fd9490065fb326",
+          "runtimeReady": false
+        },
+        {
+          "file": "garden-graduation-layout-guide.png",
+          "role": "transparent-layer-layout-guide",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "90d30647dc40c4582e300c267fef4acfba7244aaf9d4915b67ccef18ea24dd31",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    },
+    {
+      "id": "new-parenthood-home",
+      "title": "New parenthood home welcome",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "files": [
+        {
+          "file": "new-parenthood-home-composite-source.png",
+          "role": "source-output",
+          "width": 1402,
+          "height": 1122,
+          "alpha": false,
+          "sha256": "1e39dbb8ee5fcfffd16a183afb0fc5ab1452cd29f1c46fc12eac62f18a4258fd",
+          "runtimeReady": false
+        },
+        {
+          "file": "new-parenthood-home-composite-v2.png",
+          "role": "composite-concept",
+          "width": 320,
+          "height": 256,
+          "alpha": false,
+          "sha256": "a6e34850ef07df302fdf8d9c5cab15df46b95cc86026fad8318f0d12558eba72",
+          "runtimeReady": false
+        },
+        {
+          "file": "new-parenthood-home-layout-guide.png",
+          "role": "transparent-layer-layout-guide",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "9d78c05a4c801cd37048e4bb9d0b8283d2289b15b1515737338bf057bdb73877",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-farewell-legacy",
+      "title": "Elder farewell / legacy memory",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "files": [
+        {
+          "file": "elder-farewell-legacy-composite-source.png",
+          "role": "source-output",
+          "width": 1402,
+          "height": 1122,
+          "alpha": false,
+          "sha256": "67a8f4503c19b71abacbec606ecc1a0fd91e3d182cea04659731b5d55410ab22",
+          "runtimeReady": false
+        },
+        {
+          "file": "elder-farewell-legacy-composite-v2.png",
+          "role": "composite-concept",
+          "width": 320,
+          "height": 256,
+          "alpha": false,
+          "sha256": "10f46a90df8a98fabb9f63ffadf3dfd12b9b5c23b546875a5a8e84764b5ebeeb",
+          "runtimeReady": false
+        },
+        {
+          "file": "elder-farewell-legacy-layout-guide.png",
+          "role": "transparent-layer-layout-guide",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "9631e82fc17a6f7b3b84c8f26599557bd915209b2397219ba36026c854f54623",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    }
+  ],
+  "provenance": {
+    "tool": "built-in image generator",
+    "date": "2026-10-20",
+    "thirdPartyAssetsUsed": false,
+    "suppliedArchivesUsed": false,
+    "externalReferencesUsed": false,
+    "promptRecord": "prompts.md",
+    "workingCompositePolicy": "source outputs are preserved; working composites are resized 320x256 copies without visual edits beyond resize"
+  }
+}

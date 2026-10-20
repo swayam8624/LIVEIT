@@ -1,0 +1,14 @@
+{
+  "animal": "cat",
+  "frameSize": [96, 128],
+  "poses": ["idle", "happy", "worried", "sleeping", "care", "recovering"],
+  "frames": [
+    "cat-idle-96x128.png",
+    "cat-happy-96x128.png",
+    "cat-worried-96x128.png",
+    "cat-sleeping-96x128.png",
+    "cat-care-96x128.png",
+    "cat-recovering-96x128.png"
+  ],
+  "runtimeReady": false
+}

@@ -1,0 +1,1324 @@
+{
+  "schemaVersion": 1,
+  "assetId": "age-idle-interact-v1",
+  "status": "original-rights-safe-concept-study",
+  "runtimeReady": false,
+  "sourceTool": "Pillow deterministic overlays on directional-age-refine-v1 frames",
+  "sourceMaster": "directional-age-refine-v1/frames/*",
+  "logicalFrame": [24, 32],
+  "stages": [
+    "infant-crawl",
+    "toddler-waddle",
+    "child-walk",
+    "teen-walk",
+    "adult-walk",
+    "elder-woman-walk",
+    "elder-man-walk"
+  ],
+  "directions": ["south", "west", "east", "north"],
+  "poses": ["idle", "interact"],
+  "frameCount": 56,
+  "sampling": "nearest-neighbor",
+  "suggestedDurationMs": {
+    "idle": 520,
+    "interact": 260
+  },
+  "frames": [
+    {
+      "id": "infant-crawl/south/idle",
+      "stage": "infant-crawl",
+      "direction": "south",
+      "pose": "idle",
+      "cue": "tummy-rest",
+      "file": "frames/infant-crawl/infant-crawl-south-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "63f131935dc288b90542dc73207312e3cc911a6dcd5364ca0e5cb8dc5490f3d2",
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/south/interact",
+      "stage": "infant-crawl",
+      "direction": "south",
+      "pose": "interact",
+      "cue": "reach-for-toy",
+      "file": "frames/infant-crawl/infant-crawl-south-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-south-passing-b.png",
+      "x": 24,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b821c3ebf5d5124ef6744b000a8c79a31c8138027590e60f14a45e99dae346f8",
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/west/idle",
+      "stage": "infant-crawl",
+      "direction": "west",
+      "pose": "idle",
+      "cue": "tummy-rest",
+      "file": "frames/infant-crawl/infant-crawl-west-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-west-contact-a.png",
+      "x": 0,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a6452aea3e672bffd59cce17a5577b923c585cf530b65bd08b0dcfe355c83f8b",
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/west/interact",
+      "stage": "infant-crawl",
+      "direction": "west",
+      "pose": "interact",
+      "cue": "reach-for-toy",
+      "file": "frames/infant-crawl/infant-crawl-west-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-west-passing-b.png",
+      "x": 24,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "57ce92ea5603a8861131dc01027de46210be278eaafebef0bbd0315a18e6fc01",
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/east/idle",
+      "stage": "infant-crawl",
+      "direction": "east",
+      "pose": "idle",
+      "cue": "tummy-rest",
+      "file": "frames/infant-crawl/infant-crawl-east-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-east-contact-a.png",
+      "x": 0,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bd8c0c94e59225decf1b601069c8d6936f41a61cae14095a5022138027975ea8",
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/east/interact",
+      "stage": "infant-crawl",
+      "direction": "east",
+      "pose": "interact",
+      "cue": "reach-for-toy",
+      "file": "frames/infant-crawl/infant-crawl-east-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-east-passing-b.png",
+      "x": 24,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cb270b4160048afaea804fb74c356351f9a7c4d5840f0f992a7decb076ebe5e0",
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/north/idle",
+      "stage": "infant-crawl",
+      "direction": "north",
+      "pose": "idle",
+      "cue": "tummy-rest",
+      "file": "frames/infant-crawl/infant-crawl-north-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-north-contact-a.png",
+      "x": 0,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4baaa30fe3029789e633692d7c210b189a4a66efb7bd1aa4a46080a4bb66b3af",
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/north/interact",
+      "stage": "infant-crawl",
+      "direction": "north",
+      "pose": "interact",
+      "cue": "reach-for-toy",
+      "file": "frames/infant-crawl/infant-crawl-north-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-north-passing-b.png",
+      "x": 24,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a926eeadf4a2f8decadfefee2c2e7d9ffd4914b5ff84bbde0c0229f48db03483",
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/south/idle",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "pose": "idle",
+      "cue": "comfort-clasp",
+      "file": "frames/toddler-waddle/toddler-waddle-south-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "71aa0b2ca4f735a43d2c09658366c9eb45bbdafd186c8a61857f1df58374c312",
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/south/interact",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "pose": "interact",
+      "cue": "toddler-wave",
+      "file": "frames/toddler-waddle/toddler-waddle-south-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-south-passing-b.png",
+      "x": 24,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c59ea5ec447685384eedb34aed79cb38ddddaeba3c16fc54bf24bbc08cf037ce",
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/west/idle",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "pose": "idle",
+      "cue": "comfort-clasp",
+      "file": "frames/toddler-waddle/toddler-waddle-west-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-west-contact-a.png",
+      "x": 0,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "19d88d21bbe0b887ef32fa1da1f91a900b6dad92c0449bf46b21f5fb8a840565",
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/west/interact",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "pose": "interact",
+      "cue": "toddler-wave",
+      "file": "frames/toddler-waddle/toddler-waddle-west-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-west-passing-b.png",
+      "x": 24,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4a6ac106f5fce7e4d9b81bb71bdd08a385024e54b70895cd825f407cfdefc148",
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/east/idle",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "pose": "idle",
+      "cue": "comfort-clasp",
+      "file": "frames/toddler-waddle/toddler-waddle-east-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-east-contact-a.png",
+      "x": 0,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "56fb2be70b9acf71a242fb41dd0f8c796b7d85c15d709beef713b48f22fb7e86",
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/east/interact",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "pose": "interact",
+      "cue": "toddler-wave",
+      "file": "frames/toddler-waddle/toddler-waddle-east-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-east-passing-b.png",
+      "x": 24,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0a5481b6331aac7f8ab92666c1ba463e9485bd3a520410ccc955a094f5e4b89c",
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/north/idle",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "pose": "idle",
+      "cue": "comfort-clasp",
+      "file": "frames/toddler-waddle/toddler-waddle-north-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-north-contact-a.png",
+      "x": 0,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ced186bc00cd39ca88f6023fcc16f5a5989bf3ab04d3362b3ac44ac83c854a6f",
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/north/interact",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "pose": "interact",
+      "cue": "toddler-wave",
+      "file": "frames/toddler-waddle/toddler-waddle-north-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-north-passing-b.png",
+      "x": 24,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f2f2e73010ae505f01ce7c0a9921c1dfd1640566d40f77c4d90008b3fb4e6dee",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/south/idle",
+      "stage": "child-walk",
+      "direction": "south",
+      "pose": "idle",
+      "cue": "small-toy-hold",
+      "file": "frames/child-walk/child-walk-south-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "915d46be4b310f6ad6355ac8c6a86e96e9bd1879987ed93ce6333e004d8d94df",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/south/interact",
+      "stage": "child-walk",
+      "direction": "south",
+      "pose": "interact",
+      "cue": "show-toy",
+      "file": "frames/child-walk/child-walk-south-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-south-passing-b.png",
+      "x": 24,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d2af5f21fc7b4f74f997cb2c895c341261e1d7e30b5a71dcf69d58dd6bcbcf83",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/west/idle",
+      "stage": "child-walk",
+      "direction": "west",
+      "pose": "idle",
+      "cue": "small-toy-hold",
+      "file": "frames/child-walk/child-walk-west-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-west-contact-a.png",
+      "x": 0,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ddcb6a576b325b028897338a3928134e44f2320024d15eed7355eb7980ae435f",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/west/interact",
+      "stage": "child-walk",
+      "direction": "west",
+      "pose": "interact",
+      "cue": "show-toy",
+      "file": "frames/child-walk/child-walk-west-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-west-passing-b.png",
+      "x": 24,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "508c3fea34489c06cdfbc8fb3b3a0e5ebe747c8319c6771cfa7133a2a6a7cfce",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/east/idle",
+      "stage": "child-walk",
+      "direction": "east",
+      "pose": "idle",
+      "cue": "small-toy-hold",
+      "file": "frames/child-walk/child-walk-east-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-east-contact-a.png",
+      "x": 0,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "99fdf7934dc270e9dfeafc390736112f71fb828ce4b9be0549231b42e9d07904",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/east/interact",
+      "stage": "child-walk",
+      "direction": "east",
+      "pose": "interact",
+      "cue": "show-toy",
+      "file": "frames/child-walk/child-walk-east-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-east-passing-b.png",
+      "x": 24,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3c0f4e924738ccd9778c3136941341e683e4373045cb743f79092ffef5e6b2ef",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/north/idle",
+      "stage": "child-walk",
+      "direction": "north",
+      "pose": "idle",
+      "cue": "small-toy-hold",
+      "file": "frames/child-walk/child-walk-north-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-north-contact-a.png",
+      "x": 0,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e136ea216668da900ae6eb99f20522a66b2dd101a0af63349b45c49e08784482",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/north/interact",
+      "stage": "child-walk",
+      "direction": "north",
+      "pose": "interact",
+      "cue": "show-toy",
+      "file": "frames/child-walk/child-walk-north-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-north-passing-b.png",
+      "x": 24,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e41cee1b66aaadd3ad57032248ecaa91e3b48dbc1107be3464411a84f8cd32c9",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/south/idle",
+      "stage": "teen-walk",
+      "direction": "south",
+      "pose": "idle",
+      "cue": "backpack-rest",
+      "file": "frames/teen-walk/teen-walk-south-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ee6e21d489f95aef31f7246fb8e6b121e1a1f734df854bd3f645fb3d3ecb3709",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/south/interact",
+      "stage": "teen-walk",
+      "direction": "south",
+      "pose": "interact",
+      "cue": "offer-phone",
+      "file": "frames/teen-walk/teen-walk-south-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-south-passing-b.png",
+      "x": 24,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ff8b122d2d4f6204dee16e2d8dd65552ec87e9e5d9869c135c5cd1a7258cc68f",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/west/idle",
+      "stage": "teen-walk",
+      "direction": "west",
+      "pose": "idle",
+      "cue": "backpack-rest",
+      "file": "frames/teen-walk/teen-walk-west-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-west-contact-a.png",
+      "x": 0,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3f959800cb8432244354296e510712e9a8c3e38a9e1b3e092ac646aa69ea8427",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/west/interact",
+      "stage": "teen-walk",
+      "direction": "west",
+      "pose": "interact",
+      "cue": "offer-phone",
+      "file": "frames/teen-walk/teen-walk-west-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-west-passing-b.png",
+      "x": 24,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3faf3dfe71c1cfd9ab9914891bdd105a16ac66dc17c9456dba67f35df0efc840",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/east/idle",
+      "stage": "teen-walk",
+      "direction": "east",
+      "pose": "idle",
+      "cue": "backpack-rest",
+      "file": "frames/teen-walk/teen-walk-east-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-east-contact-a.png",
+      "x": 0,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f09335aefe96ac5c5d740277287c1859cbeb884478ee4a5243d699b5503135c3",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/east/interact",
+      "stage": "teen-walk",
+      "direction": "east",
+      "pose": "interact",
+      "cue": "offer-phone",
+      "file": "frames/teen-walk/teen-walk-east-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-east-passing-b.png",
+      "x": 24,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ab4c4326a5ebf3342f66d20ff973931c61bbfdac8b10ff18a85e431f3d1a9fe3",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/north/idle",
+      "stage": "teen-walk",
+      "direction": "north",
+      "pose": "idle",
+      "cue": "backpack-rest",
+      "file": "frames/teen-walk/teen-walk-north-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-north-contact-a.png",
+      "x": 0,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f547fc8df3362b414ecafe6b3f348d34871a4f58b09fe7d3e0413f654c96c26d",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/north/interact",
+      "stage": "teen-walk",
+      "direction": "north",
+      "pose": "interact",
+      "cue": "offer-phone",
+      "file": "frames/teen-walk/teen-walk-north-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-north-passing-b.png",
+      "x": 24,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "189c4be2378af8957b0663baf7508002d1aa25e58d3da5a56b0dd3589333bfbe",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-walk/south/idle",
+      "stage": "adult-walk",
+      "direction": "south",
+      "pose": "idle",
+      "cue": "hands-rest",
+      "file": "frames/adult-walk/adult-walk-south-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "11b31632793b4b0199042750175acba93f601b925dc87b25b841a857c926eb7d",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-walk/south/interact",
+      "stage": "adult-walk",
+      "direction": "south",
+      "pose": "interact",
+      "cue": "friendly-wave",
+      "file": "frames/adult-walk/adult-walk-south-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-south-passing-b.png",
+      "x": 24,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cc758343dfa41ec48620ace06878315def3ec89352b8fd8cfd815cd8a015430e",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-walk/west/idle",
+      "stage": "adult-walk",
+      "direction": "west",
+      "pose": "idle",
+      "cue": "hands-rest",
+      "file": "frames/adult-walk/adult-walk-west-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-west-contact-a.png",
+      "x": 0,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ee4d0b9a2a98a1874c929915c528f67bc03caf28a571afdf5156c9decc99ff87",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-walk/west/interact",
+      "stage": "adult-walk",
+      "direction": "west",
+      "pose": "interact",
+      "cue": "friendly-wave",
+      "file": "frames/adult-walk/adult-walk-west-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-west-passing-b.png",
+      "x": 24,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "85b285e8e1cb9deae53b418dfa23b66af133151830c4f46f4692243436922e3f",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-walk/east/idle",
+      "stage": "adult-walk",
+      "direction": "east",
+      "pose": "idle",
+      "cue": "hands-rest",
+      "file": "frames/adult-walk/adult-walk-east-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-east-contact-a.png",
+      "x": 0,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "eefc1875c914912dcd6f74ecf5f593c511999893b37d144602a170b539cdfa76",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-walk/east/interact",
+      "stage": "adult-walk",
+      "direction": "east",
+      "pose": "interact",
+      "cue": "friendly-wave",
+      "file": "frames/adult-walk/adult-walk-east-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-east-passing-b.png",
+      "x": 24,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d43118c43640664a43298165ec237879ffac91f37af8e307a33113748fa8ac1f",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-walk/north/idle",
+      "stage": "adult-walk",
+      "direction": "north",
+      "pose": "idle",
+      "cue": "hands-rest",
+      "file": "frames/adult-walk/adult-walk-north-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-north-contact-a.png",
+      "x": 0,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6d083639cd6897f5c4ffa20ab59200c6831a8a1e14fe20e08e916325f71239b3",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-walk/north/interact",
+      "stage": "adult-walk",
+      "direction": "north",
+      "pose": "interact",
+      "cue": "friendly-wave",
+      "file": "frames/adult-walk/adult-walk-north-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-north-passing-b.png",
+      "x": 24,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cba885afa31889352db9bc6db7238f8a9a7c6e3c4ccc9e0ba855bcdf0a9e824e",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman-walk/south/idle",
+      "stage": "elder-woman-walk",
+      "direction": "south",
+      "pose": "idle",
+      "cue": "shawl-rest",
+      "file": "frames/elder-woman-walk/elder-woman-walk-south-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7a08889cfa4683adee505ff286de8b61845ecfc480e080522787c615588a6624",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman-walk/south/interact",
+      "stage": "elder-woman-walk",
+      "direction": "south",
+      "pose": "interact",
+      "cue": "offer-tea",
+      "file": "frames/elder-woman-walk/elder-woman-walk-south-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-south-passing-b.png",
+      "x": 24,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4073784c8024da5e731ca7f28826dfd440e2ee5a052aeb58c80ed3aac6cb55c0",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman-walk/west/idle",
+      "stage": "elder-woman-walk",
+      "direction": "west",
+      "pose": "idle",
+      "cue": "shawl-rest",
+      "file": "frames/elder-woman-walk/elder-woman-walk-west-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-west-contact-a.png",
+      "x": 0,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2951f2e1d9ef5bf89865a6c13af48949e7dba6d8974f7f7bb0b5e6be71849222",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman-walk/west/interact",
+      "stage": "elder-woman-walk",
+      "direction": "west",
+      "pose": "interact",
+      "cue": "offer-tea",
+      "file": "frames/elder-woman-walk/elder-woman-walk-west-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-west-passing-b.png",
+      "x": 24,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b324806e6f8fddd164abb406a2ca41859ef5d228c7731cdc8f25eb97f429b87e",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman-walk/east/idle",
+      "stage": "elder-woman-walk",
+      "direction": "east",
+      "pose": "idle",
+      "cue": "shawl-rest",
+      "file": "frames/elder-woman-walk/elder-woman-walk-east-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-east-contact-a.png",
+      "x": 0,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d0cf08a94da8e34ab09586aa66ad86561dc7d90493f499953ff5566993956411",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman-walk/east/interact",
+      "stage": "elder-woman-walk",
+      "direction": "east",
+      "pose": "interact",
+      "cue": "offer-tea",
+      "file": "frames/elder-woman-walk/elder-woman-walk-east-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-east-passing-b.png",
+      "x": 24,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "411db3b4aab5970369dbdb28281eef7384175c52633b49fec0d14b6fcf60f3aa",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman-walk/north/idle",
+      "stage": "elder-woman-walk",
+      "direction": "north",
+      "pose": "idle",
+      "cue": "shawl-rest",
+      "file": "frames/elder-woman-walk/elder-woman-walk-north-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-north-contact-a.png",
+      "x": 0,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "15a860a25a8adfa3e8fddad859ec165ad6f62ad0069302c6a9f5df9c07ba5a83",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman-walk/north/interact",
+      "stage": "elder-woman-walk",
+      "direction": "north",
+      "pose": "interact",
+      "cue": "offer-tea",
+      "file": "frames/elder-woman-walk/elder-woman-walk-north-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-north-passing-b.png",
+      "x": 24,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d1ceb3415e1fe126be2909ebcb005e5b58afcbd8f74536af75ff2019b478b882",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man-walk/south/idle",
+      "stage": "elder-man-walk",
+      "direction": "south",
+      "pose": "idle",
+      "cue": "cane-rest",
+      "file": "frames/elder-man-walk/elder-man-walk-south-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "abca58deeb7a052d60676479af14f43a4e4b01a3bcad2f017224843df5398a9e",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man-walk/south/interact",
+      "stage": "elder-man-walk",
+      "direction": "south",
+      "pose": "interact",
+      "cue": "cane-greeting",
+      "file": "frames/elder-man-walk/elder-man-walk-south-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-south-passing-b.png",
+      "x": 24,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fe843d45c56422ea340ce7f9b238592c20f193867328eb35f23c6a58087e4b91",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man-walk/west/idle",
+      "stage": "elder-man-walk",
+      "direction": "west",
+      "pose": "idle",
+      "cue": "cane-rest",
+      "file": "frames/elder-man-walk/elder-man-walk-west-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-west-contact-a.png",
+      "x": 0,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9cbe587a464651b480235ea5eccd64885cc7dab90549c8b67e3ab1c0a9d5f37a",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man-walk/west/interact",
+      "stage": "elder-man-walk",
+      "direction": "west",
+      "pose": "interact",
+      "cue": "cane-greeting",
+      "file": "frames/elder-man-walk/elder-man-walk-west-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-west-passing-b.png",
+      "x": 24,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "27cb845165ddfc3796225234a30a53c775c1445395718823ba96774f200311fe",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man-walk/east/idle",
+      "stage": "elder-man-walk",
+      "direction": "east",
+      "pose": "idle",
+      "cue": "cane-rest",
+      "file": "frames/elder-man-walk/elder-man-walk-east-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-east-contact-a.png",
+      "x": 0,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2f651e1ad5f680ea89e9c4a58710599653553b249fca006e348f12d4f0159b52",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man-walk/east/interact",
+      "stage": "elder-man-walk",
+      "direction": "east",
+      "pose": "interact",
+      "cue": "cane-greeting",
+      "file": "frames/elder-man-walk/elder-man-walk-east-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-east-passing-b.png",
+      "x": 24,
+      "y": 64,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1b7ff545781a96d4e0b61bfa344619065a3a557db34c703f90dbfd9129b50934",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man-walk/north/idle",
+      "stage": "elder-man-walk",
+      "direction": "north",
+      "pose": "idle",
+      "cue": "cane-rest",
+      "file": "frames/elder-man-walk/elder-man-walk-north-idle.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-north-contact-a.png",
+      "x": 0,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "08d57d2a3069b9477f7c6e9cb195d467ff9e9c6cd940e4dfcf871e128e4d0438",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man-walk/north/interact",
+      "stage": "elder-man-walk",
+      "direction": "north",
+      "pose": "interact",
+      "cue": "cane-greeting",
+      "file": "frames/elder-man-walk/elder-man-walk-north-interact.png",
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-north-passing-b.png",
+      "x": 24,
+      "y": 96,
+      "width": 24,
+      "height": 32,
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bc624b81b36d2652c31ecf7b0a50a477665aaaa545d7481236cc08ec0aacfa4e",
+      "runtimeReady": false
+    }
+  ],
+  "sourceFrames": {
+    "frames/infant-crawl/infant-crawl-south-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-south-contact-a.png",
+      "sourceSha256": "3bc4cd2b1095ed3473156a0d5b8a4536b9c8ebbdb2313df3b56b96451a9a780a"
+    },
+    "frames/infant-crawl/infant-crawl-south-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-south-passing-b.png",
+      "sourceSha256": "e2add74383229cdf0d60be9b2fbb586fd3f7362d5c7051bcf5026472828bc8f5"
+    },
+    "frames/infant-crawl/infant-crawl-west-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-west-contact-a.png",
+      "sourceSha256": "de7d406d1a41fd91838d6af9a0f14cfe6b302ab7ebf83a399e1cc34393ef96ac"
+    },
+    "frames/infant-crawl/infant-crawl-west-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-west-passing-b.png",
+      "sourceSha256": "1dceb3bb07196f424e17ddf616438a8c12de616eaaaa5aeee304aea18529fa0b"
+    },
+    "frames/infant-crawl/infant-crawl-east-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-east-contact-a.png",
+      "sourceSha256": "da9c4fb76262e9ecd7d4bdb5701586f3837edbba993235e9f0917ae1c9d25223"
+    },
+    "frames/infant-crawl/infant-crawl-east-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-east-passing-b.png",
+      "sourceSha256": "aa02c495da9446727fcd3272c9688e8d80e0e66ea227da3184786bac37148b9d"
+    },
+    "frames/infant-crawl/infant-crawl-north-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-north-contact-a.png",
+      "sourceSha256": "8a96024c2ec3f198b2feac762f96a592639178e84f2295717cd68bbc01b758f4"
+    },
+    "frames/infant-crawl/infant-crawl-north-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/infant-crawl/infant-crawl-north-passing-b.png",
+      "sourceSha256": "957e1c6eaaa7114f47e5585b34984d638c3d7bb83dddea00687cd2e4103cb664"
+    },
+    "frames/toddler-waddle/toddler-waddle-south-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-south-contact-a.png",
+      "sourceSha256": "13126c0d3c6f5135b3bc55d80db45733b64455c6c1743caeff5f0e331477fc32"
+    },
+    "frames/toddler-waddle/toddler-waddle-south-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-south-passing-b.png",
+      "sourceSha256": "a538d351a28ea553fde3c70bcf048214b0e87ab12a3913cc3fe5dec689c45224"
+    },
+    "frames/toddler-waddle/toddler-waddle-west-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-west-contact-a.png",
+      "sourceSha256": "2ca0a899b78d9cbc02daf15139a790f0183daba17cc91d74be94dbc62df6ffde"
+    },
+    "frames/toddler-waddle/toddler-waddle-west-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-west-passing-b.png",
+      "sourceSha256": "42a824dbf4c0f746fd96cb3de58f7745f0f68733fd792ad130b39a42a60f233a"
+    },
+    "frames/toddler-waddle/toddler-waddle-east-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-east-contact-a.png",
+      "sourceSha256": "47b46b915c03fcab460bc51a24ce909179f8118709d9ee8a40f7d41ec5000c65"
+    },
+    "frames/toddler-waddle/toddler-waddle-east-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-east-passing-b.png",
+      "sourceSha256": "e186a3a3294717e7519f1b92094458abfa5545ebda3d8081828448f92e08df7a"
+    },
+    "frames/toddler-waddle/toddler-waddle-north-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-north-contact-a.png",
+      "sourceSha256": "bdcc3e618f3e7913616b74d59e7bdf572b66e6221ccf1a9ff0008be62042d2d0"
+    },
+    "frames/toddler-waddle/toddler-waddle-north-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/toddler-waddle/toddler-waddle-north-passing-b.png",
+      "sourceSha256": "b68589a2fcd1f8282184ec5188cd6890d91e94913209d0212c4cbd100e3118ad"
+    },
+    "frames/child-walk/child-walk-south-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-south-contact-a.png",
+      "sourceSha256": "ab57c6891850b40041087e946e513b10e07533f8cfd90d8a46635fa60489126e"
+    },
+    "frames/child-walk/child-walk-south-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-south-passing-b.png",
+      "sourceSha256": "d154c301c04811c8e563d048d2753c8ed326fd122fd334ae55ebe9f170989a6c"
+    },
+    "frames/child-walk/child-walk-west-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-west-contact-a.png",
+      "sourceSha256": "5e9b8e1b79ccc5cfa24192d51254bd125286a3ba383f10300fcbffde984f9ccf"
+    },
+    "frames/child-walk/child-walk-west-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-west-passing-b.png",
+      "sourceSha256": "6c370ee0788229beeb9b85bbee6a3c2991e8fee1e95d822919da82e2e452eab9"
+    },
+    "frames/child-walk/child-walk-east-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-east-contact-a.png",
+      "sourceSha256": "268a0c937e8b880f7c403a83d0ba1b268365f9296f3b0db246494d6892ac67a0"
+    },
+    "frames/child-walk/child-walk-east-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-east-passing-b.png",
+      "sourceSha256": "cb0a6f6bc9b4188f0c9f1fdc9399a58f184a1b6c30f6f61f269f1e31fc716f1d"
+    },
+    "frames/child-walk/child-walk-north-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-north-contact-a.png",
+      "sourceSha256": "01fe9fe2402b40feef774119b5a1e367859bac2f33052d82bcfd30092ce74045"
+    },
+    "frames/child-walk/child-walk-north-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/child-walk/child-walk-north-passing-b.png",
+      "sourceSha256": "8f200aebe395a3a0145bf978aa9ea24a3a4b0a008899b7cadb31a7b1fb7e073b"
+    },
+    "frames/teen-walk/teen-walk-south-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-south-contact-a.png",
+      "sourceSha256": "b17fe21802c92f392354a421b31a9062c3a455d01a716232d8739c1481057bbf"
+    },
+    "frames/teen-walk/teen-walk-south-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-south-passing-b.png",
+      "sourceSha256": "248912263695979548a015013897e690a4ed67b82e9a2ec244d66695017b2d29"
+    },
+    "frames/teen-walk/teen-walk-west-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-west-contact-a.png",
+      "sourceSha256": "037b58076eadf69b43f1705a6e92e7a23684d1fa56bf91849827a25065f5c982"
+    },
+    "frames/teen-walk/teen-walk-west-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-west-passing-b.png",
+      "sourceSha256": "de44d9934cf62deabd93fcf8c23de2ab35d1d8434e0dba4a7edbb296d19d1ec6"
+    },
+    "frames/teen-walk/teen-walk-east-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-east-contact-a.png",
+      "sourceSha256": "7d58471e50fdfff5c313fde9e073c6e4062bddf204b89d8d9d0df08a73180978"
+    },
+    "frames/teen-walk/teen-walk-east-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-east-passing-b.png",
+      "sourceSha256": "26f0d342c9840417851d377865b35a3d1e75746d92d011d0cb966e5e59171ab4"
+    },
+    "frames/teen-walk/teen-walk-north-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-north-contact-a.png",
+      "sourceSha256": "60de4d797e7f020996412deea5a2084d19beb295fa6db29476a3a1ebcc28723b"
+    },
+    "frames/teen-walk/teen-walk-north-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/teen-walk/teen-walk-north-passing-b.png",
+      "sourceSha256": "7f3eea9d7b7e8759858078a11552eb40192d9720c6b1733dd962806fb905931e"
+    },
+    "frames/adult-walk/adult-walk-south-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-south-contact-a.png",
+      "sourceSha256": "542437fc0bd9f483249e17c17308d33618a8a06f0cf504631062865fca283833"
+    },
+    "frames/adult-walk/adult-walk-south-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-south-passing-b.png",
+      "sourceSha256": "3b11859513ea21339b12777a7b3ecaf5465a16adee79adf4a1f7b67ad5d3e1d9"
+    },
+    "frames/adult-walk/adult-walk-west-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-west-contact-a.png",
+      "sourceSha256": "262fb370d84ff6e5156130f084c5b33369c61e37ee2f14f24356b265cbe20d68"
+    },
+    "frames/adult-walk/adult-walk-west-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-west-passing-b.png",
+      "sourceSha256": "8570f584fe1e6f693747ed4b7f05a63180a205cfea65b666f498f9f526d0bc97"
+    },
+    "frames/adult-walk/adult-walk-east-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-east-contact-a.png",
+      "sourceSha256": "33ebd93ca3b7a8e7af14a1151918211644aa49df520bdf19a4b52cf972f041fc"
+    },
+    "frames/adult-walk/adult-walk-east-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-east-passing-b.png",
+      "sourceSha256": "c7ca15c5b6bede73e4b33730075b0c365b0a6edc817f14d67f69e3c152689645"
+    },
+    "frames/adult-walk/adult-walk-north-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-north-contact-a.png",
+      "sourceSha256": "70c172dc9b7018928eebdfed8858374c4b3717b752da8c615778bc9e6f3e96ff"
+    },
+    "frames/adult-walk/adult-walk-north-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/adult-walk/adult-walk-north-passing-b.png",
+      "sourceSha256": "92ed6585b43157c6861015c00fdeae58303dd0b4ef642b365022a5e218ae28b1"
+    },
+    "frames/elder-woman-walk/elder-woman-walk-south-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-south-contact-a.png",
+      "sourceSha256": "adb569ec61be27b751e17b0c33e4c7865c51ccedb87276161a129cfced58b59a"
+    },
+    "frames/elder-woman-walk/elder-woman-walk-south-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-south-passing-b.png",
+      "sourceSha256": "4d30a85d8b595865f53c4c92efc97432ef98dd7049ae1df33cf82caa31c0da94"
+    },
+    "frames/elder-woman-walk/elder-woman-walk-west-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-west-contact-a.png",
+      "sourceSha256": "6c9e73a9d01985886256a20d815a5ea00969c399d8d823039292775132dbbb4f"
+    },
+    "frames/elder-woman-walk/elder-woman-walk-west-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-west-passing-b.png",
+      "sourceSha256": "204515f6e99f0dfb6ddae294294d3c8d2319e4b24e6b7f98519cde9506e3c865"
+    },
+    "frames/elder-woman-walk/elder-woman-walk-east-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-east-contact-a.png",
+      "sourceSha256": "e6fe6542018b63266137573ee355129c7b7018be04f953bc973c840bab69c3fb"
+    },
+    "frames/elder-woman-walk/elder-woman-walk-east-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-east-passing-b.png",
+      "sourceSha256": "0c2d219d28b079907426b49711565a37bd1476a79d762064decb554b6af9fa5f"
+    },
+    "frames/elder-woman-walk/elder-woman-walk-north-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-north-contact-a.png",
+      "sourceSha256": "80b2373774f2edd1706fbe81bfc9dba7d4ec757421dd099f88f789997d8090d1"
+    },
+    "frames/elder-woman-walk/elder-woman-walk-north-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-woman-walk/elder-woman-walk-north-passing-b.png",
+      "sourceSha256": "81bdc40cdc57076406edef02af9d6ad8ead5f898fe56573b2d71419e34f23988"
+    },
+    "frames/elder-man-walk/elder-man-walk-south-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-south-contact-a.png",
+      "sourceSha256": "1924dd073b53a472337d38b0d9bfac2a311eb408faa487fb322ad96c7e064846"
+    },
+    "frames/elder-man-walk/elder-man-walk-south-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-south-passing-b.png",
+      "sourceSha256": "9a69fd9cb4216c1a76e9f5cd03a2eedab4fc9bf5f06733555d3584ac3e055100"
+    },
+    "frames/elder-man-walk/elder-man-walk-west-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-west-contact-a.png",
+      "sourceSha256": "1a06a21954d6d14958a4c576786c8957d1a27063d058177c9c9a810a13bca7cb"
+    },
+    "frames/elder-man-walk/elder-man-walk-west-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-west-passing-b.png",
+      "sourceSha256": "3fe916b41b0e7dcd872e34ddba49da4b907273f41e4266d9ef48c54b8ccfa2c3"
+    },
+    "frames/elder-man-walk/elder-man-walk-east-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-east-contact-a.png",
+      "sourceSha256": "77b2720a59682042100fa1857e897a90574bba1b15f4e2849b82ea42bd4172cf"
+    },
+    "frames/elder-man-walk/elder-man-walk-east-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-east-passing-b.png",
+      "sourceSha256": "b967e4f97a385d02eb0b689d287ae9962803ff254357f2441884f60a5ea531ad"
+    },
+    "frames/elder-man-walk/elder-man-walk-north-idle.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-north-contact-a.png",
+      "sourceSha256": "b1ce91ac88b142789c381d8697a66152df29adfe87d8d6c82ed7f7ed63472c58"
+    },
+    "frames/elder-man-walk/elder-man-walk-north-interact.png": {
+      "sourceFrame": "apps/player/assets/pixel/original/directional-age-refine-v1/frames/elder-man-walk/elder-man-walk-north-passing-b.png",
+      "sourceSha256": "ea582a518ad7a705d3e393032076612b57fe5fa1835722358b103510521a37c1"
+    }
+  },
+  "limitations": [
+    "These are one-frame pose studies, not animation timing, collision, or interaction logic.",
+    "The body silhouettes are reused from directional-age-refine-v1 and require an artist pass for anatomy, clothing continuity, and identity matching.",
+    "Infant and toddler gestures are intentionally limited to care-safe play, reaching, and waving cues; no adult-coded content is implied.",
+    "No runtime atlas registration or renderer acceptance is implied."
+  ]
+}

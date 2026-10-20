@@ -1,0 +1,276 @@
+{
+  "id": "crowd-store-clerk-elder-movement-age-v1",
+  "role": "store-clerk",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older worker or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.store-clerk",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/store-clerk/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "store-clerk/elder/south/walk-a",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/store-clerk/elder/store-clerk-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fb573a49ad06cd69e5da60fa23b073b579d58f1679cc656eb9b3f5c2278c137e",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-south-walk-a.png",
+      "sourceSha256": "1195d18f3e15df6dfd47b16dbc4d7300c0da18d78b6ba28a89b6d1e29ec74869",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/south/walk-b",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/store-clerk/elder/store-clerk-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "28ab5926365a16e159ba22615bf2006d1d61e4a8ee89c3d08f07f9da1cc41ce0",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-south-walk-b.png",
+      "sourceSha256": "04c398f4f8bd2e98ccaeea8bad42fc8fd75fd0752016366e719558baf29f5293",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/south/idle",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/store-clerk/elder/store-clerk-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "565d213732396ee8d03fc8b536fff81f0dd3919b5ef87d65e57cb1cfb9590ce9",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-south-idle.png",
+      "sourceSha256": "600da981e0f55db27028141d1283b0f3a93baac21cabc7cf69a40c344ff2541a",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/west/walk-a",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/store-clerk/elder/store-clerk-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c91eee8f43b83354a6a86505a635a90a3fccf0f3b8db786f9a2d114aa295ceb6",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-west-walk-a.png",
+      "sourceSha256": "6c42105facbadbe7dec12f372c74a1318417c674d5534b33b38cccbbcb9d6075",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/west/walk-b",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/store-clerk/elder/store-clerk-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "431fe013e05a6eb626f007cd7753e2cc65066f5a82fa200c06c4d0bf2ea300d1",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-west-walk-b.png",
+      "sourceSha256": "c4f13204891003811d50b0481f5eb7dca9e7ee5e17b66c6f76c9ea6b40dcd2b4",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/west/idle",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/store-clerk/elder/store-clerk-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "51b017708f762e9d86477cc2364178afaf58fe71a05e618395a98507508bb151",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-west-idle.png",
+      "sourceSha256": "0fa7309cbfaca83ab21acf96b1522b91c7c21f9f4add5763da1735a357aaf4a2",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/east/walk-a",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/store-clerk/elder/store-clerk-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dbad90d0afccee3651198e22bc625fb0fe0c833662e5581dac90fcb8eee784e0",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-east-walk-a.png",
+      "sourceSha256": "e1182b10170392407bfce0cfad1fdbcc9367d095f27609a7a61da554018cc670",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/east/walk-b",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/store-clerk/elder/store-clerk-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5a2025d97a553a2354c0bf45c9109faa535a7e3003d95f4626eb1d666d3e7f82",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-east-walk-b.png",
+      "sourceSha256": "1d03d4e9892a29d8678d00d71e097182a136e7cfb0f7d0f31e7648b2628e4f2f",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/east/idle",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/store-clerk/elder/store-clerk-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1260a8d5a679115fc5293f24187179d5fdf989feb6c0f728648a6ec2e2c30099",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-east-idle.png",
+      "sourceSha256": "d5c8da17799668cc7403d47e90e9a71b42bddf49df7a50a2df3b09a345db9e25",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/north/walk-a",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/store-clerk/elder/store-clerk-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "07146acaf04c49647476ba9ad94410999a0615a422fdb5f09031596221603c02",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-north-walk-a.png",
+      "sourceSha256": "1e33d51e11f1ec40673d4d526edb644e263b885dda8e8a599ed4b1abfbf895c7",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/north/walk-b",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/store-clerk/elder/store-clerk-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9234f7ad16585c36778820c5e8eb99a253b858be24e47571a5348aa005fcdd4d",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-north-walk-b.png",
+      "sourceSha256": "aaadddbc734d4ada62dfb41be691c717ac68307d8d624554d10b2b14b9544df2",
+      "runtimeReady": false
+    },
+    {
+      "id": "store-clerk/elder/north/idle",
+      "role": "store-clerk",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/store-clerk/elder/store-clerk-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "887ab902c91d3cbf0b097debb34b079512e917fd76bf6cd0af453ae099c27c4d",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/store-clerk/store-clerk-north-idle.png",
+      "sourceSha256": "4f6c578e7c205cffd75f5ff357394d00a494ee3dd5e0d6fe896564e6f253f26f",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

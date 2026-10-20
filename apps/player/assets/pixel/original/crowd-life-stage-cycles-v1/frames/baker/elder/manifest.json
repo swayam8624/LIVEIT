@@ -1,0 +1,276 @@
+{
+  "id": "crowd-baker-elder-movement-age-v1",
+  "role": "baker",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older worker or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.baker",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/baker/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "baker/elder/south/walk-a",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/baker/elder/baker-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7cd2e520846f89f333d1cc3172786fb977746d1de2bcf4b0de8df4616b6e8116",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-south-walk-a.png",
+      "sourceSha256": "d10c410ae77844eabec7ed8250360a3c3d4e197bc46fc2120dc7cb11bea3b1af",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/south/walk-b",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/baker/elder/baker-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "13835ca5b6106f14c3c6116c78adf0a27adf61f8c38c69dd773d7d45b03b74e7",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-south-walk-b.png",
+      "sourceSha256": "0cc450a17561eaa1f9a81056ab4668dca074e0fe91445900f4b3c2e638474964",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/south/idle",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/baker/elder/baker-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1fa83ca6ed16c0aa6fc6191a2a25c4f48256b37173045693e1ae2fb901132c40",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-south-idle.png",
+      "sourceSha256": "73bc131db4472c7cbe848ea29c856c925528ac109ee8c1dcf14d7807c6b14802",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/west/walk-a",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/baker/elder/baker-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7c4ef38bbfcc9e9bcd96d970c70b2430d35d3b1d04f69ddb7c99a20c0a7be704",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-west-walk-a.png",
+      "sourceSha256": "7f644e9a0bc72fa9354394c3566e54cf9cd76271402f32cbd9e9787e4e5b5fda",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/west/walk-b",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/baker/elder/baker-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9f0b2c4257c9b793595da1a40a47e931972aab77f70ba4a54ffb95182ca01d2b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-west-walk-b.png",
+      "sourceSha256": "f21f0c71d7ff457789e751d4ac7c71e2213336238208855fdb9e288167765c84",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/west/idle",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/baker/elder/baker-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "df465f11fe11a27ba0e2935549de0444c733ee8e2f5b2e35776deffc337bc866",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-west-idle.png",
+      "sourceSha256": "5dca45baa2e7a61037fd6bd0af5ba1591ac3b0f6a1628c3d772d2452dd01dea8",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/east/walk-a",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/baker/elder/baker-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cf43bf34978750d5a91d8346139907de58c820df2752be6bcd55099b0737a4f1",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-east-walk-a.png",
+      "sourceSha256": "d84b9af76dbaf101ba6cf6c491a3a08482c60703b98450c65c6f7458895062da",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/east/walk-b",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/baker/elder/baker-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "48c4db4a9e0a516d2f79bffbe4c5d8031cb107e2860218491952d6d617faf9de",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-east-walk-b.png",
+      "sourceSha256": "a6b43780bc4f5a1c1b41f8f6625c566170fa745cb7b9acf46bfe5aaefe1ab7f7",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/east/idle",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/baker/elder/baker-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4bf58bd92282d2bc8ca4b35d7ba57f544cb8174f31d6368d15ee18feb08ac507",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-east-idle.png",
+      "sourceSha256": "69f064cc04740d9092462f88b92c42d2879c6f82190062cd6668920df0422a32",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/north/walk-a",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/baker/elder/baker-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ebf135f9c6ededdb15a1795009f6c93d907b6e9b9eb5d22f78330a123c8b1d40",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-north-walk-a.png",
+      "sourceSha256": "46bc4de8be2f9814293f3e6f96ddf8741bc4296d47281ab089a6d7b92470a0a4",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/north/walk-b",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/baker/elder/baker-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a78bf8a07e76725841c644d89d17849a3228878421001f250d6bb1d393d622b6",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-north-walk-b.png",
+      "sourceSha256": "81072d368252f3bcf83dbc40b97e9a68abf08bad39361ccd496a4b67836c7695",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/elder/north/idle",
+      "role": "baker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/baker/elder/baker-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e9090942741731639367f825a36fb9c02adae38fa6db0f4471ba78d3d62b16a1",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-north-idle.png",
+      "sourceSha256": "cf93749d87c91d8f4a2434e37fbfc1abba62a6bd64c7665152dbca9e504d520c",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

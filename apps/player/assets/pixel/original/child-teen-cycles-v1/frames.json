@@ -1,0 +1,594 @@
+{
+  "schemaVersion": 1,
+  "assetId": "child-teen-cycles-v1",
+  "source": "child-teen-cycles-source.png",
+  "atlas": {
+    "file": "child-teen-cycles-atlas.png",
+    "width": 384,
+    "height": 1024,
+    "columns": 4,
+    "rows": 8,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "order": "phase columns; child south/west/east/north rows then teen south/west/east/north rows"
+  },
+  "frames": [
+    {
+      "stage": "child",
+      "direction": "south",
+      "phase": 1,
+      "file": "frames/child-south-phase-01.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "south",
+      "phase": 2,
+      "file": "frames/child-south-phase-02.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "south",
+      "phase": 3,
+      "file": "frames/child-south-phase-03.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "south",
+      "phase": 4,
+      "file": "frames/child-south-phase-04.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "west",
+      "phase": 1,
+      "file": "frames/child-west-phase-01.png",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "west",
+      "phase": 2,
+      "file": "frames/child-west-phase-02.png",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "west",
+      "phase": 3,
+      "file": "frames/child-west-phase-03.png",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "west",
+      "phase": 4,
+      "file": "frames/child-west-phase-04.png",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "east",
+      "phase": 1,
+      "file": "frames/child-east-phase-01.png",
+      "x": 0,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "east",
+      "phase": 2,
+      "file": "frames/child-east-phase-02.png",
+      "x": 96,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "east",
+      "phase": 3,
+      "file": "frames/child-east-phase-03.png",
+      "x": 192,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "east",
+      "phase": 4,
+      "file": "frames/child-east-phase-04.png",
+      "x": 288,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "north",
+      "phase": 1,
+      "file": "frames/child-north-phase-01.png",
+      "x": 0,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "north",
+      "phase": 2,
+      "file": "frames/child-north-phase-02.png",
+      "x": 96,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "north",
+      "phase": 3,
+      "file": "frames/child-north-phase-03.png",
+      "x": 192,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "child",
+      "direction": "north",
+      "phase": 4,
+      "file": "frames/child-north-phase-04.png",
+      "x": 288,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "south",
+      "phase": 1,
+      "file": "frames/teen-south-phase-01.png",
+      "x": 0,
+      "y": 512,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "south",
+      "phase": 2,
+      "file": "frames/teen-south-phase-02.png",
+      "x": 96,
+      "y": 512,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "south",
+      "phase": 3,
+      "file": "frames/teen-south-phase-03.png",
+      "x": 192,
+      "y": 512,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "south",
+      "phase": 4,
+      "file": "frames/teen-south-phase-04.png",
+      "x": 288,
+      "y": 512,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "west",
+      "phase": 1,
+      "file": "frames/teen-west-phase-01.png",
+      "x": 0,
+      "y": 640,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "west",
+      "phase": 2,
+      "file": "frames/teen-west-phase-02.png",
+      "x": 96,
+      "y": 640,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "west",
+      "phase": 3,
+      "file": "frames/teen-west-phase-03.png",
+      "x": 192,
+      "y": 640,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "west",
+      "phase": 4,
+      "file": "frames/teen-west-phase-04.png",
+      "x": 288,
+      "y": 640,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "east",
+      "phase": 1,
+      "file": "frames/teen-east-phase-01.png",
+      "x": 0,
+      "y": 768,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "east",
+      "phase": 2,
+      "file": "frames/teen-east-phase-02.png",
+      "x": 96,
+      "y": 768,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "east",
+      "phase": 3,
+      "file": "frames/teen-east-phase-03.png",
+      "x": 192,
+      "y": 768,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "east",
+      "phase": 4,
+      "file": "frames/teen-east-phase-04.png",
+      "x": 288,
+      "y": 768,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "north",
+      "phase": 1,
+      "file": "frames/teen-north-phase-01.png",
+      "x": 0,
+      "y": 896,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "north",
+      "phase": 2,
+      "file": "frames/teen-north-phase-02.png",
+      "x": 96,
+      "y": 896,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "north",
+      "phase": 3,
+      "file": "frames/teen-north-phase-03.png",
+      "x": 192,
+      "y": 896,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "stage": "teen",
+      "direction": "north",
+      "phase": 4,
+      "file": "frames/teen-north-phase-04.png",
+      "x": 288,
+      "y": 896,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated directional movement concept; requires pixel cleanup, collision-box review, and renderer validation."
+      ]
+    }
+  ],
+  "runtimeReady": false
+}

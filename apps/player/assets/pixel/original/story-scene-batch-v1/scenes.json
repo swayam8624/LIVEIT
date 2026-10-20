@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "batchId": "story-scene-batch-v1",
+  "createdAt": "2026-10-20",
+  "artDirection": "2D pixel-only; original visual language; no third-party pack references",
+  "assets": [
+    {
+      "id": "scene.bellweather-cafe-reunion",
+      "file": "bellweather-cafe-reunion-flat-concept-v1.png",
+      "kind": "flat-concept-plate",
+      "dimensions": { "width": 1672, "height": 941 },
+      "sha256": "b87d1e42d94bd91a86c5c60b4667dadac8c397eda4c72bf5158b9654232c4866",
+      "staging": {
+        "dialogueDockSafeRegion": {
+          "x": 0.2,
+          "y": 0.72,
+          "width": 0.6,
+          "height": 0.22
+        },
+        "narrationSafeRegion": {
+          "x": 0.35,
+          "y": 0.04,
+          "width": 0.3,
+          "height": 0.18
+        },
+        "actors": [
+          {
+            "role": "speaker-left",
+            "anchor": { "x": 0.29, "y": 0.56 },
+            "facing": "right"
+          },
+          {
+            "role": "speaker-right",
+            "anchor": { "x": 0.69, "y": 0.55 },
+            "facing": "left"
+          }
+        ],
+        "camera": "wide-establishing; keep table lamp near visual center"
+      },
+      "quality": {
+        "concept": true,
+        "runtimeReady": false,
+        "observed": [
+          "crisp pixel clusters",
+          "readable two-person staging",
+          "warm/cool contrast",
+          "dialogue-safe lower center"
+        ],
+        "needs": [
+          "clean layered redraw",
+          "actor sprite separation",
+          "crop testing",
+          "animation and accessibility review"
+        ]
+      },
+      "provenance": {
+        "method": "built-in imagegen",
+        "prompt": "Use case: illustration-story\nAsset type: original 2D retro pixel-art dialogue background plate for a mobile life-simulation game\nPrimary request: Bellweather Café reunion at blue hour, a gorgeous original scene plate with no text and no logos. Two original adult characters sit across a small round café table near a rain-streaked window, one on the left in a rust coat, one on the right in a teal sweater; their faces and hands are readable at pixel scale, with a warm tea lamp and two cups between them. Background has cozy brick, hanging plants, chalkboard shapes without legible writing, soft reflections, and a deep rainy street outside.\nScene/backdrop: intimate neighborhood café interior, designed for a visual-novel dialogue scene\nSubject: two original people in quiet reunion, body language open but cautious\nStyle/medium: hand-authored-looking 2D pixel art, crisp hard-edged clusters, restrained 16-bit palette, no anti-aliasing, no gradients, rich tileable texture, cinematic composition\nComposition/framing: 16:9 wide establishing plate, characters staged left and right with a clean darker lower-center area for a dialogue dock; keep the upper center and lower center free of text; foreground table edge gives depth\nLighting/mood: warm amber practical light against cool indigo rain, tender, reflective, hopeful\nColor palette: indigo, slate blue, warm amber, rust, teal, cream highlights\nMaterials/textures: brick, rainy glass, wood, ceramic, leafy silhouettes, subtle dithering\nText (verbatim): \"\"\nConstraints: original visual language, no copied characters, no third-party asset references, no readable text, no watermark, no UI, no speech bubbles, no border\nAvoid: photorealism, 3D render, vector art, smooth painterly edges, blurry pixels, extra characters, duplicated limbs, malformed hands, logos"
+      }
+    },
+    {
+      "id": "scene.riverside-promise-dusk",
+      "file": "riverside-promise-dusk-flat-concept-v1.png",
+      "kind": "flat-concept-plate",
+      "dimensions": { "width": 1672, "height": 941 },
+      "sha256": "98e39877d576f014927e0079cfd501767f10f47611cd98f4cce435ff5da04ec4",
+      "staging": {
+        "dialogueDockSafeRegion": {
+          "x": 0.2,
+          "y": 0.75,
+          "width": 0.6,
+          "height": 0.18
+        },
+        "narrationSafeRegion": {
+          "x": 0.04,
+          "y": 0.1,
+          "width": 0.38,
+          "height": 0.28
+        },
+        "actors": [
+          {
+            "role": "speaker-left",
+            "anchor": { "x": 0.66, "y": 0.55 },
+            "facing": "right"
+          },
+          {
+            "role": "speaker-right",
+            "anchor": { "x": 0.75, "y": 0.58 },
+            "facing": "left"
+          }
+        ],
+        "camera": "wide-establishing; preserve left river and sky for narration"
+      },
+      "quality": {
+        "concept": true,
+        "runtimeReady": false,
+        "observed": [
+          "strong dusk palette",
+          "clear umbrella silhouette",
+          "reflective wet paving",
+          "left narration space"
+        ],
+        "needs": [
+          "clean layered redraw",
+          "actor sprite separation",
+          "rain parallax",
+          "crop testing",
+          "animation and accessibility review"
+        ]
+      },
+      "provenance": {
+        "method": "built-in imagegen",
+        "prompt": "Use case: illustration-story\nAsset type: original 2D retro pixel-art dialogue background plate for a mobile life-simulation game\nPrimary request: rainy riverside promise at dusk, an intimate original story scene plate with no text and no logos. Two original adult characters stand under one clear umbrella on a quiet riverwalk, one holding a small folded paper promise, their silhouettes close but not touching. Wet paving stones reflect rose and violet sky, reeds and river lights frame them, a distant footbridge creates depth, and the lower-center foreground remains dark and calm for a dialogue dock.\nScene/backdrop: Bellweather riverside promenade after rain, designed for a visual-novel dialogue scene\nSubject: two original people making a difficult hopeful promise\nStyle/medium: hand-authored-looking 2D pixel art, crisp hard-edged clusters, restrained 16-bit palette, no anti-aliasing, no gradients, painterly composition translated into deliberate pixel clusters, subtle dithering\nComposition/framing: 16:9 wide establishing plate, characters grouped slightly right of center beneath the umbrella, open negative space on the left for narration, clean lower-center zone for dialogue UI\nLighting/mood: violet dusk, rose horizon, cool rain, tender and unresolved\nColor palette: plum, indigo, muted rose, river teal, pale gold highlights, dark charcoal\nMaterials/textures: wet stone, rippling water, transparent umbrella, reeds, bridge lights, reflective puddles\nText (verbatim): \"\"\nConstraints: original visual language, no copied characters, no third-party asset references, no readable text, no watermark, no UI, no speech bubbles, no border\nAvoid: photorealism, 3D render, vector art, smooth painterly edges, blurry pixels, extra characters, duplicated limbs, malformed hands, logos"
+      }
+    }
+  ]
+}

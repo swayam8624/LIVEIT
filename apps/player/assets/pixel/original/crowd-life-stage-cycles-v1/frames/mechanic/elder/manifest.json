@@ -1,0 +1,276 @@
+{
+  "id": "crowd-mechanic-elder-movement-age-v1",
+  "role": "mechanic",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older mechanic or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.mechanic",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/mechanic/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "mechanic/elder/south/walk-a",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/mechanic/elder/mechanic-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "067e460d08f9317d47486212a1267917c248829a7ef5891b717fccb2a3741f1f",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/front/walk-a.png",
+      "sourceSha256": "8e0ee51daed4ebe04d57ec527d1438ebb5050399b969ae8ec1ddba1d202a7e6a",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/south/walk-b",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/mechanic/elder/mechanic-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d35a7ccc334b6e1c60b63c59b9953c7d4e40bcfc730342e98f560084d11d448b",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/front/walk-b.png",
+      "sourceSha256": "b904e954316b409092fb62d5b3e534ce92d0754a388228f5c446aa80a0b8d8c4",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/south/idle",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/mechanic/elder/mechanic-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d558aced428c22a64870caad4d78c3762237c7220b9bb44ecbc99e3f54903328",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/front/idle.png",
+      "sourceSha256": "8204601c7b1db43c048c3f79fc85224b71c9b1cd84487118e36f3022e59b2f9c",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/west/walk-a",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/mechanic/elder/mechanic-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e0064d8cbafa02c37ca9a60572526ffc1fd6dd745c6dda72bc0b3eaba911e3c6",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/left/walk-a.png",
+      "sourceSha256": "91310f2f86ee14cbc8217d6cc48b8dac64231b7eb4b4205d8b42f9daa8e2c95c",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/west/walk-b",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/mechanic/elder/mechanic-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4c4d9f011c9391d050dce40211ae287c22248513a017b6eac775c8f55fb00839",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/left/walk-b.png",
+      "sourceSha256": "9e782fd22fa9a4087788e4f942b8f935986a599f4fcc52f6813b7b3af2dfc78d",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/west/idle",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/mechanic/elder/mechanic-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1fef994b16037f1983f0f4a2edf983ebf9e272951cc752a54e3d9a5f85b28958",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/left/idle.png",
+      "sourceSha256": "f6a8cf4b043427763d1494e0f805f4d5be6b83a84c84c36e148869a50a471c6b",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/east/walk-a",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/mechanic/elder/mechanic-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0617234771c58b16bfef4750287efbb8d451a1e2f297f7739593f4adfed59863",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/right/walk-a.png",
+      "sourceSha256": "67bce5a6de06cd9c9c3b49557004435c0c062db6c580196fa32a55e21d5c8535",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/east/walk-b",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/mechanic/elder/mechanic-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8d344d8bde4869429dca2954d6c5a596aaf10e7ca568d20bbbe8089eb46d0504",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/right/walk-b.png",
+      "sourceSha256": "17661e8e3076f2a5215c11c6191d90074ea4c857ec07376cb5e28e2fd683f2c8",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/east/idle",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/mechanic/elder/mechanic-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "91794187f42bf52b71860c94b5c6906e507c2c155ba186236ac07c82926ba608",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/right/idle.png",
+      "sourceSha256": "1a6834c380af837c8db94177f6b8955b97a030e10bb2eece2dce45efe01f7ae2",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/north/walk-a",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/mechanic/elder/mechanic-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1e62b3b2db68dad28d25a4c7a0fefe2676c45c563f821b8214add4b0ac06329e",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/back/walk-a.png",
+      "sourceSha256": "05c1d6c32eedb2b0e57fdeab8a456c9b656f5879caedf713853c52186b34316e",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/north/walk-b",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/mechanic/elder/mechanic-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4baafb5e9fbd8ad33e7493c3e568639d6bf4d431c9171820a663973020746021",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/back/walk-b.png",
+      "sourceSha256": "b5e96ace4069b59c1c8ef3139d0362e4a341206de2542bbf596faaab8d885fe6",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/elder/north/idle",
+      "role": "mechanic",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older mechanic or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/mechanic/elder/mechanic-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "252fb0514f6e4d3ecfb5679faa38432b562bd250eac9a1a4d97448ea40ffc74b",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/back/idle.png",
+      "sourceSha256": "8c9d2872326c95048b3de1a019c3b996aa6cbc8ada4eafdb2838d6e5599765bd",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

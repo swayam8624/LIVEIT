@@ -1,0 +1,237 @@
+{
+  "id": "crowd-caregiver-movement-v3",
+  "role": "caregiver",
+  "label": "caregiver",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+  "description": "rose apron, soft scarf, and roomy care tote with hand wipes",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "caregiver/south/walk-a",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/caregiver/caregiver-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "64f3cc2b52bd79394834e24c0aac2ec8385933f5f460589dc1ec1ca8cff5d2a0",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/south/walk-b",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/caregiver/caregiver-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d35950e8be49b262fd5fb379483d892cbbe84184a890899b308b22e37cdfe3ad",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/south/idle",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/caregiver/caregiver-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5b715be53b182020e43df2ddc8347bc82940848fce49058ea7349c6a956b31c1",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/west/walk-a",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/caregiver/caregiver-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "acfad546f74d253ef65f4b4fb6c49f1c679adadf745f332dd71ea624ab827bfe",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/west/walk-b",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/caregiver/caregiver-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0266ea868872d169379a25dcb1413c5ae6eb2dab398a39b3bc0bc00114bcd231",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/west/idle",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/caregiver/caregiver-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "42d529cea96eec0335b21b2d98d2336f27d9267480fa73f050f4e6acd53c0b54",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/east/walk-a",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/caregiver/caregiver-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d44099c13d2ce196a7c4348628dfe1eb131b90a78ed4c807fcde60ee2abfe6a9",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/east/walk-b",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/caregiver/caregiver-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "35f51eeca2180f1063d4aac038aebae9962e19f08e84c48f8eae50eae525b872",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/east/idle",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/caregiver/caregiver-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "54ad7cddf6e9b8ad5db2a5fcc8a006341f85fa66b372359807adadb28af3b740",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/north/walk-a",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/caregiver/caregiver-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1db6f916be0df8ec208ccdfb72ce0637d93872fcf3b2825c3661164d3527a5b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/north/walk-b",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/caregiver/caregiver-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0200d7210c7fbca499199fb3a7db260ee69477e8f4f41335f50077222edd59ab",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/north/idle",
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/caregiver/caregiver-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ec4bf9a0e6f2dee79e0f43d1fba5421d120300fed42a63688a6c0017daa88bd6",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/caregiver/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "85800ae66efa3c6b499b65cd595a125267cfacbda366b32d1134f0de0d1d0506",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/caregiver/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "a7382e71f685a95ef66b6417a5e364736f23c80857ecfb5357c0a63519ad0447",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

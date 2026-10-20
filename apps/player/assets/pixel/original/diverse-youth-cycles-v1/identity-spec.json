@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "profiles": {
+    "child-mika": {
+      "stage": "child",
+      "description": "small, springy child with round curls, coral hoodie and teal shoes",
+      "skin": [128, 78, 57, 255],
+      "skin_hi": [166, 104, 76, 255],
+      "hair": [37, 27, 31, 255],
+      "hair_hi": [71, 42, 43, 255],
+      "top": [210, 86, 91, 255],
+      "top_hi": [245, 122, 105, 255],
+      "bottom": [218, 166, 62, 255],
+      "shoe": [36, 151, 146, 255],
+      "shoe_hi": [95, 211, 184, 255],
+      "accent": [242, 211, 93, 255],
+      "bag": [38, 102, 116, 255],
+      "height": 22,
+      "head_w": 8,
+      "hair_shape": "curls",
+      "phase_sway": 0
+    },
+    "teen-ravi": {
+      "stage": "teen",
+      "description": "tall teen with side-swept auburn hair, slate jacket, orange trousers and messenger bag",
+      "skin": [177, 119, 83, 255],
+      "skin_hi": [215, 153, 109, 255],
+      "hair": [93, 47, 37, 255],
+      "hair_hi": [155, 77, 49, 255],
+      "top": [54, 83, 111, 255],
+      "top_hi": [86, 129, 151, 255],
+      "bottom": [193, 91, 48, 255],
+      "shoe": [43, 48, 63, 255],
+      "shoe_hi": [104, 115, 130, 255],
+      "accent": [232, 183, 67, 255],
+      "bag": [92, 54, 76, 255],
+      "height": 26,
+      "head_w": 7,
+      "hair_shape": "sweep",
+      "phase_sway": 1
+    }
+  },
+  "sourcePolicy": "original deterministic pixel clusters; no external art inputs"
+}

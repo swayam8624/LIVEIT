@@ -1,0 +1,1032 @@
+{
+  "schemaVersion": 1,
+  "assetId": "liveit.pixel.pet.cat.age-cycles.v1",
+  "species": "cat",
+  "source": "cat-age-cycles-source.png",
+  "atlas": {
+    "file": "cat-age-cycles-atlas.png",
+    "width": 1152,
+    "height": 512,
+    "columns": 12,
+    "rows": 4,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "order": "age groups young/adult/senior; phase columns contact-a/passing-a/contact-b/passing-b; direction rows south/west/east/north"
+  },
+  "sampling": "nearest-neighbor",
+  "forms": ["young", "adult", "senior"],
+  "frames": [
+    {
+      "id": "cat-young-south-contact-a",
+      "species": "cat",
+      "age": "young",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-young-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "b9fac26f8c48e3d5af7cee1dc1f99925c2311d6d3bc346b59d217b1913f7f890",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-south-passing-a",
+      "species": "cat",
+      "age": "young",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-young-south-passing-a.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "7bd847fbdbadff6b7e230af3e1e6d50cb076e46ff4ea9b2f35b143482973382d",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-south-contact-b",
+      "species": "cat",
+      "age": "young",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-young-south-contact-b.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "d22f2c58f24868cde81f2a70725e6b32d11d4704b8687a005275a2d3842f86fb",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-south-passing-b",
+      "species": "cat",
+      "age": "young",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-young-south-passing-b.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "82bf5d8104bebf27e8f5960ae0e8a7943dd72e95bb2129130ced63851c4a7e13",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-west-contact-a",
+      "species": "cat",
+      "age": "young",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-young-west-contact-a.png",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2635acb07f8b0957f977fec17c19489c1221fcc67cb7b4270c14c66f3642936c",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-west-passing-a",
+      "species": "cat",
+      "age": "young",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-young-west-passing-a.png",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a05ed936440e6047c4f4f60a9bd61ec7d69931f4f77cce6344deeffb1e6c072d",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-west-contact-b",
+      "species": "cat",
+      "age": "young",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-young-west-contact-b.png",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "caa0db3cf102ed95ecd6acd1ce603a0837f1f79dc5dbb9da98a3d279f4aacaba",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-west-passing-b",
+      "species": "cat",
+      "age": "young",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-young-west-passing-b.png",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a40978eba414ae520fd488809fecece11e96e91f7f99d55d29bc87cbee060595",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-east-contact-a",
+      "species": "cat",
+      "age": "young",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-young-east-contact-a.png",
+      "x": 0,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "af0511382006ad0c2bc3fc1d4530becd0fee16963e329edc527990546194085e",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-east-passing-a",
+      "species": "cat",
+      "age": "young",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-young-east-passing-a.png",
+      "x": 96,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a734df799b3e149553819550f7574e2f2dfc5aa47e4bbfda4f85307f7b6e168a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-east-contact-b",
+      "species": "cat",
+      "age": "young",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-young-east-contact-b.png",
+      "x": 192,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "03907158132590dbf73bc6fe5640bd14f2c402aa947758c8775ce1a68eff809b",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-east-passing-b",
+      "species": "cat",
+      "age": "young",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-young-east-passing-b.png",
+      "x": 288,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "8841c29499f8a44b681f3e17ecaf950b60e6b6291a285bb274baa2e21e56798e",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-north-contact-a",
+      "species": "cat",
+      "age": "young",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-young-north-contact-a.png",
+      "x": 0,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0c4f6d4064925a4aa2127fd10f619ff434ef7748ebd04767e4ea171831341631",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-north-passing-a",
+      "species": "cat",
+      "age": "young",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-young-north-passing-a.png",
+      "x": 96,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "e4d9ea71f315e748ed1cdb4ff3ae1e04868117577a441b55de80c50c6cc14a33",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-north-contact-b",
+      "species": "cat",
+      "age": "young",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-young-north-contact-b.png",
+      "x": 192,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "90b26a87f8a973ffdbe5ec6b3de9df108c75684f6cbf222d3fc1a558ffba850b",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-young-north-passing-b",
+      "species": "cat",
+      "age": "young",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-young-north-passing-b.png",
+      "x": 288,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "1017e2e7d849476272f604079915abdec5ed8df5e7c57e440f125bb244906546",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-south-contact-a",
+      "species": "cat",
+      "age": "adult",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-adult-south-contact-a.png",
+      "x": 384,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "700c8abe94a63c01fbeca409ccc64df744614572a9de018c108ff67d2f68108a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-south-passing-a",
+      "species": "cat",
+      "age": "adult",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-adult-south-passing-a.png",
+      "x": 480,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "d8fbcc38dd51dee42cf261f8b94573df7861d2f0ba19907bcfbb070deb90e1a9",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-south-contact-b",
+      "species": "cat",
+      "age": "adult",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-adult-south-contact-b.png",
+      "x": 576,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "c656a942a497bc5f11230f88efb5a92ae4ab10462bb108df47326396f3e6c56f",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-south-passing-b",
+      "species": "cat",
+      "age": "adult",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-adult-south-passing-b.png",
+      "x": 672,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "752a6bb1e51f15a20c23cba2ee7d2a2a05def13c40f7b26034538718b9bcf776",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-west-contact-a",
+      "species": "cat",
+      "age": "adult",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-adult-west-contact-a.png",
+      "x": 384,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "dc8fde4b91f203bb40a6f42a7f311200a926f911f3bc07636b4fc7e867440355",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-west-passing-a",
+      "species": "cat",
+      "age": "adult",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-adult-west-passing-a.png",
+      "x": 480,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "1747511ab2db79526d6474890a32a74d1dd7832fa2f1319cbddfa43c7c9711ab",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-west-contact-b",
+      "species": "cat",
+      "age": "adult",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-adult-west-contact-b.png",
+      "x": 576,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "abaae9c4077af4c3bcbd982f0cc0b0244e6a448c7c1aa2815437dc6f639da9db",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-west-passing-b",
+      "species": "cat",
+      "age": "adult",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-adult-west-passing-b.png",
+      "x": 672,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "4c52bc72c53ee5606c51363924d4659c2cfd6921b83246be4cd11ab7a274375b",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-east-contact-a",
+      "species": "cat",
+      "age": "adult",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-adult-east-contact-a.png",
+      "x": 384,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "ef4d6555966cbba587ed6883486578000f5cf0455d9f3d1281596988d3815b02",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-east-passing-a",
+      "species": "cat",
+      "age": "adult",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-adult-east-passing-a.png",
+      "x": 480,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "18299126a7e2df862b333b348d0a462c8ca7a7ae1663cde19d73f963e0650089",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-east-contact-b",
+      "species": "cat",
+      "age": "adult",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-adult-east-contact-b.png",
+      "x": 576,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0a92a979caed1aa04f8695994c48fc6f01d6c898602dbb9aa6e12593ce0ef04f",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-east-passing-b",
+      "species": "cat",
+      "age": "adult",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-adult-east-passing-b.png",
+      "x": 672,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a12701e4e6c03b71b8ddb4991431356fc550b1125de961c49baca2ff13cf602d",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-north-contact-a",
+      "species": "cat",
+      "age": "adult",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-adult-north-contact-a.png",
+      "x": 384,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0155ca98076816fcb96917e492d44b0ae74a3447aadfa40fe979ab72cbcf09a1",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-north-passing-a",
+      "species": "cat",
+      "age": "adult",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-adult-north-passing-a.png",
+      "x": 480,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a0965365f80346d17dd8809f3d64ff30440667ce111d972ceaa271d299b91351",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-north-contact-b",
+      "species": "cat",
+      "age": "adult",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-adult-north-contact-b.png",
+      "x": 576,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "d56b858c3b432e107cd25be38d4bb3679e49cf866242dccc63b816b148a989c0",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-adult-north-passing-b",
+      "species": "cat",
+      "age": "adult",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-adult-north-passing-b.png",
+      "x": 672,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "c97012f5ce49597d18c6193ded5b4acff915b8478f5fd5042460e1e904d0418b",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-south-contact-a",
+      "species": "cat",
+      "age": "senior",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-senior-south-contact-a.png",
+      "x": 768,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "00bf95a868ca169be30b6ba88b06d669f1af8a11096b65616e0f07f8b4a4acdc",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-south-passing-a",
+      "species": "cat",
+      "age": "senior",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-senior-south-passing-a.png",
+      "x": 864,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "81e12f0efd0ad2ecae42f6e978c6431683caad4cef4a1e4da93f43707dc0bb4a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-south-contact-b",
+      "species": "cat",
+      "age": "senior",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-senior-south-contact-b.png",
+      "x": 960,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "d30e59fb2c527462215e581ffea21696909ec27363a0a9b32cd9ad9ed88d8f2a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-south-passing-b",
+      "species": "cat",
+      "age": "senior",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-senior-south-passing-b.png",
+      "x": 1056,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "d8f4cde560cf313982e99b1699bac26c34097f26098b3517f9a1389b90796339",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-west-contact-a",
+      "species": "cat",
+      "age": "senior",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-senior-west-contact-a.png",
+      "x": 768,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2ba0b35b3e3fb94acf64fb1d1407f412c85c9b983fc01552b36298ff5ced0b50",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-west-passing-a",
+      "species": "cat",
+      "age": "senior",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-senior-west-passing-a.png",
+      "x": 864,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "10bc966fc871ef620a48e81a0abb7a3f554e4873955d5e83983c60a3360df8fd",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-west-contact-b",
+      "species": "cat",
+      "age": "senior",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-senior-west-contact-b.png",
+      "x": 960,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "b6ae474c86cc3b6a64f38340ad5fb7a30649ee1c904a0a76f8074c4a44b6c507",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-west-passing-b",
+      "species": "cat",
+      "age": "senior",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-senior-west-passing-b.png",
+      "x": 1056,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "e5bb9b2f25ccb8a619d2ed3fd4d3ed149cab4748a78d542372782161032cd6ce",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-east-contact-a",
+      "species": "cat",
+      "age": "senior",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-senior-east-contact-a.png",
+      "x": 768,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "cd2afd72842687c05480449102d25a4dba45de040250d9658ae24d0511fa98db",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-east-passing-a",
+      "species": "cat",
+      "age": "senior",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-senior-east-passing-a.png",
+      "x": 864,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "7c09a970c2c0bc455e8f66270567f9612aab99b62c4ccdec4ac177b3ed66897a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-east-contact-b",
+      "species": "cat",
+      "age": "senior",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-senior-east-contact-b.png",
+      "x": 960,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a64d6458105cd63348294276697a25f1441067d1613c017ddfe211e7c8257a12",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-east-passing-b",
+      "species": "cat",
+      "age": "senior",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-senior-east-passing-b.png",
+      "x": 1056,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "c8674b1dd06e5a16d59f3d8b273cd7ca979e1faea18addcdba63ae42c73f87f1",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-north-contact-a",
+      "species": "cat",
+      "age": "senior",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/cat/cat-senior-north-contact-a.png",
+      "x": 768,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "00bf95a868ca169be30b6ba88b06d669f1af8a11096b65616e0f07f8b4a4acdc",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-north-passing-a",
+      "species": "cat",
+      "age": "senior",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/cat/cat-senior-north-passing-a.png",
+      "x": 864,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "81e12f0efd0ad2ecae42f6e978c6431683caad4cef4a1e4da93f43707dc0bb4a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-north-contact-b",
+      "species": "cat",
+      "age": "senior",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/cat/cat-senior-north-contact-b.png",
+      "x": 960,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "d30e59fb2c527462215e581ffea21696909ec27363a0a9b32cd9ad9ed88d8f2a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "cat-senior-north-passing-b",
+      "species": "cat",
+      "age": "senior",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/cat/cat-senior-north-passing-b.png",
+      "x": 1056,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "d8f4cde560cf313982e99b1699bac26c34097f26098b3517f9a1389b90796339",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    }
+  ],
+  "runtimeReady": false,
+  "sourceSha256": "6841831525cc567ab1bcdf72b2c7e51e91b39fbbad54837dd8998ef39293c129",
+  "atlasSha256": "6841831525cc567ab1bcdf72b2c7e51e91b39fbbad54837dd8998ef39293c129",
+  "previewSha256": "30efcd376926ce605f81e7aa1ed4bb5b5c63ebde30c6993c628d2730115a5cdb"
+}

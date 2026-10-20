@@ -1,0 +1,36 @@
+{
+  "role": "library-visitor",
+  "label": "library-visitor",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.library-visitor",
+  "description": "plum cardigan, amber glasses, canvas library tote",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/library-visitor/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "child",
+      "manifest": "frames/library-visitor/child/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "teen",
+      "manifest": "frames/library-visitor/teen/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "adult",
+      "manifest": "frames/library-visitor/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/library-visitor/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 48,
+  "runtimeReady": false
+}

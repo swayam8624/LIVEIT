@@ -1,0 +1,41 @@
+{
+  "schema": "liveit.pixel.provenance.v1",
+  "batch": "life-arc-early-cycles-v1",
+  "rights": "Original concept art generated for LIVEIT; no supplied ZIP or third-party art used.",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "mode": "generate",
+    "transparentBackground": true,
+    "sourceSheetsPreserved": true,
+    "exactPrompts": "prompts.md"
+  },
+  "identityReferences": [
+    "../player-age-arc-diverse-v1/infant-crawler.png",
+    "../player-age-arc-diverse-v1/toddler.png",
+    "../player-age-arc-diverse-v1/child.png",
+    "../player-age-arc-diverse-v1/teen.png"
+  ],
+  "stages": [
+    {
+      "id": "infant-crawl",
+      "source": "infant-crawl/infant-crawl-source.png",
+      "reference": "../player-age-arc-diverse-v1/infant-crawler.png"
+    },
+    {
+      "id": "toddler-waddle",
+      "source": "toddler-waddle/toddler-waddle-source.png",
+      "reference": "../player-age-arc-diverse-v1/toddler.png"
+    },
+    {
+      "id": "child-walk",
+      "source": "child-walk/child-walk-source.png",
+      "reference": "../player-age-arc-diverse-v1/child.png"
+    },
+    {
+      "id": "teen-walk",
+      "source": "teen-walk/teen-walk-source.png",
+      "reference": "../player-age-arc-diverse-v1/teen.png"
+    }
+  ],
+  "runtimeReady": false
+}

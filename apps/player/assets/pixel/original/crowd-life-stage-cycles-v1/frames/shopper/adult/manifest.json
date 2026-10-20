@@ -1,0 +1,276 @@
+{
+  "id": "crowd-shopper-adult-movement-age-v1",
+  "role": "shopper",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "adult shopper",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.shopper",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/shopper/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "shopper/adult/south/walk-a",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/shopper/adult/shopper-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "537f7ddec69a42ad41cb86aee4bc65e525aadab987e1d9bea036cc91404328e1",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/front/walk-a.png",
+      "sourceSha256": "537f7ddec69a42ad41cb86aee4bc65e525aadab987e1d9bea036cc91404328e1",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/south/walk-b",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/shopper/adult/shopper-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d6f3b9f2920bf769d4797dc2677eb0ab4ef22e110409d8f4e523ba7824a8376e",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/front/walk-b.png",
+      "sourceSha256": "d6f3b9f2920bf769d4797dc2677eb0ab4ef22e110409d8f4e523ba7824a8376e",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/south/idle",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/shopper/adult/shopper-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "388b3dc75cb828fdca2eb7d59f63926b0237c3390ccc7fa049229692fb0d13ec",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/front/idle.png",
+      "sourceSha256": "388b3dc75cb828fdca2eb7d59f63926b0237c3390ccc7fa049229692fb0d13ec",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/west/walk-a",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/shopper/adult/shopper-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f0c408eb131edc72d7eed5ee94d7495b28aeb89242693d27141eb35b5b090770",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/left/walk-a.png",
+      "sourceSha256": "f0c408eb131edc72d7eed5ee94d7495b28aeb89242693d27141eb35b5b090770",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/west/walk-b",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/shopper/adult/shopper-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0ccb9e4aedf762e6ae460fc5ffbfb3a4caf51e06a280ed42b681e8a17f766ec5",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/left/walk-b.png",
+      "sourceSha256": "0ccb9e4aedf762e6ae460fc5ffbfb3a4caf51e06a280ed42b681e8a17f766ec5",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/west/idle",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/shopper/adult/shopper-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8543099060f5727c6fb9f981602f37f308c4bb16825368ee59916488f8815668",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/left/idle.png",
+      "sourceSha256": "8543099060f5727c6fb9f981602f37f308c4bb16825368ee59916488f8815668",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/east/walk-a",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/shopper/adult/shopper-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ba3c005711baa4e80b7cb1ccf519f99b215ae3a27bb27b6ed1300892cf3094d4",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/right/walk-a.png",
+      "sourceSha256": "ba3c005711baa4e80b7cb1ccf519f99b215ae3a27bb27b6ed1300892cf3094d4",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/east/walk-b",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/shopper/adult/shopper-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8ad1ef3118ab6c4f7d62c8f49d363809374b00391d02878af53b42f2ff599f33",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/right/walk-b.png",
+      "sourceSha256": "8ad1ef3118ab6c4f7d62c8f49d363809374b00391d02878af53b42f2ff599f33",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/east/idle",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/shopper/adult/shopper-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8e4e69d7d849910b9fc1f5d48e606d10e3f98009b4bf1414da46f2ba513aecd9",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/right/idle.png",
+      "sourceSha256": "8e4e69d7d849910b9fc1f5d48e606d10e3f98009b4bf1414da46f2ba513aecd9",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/north/walk-a",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/shopper/adult/shopper-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f3254c4f556b6c23c10d34181983f6a8459544c95c65b7fb291bcb8a12612759",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/back/walk-a.png",
+      "sourceSha256": "f3254c4f556b6c23c10d34181983f6a8459544c95c65b7fb291bcb8a12612759",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/north/walk-b",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/shopper/adult/shopper-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "de3b5422d080f933029e7fb602902f5d24ea99e5d6cf6d3b13a7212c65ac9c9b",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/back/walk-b.png",
+      "sourceSha256": "de3b5422d080f933029e7fb602902f5d24ea99e5d6cf6d3b13a7212c65ac9c9b",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/adult/north/idle",
+      "role": "shopper",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult shopper",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/shopper/adult/shopper-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "40567894835df0dc00b609f0b612aefee33fc4aa3b822f857d0cd2eb4bd655b0",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/back/idle.png",
+      "sourceSha256": "40567894835df0dc00b609f0b612aefee33fc4aa3b822f857d0cd2eb4bd655b0",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

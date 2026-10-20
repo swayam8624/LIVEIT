@@ -1,0 +1,267 @@
+{
+  "schema": "liveit.pixel.world-props.v1",
+  "batch": "world-props-home-v1",
+  "style": "original 2D pixel concept art, warm home interior palette",
+  "cell": {
+    "width": 128,
+    "height": 128
+  },
+  "atlas": "home-props-atlas-4x3.png",
+  "preview": "home-props-preview-2x.png",
+  "runtimeReady": false,
+  "source": "source/home-props-original.png",
+  "items": [
+    {
+      "id": "world_prop.home.bed_single",
+      "slug": "bed_single",
+      "description": "single bed with pillow and blanket",
+      "file": "sprites/bed_single.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 0,
+        "row": 0,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.sofa_two_seat",
+      "slug": "sofa_two_seat",
+      "description": "two-seat sofa",
+      "file": "sprites/sofa_two_seat.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 1,
+        "row": 0,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.dining_table_two_chairs",
+      "slug": "dining_table_two_chairs",
+      "description": "small dining table with two chairs",
+      "file": "sprites/dining_table_two_chairs.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 2,
+        "row": 0,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.kitchen_counter_sink",
+      "slug": "kitchen_counter_sink",
+      "description": "kitchen counter, sink, cabinet and utensils",
+      "file": "sprites/kitchen_counter_sink.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 3,
+        "row": 0,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.refrigerator_compact",
+      "slug": "refrigerator_compact",
+      "description": "compact refrigerator",
+      "file": "sprites/refrigerator_compact.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 0,
+        "row": 1,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.bathtub_shower",
+      "slug": "bathtub_shower",
+      "description": "bathtub with shower curtain and shower head",
+      "file": "sprites/bathtub_shower.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 1,
+        "row": 1,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.crib_baby",
+      "slug": "crib_baby",
+      "description": "baby crib with blanket and toy",
+      "file": "sprites/crib_baby.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 2,
+        "row": 1,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.storage_chest",
+      "slug": "storage_chest",
+      "description": "wooden storage chest",
+      "file": "sprites/storage_chest.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 3,
+        "row": 1,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.wardrobe_tall",
+      "slug": "wardrobe_tall",
+      "description": "tall wooden wardrobe",
+      "file": "sprites/wardrobe_tall.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 0,
+        "row": 2,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.floor_lamp",
+      "slug": "floor_lamp",
+      "description": "floor lamp",
+      "file": "sprites/floor_lamp.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 1,
+        "row": 2,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.plant_potted",
+      "slug": "plant_potted",
+      "description": "potted house plant",
+      "file": "sprites/plant_potted.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 2,
+        "row": 2,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "world_prop.home.wall_clock",
+      "slug": "wall_clock",
+      "description": "wall clock",
+      "file": "sprites/wall_clock.png",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "sourceCell": {
+        "column": 3,
+        "row": 2,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    }
+  ]
+}

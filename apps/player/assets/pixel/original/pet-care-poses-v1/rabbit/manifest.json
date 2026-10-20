@@ -1,0 +1,12 @@
+{
+  "id": "pet-care-rabbit-v1",
+  "animal": "rabbit",
+  "source": "rabbit-care-poses-source.png",
+  "atlas": "rabbit-care-poses-atlas-576x128.png",
+  "preview": "rabbit-care-poses-preview-2x.png",
+  "frameSize": [96, 128],
+  "poses": ["idle", "happy", "worried", "sleeping", "care", "recovering"],
+  "frameManifest": "frames.json",
+  "runtimeReady": false,
+  "status": "original concept export; requires art direction, timing, pivots, and engine intake"
+}

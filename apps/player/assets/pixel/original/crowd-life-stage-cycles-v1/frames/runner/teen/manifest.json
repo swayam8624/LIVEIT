@@ -1,0 +1,276 @@
+{
+  "id": "crowd-runner-teen-movement-age-v1",
+  "role": "runner",
+  "ageStage": "teen",
+  "ageBand": "16-19",
+  "ageNote": "late-teen recreational runner",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.runner",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/runner/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "runner/teen/south/walk-a",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/runner/teen/runner-teen-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bb681640a13969a8f16c4d285bff1dcb72e6b9c2792bbe30ce8099a9007f212c",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/walk-a.png",
+      "sourceSha256": "8a61e03bafcd62ccf53b80340ce710655502b159755366cab2cf9e5e2d56aa4d",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/south/walk-b",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/runner/teen/runner-teen-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "93a93715b14f46adf8cb93d22bc2146800275ef5b7c722ff3db8f6d5638c4ff8",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/walk-b.png",
+      "sourceSha256": "65460d18c56c9b69f80fc9e96873edb280898ed70ef1835701ff2878dc1b4bbf",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/south/idle",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/runner/teen/runner-teen-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c882c860b811f6d0e97425813986fc49b964e8a92a03fc5caf764d9511c2bb33",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/idle.png",
+      "sourceSha256": "1cb072b07c86bd785778363c2579a87e56dd9fd20b726390f72e90badd46270f",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/west/walk-a",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/runner/teen/runner-teen-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2dcae7a20601145c3fb8e393c1d169e2c66486fb9efe8be9cf76c26597594a4f",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/walk-a.png",
+      "sourceSha256": "e6e5c0020215c70ceddfda8b5b01855f761ed8820981055a6e8a01d46905a027",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/west/walk-b",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/runner/teen/runner-teen-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bff35f789e23b78d9bd7c169ec7bb7a2cdd36de7f59334f0d94c4642cab9af8f",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/walk-b.png",
+      "sourceSha256": "c41cf2e38e949f7b151f9db38c55179832f85e78a6cfbc07f585a28c552239c4",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/west/idle",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/runner/teen/runner-teen-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1160fa87c130d92133f2a13cc47772e65428075364c6ee3b145ff0d58ed50e54",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/idle.png",
+      "sourceSha256": "fe03dbf260d93f53ae65c5a9affc0cdca1c7e82ff95d7087db86f62c5ba445b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/east/walk-a",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/runner/teen/runner-teen-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "aecd2a18b3fbda559f974d781fa190cebc6f58326dee76498bc3a56c756a1ce5",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/walk-a.png",
+      "sourceSha256": "d0c035ff427d77072c41d0cf3956784fff5f8fecda1301ff516003cdcd5a2676",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/east/walk-b",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/runner/teen/runner-teen-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6a33d18af8e8ef5c69e1a86bad09322b75f9aa7ea17357c6e9ebb0b59801244d",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/walk-b.png",
+      "sourceSha256": "9144dcbffe1553746f3fc9a329e32007cc7421ce0cdff01381f13bce394455bf",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/east/idle",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/runner/teen/runner-teen-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a5e29ed7203e2c7dfe36467e25b2de83851e0fde99415ae41743a9c054f9bed1",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/idle.png",
+      "sourceSha256": "44f578bc1ce7aa9a83d83b289cd0b6a705b89c8ad3a0e17ef171a1e5bc27f6ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/north/walk-a",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/runner/teen/runner-teen-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5c6fbbf4b5e8b36f7d1d37b8a0becacacae2d321f6675eb8e5a1748313270898",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/walk-a.png",
+      "sourceSha256": "fe904c0635d5b9c731e55d7174b57b02301cd8304c05bd1eeb0487614933926e",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/north/walk-b",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/runner/teen/runner-teen-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d5c9fb6605548582a21f5171df2c938745963f6de8027b5206d8de9ba075f794",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/walk-b.png",
+      "sourceSha256": "b231c233aaecd06257ba4f6213cebd8c1f1e0b4072b91a2b219776e676807129",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/teen/north/idle",
+      "role": "runner",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational runner",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/runner/teen/runner-teen-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "34bfcfa160ff68cf62608979bf7c053e80636e0eeeecd3a0a57015ef93692116",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/idle.png",
+      "sourceSha256": "2d3ae99055b10a07ad80a40a163fffcb30919cbebaf02a79462761f9b4110ddd",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

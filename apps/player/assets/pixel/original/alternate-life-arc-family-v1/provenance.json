@@ -1,0 +1,14 @@
+{
+  "tool": "offline deterministic Pillow builder",
+  "license": "original project-owned concept art",
+  "sourcePrompt": "Original pixel-art secondary player family for a top-down ordinary-life simulator: warm olive complexion, auburn hair, mustard scarf, teal satchel, small gold star clip; preserve the cues while changing proportions from infant crawl through toddler, child, teen, young adult, midlife and elder woman/man. Four authored top-down directions, four readable walk phases, idle and reaching interaction, crisp 24x32 RGBA clusters, transparent background, no text, no logos, no mirror flips.",
+  "externalInputs": [],
+  "generatedOutputs": [
+    "manifest.json",
+    "alternate-life-arc-stage-masters.png",
+    "alternate-life-arc-movement-atlas-24x32.png",
+    "alternate-life-arc-pose-atlas-24x32.png",
+    "alternate-life-arc-preview-4x.png"
+  ],
+  "runtimeReady": false
+}

@@ -1,0 +1,14 @@
+{
+  "package": "named-family-age-cycles-v1",
+  "created": "2026-10-20",
+  "creator": "Codex assisted deterministic procedural pixel-art builder",
+  "rights": "Original project working material generated from repository-authored character descriptions; no third-party ZIP, external image, or game artwork used.",
+  "prompt": "Create an original top-down retro pixel family movement-cycle set for Mara Bellweather (adult, midlife, elder), Eli Bellweather (adult, midlife, elder), and Niko Bellweather (child, teen, young adult). Preserve recognizable canonical cues: Mara's natural curls, rust clothing, mustard scarf and tote; Eli's close-cropped hair, glasses, navy work jacket and ochre shirt; Niko's curls/ponytail, cobalt hoodie, orange shoes and backpack. Show visible age progression through posture, height/proportions, hair greying/wrinkles where appropriate, and clothing fit/details. For each identity-stage create four authored cardinal facings, four distinct walk-cycle phases plus neutral idle and friendly age-safe interact. Niko is fully clothed and non-romantic in every stage. Transparent 24x32 RGBA, crisp limited-palette pixels, common feet pivot at (12,31), no text, logos, perspective shadows, 3D, external art or copied assets.",
+  "builder": "build_age_cycles.py",
+  "runtimeReady": false,
+  "limitations": [
+    "Procedural sprite concepts need artist review and motion cleanup.",
+    "Niko's young-adult stage is a modest age progression from the child signature, not a different person.",
+    "Not mapped into runtime atlas loading; catalog IDs are references only."
+  ]
+}

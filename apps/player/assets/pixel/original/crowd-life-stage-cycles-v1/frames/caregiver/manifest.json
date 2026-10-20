@@ -1,0 +1,24 @@
+{
+  "role": "caregiver",
+  "label": "caregiver",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+  "description": "rose apron, soft scarf, and roomy care tote with hand wipes",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/caregiver/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/caregiver/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/caregiver/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

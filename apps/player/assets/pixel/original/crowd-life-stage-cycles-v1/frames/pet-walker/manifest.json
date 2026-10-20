@@ -1,0 +1,24 @@
+{
+  "role": "pet-walker",
+  "label": "pet-walker",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.pet-walker",
+  "description": "",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/pet-walker/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/pet-walker/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/pet-walker/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

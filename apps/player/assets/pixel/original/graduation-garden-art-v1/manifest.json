@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "batch": "graduation-garden-art-v1",
+  "runtimeReady": false,
+  "source": {
+    "file": "source.png",
+    "sha256": "f2a129e841f81a350dacde68af4a40f5bf21d925932f868f425280f6ff1f873e",
+    "dimensions": [1402, 1122],
+    "mode": "RGB"
+  },
+  "records": [
+    {
+      "id": "graduation-garden.logical-pixel-study-48c",
+      "role": "logical-pixel-study-48c",
+      "file": "graduation-garden-pixel-320x256.png",
+      "width": 320,
+      "height": 256,
+      "mode": "RGB",
+      "sha256": "be733860566cf2f3edd47cfa21bf5384cb15a1aaf6480ae032d62da3ac7e9e4d",
+      "runtimeReady": false
+    },
+    {
+      "id": "graduation-garden.detail-concept-export-64c",
+      "role": "detail-concept-export-64c",
+      "file": "graduation-garden-detail-320x256.png",
+      "width": 320,
+      "height": 256,
+      "mode": "RGB",
+      "sha256": "7255bb6b9fd19493a9a7e88793b3467d4822db79796cb55a64f6429de1a5b661",
+      "runtimeReady": false
+    },
+    {
+      "id": "graduation-garden.logical-pixel-study-24c",
+      "role": "logical-pixel-study-24c",
+      "file": "graduation-garden-pixel-24c-320x256.png",
+      "width": 320,
+      "height": 256,
+      "mode": "RGB",
+      "sha256": "de208cc3ccce1f07236369d738f1162f88febf290de6bc4f936a43f61d8f8e36",
+      "runtimeReady": false
+    }
+  ],
+  "limitations": [
+    "One generated graduation courtyard background study; no characters or UI.",
+    "The 160x128 logical version is palette-quantized and nearest-neighbor scaled; verify readability at game scale.",
+    "This is a backdrop concept, not a walkable map, tile set, or layered production scene."
+  ]
+}

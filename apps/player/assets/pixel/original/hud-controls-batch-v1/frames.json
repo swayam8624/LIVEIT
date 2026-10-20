@@ -1,0 +1,245 @@
+{
+  "atlas": "hud-controls-atlas-v1.png",
+  "width": 384,
+  "height": 256,
+  "cellWidth": 64,
+  "cellHeight": 64,
+  "pixelArt": true,
+  "sampling": "nearest",
+  "frames": [
+    {
+      "id": "dpad",
+      "x": 0,
+      "y": 0,
+      "w": 64,
+      "h": 64,
+      "category": "control",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "arrow-up",
+      "x": 64,
+      "y": 0,
+      "w": 64,
+      "h": 64,
+      "category": "control",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "arrow-down",
+      "x": 128,
+      "y": 0,
+      "w": 64,
+      "h": 64,
+      "category": "control",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "arrow-left",
+      "x": 192,
+      "y": 0,
+      "w": 64,
+      "h": 64,
+      "category": "control",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "arrow-right",
+      "x": 256,
+      "y": 0,
+      "w": 64,
+      "h": 64,
+      "category": "control",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "interact-hand",
+      "x": 320,
+      "y": 0,
+      "w": 64,
+      "h": 64,
+      "category": "control",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "enter-door",
+      "x": 0,
+      "y": 64,
+      "w": 64,
+      "h": 64,
+      "category": "navigation",
+      "action": "enter",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "exit-door",
+      "x": 64,
+      "y": 64,
+      "w": 64,
+      "h": 64,
+      "category": "navigation",
+      "action": "exit",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "phone",
+      "x": 128,
+      "y": 64,
+      "w": 64,
+      "h": 64,
+      "category": "navigation",
+      "action": "phone",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "menu",
+      "x": 192,
+      "y": 64,
+      "w": 64,
+      "h": 64,
+      "category": "navigation",
+      "action": "menu",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "minimap-player",
+      "x": 256,
+      "y": 64,
+      "w": 64,
+      "h": 64,
+      "category": "minimap",
+      "marker": "player",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "minimap-npc",
+      "x": 320,
+      "y": 64,
+      "w": 64,
+      "h": 64,
+      "category": "minimap",
+      "marker": "npc",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "minimap-door",
+      "x": 0,
+      "y": 128,
+      "w": 64,
+      "h": 64,
+      "category": "minimap",
+      "marker": "door",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "minimap-transit",
+      "x": 64,
+      "y": 128,
+      "w": 64,
+      "h": 64,
+      "category": "minimap",
+      "marker": "transit",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "status-heart",
+      "x": 128,
+      "y": 128,
+      "w": 64,
+      "h": 64,
+      "category": "life-status",
+      "status": "heart",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "status-energy",
+      "x": 192,
+      "y": 128,
+      "w": 64,
+      "h": 64,
+      "category": "life-status",
+      "status": "energy",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "status-mood",
+      "x": 256,
+      "y": 128,
+      "w": 64,
+      "h": 64,
+      "category": "life-status",
+      "status": "mood",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "status-money",
+      "x": 320,
+      "y": 128,
+      "w": 64,
+      "h": 64,
+      "category": "life-status",
+      "status": "money",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "state-saving",
+      "x": 0,
+      "y": 192,
+      "w": 64,
+      "h": 64,
+      "category": "save-state",
+      "state": "saving",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "state-saved",
+      "x": 64,
+      "y": 192,
+      "w": 64,
+      "h": 64,
+      "category": "save-state",
+      "state": "saved",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "state-error",
+      "x": 128,
+      "y": 192,
+      "w": 64,
+      "h": 64,
+      "category": "save-state",
+      "state": "error",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "state-success",
+      "x": 192,
+      "y": 192,
+      "w": 64,
+      "h": 64,
+      "category": "save-state",
+      "state": "success",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "state-disabled",
+      "x": 256,
+      "y": 192,
+      "w": 64,
+      "h": 64,
+      "category": "save-state",
+      "state": "disabled",
+      "pivot": { "x": 32, "y": 32 }
+    },
+    {
+      "id": "state-focus",
+      "x": 320,
+      "y": 192,
+      "w": 64,
+      "h": 64,
+      "category": "save-state",
+      "state": "focus",
+      "pivot": { "x": 32, "y": 32 }
+    }
+  ]
+}

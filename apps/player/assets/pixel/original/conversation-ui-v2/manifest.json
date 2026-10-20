@@ -1,0 +1,161 @@
+{
+  "schema": "liveit.pixel.conversation-ui.v2",
+  "title": "Conversation and social UI sprite kit",
+  "runtimeReady": false,
+  "license": "CC0-equivalent original procedural artwork by LIVEIT project",
+  "sourcePolicy": "No archive, third-party, or reference image bytes used.",
+  "textPolicy": "All dynamic text is intentionally excluded from images.",
+  "nineSlice": {
+    "sourceSize": [48, 48],
+    "insets": {
+      "left": 16,
+      "top": 16,
+      "right": 16,
+      "bottom": 16
+    },
+    "centerMode": "repeat",
+    "tileFiles": [
+      "nine-slice/incoming-slice-48x48.png",
+      "nine-slice/outgoing-slice-48x48.png",
+      "nine-slice/system-slice-48x48.png",
+      "nine-slice/panel-slice-48x48.png"
+    ]
+  },
+  "atlasConventions": {
+    "origin": "top-left",
+    "integerPixels": true,
+    "nearestNeighbor": true,
+    "stateOrder": ["neutral", "focus", "pressed", "disabled"]
+  },
+  "files": [
+    {
+      "file": "avatars/avatar-frame-states-4x48-atlas.png",
+      "width": 192,
+      "height": 48,
+      "mode": "RGBA",
+      "sha256": "8d7384f663afa68806c4ffe033b8a8b50a2685085029b09ebe4eca7eeb29f6a1",
+      "runtimeReady": false
+    },
+    {
+      "file": "badges/unread-notification-4x24-atlas.png",
+      "width": 96,
+      "height": 24,
+      "mode": "RGBA",
+      "sha256": "e85d8faabf497f476a58c97a1c198111c58abf3e02ba8730a98d66579b748986",
+      "runtimeReady": false
+    },
+    {
+      "file": "controls/close-button-states-4x32-atlas.png",
+      "width": 128,
+      "height": 32,
+      "mode": "RGBA",
+      "sha256": "5f922d7303bbf0757f9bcd3e179d39ed28fadbfef8c63b2f1bae746e8623cf18",
+      "runtimeReady": false
+    },
+    {
+      "file": "controls/consent-button-states-4x32-atlas.png",
+      "width": 128,
+      "height": 32,
+      "mode": "RGBA",
+      "sha256": "a5a2d2a52e2ddfa6a8d3ec48ccd54768612a3533c967ba47f53a5ba8b80cede4",
+      "runtimeReady": false
+    },
+    {
+      "file": "controls/reply-button-states-4x32-atlas.png",
+      "width": 128,
+      "height": 32,
+      "mode": "RGBA",
+      "sha256": "e71479c6dd1b308ab47daef221a030e6072606aacf02bddd6536e43890681335",
+      "runtimeReady": false
+    },
+    {
+      "file": "controls/send-button-states-4x32-atlas.png",
+      "width": 128,
+      "height": 32,
+      "mode": "RGBA",
+      "sha256": "84f61495e1bf37996cdd7591eb84b2f3aed5641c986fc419348feaa5c43b58c7",
+      "runtimeReady": false
+    },
+    {
+      "file": "conversation-ui-preview-2x.png",
+      "width": 512,
+      "height": 320,
+      "mode": "RGBA",
+      "sha256": "93ff35931711be00a0155be37ea2504654667c72565a8138c25e818149dd8338",
+      "runtimeReady": false
+    },
+    {
+      "file": "indicators/typing-dots-3x-21x24-atlas.png",
+      "width": 64,
+      "height": 24,
+      "mode": "RGBA",
+      "sha256": "cedf32c6dd047bf321a153482e2025809d7bb74fd974597548d9faf9a72e8421",
+      "runtimeReady": false
+    },
+    {
+      "file": "nine-slice/incoming-slice-48x48.png",
+      "width": 48,
+      "height": 48,
+      "mode": "RGBA",
+      "sha256": "0837945a71e8cd8670f4278aef9854fdee82ee466d0ea66364319d6eb3fc953e",
+      "runtimeReady": false
+    },
+    {
+      "file": "nine-slice/outgoing-slice-48x48.png",
+      "width": 48,
+      "height": 48,
+      "mode": "RGBA",
+      "sha256": "97d741e8293fbdb523680cb6749b9e2427e02c7944fbf34a61c71af8fa0c50ff",
+      "runtimeReady": false
+    },
+    {
+      "file": "nine-slice/panel-slice-48x48.png",
+      "width": 48,
+      "height": 48,
+      "mode": "RGBA",
+      "sha256": "97d741e8293fbdb523680cb6749b9e2427e02c7944fbf34a61c71af8fa0c50ff",
+      "runtimeReady": false
+    },
+    {
+      "file": "nine-slice/system-slice-48x48.png",
+      "width": 48,
+      "height": 48,
+      "mode": "RGBA",
+      "sha256": "978857ec664912323fa7827d240432a97c945ae7b0a87e03fad9e36de62ea62a",
+      "runtimeReady": false
+    },
+    {
+      "file": "surfaces/incoming-bubble-128x56.png",
+      "width": 128,
+      "height": 56,
+      "mode": "RGBA",
+      "sha256": "544573a59e27e418099d13a72b8fb050cc79a9f9bd040fb8bbc316199a33d774",
+      "runtimeReady": false
+    },
+    {
+      "file": "surfaces/outgoing-bubble-128x56.png",
+      "width": 128,
+      "height": 56,
+      "mode": "RGBA",
+      "sha256": "694d4f379544be7078ee4afae6a8a69c50819248f70024e9c78f97a7b66061f3",
+      "runtimeReady": false
+    },
+    {
+      "file": "surfaces/system-bubble-128x56.png",
+      "width": 128,
+      "height": 56,
+      "mode": "RGBA",
+      "sha256": "a05cc4bed88ceaa322d0ecb420e7ed193c5bbf25b48a54eb8a5e82473d28e80b",
+      "runtimeReady": false
+    },
+    {
+      "file": "symbols/notification-symbols-4x24-atlas.png",
+      "width": 96,
+      "height": 24,
+      "mode": "RGBA",
+      "sha256": "08346f4a0afd9aab5bea65ff31605a3568df8d3961bf143ecde6913633b9bc5d",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeIntegration": "Concept-only package. Requires renderer import, pixel-scale review, and accessibility/state wiring before runtimeReady can change."
+}

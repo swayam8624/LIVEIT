@@ -1,0 +1,276 @@
+{
+  "id": "crowd-child-playground-teen-movement-age-v1",
+  "role": "child-playground",
+  "ageStage": "teen",
+  "ageBand": "16-19",
+  "ageNote": "older youth at play",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/child-playground/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "child-playground/teen/south/walk-a",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/child-playground/teen/child-playground-teen-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4318633b234b05499c239125f650673f79c5ea119a7ecb0f505bdaf7f8a8c1f0",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-south-walk-a.png",
+      "sourceSha256": "e80ef599d57fef0ebb2464194ac2d199a79dd8612ebee3c9851551b5ebcd85a3",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/south/walk-b",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/child-playground/teen/child-playground-teen-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f890a7b65692a1d9b2cfc176591a13bb7369cb48f010f5e45fa7cec64126d247",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-south-walk-b.png",
+      "sourceSha256": "d5fe98972b2ab031432b79e5af3f4b3ef083b81658af1f4e378491d965c92e0c",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/south/idle",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/child-playground/teen/child-playground-teen-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "addbb11ec304073b2f2ad91bef8f82bbd960ee63f6e3d3b5f76a567aaee20304",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-south-idle.png",
+      "sourceSha256": "84249ab5779ee29fc5d0e97498281b6b1677b66426ab0f43ac320251327e5c8b",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/west/walk-a",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/child-playground/teen/child-playground-teen-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bcafff2a7aed044d65513ee9c2165adfb6cc969d6421dbfced289eed2e9494a8",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-west-walk-a.png",
+      "sourceSha256": "00cda72c5e8b3d96ad700b1e05789b702c8accd8fd1df399d17bcbf4f066462a",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/west/walk-b",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/child-playground/teen/child-playground-teen-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1eade5ca91aba89a4c66bfc5acca77c93dfdf978a9872a4ee040089a8b5c575f",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-west-walk-b.png",
+      "sourceSha256": "79af367de0b5f9159f4c6ceda949a641448b5c89ff5de75488f366582e83e6b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/west/idle",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/child-playground/teen/child-playground-teen-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "744bf3b89af9888ec5de49bee1437c84051dff4bffe7da47e6e7332b39eadcb0",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-west-idle.png",
+      "sourceSha256": "7753c8dc7334679a5a6f1ba671bee125040be9ad93f960e987abf221c849a06f",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/east/walk-a",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/child-playground/teen/child-playground-teen-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "30de6c1678b52c7a6722cf676ba07760ca829bfbecbc3d7057d3f07c1045d9b8",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-east-walk-a.png",
+      "sourceSha256": "b532fb73f6807e77f047c18f0377c202197617297acef6873c346632a960e3bb",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/east/walk-b",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/child-playground/teen/child-playground-teen-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f16380990a4f6f30d43407a338fe7e04f614495c10a11959baec75b3a010de5f",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-east-walk-b.png",
+      "sourceSha256": "d4330468f034f08931d9ced2de665aac1d17fb4a6c1b5a447bcbcf61b7b282f9",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/east/idle",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/child-playground/teen/child-playground-teen-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "134dd4d218005d8e34761121e23a93632c9d2c2358923b90dc5f200e1c8dd2a6",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-east-idle.png",
+      "sourceSha256": "b3957884d207694f0d2b3f86e11261976dc26d372667f0095595f3e1212a2b1e",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/north/walk-a",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/child-playground/teen/child-playground-teen-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "158c6c516d9477acc3a44b7ba244401f403287d8e6190261e3aeddb29b6676e0",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-north-walk-a.png",
+      "sourceSha256": "7ce8841a031a6340351236ee09b7bdbfc1042640ce205f9f85daf13a6ee38d46",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/north/walk-b",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/child-playground/teen/child-playground-teen-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ffd746a67135a988622e13c4e6e8841cf3eb74925c987e3b8b0484ddb75dd6d9",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-north-walk-b.png",
+      "sourceSha256": "9003547fd6faa6de0222b7fa6e7179e0292a7bae024961721ae4fe9d69606d99",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/teen/north/idle",
+      "role": "child-playground",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "older youth at play",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/child-playground/teen/child-playground-teen-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fe66f826d24b30833600402a2173fee8d76402e7ee1b2bb303cdcdd2ea3bc954",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/child-playground/child-playground-north-idle.png",
+      "sourceSha256": "9f9c6b2dbec145e44167744de44c7a75dc0c9195ad75ff72a96285d12667e03d",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

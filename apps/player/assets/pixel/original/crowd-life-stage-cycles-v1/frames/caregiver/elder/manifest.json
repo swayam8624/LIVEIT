@@ -1,0 +1,276 @@
+{
+  "id": "crowd-caregiver-elder-movement-age-v1",
+  "role": "caregiver",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older caregiver or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/caregiver/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "caregiver/elder/south/walk-a",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/caregiver/elder/caregiver-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "734bd7da5be17248cb688e72e57e5cb6be1fb25159ae7c699334ab6e51b0a067",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-south-walk-a.png",
+      "sourceSha256": "64f3cc2b52bd79394834e24c0aac2ec8385933f5f460589dc1ec1ca8cff5d2a0",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/south/walk-b",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/caregiver/elder/caregiver-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "feed8a2758e7634b1581ec7777fed8fbe0444035e32fc699e8f425422814cea2",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-south-walk-b.png",
+      "sourceSha256": "d35950e8be49b262fd5fb379483d892cbbe84184a890899b308b22e37cdfe3ad",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/south/idle",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/caregiver/elder/caregiver-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "25424b53f168da9020b3739fd7075bf04a2a453faec0ae8b9520b6ff0ffc57cc",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-south-idle.png",
+      "sourceSha256": "5b715be53b182020e43df2ddc8347bc82940848fce49058ea7349c6a956b31c1",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/west/walk-a",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/caregiver/elder/caregiver-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "282d77b6a303589261be63e7a23b0ad3f3146e9b44409de1896329272e41f9e2",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-west-walk-a.png",
+      "sourceSha256": "acfad546f74d253ef65f4b4fb6c49f1c679adadf745f332dd71ea624ab827bfe",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/west/walk-b",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/caregiver/elder/caregiver-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "63da2e0f3ba64d9c7807c555a50aaabab50cb1b7bd089c29ed088fd763cdeb5c",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-west-walk-b.png",
+      "sourceSha256": "0266ea868872d169379a25dcb1413c5ae6eb2dab398a39b3bc0bc00114bcd231",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/west/idle",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/caregiver/elder/caregiver-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "42ccc091bdea9abac14f7532dbb233429b1549483aa9cc1ecf5f5ba4fbcab92e",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-west-idle.png",
+      "sourceSha256": "42d529cea96eec0335b21b2d98d2336f27d9267480fa73f050f4e6acd53c0b54",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/east/walk-a",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/caregiver/elder/caregiver-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c5247fba0c5c564255beda1a08b54d1d57818c4a90a8dded8b357847766a67fb",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-east-walk-a.png",
+      "sourceSha256": "d44099c13d2ce196a7c4348628dfe1eb131b90a78ed4c807fcde60ee2abfe6a9",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/east/walk-b",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/caregiver/elder/caregiver-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "72957b634dd42a341133b7b8e2ccdb846de1c404414f0bbfa12ddc5becf7457f",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-east-walk-b.png",
+      "sourceSha256": "35f51eeca2180f1063d4aac038aebae9962e19f08e84c48f8eae50eae525b872",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/east/idle",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/caregiver/elder/caregiver-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "831f93728e37b26232722cc01a0a69dcf7486906563a76f47801d399a45390b2",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-east-idle.png",
+      "sourceSha256": "54ad7cddf6e9b8ad5db2a5fcc8a006341f85fa66b372359807adadb28af3b740",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/north/walk-a",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/caregiver/elder/caregiver-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "752c4da1b5381298ce1eb64ced89a86b721269d8fa7e00b84d399de078287852",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-north-walk-a.png",
+      "sourceSha256": "1db6f916be0df8ec208ccdfb72ce0637d93872fcf3b2825c3661164d3527a5b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/north/walk-b",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/caregiver/elder/caregiver-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6d77ee612e585dfef3414614aeee85fcf197bd02566e55a21eb168283c7cc5aa",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-north-walk-b.png",
+      "sourceSha256": "0200d7210c7fbca499199fb3a7db260ee69477e8f4f41335f50077222edd59ab",
+      "runtimeReady": false
+    },
+    {
+      "id": "caregiver/elder/north/idle",
+      "role": "caregiver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older caregiver or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/caregiver/elder/caregiver-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "965747c196cb352d323bf954ef335a197660add8c2b1c58d353bc4261ba36418",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/caregiver/caregiver-north-idle.png",
+      "sourceSha256": "ec4bf9a0e6f2dee79e0f43d1fba5421d120300fed42a63688a6c0017daa88bd6",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

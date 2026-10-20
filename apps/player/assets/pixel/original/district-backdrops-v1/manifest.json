@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "packId": "bellweather-district-backdrops-v1",
+  "generatedAt": "2026-10-20",
+  "generator": "built-in image_gen; nearest-neighbor normalization",
+  "sourcePolicy": "Original fictional concept art. No user ZIP, downloaded art, third-party image reference, logo, or character was used.",
+  "logicalSize": {
+    "width": 320,
+    "height": 256
+  },
+  "dialogueSafeBand": {
+    "top": 204,
+    "height": 52
+  },
+  "runtimeReady": false,
+  "assets": [
+    {
+      "district": "market",
+      "source": "market/market-street-original.png",
+      "sourceDimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "export": "market/market-street-concept-320x256.png",
+      "exportDimensions": {
+        "width": 320,
+        "height": 256
+      },
+      "layoutGuide": "market/market-dialogue-safe-guide-320x256.png",
+      "dialogueSafeBand": {
+        "top": 204,
+        "height": 52
+      },
+      "sha256": {
+        "source": "b9f3554b273afd0d344ad025ec2499278335e9125b8765a1474d5ef08b814945",
+        "export": "d33770d93317db7c4e54ab3755dc9563cfd63b94173a0742ae35dc2f07cbfd81",
+        "layoutGuide": "a6801db0abce2c3f492f0ddd159d7e8661b08c81b67d35b36044a71d4030acbd"
+      },
+      "runtimeReady": false
+    },
+    {
+      "district": "riverside",
+      "source": "riverside/riverside-original.png",
+      "sourceDimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "export": "riverside/riverside-concept-320x256.png",
+      "exportDimensions": {
+        "width": 320,
+        "height": 256
+      },
+      "layoutGuide": "riverside/riverside-dialogue-safe-guide-320x256.png",
+      "dialogueSafeBand": {
+        "top": 204,
+        "height": 52
+      },
+      "sha256": {
+        "source": "2309b5f9041cbe689b45c504baa7105f6889bec294002ec8bd4a68ce4a129804",
+        "export": "118607385ce548d355f92c0e4f1a36106838baafd3fe17b2a5d62a0f4f5bf5ba",
+        "layoutGuide": "a6801db0abce2c3f492f0ddd159d7e8661b08c81b67d35b36044a71d4030acbd"
+      },
+      "runtimeReady": false
+    },
+    {
+      "district": "university",
+      "source": "university/university-quad-source.png",
+      "sourceDimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "export": "university/university-quad-320x256.png",
+      "exportDimensions": {
+        "width": 320,
+        "height": 256
+      },
+      "layoutGuide": "university/university-quad-layout-guide.png",
+      "dialogueSafeBand": {
+        "top": 204,
+        "height": 52
+      },
+      "sha256": {
+        "source": "993b8c4c36010217c964f3f3f44f93ebbd4cf025dbff0060e4cc341c520f84b9",
+        "export": "2275a3c21bf4e3f68bc601bb64d626598105a21b6673d5ebddce846aff379f12",
+        "layoutGuide": "280b71c2f151bc4df60f6a73e4485a740ac12d750692c8716c32ad3f35e6d400"
+      },
+      "runtimeReady": false
+    },
+    {
+      "district": "studio",
+      "source": "studio/studio-district-source.png",
+      "sourceDimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "export": "studio/studio-district-320x256.png",
+      "exportDimensions": {
+        "width": 320,
+        "height": 256
+      },
+      "layoutGuide": "studio/studio-district-layout-guide.png",
+      "dialogueSafeBand": {
+        "top": 204,
+        "height": 52
+      },
+      "sha256": {
+        "source": "2bef5ed7a239829da2120d840d3479b863a4406856d4a2a7f8a362a949ec6ed5",
+        "export": "9c8c546f57857f0b075380ab939192d2c402eb35ecc31563f33d76e1bf5b4d82",
+        "layoutGuide": "280b71c2f151bc4df60f6a73e4485a740ac12d750692c8716c32ad3f35e6d400"
+      },
+      "runtimeReady": false
+    },
+    {
+      "district": "gardens",
+      "source": "gardens/gardens-courtyard-source.png",
+      "sourceDimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "export": "gardens/gardens-courtyard-320x256.png",
+      "exportDimensions": {
+        "width": 320,
+        "height": 256
+      },
+      "layoutGuide": "gardens/gardens-courtyard-layout-guide.png",
+      "dialogueSafeBand": {
+        "top": 204,
+        "height": 52
+      },
+      "sha256": {
+        "source": "1ddfacc753272a05499fac309082212c828dcf0e32e897f62801c5ed93e0bfe6",
+        "export": "e8c9c7d25d612388aa36aa65d8aaf87e12a54e436799a550eec0800431ffc800",
+        "layoutGuide": "280b71c2f151bc4df60f6a73e4485a740ac12d750692c8716c32ad3f35e6d400"
+      },
+      "runtimeReady": false
+    }
+  ],
+  "limitations": [
+    "Concept backdrops and staging guides only; not walkable maps, tile sources, collision, portals, actor layers, or runtime-ready assets.",
+    "Review palette, pixel cluster quality, HUD contrast, and target-device crop before integration."
+  ]
+}

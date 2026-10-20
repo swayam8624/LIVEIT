@@ -40,6 +40,12 @@ import {
 import { OFFICIAL_STORIES } from '@living/content';
 import { pixelArt, actorArt, type PixelArtKey } from './pixelArt';
 import {
+  ameliaLifeArcAtlas,
+  ameliaLifeArcCell,
+  playerLifeArcAtlas,
+  playerLifeArcCell,
+} from './pixelAgeSprites';
+import {
   findTileRoute,
   targetForTap,
   type TilePoint,
@@ -412,6 +418,7 @@ export function ArcadePixelLife({
   const camera = useRef(new Animated.ValueXY()).current;
   const bob = useRef(new Animated.Value(0)).current;
   const frameOffset = useRef(new Animated.Value(0)).current;
+  const ageFrameOffset = useRef(new Animated.Value(0)).current;
   const facingRef = useRef<Facing>('down');
   const localArt = pixelArt as Record<string, ImageSourcePropType>;
   const modernPlayer =
@@ -765,10 +772,22 @@ export function ArcadePixelLife({
             (faceOffset +
               (Math.floor(timestamp / 125) % (modernPlayer ? 6 : 4))),
         );
+        ageFrameOffset.setValue(
+          -48 *
+            (({ down: 0, left: 1, right: 2, up: 3 } as const)[nextFacing] * 4 +
+              (Math.floor(timestamp / 125) % 4)),
+        );
       } else {
         bob.setValue(Math.sin(timestamp / 440) * 0.7);
         frameOffset.setValue(
           modernPlayer ? -TILE * modernSpriteColumn(facingRef.current, 0) : 0,
+        );
+        ageFrameOffset.setValue(
+          -48 *
+            (({ down: 0, left: 1, right: 2, up: 3 } as const)[
+              facingRef.current
+            ] *
+              4),
         );
       }
       // Portal transitions need to be detected by entering a tile, not by
@@ -944,6 +963,7 @@ export function ArcadePixelLife({
     bob,
     camera,
     frameOffset,
+    ageFrameOffset,
     gameKey,
     glow,
     loaded,
@@ -1059,6 +1079,17 @@ export function ArcadePixelLife({
   const ageMonths = Math.floor((world.player.ageDays * 12) / 365);
   const stage = lifeStageOf(world.player.ageDays);
   const ageYears = Math.floor(world.player.ageDays / 365);
+  const playerAgeCell = playerLifeArcCell(
+    world.player.appearance,
+    stage,
+    facing,
+    Math.floor(clock / 125) % 4,
+  );
+  const ameliaAgeCell = ameliaLifeArcCell(
+    stage,
+    'down',
+    4 + (panel === 'talk' && currentNpc === 'amelia' ? 1 : 0),
+  );
   const openChunk = chunkOf(tileWindow.left, tileWindow.top);
   const biome = biomeAt(worldSeed, tileWindow.left, tileWindow.top);
   const dayWithinMonth = Math.min(30, Math.floor(clock / (MONTH_MS / 30)) + 1);
@@ -1311,6 +1342,33 @@ export function ArcadePixelLife({
                 ]}
               />
             </View>
+          ) : ameliaAgeCell ? (
+            <View
+              pointerEvents="none"
+              style={{
+                position: 'absolute',
+                left: npc.x * TILE + 8,
+                top: (npc.y - 1) * TILE,
+                width: 48,
+                height: 64,
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                source={ameliaLifeArcAtlas}
+                resizeMode="stretch"
+                style={[
+                  {
+                    width: 288,
+                    height: 1536,
+                    position: 'absolute',
+                    left: -48 * ameliaAgeCell.phase,
+                    top: -64 * (ameliaAgeCell.row + ameliaAgeCell.direction),
+                  },
+                  crisp,
+                ]}
+              />
+            </View>
           ) : (
             <Image
               source={actorArt(2, 'down')}
@@ -1330,7 +1388,9 @@ export function ArcadePixelLife({
           <Animated.View
             style={[
               s.hero,
-              modernPlayer ? { top: -TILE, height: TILE * 2 } : null,
+              modernPlayer || playerAgeCell
+                ? { top: -TILE, height: TILE * 2 }
+                : null,
               {
                 transform: [
                   ...pose.getTranslateTransform(),
@@ -1342,26 +1402,45 @@ export function ArcadePixelLife({
             <View style={s.heroShadow} />
             <View
               style={{
-                width: TILE,
-                height: modernPlayer ? TILE * 2 : TILE,
+                width: playerAgeCell ? 48 : TILE,
+                height: modernPlayer || playerAgeCell ? TILE * 2 : TILE,
                 overflow: 'hidden',
+                marginLeft: playerAgeCell ? 8 : 0,
               }}
             >
-              <Animated.Image
-                source={
-                  modernPlayer ||
-                  pixelArt[('n1_' + facing + '_sheet') as PixelArtKey]
-                }
-                resizeMode="stretch"
-                style={[
-                  {
-                    width: TILE * (modernPlayer ? 24 : 4),
-                    height: TILE * (modernPlayer ? 2 : 1),
-                    transform: [{ translateX: frameOffset }],
-                  },
-                  crisp,
-                ]}
-              />
+              {playerAgeCell ? (
+                <Animated.Image
+                  source={playerLifeArcAtlas}
+                  resizeMode="stretch"
+                  style={[
+                    {
+                      position: 'absolute',
+                      left: 0,
+                      top: -64 * playerAgeCell.row,
+                      width: 768,
+                      height: 640,
+                      transform: [{ translateX: ageFrameOffset }],
+                    },
+                    crisp,
+                  ]}
+                />
+              ) : (
+                <Animated.Image
+                  source={
+                    modernPlayer ||
+                    pixelArt[('n1_' + facing + '_sheet') as PixelArtKey]
+                  }
+                  resizeMode="stretch"
+                  style={[
+                    {
+                      width: TILE * (modernPlayer ? 24 : 4),
+                      height: TILE * (modernPlayer ? 2 : 1),
+                      transform: [{ translateX: frameOffset }],
+                    },
+                    crisp,
+                  ]}
+                />
+              )}
             </View>
           </Animated.View>
         </Animated.View>
@@ -2619,9 +2698,9 @@ export function ArcadePixelLife({
                   </View>
                 ) : (
                   <Text style={s.help}>
-                    Using the public CC0 pixel character. Install your Modern
-                    Interiors ZIP locally to unlock four additional animated
-                    character sheets; no raw art is uploaded.
+                    Using the bundled CC0 directional character. Original age
+                    studies appear when their age and identity cues fit; other
+                    ages and walking directions use the bundled fallback.
                   </Text>
                 )}
                 <Text style={s.help}>

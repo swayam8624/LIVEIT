@@ -1,0 +1,1032 @@
+{
+  "schemaVersion": 1,
+  "assetId": "liveit.pixel.pet.dog.age-cycles.v1",
+  "species": "dog",
+  "source": "dog-age-cycles-source.png",
+  "atlas": {
+    "file": "dog-age-cycles-atlas.png",
+    "width": 1152,
+    "height": 512,
+    "columns": 12,
+    "rows": 4,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "order": "age groups young/adult/senior; phase columns contact-a/passing-a/contact-b/passing-b; direction rows south/west/east/north"
+  },
+  "sampling": "nearest-neighbor",
+  "forms": ["young", "adult", "senior"],
+  "frames": [
+    {
+      "id": "dog-young-south-contact-a",
+      "species": "dog",
+      "age": "young",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-young-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "c30c867f76055fc3dfa3d75b49aba7daed47813126033887d8c81fe50e38b943",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-south-passing-a",
+      "species": "dog",
+      "age": "young",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-young-south-passing-a.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "ab4f439e0bf054a3df9a61dc95b4a6f7f05123c56c3733e37f5c370c8ddc9c4f",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-south-contact-b",
+      "species": "dog",
+      "age": "young",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-young-south-contact-b.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "41bfa11d85e212328e81e351fff48b05993d2fbfe4e80e8d1a5a1ab302e3f1b3",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-south-passing-b",
+      "species": "dog",
+      "age": "young",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-young-south-passing-b.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2837e18df5edf219c9c1079780f25a14c092aa7a387b297137a38e8eadf2118c",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-west-contact-a",
+      "species": "dog",
+      "age": "young",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-young-west-contact-a.png",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "e2380e6555769ff4a6c226941851570e47cb4c22969142013bfc8aad03aea5dc",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-west-passing-a",
+      "species": "dog",
+      "age": "young",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-young-west-passing-a.png",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a28e86053bb1f9cb0ce2c7edb21a6655bb2b87d6025857dabe19576a4409f58f",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-west-contact-b",
+      "species": "dog",
+      "age": "young",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-young-west-contact-b.png",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "4b641d1052e0a2c658d9826f8376bd9fbc4928301a3dc86c0a1bd28ce8d1ab13",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-west-passing-b",
+      "species": "dog",
+      "age": "young",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-young-west-passing-b.png",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "969a67de815e55db0d7627d1fd54b94e91a66141b3433cd2bbad9374ede66f3b",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-east-contact-a",
+      "species": "dog",
+      "age": "young",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-young-east-contact-a.png",
+      "x": 0,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "18c0a7b2beed6bb12ce83fac301bc03eb6e9440062333a2b0c746278b3861afb",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-east-passing-a",
+      "species": "dog",
+      "age": "young",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-young-east-passing-a.png",
+      "x": 96,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "c445a8e490330f05bb02168068867b44c7852d83ca273457e57dff7816620cbf",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-east-contact-b",
+      "species": "dog",
+      "age": "young",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-young-east-contact-b.png",
+      "x": 192,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "f27d9f36aed87e6bc1f8d538819e2dce0693859ca75f19f163b8c268feb434fa",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-east-passing-b",
+      "species": "dog",
+      "age": "young",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-young-east-passing-b.png",
+      "x": 288,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "f44dc30a3c7e2bb640a15a5aef4e69367a764c070027693090412d633cdf0580",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-north-contact-a",
+      "species": "dog",
+      "age": "young",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-young-north-contact-a.png",
+      "x": 0,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "62e3612b57d3dd81de78d7379f8e6fc73ce7fd04757378056ffa9fe4891a9560",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-north-passing-a",
+      "species": "dog",
+      "age": "young",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-young-north-passing-a.png",
+      "x": 96,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "0ecedfc8d5fd9a554b46afc7df2cda97c5151c6d0f30d7a3f4875d6ac2b361e7",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-north-contact-b",
+      "species": "dog",
+      "age": "young",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-young-north-contact-b.png",
+      "x": 192,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a08eb70623341c360377a01665630150747b5951aeb8e43ce139cd5d849d3f48",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-young-north-passing-b",
+      "species": "dog",
+      "age": "young",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-young-north-passing-b.png",
+      "x": 288,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "3f2a26af49b22a5a23c43b2eb4ddf7bcc2340ee25bdbae4d0735817a77702088",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-south-contact-a",
+      "species": "dog",
+      "age": "adult",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-adult-south-contact-a.png",
+      "x": 384,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "f03ca4a4a8ab455991a05d83b8e7d10a93b9138f6741c0f54955042c0dce4d1f",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-south-passing-a",
+      "species": "dog",
+      "age": "adult",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-adult-south-passing-a.png",
+      "x": 480,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "fdaaeeb5290e0da127039ea6fdd4647359541ad56ea09a800759fea132a78b7c",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-south-contact-b",
+      "species": "dog",
+      "age": "adult",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-adult-south-contact-b.png",
+      "x": 576,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "4f543d5388a2cf1575572d254c31a4b4519239842fe4ec8a47a8145fae020c2d",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-south-passing-b",
+      "species": "dog",
+      "age": "adult",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-adult-south-passing-b.png",
+      "x": 672,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "3f943c3c0ce82e546f8fa190070142ef6eb8bcbf7d7da35f88af5181378f9dca",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-west-contact-a",
+      "species": "dog",
+      "age": "adult",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-adult-west-contact-a.png",
+      "x": 384,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "fdb083d706667ffffc4216b794a5bc9bb459070a30d3e0a97754c6a5a291c12f",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-west-passing-a",
+      "species": "dog",
+      "age": "adult",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-adult-west-passing-a.png",
+      "x": 480,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "fe2922f2913657e0553eaf2aad873b347018dba54c7187190479e3cf1d4ef07d",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-west-contact-b",
+      "species": "dog",
+      "age": "adult",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-adult-west-contact-b.png",
+      "x": 576,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "85e6fdb3fe98b96aef50f860e3048ceef1354b980ff52ef0cfda098e8c6bbee0",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-west-passing-b",
+      "species": "dog",
+      "age": "adult",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-adult-west-passing-b.png",
+      "x": 672,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "fc2f442144eaae4dfc8952b5be26ad184e37ad7c6dd3892ff7f8f12532d3fcb8",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-east-contact-a",
+      "species": "dog",
+      "age": "adult",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-adult-east-contact-a.png",
+      "x": 384,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "3c6f3d59382d087a7ef88950b917077e8d832df844a6ea59767a32d727310487",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-east-passing-a",
+      "species": "dog",
+      "age": "adult",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-adult-east-passing-a.png",
+      "x": 480,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "7c94b208367312f26970c83bc32c5da11713f4ebb3f9a6e2bb61fb2737a5a023",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-east-contact-b",
+      "species": "dog",
+      "age": "adult",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-adult-east-contact-b.png",
+      "x": 576,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "87d511c9a61d6ae0b8169a304e74fd3be9ab58ada952fe4c4cd17d66bc881616",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-east-passing-b",
+      "species": "dog",
+      "age": "adult",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-adult-east-passing-b.png",
+      "x": 672,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "e625591d90127e6da145eb892783d00fe0ec4f16ef2acbb0336c1f786ccc2f00",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-north-contact-a",
+      "species": "dog",
+      "age": "adult",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-adult-north-contact-a.png",
+      "x": 384,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "7584c431ec2dc6357a1257395f4f9034ad9019221d2fa7039e0146d76bd08d28",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-north-passing-a",
+      "species": "dog",
+      "age": "adult",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-adult-north-passing-a.png",
+      "x": 480,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "1aca40f2feecda1d81ce9fe07eef78f3e53b650cf0bb5edcabe48bdd3fe5c7c9",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-north-contact-b",
+      "species": "dog",
+      "age": "adult",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-adult-north-contact-b.png",
+      "x": 576,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "ed2760d0e5369babd75bf3c36613df89ed6dc041ca532ac5bb4895f5bc0739c3",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-adult-north-passing-b",
+      "species": "dog",
+      "age": "adult",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-adult-north-passing-b.png",
+      "x": 672,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "09d43bca31ceb12f9712d0080a170c7fb110a889be2973f788069cf581aa011a",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-south-contact-a",
+      "species": "dog",
+      "age": "senior",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-senior-south-contact-a.png",
+      "x": 768,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "293d99bda7bbb777bfc602b84ed19a3502a4dfd97d42d458878befdf98eabf27",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-south-passing-a",
+      "species": "dog",
+      "age": "senior",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-senior-south-passing-a.png",
+      "x": 864,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a8a4cc78f670332a91e375be4d10c54c7c7604e34644fc18b0d4c4ae9b4b205b",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-south-contact-b",
+      "species": "dog",
+      "age": "senior",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-senior-south-contact-b.png",
+      "x": 960,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2af503708405dda1569cad1dcff5def1d03b8b2246e02bc5b3f1122df75c1689",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-south-passing-b",
+      "species": "dog",
+      "age": "senior",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-senior-south-passing-b.png",
+      "x": 1056,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "99b9937f88ecdeabd0d74fe5b6fb662add143fa87a016fe97cfbf35baea50119",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-west-contact-a",
+      "species": "dog",
+      "age": "senior",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-senior-west-contact-a.png",
+      "x": 768,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "8b88814aa705fa487fd0ba795664c5208b7654551d503ca1602c8e3507e83727",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-west-passing-a",
+      "species": "dog",
+      "age": "senior",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-senior-west-passing-a.png",
+      "x": 864,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "4c296bb0f2bb3ddc3933198f48839276aa8c5a32520d4182205212934cd15e95",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-west-contact-b",
+      "species": "dog",
+      "age": "senior",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-senior-west-contact-b.png",
+      "x": 960,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "26159fb1bee2089bbf56ca666a85bd98004475447a0bd324d2119d504a65552e",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-west-passing-b",
+      "species": "dog",
+      "age": "senior",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-senior-west-passing-b.png",
+      "x": 1056,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "3f21321f41e009e202b070efa11fce057595740185b1f7d220483d225027ab79",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-east-contact-a",
+      "species": "dog",
+      "age": "senior",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-senior-east-contact-a.png",
+      "x": 768,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "477349606db463edf7502af7a144c4da5512282de13a1b8d8e338f9b8abd0afa",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-east-passing-a",
+      "species": "dog",
+      "age": "senior",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-senior-east-passing-a.png",
+      "x": 864,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "567378e4576b55d2b226d2407ba473fc299bedc506cb98e9ac535828a414c522",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-east-contact-b",
+      "species": "dog",
+      "age": "senior",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-senior-east-contact-b.png",
+      "x": 960,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "7e4157986416b9c8836ccf6b3b54bcf459e7fac5d74d275d479379d39649d537",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-east-passing-b",
+      "species": "dog",
+      "age": "senior",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-senior-east-passing-b.png",
+      "x": 1056,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "43665280ff382a244d1d59f4fdf58ecd7c36face89d75a2a64bcb2c2956faa1e",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-north-contact-a",
+      "species": "dog",
+      "age": "senior",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/dog/dog-senior-north-contact-a.png",
+      "x": 768,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "293d99bda7bbb777bfc602b84ed19a3502a4dfd97d42d458878befdf98eabf27",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-north-passing-a",
+      "species": "dog",
+      "age": "senior",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/dog/dog-senior-north-passing-a.png",
+      "x": 864,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "a8a4cc78f670332a91e375be4d10c54c7c7604e34644fc18b0d4c4ae9b4b205b",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-north-contact-b",
+      "species": "dog",
+      "age": "senior",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/dog/dog-senior-north-contact-b.png",
+      "x": 960,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "2af503708405dda1569cad1dcff5def1d03b8b2246e02bc5b3f1122df75c1689",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    },
+    {
+      "id": "dog-senior-north-passing-b",
+      "species": "dog",
+      "age": "senior",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/dog/dog-senior-north-passing-b.png",
+      "x": 1056,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "sha256": "99b9937f88ecdeabd0d74fe5b6fb662add143fa87a016fe97cfbf35baea50119",
+      "runtimeReady": false,
+      "limitations": [
+        "Original pixel study; requires visual cleanup, timing, collision-box review, and renderer intake."
+      ]
+    }
+  ],
+  "runtimeReady": false,
+  "sourceSha256": "c6149540c720df583a50d1b59549246a72855e9526b737e2022cf214e8a4dc14",
+  "atlasSha256": "c6149540c720df583a50d1b59549246a72855e9526b737e2022cf214e8a4dc14",
+  "previewSha256": "6622b201bdb4a4b1fc05145dd68af6690246843e9acd69226433edfb22086692"
+}

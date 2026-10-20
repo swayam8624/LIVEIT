@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-20",
+  "method": "All avatar pixels are drawn from original geometric pixel primitives in build_chat_avatars.py. No reference image pixels, generated images, web assets, source archives, or third-party art are sampled or copied.",
+  "identityPaletteReferences": [
+    {
+      "file": "../player-age-arc-v1/frames.json",
+      "sha256": "056b09e2dd3444a8783730a50d208f4f3e3a5d7b4d0d640b41b326ec8f45dcd9",
+      "role": "age-stage and auburn/teal identity concept notes only; pixels not sampled"
+    },
+    {
+      "file": "../portrait-acting-v1/amelia/frames.json",
+      "sha256": "617b84b79b31a57726bd4b4830d2f09c0914e4d25bdeabd75e6e1fba2c577766",
+      "role": "adult Amelia hair and cream/teal palette concept notes only; pixels not sampled"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "build_chat_avatars.py",
+      "sha256": "f384378185d461bcfa150a69de93bdac287a786734f8cc5487fd4ca5f0455b46"
+    }
+  ],
+  "ageSafety": "All states use everyday, non-romantic interaction cues. Infant and toddler speaking frames are mouth-open babble cues only; no words, intimacy, or adult-coded expression is implied.",
+  "continuityNote": "The seven player rows represent one auburn-haired/teal-accent concept identity across age stages, not the full player appearance-customization range."
+}

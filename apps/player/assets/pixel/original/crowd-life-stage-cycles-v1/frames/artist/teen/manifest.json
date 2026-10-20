@@ -1,0 +1,276 @@
+{
+  "id": "crowd-artist-teen-movement-age-v1",
+  "role": "artist",
+  "ageStage": "teen",
+  "ageBand": "16-19",
+  "ageNote": "late-teen hobby or student artist",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.artist",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/artist/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "artist/teen/south/walk-a",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/artist/teen/artist-teen-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "385133387de6f47ae9152479a1796ac6db197527f220398a1fb3c42b0dc74abd",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/walk-a.png",
+      "sourceSha256": "928a20c49e780d3d60fdd330d6c73b741056eee1db94719142b71c2fbe804cc6",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/south/walk-b",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/artist/teen/artist-teen-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f4725cf61b6b57c6298f176c4f20dbcb7da1566b0992ba496d910894e20b1800",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/walk-b.png",
+      "sourceSha256": "0690b754dd5d7483dec23d5247566f51ee1ae94140848c922369a988f1188362",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/south/idle",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/artist/teen/artist-teen-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d9e136ffa9b951e2414d2395647e9e9f5e69cf12397c136a3fcf4874d95e5925",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/idle.png",
+      "sourceSha256": "d2053ed90e8bb2111ef70a7e17506f8d8103bc25974f26080c883c3c82f56e15",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/west/walk-a",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/artist/teen/artist-teen-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ecf49337651fb1b8e6aaf52b79f99b0e89254386af88d187123c3c6058635399",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/walk-a.png",
+      "sourceSha256": "fc09cbc056466a4c9e92b3e40f22f0ee57a8f9d418be2884e5c2b42503ba026b",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/west/walk-b",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/artist/teen/artist-teen-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4c2bcb3936d7570ede97af64cd31a2fab6b6635f8307d360451080b5c1f65728",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/walk-b.png",
+      "sourceSha256": "7fb7cc7e1e0120d31aa9a37ec3d55f17158057e82e77829c9e1a4f42790c921c",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/west/idle",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/artist/teen/artist-teen-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "61f8c8c90cd2c997f5b77806d1b6a7557bf0c81d51feb0edeafc2a4db2da04b2",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/idle.png",
+      "sourceSha256": "fd63c952fcddeae5de71ee2cd3e0d501fd328f6de83302357b6c3968e15cbfa5",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/east/walk-a",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/artist/teen/artist-teen-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5e5e0061a365c53fd1af2536fe89477ed8eead1f9e56f109a8b10b5d96b83e9d",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/walk-a.png",
+      "sourceSha256": "783f52ae66b696b9fcf16af32be8982bb6a8cd1daf277f89f094b256b463772b",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/east/walk-b",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/artist/teen/artist-teen-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3e11b5efb56c0cdaedd8573161adf87faeee083488b7d33dedeb8743487e1e71",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/walk-b.png",
+      "sourceSha256": "103ebd4229dfc89903c7efc46c1e593cd21c83402d9a2841f499f23b7e6e0067",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/east/idle",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/artist/teen/artist-teen-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e11f86c4dd9350fb27c30e69c24e6b1c8dd43b05e531e20c3c80722871b4381c",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/idle.png",
+      "sourceSha256": "8d47b6bd4f240c5d4b08bcee7aee4f97c50f6e2c223f302bab2e9d19940ba8fa",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/north/walk-a",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/artist/teen/artist-teen-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f8c4851f5ce087b8b7e97bac044487f28f20d6a77d7fe36210dfdee3cef96d65",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/walk-a.png",
+      "sourceSha256": "ec736b38f6b1b9dbf7ba13e3939f4b8185d7aaf3f5dec0e5fad8a2caa62926aa",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/north/walk-b",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/artist/teen/artist-teen-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a5031fa4a1d40377b36dfdaae5c0986226747af388ed0afb13d383adb94c7383",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/walk-b.png",
+      "sourceSha256": "3daa2d6beb40bfad9b3af70194788aafb55028dc2a2b683fe8df5e1ecd017a45",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/teen/north/idle",
+      "role": "artist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen hobby or student artist",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/artist/teen/artist-teen-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "50891247bfedc11f12b213c20f88d1b962c83db071a490f89ed2b108e07d78c4",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/idle.png",
+      "sourceSha256": "7fb67a90f77cf3f21ff4986f493856d8fa8f5f428df59261166524fc06d5262e",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

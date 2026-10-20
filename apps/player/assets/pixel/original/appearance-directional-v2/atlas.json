@@ -1,0 +1,72 @@
+{
+  "size": [384, 256],
+  "scale": 4,
+  "filter": "nearest",
+  "frames": [
+    {
+      "id": "honey_indigo/south",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "source": "composites/honey_indigo/south-24x32.png"
+    },
+    {
+      "id": "honey_indigo/west",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "source": "composites/honey_indigo/west-24x32.png"
+    },
+    {
+      "id": "honey_indigo/east",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "source": "composites/honey_indigo/east-24x32.png"
+    },
+    {
+      "id": "honey_indigo/north",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "source": "composites/honey_indigo/north-24x32.png"
+    },
+    {
+      "id": "deep_russet/south",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "source": "composites/deep_russet/south-24x32.png"
+    },
+    {
+      "id": "deep_russet/west",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "source": "composites/deep_russet/west-24x32.png"
+    },
+    {
+      "id": "deep_russet/east",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "source": "composites/deep_russet/east-24x32.png"
+    },
+    {
+      "id": "deep_russet/north",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "source": "composites/deep_russet/north-24x32.png"
+    }
+  ],
+  "runtimeReady": false
+}

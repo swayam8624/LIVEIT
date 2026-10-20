@@ -1,0 +1,14 @@
+{
+  "sourceType": "original generated concept sheet",
+  "generator": "OpenAI image generation tool",
+  "promptFile": "prompts.md",
+  "userSuppliedReferenceArt": false,
+  "thirdPartyAssets": false,
+  "sourceSha256": "457a3089e410b0a6698908bbf0bbfc3d9b266edf775f06dbf7d345b33be86584",
+  "derivation": "12 transparent 128x128 cells cropped from a 4x3 source sheet; subjects bottom-aligned with pivot (0.5, 1.0); nearest-neighbor 2x preview.",
+  "limitations": [
+    "Generated source is a polished concept sheet, not a final engine-tested sprite pack.",
+    "Edges retain some anti-aliased pixels from generation; a pixel-artist cleanup pass is still required.",
+    "No collision bounds, tile occupancy, draw order, or interaction metadata has been authored."
+  ]
+}

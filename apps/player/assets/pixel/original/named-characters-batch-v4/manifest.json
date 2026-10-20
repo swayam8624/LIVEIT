@@ -1,0 +1,2200 @@
+{
+  "batch": "named-characters-batch-v4",
+  "direction": "PIXEL-ONLY",
+  "runtimeReady": false,
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": [
+    "contact-a",
+    "passing-a",
+    "contact-b",
+    "passing-b",
+    "idle",
+    "interact"
+  ],
+  "characters": [
+    {
+      "id": "shopkeeper",
+      "displayName": "Bellweather shopkeeper",
+      "role": "market shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "silhouette": "wide apron, rolled sleeves, neat side braid",
+      "identityCues": ["red market sash", "small produce basket"],
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse",
+      "displayName": "Bellweather nurse",
+      "role": "community clinic nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "silhouette": "compact scrub tunic, cropped curls, shoulder satchel",
+      "identityCues": ["mint cross badge", "lavender care satchel"],
+      "runtimeReady": false
+    },
+    {
+      "id": "physician",
+      "displayName": "Bellweather physician",
+      "role": "neighborhood physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "silhouette": "tall white coat, dark curls, stethoscope loop",
+      "identityCues": ["coral stethoscope", "teal pen light"],
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker",
+      "displayName": "Bellweather transit worker",
+      "role": "tram and bus operator",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "silhouette": "broad safety jacket, cap, utility belt",
+      "identityCues": ["amber reflective bands", "blue route flag"],
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner",
+      "displayName": "Bellweather cafe owner",
+      "role": "corner cafe owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "silhouette": "rounded apron, wavy bun, coffee towel at hip",
+      "identityCues": ["plum apron", "cream mug and towel"],
+      "runtimeReady": false
+    }
+  ],
+  "frames": [
+    {
+      "id": "shopkeeper/south/contact-a",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/shopkeeper/shopkeeper-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "957989e69ec71c88c38d3102c7674d05c9974dcc8272132df81162de9762acb7",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/south/passing-a",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/shopkeeper/shopkeeper-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e7c505f11d63df24479458c946f09de305fd72995d18f1f04740fddcde7adc96",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/south/contact-b",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/shopkeeper/shopkeeper-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "88eec6517a2b28ec693bf3e1060e289355fade853075f466567bb6f3b1ad1cfd",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/south/passing-b",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/shopkeeper/shopkeeper-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "34bcb477af9c192f0f66be6c596b369c224120822f401e5c6b1cee72ad0c4bc3",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/south/idle",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/shopkeeper/shopkeeper-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "eb2350ebca8dbc86b4c5b93609f563be5bff6b7f1bac4f5cc07f8296e1cf137d",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/south/interact",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/shopkeeper/shopkeeper-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c591a9b703a4ebc8f44368093a71c6fbbcc0bc1a37811be42da2f216dbef56cc",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/west/contact-a",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/shopkeeper/shopkeeper-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2a552956f9c254d71118333e9d17452f755df4f1810efa6e99c70fd4e830b3ec",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/west/passing-a",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/shopkeeper/shopkeeper-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4ab79bf32f6f55b6b57f0f0574495452016c9dec9e8f4aaf9ff0efa4dd3ffddc",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/west/contact-b",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/shopkeeper/shopkeeper-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "11bf7f27b5d00807f06df982801f18db8b3fb9f7213cfc7129086d3a2f99291d",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/west/passing-b",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/shopkeeper/shopkeeper-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "78b9bb8d121b0785ec603496cd9fd6d1c601e741770ff3f465dd0a6b75ef3ca0",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/west/idle",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/shopkeeper/shopkeeper-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b7bfa4a5d3ed42afb21a5e565b58b0268d4dab33791080143a2453effbff15e2",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/west/interact",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/shopkeeper/shopkeeper-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8aaf382a3d4d2399d53a4e10514d70737d183d641420ca200f51b5f252c96d9a",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/east/contact-a",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/shopkeeper/shopkeeper-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9c1a641b7ba5d168204b07609ce2327390471929e07a4b355420ca39e5bc4ebd",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/east/passing-a",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/shopkeeper/shopkeeper-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0e2102f81e54c5c836de881161b13213c60f93fe9af7cd6b2e54c552b84b4d09",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/east/contact-b",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/shopkeeper/shopkeeper-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "eecbf2b823d15c7087abe69bf1a86ae1e2f7aa6a0ffa47e6a640e45af4342b7a",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/east/passing-b",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/shopkeeper/shopkeeper-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1d627fe43490cd731801292f1b5ae98734cdbf7535c07d69a901abd574a5cfae",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/east/idle",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/shopkeeper/shopkeeper-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9658951de374e9180733e445ecf86baa07b122c4f34beab429227382f57d6a0f",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/east/interact",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/shopkeeper/shopkeeper-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e519116f171189b4e2ce85c247a14489f1861f5dd90ce0d4354e35953cde2bc0",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/north/contact-a",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/shopkeeper/shopkeeper-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8da47618fc41125670f4f7be1e97033787ff6a64ceaf19817e3e92c75614fc72",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/north/passing-a",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/shopkeeper/shopkeeper-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "763147d265fdf00b484dac2ebb3cd9e6aa9eace1095330cbf9891ef041226f97",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/north/contact-b",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/shopkeeper/shopkeeper-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e3726e28a9e21fb632ae9d6a3df65f206b2e6c7db4de3c01ba84a5a6e0d5c1c0",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/north/passing-b",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/shopkeeper/shopkeeper-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "720f6d67f9ee6d987b9ede4738ba0b804cd1b3443a16fc4d1c2a82775a5d99eb",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/north/idle",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/shopkeeper/shopkeeper-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bbe726b6aa6124804a31a0b5f10e69a606b0ac6c2387e84ba0f9fef689f0a1d2",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopkeeper/north/interact",
+      "character": "shopkeeper",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.shopkeeper",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/shopkeeper/shopkeeper-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ee934441aefbb5430f458b24bbb534dfa7cc86e0f9373f6be98e12e34584f456",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/south/contact-a",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/nurse/nurse-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "19fcc3ab65afef4e83533995d8c15d8766247e8b385533f3a667beae80a2e4be",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/south/passing-a",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/nurse/nurse-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0e0e24100b1488c1c433899688ed7a2ff3d0d4e5e64ed98dca912d16911ab2f7",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/south/contact-b",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/nurse/nurse-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4368889d1cf654fe42255cbfc18cddc429e7572e80a4abe092d6017c0ac88b3b",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/south/passing-b",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/nurse/nurse-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0d09e3323cf5e8eff1af4a4c68f62d3eac2c86ba6acc889ec94e22a9bb66066a",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/south/idle",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/nurse/nurse-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "37d412f9960470b9357ce27b5a39076dd4ce47c52b04767363fb2ce64cf1e5ee",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/south/interact",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/nurse/nurse-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ed88c5eaa22317b3a56057b4f1cdb4e3cfbebbb5fae51fa45d1063bf2320a070",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/west/contact-a",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/nurse/nurse-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0a9e18433bfef4d5725a55f4032afa51378e8ec19027a3f7f36cd2f7f3b20142",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/west/passing-a",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/nurse/nurse-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b347a9f3180b9746a4c2dfb44935b5444b10f4911462f04313eba5c5e09dd599",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/west/contact-b",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/nurse/nurse-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e2e12bf34cf346af0645b5469b51c2b3e9a43a124e09b08060d4312fed5cd211",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/west/passing-b",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/nurse/nurse-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0d1c047edb2a0b68cc455791927b56a5eb27c53f8d2caf24035da6e08a2d467b",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/west/idle",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/nurse/nurse-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c16b2448b10ebc2d5200cb83a62af77b4a13413e073fda90588f0a247b7bb2a7",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/west/interact",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/nurse/nurse-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bc927c7dd6022005f06d71854871ed1cfc548dd16343ad2e55739caf3adc2275",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/east/contact-a",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/nurse/nurse-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "38f70fa01b127370d2435ffc90590ee14a7dd33c2169d8ae5db8d26217004ae5",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/east/passing-a",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/nurse/nurse-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9e7ca6e7876e26d9076d2ec5ceb0e8a690092e4acbe118cf429031440892f502",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/east/contact-b",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/nurse/nurse-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "803a0688b0fa31d258c7ddea76f9a4031f38c0acdb9acfec08ef18c3e822d74d",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/east/passing-b",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/nurse/nurse-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "448150f6fc6cc5fcc6c211fa8df7844327fc29234efdf39510cc8f8bdf06f0a8",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/east/idle",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/nurse/nurse-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "79b80862d5c0db3b3afcdd97b6e56a907548d4e62ea8c514f5553c6b44d457ae",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/east/interact",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/nurse/nurse-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6fe2c5b27b4536703c3a0aa843ac2847484284dde0bf008254492e876b98467c",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/north/contact-a",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/nurse/nurse-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7e45a661120c7b0b0a5dd877054e87bd2bc4020c5df4dda8f05484d9d5f18481",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/north/passing-a",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/nurse/nurse-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c4b2f5e043767668f69a058644a13435ab27b319b1a02636d7561470e277b9f7",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/north/contact-b",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/nurse/nurse-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7bac207f4f1bfcf624b2463208be532ac60ec7ad3175c535d70b1224a281bfd5",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/north/passing-b",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/nurse/nurse-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d6b7fa830e777392f5bf12eebc09c148ca8f7ab5625955e3cad08e1151b6ad7d",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/north/idle",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/nurse/nurse-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0d050e84b9799c6be0a31411091c5342fb3a688405581b969900557095dab412",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/north/interact",
+      "character": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.nurse",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/nurse/nurse-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fa155bf8e0c8d6743137c0fd15d1a4f7d11e9443a861127b6525ccb8a6455add",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/south/contact-a",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/physician/physician-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d964f9ecd9e1b345b2c7a07653952bf189255c9455ad25380a7262880471b498",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/south/passing-a",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/physician/physician-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ceb3c9e41067ebca4bb314c9cd32c782b637054d80a68eb6c078731e527d2b57",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/south/contact-b",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/physician/physician-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a7559c2626c416ad766fdd9d3767c233a83a5f1c4dbc96c03e567edfe9492f08",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/south/passing-b",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/physician/physician-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "253ff5416b25d26702383b8c1f8b3af1a4bce2de016f035f9ef44faf75bd6599",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/south/idle",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/physician/physician-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "974be9a35bda5d3b25954a825031919eb15ea6cae57557aeb1189d11af68843b",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/south/interact",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/physician/physician-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "08e773ac1cdfaadea0029f35c1577500fb31c131ace313a8f20f0c4973a30d32",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/west/contact-a",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/physician/physician-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0c4f6c45f1c1397f5eabe097b2280beeb5e70241e71000882c8f6f21bd41d9da",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/west/passing-a",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/physician/physician-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "117b5ad7d06c42a0996b687d8b2c22d7daa81998e4b85d7a8fcd93aab311e00c",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/west/contact-b",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/physician/physician-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c4cfd2c158de0db61c676af04819bc3c7c1d9e2741df6cf99bf1e8cb453d1eea",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/west/passing-b",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/physician/physician-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9a2097a97c9edcff843d4c60821fa177f98ca1c4fe3330878353fff47c09ff9f",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/west/idle",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/physician/physician-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1cf55bc454aa1c8008df6bbe51dcee14841ebba1d7cd39735dc39b7e10f38f77",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/west/interact",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/physician/physician-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "36b276336be5d67874e4cd2d9cd4bfc4f39de1357ec5075bf3d794cae5e36b11",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/east/contact-a",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/physician/physician-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c652496643a87dc9929dffc3e22d7dbcdbdc8b01736fa2c8713ec8af24d32743",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/east/passing-a",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/physician/physician-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ebb7cdc3f5cb28329c7fb8be4ede04fd0fb435b377bf98de16027d72f6fd5717",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/east/contact-b",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/physician/physician-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "05a7bdb32ac2830fe8ba6f533e8941b08bb0773b877f1c708e9d6339c4e94af9",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/east/passing-b",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/physician/physician-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "be116325770ecdf5a1f2afa674b0d47b5f21d705ff25fc62d9c1629234368ef5",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/east/idle",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/physician/physician-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "537f1506620c023dbb39512599cedfd6c16d8f3936ca4400eaa73a8c0fa3c630",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/east/interact",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/physician/physician-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2db6c4afeffe24673769d0ab00a22f52816a020d495bc40c66e52529689b7bfb",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/north/contact-a",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/physician/physician-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "adeed47b6d7b0aec9b0f08713bd1dda09cbcb920df7832e72e1ba45ade3c0d7e",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/north/passing-a",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/physician/physician-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d1e3fbb6ca98e468cd41e783c10f1c7330043b31b7da629c914d1763b3a1b739",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/north/contact-b",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/physician/physician-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a6c7703466f9157452368fb1dfd7210e6482dfb6e5185b5808cb903973ba8ba2",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/north/passing-b",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/physician/physician-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b8fe055ee0163310c3665dad2eb22140058ada063c364576c1e49214b7a8aeba",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/north/idle",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/physician/physician-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f26a44149462513444b4197a544e26098f0c78067123f8cbb1b4c6c63cfbbe11",
+      "runtimeReady": false
+    },
+    {
+      "id": "physician/north/interact",
+      "character": "physician",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.physician",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/physician/physician-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2cd81bd8209d3c9fd95cb3fa1ec389e39214275a2486f430fff043a2d1902068",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/south/contact-a",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/transit-worker/transit-worker-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bb5e8d51323dbc12ea63329d586d7d1e81c68d6b42d8be7c0bec9ecceb4666bc",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/south/passing-a",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/transit-worker/transit-worker-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bbf885f74fbd1d4176098304b32824abee8006814f4aed92bbcd5bd284462487",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/south/contact-b",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/transit-worker/transit-worker-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "43eac8200d79b40bfd8186f044116684e4081cbca2a6c88436e6d4a3e9d755d1",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/south/passing-b",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/transit-worker/transit-worker-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7ac148544b1776f85193d665e6d8d6b5e738b57bad6211ec909eff4b3163d736",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/south/idle",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/transit-worker/transit-worker-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "96bdffe10c984540d02820eef9261d0a6bb5ee07edf242bbb6a1f4346b0530bd",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/south/interact",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/transit-worker/transit-worker-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4d254b3dfe9608053ed258721102ec165a56d4457eb1cdc01cc054340b713a4f",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/west/contact-a",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/transit-worker/transit-worker-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d8add19b30416752d995d477a6a4a0e77a0850e2f90e3a86123602c90f48e156",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/west/passing-a",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/transit-worker/transit-worker-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "73c0059124dbfba4777b2cbb30e3c86e5c40668a89068b4f10663ec7e3a976c7",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/west/contact-b",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/transit-worker/transit-worker-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "06101d3407f4d899fd544676333a4eeed01c883b39eefe440318f01f53a0580b",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/west/passing-b",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/transit-worker/transit-worker-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c66c64dd87f6ecd2df60b5d57b6876ca55a19a11538ae550cf4d16179c135b2a",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/west/idle",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/transit-worker/transit-worker-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "16d44c84305bfea7fdac3cc5867901b98c2724babde2fc81cb57a2817a7c099a",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/west/interact",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/transit-worker/transit-worker-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3d562f10fbfe8e59d461cd76cd8a04e7efdd5e387cd1bd62fd8f5a203a8cbd1f",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/east/contact-a",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/transit-worker/transit-worker-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2bca674afcef1ca992585e3a3d36e0ceaf6c970690a3ad46075c40c7cd351e84",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/east/passing-a",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/transit-worker/transit-worker-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5a3484c05f731c23e6db748d6c67e877a89e778927b44757cd927caae9a01efa",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/east/contact-b",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/transit-worker/transit-worker-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5949cd67b14cb773161c063061b7be70d73acc5c3b80ec7874298ed32a77b1c3",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/east/passing-b",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/transit-worker/transit-worker-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8a0e11f82a0645dd5a655f84821964df2fe4a629b8c92c2ed86f99afb74b15c2",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/east/idle",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/transit-worker/transit-worker-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b54fb512729fda21920b7086a191be4e061c436fbd81d23c8b00f680463066ad",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/east/interact",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/transit-worker/transit-worker-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1f3dff6ebe984333aa9edd951d91224c97c61ac17aa7f021ab19dc880dbc89d1",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/north/contact-a",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/transit-worker/transit-worker-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "100a9e9000292cae3e5b801a81721a31223f47f0cc5c00f710c68ad6ecf44753",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/north/passing-a",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/transit-worker/transit-worker-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8806aca7799ff8dfb841a2d35a2c5f1f1f14e61d8a8438123dca8c20817404f9",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/north/contact-b",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/transit-worker/transit-worker-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1c1710b4d6a5072e414592a817e6c0be255b7cc48d6590698ed40e176a8ebfdd",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/north/passing-b",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/transit-worker/transit-worker-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0dfe961eb126df8f67854d6a1a26beb92f30f9c9d3cc0d05e9a1617b71d778c7",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/north/idle",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/transit-worker/transit-worker-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d19e57104f84d0f98056902489368e8b4d98732f61f55b226d9d8fe45c9d6d6d",
+      "runtimeReady": false
+    },
+    {
+      "id": "transit-worker/north/interact",
+      "character": "transit-worker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.transit-worker",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/transit-worker/transit-worker-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8ca3eceb5af5834a912a2bce6d630870b1f10380019f7c9cd2966d8c1dab9fa7",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/south/contact-a",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/cafe-owner/cafe-owner-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f6841d5b020545682cdad4ff59de8199c64bca733c624b4fe9b4514ff4f73cd5",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/south/passing-a",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/cafe-owner/cafe-owner-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ff0a4b35ca9f595786ba60c8dd0029f822f5b47fa12c7ce9b32c46bf927fa134",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/south/contact-b",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/cafe-owner/cafe-owner-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d524056944af1077f04032e74c0cb69c05f66a86b8efce0b1df53675332c18a2",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/south/passing-b",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/cafe-owner/cafe-owner-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9f0b60507eadd78e2bcc1463cd1b20cdbf1d642b9591e80f10e6b44df006bab8",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/south/idle",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/cafe-owner/cafe-owner-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4009c5d23113cc785bc8e6d72957bfe7077f35c3d3499e3dafc9c6ddcfdf68e4",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/south/interact",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/cafe-owner/cafe-owner-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b6d89c314a3d0c86dd284fb209698bf07d26998cf80b8ec27d5a7d075ac05297",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/west/contact-a",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/cafe-owner/cafe-owner-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3ee77a1e789bd723e2c9459642bd4ee6c0b8a7405fc59e433d79e8ba68dd892c",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/west/passing-a",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/cafe-owner/cafe-owner-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "06de6b55d58b5a6e46bf4375ac7cc69d815ccfd4ee34657f1b87cbed41e05759",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/west/contact-b",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/cafe-owner/cafe-owner-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "576ba76e0f5be43532732fff0d1c888e831de234877579f6814f3a217dcecf10",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/west/passing-b",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/cafe-owner/cafe-owner-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2ca267fcdd46fb847f32f2291d18c4bb3c4dc897a86ed8556ec327941d1c3b97",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/west/idle",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/cafe-owner/cafe-owner-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "277ad1b557a14547c6ce2784a83c9cbfd520c8e036663bdedaf02413f03a974f",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/west/interact",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/cafe-owner/cafe-owner-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "78f850d8dc5166c9e66ecec381134e49b89c1ad68d697e4ecdd681591c00ba0a",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/east/contact-a",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/cafe-owner/cafe-owner-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8e550c9f6c7a469f88c4704e86d7fd36c823ab3de5b0d50b91da77acb354c6a1",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/east/passing-a",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/cafe-owner/cafe-owner-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ea9151348bb83e24c2682df60f64e63352b5da849175ddfd1d9b26818e60f125",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/east/contact-b",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/cafe-owner/cafe-owner-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c3a6c3e029bd6eb33a80ff839df0e8205d9a08bc75a16c28ade8954d8700785f",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/east/passing-b",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/cafe-owner/cafe-owner-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5a12c0310d66958ed171b2c2799a29a1c0ae99a7b827a5d95ea2837556394bfc",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/east/idle",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/cafe-owner/cafe-owner-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ceb892d9e8c52c4e245505c9f76e775696cb3112bbd0c0914a7b0d822282dcfc",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/east/interact",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/cafe-owner/cafe-owner-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "007a1090204314a9b35ea4bff43ce1c55a31ca514fa63d507d200f208d6f4160",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/north/contact-a",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/cafe-owner/cafe-owner-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "117d80313b2b432d27615245d5ae2c85fabd4d17f0df37f845b80a58f62fafe8",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/north/passing-a",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/cafe-owner/cafe-owner-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c56c4401080c935fd23654b30eecd57797cfdf041799da51297ab2b3f9372bb7",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/north/contact-b",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/cafe-owner/cafe-owner-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "41c91e7f1efb8fed70b04778366ffc1557ac603f9a050262731902131507e535",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/north/passing-b",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/cafe-owner/cafe-owner-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "402b647be38d2e096924269b78b5f198895aa6c69dd6b396327576ec858c409c",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/north/idle",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/cafe-owner/cafe-owner-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3735ad4fbd0fdebe7b3f18ac8482ddc9e5c92fd8a1411f53cb57a6897d67c384",
+      "runtimeReady": false
+    },
+    {
+      "id": "cafe-owner/north/interact",
+      "character": "cafe-owner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.cafe-owner",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/cafe-owner/cafe-owner-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7dd9a849c7d0f441d7dad86d084e1a1e67a33c899cb8a7f57fad735fd282372e",
+      "runtimeReady": false
+    }
+  ],
+  "atlases": [
+    {
+      "character": "shopkeeper",
+      "file": "frames/shopkeeper/shopkeeper-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "sha256": "29cb35e6ac9874b224b6dca32ad79d63c93b12166b5a3242263300773af7bd6c",
+      "runtimeReady": false
+    },
+    {
+      "character": "shopkeeper",
+      "file": "frames/shopkeeper/shopkeeper-movement-preview-4x.png",
+      "width": 576,
+      "height": 512,
+      "sha256": "652a6c85148044d128dfee1ba0648300d4619af3156d6c8b99fd541b3a4986a5",
+      "runtimeReady": false
+    },
+    {
+      "character": "nurse",
+      "file": "frames/nurse/nurse-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "sha256": "e089bf33a1401607e966a7a8fc8679c18f4dbebe60dd6d232c769df47ed246fe",
+      "runtimeReady": false
+    },
+    {
+      "character": "nurse",
+      "file": "frames/nurse/nurse-movement-preview-4x.png",
+      "width": 576,
+      "height": 512,
+      "sha256": "ebcb03058e3ab3aa09cb82c9aa063c77daef1b7d35644f5de821694e854aceb5",
+      "runtimeReady": false
+    },
+    {
+      "character": "physician",
+      "file": "frames/physician/physician-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "sha256": "826c997e4bf6af43f5f06903dc28374018b75be0ee0cfb3df64d6adb4e46ad27",
+      "runtimeReady": false
+    },
+    {
+      "character": "physician",
+      "file": "frames/physician/physician-movement-preview-4x.png",
+      "width": 576,
+      "height": 512,
+      "sha256": "c51fb0ad012260f100e4e374626c4e2294cf8998505fd7e162654f1afaf3a9b2",
+      "runtimeReady": false
+    },
+    {
+      "character": "transit-worker",
+      "file": "frames/transit-worker/transit-worker-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "sha256": "aae72ede2017de5f821976573c6ab71a99cab871a3576fb356b09534a71edff1",
+      "runtimeReady": false
+    },
+    {
+      "character": "transit-worker",
+      "file": "frames/transit-worker/transit-worker-movement-preview-4x.png",
+      "width": 576,
+      "height": 512,
+      "sha256": "77ea42ca308625f13057e65a458e7b658243c464393a996ca23ed878eff91dae",
+      "runtimeReady": false
+    },
+    {
+      "character": "cafe-owner",
+      "file": "frames/cafe-owner/cafe-owner-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "sha256": "52a419970fb92ddb03918363716b6d5616778ef974db0c4b20d110e8c0c1f295",
+      "runtimeReady": false
+    },
+    {
+      "character": "cafe-owner",
+      "file": "frames/cafe-owner/cafe-owner-movement-preview-4x.png",
+      "width": 576,
+      "height": 512,
+      "sha256": "34870809d67ec9e1914b0a57bb841446085d01b7bf99aabd57325342b062a0c6",
+      "runtimeReady": false
+    },
+    {
+      "file": "named-characters-batch-v4-contact-sheet-2x.png",
+      "width": 144,
+      "height": 160,
+      "sha256": "1cc8d757e5ab4e0132ae4b25ae181232bf68014d9dfc98b32675577e6f96053f",
+      "runtimeReady": false
+    }
+  ]
+}

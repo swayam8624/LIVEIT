@@ -1,0 +1,17 @@
+{
+  "created": "2026-10-20",
+  "method": "Drawn from original geometric pixel primitives in build_chat_avatars.py; no image generation, web assets, source archives, or copied pixels.",
+  "identityPaletteReferences": [
+    {
+      "file": "../family-portrait-expressions-v1/manifest.json",
+      "sha256": "e9305c0f56b141400ac8b4232af6622e77f93e700e33a726bb8f74675f22eb7b",
+      "role": "text-only character identity and palette reference; not sampled"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "build_chat_avatars.py",
+      "sha256": "2b759a6b71c8d7e687445805e7a391103ef1b3ef7c8c72937232bc8c747ede07"
+    }
+  ]
+}

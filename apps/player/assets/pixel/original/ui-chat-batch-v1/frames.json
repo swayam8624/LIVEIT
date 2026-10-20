@@ -1,0 +1,238 @@
+{
+  "atlas": "ui-chat-atlas-v1.png",
+  "width": 1402,
+  "height": 1122,
+  "pixelArt": true,
+  "sampling": "nearest",
+  "frames": [
+    {
+      "id": "button-primary",
+      "x": 55,
+      "y": 125,
+      "w": 315,
+      "h": 145,
+      "category": "button",
+      "state": "primary"
+    },
+    {
+      "id": "button-secondary",
+      "x": 385,
+      "y": 125,
+      "w": 315,
+      "h": 145,
+      "category": "button",
+      "state": "secondary"
+    },
+    {
+      "id": "button-disabled",
+      "x": 720,
+      "y": 125,
+      "w": 280,
+      "h": 145,
+      "category": "button",
+      "state": "disabled"
+    },
+    {
+      "id": "button-pressed",
+      "x": 1040,
+      "y": 125,
+      "w": 320,
+      "h": 145,
+      "category": "button",
+      "state": "pressed"
+    },
+
+    {
+      "id": "bubble-rounded",
+      "x": 55,
+      "y": 300,
+      "w": 305,
+      "h": 190,
+      "category": "chat-bubble",
+      "state": "default"
+    },
+    {
+      "id": "bubble-square",
+      "x": 400,
+      "y": 300,
+      "w": 300,
+      "h": 190,
+      "category": "chat-bubble",
+      "state": "default"
+    },
+    {
+      "id": "bubble-whisper",
+      "x": 730,
+      "y": 300,
+      "w": 250,
+      "h": 190,
+      "category": "chat-bubble",
+      "state": "whisper"
+    },
+    {
+      "id": "bubble-system",
+      "x": 1030,
+      "y": 290,
+      "w": 330,
+      "h": 205,
+      "category": "chat-bubble",
+      "state": "system"
+    },
+
+    {
+      "id": "avatar-frame-round",
+      "x": 70,
+      "y": 520,
+      "w": 285,
+      "h": 200,
+      "category": "avatar-frame",
+      "shape": "round"
+    },
+    {
+      "id": "avatar-frame-square",
+      "x": 440,
+      "y": 520,
+      "w": 270,
+      "h": 200,
+      "category": "avatar-frame",
+      "shape": "square"
+    },
+    {
+      "id": "status-online",
+      "x": 810,
+      "y": 555,
+      "w": 125,
+      "h": 125,
+      "category": "status-marker",
+      "state": "online"
+    },
+    {
+      "id": "status-unread",
+      "x": 1090,
+      "y": 555,
+      "w": 125,
+      "h": 125,
+      "category": "status-marker",
+      "state": "unread"
+    },
+
+    {
+      "id": "typing-indicator",
+      "x": 70,
+      "y": 755,
+      "w": 300,
+      "h": 150,
+      "category": "chat-status",
+      "state": "typing"
+    },
+    {
+      "id": "read-check",
+      "x": 440,
+      "y": 755,
+      "w": 260,
+      "h": 150,
+      "category": "chat-status",
+      "state": "read"
+    },
+    {
+      "id": "unread-marker",
+      "x": 720,
+      "y": 755,
+      "w": 150,
+      "h": 150,
+      "category": "chat-status",
+      "state": "unread"
+    },
+    {
+      "id": "empty-chat",
+      "x": 920,
+      "y": 755,
+      "w": 150,
+      "h": 150,
+      "category": "chat-status",
+      "state": "empty"
+    },
+    {
+      "id": "error-marker",
+      "x": 1110,
+      "y": 755,
+      "w": 220,
+      "h": 150,
+      "category": "chat-status",
+      "state": "error"
+    },
+
+    {
+      "id": "toolbar-send",
+      "x": 25,
+      "y": 925,
+      "w": 165,
+      "h": 170,
+      "category": "toolbar-icon",
+      "action": "send"
+    },
+    {
+      "id": "toolbar-attach",
+      "x": 200,
+      "y": 925,
+      "w": 165,
+      "h": 170,
+      "category": "toolbar-icon",
+      "action": "attach"
+    },
+    {
+      "id": "toolbar-emoji",
+      "x": 380,
+      "y": 925,
+      "w": 165,
+      "h": 170,
+      "category": "toolbar-icon",
+      "action": "emoji"
+    },
+    {
+      "id": "toolbar-close",
+      "x": 550,
+      "y": 925,
+      "w": 145,
+      "h": 170,
+      "category": "toolbar-icon",
+      "action": "close"
+    },
+    {
+      "id": "toolbar-back",
+      "x": 700,
+      "y": 925,
+      "w": 165,
+      "h": 170,
+      "category": "toolbar-icon",
+      "action": "back"
+    },
+    {
+      "id": "toolbar-settings",
+      "x": 880,
+      "y": 925,
+      "w": 165,
+      "h": 170,
+      "category": "toolbar-icon",
+      "action": "settings"
+    },
+    {
+      "id": "toolbar-add",
+      "x": 1060,
+      "y": 925,
+      "w": 165,
+      "h": 170,
+      "category": "toolbar-icon",
+      "action": "add"
+    },
+    {
+      "id": "toolbar-heart",
+      "x": 1235,
+      "y": 925,
+      "w": 165,
+      "h": 170,
+      "category": "toolbar-icon",
+      "action": "heart"
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "id": "crowd-filmmaker-adult-movement-age-v1",
+  "role": "filmmaker",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "adult filmmaker",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.filmmaker",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/filmmaker/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "filmmaker/adult/south/walk-a",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/filmmaker/adult/filmmaker-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "79326576ac39928e7b0572a71b8f8a6395b89c38b3198eadb6c9e486db04c7a3",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/front/walk-a.png",
+      "sourceSha256": "79326576ac39928e7b0572a71b8f8a6395b89c38b3198eadb6c9e486db04c7a3",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/south/walk-b",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/filmmaker/adult/filmmaker-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4115f00fb4fbcc617360204d3e605c3119708a49836469807db33a252fa81f81",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/front/walk-b.png",
+      "sourceSha256": "4115f00fb4fbcc617360204d3e605c3119708a49836469807db33a252fa81f81",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/south/idle",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/filmmaker/adult/filmmaker-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f7bc1f56f042cbd582c0a5600d88940dca7e833e3386caaa2e4adb400a9dc708",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/front/idle.png",
+      "sourceSha256": "f7bc1f56f042cbd582c0a5600d88940dca7e833e3386caaa2e4adb400a9dc708",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/west/walk-a",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/filmmaker/adult/filmmaker-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9d8128ab0531a87bb359801b1c26343325e92fa9c31cf522aa8d85f9bb79f8b9",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/left/walk-a.png",
+      "sourceSha256": "9d8128ab0531a87bb359801b1c26343325e92fa9c31cf522aa8d85f9bb79f8b9",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/west/walk-b",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/filmmaker/adult/filmmaker-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b5081b84f7ffc44d1cb2a32551976115b3699232c7e7c6110af7f0ab248709a9",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/left/walk-b.png",
+      "sourceSha256": "b5081b84f7ffc44d1cb2a32551976115b3699232c7e7c6110af7f0ab248709a9",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/west/idle",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/filmmaker/adult/filmmaker-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f446cc4307e55508d008a4815afac5065dfcbfcad94622d8d70a34c20e906c86",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/left/idle.png",
+      "sourceSha256": "f446cc4307e55508d008a4815afac5065dfcbfcad94622d8d70a34c20e906c86",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/east/walk-a",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/filmmaker/adult/filmmaker-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "964c152d83aa144e6c05bd0ef3671f720fb38a0c6822aad6c943d119d4073d3e",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/right/walk-a.png",
+      "sourceSha256": "964c152d83aa144e6c05bd0ef3671f720fb38a0c6822aad6c943d119d4073d3e",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/east/walk-b",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/filmmaker/adult/filmmaker-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d97fbbdcfed86385d4a5d41f4b811e584f23c271d8840448632d7cd88cfcd817",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/right/walk-b.png",
+      "sourceSha256": "d97fbbdcfed86385d4a5d41f4b811e584f23c271d8840448632d7cd88cfcd817",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/east/idle",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/filmmaker/adult/filmmaker-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1adfbba5e1fd961953b5d68346312e887b539db16587b227167d2449a256be56",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/right/idle.png",
+      "sourceSha256": "1adfbba5e1fd961953b5d68346312e887b539db16587b227167d2449a256be56",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/north/walk-a",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/filmmaker/adult/filmmaker-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e508b2c4c44dbe6440baa1f35f54ab9acf489a185dc37f8c9d8ac88bd58fb43c",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/back/walk-a.png",
+      "sourceSha256": "e508b2c4c44dbe6440baa1f35f54ab9acf489a185dc37f8c9d8ac88bd58fb43c",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/north/walk-b",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/filmmaker/adult/filmmaker-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "888ad8ec2e3e4197e29c87f99210b3ac2ffe8d27f60434cffd4937e4d54e86a6",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/back/walk-b.png",
+      "sourceSha256": "888ad8ec2e3e4197e29c87f99210b3ac2ffe8d27f60434cffd4937e4d54e86a6",
+      "runtimeReady": false
+    },
+    {
+      "id": "filmmaker/adult/north/idle",
+      "role": "filmmaker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult filmmaker",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/filmmaker/adult/filmmaker-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "aead31232ab197efb5fea1971bdf28a0a7cde4e93d66a2a158c6ab66ab3db38b",
+      "sourceFile": "crowd-archetypes-batch-v2/filmmaker/back/idle.png",
+      "sourceSha256": "aead31232ab197efb5fea1971bdf28a0a7cde4e93d66a2a158c6ab66ab3db38b",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

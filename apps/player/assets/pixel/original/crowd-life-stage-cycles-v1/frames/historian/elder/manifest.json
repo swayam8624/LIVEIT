@@ -1,0 +1,276 @@
+{
+  "id": "crowd-historian-elder-movement-age-v1",
+  "role": "historian",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older historian",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.historian",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/historian/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "historian/elder/south/walk-a",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/historian/elder/historian-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "358ab9886556cf40ffba6d9b34a0c3ff76e556bcd313ac5d7a55fe96e1762132",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-south-walk-a.png",
+      "sourceSha256": "f5c8420bdc8fd49e141a66dc3d9384060aabd97858cd5df5d98254549a4c397b",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/south/walk-b",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/historian/elder/historian-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e696a1fd6fda502bc24c09a1e475a5a97e0bfda3730d8646bf580e7d0eb99c06",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-south-walk-b.png",
+      "sourceSha256": "2cb380ecaaacc886e1d162a3b365bc015ed155faf494ca3e49b3cb20db9fbeac",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/south/idle",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/historian/elder/historian-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7b367e62ca7cb7334c00432520f6e3b47f6532b47777d5d26300759bcd4a51c6",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-south-idle.png",
+      "sourceSha256": "fe300083e502959f507f1eeee0eca5253ed489832b29c44a8cc60cded507c29b",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/west/walk-a",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/historian/elder/historian-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "08a4a6d48b9fc44d60e146f2d862d08547728a6c051fbf3f4fc9f25f64b20fc0",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-west-walk-a.png",
+      "sourceSha256": "ff409b3f5cf8e656dad14203b173e56fc8a53b15ad14bc74306a5d14001f72da",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/west/walk-b",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/historian/elder/historian-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b5259a33b6c54965e39c855afc1b5e709463dc537afb90a2bf621b5111c5827e",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-west-walk-b.png",
+      "sourceSha256": "6137b9afed3fbfe9043f6da34603e52c4f1af62a4afea76ea812161e763198f8",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/west/idle",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/historian/elder/historian-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fa1b20360deca51638336ccd875394bf555ac7c92f0d370f30c4f79ac01a7ac8",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-west-idle.png",
+      "sourceSha256": "0d487580a9e22f4885977d493d4ee3723bde5133559cea5b3bf648456454503f",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/east/walk-a",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/historian/elder/historian-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "87a645e9df4ed3911a45c420218e27d8b5705003f6fe9b98c984630118588d32",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-east-walk-a.png",
+      "sourceSha256": "aac04c81fab2bcc2ab5cdba5b662abebdf4479b2eae389c5d2a3c0d0a440678b",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/east/walk-b",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/historian/elder/historian-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bf570fbdca5a7c1ce75914a236b4d6168c42383e846329d13967bf0de81d6a58",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-east-walk-b.png",
+      "sourceSha256": "24aa5978dd3763a56f28cd1a7cabeb1daa15263de318699c17de9da78c3bdbe0",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/east/idle",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/historian/elder/historian-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "32c22b28ab7a7f79419f9bf7d5785ed2ffea029ccb40b0fdcc44f531ebc433af",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-east-idle.png",
+      "sourceSha256": "cfe8c54bf616e851130555b546dfb3ba5a2585b66ad991fee8d54255848d9d3a",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/north/walk-a",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/historian/elder/historian-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1437f8d5f45c3c68557578c4ef772e1ca3835935fe7d26baf9697926d322c7bc",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-north-walk-a.png",
+      "sourceSha256": "3c387a2ec9de9cdc4c1772b21abe864e9e64777f8e375963500fb8395500de7a",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/north/walk-b",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/historian/elder/historian-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "41f32ec81eedcb78440364c8b3b597e9699ee3d9f1b44e49774bf23134b32dc1",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-north-walk-b.png",
+      "sourceSha256": "30ea4563f3eaa9f533c69369b3a4f5bf0258091ac30cd46b3eb79cee7ae02d8b",
+      "runtimeReady": false
+    },
+    {
+      "id": "historian/elder/north/idle",
+      "role": "historian",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older historian",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/historian/elder/historian-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "80630a03cf13e81b4ef3b7e14bd2e370e7893b76d680ea226ebe70fe3c73b824",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/historian/historian-north-idle.png",
+      "sourceSha256": "0c1113755d69954d1008fe2194a61091039c05894aa18a28e3ef7fd6901a1a90",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

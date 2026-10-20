@@ -1,0 +1,1238 @@
+{
+  "schema": "liveit.pixel.exclusive-scene-graduation-actors.v1",
+  "generatedBy": "build_graduation_actors.js",
+  "runtimeReady": false,
+  "conceptQuality": "isolated concept studies; requires manual pixel cleanup and compositing review",
+  "scene": "garden-graduation",
+  "canvas": {
+    "frame": {
+      "width": 48,
+      "height": 80
+    },
+    "atlas": {
+      "columns": 12,
+      "rows": 3,
+      "width": 576,
+      "height": 240
+    },
+    "previewScale": 2
+  },
+  "directions": ["south", "east", "north", "west"],
+  "sceneAnchor": {
+    "x": 156,
+    "y": 216,
+    "pivot": "bottom-center",
+    "dialogueSafeRegion": {
+      "x": 42,
+      "y": 232,
+      "width": 236,
+      "height": 24
+    }
+  },
+  "actors": [
+    {
+      "id": "graduate",
+      "label": "Graduate",
+      "poses": ["stand", "receive-diploma", "cheer"],
+      "runtimeReady": false
+    },
+    {
+      "id": "family-supporter",
+      "label": "Family supporter",
+      "poses": ["stand", "hold-flowers", "cheer"],
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher",
+      "label": "Teacher",
+      "poses": ["stand", "present-diploma", "cheer"],
+      "runtimeReady": false
+    }
+  ],
+  "frames": [
+    {
+      "actor": "graduate",
+      "pose": "stand",
+      "direction": "south",
+      "file": "graduate/graduate-stand-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "99dead1ec19fb3996b84c44feb836b7636909b51193190243ee979b1e3252939"
+    },
+    {
+      "actor": "graduate",
+      "pose": "stand",
+      "direction": "east",
+      "file": "graduate/graduate-stand-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "b1aba665eee0a42eeae162627159d5bd427ec843149db54c77932c31b7ea9d05"
+    },
+    {
+      "actor": "graduate",
+      "pose": "stand",
+      "direction": "north",
+      "file": "graduate/graduate-stand-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "a9d51d446b5dc23ceb24a2c11f78d894a888aa63099ea6145d8e11961180d010"
+    },
+    {
+      "actor": "graduate",
+      "pose": "stand",
+      "direction": "west",
+      "file": "graduate/graduate-stand-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "b09d611279290c46f7aab058bedce65b648d62634bab919551078c3f68074ad3"
+    },
+    {
+      "actor": "graduate",
+      "pose": "receive-diploma",
+      "direction": "south",
+      "file": "graduate/graduate-receive-diploma-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "e6d456528a7d6ccb5374417a9ca41c057ce13107633b0f8d08b36e60db9b7656"
+    },
+    {
+      "actor": "graduate",
+      "pose": "receive-diploma",
+      "direction": "east",
+      "file": "graduate/graduate-receive-diploma-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "ad83eec7d81ace378aebe043c7630324c55cdeccc44be72e9c7cb03c8efdb138"
+    },
+    {
+      "actor": "graduate",
+      "pose": "receive-diploma",
+      "direction": "north",
+      "file": "graduate/graduate-receive-diploma-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "93fb81d2d8332b363c0d24853747399e76096b26d6093fa4087da6312f7e16db"
+    },
+    {
+      "actor": "graduate",
+      "pose": "receive-diploma",
+      "direction": "west",
+      "file": "graduate/graduate-receive-diploma-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "ae44be1b0d8dd6cdaca2d146d71e4862c5db6afaf016f02a0b7d816e6b2d497f"
+    },
+    {
+      "actor": "graduate",
+      "pose": "cheer",
+      "direction": "south",
+      "file": "graduate/graduate-cheer-south.png",
+      "atlasCell": {
+        "column": 8,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "4eed1e003b180cb887533219263e0092a7837cf39ef9bf997e8521d2bcf4ecc4"
+    },
+    {
+      "actor": "graduate",
+      "pose": "cheer",
+      "direction": "east",
+      "file": "graduate/graduate-cheer-east.png",
+      "atlasCell": {
+        "column": 9,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "16ee887c3f056dbddd0f21ab6b5d684210e74d8d2c46d53d868ec84d81c36a91"
+    },
+    {
+      "actor": "graduate",
+      "pose": "cheer",
+      "direction": "north",
+      "file": "graduate/graduate-cheer-north.png",
+      "atlasCell": {
+        "column": 10,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "3bc5c7b3217b2739bd210ad985ad35db9bf94a839d6484f90bcad6dbe0b069ff"
+    },
+    {
+      "actor": "graduate",
+      "pose": "cheer",
+      "direction": "west",
+      "file": "graduate/graduate-cheer-west.png",
+      "atlasCell": {
+        "column": 11,
+        "row": 0
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "fd0bbbcc164f8af80b106b9fdded9d5be11d2df1e97279bdee312182d8d32cb2"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "stand",
+      "direction": "south",
+      "file": "family-supporter/family-supporter-stand-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "f60e2e8701f7c5f6d6ed0749ab43af1706416b3f25f0b0abfa7e2520f9a27d0b"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "stand",
+      "direction": "east",
+      "file": "family-supporter/family-supporter-stand-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "efa110b882d0112b3081bcae88884a4e1aef8498ae6819f3cd013279ade962b1"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "stand",
+      "direction": "north",
+      "file": "family-supporter/family-supporter-stand-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "10a7a2aa29d83cf7194771004b0b45c11735d5a8829fa912a3a47eff2c881876"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "stand",
+      "direction": "west",
+      "file": "family-supporter/family-supporter-stand-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "6996f22aca840d15cb42d7506273a851e770ab7aed3af2ffceaeb9c13bf1a29b"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "hold-flowers",
+      "direction": "south",
+      "file": "family-supporter/family-supporter-hold-flowers-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "52deff97c029512268a6cffeaa4f743b3eb07b3d33ff7252617ef7b382c4b227"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "hold-flowers",
+      "direction": "east",
+      "file": "family-supporter/family-supporter-hold-flowers-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "15f01730a912359b0aa1f259a0966a9376fc20fd185d24c687c5a70e5aa7153c"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "hold-flowers",
+      "direction": "north",
+      "file": "family-supporter/family-supporter-hold-flowers-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "d6eebd8b9c1700a67af0d93067683a26275606a7dd77a17fa51816a65de37abb"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "hold-flowers",
+      "direction": "west",
+      "file": "family-supporter/family-supporter-hold-flowers-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "101e854366e5d982fd58497eead7f77d74265fdeab27960c2fdeb7e3c684e8bc"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "cheer",
+      "direction": "south",
+      "file": "family-supporter/family-supporter-cheer-south.png",
+      "atlasCell": {
+        "column": 8,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "b5a311df29db64f07cd20cf6c281cb942e86cfd01094980f1428aa1a2f499086"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "cheer",
+      "direction": "east",
+      "file": "family-supporter/family-supporter-cheer-east.png",
+      "atlasCell": {
+        "column": 9,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "da05b8d1af90c9ddc23e01f2029bc59f5e861aa97a7f867fd1efa0efd3e4cae2"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "cheer",
+      "direction": "north",
+      "file": "family-supporter/family-supporter-cheer-north.png",
+      "atlasCell": {
+        "column": 10,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "3c9891cb89091d4b9084c5daf41d09fa69602254241f7feb926f55739e211af6"
+    },
+    {
+      "actor": "family-supporter",
+      "pose": "cheer",
+      "direction": "west",
+      "file": "family-supporter/family-supporter-cheer-west.png",
+      "atlasCell": {
+        "column": 11,
+        "row": 1
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "4f45f2730283ba81940ee9900d3448d2c085af1eb0cf5a6968fb0cab1a67073c"
+    },
+    {
+      "actor": "teacher",
+      "pose": "stand",
+      "direction": "south",
+      "file": "teacher/teacher-stand-south.png",
+      "atlasCell": {
+        "column": 0,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "3ddbdc4df63c035b2b5213afc65f342e1f94d9a1895ce9476338fcb7b8d680e3"
+    },
+    {
+      "actor": "teacher",
+      "pose": "stand",
+      "direction": "east",
+      "file": "teacher/teacher-stand-east.png",
+      "atlasCell": {
+        "column": 1,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "e32648f33b8be8ba5db9a0b1ee1ee25017cf5199c397ff1bdfd2b2116a91ba78"
+    },
+    {
+      "actor": "teacher",
+      "pose": "stand",
+      "direction": "north",
+      "file": "teacher/teacher-stand-north.png",
+      "atlasCell": {
+        "column": 2,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "79a3c9e082d9ec161a513ecd5dda52bb2650a76ae2f9a57a35b0a4458bf2ebbe"
+    },
+    {
+      "actor": "teacher",
+      "pose": "stand",
+      "direction": "west",
+      "file": "teacher/teacher-stand-west.png",
+      "atlasCell": {
+        "column": 3,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "16216fcf02e011042c1a61af1103d537634eb4ed4dc2d590e984391d3609b6fc"
+    },
+    {
+      "actor": "teacher",
+      "pose": "present-diploma",
+      "direction": "south",
+      "file": "teacher/teacher-present-diploma-south.png",
+      "atlasCell": {
+        "column": 4,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "550f92f4cbed629c89ad77dd64671ba7fecd789d1454306c4dabe5745f4f1e82"
+    },
+    {
+      "actor": "teacher",
+      "pose": "present-diploma",
+      "direction": "east",
+      "file": "teacher/teacher-present-diploma-east.png",
+      "atlasCell": {
+        "column": 5,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "73b8a514759d50f6bbedf8070b422b167ffa442154992d094a70f6a331acc276"
+    },
+    {
+      "actor": "teacher",
+      "pose": "present-diploma",
+      "direction": "north",
+      "file": "teacher/teacher-present-diploma-north.png",
+      "atlasCell": {
+        "column": 6,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "cc0794e6e3fd8767086414acabe8dcec22fbb9082bd88313ab48fdc9c8413c39"
+    },
+    {
+      "actor": "teacher",
+      "pose": "present-diploma",
+      "direction": "west",
+      "file": "teacher/teacher-present-diploma-west.png",
+      "atlasCell": {
+        "column": 7,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "6d81032a83857736267d35ed8f2e60dad34459a660950a6a2f2fa133797c1c67"
+    },
+    {
+      "actor": "teacher",
+      "pose": "cheer",
+      "direction": "south",
+      "file": "teacher/teacher-cheer-south.png",
+      "atlasCell": {
+        "column": 8,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "290a28619ae4bba051a5397d7e3607bbc8e1b11048d2560f1f0b0a3732b402b7"
+    },
+    {
+      "actor": "teacher",
+      "pose": "cheer",
+      "direction": "east",
+      "file": "teacher/teacher-cheer-east.png",
+      "atlasCell": {
+        "column": 9,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "3a8776fc5d5b89ccc153245d4723e4581c0ce2a6144ccc8152c8823e9e0a94c2"
+    },
+    {
+      "actor": "teacher",
+      "pose": "cheer",
+      "direction": "north",
+      "file": "teacher/teacher-cheer-north.png",
+      "atlasCell": {
+        "column": 10,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "f8b506e6d99b6b6bf84029383da00c4a9f912d2af5fa471fd7b6847b125a05ab"
+    },
+    {
+      "actor": "teacher",
+      "pose": "cheer",
+      "direction": "west",
+      "file": "teacher/teacher-cheer-west.png",
+      "atlasCell": {
+        "column": 11,
+        "row": 2
+      },
+      "width": 48,
+      "height": 80,
+      "pivot": {
+        "x": 24,
+        "y": 79,
+        "kind": "bottom-center"
+      },
+      "actorSafeAnchor": {
+        "x": 156,
+        "y": 216
+      },
+      "runtimeReady": false,
+      "sha256": "706f4bc60cd9d2251c6ce4d377817b1644875680c382cd003fb1ef5342d6c7e5"
+    }
+  ],
+  "files": [
+    {
+      "file": "family-supporter/family-supporter-cheer-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "da05b8d1af90c9ddc23e01f2029bc59f5e861aa97a7f867fd1efa0efd3e4cae2",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-cheer-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "3c9891cb89091d4b9084c5daf41d09fa69602254241f7feb926f55739e211af6",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-cheer-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "b5a311df29db64f07cd20cf6c281cb942e86cfd01094980f1428aa1a2f499086",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-cheer-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "4f45f2730283ba81940ee9900d3448d2c085af1eb0cf5a6968fb0cab1a67073c",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-hold-flowers-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "15f01730a912359b0aa1f259a0966a9376fc20fd185d24c687c5a70e5aa7153c",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-hold-flowers-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "d6eebd8b9c1700a67af0d93067683a26275606a7dd77a17fa51816a65de37abb",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-hold-flowers-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "52deff97c029512268a6cffeaa4f743b3eb07b3d33ff7252617ef7b382c4b227",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-hold-flowers-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "101e854366e5d982fd58497eead7f77d74265fdeab27960c2fdeb7e3c684e8bc",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-stand-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "efa110b882d0112b3081bcae88884a4e1aef8498ae6819f3cd013279ade962b1",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-stand-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "10a7a2aa29d83cf7194771004b0b45c11735d5a8829fa912a3a47eff2c881876",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-stand-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "f60e2e8701f7c5f6d6ed0749ab43af1706416b3f25f0b0abfa7e2520f9a27d0b",
+      "runtimeReady": false
+    },
+    {
+      "file": "family-supporter/family-supporter-stand-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "6996f22aca840d15cb42d7506273a851e770ab7aed3af2ffceaeb9c13bf1a29b",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-cheer-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "16ee887c3f056dbddd0f21ab6b5d684210e74d8d2c46d53d868ec84d81c36a91",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-cheer-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "3bc5c7b3217b2739bd210ad985ad35db9bf94a839d6484f90bcad6dbe0b069ff",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-cheer-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "4eed1e003b180cb887533219263e0092a7837cf39ef9bf997e8521d2bcf4ecc4",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-cheer-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "fd0bbbcc164f8af80b106b9fdded9d5be11d2df1e97279bdee312182d8d32cb2",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-receive-diploma-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "ad83eec7d81ace378aebe043c7630324c55cdeccc44be72e9c7cb03c8efdb138",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-receive-diploma-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "93fb81d2d8332b363c0d24853747399e76096b26d6093fa4087da6312f7e16db",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-receive-diploma-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "e6d456528a7d6ccb5374417a9ca41c057ce13107633b0f8d08b36e60db9b7656",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-receive-diploma-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "ae44be1b0d8dd6cdaca2d146d71e4862c5db6afaf016f02a0b7d816e6b2d497f",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-stand-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "b1aba665eee0a42eeae162627159d5bd427ec843149db54c77932c31b7ea9d05",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-stand-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "a9d51d446b5dc23ceb24a2c11f78d894a888aa63099ea6145d8e11961180d010",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-stand-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "99dead1ec19fb3996b84c44feb836b7636909b51193190243ee979b1e3252939",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduate/graduate-stand-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "b09d611279290c46f7aab058bedce65b648d62634bab919551078c3f68074ad3",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduation-actors-atlas.png",
+      "width": 576,
+      "height": 240,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "e51eb74c359ba59c21d30c6f4fc5c654466e01e4f7c2c8cbc548a804eda07e2b",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduation-actors-preview-2x.png",
+      "width": 1152,
+      "height": 480,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "d1a8d45ebabfce4cc17b82a601164e63e095227cde6e8a176e8fb4256892b2cd",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-cheer-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "3a8776fc5d5b89ccc153245d4723e4581c0ce2a6144ccc8152c8823e9e0a94c2",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-cheer-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "f8b506e6d99b6b6bf84029383da00c4a9f912d2af5fa471fd7b6847b125a05ab",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-cheer-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "290a28619ae4bba051a5397d7e3607bbc8e1b11048d2560f1f0b0a3732b402b7",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-cheer-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "706f4bc60cd9d2251c6ce4d377817b1644875680c382cd003fb1ef5342d6c7e5",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-present-diploma-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "73b8a514759d50f6bbedf8070b422b167ffa442154992d094a70f6a331acc276",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-present-diploma-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "cc0794e6e3fd8767086414acabe8dcec22fbb9082bd88313ab48fdc9c8413c39",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-present-diploma-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "550f92f4cbed629c89ad77dd64671ba7fecd789d1454306c4dabe5745f4f1e82",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-present-diploma-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "6d81032a83857736267d35ed8f2e60dad34459a660950a6a2f2fa133797c1c67",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-stand-east.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "e32648f33b8be8ba5db9a0b1ee1ee25017cf5199c397ff1bdfd2b2116a91ba78",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-stand-north.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "79a3c9e082d9ec161a513ecd5dda52bb2650a76ae2f9a57a35b0a4458bf2ebbe",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-stand-south.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "3ddbdc4df63c035b2b5213afc65f342e1f94d9a1895ce9476338fcb7b8d680e3",
+      "runtimeReady": false
+    },
+    {
+      "file": "teacher/teacher-stand-west.png",
+      "width": 48,
+      "height": 80,
+      "colorMode": "RGBA",
+      "alpha": true,
+      "sha256": "16216fcf02e011042c1a61af1103d537634eb4ed4dc2d590e984391d3609b6fc",
+      "runtimeReady": false
+    }
+  ],
+  "provenance": {
+    "authoredInRepo": true,
+    "thirdPartyAssetsUsed": false,
+    "suppliedArchivesUsed": false,
+    "externalReferencesUsed": false,
+    "sourceReferences": [
+      "exclusive-scene-depth-v2/graduation-preview-derived.png",
+      "exclusive-scenes-v2/garden-graduation-layout-guide.png"
+    ],
+    "sourceReferencesUse": "scene anchor and palette conventions only; no source pixels copied",
+    "date": "2026-10-20"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "role": "police-officer",
+  "label": "police-officer",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.police-officer",
+  "description": "blue patrol uniform with gold badge and shoulder radio",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/police-officer/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/police-officer/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/police-officer/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

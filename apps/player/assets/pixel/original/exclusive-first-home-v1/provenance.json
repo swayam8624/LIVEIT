@@ -1,0 +1,26 @@
+{
+  "sourceTool": "OpenAI ImageGen",
+  "sourcePolicy": "Original generated source; no archive or third-party reference art used.",
+  "sourcePrompt": "Original premium video game background asset, first-apartment moving-day scene for a 2D pixel-art life simulator. Side-on interior composition, logical scene 320x256. Cozy urban apartment in late afternoon, warm light through a large window, two cardboard boxes, a small potted plant, compact sofa on left, tiny dining table on right, subtle hanging lamp. Keep the lower middle open and character-safe, with a calm dark dialogue-safe band at the bottom. Tasteful teal and amber palette, dense yet readable grouped pixels, crisp hard edges, strong pixel clusters, no soft painterly texture, no gradients, no anti-aliasing, no 3D, no isometric view. No people, no animals, no text, no logos, no watermark.",
+  "sourceFile": "first-home-generated-master.png",
+  "runtimeReady": false,
+  "sourceSha256": "24d1f96d17284530952b5f00f3e3a018e67edd25919d219f8b3c03a2e7746324",
+  "outputs": [
+    {
+      "file": "first-home-32c-320x256.png",
+      "sha256": "bb7d74f1e901750db07c062f02660102fb29b926c1beaa3ec5a989872aa73291"
+    },
+    {
+      "file": "first-home-64c-320x256.png",
+      "sha256": "59fe778a3c06ae6401cc0ba5fb82fe6bf18d530d21fcf2cc283760a84ba89780"
+    },
+    {
+      "file": "first-home-layout-guide.png",
+      "sha256": "10855d265aaa260a7fb36bc6933cd092d69057ec650e3646ae41a2f69aaf425f"
+    },
+    {
+      "file": "first-home-preview-2x.png",
+      "sha256": "6c49e5ff6d4c7ad34bcf2032ee21d55ec70f38b4c9a795f5112f14ddb6e1ffc8"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "batch": "named-friend-age-cycles-v1",
+  "createdBy": "deterministic Python standard-library raster builder",
+  "rights": "Original pixel concepts authored for LIVEIT; no third-party art, ZIP assets, or external image bytes were used.",
+  "sourceLineage": {
+    "amelia": {
+      "manifest": "named-characters-batch-v1/manifest.json",
+      "manifestSha256": "c7f6330d2e92d4c8958b928a208021d596d8e504142a430291c3a5ffeb8f09e4",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "identityCues": ["teal satchel"],
+      "silhouette": "brunette bob, apron dress",
+      "sourceFrameHashes": [
+        "03a0540b0df6b7d523430a0a9f9b53ae3c802434de5cdcd343b1d6701610f580",
+        "23b4269df4fee345755fad6b8e00e984c155b5d75b0c9acde60b23e602f133b2",
+        "23dd41f046bf683c100918ffe9b0d1d2052f213b48660a09cf02795a80d5cce3",
+        "265d86c4119079132fab3bd31a16d9fe8a8cf8d41481da7ec01cfb60b0c7100f",
+        "2aed54caf673a149c62967821837e7ca7920ae2a22a8541165c5505d7067c6d1",
+        "379fe3d55385ff3f67776acbdd311a6dc13d85795644e29469f309e32aeee528",
+        "5894fbc8db50e44b7ee61294dbdfc275e27375a95ecfa0974651623ddcbdd5f2",
+        "5afc7a8500bdb9aebd853890b379f6873de4203910244bd8f8cf7553b313065d",
+        "6ec4578fbc1774c423533c5596747ca16d0e40f477410e303057f61b563bd6e4",
+        "7b66c302a16f403a9a5cce6ff5c4061079d6435213fcfcdeed180fbc29efd866",
+        "83795a9733d41358baf038a9a74c554286157e8819aa3ec3e549424251037a8d",
+        "86a092f32bf7e59467fe2ca326a45fd8f3288385eba7ef9ae77b05cff495f4d9",
+        "8b98e98667b8907704a789a5aabdd5b34909dfcf9d6cb2b4a4e219a155826d02",
+        "8bc19102c5ac379254f613fed79c1d0a0a34242430c673399197129d20c9ca8b",
+        "8fd61fe0168ddbca8ec9a4bdaae329c59cd03a242d26f3bbaf219bfb14a308e0",
+        "9e2a291bffad2fb19b4cf846a79abe109058f0273554b40b34a74c9447759ea5",
+        "a6b061b4bc52f00f3c301ff19e83da3e897246941f3f35b0e84fcb9acd8839aa",
+        "a95e20ba3c9c33d3ca81f05b32de675e9cf881d5ee2a9aba51c86f5f955a762f",
+        "ae19c614e48b98b8e64d7ac2527bf19227f802d0055f54d56f6770d0ffdca407",
+        "da62de7f2e578ce22f84f285b3a8b6bedfcf202d91ad917a11c25cf65a01f574",
+        "dcdad3556a585958d0db61a412c562851211bb26b1ae30dd7e8eec41ecb267e3",
+        "dfb4bb209bd4847963c80511a072e342eea67fe33ef822e354d1417b4d696411",
+        "e771229b3180315fe6d82bdeca5c3e0b8b538cd28296a393b1c51a857ede7feb",
+        "ef0cadc3414b6d5e1618c1d7f091e35b4f456e03549782f6f980812bbb7d38b0"
+      ]
+    },
+    "noah": {
+      "manifest": "named-characters-batch-v1/manifest.json",
+      "manifestSha256": "c7f6330d2e92d4c8958b928a208021d596d8e504142a430291c3a5ffeb8f09e4",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "identityCues": ["apron notebook"],
+      "silhouette": "tall lean, rolled sleeves",
+      "sourceFrameHashes": [
+        "17205b90b9e070cc6af58a52d6598e1787496fe31c3a88068735f2a7e7d60840",
+        "1ec093e1e3c4feebdebd2b8a7d0efb95439a6ae20a44fb7942d119df175f16ce",
+        "2008675c783e01c142c459660571016512e4a0a1918d678ebc021c15a244d178",
+        "3510fd82a0747d3b62f0d9108cc80aa105685a88f68697597b653f1cc1c70129",
+        "3dc863ecff1070634eefaca27d9a8e1f24e781afcc86e5cb2fd6b20d8b13cc2e",
+        "550144a47f41501c7c5cd898c387f1d9e53b34599b3932b108e6d8cb9da108d3",
+        "594ee035c05b8635fd7b869cfca081abab97d44f3c8c06902518e8d1eff9a03a",
+        "73a11b1fdd1a42e98ca2991ca87f494f30cfddbd790f9911da386c71832ba0df",
+        "75d077be27c9d373dc10985805b2770c6e3fa19ffe7f2eb947d1ad72abfc9153",
+        "7ec4b826662c47143e706df3111dbd0c413f5f01e5a6b24b3924af107d2f6b7f",
+        "7f4d3f292e9bd09359fa1fa996b9ffc8a6742459963db115f45c036debf52479",
+        "8c94841a7480a20e584c7d60e898bb0104064832b0bd14330770c54fc8fae0b5",
+        "a68b27fd7e75b0b420977522428c6a1c967d1a8e034e57675ff101ed1b8523df",
+        "a81c9c8a7163d328849f4079876233b3247571ce3c70916b1a29aa9e084bf43a",
+        "a94d6b60cae990d5a2e8e336ea9d8a341c8b0ddf62a737d8beef99b6a1bc5a72",
+        "b33da8eccb2823fc003ce59bf33a8efad9a118278388d0591638f706683d8061",
+        "c2340e177dd3a5520e9d0e6703884fef4369b5b5cec58670e99c8eeea5e7ae0e",
+        "ca8b8da9671152be620df8e6ce2d6112c5aba85e43ef5e3a5540a79956227251",
+        "cf044b71edc3399cb799d09e556fcd74f7651f9f727e05e5c8561f952d35f390",
+        "d7fe54a93f72c9ef25dd1e7055e12de4c26c02b83fddfc0676de83573b28dc58",
+        "f1195a01850f9eb6e23aa35f3f48c150dc6164333aa0e7d66c2e6c9b9f3eefe5",
+        "f56279e9c5a97e50f46f6e0247911029d62d2e37da7beaf11a7bde52fbc5d93d",
+        "f858f431629374c97e29430dc8ba6624d7b208906db4ad49bc6a4dcbfdc2e2cc",
+        "f992f900dd6bb049aa0f341aed0f14dcce4dc20b54b419d16174c438da4c0d6a"
+      ]
+    }
+  },
+  "generationBrief": "Create original compact top-down pixel movement cycles for Amelia Chen and Noah Bennett through adult, midlife, and elder life stages. Preserve each canonical identity's hair, clothing silhouette, and accessory cues from named-characters-batch-v1. Use four cardinal directions and contact-a/passing-a/contact-b/passing-b/idle/interact states at 24x32 RGBA with feet pivot 12,31. Show gradual silvering, posture and wardrobe changes with age; keep elder canes unobtrusive and interact gestures age-appropriate and friendly. Rasterize new frames from original primitives; do not reuse source or family age-pack image bytes.",
+  "limitations": [
+    "Concept raster art requires artist review at native scale.",
+    "Gait timing, facial detail, renderer sampling, collision/pivot integration, and device validation are pending.",
+    "All frame records remain runtimeReady=false."
+  ]
+}

@@ -1,0 +1,2323 @@
+{
+  "batch": "named-characters-batch-v1",
+  "direction": "PIXEL-ONLY",
+  "runtimeReady": false,
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": [
+    "contact-a",
+    "passing-a",
+    "contact-b",
+    "passing-b",
+    "idle",
+    "interact"
+  ],
+  "characters": [
+    {
+      "id": "amelia",
+      "displayName": "Amelia Chen",
+      "role": "adult friend",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "silhouette": "brunette bob, apron dress",
+      "identityCues": ["teal satchel"],
+      "runtimeReady": false
+    },
+    {
+      "id": "noah",
+      "displayName": "Noah Bennett",
+      "role": "adult friend / caf\u00e9 supervisor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "silhouette": "tall lean, rolled sleeves",
+      "identityCues": ["apron notebook"],
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher",
+      "displayName": "Bellweather teacher",
+      "role": "school teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "silhouette": "blue knit sweater, chalk badge",
+      "identityCues": ["lesson pointer"],
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one",
+      "displayName": "Mara Bellweather",
+      "role": "parent / caregiver (canonical Mara)",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "silhouette": "pear shape, short natural curls",
+      "identityCues": ["mustard scarf and tote"],
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two",
+      "displayName": "Eli Bellweather",
+      "role": "parent / caregiver (canonical Eli)",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "silhouette": "tall lean, close-cropped hair",
+      "identityCues": ["round glasses and work jacket"],
+      "runtimeReady": false
+    }
+  ],
+  "frames": [
+    {
+      "id": "amelia/south/contact-a",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/amelia/amelia-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "265d86c4119079132fab3bd31a16d9fe8a8cf8d41481da7ec01cfb60b0c7100f",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/south/passing-a",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/amelia/amelia-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8bc19102c5ac379254f613fed79c1d0a0a34242430c673399197129d20c9ca8b",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/south/contact-b",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/amelia/amelia-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5afc7a8500bdb9aebd853890b379f6873de4203910244bd8f8cf7553b313065d",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/south/passing-b",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/amelia/amelia-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2aed54caf673a149c62967821837e7ca7920ae2a22a8541165c5505d7067c6d1",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/south/idle",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/amelia/amelia-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ae19c614e48b98b8e64d7ac2527bf19227f802d0055f54d56f6770d0ffdca407",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/south/interact",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/amelia/amelia-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "379fe3d55385ff3f67776acbdd311a6dc13d85795644e29469f309e32aeee528",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/west/contact-a",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/amelia/amelia-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5894fbc8db50e44b7ee61294dbdfc275e27375a95ecfa0974651623ddcbdd5f2",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/west/passing-a",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/amelia/amelia-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6ec4578fbc1774c423533c5596747ca16d0e40f477410e303057f61b563bd6e4",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/west/contact-b",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/amelia/amelia-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dcdad3556a585958d0db61a412c562851211bb26b1ae30dd7e8eec41ecb267e3",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/west/passing-b",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/amelia/amelia-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e771229b3180315fe6d82bdeca5c3e0b8b538cd28296a393b1c51a857ede7feb",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/west/idle",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/amelia/amelia-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a95e20ba3c9c33d3ca81f05b32de675e9cf881d5ee2a9aba51c86f5f955a762f",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/west/interact",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/amelia/amelia-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "23dd41f046bf683c100918ffe9b0d1d2052f213b48660a09cf02795a80d5cce3",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/east/contact-a",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/amelia/amelia-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dfb4bb209bd4847963c80511a072e342eea67fe33ef822e354d1417b4d696411",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/east/passing-a",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/amelia/amelia-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "da62de7f2e578ce22f84f285b3a8b6bedfcf202d91ad917a11c25cf65a01f574",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/east/contact-b",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/amelia/amelia-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "23b4269df4fee345755fad6b8e00e984c155b5d75b0c9acde60b23e602f133b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/east/passing-b",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/amelia/amelia-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "83795a9733d41358baf038a9a74c554286157e8819aa3ec3e549424251037a8d",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/east/idle",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/amelia/amelia-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8b98e98667b8907704a789a5aabdd5b34909dfcf9d6cb2b4a4e219a155826d02",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/east/interact",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/amelia/amelia-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a6b061b4bc52f00f3c301ff19e83da3e897246941f3f35b0e84fcb9acd8839aa",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/north/contact-a",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/amelia/amelia-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "86a092f32bf7e59467fe2ca326a45fd8f3288385eba7ef9ae77b05cff495f4d9",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/north/passing-a",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/amelia/amelia-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ef0cadc3414b6d5e1618c1d7f091e35b4f456e03549782f6f980812bbb7d38b0",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/north/contact-b",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/amelia/amelia-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "03a0540b0df6b7d523430a0a9f9b53ae3c802434de5cdcd343b1d6701610f580",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/north/passing-b",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/amelia/amelia-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7b66c302a16f403a9a5cce6ff5c4061079d6435213fcfcdeed180fbc29efd866",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/north/idle",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/amelia/amelia-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9e2a291bffad2fb19b4cf846a79abe109058f0273554b40b34a74c9447759ea5",
+      "runtimeReady": false
+    },
+    {
+      "id": "amelia/north/interact",
+      "character": "amelia",
+      "displayName": "Amelia Chen",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.amelia",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/amelia/amelia-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8fd61fe0168ddbca8ec9a4bdaae329c59cd03a242d26f3bbaf219bfb14a308e0",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/south/contact-a",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/noah/noah-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7f4d3f292e9bd09359fa1fa996b9ffc8a6742459963db115f45c036debf52479",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/south/passing-a",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/noah/noah-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b33da8eccb2823fc003ce59bf33a8efad9a118278388d0591638f706683d8061",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/south/contact-b",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/noah/noah-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7ec4b826662c47143e706df3111dbd0c413f5f01e5a6b24b3924af107d2f6b7f",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/south/passing-b",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/noah/noah-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "75d077be27c9d373dc10985805b2770c6e3fa19ffe7f2eb947d1ad72abfc9153",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/south/idle",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/noah/noah-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ca8b8da9671152be620df8e6ce2d6112c5aba85e43ef5e3a5540a79956227251",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/south/interact",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/noah/noah-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "17205b90b9e070cc6af58a52d6598e1787496fe31c3a88068735f2a7e7d60840",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/west/contact-a",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/noah/noah-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d7fe54a93f72c9ef25dd1e7055e12de4c26c02b83fddfc0676de83573b28dc58",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/west/passing-a",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/noah/noah-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f992f900dd6bb049aa0f341aed0f14dcce4dc20b54b419d16174c438da4c0d6a",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/west/contact-b",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/noah/noah-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a68b27fd7e75b0b420977522428c6a1c967d1a8e034e57675ff101ed1b8523df",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/west/passing-b",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/noah/noah-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a81c9c8a7163d328849f4079876233b3247571ce3c70916b1a29aa9e084bf43a",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/west/idle",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/noah/noah-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3510fd82a0747d3b62f0d9108cc80aa105685a88f68697597b653f1cc1c70129",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/west/interact",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/noah/noah-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "73a11b1fdd1a42e98ca2991ca87f494f30cfddbd790f9911da386c71832ba0df",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/east/contact-a",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/noah/noah-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c2340e177dd3a5520e9d0e6703884fef4369b5b5cec58670e99c8eeea5e7ae0e",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/east/passing-a",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/noah/noah-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "550144a47f41501c7c5cd898c387f1d9e53b34599b3932b108e6d8cb9da108d3",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/east/contact-b",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/noah/noah-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cf044b71edc3399cb799d09e556fcd74f7651f9f727e05e5c8561f952d35f390",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/east/passing-b",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/noah/noah-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2008675c783e01c142c459660571016512e4a0a1918d678ebc021c15a244d178",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/east/idle",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/noah/noah-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "594ee035c05b8635fd7b869cfca081abab97d44f3c8c06902518e8d1eff9a03a",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/east/interact",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/noah/noah-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f56279e9c5a97e50f46f6e0247911029d62d2e37da7beaf11a7bde52fbc5d93d",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/north/contact-a",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/noah/noah-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f1195a01850f9eb6e23aa35f3f48c150dc6164333aa0e7d66c2e6c9b9f3eefe5",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/north/passing-a",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/noah/noah-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1ec093e1e3c4feebdebd2b8a7d0efb95439a6ae20a44fb7942d119df175f16ce",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/north/contact-b",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/noah/noah-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8c94841a7480a20e584c7d60e898bb0104064832b0bd14330770c54fc8fae0b5",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/north/passing-b",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/noah/noah-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f858f431629374c97e29430dc8ba6624d7b208906db4ad49bc6a4dcbfdc2e2cc",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/north/idle",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/noah/noah-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a94d6b60cae990d5a2e8e336ea9d8a341c8b0ddf62a737d8beef99b6a1bc5a72",
+      "runtimeReady": false
+    },
+    {
+      "id": "noah/north/interact",
+      "character": "noah",
+      "displayName": "Noah Bennett",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.noah",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/noah/noah-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3dc863ecff1070634eefaca27d9a8e1f24e781afcc86e5cb2fd6b20d8b13cc2e",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/south/contact-a",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/teacher/teacher-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "74ef6397e5adb092687233100285246f26cb832f8ed6fec2354af7296cd3ae82",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/south/passing-a",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/teacher/teacher-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7368da9585acf92bc24d71f870fd5a3ad1b33e351c419748b93381357c3af80e",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/south/contact-b",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/teacher/teacher-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1208633fd2f70b2877704b34e181c570f283342194b4b6c95ebeba47d8a5bb11",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/south/passing-b",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/teacher/teacher-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2b551bee2d69e5ea9ffb33d77abd984ff94d66c380cc2a7321c08b9d3948a267",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/south/idle",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/teacher/teacher-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e44b90b5d084c62258b70ea1e78895cc8fd54e2171fb12ac734f4ed9eefe6908",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/south/interact",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/teacher/teacher-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b78e5b3736a3573979fc88b8d3e2b1c625713b7d50c0145f4c0f8d1d6e3bc6b7",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/west/contact-a",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/teacher/teacher-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "82bf4640376e7d3ebc124e7961807d09b681cee4a5794f95def69cc8c2311e52",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/west/passing-a",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/teacher/teacher-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bbc6f64135c3db734dafe032fa68394c781e05ebcadb8a8dfcbb162c649728f7",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/west/contact-b",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/teacher/teacher-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2a4f9803a6358bfdadc93f127efe5064ce6d844ff2e3478426ee8aba4b78bae8",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/west/passing-b",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/teacher/teacher-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e60758d80d5be6a3975d0dacd632a23345dfa75d550586c1b6f8b36c2379fad4",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/west/idle",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/teacher/teacher-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "abe97c8d2b4fb97d0cb23f70c254da89260c3ecd6ddf2e1d6f358f991cbde7c6",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/west/interact",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/teacher/teacher-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fddf9e4d3dbeb54950a16f26d291d4b8f055512c0ca591a6478355bc867c33fc",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/east/contact-a",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/teacher/teacher-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6d8979146528e24cb26fb3b5cb60171a70560483306ceaed6b3cbb5f3a9cfd66",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/east/passing-a",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/teacher/teacher-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4fd452af76692df4967ca673fa56a88e0e5035e81db1969dc0f31e850281eb79",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/east/contact-b",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/teacher/teacher-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e66c448384ff0ef5a0891abc93a58ed4678fa4b96b81b9aa7eb1b0b967a5c439",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/east/passing-b",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/teacher/teacher-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "42da4aa2265502e2e189d684fbf5a56cb0555eb500c5041eab2600ba686313a8",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/east/idle",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/teacher/teacher-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ee22ee6ecc74a23cd5d12832c34ff2253daea494b7a9b89fb8b7031482d3b033",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/east/interact",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/teacher/teacher-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "82d1950f064768f169fb2ed65c8c8bff7b36fe8a6d9c09a683be677b7001235f",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/north/contact-a",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/teacher/teacher-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "26fb64b180ec37522e86f8e7723f5640dc3972ee5cf2f13590c152d14d2f9594",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/north/passing-a",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/teacher/teacher-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "512021ea99eb681002dd4a950c1a4b9751ce2cc1d1aee76ae1fbc4ec4ff05737",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/north/contact-b",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/teacher/teacher-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "407c79991f2139be6abd85189ab39d45f49d5e5121f75407a9f2f932e1988c82",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/north/passing-b",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/teacher/teacher-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ccb9d01535a6efb22c4bc15636cdb0c9797ce785f615c138b05068405dfd6bdc",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/north/idle",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/teacher/teacher-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "513b73dd027049893748bf37d234adb0c0efae969da9117bb6c33bb345bcd35d",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/north/interact",
+      "character": "teacher",
+      "displayName": "Bellweather teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.teacher",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/teacher/teacher-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d0ffbdd01a7a2c710ccec5004091d197359cbe07e082f950be0c2ba20b28b3e7",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/south/contact-a",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/parent-one/parent-one-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4b0eb7f0bf5609ee60cefae1cecc0edfa32cbfe77352576a91195e5990620c6a",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/south/passing-a",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/parent-one/parent-one-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "10070e25d1f0b525fb708638496036b2e6b46c76eb4601335caf2f6ebbe0d3c8",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/south/contact-b",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/parent-one/parent-one-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "474e0bdc38416fa1fe71f8142db5ecb83384c0866e54af88f06bff0947024bdf",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/south/passing-b",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/parent-one/parent-one-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6135f9039787c239ffd8d3a9483a1e8cccc2831309f8ef44d17f3e833de4514e",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/south/idle",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/parent-one/parent-one-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "aafa635687a13a81be6f86719cd119d27fed07d7d59000825308aee340d2fa86",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/south/interact",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/parent-one/parent-one-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7dd0873bcbefc5618e09b8ac7b1b80f76054c60fd315ba0631a576450d0e32c8",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/west/contact-a",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/parent-one/parent-one-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7cad797f1a2f61c4f4320abb9971def2e0fa018a0777d7342b2e18321a4fbf14",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/west/passing-a",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/parent-one/parent-one-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8df67569aaf58bd3f31e3eb3350787f600ccb1ecf9f234429638203d57e44982",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/west/contact-b",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/parent-one/parent-one-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a4bd8d4557b772650546cdda0130ad50e26be47c536377409a771f343c8f530a",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/west/passing-b",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/parent-one/parent-one-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a38e811ea0688d36725ab83263004f63c54154c9ebac5706f67490b0de0c0715",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/west/idle",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/parent-one/parent-one-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "466a7a1175436e59487ecaa465790c6d8bbc95b590daa2e0c8cd25fe53321757",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/west/interact",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/parent-one/parent-one-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dba58d6ed90ae96bceee483d2a323fb2f6b0e9aa71f37feb61efcde73ba82af7",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/east/contact-a",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/parent-one/parent-one-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9df356e0726063d175b8a1fe1e7f2f0aacae1402758628b9978942fb1db83607",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/east/passing-a",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/parent-one/parent-one-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6ccd4b53eaf47b2992a59f642c5e40a5d7c18bbe0bef267a9c0f4a2fb3c43848",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/east/contact-b",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/parent-one/parent-one-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1a6b74f7f05d403d339135fc772635934636d954f4d90fbf0740f674f3b70572",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/east/passing-b",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/parent-one/parent-one-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "965ca6e78e41a77be515232d96c5720b472dc1c411a298850a290da0b28338a8",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/east/idle",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/parent-one/parent-one-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "85113d2172637fe47d55515ef5c1f3150edd6868ff16a3f2713c0610ee1e5001",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/east/interact",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/parent-one/parent-one-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d77082df6dfca410e44fd7b9c8d891bbf7d98ed39474e374430469d3a91ef784",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/north/contact-a",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/parent-one/parent-one-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "94202189dbf9ea22b15a3a3b3dd3ab36c2fce7f1650afaa5bfb035bb799e0aed",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/north/passing-a",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/parent-one/parent-one-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "373989b08d628cd013c41c89951aa9d4ba72214d1d69b5fd8b1d115e49e9d5ed",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/north/contact-b",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/parent-one/parent-one-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0aa838a3ddf97f24507fcf0cdd9ef0078ffc74b4028899f1a77907ffa99b044a",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/north/passing-b",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/parent-one/parent-one-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "41a7e8aebd6bc42fd05b825bb54a146e5b111781284a1c103ac344bd575d619f",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/north/idle",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/parent-one/parent-one-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "99121fbd83a81d43f8e8100e77ecce20b66407bd8c91e1a21f96e6aea5d3b7f6",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-one/north/interact",
+      "character": "parent-one",
+      "displayName": "Mara Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-one",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/parent-one/parent-one-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "60349bd6099d04fb9b645bdc2cf716fa44e68714c6799c0e2d6bf3f3e21537cf",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/south/contact-a",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/parent-two/parent-two-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e8696552a9cda2a1f8d1539e1f563205c2067efb94d0c593d25387027883200b",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/south/passing-a",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/parent-two/parent-two-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f2abe98562e3f93a39d792639aeffa45d10cfcfe6aed4f066b770ecebe433f70",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/south/contact-b",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/parent-two/parent-two-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d3ecc5eaf6b97446243ce634ca6376a449eb785100ace93eb93a511d8dc23fa0",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/south/passing-b",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/parent-two/parent-two-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "04f7fcc7c1736dd9ccfa37d664821a86c26ffa64e8a2264bd3d760c398162925",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/south/idle",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/parent-two/parent-two-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f999e7790643946b2d48d3b70c90587b38db1f5ef1ef1c85e6fa3202e981ada9",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/south/interact",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "south",
+      "phase": "interact",
+      "file": "frames/parent-two/parent-two-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b546863be3114d8d80e52001119a44aefa7f309e68aa97d3e15bdcfe10fecac9",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/west/contact-a",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/parent-two/parent-two-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8ac8db66bd1403469be1892524728a60b09d923f95cfa2939d335a91b8f20cbd",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/west/passing-a",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/parent-two/parent-two-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e7b5f2c404bc5008f006177a9198a285f364125dbe12a01c53164650515c7cda",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/west/contact-b",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/parent-two/parent-two-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "11db4be0b2035b14dc7083d2351eb371d3543d4e0f3898634195672bfa4b0b99",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/west/passing-b",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/parent-two/parent-two-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c4e1f92d5a2f7d8e718b99bce870e1fa736e2a2c054aa09d1d9bc3a102088ac8",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/west/idle",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/parent-two/parent-two-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ec1336d0edbc81138474323be93bc81e45653b2668dfbaa5d7352044299f3e6d",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/west/interact",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "west",
+      "phase": "interact",
+      "file": "frames/parent-two/parent-two-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3e4d2ece946c04686729c1eb3462f7b1e8592bb08ae3bdd19c1a0780406b16d8",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/east/contact-a",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/parent-two/parent-two-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5e51aeb5cafbc97ae83dbb817f0241d6025c89842adb97fc31b0882ba44b0ad6",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/east/passing-a",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/parent-two/parent-two-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dee2c90831f1dfefeb12f61f6c5583836f48e34cb504950d9622e76bd29ced75",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/east/contact-b",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/parent-two/parent-two-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "342b2d7b247ec6c600de7cd9053aac6248bd4bb66f91dee1f2d9d55d60b82dc3",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/east/passing-b",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/parent-two/parent-two-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "15411c96760224136efe98c7efab2c117782de78b49d063c3a52d7eae7c8f02c",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/east/idle",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/parent-two/parent-two-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2063ac9dbdbe92303ef9d9a741bf3c56467785b04552826c8e4980f34d7d832d",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/east/interact",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "east",
+      "phase": "interact",
+      "file": "frames/parent-two/parent-two-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "711e649c35d99c374e04e4cbd115c9a3f02e5970e5f08fc3bb432e355121fa1d",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/north/contact-a",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/parent-two/parent-two-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1bf49f1669de63ddbcabc78ccca1b592f373c2dd3946077e927675b6e64e0eac",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/north/passing-a",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/parent-two/parent-two-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e77eaafd2c742986bbedb9feac6a1cb7f508b557c9ca88063f3bdeca1e74095a",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/north/contact-b",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/parent-two/parent-two-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ef191359b45e013779b5e507d61b6a356a9dca349d0d7d04e05f621a90e53b96",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/north/passing-b",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/parent-two/parent-two-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2483000666baf11ae6a662dad82f50ef2d69e7d4be308e819e066f0644eac4c3",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/north/idle",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/parent-two/parent-two-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e61f231ff16cf79e976695dfcffcb89a250e38a12edee58c59fee3d3b1da8a3f",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-two/north/interact",
+      "character": "parent-two",
+      "displayName": "Eli Bellweather",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.parent-two",
+      "direction": "north",
+      "phase": "interact",
+      "file": "frames/parent-two/parent-two-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ecd26bc4d7e153c28455f4603dfa2a1e7ab910ef1e0a091e79ee927fb7882b68",
+      "runtimeReady": false
+    }
+  ],
+  "atlases": [
+    {
+      "character": "amelia",
+      "file": "frames/amelia/amelia-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "columns": [
+        "contact-a",
+        "passing-a",
+        "contact-b",
+        "passing-b",
+        "idle",
+        "interact"
+      ],
+      "rows": ["south", "west", "east", "north"],
+      "sha256": "61d95e0ca68f640d65fcc19dc3b415ab409b91ad77f08eb6ee67613180a580b4",
+      "runtimeReady": false
+    },
+    {
+      "character": "noah",
+      "file": "frames/noah/noah-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "columns": [
+        "contact-a",
+        "passing-a",
+        "contact-b",
+        "passing-b",
+        "idle",
+        "interact"
+      ],
+      "rows": ["south", "west", "east", "north"],
+      "sha256": "86d573103ec20f193ddb7ba89d1962dafde276f776ea3b11eb7a708e6bb0d405",
+      "runtimeReady": false
+    },
+    {
+      "character": "teacher",
+      "file": "frames/teacher/teacher-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "columns": [
+        "contact-a",
+        "passing-a",
+        "contact-b",
+        "passing-b",
+        "idle",
+        "interact"
+      ],
+      "rows": ["south", "west", "east", "north"],
+      "sha256": "d3642fccc34db61a782e76e1a2f7c5f9526bbe568432a45a9790dfad12d30de1",
+      "runtimeReady": false
+    },
+    {
+      "character": "parent-one",
+      "file": "frames/parent-one/parent-one-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "columns": [
+        "contact-a",
+        "passing-a",
+        "contact-b",
+        "passing-b",
+        "idle",
+        "interact"
+      ],
+      "rows": ["south", "west", "east", "north"],
+      "sha256": "d5abc1ba97a7e2aac996bc5fa8ed8d0c387d912b76677c542ce84fc4b01fc0c8",
+      "runtimeReady": false
+    },
+    {
+      "character": "parent-two",
+      "file": "frames/parent-two/parent-two-movement-atlas.png",
+      "width": 144,
+      "height": 128,
+      "columns": [
+        "contact-a",
+        "passing-a",
+        "contact-b",
+        "passing-b",
+        "idle",
+        "interact"
+      ],
+      "rows": ["south", "west", "east", "north"],
+      "sha256": "17c2abd803461be39a6a58971b3ac08a3884f530184515557240b82e16792566",
+      "runtimeReady": false
+    }
+  ],
+  "contactSheet": {
+    "file": "named-characters-contact-sheet-2x.png",
+    "sha256": "48a12add54a872a98185a388417096f4ea39ccc8745f692a07d38f6c56ccc549",
+    "runtimeReady": false
+  }
+}

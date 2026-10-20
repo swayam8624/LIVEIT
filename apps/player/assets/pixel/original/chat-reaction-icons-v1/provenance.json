@@ -1,0 +1,58 @@
+{
+  "generator": "generate_assets.py",
+  "generatorVersion": "1.0",
+  "createdUtc": "2026-10-20T00:00:00Z",
+  "prompt": "Original crisp pixel reaction stickers for six LIVEIT social characters, plus text-free chat status symbols, compact tails, and avatar badge frames.",
+  "negativePrompt": "No third-party sprites, no archive asset bytes, no logos, no readable text, no anti-aliased edges, no mirrored character art.",
+  "sourceBytes": [],
+  "files": [
+    {
+      "file": "reactions/mara-reactions-10x32-atlas.png",
+      "sha256": "56f59747f344b13e45ac82aafac85b6eadd6fe513d31d52460a2403aa57c470c"
+    },
+    {
+      "file": "reactions/eli-reactions-10x32-atlas.png",
+      "sha256": "c7faae33fe2cf9a52cfba5866ea7fd0288d23ff42cc2f5d3fc46b7a5bdf71459"
+    },
+    {
+      "file": "reactions/niko-reactions-10x32-atlas.png",
+      "sha256": "37906e82c50593c3e1e335328693da90c685ea6a1affc5be0f9837ed05517779"
+    },
+    {
+      "file": "reactions/aunt-sol-reactions-10x32-atlas.png",
+      "sha256": "61df2ab85a99503bc1ad1c4ead1572247c01e3166a7a011d2a6c2e4896b75996"
+    },
+    {
+      "file": "reactions/player-reactions-10x32-atlas.png",
+      "sha256": "77b39f3e7e7b0d60f05e96d04aa8e3ec1d2a22b40021a4ad4a388fb4b87dd8ce"
+    },
+    {
+      "file": "reactions/amelia-reactions-10x32-atlas.png",
+      "sha256": "c6d260f2eff5d3f57b0e09b0b811c900f844a7986bcf7bf48dd140c1d29d08da"
+    },
+    {
+      "file": "contact-status/contact-status-7x24-atlas.png",
+      "sha256": "fdd9e72692fc6648efc4fb5282e1112535cc8bda18d6cf0ad9537b9eab05cc3f"
+    },
+    {
+      "file": "bubble-tails/incoming-tail-20x14.png",
+      "sha256": "7f00eca8d1c7a1b513c76d19e389788c290e00e1ead7f58f320c747cde3f4651"
+    },
+    {
+      "file": "bubble-tails/outgoing-tail-20x14.png",
+      "sha256": "0915f393e0e58b4d4fb4beeb91c127bedf77598e69bb1cf6644def741eeea352"
+    },
+    {
+      "file": "bubble-tails/system-tail-20x14.png",
+      "sha256": "29921ddaa162c441949cc87649dff3b85d3672002361080111aea0c7e3bf53a7"
+    },
+    {
+      "file": "avatar-badges/avatar-badge-4x40-atlas.png",
+      "sha256": "c26b7a4b15b52826fab0662165941e8f1183961f3ceb62fc7dcac5c3745c5495"
+    },
+    {
+      "file": "chat-reaction-icons-v1-preview-3x.png",
+      "sha256": "43e79048ac1c3ec611f7d2fc3fb78f5cde63706cb4d5ff48d9e83ae7295c8947"
+    }
+  ]
+}

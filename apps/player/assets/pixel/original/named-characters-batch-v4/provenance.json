@@ -1,0 +1,10 @@
+{
+  "batch": "named-characters-batch-v4",
+  "created": "2026-10-20",
+  "method": "deterministic hand-authored Pillow pixel primitives",
+  "sourceArchivesUsed": [],
+  "externalImagesUsed": [],
+  "license": "original project-owned concept work; no third-party art included",
+  "catalogSource": "content/production-assets/v1/pixel-world.json exact named sprite records",
+  "runtimeReady": false
+}

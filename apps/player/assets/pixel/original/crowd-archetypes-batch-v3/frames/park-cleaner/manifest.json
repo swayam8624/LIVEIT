@@ -1,0 +1,237 @@
+{
+  "id": "crowd-park-cleaner-movement-v3",
+  "role": "park-cleaner",
+  "label": "park cleaner",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+  "description": "lime safety vest, utility belt, and long park broom",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "park-cleaner/south/walk-a",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/park-cleaner/park-cleaner-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "adb5ea389687c9af020ca0d84de4bcc16bef716e7f7bb0326a621763f8f5edad",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/south/walk-b",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/park-cleaner/park-cleaner-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0626d42706f8244796d5fea3da9bfc5e2fe7f0fad1efc4ad7fa53f3a86d0f707",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/south/idle",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/park-cleaner/park-cleaner-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9bc22be078a70cddac796a756784ae4654acdb3b1c5eafade610d59c18067cc8",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/west/walk-a",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/park-cleaner/park-cleaner-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3632613a6a2afc10830993f7799b2946c6509c84153f5bc10b0e828c2539aa15",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/west/walk-b",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/park-cleaner/park-cleaner-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b23761c3d2fed5180dcc139023d1b192d547a1bcc124260a8b2cf471aac0401d",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/west/idle",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/park-cleaner/park-cleaner-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a842da512fe1fbe5d879221d9ef4244f3299337b687d47f0c87bef55d2382d27",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/east/walk-a",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/park-cleaner/park-cleaner-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d567e6014342b22127ebcfff16aa3393f4ffe7b6242cd4ba79d5328392785484",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/east/walk-b",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/park-cleaner/park-cleaner-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4cd2f24282fd1ba74749318ad2bc3b4ab322f615432ece4fe472b5f56b156dc0",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/east/idle",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/park-cleaner/park-cleaner-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ea154f69fac835b19ab2b966d4837d3be431b00f467051d6259b88c18ca3871a",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/north/walk-a",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/park-cleaner/park-cleaner-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "179685ce4232e391b436952154da907af439e33fe7a033a248cd19933dc25003",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/north/walk-b",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/park-cleaner/park-cleaner-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fa3e9f0df0e836cfa2275198fbe04c330cc72cdb84c06f605c8883b292922d1a",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/north/idle",
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/park-cleaner/park-cleaner-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c48ed318ea384b613b6e14bc76241635e8e9fbe23800883319c76773b178b23e",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/park-cleaner/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "e1d406136b6be203c1bee2856a4abb42b845e8482ad777bf0d1e9fc43c68e2a4",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/park-cleaner/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "f4865147664671f60f5fb1f118ddda8192a3e3b7e8daf8cd3c5f9ee83069b9d4",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

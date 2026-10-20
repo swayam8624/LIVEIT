@@ -1,0 +1,237 @@
+{
+  "id": "crowd-child-playground-movement-v3",
+  "role": "child-playground",
+  "label": "child playground",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+  "description": "small orange hoodie, bright trainers, and a bouncing playground ball",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "child-playground/south/walk-a",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/child-playground/child-playground-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e80ef599d57fef0ebb2464194ac2d199a79dd8612ebee3c9851551b5ebcd85a3",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/south/walk-b",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/child-playground/child-playground-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d5fe98972b2ab031432b79e5af3f4b3ef083b81658af1f4e378491d965c92e0c",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/south/idle",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/child-playground/child-playground-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "84249ab5779ee29fc5d0e97498281b6b1677b66426ab0f43ac320251327e5c8b",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/west/walk-a",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/child-playground/child-playground-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "00cda72c5e8b3d96ad700b1e05789b702c8accd8fd1df399d17bcbf4f066462a",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/west/walk-b",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/child-playground/child-playground-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "79af367de0b5f9159f4c6ceda949a641448b5c89ff5de75488f366582e83e6b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/west/idle",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/child-playground/child-playground-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7753c8dc7334679a5a6f1ba671bee125040be9ad93f960e987abf221c849a06f",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/east/walk-a",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/child-playground/child-playground-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b532fb73f6807e77f047c18f0377c202197617297acef6873c346632a960e3bb",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/east/walk-b",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/child-playground/child-playground-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d4330468f034f08931d9ced2de665aac1d17fb4a6c1b5a447bcbcf61b7b282f9",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/east/idle",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/child-playground/child-playground-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b3957884d207694f0d2b3f86e11261976dc26d372667f0095595f3e1212a2b1e",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/north/walk-a",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/child-playground/child-playground-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7ce8841a031a6340351236ee09b7bdbfc1042640ce205f9f85daf13a6ee38d46",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/north/walk-b",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/child-playground/child-playground-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9003547fd6faa6de0222b7fa6e7179e0292a7bae024961721ae4fe9d69606d99",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-playground/north/idle",
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/child-playground/child-playground-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9f9c6b2dbec145e44167744de44c7a75dc0c9195ad75ff72a96285d12667e03d",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/child-playground/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "4445d551e259dadd4a2ceb0cc7eec04cba7fae89129263fe7adc989326bc2244",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/child-playground/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "7cb134535843bda06fd87c1cb56f0ef642df63d754bc3495649c43ef394c6666",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

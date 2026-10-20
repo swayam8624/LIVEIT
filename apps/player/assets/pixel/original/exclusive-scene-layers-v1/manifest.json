@@ -1,0 +1,223 @@
+{
+  "batchId": "exclusive-scene-layers-v1",
+  "version": 1,
+  "runtimeReady": false,
+  "records": [
+    {
+      "path": "backgrounds/elder-birthday-dining-320x128-review.png",
+      "sha256": "f88f29f07916c8378e228c72c979ba1df7972b23578ed883bc9286a75996d010",
+      "width": 640,
+      "height": 256,
+      "mode": "RGB",
+      "alpha": false,
+      "runtimeReady": false
+    },
+    {
+      "path": "backgrounds/elder-birthday-dining-flattened-concept.png",
+      "sha256": "d8426e70c8dc06054858eeee1e90b7f176f2ed192551c5d9ea2befe465b8fc49",
+      "width": 1706,
+      "height": 291,
+      "mode": "RGB",
+      "alpha": false,
+      "runtimeReady": false
+    },
+    {
+      "path": "backgrounds/elder-birthday-dining-placement-guide.png",
+      "sha256": "4ca97791dcaa93e6265db8565cd8661a81a8cdcb86d5fc9f85126e67242fa799",
+      "width": 640,
+      "height": 256,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "backgrounds/graduation-garden-320x128-review.png",
+      "sha256": "976c5abf4d4a6df70daea6018bc0843d6a82ff91e3c8143b9076e10197df316d",
+      "width": 640,
+      "height": 256,
+      "mode": "RGB",
+      "alpha": false,
+      "runtimeReady": false
+    },
+    {
+      "path": "backgrounds/graduation-garden-flattened-concept.png",
+      "sha256": "a3059222b72c0bd4903c1a73c96ad9fb9f7c673e0d56a5a066c8ae4a9d883be8",
+      "width": 1706,
+      "height": 291,
+      "mode": "RGB",
+      "alpha": false,
+      "runtimeReady": false
+    },
+    {
+      "path": "backgrounds/graduation-garden-placement-guide.png",
+      "sha256": "073cc6a84a1eb8d0002e2564344ab68711be86293aa5e851494055ba3ffb96fd",
+      "width": 640,
+      "height": 256,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "backgrounds/new-parenthood-nursery-320x128-review.png",
+      "sha256": "085488e5c1944afe6c9f79863e19d16f788c199e46b33bd73c134ec3c1f365f3",
+      "width": 640,
+      "height": 256,
+      "mode": "RGB",
+      "alpha": false,
+      "runtimeReady": false
+    },
+    {
+      "path": "backgrounds/new-parenthood-nursery-flattened-concept.png",
+      "sha256": "ab9600a33de3461235a77ea4b64bbde0ff054eee13fd984fcbda0446d95be0dd",
+      "width": 1706,
+      "height": 287,
+      "mode": "RGB",
+      "alpha": false,
+      "runtimeReady": false
+    },
+    {
+      "path": "backgrounds/new-parenthood-nursery-placement-guide.png",
+      "sha256": "d77800be379177ced4bfee3837b91a0d9c9e670dc42e37e8265fffc9b5ba0632",
+      "width": 640,
+      "height": 256,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "previews/exclusive-scenes-layer-order-preview.png",
+      "sha256": "5cc3141d227db01fcc8f124969a323f9189c5453ef4a90bc8a724711a8ddcdcd",
+      "width": 960,
+      "height": 128,
+      "mode": "RGB",
+      "alpha": false,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/elder-birthday-cake.png",
+      "sha256": "cd15ee088afb8cd6a457a4fc9de8d9320effdae9b7f19c9c4ac93e5b692328f1",
+      "width": 362,
+      "height": 324,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/elder-birthday-gift.png",
+      "sha256": "223882fdf2f05f56f9e48eb6b6b58049e32da35e25af88ebda7c015cdccb8fd3",
+      "width": 362,
+      "height": 362,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/elder-birthday-photo.png",
+      "sha256": "1e168605160897b216e3610d74307d9214694072df806358a6b5f6e2b5388917",
+      "width": 337,
+      "height": 336,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/elder-birthday-teacup.png",
+      "sha256": "ae31bfdb8fbd1f554f817ccecdec2f0f48bfe86f5e07bae7e7c65fdb0b28291e",
+      "width": 361,
+      "height": 362,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/graduation-bouquet.png",
+      "sha256": "c9c02c4e9f194189fc7c390022d3fdd4725c9c2bc7dcb0da86c26ff28c5c3d06",
+      "width": 362,
+      "height": 353,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/graduation-bunting.png",
+      "sha256": "fe3c19889d6f932b7f59da3ed955ae68c35970b1d16ca69a7576982cd0718b3f",
+      "width": 361,
+      "height": 362,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/graduation-diploma.png",
+      "sha256": "163ef3f64a660222bc70f2d91eee9c7f1a4fd807d771c8bf8fdae63ef62e1f4c",
+      "width": 362,
+      "height": 339,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/graduation-mortarboard.png",
+      "sha256": "6cc74980920f8a73e1cdd3faf4358e1eaa60b45fc9995e3fbe755f115dd368fa",
+      "width": 362,
+      "height": 362,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/new-parenthood-bassinet.png",
+      "sha256": "874281012cc866461e2a46a2b09e03e4366e92c1712621d25fb6405479ea40e9",
+      "width": 362,
+      "height": 352,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/new-parenthood-bottle.png",
+      "sha256": "24773f1b51e3a04febe50ccf1d60990349e69de1f092c3bb2178d689bcab8bf9",
+      "width": 362,
+      "height": 362,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/new-parenthood-lamp.png",
+      "sha256": "f31294d83de7189828343f03415d6480acd9f8d4f16712df42e7356207befd1f",
+      "width": 361,
+      "height": 362,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "props/new-parenthood-swaddle.png",
+      "sha256": "c5965f495ed1d43ae37fc7b729e269dd041f3e7a376f12cd1fd935d43118c9d7",
+      "width": 356,
+      "height": 362,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "sources/exclusive-props-source.png",
+      "sha256": "c08d99bdd5b5aa91a2cee80254b7943e4820eb82712cb574effb65eac24af7e8",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alpha": true,
+      "runtimeReady": false
+    },
+    {
+      "path": "sources/exclusive-scene-triptych-source.png",
+      "sha256": "e258e9197e9857e608710fe047cada805ccd1f6557862c40214913db60a78941",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGB",
+      "alpha": false,
+      "runtimeReady": false
+    }
+  ]
+}

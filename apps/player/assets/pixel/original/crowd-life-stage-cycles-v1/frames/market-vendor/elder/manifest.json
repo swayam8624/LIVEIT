@@ -1,0 +1,276 @@
+{
+  "id": "crowd-market-vendor-elder-movement-age-v1",
+  "role": "market-vendor",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older worker or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.market-vendor",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/market-vendor/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "market-vendor/elder/south/walk-a",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/market-vendor/elder/market-vendor-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c2b5f54ddcf8d7634d801632e243938e92bca9524e040ec3758700816eb65ffa",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/front/walk-a.png",
+      "sourceSha256": "ce8ed23ef5ffd6cedf2cd843121c2c482d2bba9ba12a04dadd62e5e4cbd2e512",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/south/walk-b",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/market-vendor/elder/market-vendor-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0f284b4d8ac01a36b7a525153cadfb9e523aa6b0e4a9575174fd30f9a05842eb",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/front/walk-b.png",
+      "sourceSha256": "ddff463910375b80536b471421ca44e144417649affea9040452bad0b7e887e1",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/south/idle",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/market-vendor/elder/market-vendor-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8d44a21367adfb21fd31460f3189d1977986b4c5fd5d60bd2bf0b4711223cb99",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/front/idle.png",
+      "sourceSha256": "c91e47d6cec7e17dc4aa4e89c7471618fc487afb949c6fb5f942b6d000fab9b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/west/walk-a",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/market-vendor/elder/market-vendor-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "caf0cd0e9aee0ebd67adf6c84812f8d0084d588c493f0f834297eb951cf94d83",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/left/walk-a.png",
+      "sourceSha256": "0ba0c3d6b3ff7e746cc77d1c130db68deab997a59f09061dee5686d6950e10f5",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/west/walk-b",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/market-vendor/elder/market-vendor-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "92dc37840a7f19757c956afe7124e27e30d3d008c15bea98ac37ded96cf28844",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/left/walk-b.png",
+      "sourceSha256": "63a64331fc2254d08fc40b23439d3524dc9d57e3ae049d28f18552936157f4e5",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/west/idle",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/market-vendor/elder/market-vendor-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "24ddc3cf0ff69033d0a75369d17ed2bfadd6e22cb026968977f8bf112770e0b6",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/left/idle.png",
+      "sourceSha256": "245706282c26cc522c91b4853580dcbea5b92b739cbe5e062971b3628b2c6c32",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/east/walk-a",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/market-vendor/elder/market-vendor-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2f877174304cf9fb12b451f03d314e4f6946e8d47731497c0987bada65f6907b",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/right/walk-a.png",
+      "sourceSha256": "1e9d395488446cc9c604907d78251a01968ea00957ed1eed6a7c23b1119eab31",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/east/walk-b",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/market-vendor/elder/market-vendor-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a14adc341d4304d1fe81fb08d992ab93d96967191db07d1be6bc0a1e864cc21d",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/right/walk-b.png",
+      "sourceSha256": "2e797cc8f33ca99fa192bba3cd8053d015af4eada2419eff8585ebc5380121de",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/east/idle",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/market-vendor/elder/market-vendor-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "48f1f3c922ca64203d182d7c8c50f17e9abafa118bfb078e6fc87c6ecbd50d36",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/right/idle.png",
+      "sourceSha256": "cf1a569ae9a90a62c9fb89477fc95a255b0792be357e35d7d61accae8499e130",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/north/walk-a",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/market-vendor/elder/market-vendor-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8cb511ef01766a05956727f0ff8de1804e111dc7227d9daf1382bd8c34252c7b",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/back/walk-a.png",
+      "sourceSha256": "c6a64620a3e5b1855579ea31d568d1841b6fe8ec7604f5372a4fbb65d99c082c",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/north/walk-b",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/market-vendor/elder/market-vendor-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d79f86e7c61be865bf4b147cc6292272b93f50bda8ae60de19f4e6958aeb68c5",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/back/walk-b.png",
+      "sourceSha256": "29d4f785f31188de4374b60021d8f367f41f96c981f910e722fac9b9ae3f28b9",
+      "runtimeReady": false
+    },
+    {
+      "id": "market-vendor/elder/north/idle",
+      "role": "market-vendor",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/market-vendor/elder/market-vendor-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "24b3d75b017196c0e4d1ab07358a36035aeb60b27433c6936306ee35a504bd51",
+      "sourceFile": "crowd-archetypes-batch-v2/market-vendor/back/idle.png",
+      "sourceSha256": "a090a71fda530d0525ca78e77a9eabe69e3da6317ab23311c6718f003e31f7bd",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

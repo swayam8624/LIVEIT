@@ -1,0 +1,760 @@
+{
+  "batch": "button-states-v1",
+  "runtimeReady": false,
+  "pixelArt": true,
+  "sampling": "nearest",
+  "buttonSize": [160, 48],
+  "iconSize": [24, 24],
+  "nineSliceInsets": {
+    "left": 8,
+    "top": 8,
+    "right": 8,
+    "bottom": 8
+  },
+  "states": ["normal", "focused", "pressed", "disabled"],
+  "families": [
+    {
+      "id": "primary",
+      "label": "confirm / continue",
+      "base": "teal",
+      "accent": "teal_hi",
+      "icon": "arrow"
+    },
+    {
+      "id": "secondary",
+      "label": "open / inspect",
+      "base": "cream",
+      "accent": "mustard",
+      "icon": "spark"
+    },
+    {
+      "id": "choice",
+      "label": "story choice",
+      "base": "mustard",
+      "accent": "cream",
+      "icon": "branch"
+    },
+    {
+      "id": "phone",
+      "label": "phone / messages",
+      "base": "auburn",
+      "accent": "coral",
+      "icon": "phone"
+    },
+    {
+      "id": "danger",
+      "label": "cancel / leave",
+      "base": "coral",
+      "accent": "cream",
+      "icon": "cross"
+    },
+    {
+      "id": "utility",
+      "label": "settings / utility",
+      "base": "ink_soft",
+      "accent": "teal_hi",
+      "icon": "gear"
+    }
+  ],
+  "frames": [
+    {
+      "id": "primary-normal",
+      "file": "buttons/primary-normal.png",
+      "family": "primary",
+      "state": "normal",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/primary-normal.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-focused",
+      "file": "buttons/primary-focused.png",
+      "family": "primary",
+      "state": "focused",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/primary-focused.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-pressed",
+      "file": "buttons/primary-pressed.png",
+      "family": "primary",
+      "state": "pressed",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/primary-pressed.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-disabled",
+      "file": "buttons/primary-disabled.png",
+      "family": "primary",
+      "state": "disabled",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/primary-disabled.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-normal",
+      "file": "buttons/secondary-normal.png",
+      "family": "secondary",
+      "state": "normal",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/secondary-normal.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-focused",
+      "file": "buttons/secondary-focused.png",
+      "family": "secondary",
+      "state": "focused",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/secondary-focused.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-pressed",
+      "file": "buttons/secondary-pressed.png",
+      "family": "secondary",
+      "state": "pressed",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/secondary-pressed.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-disabled",
+      "file": "buttons/secondary-disabled.png",
+      "family": "secondary",
+      "state": "disabled",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/secondary-disabled.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-normal",
+      "file": "buttons/choice-normal.png",
+      "family": "choice",
+      "state": "normal",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/choice-normal.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-focused",
+      "file": "buttons/choice-focused.png",
+      "family": "choice",
+      "state": "focused",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/choice-focused.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-pressed",
+      "file": "buttons/choice-pressed.png",
+      "family": "choice",
+      "state": "pressed",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/choice-pressed.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-disabled",
+      "file": "buttons/choice-disabled.png",
+      "family": "choice",
+      "state": "disabled",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/choice-disabled.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-normal",
+      "file": "buttons/phone-normal.png",
+      "family": "phone",
+      "state": "normal",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/phone-normal.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-focused",
+      "file": "buttons/phone-focused.png",
+      "family": "phone",
+      "state": "focused",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/phone-focused.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-pressed",
+      "file": "buttons/phone-pressed.png",
+      "family": "phone",
+      "state": "pressed",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/phone-pressed.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-disabled",
+      "file": "buttons/phone-disabled.png",
+      "family": "phone",
+      "state": "disabled",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/phone-disabled.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-normal",
+      "file": "buttons/danger-normal.png",
+      "family": "danger",
+      "state": "normal",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/danger-normal.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-focused",
+      "file": "buttons/danger-focused.png",
+      "family": "danger",
+      "state": "focused",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/danger-focused.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-pressed",
+      "file": "buttons/danger-pressed.png",
+      "family": "danger",
+      "state": "pressed",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/danger-pressed.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-disabled",
+      "file": "buttons/danger-disabled.png",
+      "family": "danger",
+      "state": "disabled",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/danger-disabled.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-normal",
+      "file": "buttons/utility-normal.png",
+      "family": "utility",
+      "state": "normal",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/utility-normal.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-focused",
+      "file": "buttons/utility-focused.png",
+      "family": "utility",
+      "state": "focused",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/utility-focused.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-pressed",
+      "file": "buttons/utility-pressed.png",
+      "family": "utility",
+      "state": "pressed",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/utility-pressed.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-disabled",
+      "file": "buttons/utility-disabled.png",
+      "family": "utility",
+      "state": "disabled",
+      "width": 160,
+      "height": 48,
+      "x": 0,
+      "y": 0,
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "iconFile": "icons/utility-disabled.png",
+      "sampling": "nearest",
+      "runtimeReady": false
+    }
+  ],
+  "icons": [
+    {
+      "id": "primary-normal-icon",
+      "file": "icons/primary-normal.png",
+      "family": "primary",
+      "state": "normal",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-focused-icon",
+      "file": "icons/primary-focused.png",
+      "family": "primary",
+      "state": "focused",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-pressed-icon",
+      "file": "icons/primary-pressed.png",
+      "family": "primary",
+      "state": "pressed",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-disabled-icon",
+      "file": "icons/primary-disabled.png",
+      "family": "primary",
+      "state": "disabled",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-normal-icon",
+      "file": "icons/secondary-normal.png",
+      "family": "secondary",
+      "state": "normal",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-focused-icon",
+      "file": "icons/secondary-focused.png",
+      "family": "secondary",
+      "state": "focused",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-pressed-icon",
+      "file": "icons/secondary-pressed.png",
+      "family": "secondary",
+      "state": "pressed",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-disabled-icon",
+      "file": "icons/secondary-disabled.png",
+      "family": "secondary",
+      "state": "disabled",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-normal-icon",
+      "file": "icons/choice-normal.png",
+      "family": "choice",
+      "state": "normal",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-focused-icon",
+      "file": "icons/choice-focused.png",
+      "family": "choice",
+      "state": "focused",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-pressed-icon",
+      "file": "icons/choice-pressed.png",
+      "family": "choice",
+      "state": "pressed",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-disabled-icon",
+      "file": "icons/choice-disabled.png",
+      "family": "choice",
+      "state": "disabled",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-normal-icon",
+      "file": "icons/phone-normal.png",
+      "family": "phone",
+      "state": "normal",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-focused-icon",
+      "file": "icons/phone-focused.png",
+      "family": "phone",
+      "state": "focused",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-pressed-icon",
+      "file": "icons/phone-pressed.png",
+      "family": "phone",
+      "state": "pressed",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-disabled-icon",
+      "file": "icons/phone-disabled.png",
+      "family": "phone",
+      "state": "disabled",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-normal-icon",
+      "file": "icons/danger-normal.png",
+      "family": "danger",
+      "state": "normal",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-focused-icon",
+      "file": "icons/danger-focused.png",
+      "family": "danger",
+      "state": "focused",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-pressed-icon",
+      "file": "icons/danger-pressed.png",
+      "family": "danger",
+      "state": "pressed",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-disabled-icon",
+      "file": "icons/danger-disabled.png",
+      "family": "danger",
+      "state": "disabled",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-normal-icon",
+      "file": "icons/utility-normal.png",
+      "family": "utility",
+      "state": "normal",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-focused-icon",
+      "file": "icons/utility-focused.png",
+      "family": "utility",
+      "state": "focused",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-pressed-icon",
+      "file": "icons/utility-pressed.png",
+      "family": "utility",
+      "state": "pressed",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-disabled-icon",
+      "file": "icons/utility-disabled.png",
+      "family": "utility",
+      "state": "disabled",
+      "width": 24,
+      "height": 24,
+      "sampling": "nearest",
+      "runtimeReady": false
+    }
+  ],
+  "notes": "Source concepts only; no runtime/catalog integration, labels, or accessibility text."
+}

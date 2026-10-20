@@ -1,0 +1,276 @@
+{
+  "id": "crowd-bus-driver-elder-movement-age-v1",
+  "role": "bus-driver",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older worker or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.bus-driver",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/bus-driver/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "bus-driver/elder/south/walk-a",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/bus-driver/elder/bus-driver-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bc7eefc67a459618a34b6f8dcf7315fc94da6de0d5da5162fc3fdce82c3d377b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-south-walk-a.png",
+      "sourceSha256": "bfc293d7fa257e0bfa3c6682cd28e6e880c1584401a5d51dafaf51965009634a",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/south/walk-b",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/bus-driver/elder/bus-driver-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8444e2cd9307ae48cc67c34cc226a000e13475cdc366d885ce51638d06109d8c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-south-walk-b.png",
+      "sourceSha256": "255b028fe472f4986b5c9a186f68fa827b832a2c0080b9de57efe226bfd3a0f9",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/south/idle",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/bus-driver/elder/bus-driver-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5d1508f5badae77569bf674c54d57ec8298012895037c4dfec98b2d3ad3be184",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-south-idle.png",
+      "sourceSha256": "8d518c152d939583a62c37537d9a9d271ccffec3d531216709ebcd685dc81776",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/west/walk-a",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/bus-driver/elder/bus-driver-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5d172c5e5d6bdec7ca863b8d5ae11aa15f6855db38ee163352def59cf14754a9",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-west-walk-a.png",
+      "sourceSha256": "7acd9e0279ba99beb171b0234fa80d0004a3281619bea7ee303b9fa60ff8e76b",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/west/walk-b",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/bus-driver/elder/bus-driver-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9c9b9d0d33695e3ac02602f1cb085a58992465b53280ba9e0a5806a7d816502f",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-west-walk-b.png",
+      "sourceSha256": "fdbdf8c8826b89b6b035ac5cc87b5b5b10e658928a677dedee236395c3595298",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/west/idle",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/bus-driver/elder/bus-driver-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "481a11433d8541efcf6d15b553ad61608ac02a22dbf571e17363f8f0764811e3",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-west-idle.png",
+      "sourceSha256": "cd00af44f6a2bee6388ee3ef21ca2bafb70b5e0c96cea98cb38f206efcddb196",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/east/walk-a",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/bus-driver/elder/bus-driver-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e661f747b9ca7be2bf4723d19cc148065a39b18a83c083349cd8244391ed086b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-east-walk-a.png",
+      "sourceSha256": "4405b52278cae9894dc39d792f4a0a653c1fbace8f79e8f8a89dc43742bc509d",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/east/walk-b",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/bus-driver/elder/bus-driver-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0bcf0924b4ae41ea5055582e861b27e02bdb7f839cd34b98fc2eca7442e85d8c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-east-walk-b.png",
+      "sourceSha256": "59af2cfa68e11cf628d1d598b1d02c3590718b66008b61e24a25d4f03a6f0a74",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/east/idle",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/bus-driver/elder/bus-driver-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dd811a6ab503aebb7797ccf6a7a51f4cb766539d75eae2472d397176a74f4889",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-east-idle.png",
+      "sourceSha256": "aee48a1dde704c928aed8a16876fe8bae416fc18bb582779ddfb0d422fdaffd2",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/north/walk-a",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/bus-driver/elder/bus-driver-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0029a38028db5ae2390ff21076904f7e53820177ad8eea847a2f0da365ac0328",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-north-walk-a.png",
+      "sourceSha256": "cf91607c6f752b823199a250de67af6616acd99bc996f3f18abd148a09714431",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/north/walk-b",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/bus-driver/elder/bus-driver-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ae5d373aac81b4eb88f228bdac54b315c5ebe3c91b7fd3c7f12bcc6671e7a690",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-north-walk-b.png",
+      "sourceSha256": "344b09929968b4ba3b62ed2baea00c8e10ae7b72e1707e6fe766bf449163bc82",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/elder/north/idle",
+      "role": "bus-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/bus-driver/elder/bus-driver-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b3c39e4ff11e9afaf1ed5464a78b8fcfe5cf516c03751cf48ef558fb9164a835",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/bus-driver/bus-driver-north-idle.png",
+      "sourceSha256": "8583b67b5176a2643a1c0f31eabeb84bce4f816b55f12667e7b07c187f8e279d",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

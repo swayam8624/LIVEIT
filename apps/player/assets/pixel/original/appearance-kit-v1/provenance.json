@@ -1,0 +1,12 @@
+{
+  "batch": "appearance-kit-v1",
+  "created": "2026-10-20",
+  "authoring": "deterministic Pillow primitives in generate_appearance_kit.py",
+  "sourceImages": [],
+  "sourceArchives": [],
+  "thirdPartyAssets": [],
+  "aiGeneration": false,
+  "license": "Original work authored for LIVEIT; no external asset license is inherited.",
+  "derivation": "Each 24x32 RGBA layer is drawn directly in code, then composited in the documented order for review examples.",
+  "runtimeReady": false
+}

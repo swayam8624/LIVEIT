@@ -1,0 +1,473 @@
+{
+  "id": "named-neighbor-movement-v3",
+  "role": "neighbor",
+  "label": "neighbor",
+  "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+  "description": "Round-shouldered neighbor in a moss cardigan carrying a terracotta plant.",
+  "directions": ["south", "west", "east", "north"],
+  "states": [
+    "contact-a",
+    "passing-a",
+    "contact-b",
+    "passing-b",
+    "idle",
+    "interact"
+  ],
+  "walkPhases": ["contact-a", "passing-a", "contact-b", "passing-b"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "neighbor/south/contact-a",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "south",
+      "phase": "contact-a",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1575e9d62caeb3d9be2c50a6b0eb0349834b43042aed32f095875985c8ad209a",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/south/passing-a",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "south",
+      "phase": "passing-a",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7c572141ebd10f38dfc235bdbda6c542b30502a60ced002c26d6139b6ffbf537",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/south/contact-b",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "south",
+      "phase": "contact-b",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "24875e2dcf0c3847ca9fc9f63aa36fb35a894bb7c6c2189ce2cd89a701b99f73",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/south/passing-b",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "south",
+      "phase": "passing-b",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a99cd08ff6210abafa77011ca8dd43d915a2a2fb80c6a176f271a647d1890a49",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/south/idle",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "south",
+      "phase": "idle",
+      "state": "idle",
+      "file": "frames/neighbor/neighbor-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "04f5ff1a206cefe4e680ddb9bdc88895fac52b3bca8c3b60e65116540c4eb068",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/south/interact",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "south",
+      "phase": "interact",
+      "state": "interact",
+      "file": "frames/neighbor/neighbor-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8833ab30cf35b14f40ec2bb873b56e0c30ffed41a1ec105f3d0adeb2078cef7c",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/west/contact-a",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "west",
+      "phase": "contact-a",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0f3ef4664c1e4a8b500075b2a0ae2f9c3265698c898a1a751d06f26bca1070d0",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/west/passing-a",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "west",
+      "phase": "passing-a",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9537963ef5b7053fac51fcc3f571148afdd92f3c5c93774f08d629bbd3725a64",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/west/contact-b",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "west",
+      "phase": "contact-b",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2862fa563a93518c0eaf7ce2498019fd16e51d0ed8b80688e8b86eaddb343326",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/west/passing-b",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "west",
+      "phase": "passing-b",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2173d401e36e90e78cde0e4efabb0a17b5e7f3d09dbb6584082fe2c5911fed40",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/west/idle",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "west",
+      "phase": "idle",
+      "state": "idle",
+      "file": "frames/neighbor/neighbor-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "80e42e05640d3cf2927b4a3610b8079dec259bfe020171f272039ba2dd64819e",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/west/interact",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "west",
+      "phase": "interact",
+      "state": "interact",
+      "file": "frames/neighbor/neighbor-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "beeec39b3f7bfe48580e0dda9facbfb42566274e1cc6b2583916b5ddaec533a3",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/east/contact-a",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "east",
+      "phase": "contact-a",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1955d1d67fbd898908be9bf7971de2e737f74a4808a134fdecb4b23a18b16a8f",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/east/passing-a",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "east",
+      "phase": "passing-a",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dccc7db49d6fa1d364785f301f3f86313a9003566f7667d69bfd008695fb6c0a",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/east/contact-b",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "east",
+      "phase": "contact-b",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3534541e69aefda4c8655fc1cba566b6cccd15634c53091807d33dec488139f4",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/east/passing-b",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "east",
+      "phase": "passing-b",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "535a80f0e980863a11a2b9073e7c9d36f4823d701f69d9ce16ef31e4121db09b",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/east/idle",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "east",
+      "phase": "idle",
+      "state": "idle",
+      "file": "frames/neighbor/neighbor-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "258556ab716262afd19a697538b446f1fdd47aad0f731bd07d1068ac234fba57",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/east/interact",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "east",
+      "phase": "interact",
+      "state": "interact",
+      "file": "frames/neighbor/neighbor-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2f1adce4c1b84fec8328bea7c4990b7a401c224d28f86a080d4b08c8862771e6",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/north/contact-a",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "north",
+      "phase": "contact-a",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d219fed505c896f6bf1280910dfc74ed9b8f0029c9c88af1e0f3afa73ec61308",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/north/passing-a",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "north",
+      "phase": "passing-a",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "652dd6068e42d049cd15d18cfde9d9858b5074dc6ee89a256d94375ff10505db",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/north/contact-b",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "north",
+      "phase": "contact-b",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1c6eeefe8df69338002aeb2610aa442f3d56d77e8bf901e791bbfc8a9113e8df",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/north/passing-b",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "north",
+      "phase": "passing-b",
+      "state": "walk",
+      "file": "frames/neighbor/neighbor-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3e153d8740c73e47e4717cdf8266d794014a1a66cedc144aeddbaf3d6a81225a",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/north/idle",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "north",
+      "phase": "idle",
+      "state": "idle",
+      "file": "frames/neighbor/neighbor-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cbabd34b2b72659ae47ebf97fe03b94982d72d7db6eb0b76353e2bb02f5e7c54",
+      "runtimeReady": false
+    },
+    {
+      "id": "neighbor/north/interact",
+      "role": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "direction": "north",
+      "phase": "interact",
+      "state": "interact",
+      "file": "frames/neighbor/neighbor-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "02c86704e97d9696c8921621999b2431cef7bc34cd2928abf4efda719c3be1ed",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/neighbor/movement-atlas-4x6.png",
+    "width": 144,
+    "height": 128,
+    "sha256": "4c8c5d4d9974b5023dd3ec1f2f063336f1e1629962702f54727106b9b08ecb6b",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/neighbor/movement-atlas-preview-4x.png",
+    "scale": 4,
+    "sha256": "3a3a6ca8400d73d391f2a208f4f2e52cec994377c7f16212736d0aff2749c4f6",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

@@ -1,0 +1,13 @@
+{
+  "batch": "appearance-directional-v2",
+  "created": "2026-10-20",
+  "authoring": "deterministic Pillow drawing primitives in generate_directional_appearance.py",
+  "visualReference": "Existing original LIVEIT appearance-kit layout and palette vocabulary were inspected for compatibility only; no source pixels were copied.",
+  "sourceImages": [],
+  "sourceArchives": [],
+  "thirdPartyAssets": [],
+  "aiGeneration": false,
+  "license": "Original work authored for LIVEIT; no external asset license is inherited.",
+  "directionMethod": "Each cardinal direction has independent hair, torso, and silhouette coordinate branches; west/east are not mirror-flipped.",
+  "runtimeReady": false
+}

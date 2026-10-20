@@ -1,0 +1,348 @@
+{
+  "schema": "liveit.pixel.sprite-batch.v1",
+  "batch": "life-arc-early-cycles-v1/toddler-waddle",
+  "source": {
+    "file": "toddler-waddle-source.png",
+    "sha256": "1e4a58f147752cf86ac08af3ed212af1b4afe6c88fb5cd2b3dbb8be002364c4d",
+    "size": {
+      "width": 1086,
+      "height": 1448
+    },
+    "mode": "RGBA"
+  },
+  "grid": {
+    "rows": ["south", "west", "east", "north"],
+    "columns": ["contact-a", "passing-a", "contact-b", "passing-b"],
+    "cellSize": {
+      "width": 24,
+      "height": 32
+    }
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "file": "toddler-waddle-south-contact-a.png",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "phase": "contact-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 0,
+        "column": 0
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-south-passing-a.png",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "phase": "passing-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 0,
+        "column": 1
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-south-contact-b.png",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "phase": "contact-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 0,
+        "column": 2
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-south-passing-b.png",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "phase": "passing-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 0,
+        "column": 3
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-west-contact-a.png",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "phase": "contact-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 1,
+        "column": 0
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-west-passing-a.png",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "phase": "passing-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 1,
+        "column": 1
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-west-contact-b.png",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "phase": "contact-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 1,
+        "column": 2
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-west-passing-b.png",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "phase": "passing-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 1,
+        "column": 3
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-east-contact-a.png",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "phase": "contact-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 2,
+        "column": 0
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-east-passing-a.png",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "phase": "passing-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 2,
+        "column": 1
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-east-contact-b.png",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "phase": "contact-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 2,
+        "column": 2
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-east-passing-b.png",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "phase": "passing-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 2,
+        "column": 3
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-north-contact-a.png",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "phase": "contact-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 3,
+        "column": 0
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-north-passing-a.png",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "phase": "passing-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 3,
+        "column": 1
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-north-contact-b.png",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "phase": "contact-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 3,
+        "column": 2
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "toddler-waddle-north-passing-b.png",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "phase": "passing-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 3,
+        "column": 3
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    }
+  ],
+  "runtimeReady": false
+}

@@ -1,0 +1,276 @@
+{
+  "id": "crowd-teacher-adult-movement-age-v1",
+  "role": "teacher",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "adult teaching role",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.teacher",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/teacher/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "teacher/adult/south/walk-a",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/teacher/adult/teacher-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1075f2f29e2f6f2721f3f22b18d394f07eeb8cb663fa7dd338ab7e46017d6f0e",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-south-walk-a.png",
+      "sourceSha256": "1075f2f29e2f6f2721f3f22b18d394f07eeb8cb663fa7dd338ab7e46017d6f0e",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/south/walk-b",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/teacher/adult/teacher-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dd4ee6d0713552c50282f3c728b7c458a1f584432977dfd62fe3ba3cca8f6bb8",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-south-walk-b.png",
+      "sourceSha256": "dd4ee6d0713552c50282f3c728b7c458a1f584432977dfd62fe3ba3cca8f6bb8",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/south/idle",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/teacher/adult/teacher-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e83f01a9f14e45ca03a9a16117ed9dbae5b097547fb6c61eef8960eb7bb811c9",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-south-idle.png",
+      "sourceSha256": "e83f01a9f14e45ca03a9a16117ed9dbae5b097547fb6c61eef8960eb7bb811c9",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/west/walk-a",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/teacher/adult/teacher-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fad0e392d247387e4179fcdc746ee1740e67295eb6d4ccb2414d3a7811081ac8",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-west-walk-a.png",
+      "sourceSha256": "fad0e392d247387e4179fcdc746ee1740e67295eb6d4ccb2414d3a7811081ac8",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/west/walk-b",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/teacher/adult/teacher-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "72f0cce4e0bcdb1dc7522f2e5c50e5e4827a0bf5ce923cf84b32339dc106c801",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-west-walk-b.png",
+      "sourceSha256": "72f0cce4e0bcdb1dc7522f2e5c50e5e4827a0bf5ce923cf84b32339dc106c801",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/west/idle",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/teacher/adult/teacher-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0c249571e6ce2d0b9844d5c31e5a3bf3d36512874c9a412047e18dccc05089ae",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-west-idle.png",
+      "sourceSha256": "0c249571e6ce2d0b9844d5c31e5a3bf3d36512874c9a412047e18dccc05089ae",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/east/walk-a",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/teacher/adult/teacher-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "87f69ebd99f16ab7872c15259b25e761e837d5f0ddcf7c28f8bd93fa326449ff",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-east-walk-a.png",
+      "sourceSha256": "87f69ebd99f16ab7872c15259b25e761e837d5f0ddcf7c28f8bd93fa326449ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/east/walk-b",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/teacher/adult/teacher-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "455be9550b8b54ce26efeca08987f5207b36e6e0aecc414e7fd7619ccace220f",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-east-walk-b.png",
+      "sourceSha256": "455be9550b8b54ce26efeca08987f5207b36e6e0aecc414e7fd7619ccace220f",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/east/idle",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/teacher/adult/teacher-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "88ecaf04481ad2e1080b99b5697637f024f5a1d7eeb350ecd775fdbb3c285cdc",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-east-idle.png",
+      "sourceSha256": "88ecaf04481ad2e1080b99b5697637f024f5a1d7eeb350ecd775fdbb3c285cdc",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/north/walk-a",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/teacher/adult/teacher-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9f43da0556042dfab35ad1c932c436d03b592530ef1846f6c68afd1f10581711",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-north-walk-a.png",
+      "sourceSha256": "9f43da0556042dfab35ad1c932c436d03b592530ef1846f6c68afd1f10581711",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/north/walk-b",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/teacher/adult/teacher-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "da7dd324596b19b638bbeb0dc9c5615b801f072c8c97c33e83c855c5c724f147",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-north-walk-b.png",
+      "sourceSha256": "da7dd324596b19b638bbeb0dc9c5615b801f072c8c97c33e83c855c5c724f147",
+      "runtimeReady": false
+    },
+    {
+      "id": "teacher/adult/north/idle",
+      "role": "teacher",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult teaching role",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/teacher/adult/teacher-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7a5c5ea263c1a87c836af52d043c407be26b5a6099cd5fdd728652d660cb34e2",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/teacher/teacher-north-idle.png",
+      "sourceSha256": "7a5c5ea263c1a87c836af52d043c407be26b5a6099cd5fdd728652d660cb34e2",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

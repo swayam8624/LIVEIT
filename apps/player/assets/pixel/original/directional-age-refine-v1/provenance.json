@@ -1,0 +1,17 @@
+{
+  "assetId": "directional-age-refine-v1",
+  "created": "2026-10-20",
+  "sourceType": "original-hand-authored",
+  "sourceTool": "Pillow deterministic hand-authored primitives",
+  "thirdPartyPackUsed": false,
+  "externalImageryUsed": false,
+  "sourceScript": "build_directional_age.py",
+  "paletteFile": "manifest.json",
+  "licenseNote": "Original work created for LIVEIT; this note is provenance, not a legal clearance opinion.",
+  "runtimeReady": false,
+  "limitations": [
+    "24x32 logical study needs artist cleanup and identity review.",
+    "No collision data or runtime atlas registration is included.",
+    "Directional continuity is authored as independent clusters but has not been approved by a pixel artist."
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "assetId": "liveit.pixel.pet.cat.walk-cycles.v1",
+  "source": "cat-walk-cycles-source.png",
+  "atlas": {
+    "file": "cat-walk-cycles-atlas.png",
+    "width": 384,
+    "height": 512,
+    "columns": 4,
+    "rows": 4,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "order": "phase columns contact-a/passing-a/contact-b/passing-b; direction rows south/west/east/north"
+  },
+  "sampling": "nearest-neighbor",
+  "frames": [
+    {
+      "id": "cat-south-contact-a",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/cat-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-south-passing-a",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/cat-south-passing-a.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-south-contact-b",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/cat-south-contact-b.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-south-passing-b",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/cat-south-passing-b.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-west-contact-a",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/cat-west-contact-a.png",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-west-passing-a",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/cat-west-passing-a.png",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-west-contact-b",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/cat-west-contact-b.png",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-west-passing-b",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/cat-west-passing-b.png",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-east-contact-a",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/cat-east-contact-a.png",
+      "x": 0,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-east-passing-a",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/cat-east-passing-a.png",
+      "x": 96,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-east-contact-b",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/cat-east-contact-b.png",
+      "x": 192,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-east-passing-b",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/cat-east-passing-b.png",
+      "x": 288,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-north-contact-a",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/cat-north-contact-a.png",
+      "x": 0,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-north-passing-a",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/cat-north-passing-a.png",
+      "x": 96,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-north-contact-b",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/cat-north-contact-b.png",
+      "x": 192,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "cat-north-passing-b",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/cat-north-passing-b.png",
+      "x": 288,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    }
+  ],
+  "runtimeReady": false,
+  "limitations": [
+    "Source is AI-generated concept art, not runtime-approved art.",
+    "Colored edge artifacts, phase timing, collision boxes, palette cleanup, and renderer sampling remain open."
+  ]
+}

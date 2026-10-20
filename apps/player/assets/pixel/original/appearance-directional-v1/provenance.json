@@ -1,0 +1,9 @@
+{
+  "source": "Deterministic Pillow pixel primitives in generate_directional_appearance.py",
+  "license": "Original work authored for LIVEIT; no third-party or archive pixels used",
+  "referenceOnly": "appearance-kit-v1 was inspected for frame and pivot conventions only; no pixels were copied or modified",
+  "generatedAt": "reproducible local build; see file hashes in manifest.json",
+  "directionMethod": "south, west, east, and north each have independent coordinate branches; no flip or transform is used",
+  "occlusionOrder": ["skin", "bottom", "top", "shoes", "hair", "accessory"],
+  "runtimeReady": false
+}

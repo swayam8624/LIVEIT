@@ -1,0 +1,24 @@
+{
+  "role": "taxi-driver",
+  "label": "taxi-driver",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.taxi-driver",
+  "description": "ochre taxi vest, dark trousers, key ring",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/taxi-driver/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/taxi-driver/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/taxi-driver/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

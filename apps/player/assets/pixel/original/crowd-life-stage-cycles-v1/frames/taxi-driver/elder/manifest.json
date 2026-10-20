@@ -1,0 +1,276 @@
+{
+  "id": "crowd-taxi-driver-elder-movement-age-v1",
+  "role": "taxi-driver",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older worker or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.taxi-driver",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/taxi-driver/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "taxi-driver/elder/south/walk-a",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b2c00a9181fc28029a2035c75f83fbe746d6dcf9594cf2070ae78154228d8d8c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-south-walk-a.png",
+      "sourceSha256": "1c60be0da8d670eb2ddac07f1e57b73f356c40f67b1d8cb88e16764f59fa09a0",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/south/walk-b",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d5a99ad60fa3c6cb986d1308f862ec5c0df6cdaf0d25a3626833a21144c54503",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-south-walk-b.png",
+      "sourceSha256": "542659e64cf2a7bab05192169f5d7c51db8735054ed0091d55ea69984e8cd4c3",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/south/idle",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d4c40ba8bed5a4e9f1388d93cde6b10f05bc358ee7bca407062cbd679a3021f5",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-south-idle.png",
+      "sourceSha256": "9dd2dfc425076a47319b68070705369fa68ace669612bf95bed36d06538ecc4f",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/west/walk-a",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a3d89c6ea2ffd6ab040ac44c5447bf7bdb4c5c64c3d00d6006f8dba4e03735a5",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-west-walk-a.png",
+      "sourceSha256": "c3a4b55838aec190adc85bd54982596856fd3dc119f95b4103ce82c1b6a2e126",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/west/walk-b",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0edbae34eb99d09f7dfb92dd106b3fd6dbebcc8ddf886f478efdb7c8a1123fcc",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-west-walk-b.png",
+      "sourceSha256": "26b5a4a4d8f7b046d3216d7ad488314afbf971851a85f3c66c91ac8c2f2ed178",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/west/idle",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e65a1235cdbcf5d9f1b0a2706d235714b628f076c877908b676350a0ff7b60d7",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-west-idle.png",
+      "sourceSha256": "790695c7ab96121aca8daf1f148b5549ba2b7293ac83497c83b4b989be8adf32",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/east/walk-a",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cff19589b595506ab92a7f3fd09eb11bf2e297b462ef899e5e1f4c89ae7661e4",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-east-walk-a.png",
+      "sourceSha256": "69e2c6a68e1b0ff705dd725ff83b97e2f679ee6573a5e0dbd82f2f638bb9cb37",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/east/walk-b",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fc157b1d18dfa67911e94840924f0c5d0a91a6f563f390126ab5d65e4f2fc56b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-east-walk-b.png",
+      "sourceSha256": "295b34e7e0fa5287061b3441f6bf772e3af9b25ece5391753a23701ca0450a67",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/east/idle",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1b10bb7be5f5cac336d95d0a9d8d818ffd98153db65662c3bf5f189959922258",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-east-idle.png",
+      "sourceSha256": "13f0a59228f22588a8e6fc89e986c167ebefb23ce866d5d100615b1fabc5eda6",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/north/walk-a",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cf0d5bf4be2431790665e95748cd3a30b564e9e1744641922422fc93f5bdfe8b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-north-walk-a.png",
+      "sourceSha256": "26a3573079d2d4a849ba7e9562c0a0aaad30a2ee3048bc1ac91039519d95fb96",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/north/walk-b",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4e26dc1f26e9acb58c13ec82d2467a04a6c0c3be503e5af1d36bba677cd2747b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-north-walk-b.png",
+      "sourceSha256": "6e975fd2c4f9a5e88165e15806050bf2daaca174afd39cb203cb851e55e77ace",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/elder/north/idle",
+      "role": "taxi-driver",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/taxi-driver/elder/taxi-driver-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "508fd27d5787beb18570c21e88c14d77ffc410a643c3442ab09fe41454779be6",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/taxi-driver/taxi-driver-north-idle.png",
+      "sourceSha256": "fd858c54998fe13516c400f7bfe0feb9dcf803b20f3301c6610254a55e2060d9",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

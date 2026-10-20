@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "runtimeReady": false,
+  "sourceMode": "generated-four-phase",
+  "sheet": {
+    "columns": 4,
+    "rows": 4,
+    "frameWidth": 96,
+    "frameHeight": 128,
+    "sourceWidth": 1199,
+    "sourceHeight": 1312
+  },
+  "frames": [
+    {
+      "id": "eli/south/contact-a",
+      "character": "Eli",
+      "facing": "south",
+      "phase": "contact-a",
+      "file": "frames/eli-south-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/south/passing-a",
+      "character": "Eli",
+      "facing": "south",
+      "phase": "passing-a",
+      "file": "frames/eli-south-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/south/contact-b",
+      "character": "Eli",
+      "facing": "south",
+      "phase": "contact-b",
+      "file": "frames/eli-south-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/south/passing-b",
+      "character": "Eli",
+      "facing": "south",
+      "phase": "passing-b",
+      "file": "frames/eli-south-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/west/contact-a",
+      "character": "Eli",
+      "facing": "west",
+      "phase": "contact-a",
+      "file": "frames/eli-west-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/west/passing-a",
+      "character": "Eli",
+      "facing": "west",
+      "phase": "passing-a",
+      "file": "frames/eli-west-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/west/contact-b",
+      "character": "Eli",
+      "facing": "west",
+      "phase": "contact-b",
+      "file": "frames/eli-west-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/west/passing-b",
+      "character": "Eli",
+      "facing": "west",
+      "phase": "passing-b",
+      "file": "frames/eli-west-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/east/contact-a",
+      "character": "Eli",
+      "facing": "east",
+      "phase": "contact-a",
+      "file": "frames/eli-east-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/east/passing-a",
+      "character": "Eli",
+      "facing": "east",
+      "phase": "passing-a",
+      "file": "frames/eli-east-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/east/contact-b",
+      "character": "Eli",
+      "facing": "east",
+      "phase": "contact-b",
+      "file": "frames/eli-east-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/east/passing-b",
+      "character": "Eli",
+      "facing": "east",
+      "phase": "passing-b",
+      "file": "frames/eli-east-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/north/contact-a",
+      "character": "Eli",
+      "facing": "north",
+      "phase": "contact-a",
+      "file": "frames/eli-north-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/north/passing-a",
+      "character": "Eli",
+      "facing": "north",
+      "phase": "passing-a",
+      "file": "frames/eli-north-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/north/contact-b",
+      "character": "Eli",
+      "facing": "north",
+      "phase": "contact-b",
+      "file": "frames/eli-north-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "eli/north/passing-b",
+      "character": "Eli",
+      "facing": "north",
+      "phase": "passing-b",
+      "file": "frames/eli-north-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    }
+  ]
+}

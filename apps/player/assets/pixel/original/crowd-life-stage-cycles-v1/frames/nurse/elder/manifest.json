@@ -1,0 +1,276 @@
+{
+  "id": "crowd-nurse-elder-movement-age-v1",
+  "role": "nurse",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older professional or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.nurse",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/nurse/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "nurse/elder/south/walk-a",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/nurse/elder/nurse-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "535e00a68427fe7b7475afdb36faff792246a65e7c79ceef608d0b28034a8fd4",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-south-walk-a.png",
+      "sourceSha256": "ac9510ca47472dd67fbcd675ddd7582c3f3eb44328dc6a69dd336c550d4ad282",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/south/walk-b",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/nurse/elder/nurse-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4e29822054c3785dabfc74e360f83616a4ce0583b1162bfc268881b7400541c2",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-south-walk-b.png",
+      "sourceSha256": "9023ea78b59c44e650e67fc4ee551cc4f04bb2f19396676ccb0b744e77562275",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/south/idle",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/nurse/elder/nurse-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8fa6b158655ce1cae012e7dc0c47a4fef7b57ffc1305db848c439ac344726b83",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-south-idle.png",
+      "sourceSha256": "5621945be1b247af23c0898f3fc3c20a934aea3f31b35134356db37024c90609",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/west/walk-a",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/nurse/elder/nurse-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "72be55df40f747767da479544631232ddba4ae5f1a932c5d61243c098c585be0",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-west-walk-a.png",
+      "sourceSha256": "ba860283389c50730dd3df211671305d5d1749b299e67fb69dd10d9877094e1f",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/west/walk-b",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/nurse/elder/nurse-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bd87525c4b66a735790a0c15e9d014ee76547c425fe01c27b3fccd0d91ab0978",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-west-walk-b.png",
+      "sourceSha256": "9cf2c4231586788b4beaaa6d114f0fe6229b48e59694414da277d5864b820366",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/west/idle",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/nurse/elder/nurse-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2583de251ab68f698af02ad9c9614d85cedae6c107cc1f9e10c4303d2e021a49",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-west-idle.png",
+      "sourceSha256": "2dd2d21203344871e131be8b763733380dce86c0770e4d59370c6c8711e02e8d",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/east/walk-a",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/nurse/elder/nurse-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5010ac1a8c1d5a7432ad7a28086deccbd06a70a5933ecb270a651a3d17a8d8ee",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-east-walk-a.png",
+      "sourceSha256": "c9d91bf1954d920d212dc3307e3a8054f629d582bb9e9e10f077f0ce6e1c3dd8",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/east/walk-b",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/nurse/elder/nurse-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "22c77515ad3d8530ca5239319934f4d84e6b3cf8960f8629d144dd334fe77a2c",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-east-walk-b.png",
+      "sourceSha256": "c042ced8dffad22d37912c1d9b256e4ace57523c8950705ad08045560a913fb5",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/east/idle",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/nurse/elder/nurse-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f9ba86477a5b7476bcceb0e3d30d6c8f8c486229e9dc9f1c0096839fb08f9e6b",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-east-idle.png",
+      "sourceSha256": "9ecb326843ccf8ceab62b27d03150f6ed0087a7b69d7ffb1b3d562d86825a6a3",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/north/walk-a",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/nurse/elder/nurse-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fc1e724ecc01bd2121e137585ed152d543784215cc35c2b6f1bf8a646261373f",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-north-walk-a.png",
+      "sourceSha256": "437244aba77df03a67dead482ad9422367d480aa1ed06489d0385c3230595601",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/north/walk-b",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/nurse/elder/nurse-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9114a279a63991e8895b915ab83b7a97ab022841a0deabb15514814c754f692a",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-north-walk-b.png",
+      "sourceSha256": "426ed38533746df5503715f8dd49f1448d704e17fe2e6599325cba0c7fa9194f",
+      "runtimeReady": false
+    },
+    {
+      "id": "nurse/elder/north/idle",
+      "role": "nurse",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/nurse/elder/nurse-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5cc5081a868146187f8d0accc1a7a9c4fadfbc4dcb9e6e1940f905b7758eb9b3",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/nurse/nurse-north-idle.png",
+      "sourceSha256": "8cdc0ac45f61b04689043882d56d028baede70434fd2033d51693c6a48fa32d8",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

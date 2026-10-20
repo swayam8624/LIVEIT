@@ -1,0 +1,276 @@
+{
+  "id": "crowd-elder-walker-elder-movement-age-v1",
+  "role": "elder-walker",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.elder-walker",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/elder-walker/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "elder-walker/elder/south/walk-a",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/elder-walker/elder/elder-walker-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d91421f6f6c1d72bdfaa3dd4688baa5cb456016f9f35bbef8ea1c278e29aa388",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-south-walk-a.png",
+      "sourceSha256": "9a2e410cb153d40bcb12cec426fcfab412fea55c8d892984831261c1e6d630d7",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/south/walk-b",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/elder-walker/elder/elder-walker-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0f7e9ebe6be9a3bfb0e3a430cd99f88579251b0e2a3a3255df3f7eb874ee6a2b",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-south-walk-b.png",
+      "sourceSha256": "8be285785331bcad56dd77755067c660b4a5d86f028e1ffe3c2167384b4163ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/south/idle",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/elder-walker/elder/elder-walker-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "51e0b205938b637e2b7c9603fd39c0ec68caa490325f2566e669aed238bbb463",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-south-idle.png",
+      "sourceSha256": "5c550f9cebacda0ad507c5618c6591a7d31f87c44096a59c587d1fa5b40c134c",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/west/walk-a",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/elder-walker/elder/elder-walker-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7fd2196a568e4e6c8adbeff9b06cfbbadfe9fb3aade5967a04eac04e16faac49",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-west-walk-a.png",
+      "sourceSha256": "241f8d6416fb9c05164d9397c6866a44b0ad19987269d38a4c1caace95c6b0fa",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/west/walk-b",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/elder-walker/elder/elder-walker-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d9b5c71584451212bab81665e58d0a97eb944c4164c3caca649aa1ba018b06e1",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-west-walk-b.png",
+      "sourceSha256": "fe788352413735657319acd1c3b13dc375c1be9759226ba56a20a5c3c9075a9f",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/west/idle",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/elder-walker/elder/elder-walker-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1b4f738e983778a3d16dfeecebb5d397cecf11d8a78f0073a8a2a8290cc5cd41",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-west-idle.png",
+      "sourceSha256": "a65d9def8b8602f61cc6df25d0498118d1d17912ca418d0935d19942bee48979",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/east/walk-a",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/elder-walker/elder/elder-walker-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "718a4be749880d310cd12a0e199aabb9d8f96fc6f9f76bf36817ad81eb4261f9",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-east-walk-a.png",
+      "sourceSha256": "857496bcf19f9b4881c01b9e23a34378d542ff05dfd541638511efa870125a1c",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/east/walk-b",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/elder-walker/elder/elder-walker-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a000b2e56129a498ffe93252cf39e46214c28172e5560470f7c5d0d471bd2ac2",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-east-walk-b.png",
+      "sourceSha256": "899d0ccd2766fa8135ad36c9eafff6e3bce45f25552f5cd49cc8112591dc4794",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/east/idle",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/elder-walker/elder/elder-walker-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2cf1293225bad9f9a34a86ed4d654d4e5db0dc64ce4c811b143d20774a135b8a",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-east-idle.png",
+      "sourceSha256": "db8efaece88caa077f1a69e673a768aa7f53a9d3b874d891c4e9f9d97baed1a6",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/north/walk-a",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/elder-walker/elder/elder-walker-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3c27f5c6bd23d0aa13d42bc7e049e07d271addeacfca63ab8ccbd86efee56602",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-north-walk-a.png",
+      "sourceSha256": "80cb72533a97f3c13d006b4050630a397e9000c57b1e60789f2f6e3f5dc800ef",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/north/walk-b",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/elder-walker/elder/elder-walker-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1ac9594fe100dbdf2a33d0d336fb91ce50664503e3b411ba86b5315bbce153cb",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-north-walk-b.png",
+      "sourceSha256": "55cea365c7fbe214c8dfce1220bc41d01d60fc28994452bda0b5045d62c3a074",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-walker/elder/north/idle",
+      "role": "elder-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older adult with a cane; mobility aid is not treated as a defect",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/elder-walker/elder/elder-walker-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "31a7871a9d9591e9d1b7e4d48afcc6e2e9daa14e093d788c35a5786624e9fc66",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/elder-walker/elder-walker-north-idle.png",
+      "sourceSha256": "bec964e2a50be23ed52cc3d0eb75cf6e6c47b034566ac5f9d8c0bfd208ba0958",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

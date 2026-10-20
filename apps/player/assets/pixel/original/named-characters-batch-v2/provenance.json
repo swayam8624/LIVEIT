@@ -1,0 +1,17 @@
+{
+  "batch": "named-characters-batch-v2",
+  "created": "2026-10-20",
+  "method": "deterministic hand-authored Pillow pixel clusters",
+  "source": "No supplied ZIP files, third-party sprites, external images, or internet assets were used.",
+  "rights": "Original project-owned working concepts; no third-party art embedded.",
+  "identityNotes": {
+    "sibling": "Preserves Niko cues from named-family-batch-v1: warm brown skin, curly ponytail, cobalt hoodie, orange sneakers, backpack.",
+    "otherFamilies": "New role studies use independent palettes, silhouettes, accessories, and interaction props."
+  },
+  "runtimeReady": false,
+  "limitations": [
+    "Needs human pixel cleanup and motion review.",
+    "Pivots and collision boxes need renderer validation.",
+    "Catalog promotion is intentionally omitted."
+  ]
+}
