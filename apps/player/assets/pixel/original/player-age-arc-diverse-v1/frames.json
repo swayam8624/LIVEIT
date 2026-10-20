@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 1,
+  "assetFamily": "liveit.pixel.v2.actor.player.diverse.age-arc-concept",
+  "status": "original-ai-generated-concept-sprite-sheet",
+  "runtimeReady": false,
+  "direction": "pixel-only",
+  "sourceTool": "OpenAI built-in image generation",
+  "sourceMaster": "life-arc-concept-master.png",
+  "grid": {
+    "columns": 4,
+    "rows": 2,
+    "cellWidth": 24,
+    "cellHeight": 32,
+    "sampling": "nearest-neighbor"
+  },
+  "frameCount": 8,
+  "frames": [
+    {
+      "id": "liveit.pixel.v2.actor.player.diverse.age.infant-crawler.concept",
+      "ageStage": "infant-crawler",
+      "displayName": "Infant crawler",
+      "file": "infant-crawler.png",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "direction": "south-three-quarter",
+      "action": "age-study-static",
+      "phase": 0,
+      "durationMs": null,
+      "feetPivot": {
+        "x": 12,
+        "y": 31
+      },
+      "collisionBox": null,
+      "layer": "base",
+      "appearanceSlots": ["hair", "skin", "outfit", "signature-accessory"],
+      "sourceCrop": {
+        "x": 73,
+        "y": 178,
+        "width": 246,
+        "height": 256
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.actor.player.diverse.age.toddler.concept",
+      "ageStage": "toddler",
+      "displayName": "Toddler",
+      "file": "toddler.png",
+      "x": 24,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "direction": "south-three-quarter",
+      "action": "age-study-static",
+      "phase": 0,
+      "durationMs": null,
+      "feetPivot": {
+        "x": 12,
+        "y": 31
+      },
+      "collisionBox": null,
+      "layer": "base",
+      "appearanceSlots": ["hair", "skin", "outfit", "signature-accessory"],
+      "sourceCrop": {
+        "x": 460,
+        "y": 80,
+        "width": 244,
+        "height": 368
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.actor.player.diverse.age.child.concept",
+      "ageStage": "child",
+      "displayName": "Child",
+      "file": "child.png",
+      "x": 48,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "direction": "south-three-quarter",
+      "action": "age-study-static",
+      "phase": 0,
+      "durationMs": null,
+      "feetPivot": {
+        "x": 12,
+        "y": 31
+      },
+      "collisionBox": null,
+      "layer": "base",
+      "appearanceSlots": ["hair", "skin", "outfit", "signature-accessory"],
+      "sourceCrop": {
+        "x": 850,
+        "y": 11,
+        "width": 190,
+        "height": 429
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.actor.player.diverse.age.teen.concept",
+      "ageStage": "teen",
+      "displayName": "Teen",
+      "file": "teen.png",
+      "x": 72,
+      "y": 0,
+      "width": 24,
+      "height": 32,
+      "direction": "south-three-quarter",
+      "action": "age-study-static",
+      "phase": 0,
+      "durationMs": null,
+      "feetPivot": {
+        "x": 12,
+        "y": 31
+      },
+      "collisionBox": null,
+      "layer": "base",
+      "appearanceSlots": ["hair", "skin", "outfit", "signature-accessory"],
+      "sourceCrop": {
+        "x": 1240,
+        "y": 3,
+        "width": 193,
+        "height": 445
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.actor.player.diverse.age.young-adult.concept",
+      "ageStage": "young-adult",
+      "displayName": "Young adult",
+      "file": "young-adult.png",
+      "x": 0,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "direction": "south-three-quarter",
+      "action": "age-study-static",
+      "phase": 0,
+      "durationMs": null,
+      "feetPivot": {
+        "x": 12,
+        "y": 31
+      },
+      "collisionBox": null,
+      "layer": "base",
+      "appearanceSlots": ["hair", "skin", "outfit", "signature-accessory"],
+      "sourceCrop": {
+        "x": 62,
+        "y": 448,
+        "width": 264,
+        "height": 573
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.actor.player.diverse.age.midlife-adult.concept",
+      "ageStage": "midlife-adult",
+      "displayName": "Midlife adult",
+      "file": "midlife-adult.png",
+      "x": 24,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "direction": "south-three-quarter",
+      "action": "age-study-static",
+      "phase": 0,
+      "durationMs": null,
+      "feetPivot": {
+        "x": 12,
+        "y": 31
+      },
+      "collisionBox": null,
+      "layer": "base",
+      "appearanceSlots": ["hair", "skin", "outfit", "signature-accessory"],
+      "sourceCrop": {
+        "x": 443,
+        "y": 448,
+        "width": 288,
+        "height": 563
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.actor.player.diverse.age.elder-woman.concept",
+      "ageStage": "elder-woman",
+      "displayName": "Elder woman",
+      "file": "elder-woman.png",
+      "x": 48,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "direction": "south-three-quarter",
+      "action": "age-study-static",
+      "phase": 0,
+      "durationMs": null,
+      "feetPivot": {
+        "x": 12,
+        "y": 31
+      },
+      "collisionBox": null,
+      "layer": "base",
+      "appearanceSlots": ["hair", "skin", "outfit", "signature-accessory"],
+      "sourceCrop": {
+        "x": 830,
+        "y": 455,
+        "width": 241,
+        "height": 555
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.actor.player.diverse.age.elder-man.concept",
+      "ageStage": "elder-man",
+      "displayName": "Elder man",
+      "file": "elder-man.png",
+      "x": 72,
+      "y": 32,
+      "width": 24,
+      "height": 32,
+      "direction": "south-three-quarter",
+      "action": "age-study-static",
+      "phase": 0,
+      "durationMs": null,
+      "feetPivot": {
+        "x": 12,
+        "y": 31
+      },
+      "collisionBox": null,
+      "layer": "base",
+      "appearanceSlots": ["hair", "skin", "outfit", "signature-accessory"],
+      "sourceCrop": {
+        "x": 1196,
+        "y": 448,
+        "width": 282,
+        "height": 569
+      },
+      "runtimeReady": false
+    }
+  ],
+  "portraitAtlas": {
+    "file": "player-age-arc-diverse-portraits-96x128.png",
+    "columns": 4,
+    "rows": 2,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "frames": [
+      {
+        "id": "liveit.pixel.v2.actor.player.diverse.age.infant-crawler.concept.portrait",
+        "ageStage": "infant-crawler",
+        "displayName": "Infant crawler portrait",
+        "file": "portrait-infant-crawler.png",
+        "x": 0,
+        "y": 0,
+        "width": 96,
+        "height": 128,
+        "direction": "front-three-quarter",
+        "action": "portrait-static-neutral-study",
+        "sourceCrop": {
+          "x": 73,
+          "y": 178,
+          "width": 246,
+          "height": 195
+        },
+        "expression": "neutral-study",
+        "runtimeReady": false
+      },
+      {
+        "id": "liveit.pixel.v2.actor.player.diverse.age.toddler.concept.portrait",
+        "ageStage": "toddler",
+        "displayName": "Toddler portrait",
+        "file": "portrait-toddler.png",
+        "x": 96,
+        "y": 0,
+        "width": 96,
+        "height": 128,
+        "direction": "front-three-quarter",
+        "action": "portrait-static-neutral-study",
+        "sourceCrop": {
+          "x": 460,
+          "y": 80,
+          "width": 244,
+          "height": 280
+        },
+        "expression": "neutral-study",
+        "runtimeReady": false
+      },
+      {
+        "id": "liveit.pixel.v2.actor.player.diverse.age.child.concept.portrait",
+        "ageStage": "child",
+        "displayName": "Child portrait",
+        "file": "portrait-child.png",
+        "x": 192,
+        "y": 0,
+        "width": 96,
+        "height": 128,
+        "direction": "front-three-quarter",
+        "action": "portrait-static-neutral-study",
+        "sourceCrop": {
+          "x": 850,
+          "y": 11,
+          "width": 190,
+          "height": 283
+        },
+        "expression": "neutral-study",
+        "runtimeReady": false
+      },
+      {
+        "id": "liveit.pixel.v2.actor.player.diverse.age.teen.concept.portrait",
+        "ageStage": "teen",
+        "displayName": "Teen portrait",
+        "file": "portrait-teen.png",
+        "x": 288,
+        "y": 0,
+        "width": 96,
+        "height": 128,
+        "direction": "front-three-quarter",
+        "action": "portrait-static-neutral-study",
+        "sourceCrop": {
+          "x": 1240,
+          "y": 3,
+          "width": 193,
+          "height": 294
+        },
+        "expression": "neutral-study",
+        "runtimeReady": false
+      },
+      {
+        "id": "liveit.pixel.v2.actor.player.diverse.age.young-adult.concept.portrait",
+        "ageStage": "young-adult",
+        "displayName": "Young adult portrait",
+        "file": "portrait-young-adult.png",
+        "x": 0,
+        "y": 128,
+        "width": 96,
+        "height": 128,
+        "direction": "front-three-quarter",
+        "action": "portrait-static-neutral-study",
+        "sourceCrop": {
+          "x": 62,
+          "y": 448,
+          "width": 264,
+          "height": 378
+        },
+        "expression": "neutral-study",
+        "runtimeReady": false
+      },
+      {
+        "id": "liveit.pixel.v2.actor.player.diverse.age.midlife-adult.concept.portrait",
+        "ageStage": "midlife-adult",
+        "displayName": "Midlife adult portrait",
+        "file": "portrait-midlife-adult.png",
+        "x": 96,
+        "y": 128,
+        "width": 96,
+        "height": 128,
+        "direction": "front-three-quarter",
+        "action": "portrait-static-neutral-study",
+        "sourceCrop": {
+          "x": 443,
+          "y": 448,
+          "width": 288,
+          "height": 372
+        },
+        "expression": "neutral-study",
+        "runtimeReady": false
+      },
+      {
+        "id": "liveit.pixel.v2.actor.player.diverse.age.elder-woman.concept.portrait",
+        "ageStage": "elder-woman",
+        "displayName": "Elder woman portrait",
+        "file": "portrait-elder-woman.png",
+        "x": 192,
+        "y": 128,
+        "width": 96,
+        "height": 128,
+        "direction": "front-three-quarter",
+        "action": "portrait-static-neutral-study",
+        "sourceCrop": {
+          "x": 830,
+          "y": 455,
+          "width": 241,
+          "height": 366
+        },
+        "expression": "neutral-study",
+        "runtimeReady": false
+      },
+      {
+        "id": "liveit.pixel.v2.actor.player.diverse.age.elder-man.concept.portrait",
+        "ageStage": "elder-man",
+        "displayName": "Elder man portrait",
+        "file": "portrait-elder-man.png",
+        "x": 288,
+        "y": 128,
+        "width": 96,
+        "height": 128,
+        "direction": "front-three-quarter",
+        "action": "portrait-static-neutral-study",
+        "sourceCrop": {
+          "x": 1196,
+          "y": 448,
+          "width": 282,
+          "height": 376
+        },
+        "expression": "neutral-study",
+        "runtimeReady": false
+      }
+    ],
+    "note": "Large static neutral portrait studies; no separately addressable layers or blink/mouth expressions yet."
+  },
+  "limitations": [
+    "Static south-facing age studies only; not four-direction animation.",
+    "Appearance and age continuity are exploratory and not yet canonical.",
+    "Infant and toddler source poses do not yet have separate validated collision profiles.",
+    "Generated concept art has been cropped and reduced; final in-game pixel redraw and layer separation remain future work."
+  ]
+}

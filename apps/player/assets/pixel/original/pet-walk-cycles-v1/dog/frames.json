@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "batch": "pet-walk-cycles-v1",
+  "runtimeReady": false,
+  "source": "dog-walk-cycles-source.png",
+  "sourceMode": "generated-four-direction-four-phase",
+  "sheet": {
+    "columns": 4,
+    "rows": 4,
+    "frameWidth": 96,
+    "frameHeight": 128,
+    "sourceWidth": 1402,
+    "sourceHeight": 1122
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["contact-a", "passing-a", "contact-b", "passing-b"],
+  "character": {
+    "id": "pet_dog_companion",
+    "name": "Dog companion",
+    "species": "mixed-breed dog",
+    "identity": [
+      "cream coat",
+      "caramel patches",
+      "floppy ears",
+      "short tail",
+      "plum harness"
+    ]
+  },
+  "atlas": "dog-walk-cycles-atlas.png",
+  "preview": "dog-walk-cycles-preview-2x.png",
+  "frames": [
+    {
+      "id": "dog/south/contact-a",
+      "character": "Dog companion",
+      "facing": "south",
+      "phase": "contact-a",
+      "file": "frames/dog-south-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/south/passing-a",
+      "character": "Dog companion",
+      "facing": "south",
+      "phase": "passing-a",
+      "file": "frames/dog-south-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/south/contact-b",
+      "character": "Dog companion",
+      "facing": "south",
+      "phase": "contact-b",
+      "file": "frames/dog-south-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/south/passing-b",
+      "character": "Dog companion",
+      "facing": "south",
+      "phase": "passing-b",
+      "file": "frames/dog-south-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/west/contact-a",
+      "character": "Dog companion",
+      "facing": "west",
+      "phase": "contact-a",
+      "file": "frames/dog-west-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/west/passing-a",
+      "character": "Dog companion",
+      "facing": "west",
+      "phase": "passing-a",
+      "file": "frames/dog-west-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/west/contact-b",
+      "character": "Dog companion",
+      "facing": "west",
+      "phase": "contact-b",
+      "file": "frames/dog-west-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/west/passing-b",
+      "character": "Dog companion",
+      "facing": "west",
+      "phase": "passing-b",
+      "file": "frames/dog-west-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/east/contact-a",
+      "character": "Dog companion",
+      "facing": "east",
+      "phase": "contact-a",
+      "file": "frames/dog-east-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/east/passing-a",
+      "character": "Dog companion",
+      "facing": "east",
+      "phase": "passing-a",
+      "file": "frames/dog-east-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/east/contact-b",
+      "character": "Dog companion",
+      "facing": "east",
+      "phase": "contact-b",
+      "file": "frames/dog-east-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/east/passing-b",
+      "character": "Dog companion",
+      "facing": "east",
+      "phase": "passing-b",
+      "file": "frames/dog-east-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/north/contact-a",
+      "character": "Dog companion",
+      "facing": "north",
+      "phase": "contact-a",
+      "file": "frames/dog-north-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/north/passing-a",
+      "character": "Dog companion",
+      "facing": "north",
+      "phase": "passing-a",
+      "file": "frames/dog-north-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/north/contact-b",
+      "character": "Dog companion",
+      "facing": "north",
+      "phase": "contact-b",
+      "file": "frames/dog-north-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "dog/north/passing-b",
+      "character": "Dog companion",
+      "facing": "north",
+      "phase": "passing-b",
+      "file": "frames/dog-north-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    }
+  ]
+}

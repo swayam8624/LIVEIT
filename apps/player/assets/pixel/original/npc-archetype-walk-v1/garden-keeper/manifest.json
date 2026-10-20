@@ -1,0 +1,251 @@
+{
+  "id": "npc-garden-keeper-walk-v1",
+  "character": "garden-keeper",
+  "source": "../npc-archetypes-source.png",
+  "frameSize": {
+    "width": 96,
+    "height": 128
+  },
+  "directions": ["front", "back", "left", "right"],
+  "phasesPerDirection": 4,
+  "frames": [
+    {
+      "direction": "front",
+      "phase": 1,
+      "file": "front/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "c7e238c16f199ae7e16ebca354457559a49a7278b81227fcde629792482af0f8"
+    },
+    {
+      "direction": "front",
+      "phase": 2,
+      "file": "front/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "8637bfeb0466dcebeb0c4052a7bf543d0bd9caf0c82aedabe5b573f68c487e4c"
+    },
+    {
+      "direction": "front",
+      "phase": 3,
+      "file": "front/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "31c42d6c2304410814b34b3337e3b80cf0c7bd642c453f5e356fe8090d366fdf"
+    },
+    {
+      "direction": "front",
+      "phase": 4,
+      "file": "front/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "442b243f581203ff6753fb534fe24bf76416c0e523bfe7bde8d4822bcb7067ab"
+    },
+    {
+      "direction": "back",
+      "phase": 1,
+      "file": "back/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "ca3d6bc00e41a5d8dfb9a99c44e3d5ca1f6739de431dca0f5ea799866738ec4c"
+    },
+    {
+      "direction": "back",
+      "phase": 2,
+      "file": "back/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "619fd61dccd10bef109ace1d8002c8a5809cb82265e96a83c60a3dbe75bf383e"
+    },
+    {
+      "direction": "back",
+      "phase": 3,
+      "file": "back/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "8fc356ee57119d367722d3c13ac418686b3bc406d0751c87c01837a9b9ef863e"
+    },
+    {
+      "direction": "back",
+      "phase": 4,
+      "file": "back/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "89abd96dd5783f99c4520a3ff95a177b3adbe907eea592a50d59c8f19af85a6b"
+    },
+    {
+      "direction": "left",
+      "phase": 1,
+      "file": "left/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "16d1dfa63602de1407cbcb6dd16ded67abe9d1e418db3e45c940ee16b982380f"
+    },
+    {
+      "direction": "left",
+      "phase": 2,
+      "file": "left/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "4679a3a4921fbdd099cc373b2c87c660e4186a0fe309cf7fba7601a1a581df71"
+    },
+    {
+      "direction": "left",
+      "phase": 3,
+      "file": "left/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "28217be78254ff51a1e0df0fd46d3679ecfa10b60445987cf4f01babde859ada"
+    },
+    {
+      "direction": "left",
+      "phase": 4,
+      "file": "left/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "8d81085f847730865ce6e6e1659ec0adca6d1d5764ee0a33a434c205ca899480"
+    },
+    {
+      "direction": "right",
+      "phase": 1,
+      "file": "right/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "9bbd8b590a061c4ddb1be5847cfd88dcad38b8ffb80758002295b05d3d4a119d"
+    },
+    {
+      "direction": "right",
+      "phase": 2,
+      "file": "right/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "f930017bd21d0a1f0d3c50ffba5d101e9b13854a6748423450641106cd280c65"
+    },
+    {
+      "direction": "right",
+      "phase": 3,
+      "file": "right/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "cd7531ad702fcadcf2167af0cb1803f4ddf487475aac29568242b88c6acd59ef"
+    },
+    {
+      "direction": "right",
+      "phase": 4,
+      "file": "right/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "e230f0f644595c51a92df11095f94ec8466424a010d2940b7f835133c282fdee"
+    }
+  ],
+  "atlas": {
+    "file": "walk-atlas-4x4.png",
+    "width": 384,
+    "height": 512,
+    "runtimeReady": false,
+    "sha256": "234b848da3e4b36ae8a76fd2d8ca4bee6ce266c99f46ee7c1c291b49c98002ba"
+  },
+  "preview": {
+    "file": "walk-atlas-preview-2x.png",
+    "scale": 2,
+    "runtimeReady": false,
+    "sha256": "b4b1363232a66476dbac5ae113214c0581c9e50f4675ed10155496751c9bc2f1"
+  },
+  "runtimeReady": false
+}

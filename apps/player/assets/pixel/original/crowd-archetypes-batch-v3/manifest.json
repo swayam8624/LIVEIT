@@ -1,0 +1,102 @@
+{
+  "id": "crowd-archetypes-batch-v3",
+  "kind": "original-pixel-crowd-movement-concepts",
+  "catalogGroup": "crowd",
+  "roles": [
+    {
+      "role": "security-guard",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+      "manifest": "frames/security-guard/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "historian",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.historian",
+      "manifest": "frames/historian/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "park-cleaner",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+      "manifest": "frames/park-cleaner/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "nurse",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.nurse",
+      "manifest": "frames/nurse/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "caregiver",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.caregiver",
+      "manifest": "frames/caregiver/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "gardener",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+      "manifest": "frames/gardener/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "teacher",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.teacher",
+      "manifest": "frames/teacher/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "manifest": "frames/parent-with-stroller/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "child-playground",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+      "manifest": "frames/child-playground/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "role": "elder-walker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.elder-walker",
+      "manifest": "frames/elder-walker/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 120,
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "contactSheet": {
+    "file": "crowd-archetypes-batch-v3-contact-sheet.png",
+    "width": 360,
+    "height": 256,
+    "sha256": "9671a302deae3cef78ccbd27e6b54f73aeaa12fa1d7f25e5efab7c8fcb2158ee",
+    "runtimeReady": false
+  },
+  "contactPreview": {
+    "file": "crowd-archetypes-batch-v3-contact-sheet-preview-2x.png",
+    "scale": 2,
+    "sha256": "2aabb73ddb11b8dece1d6da9dbd760a74bcc6fbcdf61abd597aa59a70cb442c1",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

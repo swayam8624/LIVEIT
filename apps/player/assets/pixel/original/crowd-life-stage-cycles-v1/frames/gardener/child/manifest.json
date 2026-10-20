@@ -1,0 +1,276 @@
+{
+  "id": "crowd-gardener-child-movement-age-v1",
+  "role": "gardener",
+  "ageStage": "child",
+  "ageBand": "8-12",
+  "ageNote": "supervised garden hobbyist, not an employee",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/gardener/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "gardener/child/south/walk-a",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/gardener/child/gardener-child-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c9a7233965090aa11144505705b0b445fd5833736ade62b692413c931653f9db",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-south-walk-a.png",
+      "sourceSha256": "0927fd2cf686b6a37d5aa64b44b57d62eac19dc93051bae19782f3c759b572e6",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/south/walk-b",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/gardener/child/gardener-child-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "32902b34ac6e497e6e3e909f3e928def46481d3e72acb6af8e4b71243bdb8e3c",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-south-walk-b.png",
+      "sourceSha256": "b5c86888eeeb01bafb5dc8f0c243fde6b3b470550815d13f71a74e4d36c43606",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/south/idle",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/gardener/child/gardener-child-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cde26aa99b20232fdbba32086b8bb594fbc435013659cd405e7361507c8bde3b",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-south-idle.png",
+      "sourceSha256": "d743d5ef797174daa6c278fb7f1c5bbe8ed81c6b48c5f2a4bbec2c35b6eaeb15",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/west/walk-a",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/gardener/child/gardener-child-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "947b94fd8c3ca7ae264d33b24042791707c421f456ebeafa1b3603f34a6198dd",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-west-walk-a.png",
+      "sourceSha256": "d4a1d642c61e2de04fa98dacdcb2e29f6118f9aff2840e7f22cd318b1a2d74e6",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/west/walk-b",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/gardener/child/gardener-child-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3388868b87227b5339e13777ad5ce10c09428c9b4b185eb77890098279d194f2",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-west-walk-b.png",
+      "sourceSha256": "b13009b2cb39d9e9e0448a297c22d320e15a9a04fb690b44f87c2333773550ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/west/idle",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/gardener/child/gardener-child-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8c7ad27c447a31b94b53dcf05ded54a18fad7d79d21d0bbadd7f8bba14ee7b1a",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-west-idle.png",
+      "sourceSha256": "2840334653284c7350ec8635a1659ba12c0f2b760c914753228d82556ecafc74",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/east/walk-a",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/gardener/child/gardener-child-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2fb92e6b1084d855b6a6ad23dd43cdc95e81cb7e9c754128fef14cb12a031db9",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-east-walk-a.png",
+      "sourceSha256": "fe893b9731e194396c204fe13f46f70b289743258ce67a2dbae94584bcca4213",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/east/walk-b",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/gardener/child/gardener-child-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4584790d8b5074220ea5d6ded731ae263a3a7eea86f752703b38e4555e437bb3",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-east-walk-b.png",
+      "sourceSha256": "bf765066f07119891bd01fef78ebee32cf847a10caa2229be3493195d39766d8",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/east/idle",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/gardener/child/gardener-child-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3db35e67d40e081cbe96286767b755a7db9a00919bff7a9b462fd6ea3afa829d",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-east-idle.png",
+      "sourceSha256": "9b2bab4db2ee6acaa382322c02c9fb151c80317845416edecc6cfc73b8d93512",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/north/walk-a",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/gardener/child/gardener-child-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "636e4f2c52b88d781bb3ea43fc73ac8fce7ea707ddc307f1db4696d388f20450",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-north-walk-a.png",
+      "sourceSha256": "e2fb45048ce71abd01efc415853fa9c56c0669e0cf4c47877540d12d18d905e4",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/north/walk-b",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/gardener/child/gardener-child-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "046ea26e46fbc4a1aa035644bb169bff309f7d81826970736a9771c22cd55bda",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-north-walk-b.png",
+      "sourceSha256": "9e686f8d95f21dc181625cec82c6e93ff13dc2adbdbe58e356b81b09200431f0",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/child/north/idle",
+      "role": "gardener",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "supervised garden hobbyist, not an employee",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/gardener/child/gardener-child-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fddac5fe7789bb5e664c497f4afa500b24969d576ce6b78b152998dc60eba957",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-north-idle.png",
+      "sourceSha256": "25694b2c3070fcc95b5218a0177248b0de47ea7a1e06de8f37eb774e46836250",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

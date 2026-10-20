@@ -1,0 +1,67 @@
+{
+  "batch": "story-scene-batch-v2",
+  "generatedMaster": "exec-9c0d6adb-3e23-4f44-97a5-f621a78c1958.png",
+  "sourceDimensions": [2172, 724],
+  "panelOrder": [
+    "bellweather-bookshop-opening",
+    "town-garden-graduation",
+    "family-elder-birthday"
+  ],
+  "runtimeReady": false,
+  "scenes": [
+    {
+      "id": "bellweather-bookshop-opening",
+      "file": "bellweather-bookshop-opening-flat-concept-v1.png",
+      "width": 724,
+      "height": 724,
+      "colorMode": "RGB",
+      "sha256": "ece38bf00a5e32d14dacb4cc8d8d43cf51eca1818fde35758478f6e819f08c61",
+      "dialogueSafeRegion": {
+        "x": 0,
+        "y": 557,
+        "width": 724,
+        "height": 144
+      },
+      "runtimeReady": false,
+      "layers": 1
+    },
+    {
+      "id": "town-garden-graduation",
+      "file": "town-garden-graduation-flat-concept-v1.png",
+      "width": 724,
+      "height": 724,
+      "colorMode": "RGB",
+      "sha256": "c12e50663cb49fff9f771771f59ef19922be5382dbe12c669396bf31f9ff9226",
+      "dialogueSafeRegion": {
+        "x": 0,
+        "y": 557,
+        "width": 724,
+        "height": 144
+      },
+      "runtimeReady": false,
+      "layers": 1
+    },
+    {
+      "id": "family-elder-birthday",
+      "file": "family-elder-birthday-flat-concept-v1.png",
+      "width": 724,
+      "height": 724,
+      "colorMode": "RGB",
+      "sha256": "1df8e9c7134c91e2828128a7515b554497781819e7bd3a6a40412598d4dc036a",
+      "dialogueSafeRegion": {
+        "x": 0,
+        "y": 557,
+        "width": 724,
+        "height": 144
+      },
+      "runtimeReady": false,
+      "layers": 1
+    }
+  ],
+  "provenance": {
+    "tool": "built-in image generator",
+    "date": "2026-10-20",
+    "thirdPartyAssetsUsed": false,
+    "referencesUsed": false
+  }
+}

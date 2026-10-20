@@ -1,0 +1,26 @@
+{
+  "id": "crowd-life-stage-cycles-v1",
+  "created": "2026-10-20",
+  "method": "Deterministic nearest-neighbour resizing and exact source-palette hair recoloring of original project-authored crowd concept frames from batches v1-v3.",
+  "sourceRights": "All source pixels came from locally authored, project-owned concept batches. No supplied ZIP, internet asset, external raster, or model output was used.",
+  "ageMethod": {
+    "child": "20x27 nearest-neighbour source frame anchored on the common ground pivot; non-professional participation only.",
+    "teen": "22x29 nearest-neighbour source frame anchored on the common ground pivot; age band is 16-19 and employment roles are not represented at this stage.",
+    "adult": "Exact source frame copy.",
+    "elder": "Exact source frame with exact palette hair pixels changed to silver; mobility cues remain role-specific and are not universalized."
+  },
+  "technical": {
+    "frameSize": {
+      "width": 24,
+      "height": 32
+    },
+    "mode": "RGBA",
+    "pivot": {
+      "x": 12,
+      "y": 31
+    },
+    "directions": ["south", "west", "east", "north"],
+    "phases": ["walk-a", "walk-b", "idle"]
+  },
+  "runtimeReady": false
+}

@@ -1,0 +1,276 @@
+{
+  "id": "crowd-police-officer-adult-movement-age-v1",
+  "role": "police-officer",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "adult public-safety role",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.police-officer",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/police-officer/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "police-officer/adult/south/walk-a",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/police-officer/adult/police-officer-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "90863da3baed3c5b7d29c7730a5db6f3dfeeab8b7891bb68bf5a0cb0b7a23e7d",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-south-walk-a.png",
+      "sourceSha256": "90863da3baed3c5b7d29c7730a5db6f3dfeeab8b7891bb68bf5a0cb0b7a23e7d",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/south/walk-b",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/police-officer/adult/police-officer-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2f64fec867e39ff0dfdfadffca4d3c18fe16e86884c1fae7d38601e2adefbecd",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-south-walk-b.png",
+      "sourceSha256": "2f64fec867e39ff0dfdfadffca4d3c18fe16e86884c1fae7d38601e2adefbecd",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/south/idle",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/police-officer/adult/police-officer-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "aa70fb5f96cd2f3819cb10e11ad44254b0fdd90108cbdfa6460d667797777bdf",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-south-idle.png",
+      "sourceSha256": "aa70fb5f96cd2f3819cb10e11ad44254b0fdd90108cbdfa6460d667797777bdf",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/west/walk-a",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/police-officer/adult/police-officer-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bc59085bed4253cf61b2c02e5bc09d2d9ad9b59ce5a3c109cb009216f71843d6",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-west-walk-a.png",
+      "sourceSha256": "bc59085bed4253cf61b2c02e5bc09d2d9ad9b59ce5a3c109cb009216f71843d6",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/west/walk-b",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/police-officer/adult/police-officer-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6b556bc706becadf0134fae3f97afd8e43174f0d6afa71be86f548daa703583d",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-west-walk-b.png",
+      "sourceSha256": "6b556bc706becadf0134fae3f97afd8e43174f0d6afa71be86f548daa703583d",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/west/idle",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/police-officer/adult/police-officer-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0f1bc19bd6f3fa2075e84ed5284359573cc0b8b7c3c136ba36da7b52b688f340",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-west-idle.png",
+      "sourceSha256": "0f1bc19bd6f3fa2075e84ed5284359573cc0b8b7c3c136ba36da7b52b688f340",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/east/walk-a",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/police-officer/adult/police-officer-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "93e8f46957e7375429ac24b1786edf7df8a0d57bdf73ebbc3fecb0ecb13eb224",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-east-walk-a.png",
+      "sourceSha256": "93e8f46957e7375429ac24b1786edf7df8a0d57bdf73ebbc3fecb0ecb13eb224",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/east/walk-b",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/police-officer/adult/police-officer-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5ddb676de7e335a8b5534b8eeb701262d32f099e49220eeae98d7edcaa0ef52b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-east-walk-b.png",
+      "sourceSha256": "5ddb676de7e335a8b5534b8eeb701262d32f099e49220eeae98d7edcaa0ef52b",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/east/idle",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/police-officer/adult/police-officer-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c94553a775662460258fb4deabb59ad592d673c62f8711c129b6df564e3360b6",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-east-idle.png",
+      "sourceSha256": "c94553a775662460258fb4deabb59ad592d673c62f8711c129b6df564e3360b6",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/north/walk-a",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/police-officer/adult/police-officer-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "27c2390cb8dadc25b9061e346bbb12709012fd084aa7c37077e2baf8aa449d39",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-north-walk-a.png",
+      "sourceSha256": "27c2390cb8dadc25b9061e346bbb12709012fd084aa7c37077e2baf8aa449d39",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/north/walk-b",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/police-officer/adult/police-officer-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3cbc5d1df13ec90af2013c18081dd7a6e91e89b30942854363fb2fd7fc2e7e1d",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-north-walk-b.png",
+      "sourceSha256": "3cbc5d1df13ec90af2013c18081dd7a6e91e89b30942854363fb2fd7fc2e7e1d",
+      "runtimeReady": false
+    },
+    {
+      "id": "police-officer/adult/north/idle",
+      "role": "police-officer",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult public-safety role",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/police-officer/adult/police-officer-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dc806f8b2e4d1f474a0bed728c80e8775c03ecc5a743c8a1b22e6d0425172335",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/police-officer/police-officer-north-idle.png",
+      "sourceSha256": "dc806f8b2e4d1f474a0bed728c80e8775c03ecc5a743c8a1b22e6d0425172335",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

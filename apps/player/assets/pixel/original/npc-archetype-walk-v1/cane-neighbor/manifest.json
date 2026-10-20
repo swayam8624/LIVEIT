@@ -1,0 +1,251 @@
+{
+  "id": "npc-cane-neighbor-walk-v1",
+  "character": "cane-neighbor",
+  "source": "../npc-archetypes-source.png",
+  "frameSize": {
+    "width": 96,
+    "height": 128
+  },
+  "directions": ["front", "back", "left", "right"],
+  "phasesPerDirection": 4,
+  "frames": [
+    {
+      "direction": "front",
+      "phase": 1,
+      "file": "front/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "8a2dc480c867dc19dd6dede25116728d424e5fb6082a4d427f63a90f69b7feb6"
+    },
+    {
+      "direction": "front",
+      "phase": 2,
+      "file": "front/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "d98cf1f74822bdbccb0c3af1770b4714b5e8012c5e86af2de9250699612c44b2"
+    },
+    {
+      "direction": "front",
+      "phase": 3,
+      "file": "front/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "8f27ebf06ce5d9ce07b188b8179c1100e4705abaf9c704d21e56e6f2e7ac2828"
+    },
+    {
+      "direction": "front",
+      "phase": 4,
+      "file": "front/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "ff5c57cde10b67089e03c290bab5bdfd04697485d4eada9f0b264640fc5316d7"
+    },
+    {
+      "direction": "back",
+      "phase": 1,
+      "file": "back/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "cbdab366dd056fe8c05f06356c187d0977d8a74da9917172bd133030a07a5cb1"
+    },
+    {
+      "direction": "back",
+      "phase": 2,
+      "file": "back/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "8aebd4165b0129cd1961a404493dfabef5160bc447306c222f41b20a7b20ecdf"
+    },
+    {
+      "direction": "back",
+      "phase": 3,
+      "file": "back/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "3171e9f23b120d913fbd23b492cd1d2530f81cf356e5670dfd2b32fb3b0c3b29"
+    },
+    {
+      "direction": "back",
+      "phase": 4,
+      "file": "back/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "475c077753232cf67c0c00094ab0441c45e9171492ebf5c632ea21f6c0deb47e"
+    },
+    {
+      "direction": "left",
+      "phase": 1,
+      "file": "left/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "6ff066574ee65d2ee473592fe5c5c6a9427143ae8735bd7e3eb51e00bf063e28"
+    },
+    {
+      "direction": "left",
+      "phase": 2,
+      "file": "left/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "1edf32eb86276ace04f9742b458c9c6772d1a2ce5ce7c7c0b41892f8a1b7e166"
+    },
+    {
+      "direction": "left",
+      "phase": 3,
+      "file": "left/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "84decc8908dc42cd407e31edd02594e84b37756b5976851468953f648e19cd51"
+    },
+    {
+      "direction": "left",
+      "phase": 4,
+      "file": "left/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "a85cad1e7918f752c28eb91e0127055fd801bb8972e352982e19ba6a587d24d3"
+    },
+    {
+      "direction": "right",
+      "phase": 1,
+      "file": "right/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "8ee63f75c6e341ba8f2ca88619858680d348cf74cdda8d3cdcc1785c4ce404b6"
+    },
+    {
+      "direction": "right",
+      "phase": 2,
+      "file": "right/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "9b3a21255ffac699fa5e9c95dbb2408d743a011f470e4dee60351273679b42e7"
+    },
+    {
+      "direction": "right",
+      "phase": 3,
+      "file": "right/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "22ecc03ec5b271ae9f4cc2f8eb34e99d1e7365f364f841b58f5c92a1199191bd"
+    },
+    {
+      "direction": "right",
+      "phase": 4,
+      "file": "right/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "3809c8e10bf5b25fc48172648cbadb9bf352f0f9bd265f95f57153744ca73d53"
+    }
+  ],
+  "atlas": {
+    "file": "walk-atlas-4x4.png",
+    "width": 384,
+    "height": 512,
+    "runtimeReady": false,
+    "sha256": "b6e8a1d83d1b82806158f76dc9b946aa37a344769851267b4c82aa6dca6d91d5"
+  },
+  "preview": {
+    "file": "walk-atlas-preview-2x.png",
+    "scale": 2,
+    "runtimeReady": false,
+    "sha256": "efe8186ff5eca4bae4b6eed16f77d12555a047776187b2cdbbcf6218a88b6edc"
+  },
+  "runtimeReady": false
+}

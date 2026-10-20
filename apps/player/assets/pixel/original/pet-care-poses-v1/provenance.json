@@ -1,0 +1,38 @@
+{
+  "batch": "pet-care-poses-v1",
+  "created": "2026-10-20",
+  "generator": "built-in image_gen",
+  "sourcePolicy": "Original prompts and generated pixels only; no supplied ZIP or internet art used.",
+  "runtimeReady": false,
+  "sourceSheets": [
+    {
+      "animal": "cat",
+      "file": "cat/cat-care-poses-source.png",
+      "sha256": "274dce14738c3b3e48f00388117212208de66b8df55d7628f7247d1078cd350b",
+      "dimensions": [2172, 724],
+      "mode": "RGBA",
+      "prompt": "Same small domestic cat in six isolated pixel-art poses: idle standing, happy tail-up, worried crouch with ears back, sleeping curled, asking-for-care seated with raised paw, and recovering after care with relaxed stretch; consistent markings, transparent background, no text or watermark."
+    },
+    {
+      "animal": "dog",
+      "file": "dog/dog-care-poses-source.png",
+      "sha256": "91d1608d18fbf0adc6bc2849b69555d338e83ae661e47ddb843ceb02ab4c782b",
+      "dimensions": [2172, 724],
+      "mode": "RGBA",
+      "prompt": "Same friendly medium dog in six isolated pixel-art poses: idle standing, happy tail-wagging, worried low stance, sleeping curled, asking-for-care seated with one paw raised, and recovering after care in a joyful stretch; consistent floppy-ear markings and collar, transparent background, no text or watermark."
+    },
+    {
+      "animal": "rabbit",
+      "file": "rabbit/rabbit-care-poses-source.png",
+      "sha256": "44fe13890b2d58adfdd7fee21caa230addef692db71753d1bf523f2106178a2b",
+      "dimensions": [2172, 724],
+      "mode": "RGBA",
+      "prompt": "Same pet rabbit in six isolated pixel-art poses: idle upright, happy ears perked, worried hunched with ears back, sleeping tucked into a ball, asking-for-care seated with a tiny paw gesture, and recovering after care with a gentle stretch; consistent cream-and-lilac markings, transparent background, no text or watermark."
+    }
+  ],
+  "derivation": {
+    "script": "build_care_poses.py",
+    "cropStrategy": "six equal source columns, alpha-bounded, nearest-neighbour fit into centered 96x128 RGBA frames",
+    "poses": ["idle", "happy", "worried", "sleeping", "care", "recovering"]
+  }
+}

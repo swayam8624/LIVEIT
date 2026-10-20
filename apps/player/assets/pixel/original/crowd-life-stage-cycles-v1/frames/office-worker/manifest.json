@@ -1,0 +1,24 @@
+{
+  "role": "office-worker",
+  "label": "office-worker",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.office-worker",
+  "description": "charcoal workwear with pale ID lanyard and briefcase",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/office-worker/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/office-worker/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/office-worker/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

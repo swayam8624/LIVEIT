@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-10-20",
+  "workflow": "built-in ImageGen",
+  "inputAssets": [],
+  "sourceSheets": [
+    {
+      "file": "source/age-identity-lineup-original.png",
+      "sha256": "f0542be37fdd5834a5ea160523cf68b9f5836ee9977186f5cb4d8d54ee3c520e",
+      "dimensions": [1024, 1536],
+      "mode": "RGB",
+      "promptRecord": "prompts.md#lineup-source"
+    },
+    {
+      "file": "source/age-identity-walk-original.png",
+      "sha256": "48a8939031f49d7329075ddfe981baf5c055ce441aff2768e0f0f16530ec81cc",
+      "dimensions": [1774, 887],
+      "mode": "RGB",
+      "promptRecord": "prompts.md#movement-source"
+    }
+  ],
+  "derivation": {
+    "script": "extract_assets.py",
+    "identityGrid": "2 columns x 4 rows",
+    "movementGrid": "4 panels x 2 rows, four horizontal phases per panel",
+    "sourcePreserved": true,
+    "runtimeReady": false
+  },
+  "notes": [
+    "No downloaded sprite archive or external game art was used.",
+    "Movement study identity correspondence with the lineup is a concept assumption and requires art-direction review.",
+    "All derived images are review concepts and are not admitted to the runtime catalog."
+  ]
+}

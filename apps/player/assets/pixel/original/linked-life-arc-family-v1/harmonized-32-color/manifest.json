@@ -1,0 +1,843 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-life-arc-shared-palette-v1",
+  "parentManifest": "../manifest.json",
+  "paletteColors": 32,
+  "dither": "none",
+  "runtimeReady": false,
+  "stages": [
+    {
+      "id": "infant-crawl",
+      "atlas": "harmonized-32-color/infant-crawl-atlas.png",
+      "frames": [
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-south-contact-a.png",
+          "sha256": "4a5f2aad6a89f78f5303666d252146c410f9d9a4b5e4abff559dc497487ba0fe",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-south-contact-a.png",
+          "sourceSha256": "62c0a4d95e06a9ef39c60cdf9945c6ccaff29727fc21ecc80502d81122a3f164"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-south-passing-a.png",
+          "sha256": "e042ec675ce27066d4a648837ac02e997ef16f88d7827df493ae7b2d7fdd3e7a",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-south-passing-a.png",
+          "sourceSha256": "eecdcb055df33134d0d311895032aa6b0f597b1ef045a549a13046ab23e6e59f"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-south-contact-b.png",
+          "sha256": "0e77ca9d16682cc79cd14be3c4704f0f58073f56b069c42c469129fa1437b6d4",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-south-contact-b.png",
+          "sourceSha256": "264db42f6a5cb4a030f1990c1320dc22ef0339373a8e88eb7a1d117baec79486"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-south-passing-b.png",
+          "sha256": "3bb502acfc9a43e2d9a7a8c40391bb95cb45835f5993fd42e302bdca64574b19",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-south-passing-b.png",
+          "sourceSha256": "819eba35d7d6265449b83dbef8161fbfe75037d852d39519df549ebe9f8d55cd"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-west-contact-a.png",
+          "sha256": "2f753848c02778c0e9e6a789f2352953dc38f1948bfb8ccdd738be2662254209",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-west-contact-a.png",
+          "sourceSha256": "08db21a032bfbd52d8dcb219f6df894a42ae18781b0de51580106225ac85f719"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-west-passing-a.png",
+          "sha256": "e4783261a19deea7bdd03d442dfdfa7d95a4a812b18cd3fea6a91daacce02386",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-west-passing-a.png",
+          "sourceSha256": "104bbea2326e9629d4214d9757c6e3f9690dcea3cbf7009177d003c6a13ad3fa"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-west-contact-b.png",
+          "sha256": "e97af50ef9eb197970f94925f4e805ec772fae437b617010e72a154b922323d7",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-west-contact-b.png",
+          "sourceSha256": "a373f682a15e2347b7257b6bc29e846d4d834711050d71899fa1bf3b30168008"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-west-passing-b.png",
+          "sha256": "dd78522f7e52e30ed88369ef1f53f0484ebe998281e33b176f6041fb1c187396",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-west-passing-b.png",
+          "sourceSha256": "695a57f46b08ac29f4cb2e64b78903d1c1667df5879758e8a682f3e77722eb4d"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-east-contact-a.png",
+          "sha256": "e299529e3e849009e1a42090e9fae54f290dae0a1073828c5c8d2523aa7a4aa6",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-east-contact-a.png",
+          "sourceSha256": "bd6468a9602f82cd7ff7a931300ec9897a23508d571322fe292c9c4a8cd35e03"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-east-passing-a.png",
+          "sha256": "a6a8393f7872b1226cc829bf76f1e1700dd288b7d86debb43490bbe316f41347",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-east-passing-a.png",
+          "sourceSha256": "cf4e51eb905dd214011d68833dd9695decb9761d3a95db9a3d76cc0c033f53c3"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-east-contact-b.png",
+          "sha256": "349a551c900f7d2fae75b128273561e439c45c0517908a9d13bbc691cffcba26",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-east-contact-b.png",
+          "sourceSha256": "25386c80eb2544e00815fb837cd065097f6a77e689d4e6573fc9856dd33941eb"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-east-passing-b.png",
+          "sha256": "1ba79e9a9d57547c9edd9308d320c7e2a45bac3fc6a8d09c40ee6058fc37f84a",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-east-passing-b.png",
+          "sourceSha256": "3e1b83928489cba8f0264a24721b1aedac948ff4595766a51c07f9376708974b"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-north-contact-a.png",
+          "sha256": "81e67c35175bd6c6ed20fcd87b43b8b8b1b00a782a80b2b7966da03c5b254efe",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-north-contact-a.png",
+          "sourceSha256": "b90ec9666166c425bfec4ff1edd050b562cd00a58f98fb334c6202b50e081c91"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-north-passing-a.png",
+          "sha256": "8d309daa79ba665df71271c4209613eeff3f13018697d3516b6184a6b7f446c2",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-north-passing-a.png",
+          "sourceSha256": "5bff1b06cb280034736dbf807ebd00ea95caa694eabcfed5443220052c2c9a6b"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-north-contact-b.png",
+          "sha256": "41344837be24d0c00a7f7dd56fcf5bafc3da657084ead5cf49b487d17bc8e44c",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-north-contact-b.png",
+          "sourceSha256": "244f30bd2d1da99ce58982de3abba30f55079875f83c598e08c2e5752315c2e0"
+        },
+        {
+          "file": "harmonized-32-color/frames/infant-crawl/infant-crawl-north-passing-b.png",
+          "sha256": "edffe47a826f94bf7d37026c0ed23091475d9a11a2c0fe50ada20c647ac05b25",
+          "source": "life-arc-early-cycles-v1/infant-crawl/infant-crawl-north-passing-b.png",
+          "sourceSha256": "ce3001b0b78b98cc2012d6250b05ba75f16151c3a507d263adcc8bebc0c73297"
+        }
+      ]
+    },
+    {
+      "id": "toddler-waddle",
+      "atlas": "harmonized-32-color/toddler-waddle-atlas.png",
+      "frames": [
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-south-contact-a.png",
+          "sha256": "21ef6451cfbf2fb43d43724d2cacce4e9451b822e5cf0e194378d7745e29b99c",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-south-contact-a.png",
+          "sourceSha256": "f4ebfcf8afeb4f32c304b24cefa35e3c63aad584cad3e6e1d14dcb917805dc74"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-south-passing-a.png",
+          "sha256": "06d7288a222aa4d4da3dc292bdf4a33a160b0fcedca6f848fcad7ff71cca0152",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-south-passing-a.png",
+          "sourceSha256": "f69963fa1e42c5bf96c7291fe0a5be526cd81d8cf07fd55b23b434526246bfda"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-south-contact-b.png",
+          "sha256": "a51f14330762d72649beb012676d4a7bf3021a7e407274e0bd97a1076a09aa9e",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-south-contact-b.png",
+          "sourceSha256": "7c17cc8ee3eba85b816fe51f13ad2f9279939e0bc79263ce1c497c5ff12a0869"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-south-passing-b.png",
+          "sha256": "58418d2c7f34f8430960f94a9078dd781cd55ecb36f652a88dc3251450f6213d",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-south-passing-b.png",
+          "sourceSha256": "f1468d1741be5de1fd1bc83a1605df0fc483ed5f29e444a6a1504b4b097ee7c2"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-west-contact-a.png",
+          "sha256": "42b64b19a1e9c2d1c6c80b32750a993285cb77a3bf4980b423d25a5ed77257ee",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-west-contact-a.png",
+          "sourceSha256": "c686ff9520e1f09af61934d70f4abedfaa7ac56661238bf39cbad0e7ffa12c7b"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-west-passing-a.png",
+          "sha256": "e4f806357a3c3774d6044905cab4ef6b2a3dc9cb5a2cba264760faa8b7d4146b",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-west-passing-a.png",
+          "sourceSha256": "3efff6a26a61506de6eef62d554c1dae5727c0bb9b262005696527bb1058bec4"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-west-contact-b.png",
+          "sha256": "2231294606d91a728a0e8b5c5d1adcac9a6a6be747d0d6e1ab19fc2036602b5f",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-west-contact-b.png",
+          "sourceSha256": "b9dfd95693cdbac86e335eb39923429b815fdb5c7fb8dd254c367d80120f66e8"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-west-passing-b.png",
+          "sha256": "b17b60b7ca5ee50bce4aaeabd115cdc1860abb8dd7cc39ca633ecf397d28b9c5",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-west-passing-b.png",
+          "sourceSha256": "1a6ef07e1de7e252f0d0c1b311165f5d853c9494fc9d5f0b03b70d5d82dfd119"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-east-contact-a.png",
+          "sha256": "049515c63213bada963fa034cc7f2eb0dad03de5f0e59dec037d3e7c9c4f3a06",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-east-contact-a.png",
+          "sourceSha256": "1b291ca8e11c79eebcafa1c52acfb3c7ac235fd045de6b29abd690792874b0b4"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-east-passing-a.png",
+          "sha256": "2db6964858ecb372d11ed82ebf94471804e8b567d08534fe527ca55f9a5bc64f",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-east-passing-a.png",
+          "sourceSha256": "45b28c5e7152a9f17267f7312b0a1a668d237bac4036b730e53deed0f061f2df"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-east-contact-b.png",
+          "sha256": "e8cf355364b09417aa6799aa1b59d59b5ca3caec8735f59626090a248a01abcf",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-east-contact-b.png",
+          "sourceSha256": "649c1a9533601a02c939aae086aa1193fadae916d8dc0e0a4ebc23391d9b50ff"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-east-passing-b.png",
+          "sha256": "443f8f0dcdfcc60b50d91de4ee8f5fd0adead10f327a781166fa6a3498e3b51b",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-east-passing-b.png",
+          "sourceSha256": "138868b09e1d459901b69b431087f3063cb52cd1885ca3685f203505217f779c"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-north-contact-a.png",
+          "sha256": "3ff3c0bd4a24133608e416199ac9e96f4cb55d1f2273515a607eb5ee620add97",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-north-contact-a.png",
+          "sourceSha256": "d0d561395a9cc6f76bed27b46b30eacc7d17f62328829491281bdee6c42ff59a"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-north-passing-a.png",
+          "sha256": "b921809a4c54efcb6c25ab41c7780ea6f2968adf36a8aac100b84bfe30e6633e",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-north-passing-a.png",
+          "sourceSha256": "af673c2cddab566ebb3dee6e20d49c6fe64b05df466561a7ecc038434d5b53c6"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-north-contact-b.png",
+          "sha256": "12d365fd68ab4d312dddad10dd0cd41fbb70897ad28b416ec7402418f3ecba70",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-north-contact-b.png",
+          "sourceSha256": "7e8ff27cc67045f5046db7c07c0e1efca512b9e154c5a30c1c4108841d0b2c85"
+        },
+        {
+          "file": "harmonized-32-color/frames/toddler-waddle/toddler-waddle-north-passing-b.png",
+          "sha256": "883afa09f46d6e203dbd5ab3e5c69f8796f32231dc18007a13bfe7e831eb7307",
+          "source": "life-arc-early-cycles-v1/toddler-waddle/toddler-waddle-north-passing-b.png",
+          "sourceSha256": "c587a5e45309d31ddf57dc57eb7acd256976cfc82734bfdee823568c0508fbaa"
+        }
+      ]
+    },
+    {
+      "id": "child-walk",
+      "atlas": "harmonized-32-color/child-walk-atlas.png",
+      "frames": [
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-south-contact-a.png",
+          "sha256": "3e7fdf869a405e5f059216050b66f89e3dcf6c66e27010476f5788685c818d2f",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-south-contact-a.png",
+          "sourceSha256": "27ba36731f33a4044ac14e595e9912fa7f6c672f401425185b4cca5bcafc06bc"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-south-passing-a.png",
+          "sha256": "4a9bfefaa52f58d7c1c877ecc800cef471a96e14115d4354973ac11934f9b63b",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-south-passing-a.png",
+          "sourceSha256": "7f09f38f4eb306326d09a0ee761ebc58634ae22c634bd5075bf0ef8e0cf183b3"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-south-contact-b.png",
+          "sha256": "a2495ef1c9b555d29dd0136825e5e8ef75f78605dacbc873a4cf99a4bea8b9d5",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-south-contact-b.png",
+          "sourceSha256": "70a28f29e58c96224928a7ad46104449bdb28e96e9e0ce55a1252c82d073b800"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-south-passing-b.png",
+          "sha256": "39b52be8f702648329c09b8a85677d7dc7462628ae25704f934e38f657ac43e2",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-south-passing-b.png",
+          "sourceSha256": "cab2824310f9ac0497828d77002b95555feb76004df9436e50063328c46091f8"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-west-contact-a.png",
+          "sha256": "3896fcb09e9d50ea6d3c65e011fe653adb59c40b75f48390fcfe55a866346a49",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-west-contact-a.png",
+          "sourceSha256": "64171836cd9032fc07afd6e20c6701c5bb98c91bdb257cdd4c5d7645c0d99ec6"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-west-passing-a.png",
+          "sha256": "8bb7d85168759bd4091944db8203e391d4eb894b14cfa9ff03b73b0697883b08",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-west-passing-a.png",
+          "sourceSha256": "3e17ce0bc155aae0c21db77b484729c0fe88e9932b7c55c366a496493d736625"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-west-contact-b.png",
+          "sha256": "c73bcc428f7212b0f9f3934fb6d02446f9b2066af7ede78fdec99bb973ae16b4",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-west-contact-b.png",
+          "sourceSha256": "1220e3b614258b36d7b06d6190264e268cb09d8e7eff394abd9507cb048df700"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-west-passing-b.png",
+          "sha256": "1f2f072a8286d28743ddc28d79ae2bac57464bc344332aed68bd02470da256c0",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-west-passing-b.png",
+          "sourceSha256": "0e74d88f5a851f61407dca9727084ab6c84601239a997f69d1b1e39545268139"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-east-contact-a.png",
+          "sha256": "241ed05f0577868662f082f9b56d9a903763629d174d997175305439a2e47a65",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-east-contact-a.png",
+          "sourceSha256": "6e0f27300a5e0bdf78b9c6629053fc22a84f22c9467b14a48644f20e9cf8a3f0"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-east-passing-a.png",
+          "sha256": "29797130c237ef3606b07fba94aff70a50b89b015a9e88353149581eae967215",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-east-passing-a.png",
+          "sourceSha256": "aa94cb5e2bf553e0b74da669c66dc7fa23bbf1ddc4ffca6d298c7a4702e662cc"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-east-contact-b.png",
+          "sha256": "7d67f770925bdf75c63ecb2a70c45e60c43db0c74028fa97da5073647597b100",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-east-contact-b.png",
+          "sourceSha256": "cf7cad9697e8e2d03c36aad4b7033a0824537edfad8665eb74ce8c8223a449c2"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-east-passing-b.png",
+          "sha256": "488edcec3101615eb857e0db4885f7b9b61be5368b0f1b26030e635b5584aee1",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-east-passing-b.png",
+          "sourceSha256": "d0f2bc43a0f19f58fa4e27b72eede812c1f6bd901b107726e4d65c13a156b799"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-north-contact-a.png",
+          "sha256": "44bd4afdcaca175cc05ea82dce88e4e78709862a62de6421f86f5ab36ed749cf",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-north-contact-a.png",
+          "sourceSha256": "a49bcf899e1d08979aedea63dfeca89d526aaa6c6bf833d406e9bca60548a365"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-north-passing-a.png",
+          "sha256": "4354611923d72a5790484b6e401b68e5e62f956002e0a5836ea47d118b89f053",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-north-passing-a.png",
+          "sourceSha256": "dab519848c62041349247d3ac49eebf135e20382d36f8a386143556a630da198"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-north-contact-b.png",
+          "sha256": "22040e6228b25502d2be49e215d5e4710e9b3eb3260accf7cd6d0907a748ea04",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-north-contact-b.png",
+          "sourceSha256": "fe9f98fa56ad7305c7b372023ce37ea23465ecb1ba947c516105814e1a6bf7f9"
+        },
+        {
+          "file": "harmonized-32-color/frames/child-walk/child-walk-north-passing-b.png",
+          "sha256": "ea199d5f5fa00c8ca350417ace57a5358ffe5551f468168e11bf22b0b2a5383c",
+          "source": "life-arc-early-cycles-v1/child-walk/child-walk-north-passing-b.png",
+          "sourceSha256": "5cf62eb9f1617ca3f77b621049a02f797d702a2cc9b194da3947517ea6fcde0e"
+        }
+      ]
+    },
+    {
+      "id": "teen-walk",
+      "atlas": "harmonized-32-color/teen-walk-atlas.png",
+      "frames": [
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-south-contact-a.png",
+          "sha256": "0fc5a8ab5ca711c0884df56497669f166439fa9d064808cd0a1825611fab6065",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-south-contact-a.png",
+          "sourceSha256": "d8d0f678cf1cd0151274580289b422a391437ad0fa8423a3f14ae1cc8778b0f9"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-south-passing-a.png",
+          "sha256": "84aa40813dd32eee2a2c1d0e8157406b589542eec0386e826e840deb9523601e",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-south-passing-a.png",
+          "sourceSha256": "3a218b4d0bda1e4e94c50f7ff817187d23c15bdbbb2c67796082213c45b7b1a4"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-south-contact-b.png",
+          "sha256": "62d061e69fa537ba4425fc95046352d86342e29ed85ae08e5a6c8dd3cc8e57a3",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-south-contact-b.png",
+          "sourceSha256": "2367494b6c6ac98c150b349e8c32afa01ccaa28f536c9325e853e2e719b60421"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-south-passing-b.png",
+          "sha256": "e1108a25908f31e2c576095f4aa1caf1a02a4dd0a6a9da0dbb0b09453452c5e6",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-south-passing-b.png",
+          "sourceSha256": "350add2541fef41e016fa02d3204a06f50539bc03acd77fa284cc20817ff77b4"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-west-contact-a.png",
+          "sha256": "5cc1481a1bae4ee7c65fc97b15deab078b23712e7962db079ced97ad3cac927c",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-west-contact-a.png",
+          "sourceSha256": "a83741659082dde41fe8dda3cb0230522444a873a53a6a2030810ffe745db12a"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-west-passing-a.png",
+          "sha256": "a3007beac0c5b1dc48982cc91d99a4eeb1af6868435b6ec0fbbeb46d43f2597e",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-west-passing-a.png",
+          "sourceSha256": "e2752d7124e88a7405b4dee192db120a621ac6f99e538de81f60d3f89e4a3d6b"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-west-contact-b.png",
+          "sha256": "bb6bce767086f9ef53153ae882e7aa920a3c4a7ac5b703679bf86fe29baaf605",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-west-contact-b.png",
+          "sourceSha256": "78511df4521070c07b82d187f4c860e750ffa38d9da23004b10ca86ba7d8cc85"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-west-passing-b.png",
+          "sha256": "dcc3e9b39da0149d167ab68611df9503f31be38d59285c324aa4d8a2326bf23d",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-west-passing-b.png",
+          "sourceSha256": "26d011bd13f6f82cf75e7662bda5d7d1e0eb420a8a3d60df89a63425cc86ed44"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-east-contact-a.png",
+          "sha256": "a07af577a9292a3288458cb2f4cc55c3821065af2c4cd87a1629e93c93e24e30",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-east-contact-a.png",
+          "sourceSha256": "6397fb74959d42e41f7b0f3a835174d9baa63c23046fac0227ee89c2281d3cf1"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-east-passing-a.png",
+          "sha256": "d67ae3f4649ca3f6977d41ccbf4c759b1ff31b6dcf0614d64f2b13fdd0910d35",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-east-passing-a.png",
+          "sourceSha256": "edbd854375e3c95892b62446718b7311f47ac2d5d5ae8bedd78427adb13d2a1e"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-east-contact-b.png",
+          "sha256": "5923018083292667af0dc6a31f626f7623bb241bc70ff5a2726d6c2ab0d81911",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-east-contact-b.png",
+          "sourceSha256": "7afdb9ecd29cee93ac2724e39aaa4364945270e4a3b0adf5cccad59ecae403ba"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-east-passing-b.png",
+          "sha256": "16f50754c1da9b2b8e14132bbc70c3d0f3f13d834e5dbcf51c03f16936bdab0e",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-east-passing-b.png",
+          "sourceSha256": "195426f8ad32295da67498d8483ea6e6c5526f907840380d252751c7a7da2093"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-north-contact-a.png",
+          "sha256": "928da3f5101dd80e737fabc3ed843d2fbca5531622a128a94be250cc4e9430e8",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-north-contact-a.png",
+          "sourceSha256": "e9b8b558ba73d3a131907d0f231be378e15555afb060bd35275d4ced7e519d87"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-north-passing-a.png",
+          "sha256": "cb17626cf7b76450456c58752b01f7b240a77ced9c60d92d890197b02785719c",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-north-passing-a.png",
+          "sourceSha256": "0311786161bc0e5f15fd6b63bc9597875fdd11f7f09509e4efc4056cdc0f8a6e"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-north-contact-b.png",
+          "sha256": "28217c1e225c5bf620a1670ed6ccb17fc12d4e22771b05d1768a922f6d28257c",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-north-contact-b.png",
+          "sourceSha256": "3111d9c2afffda72116ee702c86ab73e8be8c3da1346496b879a0b3e27583813"
+        },
+        {
+          "file": "harmonized-32-color/frames/teen-walk/teen-walk-north-passing-b.png",
+          "sha256": "1eb604cfa3a5b851c1a1779120851f5459c56b50787694fb7ff29dd7cfed7c53",
+          "source": "life-arc-early-cycles-v1/teen-walk/teen-walk-north-passing-b.png",
+          "sourceSha256": "70811fe9677a30c4f6f4b2bb4ca23f1515cfaa83c645a408e24cabad5feea829"
+        }
+      ]
+    },
+    {
+      "id": "young-adult-woman",
+      "atlas": "harmonized-32-color/young-adult-woman-atlas.png",
+      "frames": [
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-south-contact-a.png",
+          "sha256": "c578d31aa4c7114806596a696e74ee05ed480aa9fc82f46e0d71df9ddc3b8717",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-south-contact-a.png",
+          "sourceSha256": "777b04da054112138ad546712beda3cc85c50acd859d109422d262abe525ed41"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-south-passing-a.png",
+          "sha256": "26467921769633adca5d8e905831e859feb2ac285d9e7faf036d4af010bbeb21",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-south-passing-a.png",
+          "sourceSha256": "a1dcbfc0e200206f8f7af7535de869ba4fb5952b8a75631b3741d47d604913c6"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-south-contact-b.png",
+          "sha256": "8ca2a83079d32e8060097595f93f347e98bc06fada97245d71f9a930f031a0db",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-south-contact-b.png",
+          "sourceSha256": "c6da77e7c8faa67a490f97b5dcf2d3028e10d771abe5ca4c38693d9153876a47"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-south-passing-b.png",
+          "sha256": "4316c2409be3c415aa6671c8f900bb18f0bc18b261c95e495aaa85d2e3afca87",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-south-passing-b.png",
+          "sourceSha256": "e28e88391c3aba614f1be3ea32b8bb60b5b912f554ea5534c5ac4f78aa52f28a"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-west-contact-a.png",
+          "sha256": "ff53c30d7648ecb15ccfa8852caa2fb80448fa885b6fd2e5348f216a69e166a5",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-west-contact-a.png",
+          "sourceSha256": "a7facdd0f60b32010856291c721b9d0f7fc1a6f6c9ea6d127c3448d0287c751b"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-west-passing-a.png",
+          "sha256": "5d828f8383118779c2fe697e11f148ece89bf003d504313690443ac2061053ca",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-west-passing-a.png",
+          "sourceSha256": "a1bd1ed9c428acfe318c0bea033c9e736b2be95002ae263c19d7cc5b41fd09df"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-west-contact-b.png",
+          "sha256": "d4509fc176b2840d9a54bf7c66afcc566aa966a1fc19ad2b005477866ad823fc",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-west-contact-b.png",
+          "sourceSha256": "e639a7d2a93f0c25274e95ff986b95b8322183e5462bd379b741e505d309e6ab"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-west-passing-b.png",
+          "sha256": "dc89ec0f57afd722ea43229c239c7e707e7c9aee5cd7d35fba97309b0eaf0b4b",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-west-passing-b.png",
+          "sourceSha256": "e8aec5f24730ef60d427086527b8dee0439820ec2d7f26a324d67716247ab7ba"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-east-contact-a.png",
+          "sha256": "aeff3e982bb99dea97cb1a9bbadd7398cd2960a2ee2789eed276512ebaa0e476",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-east-contact-a.png",
+          "sourceSha256": "8191b29dfe23c2078af7b4724df9e22840fa66f5e3e7edccd36cf58447c6d157"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-east-passing-a.png",
+          "sha256": "542a005ff7ce6694547e51e8870b8729ce340a970c80d0a31bd62b60e99053ba",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-east-passing-a.png",
+          "sourceSha256": "da711d7cd2f21fc88781cabee2d989ddb39385e837ad60436f14aadcc67db5d0"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-east-contact-b.png",
+          "sha256": "b0efa83be3e24ad2a978bccfea652080ed859f3ff99ecd500c1998c5d61dbefd",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-east-contact-b.png",
+          "sourceSha256": "a109bd8702243171e30851578244243b25d05a7a0b07cf59889b279a971ea921"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-east-passing-b.png",
+          "sha256": "6b050ae2f069a21780b3094bba327055ee3804947c3812660a3362df9bbb9831",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-east-passing-b.png",
+          "sourceSha256": "555d317b4a152942c40060ded3c0ec9eeb389ef973129c2a85156e02af3a82de"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-north-contact-a.png",
+          "sha256": "96a15073d00b494bc45269b76aea53978bdf38a03f0f9ec32fdb8e026a280750",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-north-contact-a.png",
+          "sourceSha256": "a6c73c263a855cb62b4b7b66c2cb88e2d1f0ea9cb3225fecc4f986837875f0a8"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-north-passing-a.png",
+          "sha256": "d33ef04693449782ae106e12b006d1227d5c0a3c1499acfedaf2fe36c888bfac",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-north-passing-a.png",
+          "sourceSha256": "a63169bcc8e8838870df4674f6fbfe0a9f8a4baf1eaf19b6fb977b01715d170d"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-north-contact-b.png",
+          "sha256": "88fcbcd81b976a92de7486b93c95793d8c0434e8197054df011a59d2d716810a",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-north-contact-b.png",
+          "sourceSha256": "e61966c030541bf27d7327d8e75fec7c208bd55cbbbb23d6f3edec5af27bf6b2"
+        },
+        {
+          "file": "harmonized-32-color/frames/young-adult-woman/young-adult-woman-north-passing-b.png",
+          "sha256": "0cbe675f0ac9309363490cb38112cbe7c11eb41d6a8807e76ad359d7a203ba50",
+          "source": "life-arc-later-cycles-v1/frames/young-adult-woman/young-adult-woman-north-passing-b.png",
+          "sourceSha256": "9ec92efb225ca5056cb648ae618e1f3f67f5b9a1060e543397ec833231c610df"
+        }
+      ]
+    },
+    {
+      "id": "midlife-woman",
+      "atlas": "harmonized-32-color/midlife-woman-atlas.png",
+      "frames": [
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-south-contact-a.png",
+          "sha256": "9104d3bdd8aa6538c1ba4abe3350b39baf7bc01f7d3659b4986b9a53485e22b3",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-south-contact-a.png",
+          "sourceSha256": "1251f30f0611fb40991bfa18e7cc871495538d29ef50cebd093bd5682ce84779"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-south-passing-a.png",
+          "sha256": "a8660fe06457511ceb9cc6fba0456f46de4cefac97ff8d6dedd00a5ddd468bb4",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-south-passing-a.png",
+          "sourceSha256": "afbe5b52f010001e0f458f2da96ff7736bfdfbd49610233f5c523c567d7753f7"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-south-contact-b.png",
+          "sha256": "912049581289ec3f1f162eb24eaf99995a9aefdbd840f2e5456cee997213689e",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-south-contact-b.png",
+          "sourceSha256": "702d86a857e6a4b6f1923df1d23b7d4a8223006600ad0584b33b7c88b6afde5b"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-south-passing-b.png",
+          "sha256": "4ed5700af0bef0b720f276f8a108449ac02f21c8b48a45de3077072266109b0e",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-south-passing-b.png",
+          "sourceSha256": "8fef795c57b2d0fc4f3c36b0edcfb1d5a8a7eb86e8c5490f9c1eda95a6616d03"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-west-contact-a.png",
+          "sha256": "d41d2324812fe5eb7b6c06102e2b1649224b9f28d832962aea3acf50fce4bc9f",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-west-contact-a.png",
+          "sourceSha256": "991330c994464480623ae9f9ad261554f75a181112d2669b17e711584ddc5492"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-west-passing-a.png",
+          "sha256": "ae8e581f2118a7169c6440e4a0226c27dfe610cd6243642d10c332bc7a6e12d2",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-west-passing-a.png",
+          "sourceSha256": "3482ba773cca9f309879bc79482752ecd68ef216d247cad4d5365af4a20f3930"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-west-contact-b.png",
+          "sha256": "984d469a583a3dc26096b7c6137d7211cab1e140c6cffc69295830816cab2d03",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-west-contact-b.png",
+          "sourceSha256": "3e4ef52597b3ef09d69b5074026a3696e2e6fea39622bbdceed874c122fe5b30"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-west-passing-b.png",
+          "sha256": "de43d99b5ee02f52c44cc7dadc5fe3a9a500b21d8e3e166bcb889e0adabc0572",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-west-passing-b.png",
+          "sourceSha256": "6a4067ec478d1256c5693c054706b268ffbf44ddb11236b104892b741464a05f"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-east-contact-a.png",
+          "sha256": "cfaeeccb202817c67f8c6e9f3b7851579a5499cbdaf00ff2afc22b4ab27dcebe",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-east-contact-a.png",
+          "sourceSha256": "b4afe55abac66b29ec1fa092f5e67bbcac80415d7266f7917b31767da542d1ad"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-east-passing-a.png",
+          "sha256": "3e84a29beab36abfdb61385b09e2ca31f65d7a4e0ba8149da9050cf6c14887a2",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-east-passing-a.png",
+          "sourceSha256": "e2deb3d9aba16c85b2d592cecc0955fa88003611dfe4455213b44ee3b086400f"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-east-contact-b.png",
+          "sha256": "5d810f6a77c2cf0d144bc6d67f55f820866c06f40d9fba706ec4fc61bee27ad0",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-east-contact-b.png",
+          "sourceSha256": "d3bc0827f3058a32f56f177b0ca1bb23420d82b98884d227c02189b03b6d9349"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-east-passing-b.png",
+          "sha256": "4cae090fd4924c65ee171c95cddf9dfce851121ca6aa630fb7ca2cd2105396e6",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-east-passing-b.png",
+          "sourceSha256": "f2b367fd97b61af98670f4cd5a5985a2041215d8f8976cfaf3607c61c1aa2659"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-north-contact-a.png",
+          "sha256": "531e7d0994bd8b68bec972dc216e763248d49fddae46a8294aa7f256662aa38b",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-north-contact-a.png",
+          "sourceSha256": "a0661446fcd0b6e3d4415ea9ca0dbce3753d29c152098742c05c9bf4b925e4c6"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-north-passing-a.png",
+          "sha256": "a1e6a0a0ea668174e7cf79ba7251466ab493d68f31a3f5b6f34bb4bdbf8a5c77",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-north-passing-a.png",
+          "sourceSha256": "4d7f689f39f760608cd86d5633fb58eafba4d2a58880871ca2938756c73a371c"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-north-contact-b.png",
+          "sha256": "775f81aea5f7792922c11292fab5e915ae049bd982e53e9bf03aa94d29eafd51",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-north-contact-b.png",
+          "sourceSha256": "ccaa9fd62ed187048b4baf19761d0f37af8be9c633d5f5280eb62356394dc24f"
+        },
+        {
+          "file": "harmonized-32-color/frames/midlife-woman/midlife-woman-north-passing-b.png",
+          "sha256": "1553061ca9ca263f3a6566467a3acaf3e8468814d744d18b80daabd9a8555c04",
+          "source": "life-arc-later-cycles-v1/frames/midlife-woman/midlife-woman-north-passing-b.png",
+          "sourceSha256": "105a6fa41f139b8c7c93ddbcf57156afed6ed0f7c8a50a03567e23a2d6070b8d"
+        }
+      ]
+    },
+    {
+      "id": "elder-woman",
+      "atlas": "harmonized-32-color/elder-woman-atlas.png",
+      "frames": [
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-south-contact-a.png",
+          "sha256": "f94282cf2f7d6849ab529f9b3ab15f76fc9da455b4e6164dd7b764a2723eb487",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-south-contact-a.png",
+          "sourceSha256": "0c808ae975e376f7f4f54a0511728598a6739d90562329400cb29b7d559c14c9"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-south-passing-a.png",
+          "sha256": "a291555b6bfdc4baa53969fb39f4217a6c08f179d9afc8969509737cc23fb30d",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-south-passing-a.png",
+          "sourceSha256": "f2f5144b9d47556e245cc891bb9ffd5bf7b90f4e7670abf458c51aca848db66b"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-south-contact-b.png",
+          "sha256": "536a407524626fd7f5008b080f559920fa3733b24ceccfa352c160454aa2a415",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-south-contact-b.png",
+          "sourceSha256": "b7edd55c788b9a1494f6104564d3f03636ecb3aecdddfba2bc963c6577ff5521"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-south-passing-b.png",
+          "sha256": "3581cd34f75a761f95701f2469a55060586bb991680c7f23aaf1fbe9ba212d8c",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-south-passing-b.png",
+          "sourceSha256": "2c93c26938cf8fa6499ed3e6dcd7873a126f56a8a8743d8be429f447b99e3e98"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-west-contact-a.png",
+          "sha256": "41fd06e3912e69c7414501a64c29fb9b714e90aa774debafe4099bc9503e49df",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-west-contact-a.png",
+          "sourceSha256": "1ff7759d1c61740c48b1ddd419dcddba243e1cf7ccfd500d4727523daec8f86c"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-west-passing-a.png",
+          "sha256": "8c966c7055c9c1472d61bccc4a133309d21fed48bb6da87b63ab21f9e41603bc",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-west-passing-a.png",
+          "sourceSha256": "02931413c47968546ab9b4bf62385baf708f66cd13115ff24a4b91f546c1be31"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-west-contact-b.png",
+          "sha256": "45e94846c2f6f6be81ca0a37c4769166e43ef09895824a8007c411ff7e553065",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-west-contact-b.png",
+          "sourceSha256": "28d0a8e508ef8e00bf7e32a4cca18c3b6428fda5e82407650394cee621826d6f"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-west-passing-b.png",
+          "sha256": "49d472383e1290320e53a841ede7cf0075dcd943d263d466203b5290b068ed02",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-west-passing-b.png",
+          "sourceSha256": "fec640586c30a7534852817f96d828849939d54f22b4f971ace096738150f311"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-east-contact-a.png",
+          "sha256": "c34f9699b0c44be0601e2c1d4893beabd20d61efc1101356b16b1a46c67cdde9",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-east-contact-a.png",
+          "sourceSha256": "b9967257630a5b020fbc03fdfb4c7204394f4d2196a9170552d616912d0d4571"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-east-passing-a.png",
+          "sha256": "889fb7db8ee860d0c3a4025d05e8ffe3a05d1873da60c6c3770d2f775fa8c181",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-east-passing-a.png",
+          "sourceSha256": "7f48cfb483e6477de0b21876bbb3cddf2f013d5d381380be483e19c033030a17"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-east-contact-b.png",
+          "sha256": "31b75cd06a764ba1784bee1d9562f5338ebbf3c3f3fed39885e1dbdd47d84e5d",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-east-contact-b.png",
+          "sourceSha256": "0833b71c53e4bd90e7c390d6c2f56afb5fa48ea6bd626349c47f680197966456"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-east-passing-b.png",
+          "sha256": "027cd6091d622b36e06aa4020539b9913f2dd90e0d9f1ffeca036aa90faf042e",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-east-passing-b.png",
+          "sourceSha256": "e68538efca4f322386b115525d4219d595014d7b582d911ced5914cbdd8e7410"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-north-contact-a.png",
+          "sha256": "05f23a79fc8a5a4184172fbdbd90270378518d541c95e40b30a1d31cb1dc5c47",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-north-contact-a.png",
+          "sourceSha256": "7fa9e2b1663796f5ef6cc7412f753013db9f4111d0819a6803820cdf5cca9e2c"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-north-passing-a.png",
+          "sha256": "7f64c964ad0ea088c088164e96422fa8e44d61ee0695d3e3d4c134f4caae022e",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-north-passing-a.png",
+          "sourceSha256": "7e49e5058054d1202e7997058745482a9e876153524ea42a3efd85c1892ca5c3"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-north-contact-b.png",
+          "sha256": "a62fd4980d3a6293af84565277bfd69709e5050a365c9d5808160dfe3255a5e5",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-north-contact-b.png",
+          "sourceSha256": "7bfd7e7a0277248d85d0ef8bdeb44d31afe7e155c9b2c0bc5414be4431a82aec"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-woman/elder-woman-north-passing-b.png",
+          "sha256": "87e5e27cb99c1d410498d165e1a54a4b2ac28d0be029b0991102eebdf14be4cb",
+          "source": "life-arc-later-cycles-v1/frames/elder-woman/elder-woman-north-passing-b.png",
+          "sourceSha256": "2034fc87efcf46263b0d83d50bd674258aca74206fedb04583efd69e2920468c"
+        }
+      ]
+    },
+    {
+      "id": "elder-man",
+      "atlas": "harmonized-32-color/elder-man-atlas.png",
+      "frames": [
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-south-contact-a.png",
+          "sha256": "a37e333fc5fbdbb20e8fa684c1004100df0120c9ef662dd212c43e2efcb7d25d",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-south-contact-a.png",
+          "sourceSha256": "5d7a9afd85cf3f0767f35c00388e26de3c377a880ae15adc665642aabc596deb"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-south-passing-a.png",
+          "sha256": "89b512f88b2e9e751d8cfd73812818d1640b3c2a8f2e3e9c44f3fe34dd875e59",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-south-passing-a.png",
+          "sourceSha256": "875f6ba93f3d2eaa6ef31089f710a1ea0d8f97d7a5e87f2854bdc8c46c9b67df"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-south-contact-b.png",
+          "sha256": "e8ba94791023ee3dd3b72a308bd5c2f71a81b7cd1d18b69d2601cfb815197132",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-south-contact-b.png",
+          "sourceSha256": "24eb58639fbc10cb776640218818ade0269600bd996466fb55551a04fae7e519"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-south-passing-b.png",
+          "sha256": "19a216b5cca0767aed121257ce2bd9ecc0a0a5b5c7ee7304521c1ac9d80efab5",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-south-passing-b.png",
+          "sourceSha256": "b0fe840a3d9f0669660653e557a0eaab97f96e080406624e821a149ed6a17e0b"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-west-contact-a.png",
+          "sha256": "c3a6a0c561edc663626d8688627b68f1be76b1af93d05aee2d5b20becd6acf7c",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-west-contact-a.png",
+          "sourceSha256": "a94c6732557347ed5dd7ea0244ea2afb03ceaa776fbf80c0e2f939a36c9df42c"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-west-passing-a.png",
+          "sha256": "11ec129d1038b787a62961b430017533ba2bb25268cbc29b8f5e173c3d7f08be",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-west-passing-a.png",
+          "sourceSha256": "87ce2b3c8be8fa077f276d8d6eafc6170a306b7d0aebf5585acd29f035112961"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-west-contact-b.png",
+          "sha256": "6b5c6968e3032a33893cf76d0ff002e66b3cb103196381898e60eb04bfde030a",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-west-contact-b.png",
+          "sourceSha256": "d7c203ef8e588b6b18154a88dc08468070c483fcb49748c9a860aa0d741ea92a"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-west-passing-b.png",
+          "sha256": "b7be14b8c4a5e72a16c49c278e467d18fd2f9ddf00fbc0014dd713fa0df8c146",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-west-passing-b.png",
+          "sourceSha256": "b452a35fb737e946145e906a1d6aa6239c5df338c6a6cb402570cae2e15c5a30"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-east-contact-a.png",
+          "sha256": "01adddffbce78a1ae1fa943342dbea3830ef0c321c566453c1cd0b347b4259e7",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-east-contact-a.png",
+          "sourceSha256": "f23963f95bce3ff0ef4ad548fa3c6b2c6b694e75ce9860f4fe65bf32544f388d"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-east-passing-a.png",
+          "sha256": "f77036b8b47309b48a147aae555bcf010911cd38c13a9671f1abf66194d31cf5",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-east-passing-a.png",
+          "sourceSha256": "2a2036b35259ddf00ca49c45ac175b53f3ec372271b0174e1b0339cd3177fbb7"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-east-contact-b.png",
+          "sha256": "78700c6f465a017709a55d8a9fbdd0c84e016895d5516547d07b8b942a737ca6",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-east-contact-b.png",
+          "sourceSha256": "51a0bf333e61414398cedb678ba871dddee471ba2905e9b91f3059b14e2f0149"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-east-passing-b.png",
+          "sha256": "fe2025f64864d97006f99d9a9a9ba42e277381945961eef944d1bc7ffd763c73",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-east-passing-b.png",
+          "sourceSha256": "af2c2dac3e9650d3c83e9640cbca907d35476a05ba9024c8c25c7ab60856b3ad"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-north-contact-a.png",
+          "sha256": "880260e3f47460741199e1e79697fc8d78d10180ca822dff13eb3826715d3908",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-north-contact-a.png",
+          "sourceSha256": "543503c87b92ff2e8f2da3bb577e12d8850e14e12b608e2d281e3acd99840e3e"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-north-passing-a.png",
+          "sha256": "67eab4ae0fb0ae23b9cdcecfb0b931a7131e58efef93de18fecc6c0be59e1dd2",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-north-passing-a.png",
+          "sourceSha256": "440e2cd5a343c977a32e537f30e0cfb06ecfa89d3991249658dace42fc8ebb48"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-north-contact-b.png",
+          "sha256": "cc37dba3e9726b90455ab796423b9d1d21b6cf0ec2e2c24eb4f23b0499c7bf69",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-north-contact-b.png",
+          "sourceSha256": "738a68a9cbdb1a2f1091b71d4d4f7a9840f9b9cb3f5fe010dd0ff648c3319e56"
+        },
+        {
+          "file": "harmonized-32-color/frames/elder-man/elder-man-north-passing-b.png",
+          "sha256": "185a8f7b139175308857a8f4e992fa1922d5e6be2c3f69b1fbeb55e9d6b57129",
+          "source": "life-arc-later-cycles-v1/frames/elder-man/elder-man-north-passing-b.png",
+          "sourceSha256": "36ae51c5d88c4ad2b20c9c22a8bc8d2150b8a01f859cfe55c15f09870436154d"
+        }
+      ]
+    }
+  ],
+  "atlas": {
+    "file": "harmonized-32-color/linked-life-arc-atlas.png",
+    "size": [96, 1024],
+    "mode": "RGBA",
+    "sha256": "7c99a7b8f339bf6bc78abc8296d250136f76e27fff84cb72680fd4c6d724eebe"
+  },
+  "preview": {
+    "file": "harmonized-32-color/linked-life-arc-preview-4x.png",
+    "size": [384, 4096],
+    "mode": "RGBA",
+    "sha256": "1d53ffbcecd20ef34ef1ee3323100c4d70d2e8590b97c8f98b6d2645feade113"
+  },
+  "limitations": [
+    "One global palette may blur differences in skin tones, outfits, and age-specific cues.",
+    "Palette reduction is an optional comparison, not an approved replacement for manual art direction.",
+    "Identity continuity still requires human review across the independently generated source sheets."
+  ]
+}

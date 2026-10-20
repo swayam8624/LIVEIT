@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "assetId": "elder-woman-cycles-v2",
+  "source": "elder-woman-cycles-source.png",
+  "atlas": {
+    "file": "elder-woman-cycles-atlas.png",
+    "width": 384,
+    "height": 512,
+    "columns": 4,
+    "rows": 4,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "order": "phase columns contact-a/passing-a/contact-b/passing-b; direction rows south/west/east/north"
+  },
+  "frames": [
+    {
+      "id": "elder-woman-south-contact-a",
+      "stage": "elder-woman",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/elder-woman-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-south-passing-a",
+      "stage": "elder-woman",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/elder-woman-south-passing-a.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-south-contact-b",
+      "stage": "elder-woman",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/elder-woman-south-contact-b.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-south-passing-b",
+      "stage": "elder-woman",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/elder-woman-south-passing-b.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-west-contact-a",
+      "stage": "elder-woman",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/elder-woman-west-contact-a.png",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-west-passing-a",
+      "stage": "elder-woman",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/elder-woman-west-passing-a.png",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-west-contact-b",
+      "stage": "elder-woman",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/elder-woman-west-contact-b.png",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-west-passing-b",
+      "stage": "elder-woman",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/elder-woman-west-passing-b.png",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-east-contact-a",
+      "stage": "elder-woman",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/elder-woman-east-contact-a.png",
+      "x": 0,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-east-passing-a",
+      "stage": "elder-woman",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/elder-woman-east-passing-a.png",
+      "x": 96,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-east-contact-b",
+      "stage": "elder-woman",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/elder-woman-east-contact-b.png",
+      "x": 192,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-east-passing-b",
+      "stage": "elder-woman",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/elder-woman-east-passing-b.png",
+      "x": 288,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-north-contact-a",
+      "stage": "elder-woman",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/elder-woman-north-contact-a.png",
+      "x": 0,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-north-passing-a",
+      "stage": "elder-woman",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/elder-woman-north-passing-a.png",
+      "x": 96,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-north-contact-b",
+      "stage": "elder-woman",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/elder-woman-north-contact-b.png",
+      "x": 192,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-woman-north-passing-b",
+      "stage": "elder-woman",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/elder-woman-north-passing-b.png",
+      "x": 288,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    }
+  ],
+  "runtimeReady": false,
+  "limitations": [
+    "Source is AI-generated concept art, not runtime-approved art.",
+    "Colored edge artifacts, phase timing, collision boxes, palette cleanup, and renderer sampling remain open."
+  ]
+}

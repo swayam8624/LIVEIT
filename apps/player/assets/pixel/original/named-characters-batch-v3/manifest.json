@@ -1,0 +1,80 @@
+{
+  "id": "named-characters-batch-v3",
+  "kind": "original-pixel-named-character-movement-concepts",
+  "catalogGroup": "named",
+  "roles": [
+    {
+      "role": "boss",
+      "label": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "manifest": "frames/boss/manifest.json",
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "coworker",
+      "label": "coworker",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.coworker",
+      "manifest": "frames/coworker/manifest.json",
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "friend-one",
+      "label": "friend one",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.friend-one",
+      "manifest": "frames/friend-one/manifest.json",
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "friend-two",
+      "label": "friend two",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.friend-two",
+      "manifest": "frames/friend-two/manifest.json",
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "neighbor",
+      "label": "neighbor",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.neighbor",
+      "manifest": "frames/neighbor/manifest.json",
+      "frameCount": 24,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 120,
+  "directions": ["south", "west", "east", "north"],
+  "states": [
+    "contact-a",
+    "passing-a",
+    "contact-b",
+    "passing-b",
+    "idle",
+    "interact"
+  ],
+  "walkPhases": ["contact-a", "passing-a", "contact-b", "passing-b"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "contactSheet": {
+    "file": "named-characters-batch-v3-contact-sheet.png",
+    "width": 432,
+    "height": 256,
+    "sha256": "8392441db8bb1a2a5cb15d86ba0c3f10b09f7288242634124d3fa571f2153af0",
+    "runtimeReady": false
+  },
+  "contactPreview": {
+    "file": "named-characters-batch-v3-contact-sheet-preview-2x.png",
+    "scale": 2,
+    "sha256": "b23204e3abcfe575d68628e03e75625bf3e540288917d48b982fa2ec43870692",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

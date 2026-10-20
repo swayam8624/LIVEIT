@@ -1,0 +1,224 @@
+{
+  "id": "crowd-bus-driver-movement-v1",
+  "role": "bus-driver",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.bus-driver",
+  "description": "navy uniform, gold cap stripe, ticket punch",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "bus-driver/south/walk-a",
+      "role": "bus-driver",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/bus-driver/bus-driver-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bfc293d7fa257e0bfa3c6682cd28e6e880c1584401a5d51dafaf51965009634a",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/south/walk-b",
+      "role": "bus-driver",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/bus-driver/bus-driver-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "255b028fe472f4986b5c9a186f68fa827b832a2c0080b9de57efe226bfd3a0f9",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/south/idle",
+      "role": "bus-driver",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/bus-driver/bus-driver-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8d518c152d939583a62c37537d9a9d271ccffec3d531216709ebcd685dc81776",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/west/walk-a",
+      "role": "bus-driver",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/bus-driver/bus-driver-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7acd9e0279ba99beb171b0234fa80d0004a3281619bea7ee303b9fa60ff8e76b",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/west/walk-b",
+      "role": "bus-driver",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/bus-driver/bus-driver-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fdbdf8c8826b89b6b035ac5cc87b5b5b10e658928a677dedee236395c3595298",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/west/idle",
+      "role": "bus-driver",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/bus-driver/bus-driver-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cd00af44f6a2bee6388ee3ef21ca2bafb70b5e0c96cea98cb38f206efcddb196",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/east/walk-a",
+      "role": "bus-driver",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/bus-driver/bus-driver-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4405b52278cae9894dc39d792f4a0a653c1fbace8f79e8f8a89dc43742bc509d",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/east/walk-b",
+      "role": "bus-driver",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/bus-driver/bus-driver-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "59af2cfa68e11cf628d1d598b1d02c3590718b66008b61e24a25d4f03a6f0a74",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/east/idle",
+      "role": "bus-driver",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/bus-driver/bus-driver-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "aee48a1dde704c928aed8a16876fe8bae416fc18bb582779ddfb0d422fdaffd2",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/north/walk-a",
+      "role": "bus-driver",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/bus-driver/bus-driver-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cf91607c6f752b823199a250de67af6616acd99bc996f3f18abd148a09714431",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/north/walk-b",
+      "role": "bus-driver",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/bus-driver/bus-driver-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "344b09929968b4ba3b62ed2baea00c8e10ae7b72e1707e6fe766bf449163bc82",
+      "runtimeReady": false
+    },
+    {
+      "id": "bus-driver/north/idle",
+      "role": "bus-driver",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/bus-driver/bus-driver-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8583b67b5176a2643a1c0f31eabeb84bce4f816b55f12667e7b07c187f8e279d",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/bus-driver/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "301dc60064aa3dad0f93c9beabfacb197a19a863eb2703a2e12b9b305d025a49",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/bus-driver/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "08bac3cf566f250e9bcfbf32f5569163fc0ce65de5ca027826867d95fff4f8bb",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

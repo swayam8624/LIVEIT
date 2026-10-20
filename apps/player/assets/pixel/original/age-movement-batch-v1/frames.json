@@ -1,0 +1,340 @@
+{
+  "schema": "liveit.pixel-sprite/v1",
+  "asset": "age-movement-batch-v1",
+  "status": "concept-only",
+  "rights": {
+    "sourceType": "original-generated",
+    "thirdPartyPackUsed": false,
+    "licenseReview": "not-a-legal-clearance",
+    "provenance": "Built-in OpenAI image generation; generated 2026-10-20; prompts retained in README.md"
+  },
+  "directions": ["side-three-quarter"],
+  "phases": ["contact-a", "passing-a", "contact-b", "passing-b"],
+  "timing": { "suggestedDurationMs": 140, "loop": true },
+  "stages": [
+    {
+      "id": "infant-crawl",
+      "locomotion": "crawl",
+      "atlas": "infant-crawl-4frame-atlas.png",
+      "frameWidth": 48,
+      "frameHeight": 32,
+      "pivot": { "x": 24, "y": 28 },
+      "frames": [
+        {
+          "name": "infant-crawl-contact-a",
+          "file": "infant-crawl-01.png",
+          "x": 0,
+          "y": 0,
+          "width": 48,
+          "height": 32,
+          "phase": "contact-a"
+        },
+        {
+          "name": "infant-crawl-passing-a",
+          "file": "infant-crawl-02.png",
+          "x": 48,
+          "y": 0,
+          "width": 48,
+          "height": 32,
+          "phase": "passing-a"
+        },
+        {
+          "name": "infant-crawl-contact-b",
+          "file": "infant-crawl-03.png",
+          "x": 96,
+          "y": 0,
+          "width": 48,
+          "height": 32,
+          "phase": "contact-b"
+        },
+        {
+          "name": "infant-crawl-passing-b",
+          "file": "infant-crawl-04.png",
+          "x": 144,
+          "y": 0,
+          "width": 48,
+          "height": 32,
+          "phase": "passing-b"
+        }
+      ]
+    },
+    {
+      "id": "toddler-waddle",
+      "locomotion": "waddle",
+      "atlas": "toddler-waddle-4frame-atlas.png",
+      "frameWidth": 32,
+      "frameHeight": 48,
+      "pivot": { "x": 16, "y": 44 },
+      "frames": [
+        {
+          "name": "toddler-waddle-contact-a",
+          "file": "toddler-waddle-01.png",
+          "x": 0,
+          "y": 0,
+          "width": 32,
+          "height": 48,
+          "phase": "contact-a"
+        },
+        {
+          "name": "toddler-waddle-passing-a",
+          "file": "toddler-waddle-02.png",
+          "x": 32,
+          "y": 0,
+          "width": 32,
+          "height": 48,
+          "phase": "passing-a"
+        },
+        {
+          "name": "toddler-waddle-contact-b",
+          "file": "toddler-waddle-03.png",
+          "x": 64,
+          "y": 0,
+          "width": 32,
+          "height": 48,
+          "phase": "contact-b"
+        },
+        {
+          "name": "toddler-waddle-passing-b",
+          "file": "toddler-waddle-04.png",
+          "x": 96,
+          "y": 0,
+          "width": 32,
+          "height": 48,
+          "phase": "passing-b"
+        }
+      ]
+    },
+    {
+      "id": "child-walk",
+      "locomotion": "walk",
+      "atlas": "child-walk-4frame-atlas.png",
+      "frameWidth": 28,
+      "frameHeight": 48,
+      "pivot": { "x": 14, "y": 44 },
+      "frames": [
+        {
+          "name": "child-walk-contact-a",
+          "file": "child-walk-01.png",
+          "x": 0,
+          "y": 0,
+          "width": 28,
+          "height": 48,
+          "phase": "contact-a"
+        },
+        {
+          "name": "child-walk-passing-a",
+          "file": "child-walk-02.png",
+          "x": 28,
+          "y": 0,
+          "width": 28,
+          "height": 48,
+          "phase": "passing-a"
+        },
+        {
+          "name": "child-walk-contact-b",
+          "file": "child-walk-03.png",
+          "x": 56,
+          "y": 0,
+          "width": 28,
+          "height": 48,
+          "phase": "contact-b"
+        },
+        {
+          "name": "child-walk-passing-b",
+          "file": "child-walk-04.png",
+          "x": 84,
+          "y": 0,
+          "width": 28,
+          "height": 48,
+          "phase": "passing-b"
+        }
+      ]
+    },
+    {
+      "id": "teen-walk",
+      "locomotion": "walk",
+      "atlas": "teen-walk-4frame-atlas.png",
+      "frameWidth": 32,
+      "frameHeight": 52,
+      "pivot": { "x": 16, "y": 48 },
+      "frames": [
+        {
+          "name": "teen-walk-contact-a",
+          "file": "teen-walk-01.png",
+          "x": 0,
+          "y": 0,
+          "width": 32,
+          "height": 52,
+          "phase": "contact-a"
+        },
+        {
+          "name": "teen-walk-passing-a",
+          "file": "teen-walk-02.png",
+          "x": 32,
+          "y": 0,
+          "width": 32,
+          "height": 52,
+          "phase": "passing-a"
+        },
+        {
+          "name": "teen-walk-contact-b",
+          "file": "teen-walk-03.png",
+          "x": 64,
+          "y": 0,
+          "width": 32,
+          "height": 52,
+          "phase": "contact-b"
+        },
+        {
+          "name": "teen-walk-passing-b",
+          "file": "teen-walk-04.png",
+          "x": 96,
+          "y": 0,
+          "width": 32,
+          "height": 52,
+          "phase": "passing-b"
+        }
+      ]
+    },
+    {
+      "id": "young-adult-walk",
+      "locomotion": "walk",
+      "atlas": "young-adult-walk-4frame-atlas.png",
+      "frameWidth": 32,
+      "frameHeight": 56,
+      "pivot": { "x": 16, "y": 52 },
+      "frames": [
+        {
+          "name": "young-adult-walk-contact-a",
+          "file": "young-adult-walk-01.png",
+          "x": 0,
+          "y": 0,
+          "width": 32,
+          "height": 56,
+          "phase": "contact-a"
+        },
+        {
+          "name": "young-adult-walk-passing-a",
+          "file": "young-adult-walk-02.png",
+          "x": 32,
+          "y": 0,
+          "width": 32,
+          "height": 56,
+          "phase": "passing-a"
+        },
+        {
+          "name": "young-adult-walk-contact-b",
+          "file": "young-adult-walk-03.png",
+          "x": 64,
+          "y": 0,
+          "width": 32,
+          "height": 56,
+          "phase": "contact-b"
+        },
+        {
+          "name": "young-adult-walk-passing-b",
+          "file": "young-adult-walk-04.png",
+          "x": 96,
+          "y": 0,
+          "width": 32,
+          "height": 56,
+          "phase": "passing-b"
+        }
+      ]
+    },
+    {
+      "id": "elder-man-walk",
+      "locomotion": "walk",
+      "variant": "elder-man-cane",
+      "atlas": "elder-man-walk-4frame-atlas.png",
+      "frameWidth": 36,
+      "frameHeight": 56,
+      "pivot": { "x": 18, "y": 52 },
+      "frames": [
+        {
+          "name": "elder-man-walk-contact-a",
+          "file": "elder-man-walk-01.png",
+          "x": 0,
+          "y": 0,
+          "width": 36,
+          "height": 56,
+          "phase": "contact-a"
+        },
+        {
+          "name": "elder-man-walk-passing-a",
+          "file": "elder-man-walk-02.png",
+          "x": 36,
+          "y": 0,
+          "width": 36,
+          "height": 56,
+          "phase": "passing-a"
+        },
+        {
+          "name": "elder-man-walk-contact-b",
+          "file": "elder-man-walk-03.png",
+          "x": 72,
+          "y": 0,
+          "width": 36,
+          "height": 56,
+          "phase": "contact-b"
+        },
+        {
+          "name": "elder-man-walk-passing-b",
+          "file": "elder-man-walk-04.png",
+          "x": 108,
+          "y": 0,
+          "width": 36,
+          "height": 56,
+          "phase": "passing-b"
+        }
+      ]
+    },
+    {
+      "id": "elder-woman-walk",
+      "locomotion": "walk",
+      "variant": "elder-woman-shawl",
+      "atlas": "elder-woman-walk-4frame-atlas.png",
+      "frameWidth": 36,
+      "frameHeight": 56,
+      "pivot": { "x": 18, "y": 52 },
+      "frames": [
+        {
+          "name": "elder-woman-walk-contact-a",
+          "file": "elder-woman-walk-01.png",
+          "x": 0,
+          "y": 0,
+          "width": 36,
+          "height": 56,
+          "phase": "contact-a"
+        },
+        {
+          "name": "elder-woman-walk-passing-a",
+          "file": "elder-woman-walk-02.png",
+          "x": 36,
+          "y": 0,
+          "width": 36,
+          "height": 56,
+          "phase": "passing-a"
+        },
+        {
+          "name": "elder-woman-walk-contact-b",
+          "file": "elder-woman-walk-03.png",
+          "x": 72,
+          "y": 0,
+          "width": 36,
+          "height": 56,
+          "phase": "contact-b"
+        },
+        {
+          "name": "elder-woman-walk-passing-b",
+          "file": "elder-woman-walk-04.png",
+          "x": 108,
+          "y": 0,
+          "width": 36,
+          "height": 56,
+          "phase": "passing-b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "batch": "diverse-youth-cycles-v1",
+  "sourcePolicy": "All pixels are authored by the deterministic local builder; no supplied ZIP or third-party asset was read.",
+  "artDirection": "ordinary-life top-down pixel sprites; readable silhouettes at 1x; direction-specific construction; no horizontal mirroring",
+  "profiles": {
+    "child-mika": {
+      "stage": "child",
+      "silhouette": "small, springy child with round curls, coral hoodie and teal shoes",
+      "palette": {
+        "skin": [128, 78, 57, 255],
+        "hair": [37, 27, 31, 255],
+        "top": [210, 86, 91, 255],
+        "bottom": [218, 166, 62, 255],
+        "shoe": [36, 151, 146, 255],
+        "accent": [242, 211, 93, 255],
+        "bag": [38, 102, 116, 255]
+      }
+    },
+    "teen-ravi": {
+      "stage": "teen",
+      "silhouette": "tall teen with side-swept auburn hair, slate jacket, orange trousers and messenger bag",
+      "palette": {
+        "skin": [177, 119, 83, 255],
+        "hair": [93, 47, 37, 255],
+        "top": [54, 83, 111, 255],
+        "bottom": [193, 91, 48, 255],
+        "shoe": [43, 48, 63, 255],
+        "accent": [232, 183, 67, 255],
+        "bag": [92, 54, 76, 255]
+      }
+    }
+  },
+  "exactGeneration": "python3 build_cycles.py",
+  "runtimeReady": false
+}

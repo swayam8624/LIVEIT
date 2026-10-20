@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-elder-poses-v1",
+  "description": "Concept-only linked elder woman and elder man idle/interact pose studies with care-safe greeting cues.",
+  "logicalFrameSize": [24, 32],
+  "pivot": [12, 31],
+  "stages": ["elder-woman", "elder-man"],
+  "directions": ["south", "west", "east", "north"],
+  "states": ["idle", "interact"],
+  "frameCount": 16,
+  "runtimeReady": false,
+  "conceptOnly": true,
+  "sourcePolicy": "Only local original elder frames from life-arc-later-cycles-v1 were used; no ZIP or external asset was used.",
+  "identityCues": [
+    "silver-white elder hair against the linked deep-brown skin palette",
+    "recurring sky-blue clothing accent",
+    "warm ochre accessory and hand cues sampled from each source frame"
+  ],
+  "interactionPolicy": "Care-safe accessible greeting studies: open-hand wave for elder woman; steadying cane/hello cue for elder man.",
+  "linkedFamilyReferences": [
+    {
+      "file": "../linked-life-arc-family-v1/harmonized-32-color/elder-woman-atlas.png",
+      "sha256": "9524f025c81e986ba1ceaea3691711961e1df8d82385aaecaf08edf818b70b9b",
+      "size": [96, 128],
+      "mode": "RGBA",
+      "purpose": "palette and elder identity cue comparison only"
+    },
+    {
+      "file": "../linked-life-arc-family-v1/harmonized-32-color/elder-man-atlas.png",
+      "sha256": "3f561603e428273b6adbcc7d7830265fc8e744ef34a17be5cbd8dd3fc2c9679f",
+      "size": [96, 128],
+      "mode": "RGBA",
+      "purpose": "palette and elder identity cue comparison only"
+    }
+  ],
+  "sources": [
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-south-contact-a.png",
+      "sha256": "0c808ae975e376f7f4f54a0511728598a6739d90562329400cb29b7d559c14c9",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-south-passing-a.png",
+      "sha256": "f2f5144b9d47556e245cc891bb9ffd5bf7b90f4e7670abf458c51aca848db66b",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-west-contact-a.png",
+      "sha256": "1ff7759d1c61740c48b1ddd419dcddba243e1cf7ccfd500d4727523daec8f86c",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-west-passing-a.png",
+      "sha256": "02931413c47968546ab9b4bf62385baf708f66cd13115ff24a4b91f546c1be31",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-east-contact-a.png",
+      "sha256": "b9967257630a5b020fbc03fdfb4c7204394f4d2196a9170552d616912d0d4571",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-east-passing-a.png",
+      "sha256": "7f48cfb483e6477de0b21876bbb3cddf2f013d5d381380be483e19c033030a17",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-north-contact-a.png",
+      "sha256": "7fa9e2b1663796f5ef6cc7412f753013db9f4111d0819a6803820cdf5cca9e2c",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-north-passing-a.png",
+      "sha256": "7e49e5058054d1202e7997058745482a9e876153524ea42a3efd85c1892ca5c3",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-south-contact-a.png",
+      "sha256": "5d7a9afd85cf3f0767f35c00388e26de3c377a880ae15adc665642aabc596deb",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-south-passing-a.png",
+      "sha256": "875f6ba93f3d2eaa6ef31089f710a1ea0d8f97d7a5e87f2854bdc8c46c9b67df",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-west-contact-a.png",
+      "sha256": "a94c6732557347ed5dd7ea0244ea2afb03ceaa776fbf80c0e2f939a36c9df42c",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-west-passing-a.png",
+      "sha256": "87ce2b3c8be8fa077f276d8d6eafc6170a306b7d0aebf5585acd29f035112961",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-east-contact-a.png",
+      "sha256": "f23963f95bce3ff0ef4ad548fa3c6b2c6b694e75ce9860f4fe65bf32544f388d",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-east-passing-a.png",
+      "sha256": "2a2036b35259ddf00ca49c45ac175b53f3ec372271b0174e1b0339cd3177fbb7",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-north-contact-a.png",
+      "sha256": "543503c87b92ff2e8f2da3bb577e12d8850e14e12b608e2d281e3acd99840e3e",
+      "size": [24, 32],
+      "mode": "RGBA"
+    },
+    {
+      "file": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-north-passing-a.png",
+      "sha256": "440e2cd5a343c977a32e537f30e0cfb06ecfa89d3991249658dace42fc8ebb48",
+      "size": [24, 32],
+      "mode": "RGBA"
+    }
+  ],
+  "frames": [
+    {
+      "id": "elder-woman/south/idle",
+      "stage": "elder-woman",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/elder-woman/elder-woman-south-idle.png",
+      "sha256": "0c808ae975e376f7f4f54a0511728598a6739d90562329400cb29b7d559c14c9",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-south-contact-a.png",
+      "sourceFrameSha256": "0c808ae975e376f7f4f54a0511728598a6739d90562329400cb29b7d559c14c9",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-atlas.png",
+      "sourceSheetSha256": "a59a32abe8bd321253e4eaecacbe9d63a328022afea530c885c250c71c8042de",
+      "atlas": {
+        "file": "frames/elder-woman/elder-woman-atlas.png",
+        "x": 0,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "matching contact frame"
+    },
+    {
+      "id": "elder-woman/south/interact",
+      "stage": "elder-woman",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/elder-woman/elder-woman-south-interact.png",
+      "sha256": "2a10056e7d0c9a7311162f87c13b56af3a42618f9526fdd3995fde64f3448901",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-south-passing-a.png",
+      "sourceFrameSha256": "f2f5144b9d47556e245cc891bb9ffd5bf7b90f4e7670abf458c51aca848db66b",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-atlas.png",
+      "sourceSheetSha256": "a59a32abe8bd321253e4eaecacbe9d63a328022afea530c885c250c71c8042de",
+      "atlas": {
+        "file": "frames/elder-woman/elder-woman-atlas.png",
+        "x": 24,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "direction-authored greeting cue"
+    },
+    {
+      "id": "elder-woman/west/idle",
+      "stage": "elder-woman",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/elder-woman/elder-woman-west-idle.png",
+      "sha256": "1ff7759d1c61740c48b1ddd419dcddba243e1cf7ccfd500d4727523daec8f86c",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-west-contact-a.png",
+      "sourceFrameSha256": "1ff7759d1c61740c48b1ddd419dcddba243e1cf7ccfd500d4727523daec8f86c",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-atlas.png",
+      "sourceSheetSha256": "a59a32abe8bd321253e4eaecacbe9d63a328022afea530c885c250c71c8042de",
+      "atlas": {
+        "file": "frames/elder-woman/elder-woman-atlas.png",
+        "x": 48,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "matching contact frame"
+    },
+    {
+      "id": "elder-woman/west/interact",
+      "stage": "elder-woman",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/elder-woman/elder-woman-west-interact.png",
+      "sha256": "a0f391caccb5af4b66c3d0205709f026048777896d0ee5718c7ef1c17b8ab2ac",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-west-passing-a.png",
+      "sourceFrameSha256": "02931413c47968546ab9b4bf62385baf708f66cd13115ff24a4b91f546c1be31",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-atlas.png",
+      "sourceSheetSha256": "a59a32abe8bd321253e4eaecacbe9d63a328022afea530c885c250c71c8042de",
+      "atlas": {
+        "file": "frames/elder-woman/elder-woman-atlas.png",
+        "x": 72,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "direction-authored greeting cue"
+    },
+    {
+      "id": "elder-woman/east/idle",
+      "stage": "elder-woman",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/elder-woman/elder-woman-east-idle.png",
+      "sha256": "b9967257630a5b020fbc03fdfb4c7204394f4d2196a9170552d616912d0d4571",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-east-contact-a.png",
+      "sourceFrameSha256": "b9967257630a5b020fbc03fdfb4c7204394f4d2196a9170552d616912d0d4571",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-atlas.png",
+      "sourceSheetSha256": "a59a32abe8bd321253e4eaecacbe9d63a328022afea530c885c250c71c8042de",
+      "atlas": {
+        "file": "frames/elder-woman/elder-woman-atlas.png",
+        "x": 96,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "matching contact frame"
+    },
+    {
+      "id": "elder-woman/east/interact",
+      "stage": "elder-woman",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/elder-woman/elder-woman-east-interact.png",
+      "sha256": "4591fed4a32520769ee563cce258d0cf8820145f73d3026842a5da487d3825c7",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-east-passing-a.png",
+      "sourceFrameSha256": "7f48cfb483e6477de0b21876bbb3cddf2f013d5d381380be483e19c033030a17",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-atlas.png",
+      "sourceSheetSha256": "a59a32abe8bd321253e4eaecacbe9d63a328022afea530c885c250c71c8042de",
+      "atlas": {
+        "file": "frames/elder-woman/elder-woman-atlas.png",
+        "x": 120,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "direction-authored greeting cue"
+    },
+    {
+      "id": "elder-woman/north/idle",
+      "stage": "elder-woman",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/elder-woman/elder-woman-north-idle.png",
+      "sha256": "7fa9e2b1663796f5ef6cc7412f753013db9f4111d0819a6803820cdf5cca9e2c",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-north-contact-a.png",
+      "sourceFrameSha256": "7fa9e2b1663796f5ef6cc7412f753013db9f4111d0819a6803820cdf5cca9e2c",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-atlas.png",
+      "sourceSheetSha256": "a59a32abe8bd321253e4eaecacbe9d63a328022afea530c885c250c71c8042de",
+      "atlas": {
+        "file": "frames/elder-woman/elder-woman-atlas.png",
+        "x": 144,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "matching contact frame"
+    },
+    {
+      "id": "elder-woman/north/interact",
+      "stage": "elder-woman",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/elder-woman/elder-woman-north-interact.png",
+      "sha256": "7f9a25698f71b4a0901f3798a6b15fb5295bfdd222e3f91b553abd2f6a6762e1",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-north-passing-a.png",
+      "sourceFrameSha256": "7e49e5058054d1202e7997058745482a9e876153524ea42a3efd85c1892ca5c3",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-woman/elder-woman-atlas.png",
+      "sourceSheetSha256": "a59a32abe8bd321253e4eaecacbe9d63a328022afea530c885c250c71c8042de",
+      "atlas": {
+        "file": "frames/elder-woman/elder-woman-atlas.png",
+        "x": 168,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "direction-authored greeting cue"
+    },
+    {
+      "id": "elder-man/south/idle",
+      "stage": "elder-man",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/elder-man/elder-man-south-idle.png",
+      "sha256": "5d7a9afd85cf3f0767f35c00388e26de3c377a880ae15adc665642aabc596deb",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-south-contact-a.png",
+      "sourceFrameSha256": "5d7a9afd85cf3f0767f35c00388e26de3c377a880ae15adc665642aabc596deb",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-atlas.png",
+      "sourceSheetSha256": "600d53f05dbe4a607505a70e73f3c4ded0a6871b30d2b34c68e851b31d95a535",
+      "atlas": {
+        "file": "frames/elder-man/elder-man-atlas.png",
+        "x": 0,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "matching contact frame"
+    },
+    {
+      "id": "elder-man/south/interact",
+      "stage": "elder-man",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/elder-man/elder-man-south-interact.png",
+      "sha256": "93745d8d6182aa43e0d4a983720b8a41077885425227b9dfc694d9f1e6bbc267",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-south-passing-a.png",
+      "sourceFrameSha256": "875f6ba93f3d2eaa6ef31089f710a1ea0d8f97d7a5e87f2854bdc8c46c9b67df",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-atlas.png",
+      "sourceSheetSha256": "600d53f05dbe4a607505a70e73f3c4ded0a6871b30d2b34c68e851b31d95a535",
+      "atlas": {
+        "file": "frames/elder-man/elder-man-atlas.png",
+        "x": 24,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "direction-authored greeting cue"
+    },
+    {
+      "id": "elder-man/west/idle",
+      "stage": "elder-man",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/elder-man/elder-man-west-idle.png",
+      "sha256": "a94c6732557347ed5dd7ea0244ea2afb03ceaa776fbf80c0e2f939a36c9df42c",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-west-contact-a.png",
+      "sourceFrameSha256": "a94c6732557347ed5dd7ea0244ea2afb03ceaa776fbf80c0e2f939a36c9df42c",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-atlas.png",
+      "sourceSheetSha256": "600d53f05dbe4a607505a70e73f3c4ded0a6871b30d2b34c68e851b31d95a535",
+      "atlas": {
+        "file": "frames/elder-man/elder-man-atlas.png",
+        "x": 48,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "matching contact frame"
+    },
+    {
+      "id": "elder-man/west/interact",
+      "stage": "elder-man",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/elder-man/elder-man-west-interact.png",
+      "sha256": "6244e437e070c87fbee5991ec65f2569776500da55cf59bf0bba2438d9da5c18",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-west-passing-a.png",
+      "sourceFrameSha256": "87ce2b3c8be8fa077f276d8d6eafc6170a306b7d0aebf5585acd29f035112961",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-atlas.png",
+      "sourceSheetSha256": "600d53f05dbe4a607505a70e73f3c4ded0a6871b30d2b34c68e851b31d95a535",
+      "atlas": {
+        "file": "frames/elder-man/elder-man-atlas.png",
+        "x": 72,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "direction-authored greeting cue"
+    },
+    {
+      "id": "elder-man/east/idle",
+      "stage": "elder-man",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/elder-man/elder-man-east-idle.png",
+      "sha256": "f23963f95bce3ff0ef4ad548fa3c6b2c6b694e75ce9860f4fe65bf32544f388d",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-east-contact-a.png",
+      "sourceFrameSha256": "f23963f95bce3ff0ef4ad548fa3c6b2c6b694e75ce9860f4fe65bf32544f388d",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-atlas.png",
+      "sourceSheetSha256": "600d53f05dbe4a607505a70e73f3c4ded0a6871b30d2b34c68e851b31d95a535",
+      "atlas": {
+        "file": "frames/elder-man/elder-man-atlas.png",
+        "x": 96,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "matching contact frame"
+    },
+    {
+      "id": "elder-man/east/interact",
+      "stage": "elder-man",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/elder-man/elder-man-east-interact.png",
+      "sha256": "bc5f94928586dd08a11849dbaa39a16c1f24e78c5a5d4aac33b3892bf4fabcbe",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-east-passing-a.png",
+      "sourceFrameSha256": "2a2036b35259ddf00ca49c45ac175b53f3ec372271b0174e1b0339cd3177fbb7",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-atlas.png",
+      "sourceSheetSha256": "600d53f05dbe4a607505a70e73f3c4ded0a6871b30d2b34c68e851b31d95a535",
+      "atlas": {
+        "file": "frames/elder-man/elder-man-atlas.png",
+        "x": 120,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "direction-authored greeting cue"
+    },
+    {
+      "id": "elder-man/north/idle",
+      "stage": "elder-man",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/elder-man/elder-man-north-idle.png",
+      "sha256": "543503c87b92ff2e8f2da3bb577e12d8850e14e12b608e2d281e3acd99840e3e",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-north-contact-a.png",
+      "sourceFrameSha256": "543503c87b92ff2e8f2da3bb577e12d8850e14e12b608e2d281e3acd99840e3e",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-atlas.png",
+      "sourceSheetSha256": "600d53f05dbe4a607505a70e73f3c4ded0a6871b30d2b34c68e851b31d95a535",
+      "atlas": {
+        "file": "frames/elder-man/elder-man-atlas.png",
+        "x": 144,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "matching contact frame"
+    },
+    {
+      "id": "elder-man/north/interact",
+      "stage": "elder-man",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/elder-man/elder-man-north-interact.png",
+      "sha256": "2a7f61ccbe519d129ec42407e9a1ddf371b60bf5a33c44e6d7337a86da604164",
+      "sourceFrame": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-north-passing-a.png",
+      "sourceFrameSha256": "440e2cd5a343c977a32e537f30e0cfb06ecfa89d3991249658dace42fc8ebb48",
+      "sourceSheet": "../life-arc-later-cycles-v1/frames/elder-man/elder-man-atlas.png",
+      "sourceSheetSha256": "600d53f05dbe4a607505a70e73f3c4ded0a6871b30d2b34c68e851b31d95a535",
+      "atlas": {
+        "file": "frames/elder-man/elder-man-atlas.png",
+        "x": 168,
+        "y": 0,
+        "width": 24,
+        "height": 32
+      },
+      "pivot": [12, 31],
+      "size": [24, 32],
+      "mode": "RGBA",
+      "mirrored": false,
+      "runtimeReady": false,
+      "adaptation": "direction-authored greeting cue"
+    }
+  ],
+  "atlases": [
+    {
+      "file": "frames/elder-woman/elder-woman-atlas.png",
+      "size": [192, 32],
+      "mode": "RGBA",
+      "sha256": "2eff3726a19dd6d7cf03f3ce1cb09c225cc797dc2223df3e6a6c1b24676b3676"
+    },
+    {
+      "file": "frames/elder-man/elder-man-atlas.png",
+      "size": [192, 32],
+      "mode": "RGBA",
+      "sha256": "f32e83b2b6e1df1f16a9507edd7539eb698ad2a5e4769219faddf6dcc267f262"
+    }
+  ],
+  "combinedAtlas": {
+    "file": "linked-elder-poses-atlas.png",
+    "size": [192, 64],
+    "mode": "RGBA",
+    "sha256": "dbf2f446b347380216f2a74539bb3757ec75373d2357c7cfe9d44232e745f885"
+  },
+  "preview": {
+    "file": "linked-elder-poses-preview-6x.png",
+    "size": [1152, 384],
+    "mode": "RGBA",
+    "sha256": "e437ef9ba340545989103cf5d1a587507bcc89e1c2f1651eceba000c0f6c56e6"
+  },
+  "limitations": [
+    "These are concept-only adaptations over linked elder source frames, not final pixel-artist redraws.",
+    "A human pixel artist must reconcile hands, cane/wave readability, clothing folds, face continuity, and timing before runtime use.",
+    "Collision boxes, renderer sampling, save continuity, accessibility review, and gameplay integration remain unverified."
+  ]
+}

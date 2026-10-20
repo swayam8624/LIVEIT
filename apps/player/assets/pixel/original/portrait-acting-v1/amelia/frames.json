@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "assetFamily": "liveit.pixel.v2.portrait-animations.dialogue-mouth-blink.amelia",
+  "character": "amelia",
+  "sourceTool": "OpenAI built-in image generation",
+  "sourceMaster": "source-generated-sheet.png",
+  "referenceRole": "amelia-expression-batch-v1/amelia-expressions-concept-master.png used only for identity and palette reference",
+  "frameSize": { "width": 96, "height": 128 },
+  "atlas": "amelia-portrait-acting-atlas.png",
+  "sampling": "nearest-neighbor",
+  "pivot": { "x": 48, "y": 124, "units": "pixels from top-left" },
+  "frameCount": 5,
+  "timingSuggestions": {
+    "neutral-open": { "durationMs": 500, "loop": true },
+    "blink": { "durationMs": 90, "loop": false },
+    "talk-open-a": { "durationMs": 90, "loop": true },
+    "talk-open-b": { "durationMs": 90, "loop": true },
+    "talk-closed": { "durationMs": 70, "loop": true }
+  },
+  "frames": [
+    {
+      "id": "liveit.pixel.v2.portrait.amelia.dialogue.neutral-open",
+      "state": "neutral-open",
+      "file": "frames/neutral-open.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": { "x": 48, "y": 124 },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.amelia.dialogue.blink",
+      "state": "blink",
+      "file": "frames/blink.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": { "x": 48, "y": 124 },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.amelia.dialogue.talk-open-a",
+      "state": "talk-open-a",
+      "file": "frames/talk-open-a.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": { "x": 48, "y": 124 },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.amelia.dialogue.talk-open-b",
+      "state": "talk-open-b",
+      "file": "frames/talk-open-b.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": { "x": 48, "y": 124 },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.amelia.dialogue.talk-closed",
+      "state": "talk-closed",
+      "file": "frames/talk-closed.png",
+      "x": 384,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": { "x": 48, "y": 124 },
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

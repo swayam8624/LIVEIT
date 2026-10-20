@@ -558,6 +558,9 @@ describe('NPC autonomy and career/district modifiers', () => {
 describe('bundled stories, reload and dismiss safety', () => {
   it('provides all official chapters without relying on the local creator shelf', () => {
     expect(OFFICIAL_STORIES.map((s) => s.id)).toEqual([
+      'official.first-morning',
+      'official.first-school-day',
+      'official.thirteen-summers',
       reunion.id,
       bookshop.id,
     ]);

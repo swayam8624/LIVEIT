@@ -1,0 +1,276 @@
+{
+  "id": "crowd-athlete-teen-movement-age-v1",
+  "role": "athlete",
+  "ageStage": "teen",
+  "ageBand": "16-19",
+  "ageNote": "late-teen recreational or school athlete",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.athlete",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/athlete/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "athlete/teen/south/walk-a",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/athlete/teen/athlete-teen-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cf976f7055030665f04b70d978a29d36235509c0bf1880174f32cf3bbd4e4767",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/front/walk-a.png",
+      "sourceSha256": "77b80b4c4054c95c72ca08398a1cc8abc5442d01ea7b360f61b968ff534e1434",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/south/walk-b",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/athlete/teen/athlete-teen-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7dbb4a52dc1664d13cab3993f9b0747cb19ba186566444600818f6302d38e3de",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/front/walk-b.png",
+      "sourceSha256": "77a828db13a16070457678331e466dfe4f7d59b0a6d2f8d66f4c42981abb038d",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/south/idle",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/athlete/teen/athlete-teen-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4f525c83cda3d7aa1262ce15721bb65389a5571e07ec29f7eb5725836bf3dd85",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/front/idle.png",
+      "sourceSha256": "9c5b43c5f135913954a45b34c92b646f83bc723198db9dffa2b67cb87a2b3e37",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/west/walk-a",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/athlete/teen/athlete-teen-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e31f7b9de96bddd2699a31efecc30816bc3adcb6812000866894296b7517abb4",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/left/walk-a.png",
+      "sourceSha256": "adf5dc0449ce274e4f4f504a0176a999eea2d787b25c5e8e4a8e6421120c11cb",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/west/walk-b",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/athlete/teen/athlete-teen-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "256252fd5d381cf318311ef0d1f1ad56247151d8b2e948b85e6f510b50a2a2cc",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/left/walk-b.png",
+      "sourceSha256": "42803f39c60027c408a6412b97e1530dc77a99898f1cc02fcbc4628694564691",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/west/idle",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/athlete/teen/athlete-teen-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c3da763eb8f40e546b850d5f6095d8f593f768d241e647f312f9fe41b944cb6d",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/left/idle.png",
+      "sourceSha256": "4dea5c0917b3d684a298b3d66aaa52026b7232b100b28f13f759c0aa25f29757",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/east/walk-a",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/athlete/teen/athlete-teen-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "23f2b6f9fe196e7c2a12c0cee9a52c17797888961bb459bdd2cfd69a0f1ba564",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/right/walk-a.png",
+      "sourceSha256": "a3614be0e7868c5881e5d191a2eb4d0617574d92b49c83a038ef8e5b54596248",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/east/walk-b",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/athlete/teen/athlete-teen-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "03abeb658ca06dbd6a42e216f4acd0402b1fffb781f7c4ea9d39afe2a8fc58e7",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/right/walk-b.png",
+      "sourceSha256": "ec5d1844afe10a103904278e5cd92af1e006704bdd5fac28a3efec724cdf795e",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/east/idle",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/athlete/teen/athlete-teen-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "faeb0100144511c3ca49be767ec6f42e15f12dd6996424cc0402f3c98c2f00a4",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/right/idle.png",
+      "sourceSha256": "0a4930b9242b6886bcdd1d2040e971b43fd7f7516e982be95f0628b5f4e1afe3",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/north/walk-a",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/athlete/teen/athlete-teen-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dfebdf3579e29981570e2f6a272bef946104b15b8cbce25c64691c263b8d7e7c",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/back/walk-a.png",
+      "sourceSha256": "e1a92dc9bb832ef38f16851ba861af14fd0a66260ba1daf5ea525fefb82f74fe",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/north/walk-b",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/athlete/teen/athlete-teen-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ba897bd0d7593d50ac4bd8735c5aa8db516c8e83abe8e8a24bf899a86880a65e",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/back/walk-b.png",
+      "sourceSha256": "b3a0491374ca72db202dd97fde6f7266c750c8c773a97b6f0997afe5d89238ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "athlete/teen/north/idle",
+      "role": "athlete",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen recreational or school athlete",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/athlete/teen/athlete-teen-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4875bde6366648460748c1cd445bcded9d19f48a8a4254ee0be528fb4f840c82",
+      "sourceFile": "crowd-archetypes-batch-v2/athlete/back/idle.png",
+      "sourceSha256": "4c14e128e6dfb9f9c7acb9f6c8f33514959336afc636908a44085adff260086a",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "npc-archetype-walk-v1",
+  "kind": "original-pixel-npc-movement-concepts",
+  "source": "npc-archetypes-source.png",
+  "identities": [
+    {
+      "identity": "sari-caregiver",
+      "manifest": "sari-caregiver/manifest.json",
+      "runtimeReady": false
+    },
+    {
+      "identity": "cane-neighbor",
+      "manifest": "cane-neighbor/manifest.json",
+      "runtimeReady": false
+    },
+    {
+      "identity": "garden-keeper",
+      "manifest": "garden-keeper/manifest.json",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

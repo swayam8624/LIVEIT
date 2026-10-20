@@ -1,0 +1,57 @@
+{
+  "batch": "named-family-batch-v1",
+  "direction": "PIXEL-ONLY",
+  "runtimeReady": false,
+  "characters": [
+    {
+      "id": "parent_mara",
+      "name": "Mara",
+      "role": "adult parent/caregiver",
+      "ageStage": "adult",
+      "silhouette": "sturdy pear shape",
+      "palette": ["rust", "mustard", "olive", "deep brown", "cream"],
+      "identity": ["short natural curls", "mustard scarf", "canvas tote"],
+      "portraitRegion": { "x": 0, "y": 0, "width": 648, "height": 607 }
+    },
+    {
+      "id": "parent_eli",
+      "name": "Eli",
+      "role": "adult parent/caregiver",
+      "ageStage": "adult",
+      "silhouette": "tall lean",
+      "palette": ["navy", "ochre", "dark brown", "olive", "medium olive skin"],
+      "identity": ["close-cropped dark hair", "round glasses", "work jacket"],
+      "portraitRegion": { "x": 648, "y": 0, "width": 647, "height": 607 }
+    },
+    {
+      "id": "sibling_niko",
+      "name": "Niko",
+      "role": "school-age sibling",
+      "ageStage": "child",
+      "silhouette": "small energetic",
+      "palette": ["cobalt", "orange", "olive", "warm brown skin"],
+      "identity": [
+        "curly ponytail",
+        "cobalt hoodie",
+        "orange sneakers",
+        "backpack"
+      ],
+      "portraitRegion": { "x": 0, "y": 607, "width": 648, "height": 607 }
+    },
+    {
+      "id": "relative_aunt_sol",
+      "name": "Aunt Sol",
+      "role": "older relative",
+      "ageStage": "senior",
+      "silhouette": "compact upright",
+      "palette": ["plum", "sage", "silver", "gold", "warm brown skin"],
+      "identity": [
+        "silver braid",
+        "sage walking cane",
+        "plum coat",
+        "crossbody pouch"
+      ],
+      "portraitRegion": { "x": 648, "y": 607, "width": 647, "height": 607 }
+    }
+  ]
+}

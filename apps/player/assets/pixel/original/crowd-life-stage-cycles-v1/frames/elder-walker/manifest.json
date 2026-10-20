@@ -1,0 +1,18 @@
+{
+  "role": "elder-walker",
+  "label": "elder walker",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.elder-walker",
+  "description": "gentle hunched gait, silver hair, cardigan, and stable walking cane",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/elder-walker/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "elder",
+      "manifest": "frames/elder-walker/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 12,
+  "runtimeReady": false
+}

@@ -1,0 +1,740 @@
+{
+  "id": "age-identity-variety-v1",
+  "purpose": "Original age and identity variety study with concept walk mini-cycles.",
+  "sourceImages": [
+    {
+      "file": "source/age-identity-lineup-original.png",
+      "dimensions": [1024, 1536],
+      "mode": "RGB"
+    },
+    {
+      "file": "source/age-identity-walk-original.png",
+      "dimensions": [1774, 887],
+      "mode": "RGB"
+    }
+  ],
+  "identities": [
+    {
+      "id": "child-a",
+      "stage": "child",
+      "file": "identities/child-a-identity-256x192.png",
+      "sourceCrop": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 384
+      },
+      "dimensions": [256, 192],
+      "mode": "RGB",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-b",
+      "stage": "child",
+      "file": "identities/child-b-identity-256x192.png",
+      "sourceCrop": {
+        "x": 512,
+        "y": 0,
+        "width": 512,
+        "height": 384
+      },
+      "dimensions": [256, 192],
+      "mode": "RGB",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-a",
+      "stage": "teen",
+      "file": "identities/teen-a-identity-256x192.png",
+      "sourceCrop": {
+        "x": 0,
+        "y": 384,
+        "width": 512,
+        "height": 384
+      },
+      "dimensions": [256, 192],
+      "mode": "RGB",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-b",
+      "stage": "teen",
+      "file": "identities/teen-b-identity-256x192.png",
+      "sourceCrop": {
+        "x": 512,
+        "y": 384,
+        "width": 512,
+        "height": 384
+      },
+      "dimensions": [256, 192],
+      "mode": "RGB",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-a",
+      "stage": "adult",
+      "file": "identities/adult-a-identity-256x192.png",
+      "sourceCrop": {
+        "x": 0,
+        "y": 768,
+        "width": 512,
+        "height": 384
+      },
+      "dimensions": [256, 192],
+      "mode": "RGB",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-b",
+      "stage": "adult",
+      "file": "identities/adult-b-identity-256x192.png",
+      "sourceCrop": {
+        "x": 512,
+        "y": 768,
+        "width": 512,
+        "height": 384
+      },
+      "dimensions": [256, 192],
+      "mode": "RGB",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-a",
+      "stage": "elder",
+      "file": "identities/elder-a-identity-256x192.png",
+      "sourceCrop": {
+        "x": 0,
+        "y": 1152,
+        "width": 512,
+        "height": 384
+      },
+      "dimensions": [256, 192],
+      "mode": "RGB",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-b",
+      "stage": "elder",
+      "file": "identities/elder-b-identity-256x192.png",
+      "sourceCrop": {
+        "x": 512,
+        "y": 1152,
+        "width": 512,
+        "height": 384
+      },
+      "dimensions": [256, 192],
+      "mode": "RGB",
+      "runtimeReady": false
+    }
+  ],
+  "walkCycles": [
+    {
+      "id": "child-a",
+      "stage": "child",
+      "directions": ["three-quarter-front"],
+      "phaseCount": 4,
+      "frames": [
+        {
+          "phase": 0,
+          "file": "walk-cycles/child-a/frame-00.png",
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 1,
+          "file": "walk-cycles/child-a/frame-01.png",
+          "sourceCrop": {
+            "x": 111,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 2,
+          "file": "walk-cycles/child-a/frame-02.png",
+          "sourceCrop": {
+            "x": 222,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 3,
+          "file": "walk-cycles/child-a/frame-03.png",
+          "sourceCrop": {
+            "x": 333,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        }
+      ],
+      "atlas": "walk-cycles/child-a/walk-atlas-384x128.png",
+      "preview": "walk-cycles/child-a/walk-preview-4x.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "child-b",
+      "stage": "child",
+      "directions": ["three-quarter-front"],
+      "phaseCount": 4,
+      "frames": [
+        {
+          "phase": 0,
+          "file": "walk-cycles/child-b/frame-00.png",
+          "sourceCrop": {
+            "x": 444,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 1,
+          "file": "walk-cycles/child-b/frame-01.png",
+          "sourceCrop": {
+            "x": 555,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 2,
+          "file": "walk-cycles/child-b/frame-02.png",
+          "sourceCrop": {
+            "x": 666,
+            "y": 0,
+            "width": 110,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 3,
+          "file": "walk-cycles/child-b/frame-03.png",
+          "sourceCrop": {
+            "x": 776,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        }
+      ],
+      "atlas": "walk-cycles/child-b/walk-atlas-384x128.png",
+      "preview": "walk-cycles/child-b/walk-preview-4x.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-a",
+      "stage": "teen",
+      "directions": ["three-quarter-front"],
+      "phaseCount": 4,
+      "frames": [
+        {
+          "phase": 0,
+          "file": "walk-cycles/teen-a/frame-00.png",
+          "sourceCrop": {
+            "x": 887,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 1,
+          "file": "walk-cycles/teen-a/frame-01.png",
+          "sourceCrop": {
+            "x": 998,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 2,
+          "file": "walk-cycles/teen-a/frame-02.png",
+          "sourceCrop": {
+            "x": 1109,
+            "y": 0,
+            "width": 110,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 3,
+          "file": "walk-cycles/teen-a/frame-03.png",
+          "sourceCrop": {
+            "x": 1219,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        }
+      ],
+      "atlas": "walk-cycles/teen-a/walk-atlas-384x128.png",
+      "preview": "walk-cycles/teen-a/walk-preview-4x.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-b",
+      "stage": "teen",
+      "directions": ["three-quarter-front"],
+      "phaseCount": 4,
+      "frames": [
+        {
+          "phase": 0,
+          "file": "walk-cycles/teen-b/frame-00.png",
+          "sourceCrop": {
+            "x": 1330,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 1,
+          "file": "walk-cycles/teen-b/frame-01.png",
+          "sourceCrop": {
+            "x": 1441,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 2,
+          "file": "walk-cycles/teen-b/frame-02.png",
+          "sourceCrop": {
+            "x": 1552,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 3,
+          "file": "walk-cycles/teen-b/frame-03.png",
+          "sourceCrop": {
+            "x": 1663,
+            "y": 0,
+            "width": 111,
+            "height": 444
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        }
+      ],
+      "atlas": "walk-cycles/teen-b/walk-atlas-384x128.png",
+      "preview": "walk-cycles/teen-b/walk-preview-4x.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-a",
+      "stage": "adult",
+      "directions": ["three-quarter-front"],
+      "phaseCount": 4,
+      "frames": [
+        {
+          "phase": 0,
+          "file": "walk-cycles/adult-a/frame-00.png",
+          "sourceCrop": {
+            "x": 0,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 1,
+          "file": "walk-cycles/adult-a/frame-01.png",
+          "sourceCrop": {
+            "x": 111,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 2,
+          "file": "walk-cycles/adult-a/frame-02.png",
+          "sourceCrop": {
+            "x": 222,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 3,
+          "file": "walk-cycles/adult-a/frame-03.png",
+          "sourceCrop": {
+            "x": 333,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        }
+      ],
+      "atlas": "walk-cycles/adult-a/walk-atlas-384x128.png",
+      "preview": "walk-cycles/adult-a/walk-preview-4x.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "adult-b",
+      "stage": "adult",
+      "directions": ["three-quarter-front"],
+      "phaseCount": 4,
+      "frames": [
+        {
+          "phase": 0,
+          "file": "walk-cycles/adult-b/frame-00.png",
+          "sourceCrop": {
+            "x": 444,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 1,
+          "file": "walk-cycles/adult-b/frame-01.png",
+          "sourceCrop": {
+            "x": 555,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 2,
+          "file": "walk-cycles/adult-b/frame-02.png",
+          "sourceCrop": {
+            "x": 666,
+            "y": 444,
+            "width": 110,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 3,
+          "file": "walk-cycles/adult-b/frame-03.png",
+          "sourceCrop": {
+            "x": 776,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        }
+      ],
+      "atlas": "walk-cycles/adult-b/walk-atlas-384x128.png",
+      "preview": "walk-cycles/adult-b/walk-preview-4x.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-a",
+      "stage": "elder",
+      "directions": ["three-quarter-front"],
+      "phaseCount": 4,
+      "frames": [
+        {
+          "phase": 0,
+          "file": "walk-cycles/elder-a/frame-00.png",
+          "sourceCrop": {
+            "x": 887,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 1,
+          "file": "walk-cycles/elder-a/frame-01.png",
+          "sourceCrop": {
+            "x": 998,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 2,
+          "file": "walk-cycles/elder-a/frame-02.png",
+          "sourceCrop": {
+            "x": 1109,
+            "y": 444,
+            "width": 110,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 3,
+          "file": "walk-cycles/elder-a/frame-03.png",
+          "sourceCrop": {
+            "x": 1219,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        }
+      ],
+      "atlas": "walk-cycles/elder-a/walk-atlas-384x128.png",
+      "preview": "walk-cycles/elder-a/walk-preview-4x.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-b",
+      "stage": "elder",
+      "directions": ["three-quarter-front"],
+      "phaseCount": 4,
+      "frames": [
+        {
+          "phase": 0,
+          "file": "walk-cycles/elder-b/frame-00.png",
+          "sourceCrop": {
+            "x": 1330,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 1,
+          "file": "walk-cycles/elder-b/frame-01.png",
+          "sourceCrop": {
+            "x": 1441,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 2,
+          "file": "walk-cycles/elder-b/frame-02.png",
+          "sourceCrop": {
+            "x": 1552,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        },
+        {
+          "phase": 3,
+          "file": "walk-cycles/elder-b/frame-03.png",
+          "sourceCrop": {
+            "x": 1663,
+            "y": 444,
+            "width": 111,
+            "height": 443
+          },
+          "dimensions": [96, 128],
+          "mode": "RGBA",
+          "pivot": {
+            "x": 48,
+            "y": 112
+          }
+        }
+      ],
+      "atlas": "walk-cycles/elder-b/walk-atlas-384x128.png",
+      "preview": "walk-cycles/elder-b/walk-preview-4x.png",
+      "runtimeReady": false
+    }
+  ],
+  "preview": "age-identity-walk-montage-4x.png",
+  "runtimeReady": false,
+  "license": "Original generated concept art; verify project policy before any runtime admission.",
+  "notes": [
+    "Eight identities cover child, teen, adult and elder stages with two variants per stage.",
+    "Movement extraction is a four-phase three-quarter-front study only; all directions and collision pivots remain unverified.",
+    "Derived images retain the source sheet's background and are not transparent production sprites."
+  ]
+}

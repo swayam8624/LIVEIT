@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "runtimeReady": false,
+  "sourceMode": "generated-four-phase",
+  "sheet": {
+    "columns": 4,
+    "rows": 4,
+    "frameWidth": 96,
+    "frameHeight": 128,
+    "sourceWidth": 1298,
+    "sourceHeight": 1212
+  },
+  "frames": [
+    {
+      "id": "rabbit/south/contact-a",
+      "character": "rabbit",
+      "facing": "south",
+      "phase": "contact-a",
+      "file": "frames/rabbit-south-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/south/passing-a",
+      "character": "rabbit",
+      "facing": "south",
+      "phase": "passing-a",
+      "file": "frames/rabbit-south-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/south/contact-b",
+      "character": "rabbit",
+      "facing": "south",
+      "phase": "contact-b",
+      "file": "frames/rabbit-south-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/south/passing-b",
+      "character": "rabbit",
+      "facing": "south",
+      "phase": "passing-b",
+      "file": "frames/rabbit-south-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/west/contact-a",
+      "character": "rabbit",
+      "facing": "west",
+      "phase": "contact-a",
+      "file": "frames/rabbit-west-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/west/passing-a",
+      "character": "rabbit",
+      "facing": "west",
+      "phase": "passing-a",
+      "file": "frames/rabbit-west-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/west/contact-b",
+      "character": "rabbit",
+      "facing": "west",
+      "phase": "contact-b",
+      "file": "frames/rabbit-west-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/west/passing-b",
+      "character": "rabbit",
+      "facing": "west",
+      "phase": "passing-b",
+      "file": "frames/rabbit-west-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/east/contact-a",
+      "character": "rabbit",
+      "facing": "east",
+      "phase": "contact-a",
+      "file": "frames/rabbit-east-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/east/passing-a",
+      "character": "rabbit",
+      "facing": "east",
+      "phase": "passing-a",
+      "file": "frames/rabbit-east-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/east/contact-b",
+      "character": "rabbit",
+      "facing": "east",
+      "phase": "contact-b",
+      "file": "frames/rabbit-east-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/east/passing-b",
+      "character": "rabbit",
+      "facing": "east",
+      "phase": "passing-b",
+      "file": "frames/rabbit-east-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/north/contact-a",
+      "character": "rabbit",
+      "facing": "north",
+      "phase": "contact-a",
+      "file": "frames/rabbit-north-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/north/passing-a",
+      "character": "rabbit",
+      "facing": "north",
+      "phase": "passing-a",
+      "file": "frames/rabbit-north-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/north/contact-b",
+      "character": "rabbit",
+      "facing": "north",
+      "phase": "contact-b",
+      "file": "frames/rabbit-north-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "rabbit/north/passing-b",
+      "character": "rabbit",
+      "facing": "north",
+      "phase": "passing-b",
+      "file": "frames/rabbit-north-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    }
+  ]
+}

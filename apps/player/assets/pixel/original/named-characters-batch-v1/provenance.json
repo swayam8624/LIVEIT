@@ -1,0 +1,15 @@
+{
+  "batch": "named-characters-batch-v1",
+  "created": "2026-10-20",
+  "method": "deterministic hand-authored Pillow pixel primitives",
+  "sourceArchivesUsed": [],
+  "externalImagesUsed": [],
+  "license": "original project-owned concept work; no third-party art included",
+  "identityReferences": {
+    "amelia": "existing amelia-movement-batch-v1 and amelia-portrait.jpg cues only",
+    "parent-one": "existing named-family-batch-v1 / family-walk-cycles-v1 Mara cues only",
+    "parent-two": "existing named-family-batch-v1 / family-walk-cycles-v1 Eli cues only"
+  },
+  "prompt": "Original 24x32 RGBA top-down pixel sprite primitives with four independently authored directions and six state poses; no external art references.",
+  "runtimeReady": false
+}

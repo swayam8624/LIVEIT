@@ -46,12 +46,22 @@ describe('pixel-only Bellweather walking game', () => {
     expect(facingNpc.event).toBe('npc-nearby');
     expect(facingNpc.position.x).toBe(11);
     expect(facingNpc.position.facing).toBe('left');
-    const nearWall: PixelPosition = { place: 'street', x: 9, y: 3, facing: 'left' };
+    const nearWall: PixelPosition = {
+      place: 'street',
+      x: 9,
+      y: 3,
+      facing: 'left',
+    };
     expect(movePixel(nearWall, 'left').event).toBe('blocked');
   });
 
   it('can enter the café and exit through a genuine return portal', () => {
-    const outside: PixelPosition = { place: 'street', x: 5, y: 7, facing: 'up' };
+    const outside: PixelPosition = {
+      place: 'street',
+      x: 5,
+      y: 7,
+      facing: 'up',
+    };
     expect(validPixelPosition(outside)).toBe(true);
     const entered = movePixel(outside, 'up');
     expect(entered.event).toBe('entered-cafe');
@@ -62,11 +72,22 @@ describe('pixel-only Bellweather walking game', () => {
   });
 
   it('saves only valid coordinates, rejects out-of-bounds and invalid corrupt saves', () => {
-    expect(validPixelPosition({ place: 'street', x: 4, y: 4, facing: 'down' })).toBe(false);
-    expect(validPixelPosition({ place: 'street', x: 10, y: 7, facing: 'down' })).toBe(false);
-    expect(validPixelPosition({ place: 'cafe', x: 5, y: 8, facing: 'down' })).toBe(true);
-    expect(validPixelPosition({ place: 'cafe', x: NaN, y: 1, facing: 'down' })).toBe(false);
-    expect(movePixel({ place: 'street', x: -1, y: 0, facing: 'up' }, 'left').position).toEqual(INITIAL_POSITION);
+    expect(
+      validPixelPosition({ place: 'street', x: 4, y: 4, facing: 'down' }),
+    ).toBe(false);
+    expect(
+      validPixelPosition({ place: 'street', x: 10, y: 7, facing: 'down' }),
+    ).toBe(false);
+    expect(
+      validPixelPosition({ place: 'cafe', x: 5, y: 8, facing: 'down' }),
+    ).toBe(true);
+    expect(
+      validPixelPosition({ place: 'cafe', x: NaN, y: 1, facing: 'down' }),
+    ).toBe(false);
+    expect(
+      movePixel({ place: 'street', x: -1, y: 0, facing: 'up' }, 'left')
+        .position,
+    ).toEqual(INITIAL_POSITION);
     expect(npcAt('street').name).toBe('Amelia');
   });
 });

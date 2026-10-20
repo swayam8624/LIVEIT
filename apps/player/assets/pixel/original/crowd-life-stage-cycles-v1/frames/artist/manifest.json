@@ -1,0 +1,36 @@
+{
+  "role": "artist",
+  "label": "artist",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.artist",
+  "description": "",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/artist/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "child",
+      "manifest": "frames/artist/child/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "teen",
+      "manifest": "frames/artist/teen/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "adult",
+      "manifest": "frames/artist/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/artist/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 48,
+  "runtimeReady": false
+}

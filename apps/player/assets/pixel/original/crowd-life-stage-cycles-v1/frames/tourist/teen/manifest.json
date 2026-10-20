@@ -1,0 +1,276 @@
+{
+  "id": "crowd-tourist-teen-movement-age-v1",
+  "role": "tourist",
+  "ageStage": "teen",
+  "ageBand": "16-19",
+  "ageNote": "late-teen tourist",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.tourist",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/tourist/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "tourist/teen/south/walk-a",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/tourist/teen/tourist-teen-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3d38f50c3535298aa6654fe520037b3922e25a8320e098e0b61ac9ae650a07ed",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/front/walk-a.png",
+      "sourceSha256": "ae98e074ddfaf3fd87dde9d45ee91c1f1fbcf4d23e8789caff10db560f9a0683",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/south/walk-b",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/tourist/teen/tourist-teen-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "649c53f5b62dabcae80e62962bff10b39283662b6b733232658100aa767eb72a",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/front/walk-b.png",
+      "sourceSha256": "4d1e3335064a2c6570118a7f0ee304064ac6bddd8e3f2fd5ef98122cddf78c7e",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/south/idle",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/tourist/teen/tourist-teen-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4cd7f0c0869383ec0cea1162cf31176ed81e9bd7c8bc1653e045481cfb07e400",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/front/idle.png",
+      "sourceSha256": "ad51c748f61f3fb3fe05c570885fbb049baa93bc7b4359e2973fa232c08d4d29",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/west/walk-a",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/tourist/teen/tourist-teen-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d06b36d2359cfc8c1113ceeda2ef03702f2bdb8c75afdbd4ea708c17e9d4a183",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/left/walk-a.png",
+      "sourceSha256": "4c3f209d11be5163f15356e86ab2d0522ec984f53e52160630ac8279455443c1",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/west/walk-b",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/tourist/teen/tourist-teen-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e0a91ed9967b12db8760fb4ffd65df4e06c5202a502d66759f17c4bddb600cbe",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/left/walk-b.png",
+      "sourceSha256": "7d9d3055039eeeba13b32136a9e5c25a82fbae406ae1b20278ee4d4547ba7fc6",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/west/idle",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/tourist/teen/tourist-teen-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ec0126d87f11ec03745480a15ccdd9db501c009c46c84afe56c6c3c258aa1433",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/left/idle.png",
+      "sourceSha256": "d397e56a09580c2209e81ac36c52f1274cd3d2d7e9fdfccccd74746402b6ddad",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/east/walk-a",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/tourist/teen/tourist-teen-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f846761c547587b33f4bf9f11c981ac4bd6bdb00abaa1aa8920368876ce0445d",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/right/walk-a.png",
+      "sourceSha256": "227b814219b926eedff30565b9d59bcf2e10a9fac0350101812fe0257bf1123d",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/east/walk-b",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/tourist/teen/tourist-teen-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "20d812c3f5f6e454aeb891994292fc42178f21607e85765bd18147ac2cd9e39e",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/right/walk-b.png",
+      "sourceSha256": "eaa9baf794f52af13029e917362fe94a7250b85df130bea6de1efa3ee0a6955a",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/east/idle",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/tourist/teen/tourist-teen-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bf083df720213e188f91fa2d95f8c9eba1612c2c4f775bcba8c50b9ece8096af",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/right/idle.png",
+      "sourceSha256": "13fc785512ed7e927561e57431d4fcf4c28d4dc74c3f760002240ba94b488294",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/north/walk-a",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/tourist/teen/tourist-teen-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "956c1ed44c1707308520ad85c59dd4ba7d7c10e90c15807673397694de8d9331",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/back/walk-a.png",
+      "sourceSha256": "26354294ae39754147df00e796cafff244e908d52836dffac87ad68cd49789c6",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/north/walk-b",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/tourist/teen/tourist-teen-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "508e88fd2d676a63b6100321ed12e6e338d9f78528c11e212bf10ea8e5e20f63",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/back/walk-b.png",
+      "sourceSha256": "49f79e1b007bce29ef7680b7c4a2ccc880c80694309f6b4c5d3167625f55dd8e",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/teen/north/idle",
+      "role": "tourist",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen tourist",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/tourist/teen/tourist-teen-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f8bc9dd0bbce81a9f9efc7cf12eadf4555a94662a7532e9c0ad4ba2df5916054",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/back/idle.png",
+      "sourceSha256": "75017cd788e86e0139b938daf88ce99de3a8b5ef7614ba8997cb28f01595520f",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

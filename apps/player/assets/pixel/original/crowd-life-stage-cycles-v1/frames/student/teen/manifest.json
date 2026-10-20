@@ -1,0 +1,276 @@
+{
+  "id": "crowd-student-teen-movement-age-v1",
+  "role": "student",
+  "ageStage": "teen",
+  "ageBand": "16-19",
+  "ageNote": "late-teen learner",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.student",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/student/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "student/teen/south/walk-a",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/student/teen/student-teen-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d7d86b552d98e0a33d7dfba565e97814073100487222733305add9e0b2156d9c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-south-walk-a.png",
+      "sourceSha256": "32f9e24666ed93089a298011673653db20d3f1759ead74fc1e85e076454598ca",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/south/walk-b",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/student/teen/student-teen-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "979d97b0a24974526352df83f4d9d1c2e796c2ad4930ef8e2de630bc8228c64a",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-south-walk-b.png",
+      "sourceSha256": "8ae2dd04b6f9c627b109553396cf77600d20335b1b0daa2b28bc9548178e847f",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/south/idle",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/student/teen/student-teen-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7f43d946cdbb708eb181dc7275b18b0dfcd89719224ffa953f67b14e572a0e86",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-south-idle.png",
+      "sourceSha256": "ea9a5cc39d562fac226f1ba01b5a9077e751436ea89354616a4f9b82f08f0104",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/west/walk-a",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/student/teen/student-teen-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6eb94762029077615100c4265c5c8f0e286744c16fbde7d1da5887df27228904",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-west-walk-a.png",
+      "sourceSha256": "26342bcb3ed5cb608e5cefc66f4b6c0f66f79af8c80d79d90039ff90b5b3da1a",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/west/walk-b",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/student/teen/student-teen-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "421c8e74daa8fb6121122601d93971f557fbc91d20c1732b2cefa2ecea6b2800",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-west-walk-b.png",
+      "sourceSha256": "b2c8c23da1df228e058dd3cee22882059bf3e6f7bc53c4a2c9f3df3777dee43d",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/west/idle",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/student/teen/student-teen-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8c150b90b1f7401ba2017d3715fc92ca726f8198cc6c632916aec19916bf34d6",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-west-idle.png",
+      "sourceSha256": "1821e2081d13b6ae106b04f0fe39b3ce1c755b7c11fefffd5f34160519f5d7cf",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/east/walk-a",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/student/teen/student-teen-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1bf61a87b22e6b2c27198acda7c0e8d51b48e2abd7778659769827d30160cd08",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-east-walk-a.png",
+      "sourceSha256": "b62c63d3ab442a06b45b6ae81f7f153086e74f21478b1eb347cc57b93735c688",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/east/walk-b",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/student/teen/student-teen-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6b43eadef6cb4fc40663275e02c655c6edac45e7a859eec6e9ddad4fd9615727",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-east-walk-b.png",
+      "sourceSha256": "bc8e3df4d446dea754843c0c62456284ea3db1e40aab44aabfadf51952dd7794",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/east/idle",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/student/teen/student-teen-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "671a415fc82ac17c177d1c6729c9c8c2c13df80fd2e51696cedaeda3fd533a41",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-east-idle.png",
+      "sourceSha256": "e434ccb5a84cdaebc069453a0b3e93098de7d604c73382d69009c066944b0f60",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/north/walk-a",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/student/teen/student-teen-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5ec9a27a0b3eca10010161f8a23e07c5faa147a2cce247da3ec41637e78aed74",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-north-walk-a.png",
+      "sourceSha256": "c9d4eacb43f44086ee9d6cbb103ca5412d41ae78c5f0113586651d6435bc983c",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/north/walk-b",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/student/teen/student-teen-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5efdfae20999eeff7f0b2adb342b470fd405573de1c81637d1d15dae50be2652",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-north-walk-b.png",
+      "sourceSha256": "94e89f81c56a721d77024d2255e32b1d14806e6d98231b590cebe6d160210095",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/teen/north/idle",
+      "role": "student",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen learner",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/student/teen/student-teen-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ba4f73eb0c9e54d42407fb247dd87bdcf87dfac64ba848e1162cf6fd6c35227a",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-north-idle.png",
+      "sourceSha256": "11ef2c9af27225a062c1122e470c6708a421982951e59fd640b080843b8b7376",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

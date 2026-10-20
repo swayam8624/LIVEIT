@@ -1,0 +1,16 @@
+{
+  "batchId": "exclusive-scene-layers-v1",
+  "createdAt": "2026-10-20",
+  "sourceType": "original-imagegen",
+  "license": "Original generated artwork; no third-party source assets used",
+  "generator": "Codex ImageGen",
+  "prompts": {
+    "sceneTriptych": "Original 2D retro pixel-art game asset sheet for an intimate life-simulator's exclusive story scene layer kit. Three horizontal cinematic panels in one 1536x768 contact sheet, separated by dark gutters and labeled only with tiny neutral pictograms (no readable words): left graduation in a sunlit town garden with bunting, podium and flowering trees; center new-parenthood evening apartment nursery with bassinet, warm lamp, folded blanket and window rain; right elder birthday in a cozy family dining room with cake, candles, framed memories and plants. Rich hand-pixeled detail, limited warm jewel palette, crisp 16-bit edges, no characters, no UI, clear empty center and lower-third actor placement zones in every panel, background/midground/foreground depth, original design, production concept art.",
+    "props": "Original 2D retro pixel-art transparent prop sheet for a life-simulator exclusive story scene kit. Arrange twelve separate isolated props in a clean 4 by 3 grid with generous empty spacing, each object fully visible and surrounded by transparent checkerboard: graduation mortarboard with tassel, rolled diploma tied with ribbon, floral bouquet, tiny celebratory bunting strand; bassinet with blanket, baby bottle, warm table lamp, folded swaddle; birthday cake with three candles, wrapped gift, teacup, framed family photo. Hand-pixeled 16-bit style, crisp hard edges, limited jewel palette, no text, no logos, no characters, no background, no shadows touching other props, each object separated for easy alpha extraction."
+  },
+  "derivation": "generate_layers.py crops three environments and twelve prop cells; it only removes chromatic pixels with alpha <= 8 from derived props and never edits preserved sources.",
+  "sources": [
+    "sources/exclusive-scene-triptych-source.png",
+    "sources/exclusive-props-source.png"
+  ]
+}

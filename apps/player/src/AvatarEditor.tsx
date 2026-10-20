@@ -9,7 +9,7 @@ import {
   SKIN_COLORS,
   type Appearance,
 } from '@living/world-schema';
-import { AvatarPortrait } from './AvatarPortrait';
+import { PixelPortrait } from './PixelPortrait';
 
 type Key = keyof Appearance;
 const OPTIONS: { [K in Key]: readonly Appearance[K][] } = {
@@ -298,10 +298,12 @@ export function AvatarEditor({
         <View style={[styles.preview, compact && { minHeight: 260 }]}>
           <View style={styles.spotlight} />
           <Text style={styles.previewLabel}>LIVE CHARACTER PREVIEW</Text>
-          <AvatarPortrait
+          <PixelPortrait
             appearance={appearance}
             size={compact ? 168 : 220}
-            expression={expression}
+            mood={expression}
+            speaking={expression !== 'neutral'}
+            label="Appearance-aware pixel character preview"
           />
           <View style={styles.expressionRow}>
             {(['neutral', 'happy', 'sad', 'tense'] as const).map((mood) => (

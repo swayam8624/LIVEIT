@@ -1,0 +1,231 @@
+{
+  "atlas": "hud-panels-atlas-v1.png",
+  "width": 1056,
+  "height": 2160,
+  "pixelArt": true,
+  "sampling": "nearest",
+  "frames": [
+    {
+      "id": "dialogue-window",
+      "x": 16,
+      "y": 16,
+      "w": 320,
+      "h": 128,
+      "category": "dialogue",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest"
+    },
+    {
+      "id": "choice-card-idle",
+      "x": 368,
+      "y": 16,
+      "w": 288,
+      "h": 72,
+      "category": "choice",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "state": "idle"
+    },
+    {
+      "id": "choice-card-selected",
+      "x": 720,
+      "y": 16,
+      "w": 288,
+      "h": 72,
+      "category": "choice",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "state": "selected"
+    },
+    {
+      "id": "choice-card-armed",
+      "x": 16,
+      "y": 448,
+      "w": 288,
+      "h": 72,
+      "category": "choice",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "state": "armed"
+    },
+    {
+      "id": "choice-card-saving",
+      "x": 368,
+      "y": 448,
+      "w": 288,
+      "h": 72,
+      "category": "choice",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "state": "saving"
+    },
+    {
+      "id": "choice-card-committed",
+      "x": 720,
+      "y": 448,
+      "w": 288,
+      "h": 72,
+      "category": "choice",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "state": "committed"
+    },
+    {
+      "id": "choice-card-error",
+      "x": 16,
+      "y": 880,
+      "w": 288,
+      "h": 72,
+      "category": "choice",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "state": "error"
+    },
+    {
+      "id": "status-receipt-saved",
+      "x": 368,
+      "y": 880,
+      "w": 320,
+      "h": 64,
+      "category": "status-receipt",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "state": "saved"
+    },
+    {
+      "id": "status-receipt-error",
+      "x": 720,
+      "y": 880,
+      "w": 320,
+      "h": 64,
+      "category": "status-receipt",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "state": "error"
+    },
+    {
+      "id": "phone-shell",
+      "x": 16,
+      "y": 1312,
+      "w": 256,
+      "h": 384,
+      "category": "phone",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest"
+    },
+    {
+      "id": "phone-chat",
+      "x": 368,
+      "y": 1312,
+      "w": 224,
+      "h": 320,
+      "category": "phone-view",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "view": "chat"
+    },
+    {
+      "id": "phone-contacts",
+      "x": 720,
+      "y": 1312,
+      "w": 224,
+      "h": 320,
+      "category": "phone-view",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "view": "contacts"
+    },
+    {
+      "id": "phone-memory",
+      "x": 16,
+      "y": 1744,
+      "w": 224,
+      "h": 320,
+      "category": "phone-view",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "view": "memory"
+    },
+    {
+      "id": "phone-settings",
+      "x": 368,
+      "y": 1744,
+      "w": 224,
+      "h": 320,
+      "category": "phone-view",
+      "nineSliceInsets": {
+        "left": 8,
+        "top": 8,
+        "right": 8,
+        "bottom": 8
+      },
+      "sampling": "nearest",
+      "view": "settings"
+    }
+  ]
+}

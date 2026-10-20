@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "batch": "ai-life-stage-reference-v1",
+  "direction": "PIXEL-ONLY",
+  "description": "AI-generated identity and age-progression reference for a new original character; static concept lineup only.",
+  "runtimeReady": false,
+  "reviewStatus": "reference-only-needs-pixel-redraw-and-directional-motion",
+  "ageStages": [
+    "infant-crawling",
+    "toddler",
+    "child",
+    "teen",
+    "young-adult",
+    "midlife-adult",
+    "elder"
+  ],
+  "identityCues": [
+    "deep-brown skin",
+    "gold crescent hair clip",
+    "teal scarf/wrap",
+    "curl-to-braid-to-silver-braid hair progression"
+  ],
+  "outputs": [
+    {
+      "file": "age-lineup-transparent-candidate.png",
+      "sha256": "11ba6b38a7de92771aafc3c5fa30cf926f3d9e8676c8b60eeb7cf53476081b67",
+      "width": 2073,
+      "height": 759,
+      "mode": "RGBA",
+      "transparentPixels": 753749,
+      "opaquePixels": 1535,
+      "partialAlphaPixels": 818123
+    }
+  ],
+  "sourceMasters": [
+    {
+      "file": "source/original-lineup-master.png",
+      "sha256": "e04357c1e27bbf9125a218464cd7ed969e234077f135cc16662e37cb2bd6dd74",
+      "width": 2073,
+      "height": 758,
+      "mode": "RGB"
+    }
+  ],
+  "limitations": [
+    "Static front-facing poses only; no movement frames, separate animation cells, or frame timing.",
+    "Soft/painted texture and edge fringe do not meet the crisp logical-pixel target.",
+    "AI output is a design reference; pixel cleanup, identity review, directional animation, and commercial-term review are required before reuse or runtime intake.",
+    "No supplied ZIP art or web assets were used."
+  ],
+  "movementConcept": {
+    "file": "elder-walk-cycle-concept.png",
+    "sha256": "d5033a476ccca3c52760d568428cf9735bfe6a8c7dc8dba60b54627bea6c2b01",
+    "width": 1249,
+    "height": 1259,
+    "mode": "RGBA",
+    "transparentPixels": 980678,
+    "opaquePixels": 2316,
+    "partialAlphaPixels": 589497,
+    "ageStage": "elder",
+    "directionsByRow": ["south", "west", "east", "north"],
+    "phasesByColumn": ["contact-a", "passing-a", "contact-b", "passing-b"],
+    "layout": "AI-estimated 4x4 concept; cells/gutters are not measured or guaranteed equal",
+    "pivotStatus": "not measured",
+    "runtimeReady": false,
+    "reviewStatus": "concept-only-soft-edges-variable-centering"
+  }
+}

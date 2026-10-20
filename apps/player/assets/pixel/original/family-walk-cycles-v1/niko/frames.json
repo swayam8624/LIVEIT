@@ -1,0 +1,241 @@
+{
+  "batch": "family-walk-cycles-v1",
+  "character": {
+    "id": "sibling_niko",
+    "name": "Niko",
+    "ageStage": "child",
+    "identity": [
+      "curly ponytail",
+      "cobalt hoodie",
+      "orange sneakers",
+      "backpack"
+    ]
+  },
+  "source": "/tmp/niko_walk_source.png",
+  "sourceDimensions": {
+    "width": 1278,
+    "height": 1230
+  },
+  "grid": {
+    "columns": 4,
+    "rows": 4,
+    "directions": ["south", "west", "east", "north"],
+    "phases": ["contact-a", "passing-a", "contact-b", "passing-b"]
+  },
+  "frameDimensions": {
+    "width": 96,
+    "height": 128
+  },
+  "atlas": "assets/pixel/original/family-walk-cycles-v1/niko/atlas.png",
+  "runtimeReady": false,
+  "frames": [
+    {
+      "id": "sibling_niko_south_contact-a",
+      "direction": "south",
+      "phase": "contact-a",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/south_contact-a.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_south_passing-a",
+      "direction": "south",
+      "phase": "passing-a",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/south_passing-a.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_south_contact-b",
+      "direction": "south",
+      "phase": "contact-b",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/south_contact-b.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_south_passing-b",
+      "direction": "south",
+      "phase": "passing-b",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/south_passing-b.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_west_contact-a",
+      "direction": "west",
+      "phase": "contact-a",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/west_contact-a.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_west_passing-a",
+      "direction": "west",
+      "phase": "passing-a",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/west_passing-a.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_west_contact-b",
+      "direction": "west",
+      "phase": "contact-b",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/west_contact-b.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_west_passing-b",
+      "direction": "west",
+      "phase": "passing-b",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/west_passing-b.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_east_contact-a",
+      "direction": "east",
+      "phase": "contact-a",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/east_contact-a.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_east_passing-a",
+      "direction": "east",
+      "phase": "passing-a",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/east_passing-a.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_east_contact-b",
+      "direction": "east",
+      "phase": "contact-b",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/east_contact-b.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_east_passing-b",
+      "direction": "east",
+      "phase": "passing-b",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/east_passing-b.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_north_contact-a",
+      "direction": "north",
+      "phase": "contact-a",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/north_contact-a.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_north_passing-a",
+      "direction": "north",
+      "phase": "passing-a",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/north_passing-a.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_north_contact-b",
+      "direction": "north",
+      "phase": "contact-b",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/north_contact-b.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "sibling_niko_north_passing-b",
+      "direction": "north",
+      "phase": "passing-b",
+      "path": "apps/player/assets/pixel/original/family-walk-cycles-v1/niko/north_passing-b.png",
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "batch": "exclusive-scenes-v1",
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "runtimeReady": false,
+  "layerOrder": [
+    "background",
+    "midground-props",
+    "actor-primary-portrait",
+    "actor-secondary-portrait",
+    "foreground-framing"
+  ],
+  "scenes": [
+    {
+      "id": "garden-graduation",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "anchors": {
+        "primary": {
+          "x": 119,
+          "y": 227,
+          "pivot": "bottom-center"
+        },
+        "secondary": {
+          "x": 207,
+          "y": 232,
+          "pivot": "bottom-center"
+        }
+      },
+      "layers": [
+        {
+          "file": "garden-graduation-background.png",
+          "role": "background",
+          "width": 320,
+          "height": 256,
+          "alpha": false,
+          "sha256": "652511bf775499ac41bd6bc6d7c127dc12f48a119f6f2a0f6293c320c4aec63c",
+          "runtimeReady": false
+        },
+        {
+          "file": "garden-graduation-midground-props.png",
+          "role": "midground-props",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "6602a4e4d75f2353a45eab88ef720973c285eccdaf7055adaa86cdc1f98ec21a",
+          "runtimeReady": false
+        },
+        {
+          "file": "garden-graduation-foreground-framing.png",
+          "role": "foreground-framing",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "8411e5f386a2181ba4996e635c22c118cb37dabb9ffe592cd99bc776345b4bd0",
+          "runtimeReady": false
+        },
+        {
+          "file": "garden-graduation-actor-primary-portrait.png",
+          "role": "actor-primary-portrait",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "c586beb0d58f5598d21f8bbe31ee5a1d29abd1e24ff2fed71143f067bfd3bf24",
+          "runtimeReady": false
+        },
+        {
+          "file": "garden-graduation-actor-secondary-portrait.png",
+          "role": "actor-secondary-portrait",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "820c40a440316bae1363f16f436275920ff19356afbc2950ba93cbe5f5168d54",
+          "runtimeReady": false
+        },
+        {
+          "file": "garden-graduation-composite-preview.png",
+          "role": "composite-preview",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "6348c701ae15c506af982d96acdf64362cf6449906e65f44db62f7fc2078510a",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    },
+    {
+      "id": "new-baby-parenthood",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "anchors": {
+        "primary": {
+          "x": 119,
+          "y": 227,
+          "pivot": "bottom-center"
+        },
+        "secondary": {
+          "x": 207,
+          "y": 232,
+          "pivot": "bottom-center"
+        }
+      },
+      "layers": [
+        {
+          "file": "new-baby-parenthood-background.png",
+          "role": "background",
+          "width": 320,
+          "height": 256,
+          "alpha": false,
+          "sha256": "a11adbd8368ee8de7e54a0f9a3b7e80a6ec6fe8b2cfdd20acaa375a97a252a9a",
+          "runtimeReady": false
+        },
+        {
+          "file": "new-baby-parenthood-midground-props.png",
+          "role": "midground-props",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "4c9c99c17b8f933259730fec8d3c96f58dce2ac3033a18fab4756268deba6942",
+          "runtimeReady": false
+        },
+        {
+          "file": "new-baby-parenthood-foreground-framing.png",
+          "role": "foreground-framing",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "a7ced38c5b98fc2da14a3caca2996a348d40edde9fdcced5656e07aabf22ee95",
+          "runtimeReady": false
+        },
+        {
+          "file": "new-baby-parenthood-actor-primary-portrait.png",
+          "role": "actor-primary-portrait",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "f1e2650255ec97c4330520c3b7d631da88f18d8596b777483595ec82cacc5ad0",
+          "runtimeReady": false
+        },
+        {
+          "file": "new-baby-parenthood-actor-secondary-portrait.png",
+          "role": "actor-secondary-portrait",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "bcf17ecfc956a03917434fafeb2de443d7dc6f9ca3c154f3b05ff6781125e559",
+          "runtimeReady": false
+        },
+        {
+          "file": "new-baby-parenthood-composite-preview.png",
+          "role": "composite-preview",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "fb51009e12161931b989814eb2ffa95973d6b33838f9c82607f6305677b3d127",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-farewell-legacy",
+      "dialogueSafeRegion": {
+        "x": 42,
+        "y": 232,
+        "width": 236,
+        "height": 24
+      },
+      "anchors": {
+        "primary": {
+          "x": 119,
+          "y": 225,
+          "pivot": "bottom-center"
+        },
+        "secondary": {
+          "x": 207,
+          "y": 232,
+          "pivot": "bottom-center"
+        }
+      },
+      "layers": [
+        {
+          "file": "elder-farewell-legacy-background.png",
+          "role": "background",
+          "width": 320,
+          "height": 256,
+          "alpha": false,
+          "sha256": "b508c5dea462d54116b6f34f70205dcb36293724c13203287163b0e4da5fb424",
+          "runtimeReady": false
+        },
+        {
+          "file": "elder-farewell-legacy-midground-props.png",
+          "role": "midground-props",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "6da7206f1bb3cf65c954ca0f91bcfc42ba025b6490c38e5f934e81bef04984d7",
+          "runtimeReady": false
+        },
+        {
+          "file": "elder-farewell-legacy-foreground-framing.png",
+          "role": "foreground-framing",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "0708a171c3ecfacc9dfbb5cbe1d6dbb7db3a19ff3bba193a930bc9ddf90fcc91",
+          "runtimeReady": false
+        },
+        {
+          "file": "elder-farewell-legacy-actor-primary-portrait.png",
+          "role": "actor-primary-portrait",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "cc303d546a87fbc609ad92e3336d18caf2a878193f6f2f4f9b375e014ad9cca8",
+          "runtimeReady": false
+        },
+        {
+          "file": "elder-farewell-legacy-actor-secondary-portrait.png",
+          "role": "actor-secondary-portrait",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "3636bc24431a63a9d1585b7b0c876f7c4961dc12c4dc2d857c0e0cd71301fac7",
+          "runtimeReady": false
+        },
+        {
+          "file": "elder-farewell-legacy-composite-preview.png",
+          "role": "composite-preview",
+          "width": 320,
+          "height": 256,
+          "alpha": true,
+          "sha256": "81a170f8e66b774c4fbab5bb45ad4c392dea7a738e9ef1ff81cc55ba2c9fd2da",
+          "runtimeReady": false
+        }
+      ],
+      "runtimeReady": false
+    }
+  ],
+  "provenance": {
+    "tool": "deterministic authored procedural pixel renderer",
+    "date": "2026-10-20",
+    "thirdPartyAssetsUsed": false,
+    "suppliedArchivesUsed": false,
+    "externalReferencesUsed": false,
+    "prompt": "Original rights-safe pixel scene plates for graduation, new parenthood, and elder farewell/legacy memory; 320x256, hard nearest-neighbor clusters, shared dusk/lamplight palette, no text or logos."
+  }
+}

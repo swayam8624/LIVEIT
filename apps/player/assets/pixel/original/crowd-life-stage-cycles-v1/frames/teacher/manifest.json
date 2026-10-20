@@ -1,0 +1,24 @@
+{
+  "role": "teacher",
+  "label": "teacher",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.teacher",
+  "description": "blue knit sweater, chalk badge, satchel, and lesson pointer",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/teacher/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/teacher/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/teacher/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

@@ -1,0 +1,47 @@
+{
+  "batch": "ai-life-stage-reference-v1",
+  "created": "2026-10-20",
+  "generator": "built-in OpenAI ImageGen",
+  "sourcePolicy": "Original prompt and generated art only; no third-party image pixels sampled; no user ZIP assets used.",
+  "prompt": "Original Black woman shown in seven stages from crawling infant through elder, with a crescent hair clip, teal scarf identity cue, curls evolving to braids and silver braids, seven distinct age-appropriate outfits, front-facing isolated lineup, pixel-art game character design reference.",
+  "editPrompt": "Preserve the seven age-stage designs and layout; remove the checkerboard and request genuine transparency, crisp hard-edged pixel clusters, no gradients, antialiasing, or painterly texture.",
+  "sources": [
+    {
+      "file": "source/original-lineup-master.png",
+      "sha256": "e04357c1e27bbf9125a218464cd7ed969e234077f135cc16662e37cb2bd6dd74",
+      "width": 2073,
+      "height": 758,
+      "mode": "RGB"
+    }
+  ],
+  "derivedCandidate": {
+    "file": "age-lineup-transparent-candidate.png",
+    "sha256": "11ba6b38a7de92771aafc3c5fa30cf926f3d9e8676c8b60eeb7cf53476081b67",
+    "width": 2073,
+    "height": 759,
+    "mode": "RGBA",
+    "transparentPixels": 753749,
+    "opaquePixels": 1535,
+    "partialAlphaPixels": 818123
+  },
+  "rights": "Provider-generated original concept. Confirm current provider terms before commercial redistribution or product release.",
+  "runtimeReady": false,
+  "movementConcept": {
+    "file": "elder-walk-cycle-concept.png",
+    "sha256": "d5033a476ccca3c52760d568428cf9735bfe6a8c7dc8dba60b54627bea6c2b01",
+    "width": 1249,
+    "height": 1259,
+    "mode": "RGBA",
+    "transparentPixels": 980678,
+    "opaquePixels": 2316,
+    "partialAlphaPixels": 589497,
+    "prompt": "Use the elder woman at far right of the seven-stage reference: deep-brown skin, silver braids, gold crescent clip, teal scarf, cream patterned shawl, modest walking cane. Create a 4 columns \u00d7 4 rows spritesheet: rows south/front, west/left, east/right, north/back; columns contact A, passing A, contact B, passing B with alternating feet/cane cadence. Keep scale and ground pivot consistent, crisp chunky 16-bit pixel clusters, transparent background, no text or grid lines.",
+    "editTool": "built-in ImageGen; opened and visually reviewed in PhotoCraft launched via ArtCraft Launcher",
+    "limitations": [
+      "The generated 1249\u00d71259 layout is not aligned to exact equal frame bounds; per-frame crop coordinates and pivots have not been measured.",
+      "Motion differences are subtle and need frame-by-frame cleanup.",
+      "Soft shading, anti-aliased edges, and fringe remain; redraw in the target logical-pixel palette before runtime."
+    ],
+    "runtimeReady": false
+  }
+}

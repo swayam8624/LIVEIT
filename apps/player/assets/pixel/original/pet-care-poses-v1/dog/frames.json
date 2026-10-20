@@ -1,0 +1,14 @@
+{
+  "animal": "dog",
+  "frameSize": [96, 128],
+  "poses": ["idle", "happy", "worried", "sleeping", "care", "recovering"],
+  "frames": [
+    "dog-idle-96x128.png",
+    "dog-happy-96x128.png",
+    "dog-worried-96x128.png",
+    "dog-sleeping-96x128.png",
+    "dog-care-96x128.png",
+    "dog-recovering-96x128.png"
+  ],
+  "runtimeReady": false
+}

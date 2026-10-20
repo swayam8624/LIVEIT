@@ -41,9 +41,39 @@ jobs:
           echo "udid=$UDID" >> "$GITHUB_OUTPUT"
           xcrun simctl boot "$UDID" || true
           xcrun simctl bootstatus "$UDID" -b
-      - name: Compile, install and launch real native iOS application
+      - name: Compile and install native iOS application
         working-directory: apps/player
-        run: npx expo run:ios --device "${{ steps.simulator.outputs.udid }}" --no-bundler
+        shell: bash
+        run: |
+          set +e
+          npx expo run:ios --device "${{ steps.simulator.outputs.udid }}" --no-bundler
+          expo_status=$?
+          set -e
+          if [ "$expo_status" -eq 0 ]; then
+            exit 0
+          fi
+          # Expo CLI can exit after a successful Xcode build because a dev
+          # deep-link fails to open (simctl error 60). Never call this success
+          # until the compiled app is independently installed and launched.
+          if ! grep -q '\*\* BUILD SUCCEEDED \*\*' .expo/xcodebuild.log; then
+            echo 'Xcode compilation genuinely failed; preserving the exit code.'
+            exit "$expo_status"
+          fi
+          echo 'Xcode built successfully. Retrying the native app launch without the Expo dev URL.'
+          app=''
+          while IFS= read -r candidate; do
+            id=$(/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' "$candidate/Info.plist" 2>/dev/null || true)
+            if [ "$id" = 'studio.livinguniverse.player' ]; then
+              app="$candidate"
+              break
+            fi
+          done < <(find "$HOME/Library/Developer/Xcode/DerivedData" -path '*/Build/Products/Debug-iphonesimulator/*.app' -type d 2>/dev/null)
+          if [ -z "$app" ]; then
+            echo 'Build succeeded, but no matching simulator .app could be found.'
+            exit "$expo_status"
+          fi
+          xcrun simctl install "${{ steps.simulator.outputs.udid }}" "$app"
+          xcrun simctl launch "${{ steps.simulator.outputs.udid }}" studio.livinguniverse.player
       - name: Print actionable Xcode errors on build failure
         if: failure()
         run: |

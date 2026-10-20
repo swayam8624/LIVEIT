@@ -1,0 +1,276 @@
+{
+  "id": "crowd-runner-adult-movement-age-v1",
+  "role": "runner",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "adult runner",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.runner",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/runner/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "runner/adult/south/walk-a",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/runner/adult/runner-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8a61e03bafcd62ccf53b80340ce710655502b159755366cab2cf9e5e2d56aa4d",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/walk-a.png",
+      "sourceSha256": "8a61e03bafcd62ccf53b80340ce710655502b159755366cab2cf9e5e2d56aa4d",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/south/walk-b",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/runner/adult/runner-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "65460d18c56c9b69f80fc9e96873edb280898ed70ef1835701ff2878dc1b4bbf",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/walk-b.png",
+      "sourceSha256": "65460d18c56c9b69f80fc9e96873edb280898ed70ef1835701ff2878dc1b4bbf",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/south/idle",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/runner/adult/runner-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1cb072b07c86bd785778363c2579a87e56dd9fd20b726390f72e90badd46270f",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/idle.png",
+      "sourceSha256": "1cb072b07c86bd785778363c2579a87e56dd9fd20b726390f72e90badd46270f",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/west/walk-a",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/runner/adult/runner-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e6e5c0020215c70ceddfda8b5b01855f761ed8820981055a6e8a01d46905a027",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/walk-a.png",
+      "sourceSha256": "e6e5c0020215c70ceddfda8b5b01855f761ed8820981055a6e8a01d46905a027",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/west/walk-b",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/runner/adult/runner-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c41cf2e38e949f7b151f9db38c55179832f85e78a6cfbc07f585a28c552239c4",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/walk-b.png",
+      "sourceSha256": "c41cf2e38e949f7b151f9db38c55179832f85e78a6cfbc07f585a28c552239c4",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/west/idle",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/runner/adult/runner-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fe03dbf260d93f53ae65c5a9affc0cdca1c7e82ff95d7087db86f62c5ba445b2",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/idle.png",
+      "sourceSha256": "fe03dbf260d93f53ae65c5a9affc0cdca1c7e82ff95d7087db86f62c5ba445b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/east/walk-a",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/runner/adult/runner-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d0c035ff427d77072c41d0cf3956784fff5f8fecda1301ff516003cdcd5a2676",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/walk-a.png",
+      "sourceSha256": "d0c035ff427d77072c41d0cf3956784fff5f8fecda1301ff516003cdcd5a2676",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/east/walk-b",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/runner/adult/runner-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9144dcbffe1553746f3fc9a329e32007cc7421ce0cdff01381f13bce394455bf",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/walk-b.png",
+      "sourceSha256": "9144dcbffe1553746f3fc9a329e32007cc7421ce0cdff01381f13bce394455bf",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/east/idle",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/runner/adult/runner-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "44f578bc1ce7aa9a83d83b289cd0b6a705b89c8ad3a0e17ef171a1e5bc27f6ff",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/idle.png",
+      "sourceSha256": "44f578bc1ce7aa9a83d83b289cd0b6a705b89c8ad3a0e17ef171a1e5bc27f6ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/north/walk-a",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/runner/adult/runner-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fe904c0635d5b9c731e55d7174b57b02301cd8304c05bd1eeb0487614933926e",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/walk-a.png",
+      "sourceSha256": "fe904c0635d5b9c731e55d7174b57b02301cd8304c05bd1eeb0487614933926e",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/north/walk-b",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/runner/adult/runner-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b231c233aaecd06257ba4f6213cebd8c1f1e0b4072b91a2b219776e676807129",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/walk-b.png",
+      "sourceSha256": "b231c233aaecd06257ba4f6213cebd8c1f1e0b4072b91a2b219776e676807129",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/adult/north/idle",
+      "role": "runner",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult runner",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/runner/adult/runner-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2d3ae99055b10a07ad80a40a163fffcb30919cbebaf02a79462761f9b4110ddd",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/idle.png",
+      "sourceSha256": "2d3ae99055b10a07ad80a40a163fffcb30919cbebaf02a79462761f9b4110ddd",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

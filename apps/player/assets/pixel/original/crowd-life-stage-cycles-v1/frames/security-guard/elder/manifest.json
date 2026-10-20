@@ -1,0 +1,276 @@
+{
+  "id": "crowd-security-guard-elder-movement-age-v1",
+  "role": "security-guard",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older professional or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/security-guard/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "security-guard/elder/south/walk-a",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/security-guard/elder/security-guard-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "36fbac94ec6972f9fbef3a02ed18cbfcbc6a80000092245d50a3d2dddf7b03c6",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-south-walk-a.png",
+      "sourceSha256": "28d910c3ae2a8bf09ab6faa38089ca6a0d53011b95d763c06ca919eb1ea2b47c",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/south/walk-b",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/security-guard/elder/security-guard-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6470349c145f111b69295b0c59ed8eaea84c5927190df4f7774a24f9b6142904",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-south-walk-b.png",
+      "sourceSha256": "6470349c145f111b69295b0c59ed8eaea84c5927190df4f7774a24f9b6142904",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/south/idle",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/security-guard/elder/security-guard-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a072f2989bb06abc0937afb0b8bf1b87b8682d5d692cf1c3e7360453d2d758ef",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-south-idle.png",
+      "sourceSha256": "a072f2989bb06abc0937afb0b8bf1b87b8682d5d692cf1c3e7360453d2d758ef",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/west/walk-a",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/security-guard/elder/security-guard-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "16c90992267809641d68de2ace2cd0ab1e6cccdd1eb991679f78631a18db3731",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-west-walk-a.png",
+      "sourceSha256": "84e3e8ffc9c9ac15817a6deab0057bd65b7ee8944f1dff2cf31f9bb231df1a0a",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/west/walk-b",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/security-guard/elder/security-guard-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "98a40d5aff8a2ffb16bc359319903cbdfbfbf8f475bd20562df06e25315a0880",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-west-walk-b.png",
+      "sourceSha256": "b9a34f21b66091d422c6a508a1bfe9ce686f31a5cfc60f304c776ec3e9c2c85b",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/west/idle",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/security-guard/elder/security-guard-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "65db76b5e0bb18582d23943e56b411af3878084a6563c63c96c032071cc949eb",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-west-idle.png",
+      "sourceSha256": "867c09a080194118590f673791287470e777580ae06e8fd03a3e060c45ec2ca8",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/east/walk-a",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/security-guard/elder/security-guard-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1360c7f18dff6db398de450a51457174379553a0cb6fbc65fabb1901116699ba",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-east-walk-a.png",
+      "sourceSha256": "73ccef99f65b8da1841e564cbe626de7f5a209a639808f3b66fae9f1daec64a5",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/east/walk-b",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/security-guard/elder/security-guard-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "aa0ac53c91f2a601ee7a9fdc71ec575174d3cb2c276f397cea586615e755f060",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-east-walk-b.png",
+      "sourceSha256": "7200076fcd2c8db4610cf20931621971677b434cbf8fe30f459c5cc42cdd2899",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/east/idle",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/security-guard/elder/security-guard-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "97c0a5c9efe3c0d26afffccfb78113b48a911cf6bd122685242a06476059b7b7",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-east-idle.png",
+      "sourceSha256": "6747ec730e1579a9325653485d1037db829fec6f39cb25aa3c667d8d648720fd",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/north/walk-a",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/security-guard/elder/security-guard-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c5502ce6e6cb43e743dd50049986ba3418fad1e33268032c8fbd4ac1629251e0",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-north-walk-a.png",
+      "sourceSha256": "7c38d41fc82817266d291837935943fa2e1112f514313317faaf4c58af78f529",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/north/walk-b",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/security-guard/elder/security-guard-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6f88e8e56424a9ec4bcae2859b8b57fcfb622c41216907a2ca1260378ab79ee5",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-north-walk-b.png",
+      "sourceSha256": "860896ca3065ea6ba32749ba45ce8976a23894a5badfe3ea4385ff279c9c8064",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/elder/north/idle",
+      "role": "security-guard",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older professional or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/security-guard/elder/security-guard-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d6adf3f1d0a56333ba6abd5713745ba20e8420360de7c9d0b087a0dc6c7d0b8e",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-north-idle.png",
+      "sourceSha256": "da8936ec8cf6199a200b6f61c6a6804421e149fb80ad8e8ec48791a5f5c316ba",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

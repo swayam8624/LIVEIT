@@ -1,0 +1,224 @@
+{
+  "id": "crowd-taxi-driver-movement-v1",
+  "role": "taxi-driver",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.taxi-driver",
+  "description": "ochre taxi vest, dark trousers, key ring",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "taxi-driver/south/walk-a",
+      "role": "taxi-driver",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/taxi-driver/taxi-driver-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1c60be0da8d670eb2ddac07f1e57b73f356c40f67b1d8cb88e16764f59fa09a0",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/south/walk-b",
+      "role": "taxi-driver",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/taxi-driver/taxi-driver-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "542659e64cf2a7bab05192169f5d7c51db8735054ed0091d55ea69984e8cd4c3",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/south/idle",
+      "role": "taxi-driver",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/taxi-driver/taxi-driver-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9dd2dfc425076a47319b68070705369fa68ace669612bf95bed36d06538ecc4f",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/west/walk-a",
+      "role": "taxi-driver",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/taxi-driver/taxi-driver-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c3a4b55838aec190adc85bd54982596856fd3dc119f95b4103ce82c1b6a2e126",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/west/walk-b",
+      "role": "taxi-driver",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/taxi-driver/taxi-driver-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "26b5a4a4d8f7b046d3216d7ad488314afbf971851a85f3c66c91ac8c2f2ed178",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/west/idle",
+      "role": "taxi-driver",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/taxi-driver/taxi-driver-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "790695c7ab96121aca8daf1f148b5549ba2b7293ac83497c83b4b989be8adf32",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/east/walk-a",
+      "role": "taxi-driver",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/taxi-driver/taxi-driver-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "69e2c6a68e1b0ff705dd725ff83b97e2f679ee6573a5e0dbd82f2f638bb9cb37",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/east/walk-b",
+      "role": "taxi-driver",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/taxi-driver/taxi-driver-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "295b34e7e0fa5287061b3441f6bf772e3af9b25ece5391753a23701ca0450a67",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/east/idle",
+      "role": "taxi-driver",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/taxi-driver/taxi-driver-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "13f0a59228f22588a8e6fc89e986c167ebefb23ce866d5d100615b1fabc5eda6",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/north/walk-a",
+      "role": "taxi-driver",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/taxi-driver/taxi-driver-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "26a3573079d2d4a849ba7e9562c0a0aaad30a2ee3048bc1ac91039519d95fb96",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/north/walk-b",
+      "role": "taxi-driver",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/taxi-driver/taxi-driver-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6e975fd2c4f9a5e88165e15806050bf2daaca174afd39cb203cb851e55e77ace",
+      "runtimeReady": false
+    },
+    {
+      "id": "taxi-driver/north/idle",
+      "role": "taxi-driver",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/taxi-driver/taxi-driver-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fd858c54998fe13516c400f7bfe0feb9dcf803b20f3301c6610254a55e2060d9",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/taxi-driver/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "f54041b2ee458000b2ad9f3cf8433993a0b4d0a08439c9775fd69b968ab364c1",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/taxi-driver/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "be27f2d2db6fbe856889158f91106d49d6ed44f89c96bb28eaa439ef0a81c31b",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

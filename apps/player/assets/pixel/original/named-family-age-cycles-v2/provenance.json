@@ -1,0 +1,14 @@
+{
+  "package": "named-family-age-cycles-v2",
+  "created": "2026-10-20",
+  "creator": "Codex-assisted deterministic procedural pixel-art builder",
+  "rights": "Original project working material generated from repository-authored character descriptions; no third-party ZIP, external image, or game artwork used.",
+  "builder": "build_age_cycles.py",
+  "runtimeReady": false,
+  "prompt": "Create original top-down pixel movement cycles for Nora Bellweather (adult, midlife, elder) and Tavi Bellweather (toddler, child, teen, young adult). Preserve Nora's short indigo bob, rose overshirt, cream ring and wide-leg trousers, with silver hair/posture progression and a cane only for elder. Preserve Tavi's purple cap, leaf-green overalls, violet boots and kite-spool identity cue; scale the cap and garments with growth, omit adult-coded accessories, and keep all poses fully clothed and age-safe. For every stage produce four cardinal directions and four visibly distinct gait phases plus neutral idle and friendly non-romantic interact. Transparent 24x32 RGBA, common feet pivot (12,31), crisp limited-palette pixel clusters, no text/logos/shadow/3D or copied art.",
+  "limitations": [
+    "Concept sprites require artist review and animation playback review.",
+    "Age readability and pivot/collision fit require human review.",
+    "Catalog mappings are references only; not integrated with runtime loading."
+  ]
+}

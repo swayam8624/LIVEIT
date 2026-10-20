@@ -1,0 +1,276 @@
+{
+  "id": "crowd-gardener-teen-movement-age-v1",
+  "role": "gardener",
+  "ageStage": "teen",
+  "ageBand": "16-19",
+  "ageNote": "late-teen garden hobbyist",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/gardener/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "gardener/teen/south/walk-a",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/gardener/teen/gardener-teen-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2ee3f3fb3229a0573be9252ef2cedce6288cf8f3232b312b639f770ef3947c6a",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-south-walk-a.png",
+      "sourceSha256": "0927fd2cf686b6a37d5aa64b44b57d62eac19dc93051bae19782f3c759b572e6",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/south/walk-b",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/gardener/teen/gardener-teen-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "55dfcf4a9470ec5eaea2636b2af3b34ebdf16ac411ea7d68c937ae4e25c65a01",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-south-walk-b.png",
+      "sourceSha256": "b5c86888eeeb01bafb5dc8f0c243fde6b3b470550815d13f71a74e4d36c43606",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/south/idle",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/gardener/teen/gardener-teen-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "191f2d1027cd13c5d2f6d6e0f9a307b58f042ab4e954d203e5e34e6ba3406da7",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-south-idle.png",
+      "sourceSha256": "d743d5ef797174daa6c278fb7f1c5bbe8ed81c6b48c5f2a4bbec2c35b6eaeb15",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/west/walk-a",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/gardener/teen/gardener-teen-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5866d52c3bc44eed124d01e888c67ee840d8b7463380494a0eea9125644ca9e9",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-west-walk-a.png",
+      "sourceSha256": "d4a1d642c61e2de04fa98dacdcb2e29f6118f9aff2840e7f22cd318b1a2d74e6",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/west/walk-b",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/gardener/teen/gardener-teen-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "31741a34f6a0fea03398fd8a97491c6e1cd5e6a37a9325b86c2f9ce34b07033d",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-west-walk-b.png",
+      "sourceSha256": "b13009b2cb39d9e9e0448a297c22d320e15a9a04fb690b44f87c2333773550ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/west/idle",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/gardener/teen/gardener-teen-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4729c543d9c90e8bd316b62196fff9e79d09ce350a420f90d9c7ce04a25fd289",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-west-idle.png",
+      "sourceSha256": "2840334653284c7350ec8635a1659ba12c0f2b760c914753228d82556ecafc74",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/east/walk-a",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/gardener/teen/gardener-teen-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cf016942d6613c43436299f3026bd217fb29549a16b05aea12e6799c65ef6186",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-east-walk-a.png",
+      "sourceSha256": "fe893b9731e194396c204fe13f46f70b289743258ce67a2dbae94584bcca4213",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/east/walk-b",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/gardener/teen/gardener-teen-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "79a2880dd442d0b7d7805f12323ae2f22d6c191a13ee2ea0f1b83436d8ffe15d",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-east-walk-b.png",
+      "sourceSha256": "bf765066f07119891bd01fef78ebee32cf847a10caa2229be3493195d39766d8",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/east/idle",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/gardener/teen/gardener-teen-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ba2d4c13d09fe85c7ec379f61294f0d41179d3658d838776a4e89365e1073e7a",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-east-idle.png",
+      "sourceSha256": "9b2bab4db2ee6acaa382322c02c9fb151c80317845416edecc6cfc73b8d93512",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/north/walk-a",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/gardener/teen/gardener-teen-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0b0b3530107310c2b34d09551193b11f804e9ba1a30bc2697f47646fc95ef66d",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-north-walk-a.png",
+      "sourceSha256": "e2fb45048ce71abd01efc415853fa9c56c0669e0cf4c47877540d12d18d905e4",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/north/walk-b",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/gardener/teen/gardener-teen-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e2ba7841e5f97a53e67b56507f9d623011d5af5295c0fb6c609caa14d89a4402",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-north-walk-b.png",
+      "sourceSha256": "9e686f8d95f21dc181625cec82c6e93ff13dc2adbdbe58e356b81b09200431f0",
+      "runtimeReady": false
+    },
+    {
+      "id": "gardener/teen/north/idle",
+      "role": "gardener",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen garden hobbyist",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/gardener/teen/gardener-teen-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "076e141b288be20400dcb6c0ca4ea0b1877716aaf24b8c947270fad69cae7528",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/gardener/gardener-north-idle.png",
+      "sourceSha256": "25694b2c3070fcc95b5218a0177248b0de47ea7a1e06de8f37eb774e46836250",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

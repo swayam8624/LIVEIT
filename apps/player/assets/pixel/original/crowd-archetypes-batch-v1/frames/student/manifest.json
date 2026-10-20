@@ -1,0 +1,224 @@
+{
+  "id": "crowd-student-movement-v1",
+  "role": "student",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.student",
+  "description": "backpack and bright book, campus-casual layers",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "student/south/walk-a",
+      "role": "student",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/student/student-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "32f9e24666ed93089a298011673653db20d3f1759ead74fc1e85e076454598ca",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/south/walk-b",
+      "role": "student",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/student/student-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8ae2dd04b6f9c627b109553396cf77600d20335b1b0daa2b28bc9548178e847f",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/south/idle",
+      "role": "student",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/student/student-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ea9a5cc39d562fac226f1ba01b5a9077e751436ea89354616a4f9b82f08f0104",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/west/walk-a",
+      "role": "student",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/student/student-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "26342bcb3ed5cb608e5cefc66f4b6c0f66f79af8c80d79d90039ff90b5b3da1a",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/west/walk-b",
+      "role": "student",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/student/student-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b2c8c23da1df228e058dd3cee22882059bf3e6f7bc53c4a2c9f3df3777dee43d",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/west/idle",
+      "role": "student",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/student/student-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1821e2081d13b6ae106b04f0fe39b3ce1c755b7c11fefffd5f34160519f5d7cf",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/east/walk-a",
+      "role": "student",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/student/student-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b62c63d3ab442a06b45b6ae81f7f153086e74f21478b1eb347cc57b93735c688",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/east/walk-b",
+      "role": "student",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/student/student-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bc8e3df4d446dea754843c0c62456284ea3db1e40aab44aabfadf51952dd7794",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/east/idle",
+      "role": "student",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/student/student-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e434ccb5a84cdaebc069453a0b3e93098de7d604c73382d69009c066944b0f60",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/north/walk-a",
+      "role": "student",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/student/student-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c9d4eacb43f44086ee9d6cbb103ca5412d41ae78c5f0113586651d6435bc983c",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/north/walk-b",
+      "role": "student",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/student/student-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "94e89f81c56a721d77024d2255e32b1d14806e6d98231b590cebe6d160210095",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/north/idle",
+      "role": "student",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/student/student-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "11ef2c9af27225a062c1122e470c6708a421982951e59fd640b080843b8b7376",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/student/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "b39cd0b0c6c3d602e6a1d84179d7cc405b4e8aed9677d294009e2492b50a49ce",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/student/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "0648d572c185b0b4e1136b0f7f335ecafc83f19021de3fdb34b143a1c1b46fc8",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

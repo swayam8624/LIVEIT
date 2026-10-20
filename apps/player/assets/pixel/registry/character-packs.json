@@ -1,0 +1,961 @@
+{
+  "schemaVersion": 1,
+  "scope": "Original/concept sprite and scene packs in apps/player/assets/pixel/original",
+  "runtimeReady": false,
+  "runtimeLoader": "apps/player/src/pixelArt.ts",
+  "productionCatalog": "content/production-assets/pixel-v2/required-assets.json",
+  "packCount": 86,
+  "packs": [
+    {
+      "id": "accessible-controls-v1",
+      "assetRoot": "../original/accessible-controls-v1",
+      "manifests": ["../original/accessible-controls-v1/manifest.json"],
+      "pngFileCount": 59,
+      "provenance": "../original/accessible-controls-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "adult-elder-cycles-v1",
+      "assetRoot": "../original/adult-elder-cycles-v1",
+      "manifests": [],
+      "pngFileCount": 70,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "age-complete-movement-batch-v1",
+      "assetRoot": "../original/age-complete-movement-batch-v1",
+      "manifests": [],
+      "pngFileCount": 146,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "age-direction-concept-batch-v1",
+      "assetRoot": "../original/age-direction-concept-batch-v1",
+      "manifests": [],
+      "pngFileCount": 51,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "age-identity-variety-v1",
+      "assetRoot": "../original/age-identity-variety-v1",
+      "manifests": ["../original/age-identity-variety-v1/manifest.json"],
+      "pngFileCount": 59,
+      "provenance": "../original/age-identity-variety-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "age-idle-interact-v1",
+      "assetRoot": "../original/age-idle-interact-v1",
+      "manifests": ["../original/age-idle-interact-v1/manifest.json"],
+      "pngFileCount": 64,
+      "provenance": "../original/age-idle-interact-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "age-movement-batch-v1",
+      "assetRoot": "../original/age-movement-batch-v1",
+      "manifests": [],
+      "pngFileCount": 38,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "ai-life-stage-reference-v1",
+      "assetRoot": "../original/ai-life-stage-reference-v1",
+      "manifests": ["../original/ai-life-stage-reference-v1/manifest.json"],
+      "pngFileCount": 3,
+      "provenance": "../original/ai-life-stage-reference-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "alternate-life-arc-family-v1",
+      "assetRoot": "../original/alternate-life-arc-family-v1",
+      "manifests": ["../original/alternate-life-arc-family-v1/manifest.json"],
+      "pngFileCount": 270,
+      "provenance": "../original/alternate-life-arc-family-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "amelia-expression-batch-v1",
+      "assetRoot": "../original/amelia-expression-batch-v1",
+      "manifests": [],
+      "pngFileCount": 15,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "amelia-movement-batch-v1",
+      "assetRoot": "../original/amelia-movement-batch-v1",
+      "manifests": [],
+      "pngFileCount": 19,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "appearance-directional-v1",
+      "assetRoot": "../original/appearance-directional-v1",
+      "manifests": ["../original/appearance-directional-v1/manifest.json"],
+      "pngFileCount": 73,
+      "provenance": "../original/appearance-directional-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "appearance-directional-v2",
+      "assetRoot": "../original/appearance-directional-v2",
+      "manifests": ["../original/appearance-directional-v2/manifest.json"],
+      "pngFileCount": 45,
+      "provenance": "../original/appearance-directional-v2/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "appearance-kit-expansion-v1",
+      "assetRoot": "../original/appearance-kit-expansion-v1",
+      "manifests": ["../original/appearance-kit-expansion-v1/manifest.json"],
+      "pngFileCount": 125,
+      "provenance": "../original/appearance-kit-expansion-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "appearance-kit-v1",
+      "assetRoot": "../original/appearance-kit-v1",
+      "manifests": ["../original/appearance-kit-v1/manifest.json"],
+      "pngFileCount": 42,
+      "provenance": "../original/appearance-kit-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "bellweather-tile-concepts-v1",
+      "assetRoot": "../original/bellweather-tile-concepts-v1",
+      "manifests": [],
+      "pngFileCount": 4,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "button-states-v1",
+      "assetRoot": "../original/button-states-v1",
+      "manifests": [],
+      "pngFileCount": 55,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "button-states-v2",
+      "assetRoot": "../original/button-states-v2",
+      "manifests": [],
+      "pngFileCount": 55,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "chat-avatar-acting-v1",
+      "assetRoot": "../original/chat-avatar-acting-v1",
+      "manifests": ["../original/chat-avatar-acting-v1/manifest.json"],
+      "pngFileCount": 26,
+      "provenance": "../original/chat-avatar-acting-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "chat-avatar-player-amelia-v1",
+      "assetRoot": "../original/chat-avatar-player-amelia-v1",
+      "manifests": ["../original/chat-avatar-player-amelia-v1/manifest.json"],
+      "pngFileCount": 50,
+      "provenance": "../original/chat-avatar-player-amelia-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "chat-reaction-icons-v1",
+      "assetRoot": "../original/chat-reaction-icons-v1",
+      "manifests": ["../original/chat-reaction-icons-v1/manifest.json"],
+      "pngFileCount": 12,
+      "provenance": "../original/chat-reaction-icons-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "child-teen-cycles-v1",
+      "assetRoot": "../original/child-teen-cycles-v1",
+      "manifests": [],
+      "pngFileCount": 35,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "conversation-ui-v2",
+      "assetRoot": "../original/conversation-ui-v2",
+      "manifests": ["../original/conversation-ui-v2/manifest.json"],
+      "pngFileCount": 16,
+      "provenance": "../original/conversation-ui-v2/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "conversation-ui-v3",
+      "assetRoot": "../original/conversation-ui-v3",
+      "manifests": ["../original/conversation-ui-v3/manifest.json"],
+      "pngFileCount": 28,
+      "provenance": "../original/conversation-ui-v3/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "crowd-archetypes-batch-v1",
+      "assetRoot": "../original/crowd-archetypes-batch-v1",
+      "manifests": [
+        "../original/crowd-archetypes-batch-v1/frames/baker/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/bus-driver/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/delivery-rider/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/library-visitor/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/office-worker/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/police-officer/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/store-clerk/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/street-musician/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/student/manifest.json",
+        "../original/crowd-archetypes-batch-v1/frames/taxi-driver/manifest.json",
+        "../original/crowd-archetypes-batch-v1/manifest.json"
+      ],
+      "pngFileCount": 142,
+      "provenance": "../original/crowd-archetypes-batch-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "crowd-archetypes-batch-v2",
+      "assetRoot": "../original/crowd-archetypes-batch-v2",
+      "manifests": [
+        "../original/crowd-archetypes-batch-v2/artist/manifest.json",
+        "../original/crowd-archetypes-batch-v2/athlete/manifest.json",
+        "../original/crowd-archetypes-batch-v2/barista/manifest.json",
+        "../original/crowd-archetypes-batch-v2/filmmaker/manifest.json",
+        "../original/crowd-archetypes-batch-v2/manifest.json",
+        "../original/crowd-archetypes-batch-v2/market-vendor/manifest.json",
+        "../original/crowd-archetypes-batch-v2/mechanic/manifest.json",
+        "../original/crowd-archetypes-batch-v2/pet-walker/manifest.json",
+        "../original/crowd-archetypes-batch-v2/runner/manifest.json",
+        "../original/crowd-archetypes-batch-v2/shopper/manifest.json",
+        "../original/crowd-archetypes-batch-v2/tourist/manifest.json"
+      ],
+      "pngFileCount": 141,
+      "provenance": "../original/crowd-archetypes-batch-v2/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "crowd-archetypes-batch-v3",
+      "assetRoot": "../original/crowd-archetypes-batch-v3",
+      "manifests": [
+        "../original/crowd-archetypes-batch-v3/frames/caregiver/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/child-playground/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/elder-walker/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/gardener/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/historian/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/nurse/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/parent-with-stroller/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/park-cleaner/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/security-guard/manifest.json",
+        "../original/crowd-archetypes-batch-v3/frames/teacher/manifest.json",
+        "../original/crowd-archetypes-batch-v3/manifest.json"
+      ],
+      "pngFileCount": 142,
+      "provenance": "../original/crowd-archetypes-batch-v3/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "crowd-life-stage-cycles-v1",
+      "assetRoot": "../original/crowd-life-stage-cycles-v1",
+      "manifests": [
+        "../original/crowd-life-stage-cycles-v1/frames/artist/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/artist/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/artist/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/artist/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/artist/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/athlete/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/athlete/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/athlete/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/athlete/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/athlete/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/baker/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/baker/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/baker/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/barista/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/barista/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/barista/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/bus-driver/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/bus-driver/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/bus-driver/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/caregiver/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/caregiver/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/caregiver/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/child-playground/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/child-playground/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/child-playground/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/delivery-rider/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/delivery-rider/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/delivery-rider/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/elder-walker/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/elder-walker/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/filmmaker/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/filmmaker/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/filmmaker/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/gardener/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/gardener/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/gardener/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/gardener/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/gardener/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/historian/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/historian/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/historian/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/library-visitor/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/library-visitor/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/library-visitor/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/library-visitor/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/library-visitor/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/market-vendor/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/market-vendor/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/market-vendor/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/mechanic/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/mechanic/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/mechanic/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/nurse/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/nurse/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/nurse/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/office-worker/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/office-worker/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/office-worker/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/parent-with-stroller/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/parent-with-stroller/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/parent-with-stroller/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/park-cleaner/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/park-cleaner/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/park-cleaner/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/pet-walker/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/pet-walker/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/pet-walker/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/police-officer/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/police-officer/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/police-officer/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/runner/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/runner/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/runner/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/runner/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/runner/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/security-guard/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/security-guard/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/security-guard/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/shopper/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/shopper/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/shopper/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/shopper/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/shopper/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/store-clerk/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/store-clerk/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/store-clerk/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/street-musician/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/street-musician/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/street-musician/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/student/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/student/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/student/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/student/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/student/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/taxi-driver/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/taxi-driver/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/taxi-driver/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/teacher/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/teacher/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/teacher/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/tourist/adult/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/tourist/child/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/tourist/elder/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/tourist/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/frames/tourist/teen/manifest.json",
+        "../original/crowd-life-stage-cycles-v1/manifest.json"
+      ],
+      "pngFileCount": 900,
+      "provenance": "../original/crowd-life-stage-cycles-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "directional-age-refine-v1",
+      "assetRoot": "../original/directional-age-refine-v1",
+      "manifests": ["../original/directional-age-refine-v1/manifest.json"],
+      "pngFileCount": 121,
+      "provenance": "../original/directional-age-refine-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "district-backdrops-v1",
+      "assetRoot": "../original/district-backdrops-v1",
+      "manifests": ["../original/district-backdrops-v1/manifest.json"],
+      "pngFileCount": 15,
+      "provenance": "../original/district-backdrops-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "diverse-youth-cycles-v1",
+      "assetRoot": "../original/diverse-youth-cycles-v1",
+      "manifests": ["../original/diverse-youth-cycles-v1/manifest.json"],
+      "pngFileCount": 34,
+      "provenance": "../original/diverse-youth-cycles-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "elder-cycles-v1",
+      "assetRoot": "../original/elder-cycles-v1",
+      "manifests": [],
+      "pngFileCount": 1,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "elder-cycles-v2",
+      "assetRoot": "../original/elder-cycles-v2",
+      "manifests": [],
+      "pngFileCount": 38,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-first-home-v1",
+      "assetRoot": "../original/exclusive-first-home-v1",
+      "manifests": ["../original/exclusive-first-home-v1/manifest.json"],
+      "pngFileCount": 5,
+      "provenance": "../original/exclusive-first-home-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-graduation-backdrop-v1",
+      "assetRoot": "../original/exclusive-graduation-backdrop-v1",
+      "manifests": [
+        "../original/exclusive-graduation-backdrop-v1/manifest.json"
+      ],
+      "pngFileCount": 4,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scene-actor-staging-v1",
+      "assetRoot": "../original/exclusive-scene-actor-staging-v1",
+      "manifests": [
+        "../original/exclusive-scene-actor-staging-v1/manifest.json"
+      ],
+      "pngFileCount": 50,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scene-actor-staging-v2",
+      "assetRoot": "../original/exclusive-scene-actor-staging-v2",
+      "manifests": [
+        "../original/exclusive-scene-actor-staging-v2/manifest.json"
+      ],
+      "pngFileCount": 135,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scene-backdrop-polish-v1",
+      "assetRoot": "../original/exclusive-scene-backdrop-polish-v1",
+      "manifests": [
+        "../original/exclusive-scene-backdrop-polish-v1/manifest.json"
+      ],
+      "pngFileCount": 6,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scene-depth-v2",
+      "assetRoot": "../original/exclusive-scene-depth-v2",
+      "manifests": ["../original/exclusive-scene-depth-v2/manifest.json"],
+      "pngFileCount": 36,
+      "provenance": "../original/exclusive-scene-depth-v2/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scene-graduation-actors-v1",
+      "assetRoot": "../original/exclusive-scene-graduation-actors-v1",
+      "manifests": [
+        "../original/exclusive-scene-graduation-actors-v1/manifest.json"
+      ],
+      "pngFileCount": 38,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scene-layers-v1",
+      "assetRoot": "../original/exclusive-scene-layers-v1",
+      "manifests": ["../original/exclusive-scene-layers-v1/manifest.json"],
+      "pngFileCount": 24,
+      "provenance": "../original/exclusive-scene-layers-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scene-props-v1",
+      "assetRoot": "../original/exclusive-scene-props-v1",
+      "manifests": ["../original/exclusive-scene-props-v1/manifest.json"],
+      "pngFileCount": 24,
+      "provenance": "../original/exclusive-scene-props-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scenes-v1",
+      "assetRoot": "../original/exclusive-scenes-v1",
+      "manifests": [],
+      "pngFileCount": 18,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scenes-v2",
+      "assetRoot": "../original/exclusive-scenes-v2",
+      "manifests": ["../original/exclusive-scenes-v2/manifest.json"],
+      "pngFileCount": 9,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "exclusive-scenes-variety-v1",
+      "assetRoot": "../original/exclusive-scenes-variety-v1",
+      "manifests": ["../original/exclusive-scenes-variety-v1/manifest.json"],
+      "pngFileCount": 13,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "family-portrait-expressions-v1",
+      "assetRoot": "../original/family-portrait-expressions-v1",
+      "manifests": ["../original/family-portrait-expressions-v1/manifest.json"],
+      "pngFileCount": 50,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "family-walk-cycles-v1",
+      "assetRoot": "../original/family-walk-cycles-v1",
+      "manifests": [],
+      "pngFileCount": 74,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "graduation-garden-art-v1",
+      "assetRoot": "../original/graduation-garden-art-v1",
+      "manifests": ["../original/graduation-garden-art-v1/manifest.json"],
+      "pngFileCount": 4,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "hud-controls-batch-v1",
+      "assetRoot": "../original/hud-controls-batch-v1",
+      "manifests": [],
+      "pngFileCount": 27,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "hud-panels-batch-v1",
+      "assetRoot": "../original/hud-panels-batch-v1",
+      "manifests": [],
+      "pngFileCount": 16,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "infant-toddler-cycles-v1",
+      "assetRoot": "../original/infant-toddler-cycles-v1",
+      "manifests": [],
+      "pngFileCount": 67,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "layered-cafe-scene-v1",
+      "assetRoot": "../original/layered-cafe-scene-v1",
+      "manifests": [],
+      "pngFileCount": 6,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "life-arc-early-cycles-v1",
+      "assetRoot": "../original/life-arc-early-cycles-v1",
+      "manifests": [],
+      "pngFileCount": 77,
+      "provenance": "../original/life-arc-early-cycles-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "life-arc-later-cycles-v1",
+      "assetRoot": "../original/life-arc-later-cycles-v1",
+      "manifests": ["../original/life-arc-later-cycles-v1/manifest.json"],
+      "pngFileCount": 74,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "life-arc-later-poses-v1",
+      "assetRoot": "../original/life-arc-later-poses-v1",
+      "manifests": ["../original/life-arc-later-poses-v1/manifest.json"],
+      "pngFileCount": 20,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "linked-early-poses-v1",
+      "assetRoot": "../original/linked-early-poses-v1",
+      "manifests": ["../original/linked-early-poses-v1/manifest.json"],
+      "pngFileCount": 38,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "linked-early-poses-v2",
+      "assetRoot": "../original/linked-early-poses-v2",
+      "manifests": ["../original/linked-early-poses-v2/manifest.json"],
+      "pngFileCount": 38,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "linked-elder-poses-v1",
+      "assetRoot": "../original/linked-elder-poses-v1",
+      "manifests": ["../original/linked-elder-poses-v1/manifest.json"],
+      "pngFileCount": 20,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "linked-life-arc-family-v1",
+      "assetRoot": "../original/linked-life-arc-family-v1",
+      "manifests": [
+        "../original/linked-life-arc-family-v1/harmonized-32-color/manifest.json",
+        "../original/linked-life-arc-family-v1/manifest.json"
+      ],
+      "pngFileCount": 149,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "linked-life-arc-family-v2",
+      "assetRoot": "../original/linked-life-arc-family-v2",
+      "manifests": ["../original/linked-life-arc-family-v2/manifest.json"],
+      "pngFileCount": 3,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "linked-male-adult-cycles-v1",
+      "assetRoot": "../original/linked-male-adult-cycles-v1",
+      "manifests": ["../original/linked-male-adult-cycles-v1/manifest.json"],
+      "pngFileCount": 60,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "mobility-diverse-cycles-v1",
+      "assetRoot": "../original/mobility-diverse-cycles-v1",
+      "manifests": ["../original/mobility-diverse-cycles-v1/manifest.json"],
+      "pngFileCount": 56,
+      "provenance": "../original/mobility-diverse-cycles-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "movement-batch-v1",
+      "assetRoot": "../original/movement-batch-v1",
+      "manifests": [],
+      "pngFileCount": 18,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-characters-batch-v1",
+      "assetRoot": "../original/named-characters-batch-v1",
+      "manifests": ["../original/named-characters-batch-v1/manifest.json"],
+      "pngFileCount": 131,
+      "provenance": "../original/named-characters-batch-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-characters-batch-v2",
+      "assetRoot": "../original/named-characters-batch-v2",
+      "manifests": ["../original/named-characters-batch-v2/manifest.json"],
+      "pngFileCount": 126,
+      "provenance": "../original/named-characters-batch-v2/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-characters-batch-v3",
+      "assetRoot": "../original/named-characters-batch-v3",
+      "manifests": [
+        "../original/named-characters-batch-v3/frames/boss/manifest.json",
+        "../original/named-characters-batch-v3/frames/coworker/manifest.json",
+        "../original/named-characters-batch-v3/frames/friend-one/manifest.json",
+        "../original/named-characters-batch-v3/frames/friend-two/manifest.json",
+        "../original/named-characters-batch-v3/frames/neighbor/manifest.json",
+        "../original/named-characters-batch-v3/manifest.json"
+      ],
+      "pngFileCount": 132,
+      "provenance": "../original/named-characters-batch-v3/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-characters-batch-v4",
+      "assetRoot": "../original/named-characters-batch-v4",
+      "manifests": ["../original/named-characters-batch-v4/manifest.json"],
+      "pngFileCount": 131,
+      "provenance": "../original/named-characters-batch-v4/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-family-age-cycles-v1",
+      "assetRoot": "../original/named-family-age-cycles-v1",
+      "manifests": ["../original/named-family-age-cycles-v1/manifest.json"],
+      "pngFileCount": 218,
+      "provenance": "../original/named-family-age-cycles-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-family-age-cycles-v2",
+      "assetRoot": "../original/named-family-age-cycles-v2",
+      "manifests": ["../original/named-family-age-cycles-v2/manifest.json"],
+      "pngFileCount": 170,
+      "provenance": "../original/named-family-age-cycles-v2/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-family-batch-v1",
+      "assetRoot": "../original/named-family-batch-v1",
+      "manifests": [],
+      "pngFileCount": 2,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-friend-age-cycles-v1",
+      "assetRoot": "../original/named-friend-age-cycles-v1",
+      "manifests": ["../original/named-friend-age-cycles-v1/manifest.json"],
+      "pngFileCount": 146,
+      "provenance": "../original/named-friend-age-cycles-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "named-role-age-cycles-v1",
+      "assetRoot": "../original/named-role-age-cycles-v1",
+      "manifests": ["../original/named-role-age-cycles-v1/manifest.json"],
+      "pngFileCount": 1466,
+      "provenance": "../original/named-role-age-cycles-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "npc-archetype-walk-v1",
+      "assetRoot": "../original/npc-archetype-walk-v1",
+      "manifests": [
+        "../original/npc-archetype-walk-v1/cane-neighbor/manifest.json",
+        "../original/npc-archetype-walk-v1/garden-keeper/manifest.json",
+        "../original/npc-archetype-walk-v1/manifest.json",
+        "../original/npc-archetype-walk-v1/sari-caregiver/manifest.json"
+      ],
+      "pngFileCount": 55,
+      "provenance": "../original/npc-archetype-walk-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "pet-age-cycles-v1",
+      "assetRoot": "../original/pet-age-cycles-v1",
+      "manifests": [
+        "../original/pet-age-cycles-v1/cat-manifest.json",
+        "../original/pet-age-cycles-v1/dog-manifest.json",
+        "../original/pet-age-cycles-v1/manifest.json",
+        "../original/pet-age-cycles-v1/rabbit-manifest.json"
+      ],
+      "pngFileCount": 155,
+      "provenance": "../original/pet-age-cycles-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "pet-care-poses-v1",
+      "assetRoot": "../original/pet-care-poses-v1",
+      "manifests": [
+        "../original/pet-care-poses-v1/cat/manifest.json",
+        "../original/pet-care-poses-v1/dog/manifest.json",
+        "../original/pet-care-poses-v1/rabbit/manifest.json"
+      ],
+      "pngFileCount": 27,
+      "provenance": "../original/pet-care-poses-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "pet-walk-cycles-v1",
+      "assetRoot": "../original/pet-walk-cycles-v1",
+      "manifests": ["../original/pet-walk-cycles-v1/cat/manifest.json"],
+      "pngFileCount": 58,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "player-age-arc-diverse-v1",
+      "assetRoot": "../original/player-age-arc-diverse-v1",
+      "manifests": [],
+      "pngFileCount": 21,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "player-age-arc-v1",
+      "assetRoot": "../original/player-age-arc-v1",
+      "manifests": [],
+      "pngFileCount": 21,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "player-expression-batch-v1",
+      "assetRoot": "../original/player-expression-batch-v1",
+      "manifests": [],
+      "pngFileCount": 15,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "portrait-acting-v1",
+      "assetRoot": "../original/portrait-acting-v1",
+      "manifests": [],
+      "pngFileCount": 16,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "story-scene-batch-v1",
+      "assetRoot": "../original/story-scene-batch-v1",
+      "manifests": [],
+      "pngFileCount": 2,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "story-scene-batch-v2",
+      "assetRoot": "../original/story-scene-batch-v2",
+      "manifests": [],
+      "pngFileCount": 4,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "ui-chat-batch-v1",
+      "assetRoot": "../original/ui-chat-batch-v1",
+      "manifests": [],
+      "pngFileCount": 1,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "world-fx-batch-v1",
+      "assetRoot": "../original/world-fx-batch-v1",
+      "manifests": [],
+      "pngFileCount": 47,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "world-props-home-v1",
+      "assetRoot": "../original/world-props-home-v1",
+      "manifests": ["../original/world-props-home-v1/manifest.json"],
+      "pngFileCount": 15,
+      "provenance": "../original/world-props-home-v1/provenance.json",
+      "runtimeReady": false,
+      "status": "concept-only"
+    },
+    {
+      "id": "young-midlife-cycles-v1",
+      "assetRoot": "../original/young-midlife-cycles-v1",
+      "manifests": [],
+      "pngFileCount": 34,
+      "provenance": null,
+      "runtimeReady": false,
+      "status": "concept-only"
+    }
+  ]
+}

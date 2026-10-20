@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "exclusive-graduation-backdrop-v1",
+  "runtimeReady": false,
+  "conceptQuality": "ImageGen source has soft painterly texture; normalized exports are pixel-art studies requiring manual review and scene composition validation.",
+  "source": {
+    "file": "source.png",
+    "size": [1402, 1122],
+    "mode": "RGB",
+    "sha256": "b8ec0e4d7f57c519d687380fa9425f9375a5cad6ac29d72ce20d90512b74d5f5",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: illustration-story\nAsset type: exclusive story-scene background concept for a top-down pixel life simulator\nPrimary request: create an original, beautiful graduation ceremony courtyard backdrop, suitable to become a crisp 320x256 logical-pixel game scene after nearest-neighbor normalization\nScene/backdrop: a small welcoming neighborhood school courtyard with brick arches, a modest stage, leafy trees, bunting, flower planters, and warm late-afternoon light; no recognizable real-world location\nComposition/framing: 5:4 landscape; stage and diploma table at upper center, clear uncluttered actor-safe floor across the lower half, generous readable silhouettes, purposeful foreground/midground/background depth\nStyle/medium: exceptionally polished classic handheld-era pixel art; intentional square pixel clusters, limited coherent palette, crisp stepped edges, no anti-aliasing, no painterly blur, no gradients made of tiny noise; handcrafted richly detailed environment tiles and light clusters\nLighting/mood: joyful, intimate, sentimental, golden-hour celebration; warm sunlight with cool green-blue shadow grouping\nColor palette: restrained warm brick, cream stone, leafy greens, muted teal shadows, gold-orange accents, soft sky blue\nConstraints: background plate only, no people, no portraits, no text, no lettering, no logos, no watermark, no UI; preserve the lower central floor as a clean character staging area; keep all detail aligned to a consistent visible pixel grid; original fictional game art with no supplied ZIP, no third-party sprite references"
+  },
+  "builder": {
+    "file": "build_backdrop.py",
+    "sha256": "31a435369b3c4789226b77bb59f399e6c62d1c8300ba57de9c1693bc127614f6"
+  },
+  "exports": [
+    {
+      "file": "graduation-courtyard-32-color-320x256.png",
+      "size": [320, 256],
+      "mode": "RGB",
+      "paletteColors": 32,
+      "sha256": "60f9dc29ee20e0984d08d8efbc33964a43bac3592e969d8389913b7d5e858e86",
+      "runtimeReady": false
+    },
+    {
+      "file": "graduation-courtyard-64-color-320x256.png",
+      "size": [320, 256],
+      "mode": "RGB",
+      "paletteColors": 64,
+      "sha256": "1a07ccbc11873076df8df2b68da166e0f73c0a00e2c36c97071e2ae964a9bc92",
+      "runtimeReady": false
+    }
+  ],
+  "preview": {
+    "file": "graduation-courtyard-preview-3x.png",
+    "size": [960, 768],
+    "sha256": "8c30ecd85fef1cb959335355a43f682e17303ffcd2de182f2b47c0cb91aeece6",
+    "runtimeReady": false
+  },
+  "constraints": {
+    "scene": "graduation courtyard",
+    "actorSafeRegion": "lower central courtyard floor",
+    "thirdPartyArtUsed": false,
+    "providedZipUsed": false,
+    "externalImageUsed": false
+  }
+}

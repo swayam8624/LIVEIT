@@ -1,0 +1,24 @@
+{
+  "role": "market-vendor",
+  "label": "market-vendor",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.market-vendor",
+  "description": "",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/market-vendor/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "adult",
+      "manifest": "frames/market-vendor/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/market-vendor/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

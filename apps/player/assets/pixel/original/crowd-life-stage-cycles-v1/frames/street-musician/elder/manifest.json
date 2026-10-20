@@ -1,0 +1,276 @@
+{
+  "id": "crowd-street-musician-elder-movement-age-v1",
+  "role": "street-musician",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older performer",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.street-musician",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/street-musician/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "street-musician/elder/south/walk-a",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/street-musician/elder/street-musician-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ea8151d82206c19d2fa0ce0fab0549dca65a98e5f743552f7dc3e078547f923b",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-south-walk-a.png",
+      "sourceSha256": "841c80d118ac9aa29b1c64ed957b12a22d60d5e6edb64d9e9a619c3e20739f4f",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/south/walk-b",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/street-musician/elder/street-musician-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "76f299e7a1cfc3d9e15bda42041b036441e32708e096324122562460ee93609c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-south-walk-b.png",
+      "sourceSha256": "218762203fd8573b0169d39decf3242b9027b815813d248ee6fffe9963695450",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/south/idle",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/street-musician/elder/street-musician-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "586e9c1d6075e2e9221b76e07ce014d58963ccf74e05104214bd3a2a7f77a30c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-south-idle.png",
+      "sourceSha256": "795a68e59ea4f8b715a5a74dbec694900ab295a761faf0cb432bdf6f90cfcb65",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/west/walk-a",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/street-musician/elder/street-musician-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a5b90a598477ae8ee4d85ec2e3ee82d19d9b8929f733763294e33aab4dddf1bd",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-west-walk-a.png",
+      "sourceSha256": "b02c9b9aa69bc57d8e8838b78c7553242c1ea31bf740f5bfc4cd30bafdf72bc4",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/west/walk-b",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/street-musician/elder/street-musician-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "65fdad6ddeafb4f5c34c84ecc73305cc452d62235e82dfc622b2f90e58c502d3",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-west-walk-b.png",
+      "sourceSha256": "df367cf35db61a293678bd5546df3128d8136204dd924471a03f4d105d881c15",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/west/idle",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/street-musician/elder/street-musician-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9960db1b6dda12133b0c71bb2ab6256c1d7503e95d480d4608f29ff4235f6f02",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-west-idle.png",
+      "sourceSha256": "f072b71e0e20f5767f6a572e79cdc85b97f94a011318fafbd61cec8ae8f53382",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/east/walk-a",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/street-musician/elder/street-musician-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2ec9092967897fae7622f29f845d23e0fc702814a85a2c65589922c5949459e5",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-east-walk-a.png",
+      "sourceSha256": "7a87dd4af2b7aa6d016ac774841429b07f6e41bc174dfaf90cca47513ceab090",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/east/walk-b",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/street-musician/elder/street-musician-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dd3622c995f1a987b448989ce7489acc3a3aee8958197b4d72dd8dc96480455e",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-east-walk-b.png",
+      "sourceSha256": "ea1aec3590e18252f44116784c41fe0cb9521422d39901228dcb7d229d7e7d8f",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/east/idle",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/street-musician/elder/street-musician-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "11822ca147927c57c6eb76345266b7b74ce09b994a9dd3c78f6d8a3af217b298",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-east-idle.png",
+      "sourceSha256": "c4b7b6093f9c9d31a5f89afea6389f09da85d18180fcf3e09feacc0cdc7fa777",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/north/walk-a",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/street-musician/elder/street-musician-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "306b1da68b087bd8dd06ec3f386b9803ab7752c4c281f9368f2f602df7047ab9",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-north-walk-a.png",
+      "sourceSha256": "782adf37a10f454a3bd3aa2944a0b6467cb624a7a942f3cda788e84455cad2f7",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/north/walk-b",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/street-musician/elder/street-musician-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d9ff793de8b5268e84a371f2b7969d46394295986f800362d854d8a06754390e",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-north-walk-b.png",
+      "sourceSha256": "2d955cbb021ea6fbb0bc1a975688e05e6db7c0f351d4e7bf26cb38ccd5e4d351",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/elder/north/idle",
+      "role": "street-musician",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older performer",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/street-musician/elder/street-musician-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "751abc3e71ee1295a4d7283a7807b2346495179e183484fce427f46f59b19453",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/street-musician/street-musician-north-idle.png",
+      "sourceSha256": "1a42ee00d15206990d814d0b4fc2bc0834b7c2bd55ba8640209f7703641461b7",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

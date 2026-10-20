@@ -1,0 +1,2869 @@
+{
+  "schemaVersion": 1,
+  "id": "alternate-life-arc-family-v1",
+  "status": "original-rights-safe-procedural-concept",
+  "runtimeReady": false,
+  "description": "Distinct secondary player family with a continuous auburn-haired, warm-olive identity across ten life stages.",
+  "identity": {
+    "skinTone": "warm olive",
+    "hair": "auburn with silver strands in elder stages",
+    "persistentCues": ["mustard scarf", "teal satchel", "gold star clip"],
+    "outfit": "navy and berry with teal accessory",
+    "distinctFrom": "primary deep-brown, coiled-hair, sky-blue, facial-mark arc"
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["contact-a", "passing-a", "contact-b", "passing-b"],
+  "poses": ["idle", "interact"],
+  "frameSize": [24, 32],
+  "pivot": [12, 31],
+  "coverage": {
+    "stages": 10,
+    "movementFrames": 160,
+    "poseFrames": 80,
+    "totalFrames": 240,
+    "expectedTotal": 240,
+    "directionViewsIndependentlyAuthored": true,
+    "mirroredFrames": 0
+  },
+  "sourcePolicy": "No supplied ZIP content or third-party art copied. Procedural Pillow drawings are original source art for this concept batch.",
+  "sourcePrompt": "Original pixel-art secondary player family for a top-down ordinary-life simulator: warm olive complexion, auburn hair, mustard scarf, teal satchel, small gold star clip; preserve the cues while changing proportions from infant crawl through toddler, child, teen, young adult, midlife and elder woman/man. Four authored top-down directions, four readable walk phases, idle and reaching interaction, crisp 24x32 RGBA clusters, transparent background, no text, no logos, no mirror flips.",
+  "sourceMaster": {
+    "file": "alternate-life-arc-stage-masters.png",
+    "sha256": "b9ff22470243a1e0c9b90c359c10211a3328f4d7d728e321dca59cec1ee2cb4a",
+    "size": [480, 64]
+  },
+  "outputs": {
+    "movementAtlas": {
+      "file": "alternate-life-arc-movement-atlas-24x32.png",
+      "size": [384, 320],
+      "sha256": "7aae7861a239b3d40fdd4f9eccc91e80a0b1d18557eb5468c680548558b3464d"
+    },
+    "poseAtlas": {
+      "file": "alternate-life-arc-pose-atlas-24x32.png",
+      "size": [192, 320],
+      "sha256": "8be31666e9172fc5cf58f3f1c5acbb312c4c80b56d732d371f5f87208b71c040"
+    },
+    "preview": {
+      "file": "alternate-life-arc-preview-4x.png",
+      "size": [1088, 2200],
+      "sha256": "ba01e8264aad3f446ba58ca7454b23fbf94493d25b6cda22a149828a95f992fb"
+    },
+    "stageAtlases": {
+      "infant-crawl": {
+        "branch": "shared",
+        "movement": {
+          "file": "atlases/infant-crawl-movement.png",
+          "size": [96, 128],
+          "sha256": "b66bc998749233de0d3a6c932815c06470fc8544adf885a457ea75a193b307f0"
+        },
+        "poses": {
+          "file": "atlases/infant-crawl-poses.png",
+          "size": [96, 64],
+          "sha256": "11da0c7f37956cf677fca90e2019c1d329efa718cd5e0a25034f344ccd449a70"
+        }
+      },
+      "toddler-waddle": {
+        "branch": "shared",
+        "movement": {
+          "file": "atlases/toddler-waddle-movement.png",
+          "size": [96, 128],
+          "sha256": "08a0ae3696d0d7c79865df80f281167ab7bb97fa525404d6dc8651acf9835269"
+        },
+        "poses": {
+          "file": "atlases/toddler-waddle-poses.png",
+          "size": [96, 64],
+          "sha256": "9d609a13b6c8c33434346333a84e7eec6f7a92f1030d6085fcae19fb3a101baa"
+        }
+      },
+      "child-walk": {
+        "branch": "shared",
+        "movement": {
+          "file": "atlases/child-walk-movement.png",
+          "size": [96, 128],
+          "sha256": "cd946f143355074bfe7f2c445e0318c5e425d3ae9de4a3f683b9b7f36506ec5a"
+        },
+        "poses": {
+          "file": "atlases/child-walk-poses.png",
+          "size": [96, 64],
+          "sha256": "e21cf9dab1cd9a29f36e8cd34033cc2e1bdcec599ab6288941c29c27b74811d5"
+        }
+      },
+      "teen-walk": {
+        "branch": "shared",
+        "movement": {
+          "file": "atlases/teen-walk-movement.png",
+          "size": [96, 128],
+          "sha256": "19c214f2d2c1ac2c508c33b939eb7df03215a399f4b618447bbc7d8315ac5608"
+        },
+        "poses": {
+          "file": "atlases/teen-walk-poses.png",
+          "size": [96, 64],
+          "sha256": "e08b9599685d7249951bf0d73a29f2c87d187d05ab4bb0ef74b8bf50048556b2"
+        }
+      },
+      "young-adult-woman": {
+        "branch": "woman",
+        "movement": {
+          "file": "atlases/young-adult-woman-movement.png",
+          "size": [96, 128],
+          "sha256": "2b40a40cea05228a514df3805ea3f741f68fac3132d8eb43d31468e99993ea82"
+        },
+        "poses": {
+          "file": "atlases/young-adult-woman-poses.png",
+          "size": [96, 64],
+          "sha256": "1b4e67d52471252deaff0a4f4325e54e18eca01d574e160ef459a9d7b787b1b4"
+        }
+      },
+      "midlife-woman": {
+        "branch": "woman",
+        "movement": {
+          "file": "atlases/midlife-woman-movement.png",
+          "size": [96, 128],
+          "sha256": "e62e6fb601ec7b37df4a1a01c8da6f6bcf4a144096102cd94e5b10013e13f988"
+        },
+        "poses": {
+          "file": "atlases/midlife-woman-poses.png",
+          "size": [96, 64],
+          "sha256": "f8d1450b4ba71ee6e4eef54bc248a94168c0d4715ce745d5c99b4beaea010678"
+        }
+      },
+      "elder-woman": {
+        "branch": "woman",
+        "movement": {
+          "file": "atlases/elder-woman-movement.png",
+          "size": [96, 128],
+          "sha256": "5fd72aa8b59e700fc9c31070e611a952bad6213034136a803496a7208276a630"
+        },
+        "poses": {
+          "file": "atlases/elder-woman-poses.png",
+          "size": [96, 64],
+          "sha256": "a20524b6f496e5eaada2ba24385a93d578a941a2dc26b13b047fe68b95d4053f"
+        }
+      },
+      "young-adult-man": {
+        "branch": "man",
+        "movement": {
+          "file": "atlases/young-adult-man-movement.png",
+          "size": [96, 128],
+          "sha256": "5a3a550ea8e05cee388f189b117e9a5ebd5ff96e9248ed4f310f580fb53aec24"
+        },
+        "poses": {
+          "file": "atlases/young-adult-man-poses.png",
+          "size": [96, 64],
+          "sha256": "2cad96be4e817930119fd497494bac8fa1a7322b2c5ee6043f9d296e37e4ce56"
+        }
+      },
+      "midlife-man": {
+        "branch": "man",
+        "movement": {
+          "file": "atlases/midlife-man-movement.png",
+          "size": [96, 128],
+          "sha256": "e058b70c6fbafb287b9a6f6a5b8d2bd53b469390cc445667df1978ed1407f36c"
+        },
+        "poses": {
+          "file": "atlases/midlife-man-poses.png",
+          "size": [96, 64],
+          "sha256": "07dc7e117e2712142cf45624e55705cf22372c993a075486f2e85e4e58f3af49"
+        }
+      },
+      "elder-man": {
+        "branch": "man",
+        "movement": {
+          "file": "atlases/elder-man-movement.png",
+          "size": [96, 128],
+          "sha256": "4c96f745e4023bebe4106bfdf5dd4b73359aa88ea43edd3ee54f9d86d74a0648"
+        },
+        "poses": {
+          "file": "atlases/elder-man-poses.png",
+          "size": [96, 64],
+          "sha256": "de930dfecd35cd31d4c91cd50de96856a64873d6956e46a9957c7d47fe22b47a"
+        }
+      }
+    },
+    "branchAtlases": {
+      "shared": {
+        "movement": {
+          "file": "atlases/shared-movement.png",
+          "size": [384, 128],
+          "sha256": "af02ac34ce7059ffaf7f4df6e2bc8137a4cd82414ca0c13ea9bae37ef3d4445c"
+        },
+        "poses": {
+          "file": "atlases/shared-poses.png",
+          "size": [192, 128],
+          "sha256": "ad92c7cf1ec1533135e5b466b4bcc41dd02a0b86ea0725e92c55cb72e84a6e27"
+        }
+      },
+      "woman": {
+        "movement": {
+          "file": "atlases/woman-movement.png",
+          "size": [384, 96],
+          "sha256": "0959013f904c6b4b8c891a6556e9f7ad22f259bd480ce37ad84ad6678c0a884b"
+        },
+        "poses": {
+          "file": "atlases/woman-poses.png",
+          "size": [192, 96],
+          "sha256": "3ea82d349299c31d48ec35ca03286f3b511361613785b29912da7e1421b2580e"
+        }
+      },
+      "man": {
+        "movement": {
+          "file": "atlases/man-movement.png",
+          "size": [384, 96],
+          "sha256": "dcc15471163636732165baea603d3ec160357b4f04265faae3065899285bf13e"
+        },
+        "poses": {
+          "file": "atlases/man-poses.png",
+          "size": [192, 96],
+          "sha256": "7876dec99f61097c1ebabea7a34a460ae13d52ae4c3f970608f6500371d751cc"
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "infant-crawl/south/contact-a",
+      "stage": "infant-crawl",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/infant-crawl/infant-crawl-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/south/passing-a",
+      "stage": "infant-crawl",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/infant-crawl/infant-crawl-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/south/contact-b",
+      "stage": "infant-crawl",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/infant-crawl/infant-crawl-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/south/passing-b",
+      "stage": "infant-crawl",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/infant-crawl/infant-crawl-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/south/idle",
+      "stage": "infant-crawl",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/infant-crawl/infant-crawl-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/south/interact",
+      "stage": "infant-crawl",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/infant-crawl/infant-crawl-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/west/contact-a",
+      "stage": "infant-crawl",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/infant-crawl/infant-crawl-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/west/passing-a",
+      "stage": "infant-crawl",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/infant-crawl/infant-crawl-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/west/contact-b",
+      "stage": "infant-crawl",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/infant-crawl/infant-crawl-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/west/passing-b",
+      "stage": "infant-crawl",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/infant-crawl/infant-crawl-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/west/idle",
+      "stage": "infant-crawl",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/infant-crawl/infant-crawl-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/west/interact",
+      "stage": "infant-crawl",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/infant-crawl/infant-crawl-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/east/contact-a",
+      "stage": "infant-crawl",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/infant-crawl/infant-crawl-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/east/passing-a",
+      "stage": "infant-crawl",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/infant-crawl/infant-crawl-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/east/contact-b",
+      "stage": "infant-crawl",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/infant-crawl/infant-crawl-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/east/passing-b",
+      "stage": "infant-crawl",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/infant-crawl/infant-crawl-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/east/idle",
+      "stage": "infant-crawl",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/infant-crawl/infant-crawl-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/east/interact",
+      "stage": "infant-crawl",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/infant-crawl/infant-crawl-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/north/contact-a",
+      "stage": "infant-crawl",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/infant-crawl/infant-crawl-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/north/passing-a",
+      "stage": "infant-crawl",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/infant-crawl/infant-crawl-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/north/contact-b",
+      "stage": "infant-crawl",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/infant-crawl/infant-crawl-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/north/passing-b",
+      "stage": "infant-crawl",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/infant-crawl/infant-crawl-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/north/idle",
+      "stage": "infant-crawl",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/infant-crawl/infant-crawl-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "infant-crawl/north/interact",
+      "stage": "infant-crawl",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/infant-crawl/infant-crawl-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/south/contact-a",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/toddler-waddle/toddler-waddle-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/south/passing-a",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/toddler-waddle/toddler-waddle-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/south/contact-b",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/toddler-waddle/toddler-waddle-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/south/passing-b",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/toddler-waddle/toddler-waddle-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/south/idle",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/toddler-waddle/toddler-waddle-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/south/interact",
+      "stage": "toddler-waddle",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/toddler-waddle/toddler-waddle-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/west/contact-a",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/toddler-waddle/toddler-waddle-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/west/passing-a",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/toddler-waddle/toddler-waddle-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/west/contact-b",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/toddler-waddle/toddler-waddle-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/west/passing-b",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/toddler-waddle/toddler-waddle-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/west/idle",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/toddler-waddle/toddler-waddle-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/west/interact",
+      "stage": "toddler-waddle",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/toddler-waddle/toddler-waddle-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/east/contact-a",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/toddler-waddle/toddler-waddle-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/east/passing-a",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/toddler-waddle/toddler-waddle-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/east/contact-b",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/toddler-waddle/toddler-waddle-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/east/passing-b",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/toddler-waddle/toddler-waddle-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/east/idle",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/toddler-waddle/toddler-waddle-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/east/interact",
+      "stage": "toddler-waddle",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/toddler-waddle/toddler-waddle-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/north/contact-a",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/toddler-waddle/toddler-waddle-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/north/passing-a",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/toddler-waddle/toddler-waddle-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/north/contact-b",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/toddler-waddle/toddler-waddle-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/north/passing-b",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/toddler-waddle/toddler-waddle-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/north/idle",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/toddler-waddle/toddler-waddle-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "toddler-waddle/north/interact",
+      "stage": "toddler-waddle",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/toddler-waddle/toddler-waddle-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/south/contact-a",
+      "stage": "child-walk",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/child-walk/child-walk-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/south/passing-a",
+      "stage": "child-walk",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/child-walk/child-walk-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/south/contact-b",
+      "stage": "child-walk",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/child-walk/child-walk-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/south/passing-b",
+      "stage": "child-walk",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/child-walk/child-walk-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/south/idle",
+      "stage": "child-walk",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/child-walk/child-walk-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/south/interact",
+      "stage": "child-walk",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/child-walk/child-walk-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/west/contact-a",
+      "stage": "child-walk",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/child-walk/child-walk-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/west/passing-a",
+      "stage": "child-walk",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/child-walk/child-walk-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/west/contact-b",
+      "stage": "child-walk",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/child-walk/child-walk-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/west/passing-b",
+      "stage": "child-walk",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/child-walk/child-walk-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/west/idle",
+      "stage": "child-walk",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/child-walk/child-walk-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/west/interact",
+      "stage": "child-walk",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/child-walk/child-walk-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/east/contact-a",
+      "stage": "child-walk",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/child-walk/child-walk-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/east/passing-a",
+      "stage": "child-walk",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/child-walk/child-walk-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/east/contact-b",
+      "stage": "child-walk",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/child-walk/child-walk-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/east/passing-b",
+      "stage": "child-walk",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/child-walk/child-walk-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/east/idle",
+      "stage": "child-walk",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/child-walk/child-walk-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/east/interact",
+      "stage": "child-walk",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/child-walk/child-walk-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/north/contact-a",
+      "stage": "child-walk",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/child-walk/child-walk-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/north/passing-a",
+      "stage": "child-walk",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/child-walk/child-walk-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/north/contact-b",
+      "stage": "child-walk",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/child-walk/child-walk-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/north/passing-b",
+      "stage": "child-walk",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/child-walk/child-walk-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/north/idle",
+      "stage": "child-walk",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/child-walk/child-walk-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "child-walk/north/interact",
+      "stage": "child-walk",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/child-walk/child-walk-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/south/contact-a",
+      "stage": "teen-walk",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/teen-walk/teen-walk-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/south/passing-a",
+      "stage": "teen-walk",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/teen-walk/teen-walk-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/south/contact-b",
+      "stage": "teen-walk",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/teen-walk/teen-walk-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/south/passing-b",
+      "stage": "teen-walk",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/teen-walk/teen-walk-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/south/idle",
+      "stage": "teen-walk",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/teen-walk/teen-walk-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/south/interact",
+      "stage": "teen-walk",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/teen-walk/teen-walk-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/west/contact-a",
+      "stage": "teen-walk",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/teen-walk/teen-walk-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/west/passing-a",
+      "stage": "teen-walk",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/teen-walk/teen-walk-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/west/contact-b",
+      "stage": "teen-walk",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/teen-walk/teen-walk-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/west/passing-b",
+      "stage": "teen-walk",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/teen-walk/teen-walk-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/west/idle",
+      "stage": "teen-walk",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/teen-walk/teen-walk-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/west/interact",
+      "stage": "teen-walk",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/teen-walk/teen-walk-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/east/contact-a",
+      "stage": "teen-walk",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/teen-walk/teen-walk-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/east/passing-a",
+      "stage": "teen-walk",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/teen-walk/teen-walk-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/east/contact-b",
+      "stage": "teen-walk",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/teen-walk/teen-walk-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/east/passing-b",
+      "stage": "teen-walk",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/teen-walk/teen-walk-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/east/idle",
+      "stage": "teen-walk",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/teen-walk/teen-walk-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/east/interact",
+      "stage": "teen-walk",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/teen-walk/teen-walk-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/north/contact-a",
+      "stage": "teen-walk",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/teen-walk/teen-walk-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/north/passing-a",
+      "stage": "teen-walk",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/teen-walk/teen-walk-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/north/contact-b",
+      "stage": "teen-walk",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/teen-walk/teen-walk-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/north/passing-b",
+      "stage": "teen-walk",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/teen-walk/teen-walk-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/north/idle",
+      "stage": "teen-walk",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/teen-walk/teen-walk-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "teen-walk/north/interact",
+      "stage": "teen-walk",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/teen-walk/teen-walk-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/contact-a",
+      "stage": "young-adult-woman",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/young-adult-woman/young-adult-woman-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/passing-a",
+      "stage": "young-adult-woman",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/young-adult-woman/young-adult-woman-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/contact-b",
+      "stage": "young-adult-woman",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/young-adult-woman/young-adult-woman-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/passing-b",
+      "stage": "young-adult-woman",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/young-adult-woman/young-adult-woman-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/idle",
+      "stage": "young-adult-woman",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/young-adult-woman/young-adult-woman-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/south/interact",
+      "stage": "young-adult-woman",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/young-adult-woman/young-adult-woman-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/contact-a",
+      "stage": "young-adult-woman",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/young-adult-woman/young-adult-woman-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/passing-a",
+      "stage": "young-adult-woman",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/young-adult-woman/young-adult-woman-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/contact-b",
+      "stage": "young-adult-woman",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/young-adult-woman/young-adult-woman-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/passing-b",
+      "stage": "young-adult-woman",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/young-adult-woman/young-adult-woman-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/idle",
+      "stage": "young-adult-woman",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/young-adult-woman/young-adult-woman-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/west/interact",
+      "stage": "young-adult-woman",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/young-adult-woman/young-adult-woman-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/contact-a",
+      "stage": "young-adult-woman",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/young-adult-woman/young-adult-woman-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/passing-a",
+      "stage": "young-adult-woman",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/young-adult-woman/young-adult-woman-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/contact-b",
+      "stage": "young-adult-woman",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/young-adult-woman/young-adult-woman-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/passing-b",
+      "stage": "young-adult-woman",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/young-adult-woman/young-adult-woman-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/idle",
+      "stage": "young-adult-woman",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/young-adult-woman/young-adult-woman-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/east/interact",
+      "stage": "young-adult-woman",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/young-adult-woman/young-adult-woman-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/contact-a",
+      "stage": "young-adult-woman",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/young-adult-woman/young-adult-woman-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/passing-a",
+      "stage": "young-adult-woman",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/young-adult-woman/young-adult-woman-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/contact-b",
+      "stage": "young-adult-woman",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/young-adult-woman/young-adult-woman-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/passing-b",
+      "stage": "young-adult-woman",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/young-adult-woman/young-adult-woman-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/idle",
+      "stage": "young-adult-woman",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/young-adult-woman/young-adult-woman-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-woman/north/interact",
+      "stage": "young-adult-woman",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/young-adult-woman/young-adult-woman-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/south/contact-a",
+      "stage": "midlife-woman",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/midlife-woman/midlife-woman-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/south/passing-a",
+      "stage": "midlife-woman",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/midlife-woman/midlife-woman-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/south/contact-b",
+      "stage": "midlife-woman",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/midlife-woman/midlife-woman-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/south/passing-b",
+      "stage": "midlife-woman",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/midlife-woman/midlife-woman-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/south/idle",
+      "stage": "midlife-woman",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/midlife-woman/midlife-woman-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/south/interact",
+      "stage": "midlife-woman",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/midlife-woman/midlife-woman-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/west/contact-a",
+      "stage": "midlife-woman",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/midlife-woman/midlife-woman-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/west/passing-a",
+      "stage": "midlife-woman",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/midlife-woman/midlife-woman-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/west/contact-b",
+      "stage": "midlife-woman",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/midlife-woman/midlife-woman-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/west/passing-b",
+      "stage": "midlife-woman",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/midlife-woman/midlife-woman-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/west/idle",
+      "stage": "midlife-woman",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/midlife-woman/midlife-woman-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/west/interact",
+      "stage": "midlife-woman",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/midlife-woman/midlife-woman-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/east/contact-a",
+      "stage": "midlife-woman",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/midlife-woman/midlife-woman-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/east/passing-a",
+      "stage": "midlife-woman",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/midlife-woman/midlife-woman-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/east/contact-b",
+      "stage": "midlife-woman",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/midlife-woman/midlife-woman-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/east/passing-b",
+      "stage": "midlife-woman",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/midlife-woman/midlife-woman-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/east/idle",
+      "stage": "midlife-woman",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/midlife-woman/midlife-woman-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/east/interact",
+      "stage": "midlife-woman",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/midlife-woman/midlife-woman-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/north/contact-a",
+      "stage": "midlife-woman",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/midlife-woman/midlife-woman-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/north/passing-a",
+      "stage": "midlife-woman",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/midlife-woman/midlife-woman-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/north/contact-b",
+      "stage": "midlife-woman",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/midlife-woman/midlife-woman-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/north/passing-b",
+      "stage": "midlife-woman",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/midlife-woman/midlife-woman-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/north/idle",
+      "stage": "midlife-woman",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/midlife-woman/midlife-woman-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-woman/north/interact",
+      "stage": "midlife-woman",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/midlife-woman/midlife-woman-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/contact-a",
+      "stage": "elder-woman",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/elder-woman/elder-woman-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/passing-a",
+      "stage": "elder-woman",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/elder-woman/elder-woman-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/contact-b",
+      "stage": "elder-woman",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/elder-woman/elder-woman-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/passing-b",
+      "stage": "elder-woman",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/elder-woman/elder-woman-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/idle",
+      "stage": "elder-woman",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/elder-woman/elder-woman-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/south/interact",
+      "stage": "elder-woman",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/elder-woman/elder-woman-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/contact-a",
+      "stage": "elder-woman",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/elder-woman/elder-woman-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/passing-a",
+      "stage": "elder-woman",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/elder-woman/elder-woman-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/contact-b",
+      "stage": "elder-woman",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/elder-woman/elder-woman-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/passing-b",
+      "stage": "elder-woman",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/elder-woman/elder-woman-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/idle",
+      "stage": "elder-woman",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/elder-woman/elder-woman-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/west/interact",
+      "stage": "elder-woman",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/elder-woman/elder-woman-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/contact-a",
+      "stage": "elder-woman",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/elder-woman/elder-woman-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/passing-a",
+      "stage": "elder-woman",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/elder-woman/elder-woman-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/contact-b",
+      "stage": "elder-woman",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/elder-woman/elder-woman-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/passing-b",
+      "stage": "elder-woman",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/elder-woman/elder-woman-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/idle",
+      "stage": "elder-woman",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/elder-woman/elder-woman-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/east/interact",
+      "stage": "elder-woman",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/elder-woman/elder-woman-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/contact-a",
+      "stage": "elder-woman",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/elder-woman/elder-woman-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/passing-a",
+      "stage": "elder-woman",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/elder-woman/elder-woman-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/contact-b",
+      "stage": "elder-woman",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/elder-woman/elder-woman-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/passing-b",
+      "stage": "elder-woman",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/elder-woman/elder-woman-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/idle",
+      "stage": "elder-woman",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/elder-woman/elder-woman-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-woman/north/interact",
+      "stage": "elder-woman",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/elder-woman/elder-woman-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/south/contact-a",
+      "stage": "young-adult-man",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/young-adult-man/young-adult-man-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/south/passing-a",
+      "stage": "young-adult-man",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/young-adult-man/young-adult-man-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/south/contact-b",
+      "stage": "young-adult-man",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/young-adult-man/young-adult-man-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/south/passing-b",
+      "stage": "young-adult-man",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/young-adult-man/young-adult-man-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/south/idle",
+      "stage": "young-adult-man",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/young-adult-man/young-adult-man-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/south/interact",
+      "stage": "young-adult-man",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/young-adult-man/young-adult-man-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/west/contact-a",
+      "stage": "young-adult-man",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/young-adult-man/young-adult-man-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/west/passing-a",
+      "stage": "young-adult-man",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/young-adult-man/young-adult-man-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/west/contact-b",
+      "stage": "young-adult-man",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/young-adult-man/young-adult-man-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/west/passing-b",
+      "stage": "young-adult-man",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/young-adult-man/young-adult-man-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/west/idle",
+      "stage": "young-adult-man",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/young-adult-man/young-adult-man-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/west/interact",
+      "stage": "young-adult-man",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/young-adult-man/young-adult-man-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/east/contact-a",
+      "stage": "young-adult-man",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/young-adult-man/young-adult-man-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/east/passing-a",
+      "stage": "young-adult-man",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/young-adult-man/young-adult-man-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/east/contact-b",
+      "stage": "young-adult-man",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/young-adult-man/young-adult-man-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/east/passing-b",
+      "stage": "young-adult-man",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/young-adult-man/young-adult-man-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/east/idle",
+      "stage": "young-adult-man",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/young-adult-man/young-adult-man-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/east/interact",
+      "stage": "young-adult-man",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/young-adult-man/young-adult-man-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/north/contact-a",
+      "stage": "young-adult-man",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/young-adult-man/young-adult-man-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/north/passing-a",
+      "stage": "young-adult-man",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/young-adult-man/young-adult-man-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/north/contact-b",
+      "stage": "young-adult-man",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/young-adult-man/young-adult-man-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/north/passing-b",
+      "stage": "young-adult-man",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/young-adult-man/young-adult-man-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/north/idle",
+      "stage": "young-adult-man",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/young-adult-man/young-adult-man-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "young-adult-man/north/interact",
+      "stage": "young-adult-man",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/young-adult-man/young-adult-man-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/south/contact-a",
+      "stage": "midlife-man",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/midlife-man/midlife-man-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/south/passing-a",
+      "stage": "midlife-man",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/midlife-man/midlife-man-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/south/contact-b",
+      "stage": "midlife-man",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/midlife-man/midlife-man-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/south/passing-b",
+      "stage": "midlife-man",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/midlife-man/midlife-man-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/south/idle",
+      "stage": "midlife-man",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/midlife-man/midlife-man-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/south/interact",
+      "stage": "midlife-man",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/midlife-man/midlife-man-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/west/contact-a",
+      "stage": "midlife-man",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/midlife-man/midlife-man-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/west/passing-a",
+      "stage": "midlife-man",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/midlife-man/midlife-man-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/west/contact-b",
+      "stage": "midlife-man",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/midlife-man/midlife-man-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/west/passing-b",
+      "stage": "midlife-man",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/midlife-man/midlife-man-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/west/idle",
+      "stage": "midlife-man",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/midlife-man/midlife-man-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/west/interact",
+      "stage": "midlife-man",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/midlife-man/midlife-man-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/east/contact-a",
+      "stage": "midlife-man",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/midlife-man/midlife-man-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/east/passing-a",
+      "stage": "midlife-man",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/midlife-man/midlife-man-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/east/contact-b",
+      "stage": "midlife-man",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/midlife-man/midlife-man-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/east/passing-b",
+      "stage": "midlife-man",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/midlife-man/midlife-man-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/east/idle",
+      "stage": "midlife-man",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/midlife-man/midlife-man-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/east/interact",
+      "stage": "midlife-man",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/midlife-man/midlife-man-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/north/contact-a",
+      "stage": "midlife-man",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/midlife-man/midlife-man-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/north/passing-a",
+      "stage": "midlife-man",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/midlife-man/midlife-man-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/north/contact-b",
+      "stage": "midlife-man",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/midlife-man/midlife-man-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/north/passing-b",
+      "stage": "midlife-man",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/midlife-man/midlife-man-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/north/idle",
+      "stage": "midlife-man",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/midlife-man/midlife-man-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "midlife-man/north/interact",
+      "stage": "midlife-man",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/midlife-man/midlife-man-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/contact-a",
+      "stage": "elder-man",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/elder-man/elder-man-south-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/passing-a",
+      "stage": "elder-man",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/elder-man/elder-man-south-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/contact-b",
+      "stage": "elder-man",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/elder-man/elder-man-south-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/passing-b",
+      "stage": "elder-man",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/elder-man/elder-man-south-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/idle",
+      "stage": "elder-man",
+      "direction": "south",
+      "state": "idle",
+      "file": "frames/elder-man/elder-man-south-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/south/interact",
+      "stage": "elder-man",
+      "direction": "south",
+      "state": "interact",
+      "file": "frames/elder-man/elder-man-south-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/contact-a",
+      "stage": "elder-man",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/elder-man/elder-man-west-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/passing-a",
+      "stage": "elder-man",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/elder-man/elder-man-west-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/contact-b",
+      "stage": "elder-man",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/elder-man/elder-man-west-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/passing-b",
+      "stage": "elder-man",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/elder-man/elder-man-west-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/idle",
+      "stage": "elder-man",
+      "direction": "west",
+      "state": "idle",
+      "file": "frames/elder-man/elder-man-west-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/west/interact",
+      "stage": "elder-man",
+      "direction": "west",
+      "state": "interact",
+      "file": "frames/elder-man/elder-man-west-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/contact-a",
+      "stage": "elder-man",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/elder-man/elder-man-east-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/passing-a",
+      "stage": "elder-man",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/elder-man/elder-man-east-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/contact-b",
+      "stage": "elder-man",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/elder-man/elder-man-east-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/passing-b",
+      "stage": "elder-man",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/elder-man/elder-man-east-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/idle",
+      "stage": "elder-man",
+      "direction": "east",
+      "state": "idle",
+      "file": "frames/elder-man/elder-man-east-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/east/interact",
+      "stage": "elder-man",
+      "direction": "east",
+      "state": "interact",
+      "file": "frames/elder-man/elder-man-east-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/contact-a",
+      "stage": "elder-man",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/elder-man/elder-man-north-contact-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/passing-a",
+      "stage": "elder-man",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/elder-man/elder-man-north-passing-a.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/contact-b",
+      "stage": "elder-man",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/elder-man/elder-man-north-contact-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/passing-b",
+      "stage": "elder-man",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/elder-man/elder-man-north-passing-b.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/idle",
+      "stage": "elder-man",
+      "direction": "north",
+      "state": "idle",
+      "file": "frames/elder-man/elder-man-north-idle.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-man/north/interact",
+      "stage": "elder-man",
+      "direction": "north",
+      "state": "interact",
+      "file": "frames/elder-man/elder-man-north-interact.png",
+      "size": [24, 32],
+      "pivot": [12, 31],
+      "mirrored": false,
+      "runtimeReady": false
+    }
+  ],
+  "limitations": [
+    "Concept quality only; small sprites require human pixel cleanup.",
+    "Identity continuity is structurally encoded but needs art-direction review before runtime.",
+    "All frames remain runtimeReady false until renderer integration and in-game review."
+  ]
+}

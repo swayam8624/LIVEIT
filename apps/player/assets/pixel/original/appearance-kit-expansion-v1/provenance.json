@@ -1,0 +1,13 @@
+{
+  "schema": "liveit.pixel.provenance.v1",
+  "package": "appearance-kit-expansion-v1",
+  "source": "generate_wardrobe_expansion.py",
+  "authorship": "Original Pillow primitives and hand-authored palette; no supplied archives, internet images, or third-party pixels used.",
+  "generatedAt": "2026-10-20",
+  "runtimeReady": false,
+  "reviewLimits": [
+    "concept-only",
+    "directional parity and age-safe layering require human art review",
+    "renderer import and device evidence are outstanding"
+  ]
+}

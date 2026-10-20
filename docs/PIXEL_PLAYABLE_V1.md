@@ -1,6 +1,6 @@
 # LIVEIT — first actual pixel-world gameplay slice
 
-**Snapshot, 19 October 2026.** Branch: feat/pixel-town-cafe-playable, based on feat/native-life-economic-foundation. This is a *partial but real* 2D game foundation, not a finished BitLife/Episode-equivalent game.
+**Snapshot, 19 October 2026.** Branch: feat/pixel-town-cafe-playable, based on feat/native-life-economic-foundation. This is a _partial but real_ 2D game foundation, not a finished BitLife/Episode-equivalent game.
 
 ## Implemented and testable
 
@@ -37,7 +37,7 @@ The general importer scans all 953 items in Downloads and prompts for every file
 
 Incorrect/missing hashes are SKIPPED, not auto-approved. This importer retains the original ZIPs where they are, rejects unsafe archive entries, excludes executables/3D content and creates source/license evidence receipts. Other itch.io packs with no rights proof or licenses restricting public raw-source redistribution are excluded—even if the game itself is free/open-source.
 
-After inspecting the imported contents, check GitHub file size limits and push *only* the imported approved files from this detached worktree:
+After inspecting the imported contents, check GitHub file size limits and push _only_ the imported approved files from this detached worktree:
 
     git add assets/imported
     git diff --cached --stat

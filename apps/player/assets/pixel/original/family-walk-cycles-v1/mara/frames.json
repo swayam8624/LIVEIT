@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "runtimeReady": false,
+  "sourceMode": "generated-four-phase",
+  "sheet": {
+    "columns": 4,
+    "rows": 4,
+    "frameWidth": 96,
+    "frameHeight": 128,
+    "sourceWidth": 1164,
+    "sourceHeight": 1351
+  },
+  "frames": [
+    {
+      "id": "mara/south/contact-a",
+      "character": "Mara",
+      "facing": "south",
+      "phase": "contact-a",
+      "file": "frames/mara-south-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/south/passing-a",
+      "character": "Mara",
+      "facing": "south",
+      "phase": "passing-a",
+      "file": "frames/mara-south-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/south/contact-b",
+      "character": "Mara",
+      "facing": "south",
+      "phase": "contact-b",
+      "file": "frames/mara-south-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/south/passing-b",
+      "character": "Mara",
+      "facing": "south",
+      "phase": "passing-b",
+      "file": "frames/mara-south-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 0,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/west/contact-a",
+      "character": "Mara",
+      "facing": "west",
+      "phase": "contact-a",
+      "file": "frames/mara-west-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/west/passing-a",
+      "character": "Mara",
+      "facing": "west",
+      "phase": "passing-a",
+      "file": "frames/mara-west-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/west/contact-b",
+      "character": "Mara",
+      "facing": "west",
+      "phase": "contact-b",
+      "file": "frames/mara-west-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/west/passing-b",
+      "character": "Mara",
+      "facing": "west",
+      "phase": "passing-b",
+      "file": "frames/mara-west-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 128,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/east/contact-a",
+      "character": "Mara",
+      "facing": "east",
+      "phase": "contact-a",
+      "file": "frames/mara-east-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/east/passing-a",
+      "character": "Mara",
+      "facing": "east",
+      "phase": "passing-a",
+      "file": "frames/mara-east-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/east/contact-b",
+      "character": "Mara",
+      "facing": "east",
+      "phase": "contact-b",
+      "file": "frames/mara-east-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/east/passing-b",
+      "character": "Mara",
+      "facing": "east",
+      "phase": "passing-b",
+      "file": "frames/mara-east-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 256,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/north/contact-a",
+      "character": "Mara",
+      "facing": "north",
+      "phase": "contact-a",
+      "file": "frames/mara-north-contact-a.png",
+      "atlas": {
+        "x": 0,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/north/passing-a",
+      "character": "Mara",
+      "facing": "north",
+      "phase": "passing-a",
+      "file": "frames/mara-north-passing-a.png",
+      "atlas": {
+        "x": 96,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/north/contact-b",
+      "character": "Mara",
+      "facing": "north",
+      "phase": "contact-b",
+      "file": "frames/mara-north-contact-b.png",
+      "atlas": {
+        "x": 192,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "mara/north/passing-b",
+      "character": "Mara",
+      "facing": "north",
+      "phase": "passing-b",
+      "file": "frames/mara-north-passing-b.png",
+      "atlas": {
+        "x": 288,
+        "y": 384,
+        "width": 96,
+        "height": 128
+      },
+      "pivot": {
+        "x": 48,
+        "y": 126
+      },
+      "runtimeReady": false
+    }
+  ]
+}

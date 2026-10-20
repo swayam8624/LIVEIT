@@ -1,0 +1,254 @@
+{
+  "schema": "liveit.pixel-sprite/v1",
+  "asset": "movement-walk-4dir",
+  "character": "canonical-auburn-teal-adult-woman",
+  "frameWidth": 32,
+  "frameHeight": 48,
+  "columns": 4,
+  "rows": 4,
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["contact-a", "passing-a", "contact-b", "passing-b"],
+  "frames": [
+    {
+      "name": "south_contact-a",
+      "file": "south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "south",
+      "phase": "contact-a"
+    },
+    {
+      "name": "south_passing-a",
+      "file": "south-passing-a.png",
+      "x": 32,
+      "y": 0,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "south",
+      "phase": "passing-a"
+    },
+    {
+      "name": "south_contact-b",
+      "file": "south-contact-b.png",
+      "x": 64,
+      "y": 0,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "south",
+      "phase": "contact-b"
+    },
+    {
+      "name": "south_passing-b",
+      "file": "south-passing-b.png",
+      "x": 96,
+      "y": 0,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "south",
+      "phase": "passing-b"
+    },
+    {
+      "name": "west_contact-a",
+      "file": "west-contact-a.png",
+      "x": 0,
+      "y": 48,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "west",
+      "phase": "contact-a"
+    },
+    {
+      "name": "west_passing-a",
+      "file": "west-passing-a.png",
+      "x": 32,
+      "y": 48,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "west",
+      "phase": "passing-a"
+    },
+    {
+      "name": "west_contact-b",
+      "file": "west-contact-b.png",
+      "x": 64,
+      "y": 48,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "west",
+      "phase": "contact-b"
+    },
+    {
+      "name": "west_passing-b",
+      "file": "west-passing-b.png",
+      "x": 96,
+      "y": 48,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "west",
+      "phase": "passing-b"
+    },
+    {
+      "name": "east_contact-a",
+      "file": "east-contact-a.png",
+      "x": 0,
+      "y": 96,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "east",
+      "phase": "contact-a"
+    },
+    {
+      "name": "east_passing-a",
+      "file": "east-passing-a.png",
+      "x": 32,
+      "y": 96,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "east",
+      "phase": "passing-a"
+    },
+    {
+      "name": "east_contact-b",
+      "file": "east-contact-b.png",
+      "x": 64,
+      "y": 96,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "east",
+      "phase": "contact-b"
+    },
+    {
+      "name": "east_passing-b",
+      "file": "east-passing-b.png",
+      "x": 96,
+      "y": 96,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "east",
+      "phase": "passing-b"
+    },
+    {
+      "name": "north_contact-a",
+      "file": "north-contact-a.png",
+      "x": 0,
+      "y": 144,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "north",
+      "phase": "contact-a"
+    },
+    {
+      "name": "north_passing-a",
+      "file": "north-passing-a.png",
+      "x": 32,
+      "y": 144,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "north",
+      "phase": "passing-a"
+    },
+    {
+      "name": "north_contact-b",
+      "file": "north-contact-b.png",
+      "x": 64,
+      "y": 144,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "north",
+      "phase": "contact-b"
+    },
+    {
+      "name": "north_passing-b",
+      "file": "north-passing-b.png",
+      "x": 96,
+      "y": 144,
+      "width": 32,
+      "height": 48,
+      "durationMs": 120,
+      "pivot": {
+        "x": 16,
+        "y": 44
+      },
+      "direction": "north",
+      "phase": "passing-b"
+    }
+  ],
+  "sourceGeneration": "OpenAI built-in imagegen output normalized by Pillow; source image retained under Codex generated_images and not shipped."
+}

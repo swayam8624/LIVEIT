@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "assetId": "elder-man-cycles-v2",
+  "source": "elder-man-cycles-source.png",
+  "atlas": {
+    "file": "elder-man-cycles-atlas.png",
+    "width": 384,
+    "height": 512,
+    "columns": 4,
+    "rows": 4,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "order": "phase columns contact-a/passing-a/contact-b/passing-b; direction rows south/west/east/north"
+  },
+  "frames": [
+    {
+      "id": "elder-man-south-contact-a",
+      "stage": "elder-man",
+      "direction": "south",
+      "phase": "contact-a",
+      "file": "frames/elder-man-south-contact-a.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-south-passing-a",
+      "stage": "elder-man",
+      "direction": "south",
+      "phase": "passing-a",
+      "file": "frames/elder-man-south-passing-a.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-south-contact-b",
+      "stage": "elder-man",
+      "direction": "south",
+      "phase": "contact-b",
+      "file": "frames/elder-man-south-contact-b.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-south-passing-b",
+      "stage": "elder-man",
+      "direction": "south",
+      "phase": "passing-b",
+      "file": "frames/elder-man-south-passing-b.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-west-contact-a",
+      "stage": "elder-man",
+      "direction": "west",
+      "phase": "contact-a",
+      "file": "frames/elder-man-west-contact-a.png",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-west-passing-a",
+      "stage": "elder-man",
+      "direction": "west",
+      "phase": "passing-a",
+      "file": "frames/elder-man-west-passing-a.png",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-west-contact-b",
+      "stage": "elder-man",
+      "direction": "west",
+      "phase": "contact-b",
+      "file": "frames/elder-man-west-contact-b.png",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-west-passing-b",
+      "stage": "elder-man",
+      "direction": "west",
+      "phase": "passing-b",
+      "file": "frames/elder-man-west-passing-b.png",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-east-contact-a",
+      "stage": "elder-man",
+      "direction": "east",
+      "phase": "contact-a",
+      "file": "frames/elder-man-east-contact-a.png",
+      "x": 0,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-east-passing-a",
+      "stage": "elder-man",
+      "direction": "east",
+      "phase": "passing-a",
+      "file": "frames/elder-man-east-passing-a.png",
+      "x": 96,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-east-contact-b",
+      "stage": "elder-man",
+      "direction": "east",
+      "phase": "contact-b",
+      "file": "frames/elder-man-east-contact-b.png",
+      "x": 192,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-east-passing-b",
+      "stage": "elder-man",
+      "direction": "east",
+      "phase": "passing-b",
+      "file": "frames/elder-man-east-passing-b.png",
+      "x": 288,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-north-contact-a",
+      "stage": "elder-man",
+      "direction": "north",
+      "phase": "contact-a",
+      "file": "frames/elder-man-north-contact-a.png",
+      "x": 0,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-north-passing-a",
+      "stage": "elder-man",
+      "direction": "north",
+      "phase": "passing-a",
+      "file": "frames/elder-man-north-passing-a.png",
+      "x": 96,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-north-contact-b",
+      "stage": "elder-man",
+      "direction": "north",
+      "phase": "contact-b",
+      "file": "frames/elder-man-north-contact-b.png",
+      "x": 192,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    },
+    {
+      "id": "elder-man-north-passing-b",
+      "stage": "elder-man",
+      "direction": "north",
+      "phase": "passing-b",
+      "file": "frames/elder-man-north-passing-b.png",
+      "x": 288,
+      "y": 384,
+      "width": 96,
+      "height": 128,
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "limitations": [
+        "AI-generated movement concept; requires pixel cleanup, timing, collision-box review, and renderer validation."
+      ]
+    }
+  ],
+  "runtimeReady": false,
+  "limitations": [
+    "Source is AI-generated concept art, not runtime-approved art.",
+    "Colored edge artifacts, phase timing, collision boxes, palette cleanup, and renderer sampling remain open."
+  ]
+}

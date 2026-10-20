@@ -1,0 +1,276 @@
+{
+  "id": "crowd-tourist-elder-movement-age-v1",
+  "role": "tourist",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older tourist",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.tourist",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/tourist/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "tourist/elder/south/walk-a",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/tourist/elder/tourist-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "14a9bf619db7536f6925a8ee4b371e489cb152e4f5fc5213f8556fbd37e6e47b",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/front/walk-a.png",
+      "sourceSha256": "ae98e074ddfaf3fd87dde9d45ee91c1f1fbcf4d23e8789caff10db560f9a0683",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/south/walk-b",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/tourist/elder/tourist-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9f5ac668b1d8b8784462baa85eb231b13b33dd838c1bebdad7a044f2572d1aea",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/front/walk-b.png",
+      "sourceSha256": "4d1e3335064a2c6570118a7f0ee304064ac6bddd8e3f2fd5ef98122cddf78c7e",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/south/idle",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/tourist/elder/tourist-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "66abca7ec2b1737b4094ab63fab28f72392b16c0f86ec200f5710200b47a4e5f",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/front/idle.png",
+      "sourceSha256": "ad51c748f61f3fb3fe05c570885fbb049baa93bc7b4359e2973fa232c08d4d29",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/west/walk-a",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/tourist/elder/tourist-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b484e62efb399b6510f58e5c0115ebf241076c8812eb4ea696e877d5ab39e247",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/left/walk-a.png",
+      "sourceSha256": "4c3f209d11be5163f15356e86ab2d0522ec984f53e52160630ac8279455443c1",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/west/walk-b",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/tourist/elder/tourist-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6a34a99a943f94c8c69014defa382db5630551ef87064ed1c5b6bbc274030b45",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/left/walk-b.png",
+      "sourceSha256": "7d9d3055039eeeba13b32136a9e5c25a82fbae406ae1b20278ee4d4547ba7fc6",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/west/idle",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/tourist/elder/tourist-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c49dc892dc5d22468b569ca3041dcf47c1d46797ae64b2e7f3fb7d2c7d3b3a74",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/left/idle.png",
+      "sourceSha256": "d397e56a09580c2209e81ac36c52f1274cd3d2d7e9fdfccccd74746402b6ddad",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/east/walk-a",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/tourist/elder/tourist-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ade971db7667e382ae52e53f2df404b55823fa1e5c7ad0d6de64430219e58bab",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/right/walk-a.png",
+      "sourceSha256": "227b814219b926eedff30565b9d59bcf2e10a9fac0350101812fe0257bf1123d",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/east/walk-b",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/tourist/elder/tourist-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "621c833a89e7bd2452037164ca52d2e78940c3d2986d884b923c4b53e7c662cf",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/right/walk-b.png",
+      "sourceSha256": "eaa9baf794f52af13029e917362fe94a7250b85df130bea6de1efa3ee0a6955a",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/east/idle",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/tourist/elder/tourist-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bf8b958af01f0ef96a4cea8730058e1620ec98c315e92f39660165e5537ea78c",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/right/idle.png",
+      "sourceSha256": "13fc785512ed7e927561e57431d4fcf4c28d4dc74c3f760002240ba94b488294",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/north/walk-a",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/tourist/elder/tourist-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "caf5b3e766c3af27358c5357a8b78c29851e9be43e6f15f26295041fdf0810b5",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/back/walk-a.png",
+      "sourceSha256": "26354294ae39754147df00e796cafff244e908d52836dffac87ad68cd49789c6",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/north/walk-b",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/tourist/elder/tourist-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "473bd0a138fb1af482211c1bbbf72973cd2f62cf99a74c614553805a3f88bdb4",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/back/walk-b.png",
+      "sourceSha256": "49f79e1b007bce29ef7680b7c4a2ccc880c80694309f6b4c5d3167625f55dd8e",
+      "runtimeReady": false
+    },
+    {
+      "id": "tourist/elder/north/idle",
+      "role": "tourist",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older tourist",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/tourist/elder/tourist-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "273441d71e11f3c39757fb056825e65d0a0dba910a006bfc43f2963d53ddc478",
+      "sourceFile": "crowd-archetypes-batch-v2/tourist/back/idle.png",
+      "sourceSha256": "75017cd788e86e0139b938daf88ce99de3a8b5ef7614ba8997cb28f01595520f",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

@@ -82,7 +82,10 @@ export function CityWorld({
   const selected =
     events.find((event) => event.id === focused) ?? events[0] ?? null;
   return (
-    <View style={styles.root} accessibilityLabel="Bellweather playable pixel town and city opportunities">
+    <View
+      style={styles.root}
+      accessibilityLabel="Bellweather playable pixel town and city opportunities"
+    >
       <View style={styles.heading}>
         <View style={{ flex: 1, gap: 3 }}>
           <Text style={styles.eyebrow}>BELLWEATHER / PIXEL FREE ROAM</Text>
@@ -112,7 +115,8 @@ export function CityWorld({
         </Pressable>
       </View>
       {!showDistrictCards ? (
-        <PixelTown world={world} onTalk={onTalk} />      ) : (
+        <PixelTown world={world} onTalk={onTalk} />
+      ) : (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}

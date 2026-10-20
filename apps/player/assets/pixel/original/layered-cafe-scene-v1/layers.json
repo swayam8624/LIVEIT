@@ -1,0 +1,88 @@
+{
+  "id": "layered-cafe-scene-v1",
+  "version": 1,
+  "canvas": { "width": 320, "height": 256, "pixelScale": 1 },
+  "runtimeReady": false,
+  "provenance": {
+    "method": "hand-pixel",
+    "generatedAt": "2026-10-20",
+    "externalSources": [],
+    "thirdPartyAssets": [],
+    "generator": "generate_cafe.py",
+    "palette": "integer-coordinate original palette authored for this batch"
+  },
+  "layers": [
+    {
+      "id": "background",
+      "file": "background-cafe-interior.png",
+      "offset": { "x": 0, "y": 0 },
+      "dimensions": { "width": 320, "height": 256 },
+      "alpha": false,
+      "role": "opaque café interior architecture, window, shelving, counter and floor; no actors, UI or text"
+    },
+    {
+      "id": "midground",
+      "file": "midground-table-staging.png",
+      "offset": { "x": 0, "y": 0 },
+      "dimensions": { "width": 320, "height": 256 },
+      "alpha": true,
+      "role": "transparent table, chairs, cup, book, candle and contact shadows; actors remain separate"
+    },
+    {
+      "id": "amelia",
+      "file": "actor-amelia-portrait.png",
+      "offset": { "x": 0, "y": 0 },
+      "dimensions": { "width": 320, "height": 256 },
+      "alpha": true,
+      "anchor": { "x": 155, "y": 169, "pivot": "bottom-center" },
+      "role": "independent transparent portrait cutout"
+    },
+    {
+      "id": "player",
+      "file": "actor-player-portrait.png",
+      "offset": { "x": 0, "y": 0 },
+      "dimensions": { "width": 320, "height": 256 },
+      "alpha": true,
+      "anchor": { "x": 213, "y": 169, "pivot": "bottom-center" },
+      "role": "independent transparent portrait cutout"
+    },
+    {
+      "id": "foreground",
+      "file": "foreground-plants-lamp.png",
+      "offset": { "x": 0, "y": 0 },
+      "dimensions": { "width": 320, "height": 256 },
+      "alpha": true,
+      "role": "transparent edge plants, low table edge and hanging lamp framing"
+    }
+  ],
+  "camera": {
+    "defaultOffset": { "x": 0, "y": 0 },
+    "safeRegion": { "x": 44, "y": 120, "width": 232, "height": 62 },
+    "dialogueSafeBand": { "x": 44, "y": 184, "width": 232, "height": 48 },
+    "notes": "Keep dialogue panel inside the center band; foreground plants occupy only edge pixels. Actor pivots align to the table floor line at y=169."
+  },
+  "compositePreview": {
+    "file": "cafe-composite-preview.png",
+    "layersInOrder": [
+      "background",
+      "midground",
+      "amelia",
+      "player",
+      "foreground"
+    ]
+  },
+  "validation": {
+    "expectedPngs": 6,
+    "allCanvasDimensions": "320x256",
+    "opaqueLayer": "background-cafe-interior.png",
+    "transparentLayers": [
+      "midground-table-staging.png",
+      "actor-amelia-portrait.png",
+      "actor-player-portrait.png",
+      "foreground-plants-lamp.png",
+      "cafe-composite-preview.png"
+    ],
+    "nearestNeighborReview": true,
+    "textOrUiInBackground": false
+  }
+}

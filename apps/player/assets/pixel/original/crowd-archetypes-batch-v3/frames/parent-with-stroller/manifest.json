@@ -1,0 +1,237 @@
+{
+  "id": "crowd-parent-with-stroller-movement-v3",
+  "role": "parent-with-stroller",
+  "label": "parent with stroller",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+  "description": "lilac jacket with a joined four-view stroller and visible hood",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "parent-with-stroller/south/walk-a",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/parent-with-stroller/parent-with-stroller-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8a99ddd8c3c298eae91091688207f2c33e8e9a57a1e59ec0ef23ce3e7b93dfc6",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/south/walk-b",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/parent-with-stroller/parent-with-stroller-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fa50500b770f0f6978a3fe45e6777ef09083b0b49e7a8efdd7fdeb8386eb3e53",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/south/idle",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/parent-with-stroller/parent-with-stroller-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "648d3608f5839a131488364929f404e1bb31a957ab3134cd46ba01b5504d11fc",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/west/walk-a",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/parent-with-stroller/parent-with-stroller-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c6519fbca2e0714000407863a477399c98802cc6a1c75a7bc61ae79240947e43",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/west/walk-b",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/parent-with-stroller/parent-with-stroller-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3653fd1b3e7827e9ed6c09d85479d67eb3b6ccbf4fd4db4f05b525fd0264f8bb",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/west/idle",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/parent-with-stroller/parent-with-stroller-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2babbaa62057ae11a9df466a4499cc453da94955071be14363a98e3508980460",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/east/walk-a",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/parent-with-stroller/parent-with-stroller-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3421a313f083e53919421b3ea74419cffba2050c093066e130411664baaee225",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/east/walk-b",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/parent-with-stroller/parent-with-stroller-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b328cd9b957c357b19b45f496885901717f56e08be2d43ebd470cdd7f7695f88",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/east/idle",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/parent-with-stroller/parent-with-stroller-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6f8d82e4cc607a07b960ba84fa402b74a0139561a3e764be2be8692a03f6ddce",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/north/walk-a",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/parent-with-stroller/parent-with-stroller-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2676448606d311e50e81c74e2bea1d9cec8141d36e332e8c179be25f04b9a808",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/north/walk-b",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/parent-with-stroller/parent-with-stroller-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3afef0b48d1a2f903f53676c43d9e46bbc7c2de912287ad79f6f42d6e0eea728",
+      "runtimeReady": false
+    },
+    {
+      "id": "parent-with-stroller/north/idle",
+      "role": "parent-with-stroller",
+      "catalogId": "liveit.prod.v1.pixel.sprite.crowd.parent-with-stroller",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/parent-with-stroller/parent-with-stroller-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9972f13a7b02a4a2f5161d14d938dc3e551a3007186c72a49b5ee83787431905",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/parent-with-stroller/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "74bdddfab3fb73078a38069109449e2c12db98a3078ad1c4ebe4b97b54315106",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/parent-with-stroller/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "37d32674e7cfa7d6d68a0f2b5b45071ee057b03298486e4238277d044c58a634",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

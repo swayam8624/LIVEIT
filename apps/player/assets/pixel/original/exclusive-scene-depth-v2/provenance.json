@@ -1,0 +1,12 @@
+{
+  "license": "Original procedural artwork authored for LIVEIT; no third-party imagery or archive assets used.",
+  "authoring": "Pillow primitives on a deterministic 160x128 pixel grid, nearest-neighbour exports.",
+  "sourceOfTruth": "build_layers.py and prompts.md",
+  "derivation": "Source plates are 640x512 RGB snapshots; runtime candidates are 320x256 layers. Derived previews composite layers only and are not runtime candidates.",
+  "runtimeReady": false,
+  "limitations": [
+    "Actor sprites are not included; guides reserve a central lane for later placement.",
+    "Layer palette and silhouettes need art-direction review at phone size.",
+    "Scene files are concept studies and have not been admitted to the runtime asset catalog."
+  ]
+}

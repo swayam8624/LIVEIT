@@ -1,0 +1,36 @@
+{
+  "role": "gardener",
+  "label": "gardener",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.gardener",
+  "description": "wide sun hat, green work shirt, gloves, and watering can",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/gardener/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "child",
+      "manifest": "frames/gardener/child/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "teen",
+      "manifest": "frames/gardener/teen/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "adult",
+      "manifest": "frames/gardener/adult/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "elder",
+      "manifest": "frames/gardener/elder/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 48,
+  "runtimeReady": false
+}

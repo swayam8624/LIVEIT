@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "batch": "exclusive-scene-backdrop-polish-v1",
+  "runtimeReady": false,
+  "sources": [
+    {
+      "file": "source/elder-legacy-sunroom-original.png",
+      "dimensions": [1402, 1122],
+      "mode": "RGB",
+      "sha256": "360e4bdaca0a55ed9c39e14d53f92aaaed0a72ab81a04eb5f907247f4deceb0b"
+    },
+    {
+      "file": "source/new-parenthood-nursery-original.png",
+      "dimensions": [1402, 1122],
+      "mode": "RGB",
+      "sha256": "b785d84dba6c1d2d41573001bdff54a1c290bbd7efd82f1d244c38151a9fa597"
+    }
+  ],
+  "records": [
+    {
+      "id": "elder-legacy-sunroom.pixel-32-color",
+      "scene": "elder-legacy-sunroom",
+      "role": "pixel-cluster-background-study",
+      "file": "exports/elder-legacy-sunroom-pixel-320x256.png",
+      "width": 320,
+      "height": 256,
+      "mode": "RGB",
+      "colors": 32,
+      "sampling": "160x128 quantized, 2x nearest-neighbor",
+      "sha256": "aaca1d7fc90111bd0d7ea8a8850ac55b8f13b4ae4b0e1856c91ba120fa9e1dac",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-legacy-sunroom.detail-64-color",
+      "scene": "elder-legacy-sunroom",
+      "role": "detailed-background-concept",
+      "file": "exports/elder-legacy-sunroom-detail-320x256.png",
+      "width": 320,
+      "height": 256,
+      "mode": "RGB",
+      "colors": 64,
+      "sampling": "Lanczos resize, no-dither 64-color palette",
+      "sha256": "2402360a94bb2b6d95ae3d1c7b91c71b3bb730ca5151bd4c0c66af0341c84f85",
+      "runtimeReady": false
+    },
+    {
+      "id": "new-parenthood-nursery.pixel-32-color",
+      "scene": "new-parenthood-nursery",
+      "role": "pixel-cluster-background-study",
+      "file": "exports/new-parenthood-nursery-pixel-320x256.png",
+      "width": 320,
+      "height": 256,
+      "mode": "RGB",
+      "colors": 32,
+      "sampling": "160x128 quantized, 2x nearest-neighbor",
+      "sha256": "921b079d917e68ee6cadb54dde94eed62ac6db22cbefd635f47e1a6e21aeb1e2",
+      "runtimeReady": false
+    },
+    {
+      "id": "new-parenthood-nursery.detail-64-color",
+      "scene": "new-parenthood-nursery",
+      "role": "detailed-background-concept",
+      "file": "exports/new-parenthood-nursery-detail-320x256.png",
+      "width": 320,
+      "height": 256,
+      "mode": "RGB",
+      "colors": 64,
+      "sampling": "Lanczos resize, no-dither 64-color palette",
+      "sha256": "474d1912e33938a9299d57422f87118996af045bc57c7a9b283041fb7112b414",
+      "runtimeReady": false
+    }
+  ],
+  "limitations": [
+    "Generated background studies are detailed and softly textured compared with small-cluster character sprites.",
+    "Pixel exports reduce detail to a 160x128 logical plate and 32 colors; assess at actual game scale.",
+    "These are standalone background alternatives, not walkable maps, not depth layers, and not integrated with the separate scene layer batch."
+  ]
+}

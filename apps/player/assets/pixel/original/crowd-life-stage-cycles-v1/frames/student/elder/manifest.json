@@ -1,0 +1,276 @@
+{
+  "id": "crowd-student-elder-movement-age-v1",
+  "role": "student",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "lifelong learner",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.student",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/student/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "student/elder/south/walk-a",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/student/elder/student-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "01100c4cc756ee875c2450561b6fe2bf6c612c24b33b654e109662bf549e8213",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-south-walk-a.png",
+      "sourceSha256": "32f9e24666ed93089a298011673653db20d3f1759ead74fc1e85e076454598ca",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/south/walk-b",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/student/elder/student-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e813aabac801917e4caa053ab38f7bad413ad9ba2fbcca521459431bbe3e5fb7",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-south-walk-b.png",
+      "sourceSha256": "8ae2dd04b6f9c627b109553396cf77600d20335b1b0daa2b28bc9548178e847f",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/south/idle",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/student/elder/student-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "54754b32de0fe22247a94885c61bc5f315e28307b6e9b0f206363b8d5111fe95",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-south-idle.png",
+      "sourceSha256": "ea9a5cc39d562fac226f1ba01b5a9077e751436ea89354616a4f9b82f08f0104",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/west/walk-a",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/student/elder/student-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "617ce472135c1bab6ab80672421ac68e030cf9fac85b24e4e5aee16f9f8850a1",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-west-walk-a.png",
+      "sourceSha256": "26342bcb3ed5cb608e5cefc66f4b6c0f66f79af8c80d79d90039ff90b5b3da1a",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/west/walk-b",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/student/elder/student-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e908ed581a89dd8edd60c3bef57c3d8981a0b34043dfc14a83fd05b45eec5a5c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-west-walk-b.png",
+      "sourceSha256": "b2c8c23da1df228e058dd3cee22882059bf3e6f7bc53c4a2c9f3df3777dee43d",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/west/idle",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/student/elder/student-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cc0bfe11586956dd1df75e35bf3fa84b30503df829ae8a9110acc488f7531cd7",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-west-idle.png",
+      "sourceSha256": "1821e2081d13b6ae106b04f0fe39b3ce1c755b7c11fefffd5f34160519f5d7cf",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/east/walk-a",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/student/elder/student-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ba53ef8ca139127458332fcad773b37936b8f51b2e11be53493d95782c4d030d",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-east-walk-a.png",
+      "sourceSha256": "b62c63d3ab442a06b45b6ae81f7f153086e74f21478b1eb347cc57b93735c688",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/east/walk-b",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/student/elder/student-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "01d6108bfe5a482e4369bf4c168ce43d6d92fd8c46430baaadc2ab8bb0e520b6",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-east-walk-b.png",
+      "sourceSha256": "bc8e3df4d446dea754843c0c62456284ea3db1e40aab44aabfadf51952dd7794",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/east/idle",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/student/elder/student-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dc3a835924d0a92efd4ffd0fbb62b101e3baaecdf8135245d1a9331883421257",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-east-idle.png",
+      "sourceSha256": "e434ccb5a84cdaebc069453a0b3e93098de7d604c73382d69009c066944b0f60",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/north/walk-a",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/student/elder/student-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "64482ef8c3893b9aa455abcb1a6222c3495c1598a3bc80040333f6335ff897e8",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-north-walk-a.png",
+      "sourceSha256": "c9d4eacb43f44086ee9d6cbb103ca5412d41ae78c5f0113586651d6435bc983c",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/north/walk-b",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/student/elder/student-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2ea21dc53a758a35a89103954d8e28ee5e065f7abd5776c0cd11313cc6f90627",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-north-walk-b.png",
+      "sourceSha256": "94e89f81c56a721d77024d2255e32b1d14806e6d98231b590cebe6d160210095",
+      "runtimeReady": false
+    },
+    {
+      "id": "student/elder/north/idle",
+      "role": "student",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "lifelong learner",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/student/elder/student-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8d1e642d5ce98fe239ede0e1ae245144af7560589a32ed79a944bfb7dd793325",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/student/student-north-idle.png",
+      "sourceSha256": "11ef2c9af27225a062c1122e470c6708a421982951e59fd640b080843b8b7376",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

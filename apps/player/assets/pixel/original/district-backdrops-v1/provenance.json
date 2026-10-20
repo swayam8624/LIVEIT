@@ -1,0 +1,25 @@
+{
+  "batch": "district-backdrops-v1",
+  "generatedAt": "2026-10-20",
+  "generator": "built-in image_gen",
+  "referenceImages": [],
+  "sourcePolicy": "Original fictional concept art; no supplied archives, existing repository art, logos, characters, or third-party source images used.",
+  "exports": {
+    "market": {
+      "source": "market/market-street-original.png",
+      "sourceDimensions": { "width": 1402, "height": 1122 },
+      "crop": { "x": 8, "y": 0, "width": 1382, "height": 1106 },
+      "resample": "nearest-neighbor",
+      "output": "market/market-street-concept-320x256.png",
+      "dialogueSafeBand": { "top": 204, "height": 52, "fraction": 0.203125 }
+    },
+    "riverside": {
+      "source": "riverside/riverside-original.png",
+      "sourceDimensions": { "width": 1402, "height": 1122 },
+      "crop": { "x": 8, "y": 0, "width": 1382, "height": 1106 },
+      "resample": "nearest-neighbor",
+      "output": "riverside/riverside-concept-320x256.png",
+      "dialogueSafeBand": { "top": 204, "height": 52, "fraction": 0.203125 }
+    }
+  }
+}

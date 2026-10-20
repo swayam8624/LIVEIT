@@ -1,0 +1,14 @@
+{
+  "assetId": "age-idle-interact-v1",
+  "license": "Original local deterministic work; no third-party or archive art used",
+  "generator": "build_age_idle_interact.py",
+  "sourcePack": "../directional-age-refine-v1",
+  "sourceTreatment": "Reused local source silhouettes plus hand-authored Pillow pixel clusters; source files remain untouched",
+  "reviewStatus": "concept-only",
+  "runtimeReady": false,
+  "notes": [
+    "This pack contains one frame per direction and pose family, not a complete animation cycle.",
+    "Age-specific cues are intentionally non-romantic and care-safe for minors.",
+    "All per-frame source and output hashes are recorded in manifest.json."
+  ]
+}

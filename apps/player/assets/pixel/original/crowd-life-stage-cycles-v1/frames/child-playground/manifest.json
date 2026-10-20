@@ -1,0 +1,24 @@
+{
+  "role": "child-playground",
+  "label": "child playground",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.child-playground",
+  "description": "small orange hoodie, bright trainers, and a bouncing playground ball",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/child-playground/manifest.json",
+  "ageStages": [
+    {
+      "ageStage": "child",
+      "manifest": "frames/child-playground/child/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    },
+    {
+      "ageStage": "teen",
+      "manifest": "frames/child-playground/teen/manifest.json",
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "frameCount": 24,
+  "runtimeReady": false
+}

@@ -1,0 +1,16 @@
+{
+  "batch": "named-characters-batch-v3",
+  "created": "2026-10-20",
+  "method": "Original deterministic pixel clusters authored in Pillow primitives; no supplied ZIP, downloaded art, model output, or third-party raster was sampled.",
+  "canvas": {
+    "width": 24,
+    "height": 32,
+    "mode": "RGBA",
+    "pivot": {
+      "x": 12,
+      "y": 31
+    }
+  },
+  "style": "24x32 nearest-neighbor pixel clusters, transparent backgrounds, independent cardinal recipes, six states per direction.",
+  "rights": "No third-party source content. Project-owned derivative studies pending art direction, pixel cleanup, and import QA."
+}

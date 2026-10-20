@@ -1,0 +1,15 @@
+{
+  "batch": "npc-archetype-walk-v1",
+  "sourceFile": "npc-archetypes-source.png",
+  "sourceProvider": "OpenAI ImageGen",
+  "sourceLicense": "Original generated concept; verify provider terms before commercial release",
+  "sourceDimensions": {
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGB"
+  },
+  "prompt": "Original pixel-art game sprite source sheet, three distinct adult NPC identities stacked vertically with generous spacing and a dark neutral background. Top identity: South Asian woman in her 40s, warm brown skin, teal sari with mustard shawl, carrying a small woven tote; middle identity: East Asian man in his 60s, light tan skin, silver hair, red cardigan, beige trousers, holding a walking cane; bottom identity: Black nonbinary community gardener in their 30s, deep brown skin, short curly hair, rust overalls over green shirt, small watering can. For EACH identity make a clean 4 by 4 grid: rows are front-facing, back-facing, left-facing, right-facing; columns are four distinct walk-cycle phases with alternating feet and natural arm swing. Use crisp hand-authored 16-bit pixel art, hard pixel edges, limited cohesive palette, no text, no UI, no shadows outside the sprites, no duplicate poses, consistent scale within each identity. This is an original design for a life-simulation game, not based on any existing franchise or asset.",
+  "negativePrompt": "No text, logos, UI, existing game characters, franchise likeness, photorealism, 3D rendering, smooth vector art, watermark.",
+  "derivation": "generate_frames.py crops the centered 128px grid, removes the charcoal background, rejects distant disconnected fragments, fits each pose into a 96x128 RGBA frame, and records SHA-256 hashes.",
+  "runtimeReady": false
+}

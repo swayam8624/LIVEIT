@@ -1,0 +1,276 @@
+{
+  "id": "crowd-baker-adult-movement-age-v1",
+  "role": "baker",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "working-age bakery role",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.baker",
+  "sourceBatch": "crowd-archetypes-batch-v1",
+  "sourceManifest": "crowd-archetypes-batch-v1/frames/baker/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "baker/adult/south/walk-a",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/baker/adult/baker-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d10c410ae77844eabec7ed8250360a3c3d4e197bc46fc2120dc7cb11bea3b1af",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-south-walk-a.png",
+      "sourceSha256": "d10c410ae77844eabec7ed8250360a3c3d4e197bc46fc2120dc7cb11bea3b1af",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/south/walk-b",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/baker/adult/baker-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0cc450a17561eaa1f9a81056ab4668dca074e0fe91445900f4b3c2e638474964",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-south-walk-b.png",
+      "sourceSha256": "0cc450a17561eaa1f9a81056ab4668dca074e0fe91445900f4b3c2e638474964",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/south/idle",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/baker/adult/baker-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "73bc131db4472c7cbe848ea29c856c925528ac109ee8c1dcf14d7807c6b14802",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-south-idle.png",
+      "sourceSha256": "73bc131db4472c7cbe848ea29c856c925528ac109ee8c1dcf14d7807c6b14802",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/west/walk-a",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/baker/adult/baker-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7f644e9a0bc72fa9354394c3566e54cf9cd76271402f32cbd9e9787e4e5b5fda",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-west-walk-a.png",
+      "sourceSha256": "7f644e9a0bc72fa9354394c3566e54cf9cd76271402f32cbd9e9787e4e5b5fda",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/west/walk-b",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/baker/adult/baker-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f21f0c71d7ff457789e751d4ac7c71e2213336238208855fdb9e288167765c84",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-west-walk-b.png",
+      "sourceSha256": "f21f0c71d7ff457789e751d4ac7c71e2213336238208855fdb9e288167765c84",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/west/idle",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/baker/adult/baker-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5dca45baa2e7a61037fd6bd0af5ba1591ac3b0f6a1628c3d772d2452dd01dea8",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-west-idle.png",
+      "sourceSha256": "5dca45baa2e7a61037fd6bd0af5ba1591ac3b0f6a1628c3d772d2452dd01dea8",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/east/walk-a",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/baker/adult/baker-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d84b9af76dbaf101ba6cf6c491a3a08482c60703b98450c65c6f7458895062da",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-east-walk-a.png",
+      "sourceSha256": "d84b9af76dbaf101ba6cf6c491a3a08482c60703b98450c65c6f7458895062da",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/east/walk-b",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/baker/adult/baker-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a6b43780bc4f5a1c1b41f8f6625c566170fa745cb7b9acf46bfe5aaefe1ab7f7",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-east-walk-b.png",
+      "sourceSha256": "a6b43780bc4f5a1c1b41f8f6625c566170fa745cb7b9acf46bfe5aaefe1ab7f7",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/east/idle",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/baker/adult/baker-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "69f064cc04740d9092462f88b92c42d2879c6f82190062cd6668920df0422a32",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-east-idle.png",
+      "sourceSha256": "69f064cc04740d9092462f88b92c42d2879c6f82190062cd6668920df0422a32",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/north/walk-a",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/baker/adult/baker-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "46bc4de8be2f9814293f3e6f96ddf8741bc4296d47281ab089a6d7b92470a0a4",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-north-walk-a.png",
+      "sourceSha256": "46bc4de8be2f9814293f3e6f96ddf8741bc4296d47281ab089a6d7b92470a0a4",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/north/walk-b",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/baker/adult/baker-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "81072d368252f3bcf83dbc40b97e9a68abf08bad39361ccd496a4b67836c7695",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-north-walk-b.png",
+      "sourceSha256": "81072d368252f3bcf83dbc40b97e9a68abf08bad39361ccd496a4b67836c7695",
+      "runtimeReady": false
+    },
+    {
+      "id": "baker/adult/north/idle",
+      "role": "baker",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age bakery role",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/baker/adult/baker-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cf93749d87c91d8f4a2434e37fbfc1abba62a6bd64c7665152dbca9e504d520c",
+      "sourceFile": "crowd-archetypes-batch-v1/frames/baker/baker-north-idle.png",
+      "sourceSha256": "cf93749d87c91d8f4a2434e37fbfc1abba62a6bd64c7665152dbca9e504d520c",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

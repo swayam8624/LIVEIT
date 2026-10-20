@@ -1,0 +1,839 @@
+{
+  "batch": "button-states-v2",
+  "runtimeReady": false,
+  "pixelArt": true,
+  "sampling": "nearest",
+  "buttonSize": [192, 56],
+  "iconSize": [32, 32],
+  "nineSliceInsets": {
+    "left": 10,
+    "top": 10,
+    "right": 10,
+    "bottom": 10
+  },
+  "states": ["normal", "focused", "pressed", "disabled"],
+  "families": [
+    {
+      "id": "primary",
+      "label": "confirm / continue",
+      "base": "teal",
+      "accent": "teal_hi",
+      "icon": "chevron",
+      "shape": "ribbon"
+    },
+    {
+      "id": "secondary",
+      "label": "open / inspect",
+      "base": "blue",
+      "accent": "blue_hi",
+      "icon": "inspect",
+      "shape": "tab"
+    },
+    {
+      "id": "choice",
+      "label": "story choice",
+      "base": "gold",
+      "accent": "gold_hi",
+      "icon": "branch",
+      "shape": "diamond"
+    },
+    {
+      "id": "danger",
+      "label": "cancel / leave",
+      "base": "coral",
+      "accent": "coral_hi",
+      "icon": "cross",
+      "shape": "notch"
+    },
+    {
+      "id": "phone",
+      "label": "phone / messages",
+      "base": "plum",
+      "accent": "plum_hi",
+      "icon": "phone",
+      "shape": "ticket"
+    },
+    {
+      "id": "utility",
+      "label": "settings / utility",
+      "base": "ink_hi",
+      "accent": "teal_hi",
+      "icon": "gear",
+      "shape": "square"
+    }
+  ],
+  "frames": [
+    {
+      "id": "primary-normal",
+      "file": "buttons/primary-normal.png",
+      "family": "primary",
+      "state": "normal",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/primary-normal.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "edfa2f6e1b9514c84b5d57102a20d3ac3b5e48765825c9de39f6597adbf40975",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-focused",
+      "file": "buttons/primary-focused.png",
+      "family": "primary",
+      "state": "focused",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/primary-focused.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "92d146469347bf9272432a98c92120108389578b7c3ab60df6c751a52c5b0136",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-pressed",
+      "file": "buttons/primary-pressed.png",
+      "family": "primary",
+      "state": "pressed",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/primary-pressed.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "ab2259441e304050a929cfafd9091ad488b752e40525f34e113772cdf17b91e1",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-disabled",
+      "file": "buttons/primary-disabled.png",
+      "family": "primary",
+      "state": "disabled",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/primary-disabled.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "af841e65955b8c08de929f1b4ca88d65b5605823b186dc75391e8152d9784f1a",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-normal",
+      "file": "buttons/secondary-normal.png",
+      "family": "secondary",
+      "state": "normal",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/secondary-normal.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "0f6a0288a941365a25dd5e9a35e0932399b04d1a2cc8fb50db35d294bfba90e7",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-focused",
+      "file": "buttons/secondary-focused.png",
+      "family": "secondary",
+      "state": "focused",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/secondary-focused.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "fc1b287ae20de20b3b09a44850bd8bee6aca4190d9c7fc8658f4ad211280d150",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-pressed",
+      "file": "buttons/secondary-pressed.png",
+      "family": "secondary",
+      "state": "pressed",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/secondary-pressed.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "b62f6f536b640b277e3e5265e1088dbe00d817936e065e97eca57b657e6ed292",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-disabled",
+      "file": "buttons/secondary-disabled.png",
+      "family": "secondary",
+      "state": "disabled",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/secondary-disabled.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "706101826a3bde839396b32122317ed1013f1243b4c81eb1deb44760119eae20",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-normal",
+      "file": "buttons/choice-normal.png",
+      "family": "choice",
+      "state": "normal",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/choice-normal.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "b7cf866f1a25317b585c353bed57264b0fd3a1f77871a60f6618555bd28c8ca9",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-focused",
+      "file": "buttons/choice-focused.png",
+      "family": "choice",
+      "state": "focused",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/choice-focused.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "c12baa65f1b056d79cec7c94f1c651bad1141fae5022687c48121608882bc175",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-pressed",
+      "file": "buttons/choice-pressed.png",
+      "family": "choice",
+      "state": "pressed",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/choice-pressed.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "774e9f3b8c0c4ab98bd4242e9ae01a7806aeae23353e0187c293e2e55077d1b0",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-disabled",
+      "file": "buttons/choice-disabled.png",
+      "family": "choice",
+      "state": "disabled",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/choice-disabled.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "efbc8a00fc30c96b871e863f2a5dc81e600b1d6a21fd60e7e9bfffc80611ce3c",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-normal",
+      "file": "buttons/danger-normal.png",
+      "family": "danger",
+      "state": "normal",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/danger-normal.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "bae535acfd74e575122bf8e7f170fef3ede27dd15c89aaa48118129e3a4e99a0",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-focused",
+      "file": "buttons/danger-focused.png",
+      "family": "danger",
+      "state": "focused",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/danger-focused.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "484fde07d39e93d7ba21505c17630101ca79a54c2857acce9187f30f80afa989",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-pressed",
+      "file": "buttons/danger-pressed.png",
+      "family": "danger",
+      "state": "pressed",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/danger-pressed.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "f7ef3b074d38445ce27e0a4877a3cf1bc9540ce1402f3f2ddf84084e25772610",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-disabled",
+      "file": "buttons/danger-disabled.png",
+      "family": "danger",
+      "state": "disabled",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/danger-disabled.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "b618069110d5d7e3b7dc36f7e8d4a5e4d2685b361f569fdb4eeda08d1f07ec70",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-normal",
+      "file": "buttons/phone-normal.png",
+      "family": "phone",
+      "state": "normal",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/phone-normal.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "f573ae0ba39e080e30026171422397cf289a1c4c8e7ca41c93b4ad131c5898ee",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-focused",
+      "file": "buttons/phone-focused.png",
+      "family": "phone",
+      "state": "focused",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/phone-focused.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "23d07e63320dbf3751cd6abd86a51fbb038368369168a40a54ef4514f8116d52",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-pressed",
+      "file": "buttons/phone-pressed.png",
+      "family": "phone",
+      "state": "pressed",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/phone-pressed.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "fd95580ff6c9c845f2ae8f7244809c96ea01dd9fa2a8ee220eaecaf08f86dec1",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-disabled",
+      "file": "buttons/phone-disabled.png",
+      "family": "phone",
+      "state": "disabled",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/phone-disabled.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "67a0413e32e93b718d6a879e824f08074b02b1b1d581da81bf7712eeb354a030",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-normal",
+      "file": "buttons/utility-normal.png",
+      "family": "utility",
+      "state": "normal",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/utility-normal.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "ad75619d00852b9735fbde8b900876ba1bc44c66352e45af20d4952a4aee8a61",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-focused",
+      "file": "buttons/utility-focused.png",
+      "family": "utility",
+      "state": "focused",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/utility-focused.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "02bc3ce9263fb1cd90599eb34aca922659854de54ba5a2ed5045831c45c27fea",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-pressed",
+      "file": "buttons/utility-pressed.png",
+      "family": "utility",
+      "state": "pressed",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/utility-pressed.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "5ba9dd5555b29c58f2c8557a21b4f98beae6556ebf1b3280406c5b9a77773d9e",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-disabled",
+      "file": "buttons/utility-disabled.png",
+      "family": "utility",
+      "state": "disabled",
+      "width": 192,
+      "height": 56,
+      "x": 0,
+      "y": 0,
+      "iconFile": "icons/utility-disabled.png",
+      "nineSliceInsets": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+      "sampling": "nearest",
+      "textSafeRect": [40, 10, 151, 45],
+      "sha256": "eaf4262a5755fff7c8cf43946f4a4fa0d35c7776a4eaa4f8f40141bd34b8bebd",
+      "runtimeReady": false
+    }
+  ],
+  "icons": [
+    {
+      "id": "primary-normal-icon",
+      "file": "icons/primary-normal.png",
+      "family": "primary",
+      "state": "normal",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "177d409caa8e20acf0214cb4b7d7b4f2c0298cf9003b944ce59cab7298249870",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-focused-icon",
+      "file": "icons/primary-focused.png",
+      "family": "primary",
+      "state": "focused",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "177d409caa8e20acf0214cb4b7d7b4f2c0298cf9003b944ce59cab7298249870",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-pressed-icon",
+      "file": "icons/primary-pressed.png",
+      "family": "primary",
+      "state": "pressed",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "177d409caa8e20acf0214cb4b7d7b4f2c0298cf9003b944ce59cab7298249870",
+      "runtimeReady": false
+    },
+    {
+      "id": "primary-disabled-icon",
+      "file": "icons/primary-disabled.png",
+      "family": "primary",
+      "state": "disabled",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "c3e26b70b85f602172f248412a2236d76491a37d0571df7124eb019f1200c1c8",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-normal-icon",
+      "file": "icons/secondary-normal.png",
+      "family": "secondary",
+      "state": "normal",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "d7c161f07326c46979512d6632e6f0d3d2c3b9f555b38a4c0174478a1d790663",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-focused-icon",
+      "file": "icons/secondary-focused.png",
+      "family": "secondary",
+      "state": "focused",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "d7c161f07326c46979512d6632e6f0d3d2c3b9f555b38a4c0174478a1d790663",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-pressed-icon",
+      "file": "icons/secondary-pressed.png",
+      "family": "secondary",
+      "state": "pressed",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "d7c161f07326c46979512d6632e6f0d3d2c3b9f555b38a4c0174478a1d790663",
+      "runtimeReady": false
+    },
+    {
+      "id": "secondary-disabled-icon",
+      "file": "icons/secondary-disabled.png",
+      "family": "secondary",
+      "state": "disabled",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "b4354009632882b8db63f2e8bcbf5a48c37ca77e558e0aafd98aa177d4dbdeff",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-normal-icon",
+      "file": "icons/choice-normal.png",
+      "family": "choice",
+      "state": "normal",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "e48ab88666a7213312b8849251e7d3c135b3164114586e1b202faa361b0ddba2",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-focused-icon",
+      "file": "icons/choice-focused.png",
+      "family": "choice",
+      "state": "focused",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "e48ab88666a7213312b8849251e7d3c135b3164114586e1b202faa361b0ddba2",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-pressed-icon",
+      "file": "icons/choice-pressed.png",
+      "family": "choice",
+      "state": "pressed",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "e48ab88666a7213312b8849251e7d3c135b3164114586e1b202faa361b0ddba2",
+      "runtimeReady": false
+    },
+    {
+      "id": "choice-disabled-icon",
+      "file": "icons/choice-disabled.png",
+      "family": "choice",
+      "state": "disabled",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "5622dcee49253f3fc5dd2adb0eb5dde664dee04910bf9c29d86741bb56ea1476",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-normal-icon",
+      "file": "icons/danger-normal.png",
+      "family": "danger",
+      "state": "normal",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "81ae8cc85e38ca0579dc072901555f17effc1352fc9611e6ccc0c3a52927988e",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-focused-icon",
+      "file": "icons/danger-focused.png",
+      "family": "danger",
+      "state": "focused",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "81ae8cc85e38ca0579dc072901555f17effc1352fc9611e6ccc0c3a52927988e",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-pressed-icon",
+      "file": "icons/danger-pressed.png",
+      "family": "danger",
+      "state": "pressed",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "81ae8cc85e38ca0579dc072901555f17effc1352fc9611e6ccc0c3a52927988e",
+      "runtimeReady": false
+    },
+    {
+      "id": "danger-disabled-icon",
+      "file": "icons/danger-disabled.png",
+      "family": "danger",
+      "state": "disabled",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "e3f8666837e2fe1e24851b814c28cc215c961d35339c0d67840417a1157070fd",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-normal-icon",
+      "file": "icons/phone-normal.png",
+      "family": "phone",
+      "state": "normal",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "00aabb598a088b5515df4a9d0dcdfa182eb3eff78feb0dc69847c896221cf1f6",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-focused-icon",
+      "file": "icons/phone-focused.png",
+      "family": "phone",
+      "state": "focused",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "00aabb598a088b5515df4a9d0dcdfa182eb3eff78feb0dc69847c896221cf1f6",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-pressed-icon",
+      "file": "icons/phone-pressed.png",
+      "family": "phone",
+      "state": "pressed",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "00aabb598a088b5515df4a9d0dcdfa182eb3eff78feb0dc69847c896221cf1f6",
+      "runtimeReady": false
+    },
+    {
+      "id": "phone-disabled-icon",
+      "file": "icons/phone-disabled.png",
+      "family": "phone",
+      "state": "disabled",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "ee5d3a06ebd0f6cac7fcadc5c86814ac37973e59cc8d5276f7505e1adc51dbe6",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-normal-icon",
+      "file": "icons/utility-normal.png",
+      "family": "utility",
+      "state": "normal",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "c798089fc0d55eb3f7289e2b7fe19b62a233521b7b82d9bb5d733b2f94e48a42",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-focused-icon",
+      "file": "icons/utility-focused.png",
+      "family": "utility",
+      "state": "focused",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "c798089fc0d55eb3f7289e2b7fe19b62a233521b7b82d9bb5d733b2f94e48a42",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-pressed-icon",
+      "file": "icons/utility-pressed.png",
+      "family": "utility",
+      "state": "pressed",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "c798089fc0d55eb3f7289e2b7fe19b62a233521b7b82d9bb5d733b2f94e48a42",
+      "runtimeReady": false
+    },
+    {
+      "id": "utility-disabled-icon",
+      "file": "icons/utility-disabled.png",
+      "family": "utility",
+      "state": "disabled",
+      "width": 32,
+      "height": 32,
+      "sampling": "nearest",
+      "sha256": "3ca1e13b4407413e3d052e4f7e2d28a5f45887219d5010d3682dc67f31725e74",
+      "runtimeReady": false
+    }
+  ],
+  "source": "generate_buttons.py",
+  "notes": "Original concept plates with empty text-safe center; runtime labels and accessibility text remain external."
+}

@@ -1,0 +1,251 @@
+{
+  "id": "npc-sari-caregiver-walk-v1",
+  "character": "sari-caregiver",
+  "source": "../npc-archetypes-source.png",
+  "frameSize": {
+    "width": 96,
+    "height": 128
+  },
+  "directions": ["front", "back", "left", "right"],
+  "phasesPerDirection": 4,
+  "frames": [
+    {
+      "direction": "front",
+      "phase": 1,
+      "file": "front/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "2bf2495a0821f52f15408b9a6551d19b968b80185dd967741a6d8a3aba118420"
+    },
+    {
+      "direction": "front",
+      "phase": 2,
+      "file": "front/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "b5b92971a7bf6d164bd6a14d3debf24d72bf0cc743948efd3405dcb7d1e5053c"
+    },
+    {
+      "direction": "front",
+      "phase": 3,
+      "file": "front/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "0b1f588e6dcb25f97b9f7cfac8434b83cfde2b73615456883383c5d1a516b537"
+    },
+    {
+      "direction": "front",
+      "phase": 4,
+      "file": "front/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "de2fdbd42dbfae3cf4ca64a285c69d718ae8f22f0a1c77f88abf7a5570e99129"
+    },
+    {
+      "direction": "back",
+      "phase": 1,
+      "file": "back/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "7c194477b348f93d91d2295f002d2132675e8a2246ef1f8633e277f6b356a806"
+    },
+    {
+      "direction": "back",
+      "phase": 2,
+      "file": "back/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "7418106f5327bed034cecad1f66374376e0da190b469057fa4d6c59e47f2c850"
+    },
+    {
+      "direction": "back",
+      "phase": 3,
+      "file": "back/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "efd98860e65ad4e8e4ef88873ce00bb045c80eea992d6e4fbc26c184660a5abb"
+    },
+    {
+      "direction": "back",
+      "phase": 4,
+      "file": "back/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "f909534777db0f846c8bf39141071e1e56943035f8a062ebffebb9d948d88c5a"
+    },
+    {
+      "direction": "left",
+      "phase": 1,
+      "file": "left/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "f27f6ae56818f826ba64c710940e44c6e976f161fda58626eae96b72a41d39fd"
+    },
+    {
+      "direction": "left",
+      "phase": 2,
+      "file": "left/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "9918aef3ff2ef05d50dfde63ff78b265052064b7956e356721d46823b41b6b19"
+    },
+    {
+      "direction": "left",
+      "phase": 3,
+      "file": "left/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "acf427be730f792cc4cd50698b68b4a53f45eac6a2d0152f9c940315d68d4a5d"
+    },
+    {
+      "direction": "left",
+      "phase": 4,
+      "file": "left/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "82e1ca2322895dce0b38de9820de2cad774ebbc8bf51d99690e354a9ae4bbcc4"
+    },
+    {
+      "direction": "right",
+      "phase": 1,
+      "file": "right/phase-01.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "cb2c80d3adc8f1d776db7ed31cc5058b05b4ee90ebc4345872f9ac9affda61ea"
+    },
+    {
+      "direction": "right",
+      "phase": 2,
+      "file": "right/phase-02.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "0235fb995dd6f54fad85191797d99b91f4a4cb04e8c746853b8bb362ebe99caf"
+    },
+    {
+      "direction": "right",
+      "phase": 3,
+      "file": "right/phase-03.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "956043fbafa230ee6305a99779ef540ef3bced5235072aef28b1feef8ddb54e3"
+    },
+    {
+      "direction": "right",
+      "phase": 4,
+      "file": "right/phase-04.png",
+      "width": 96,
+      "height": 128,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 48,
+        "y": 124
+      },
+      "runtimeReady": false,
+      "sha256": "67b2836f04a453eb94f4561d9d71dac52d714f34d4661ae769f17bbb3cf63cd1"
+    }
+  ],
+  "atlas": {
+    "file": "walk-atlas-4x4.png",
+    "width": 384,
+    "height": 512,
+    "runtimeReady": false,
+    "sha256": "142c212f51f783df687d2b26a3b337f841d0684eceabb07218c00ac5ef124dc0"
+  },
+  "preview": {
+    "file": "walk-atlas-preview-2x.png",
+    "scale": 2,
+    "runtimeReady": false,
+    "sha256": "aef6e25bf12d00febb775d72c210721947571691ab6d9c5a5b65e175aef1fa5d"
+  },
+  "runtimeReady": false
+}

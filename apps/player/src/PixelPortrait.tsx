@@ -76,7 +76,19 @@ export function PixelPortrait({
   const skin = SKIN_COLORS[appearance.skinTone];
   const eyes = EYE_COLORS[appearance.eyeColor];
   const clothes = OUTFIT_COLORS[appearance.outfitColor];
-  const longHair = ['bob', 'lob', 'waves', 'curls', 'coils', 'afro', 'ponytail', 'braids', 'locs', 'shag', 'long'].includes(appearance.hair);
+  const longHair = [
+    'bob',
+    'lob',
+    'waves',
+    'curls',
+    'coils',
+    'afro',
+    'ponytail',
+    'braids',
+    'locs',
+    'shag',
+    'long',
+  ].includes(appearance.hair);
   const shortHair = ['buzz', 'pixie'].includes(appearance.hair);
   const happy = mood === 'happy';
   const sad = mood === 'sad';
@@ -90,11 +102,13 @@ export function PixelPortrait({
     { x: 36, y: 45, w: 5, h: 19, color: clothes },
     { x: 18, y: 43, w: 12, h: 2, color: '#ffffff55' },
     // Back hair silhouette.
-    ...(longHair ? [
-      { x: 10, y: 10, w: 28, h: 34, color: hair },
-      { x: 10, y: 25, w: 5, h: 17, color: hair },
-      { x: 33, y: 25, w: 5, h: 17, color: hair },
-    ] : []),
+    ...(longHair
+      ? [
+          { x: 10, y: 10, w: 28, h: 34, color: hair },
+          { x: 10, y: 25, w: 5, h: 17, color: hair },
+          { x: 33, y: 25, w: 5, h: 17, color: hair },
+        ]
+      : []),
     { x: 18, y: 35, w: 12, h: 9, color: OUTLINE },
     { x: 20, y: 36, w: 8, h: 8, color: skin },
     { x: 13, y: 13, w: 23, h: 25, color: OUTLINE },
@@ -119,7 +133,13 @@ export function PixelPortrait({
     { x: 28, y: 25, w: 1, h: 1, color: '#f2f3fa' },
     // Nose and animated mouth.
     { x: 24, y: 29, w: 2, h: 2, color: '#8f6858' },
-    { x: happy ? 21 : 22, y: sad ? 34 : 33, w: happy ? 8 : 6, h: shocked || (speaking && mouthOpen) ? 4 : 2, color: INK },
+    {
+      x: happy ? 21 : 22,
+      y: sad ? 34 : 33,
+      w: happy ? 8 : 6,
+      h: shocked || (speaking && mouthOpen) ? 4 : 2,
+      color: INK,
+    },
     ...(happy ? [{ x: 24, y: 35, w: 3, h: 1, color: '#f5c0a8' }] : []),
     ...(sad ? [{ x: 23, y: 33, w: 5, h: 1, color: skin }] : []),
   ];

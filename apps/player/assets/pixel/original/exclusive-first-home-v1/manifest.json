@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "exclusive-first-home-v1",
+  "runtimeReady": false,
+  "source": {
+    "file": "first-home-generated-master.png",
+    "size": [1402, 1122],
+    "mode": "RGB",
+    "sha256": "24d1f96d17284530952b5f00f3e3a018e67edd25919d219f8b3c03a2e7746324"
+  },
+  "logicalSize": [320, 256],
+  "scene": "first apartment / moving day",
+  "actorSafeZone": [87, 130, 235, 213],
+  "dialogueSafeZone": [0, 222, 319, 255],
+  "limitations": [
+    "Flattened backdrop concept; no composable depth layers.",
+    "Staging guide is not a collision or portal map.",
+    "Pixel-like generated texture needs human cleanup against actor clusters."
+  ],
+  "outputs": [
+    {
+      "file": "first-home-32c-320x256.png",
+      "size": [320, 256],
+      "mode": "RGB",
+      "sha256": "bb7d74f1e901750db07c062f02660102fb29b926c1beaa3ec5a989872aa73291",
+      "runtimeReady": false
+    },
+    {
+      "file": "first-home-64c-320x256.png",
+      "size": [320, 256],
+      "mode": "RGB",
+      "sha256": "59fe778a3c06ae6401cc0ba5fb82fe6bf18d530d21fcf2cc283760a84ba89780",
+      "runtimeReady": false
+    },
+    {
+      "file": "first-home-layout-guide.png",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "sha256": "10855d265aaa260a7fb36bc6933cd092d69057ec650e3646ae41a2f69aaf425f",
+      "runtimeReady": false
+    },
+    {
+      "file": "first-home-preview-2x.png",
+      "size": [1280, 552],
+      "mode": "RGB",
+      "sha256": "6c49e5ff6d4c7ad34bcf2032ee21d55ec70f38b4c9a795f5112f14ddb6e1ffc8",
+      "runtimeReady": false
+    }
+  ]
+}

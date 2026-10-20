@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "assetFamily": "liveit.pixel.v2.portrait-animations.player-12-emotions.concept",
+  "sourceTool": "OpenAI built-in image generation",
+  "sourceMaster": "expressions-concept-master.png",
+  "grid": {
+    "columns": 4,
+    "rows": 3,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "sampling": "nearest-neighbor"
+  },
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.neutral",
+      "expression": "neutral",
+      "ageGate": "all-ages-safe-expression",
+      "file": "neutral.png",
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 0,
+        "y": 0,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.happy",
+      "expression": "happy",
+      "ageGate": "all-ages-safe-expression",
+      "file": "happy.png",
+      "x": 96,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 362,
+        "y": 0,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.sad",
+      "expression": "sad",
+      "ageGate": "all-ages-safe-expression",
+      "file": "sad.png",
+      "x": 192,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 724,
+        "y": 0,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.angry",
+      "expression": "angry",
+      "ageGate": "all-ages-safe-expression",
+      "file": "angry.png",
+      "x": 288,
+      "y": 0,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 1086,
+        "y": 0,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.flirty-adult",
+      "expression": "flirty-adult",
+      "ageGate": "adult-only",
+      "file": "flirty-adult.png",
+      "x": 0,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 0,
+        "y": 362,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.shocked",
+      "expression": "shocked",
+      "ageGate": "all-ages-safe-expression",
+      "file": "shocked.png",
+      "x": 96,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 362,
+        "y": 362,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.scared",
+      "expression": "scared",
+      "ageGate": "all-ages-safe-expression",
+      "file": "scared.png",
+      "x": 192,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 724,
+        "y": 362,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.smug",
+      "expression": "smug",
+      "ageGate": "all-ages-safe-expression",
+      "file": "smug.png",
+      "x": 288,
+      "y": 128,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 1086,
+        "y": 362,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.crying",
+      "expression": "crying",
+      "ageGate": "all-ages-safe-expression",
+      "file": "crying.png",
+      "x": 0,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 0,
+        "y": 724,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.embarrassed",
+      "expression": "embarrassed",
+      "ageGate": "all-ages-safe-expression",
+      "file": "embarrassed.png",
+      "x": 96,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 362,
+        "y": 724,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.tired",
+      "expression": "tired",
+      "ageGate": "all-ages-safe-expression",
+      "file": "tired.png",
+      "x": 192,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 724,
+        "y": 724,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    },
+    {
+      "id": "liveit.pixel.v2.portrait.player.young-adult.emotion.thoughtful",
+      "expression": "thoughtful",
+      "ageGate": "all-ages-safe-expression",
+      "file": "thoughtful.png",
+      "x": 288,
+      "y": 256,
+      "width": 96,
+      "height": 128,
+      "sourceCell": {
+        "x": 1086,
+        "y": 724,
+        "width": 362,
+        "height": 362
+      },
+      "runtimeReady": false
+    }
+  ],
+  "status": "original-ai-generated-expression-concept",
+  "runtimeReady": false,
+  "limitations": [
+    "All frames depict one adult woman only.",
+    "The flirty expression is explicitly adult-only.",
+    "No facial-layer separation, mouth visemes or timed animation yet.",
+    "Identity and pixel clusters require visual/gameplay approval before runtime use."
+  ]
+}

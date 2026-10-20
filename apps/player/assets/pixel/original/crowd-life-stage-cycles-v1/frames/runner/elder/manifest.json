@@ -1,0 +1,276 @@
+{
+  "id": "crowd-runner-elder-movement-age-v1",
+  "role": "runner",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older recreational walker or runner",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.runner",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/runner/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "runner/elder/south/walk-a",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/runner/elder/runner-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "322be84a67ed91b1b9a21f88ba3da313998f161b45fd3c2844026dfecf92aee6",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/walk-a.png",
+      "sourceSha256": "8a61e03bafcd62ccf53b80340ce710655502b159755366cab2cf9e5e2d56aa4d",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/south/walk-b",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/runner/elder/runner-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8505e35c605980bc27283b9b1865f1517a50e114b871385576490f470c9957a1",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/walk-b.png",
+      "sourceSha256": "65460d18c56c9b69f80fc9e96873edb280898ed70ef1835701ff2878dc1b4bbf",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/south/idle",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/runner/elder/runner-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1965f8a20c0d2251c915c697f9de915460fc7e274467a42abde431786779be80",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/front/idle.png",
+      "sourceSha256": "1cb072b07c86bd785778363c2579a87e56dd9fd20b726390f72e90badd46270f",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/west/walk-a",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/runner/elder/runner-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "91dc5cf904192d94ed9154b3fa8e6206b61e81e73fde59e49b24841d0440660b",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/walk-a.png",
+      "sourceSha256": "e6e5c0020215c70ceddfda8b5b01855f761ed8820981055a6e8a01d46905a027",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/west/walk-b",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/runner/elder/runner-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a691a9a49ec4e395c1dad9e3144d12b9791f168225efff56f24a36c68c5de6d9",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/walk-b.png",
+      "sourceSha256": "c41cf2e38e949f7b151f9db38c55179832f85e78a6cfbc07f585a28c552239c4",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/west/idle",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/runner/elder/runner-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "35a2111c1f9bb95fd58ff3452c873c1f0a37db1d6384425eba372ad927fa2634",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/left/idle.png",
+      "sourceSha256": "fe03dbf260d93f53ae65c5a9affc0cdca1c7e82ff95d7087db86f62c5ba445b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/east/walk-a",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/runner/elder/runner-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cecde9514916ede658b3dfe9c605741866b893a4e5f1439923ab226922d5f8ab",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/walk-a.png",
+      "sourceSha256": "d0c035ff427d77072c41d0cf3956784fff5f8fecda1301ff516003cdcd5a2676",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/east/walk-b",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/runner/elder/runner-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "23f4b00fee670569de45e5d5e9a56fb1aedac003eaf11c04d1460ee22b10f4bc",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/walk-b.png",
+      "sourceSha256": "9144dcbffe1553746f3fc9a329e32007cc7421ce0cdff01381f13bce394455bf",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/east/idle",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/runner/elder/runner-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a851baa0e90d8bba16176694a3a04f11db26fadf2cada4f8d45f0b04dbb4f17a",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/right/idle.png",
+      "sourceSha256": "44f578bc1ce7aa9a83d83b289cd0b6a705b89c8ad3a0e17ef171a1e5bc27f6ff",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/north/walk-a",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/runner/elder/runner-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "80c0c896d704d8d9faac062fbcaf9c1255b5cdf4146d56f1a019e83613c2c102",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/walk-a.png",
+      "sourceSha256": "fe904c0635d5b9c731e55d7174b57b02301cd8304c05bd1eeb0487614933926e",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/north/walk-b",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/runner/elder/runner-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e2968295649f2f179bbc11d116cad040843b88d21536267844238c612e020062",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/walk-b.png",
+      "sourceSha256": "b231c233aaecd06257ba4f6213cebd8c1f1e0b4072b91a2b219776e676807129",
+      "runtimeReady": false
+    },
+    {
+      "id": "runner/elder/north/idle",
+      "role": "runner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older recreational walker or runner",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/runner/elder/runner-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "892a4335b8741cfdb7df6d0eaafccb5fdc0ec8a389a7f489f7ff54c29cb99472",
+      "sourceFile": "crowd-archetypes-batch-v2/runner/back/idle.png",
+      "sourceSha256": "2d3ae99055b10a07ad80a40a163fffcb30919cbebaf02a79462761f9b4110ddd",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

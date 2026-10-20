@@ -1,0 +1,276 @@
+{
+  "id": "crowd-artist-adult-movement-age-v1",
+  "role": "artist",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "adult artist",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.artist",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/artist/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "artist/adult/south/walk-a",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/artist/adult/artist-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "928a20c49e780d3d60fdd330d6c73b741056eee1db94719142b71c2fbe804cc6",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/walk-a.png",
+      "sourceSha256": "928a20c49e780d3d60fdd330d6c73b741056eee1db94719142b71c2fbe804cc6",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/south/walk-b",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/artist/adult/artist-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0690b754dd5d7483dec23d5247566f51ee1ae94140848c922369a988f1188362",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/walk-b.png",
+      "sourceSha256": "0690b754dd5d7483dec23d5247566f51ee1ae94140848c922369a988f1188362",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/south/idle",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/artist/adult/artist-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d2053ed90e8bb2111ef70a7e17506f8d8103bc25974f26080c883c3c82f56e15",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/idle.png",
+      "sourceSha256": "d2053ed90e8bb2111ef70a7e17506f8d8103bc25974f26080c883c3c82f56e15",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/west/walk-a",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/artist/adult/artist-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fc09cbc056466a4c9e92b3e40f22f0ee57a8f9d418be2884e5c2b42503ba026b",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/walk-a.png",
+      "sourceSha256": "fc09cbc056466a4c9e92b3e40f22f0ee57a8f9d418be2884e5c2b42503ba026b",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/west/walk-b",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/artist/adult/artist-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7fb7cc7e1e0120d31aa9a37ec3d55f17158057e82e77829c9e1a4f42790c921c",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/walk-b.png",
+      "sourceSha256": "7fb7cc7e1e0120d31aa9a37ec3d55f17158057e82e77829c9e1a4f42790c921c",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/west/idle",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/artist/adult/artist-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "fd63c952fcddeae5de71ee2cd3e0d501fd328f6de83302357b6c3968e15cbfa5",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/idle.png",
+      "sourceSha256": "fd63c952fcddeae5de71ee2cd3e0d501fd328f6de83302357b6c3968e15cbfa5",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/east/walk-a",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/artist/adult/artist-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "783f52ae66b696b9fcf16af32be8982bb6a8cd1daf277f89f094b256b463772b",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/walk-a.png",
+      "sourceSha256": "783f52ae66b696b9fcf16af32be8982bb6a8cd1daf277f89f094b256b463772b",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/east/walk-b",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/artist/adult/artist-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "103ebd4229dfc89903c7efc46c1e593cd21c83402d9a2841f499f23b7e6e0067",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/walk-b.png",
+      "sourceSha256": "103ebd4229dfc89903c7efc46c1e593cd21c83402d9a2841f499f23b7e6e0067",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/east/idle",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/artist/adult/artist-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8d47b6bd4f240c5d4b08bcee7aee4f97c50f6e2c223f302bab2e9d19940ba8fa",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/idle.png",
+      "sourceSha256": "8d47b6bd4f240c5d4b08bcee7aee4f97c50f6e2c223f302bab2e9d19940ba8fa",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/north/walk-a",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/artist/adult/artist-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ec736b38f6b1b9dbf7ba13e3939f4b8185d7aaf3f5dec0e5fad8a2caa62926aa",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/walk-a.png",
+      "sourceSha256": "ec736b38f6b1b9dbf7ba13e3939f4b8185d7aaf3f5dec0e5fad8a2caa62926aa",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/north/walk-b",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/artist/adult/artist-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "3daa2d6beb40bfad9b3af70194788aafb55028dc2a2b683fe8df5e1ecd017a45",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/walk-b.png",
+      "sourceSha256": "3daa2d6beb40bfad9b3af70194788aafb55028dc2a2b683fe8df5e1ecd017a45",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/adult/north/idle",
+      "role": "artist",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult artist",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/artist/adult/artist-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7fb67a90f77cf3f21ff4986f493856d8fa8f5f428df59261166524fc06d5262e",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/idle.png",
+      "sourceSha256": "7fb67a90f77cf3f21ff4986f493856d8fa8f5f428df59261166524fc06d5262e",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

@@ -2,7 +2,8 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
-const read = (path: string): string => readFileSync(resolve(process.cwd(), path), 'utf8');
+const read = (path: string): string =>
+  readFileSync(resolve(process.cwd(), path), 'utf8');
 
 describe('live player is pixels, not 3D or photographic story art', () => {
   it('renders the original pixel stage rather than an image-backed scene', () => {
@@ -29,7 +30,7 @@ describe('live player is pixels, not 3D or photographic story art', () => {
     expect(app).toContain('pixelArt.n2_down');
     expect(app).not.toContain("require('./assets/amelia-portrait.jpg')");
     const town = read('apps/player/src/PixelTown.tsx');
-    expect(town).toContain("actorArt(");
+    expect(town).toContain('actorArt(');
     expect(town).toContain("window.addEventListener('keydown', handleKey)");
   });
 });

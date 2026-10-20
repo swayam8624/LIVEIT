@@ -9,7 +9,11 @@ import {
   View,
   useWindowDimensions,
 } from 'react-native';
-import { DEFAULT_APPEARANCE, type World } from '@living/world-schema';
+import {
+  DEFAULT_APPEARANCE,
+  type World,
+  type Appearance,
+} from '@living/world-schema';
 import { type Story } from '@living/story-schema';
 import { conditionMet, currentScene } from '@living/narrative-core';
 import { PixelPortrait, AMELIA_PIXEL_APPEARANCE } from './PixelPortrait';
@@ -21,6 +25,22 @@ import { gameTheme as t } from './gameTheme';
  * No website cards or separate text columns. Shared narrative core decides
  * all choices and consequences; this component handles presentation only.
  */
+const MARA_PIXEL_APPEARANCE: Appearance = {
+  ...DEFAULT_APPEARANCE,
+  skinTone: 'caramel',
+  hair: 'bob',
+  hairColor: 'chestnut',
+  outfit: 'cozy',
+  outfitColor: 'plum',
+};
+const TEACHER_PIXEL_APPEARANCE: Appearance = {
+  ...DEFAULT_APPEARANCE,
+  skinTone: 'tan',
+  hair: 'sidepart',
+  hairColor: 'black',
+  outfit: 'smart',
+  outfitColor: 'teal',
+};
 export function StoryPlayer({
   world,
   story,
@@ -85,8 +105,7 @@ export function StoryPlayer({
     <View
       testID="story-stage"
       accessibilityLabel={
-        story.title +
-        ' — animated pixel character story stage'
+        story.title + ' — animated pixel character story stage'
       }
       style={styles.shell}
     >
@@ -124,15 +143,21 @@ export function StoryPlayer({
             label={'Customized pixel player in ' + scene.mood + ' scene'}
           />
         </View>
-        {scene.speaker.toLowerCase() === 'amelia' ? (
+        {['amelia', 'mara', 'teacher'].includes(scene.speaker.toLowerCase()) ? (
           <View style={[styles.npcActor, compact && styles.npcActorCompact]}>
             <PixelPortrait
-              appearance={AMELIA_PIXEL_APPEARANCE}
+              appearance={
+                scene.speaker.toLowerCase() === 'mara'
+                  ? MARA_PIXEL_APPEARANCE
+                  : scene.speaker.toLowerCase() === 'teacher'
+                    ? TEACHER_PIXEL_APPEARANCE
+                    : AMELIA_PIXEL_APPEARANCE
+              }
               size={compact ? 154 : 217}
               mood={moodExpression}
-              speaking={scene.speaker.toLowerCase() === 'amelia'}
+              speaking
               reducedMotion={reducedMotion}
-              label={'Amelia, animated pixel portrait'}
+              label={scene.speaker + ', animated pixel portrait'}
             />
           </View>
         ) : !speakerIsPlayer && scene.speaker.toLowerCase() !== 'narrator' ? (

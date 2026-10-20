@@ -1,0 +1,276 @@
+{
+  "id": "crowd-mechanic-adult-movement-age-v1",
+  "role": "mechanic",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "working-age mechanic role",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.mechanic",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/mechanic/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "mechanic/adult/south/walk-a",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/mechanic/adult/mechanic-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8e0ee51daed4ebe04d57ec527d1438ebb5050399b969ae8ec1ddba1d202a7e6a",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/front/walk-a.png",
+      "sourceSha256": "8e0ee51daed4ebe04d57ec527d1438ebb5050399b969ae8ec1ddba1d202a7e6a",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/south/walk-b",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/mechanic/adult/mechanic-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b904e954316b409092fb62d5b3e534ce92d0754a388228f5c446aa80a0b8d8c4",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/front/walk-b.png",
+      "sourceSha256": "b904e954316b409092fb62d5b3e534ce92d0754a388228f5c446aa80a0b8d8c4",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/south/idle",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/mechanic/adult/mechanic-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8204601c7b1db43c048c3f79fc85224b71c9b1cd84487118e36f3022e59b2f9c",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/front/idle.png",
+      "sourceSha256": "8204601c7b1db43c048c3f79fc85224b71c9b1cd84487118e36f3022e59b2f9c",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/west/walk-a",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/mechanic/adult/mechanic-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "91310f2f86ee14cbc8217d6cc48b8dac64231b7eb4b4205d8b42f9daa8e2c95c",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/left/walk-a.png",
+      "sourceSha256": "91310f2f86ee14cbc8217d6cc48b8dac64231b7eb4b4205d8b42f9daa8e2c95c",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/west/walk-b",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/mechanic/adult/mechanic-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "9e782fd22fa9a4087788e4f942b8f935986a599f4fcc52f6813b7b3af2dfc78d",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/left/walk-b.png",
+      "sourceSha256": "9e782fd22fa9a4087788e4f942b8f935986a599f4fcc52f6813b7b3af2dfc78d",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/west/idle",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/mechanic/adult/mechanic-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f6a8cf4b043427763d1494e0f805f4d5be6b83a84c84c36e148869a50a471c6b",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/left/idle.png",
+      "sourceSha256": "f6a8cf4b043427763d1494e0f805f4d5be6b83a84c84c36e148869a50a471c6b",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/east/walk-a",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/mechanic/adult/mechanic-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "67bce5a6de06cd9c9c3b49557004435c0c062db6c580196fa32a55e21d5c8535",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/right/walk-a.png",
+      "sourceSha256": "67bce5a6de06cd9c9c3b49557004435c0c062db6c580196fa32a55e21d5c8535",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/east/walk-b",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/mechanic/adult/mechanic-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "17661e8e3076f2a5215c11c6191d90074ea4c857ec07376cb5e28e2fd683f2c8",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/right/walk-b.png",
+      "sourceSha256": "17661e8e3076f2a5215c11c6191d90074ea4c857ec07376cb5e28e2fd683f2c8",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/east/idle",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/mechanic/adult/mechanic-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1a6834c380af837c8db94177f6b8955b97a030e10bb2eece2dce45efe01f7ae2",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/right/idle.png",
+      "sourceSha256": "1a6834c380af837c8db94177f6b8955b97a030e10bb2eece2dce45efe01f7ae2",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/north/walk-a",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/mechanic/adult/mechanic-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "05c1d6c32eedb2b0e57fdeab8a456c9b656f5879caedf713853c52186b34316e",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/back/walk-a.png",
+      "sourceSha256": "05c1d6c32eedb2b0e57fdeab8a456c9b656f5879caedf713853c52186b34316e",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/north/walk-b",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/mechanic/adult/mechanic-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b5e96ace4069b59c1c8ef3139d0362e4a341206de2542bbf596faaab8d885fe6",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/back/walk-b.png",
+      "sourceSha256": "b5e96ace4069b59c1c8ef3139d0362e4a341206de2542bbf596faaab8d885fe6",
+      "runtimeReady": false
+    },
+    {
+      "id": "mechanic/adult/north/idle",
+      "role": "mechanic",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "working-age mechanic role",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/mechanic/adult/mechanic-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "8c9d2872326c95048b3de1a019c3b996aa6cbc8ada4eafdb2838d6e5599765bd",
+      "sourceFile": "crowd-archetypes-batch-v2/mechanic/back/idle.png",
+      "sourceSha256": "8c9d2872326c95048b3de1a019c3b996aa6cbc8ada4eafdb2838d6e5599765bd",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

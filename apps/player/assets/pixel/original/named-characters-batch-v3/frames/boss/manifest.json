@@ -1,0 +1,473 @@
+{
+  "id": "named-boss-movement-v3",
+  "role": "boss",
+  "label": "boss",
+  "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+  "description": "Broad-shouldered director in a cobalt blazer with a gold pin and clipboard.",
+  "directions": ["south", "west", "east", "north"],
+  "states": [
+    "contact-a",
+    "passing-a",
+    "contact-b",
+    "passing-b",
+    "idle",
+    "interact"
+  ],
+  "walkPhases": ["contact-a", "passing-a", "contact-b", "passing-b"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "boss/south/contact-a",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "south",
+      "phase": "contact-a",
+      "state": "walk",
+      "file": "frames/boss/boss-south-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2ac6a408d16f77e441a49741fa8c4dbed1bcb2f95e2085a030374face1cb971b",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/south/passing-a",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "south",
+      "phase": "passing-a",
+      "state": "walk",
+      "file": "frames/boss/boss-south-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "4693b7520516466265e178ca35a8353b826825da9e2f671aca37808d2c3793b5",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/south/contact-b",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "south",
+      "phase": "contact-b",
+      "state": "walk",
+      "file": "frames/boss/boss-south-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0e07f51cb9d8450844793d50d8e0e32873f9ecbf0e49dca0e9e183ecc300d1ba",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/south/passing-b",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "south",
+      "phase": "passing-b",
+      "state": "walk",
+      "file": "frames/boss/boss-south-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "27625723bce8254219596078952153b483f721b01fc384391375d70dd3951026",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/south/idle",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "south",
+      "phase": "idle",
+      "state": "idle",
+      "file": "frames/boss/boss-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e248d424201912c4530d425842e5ed3d00259987bc90db2bba93036ca6bcf92d",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/south/interact",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "south",
+      "phase": "interact",
+      "state": "interact",
+      "file": "frames/boss/boss-south-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7cf694f5fdec7adac6bf12c630f2ff8233a1705b597cb9317a09af4750b6d33d",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/west/contact-a",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "west",
+      "phase": "contact-a",
+      "state": "walk",
+      "file": "frames/boss/boss-west-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7347e0481317ceb315b73ab86bd1b1b0b54012dc34479becb455b3f7858101a5",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/west/passing-a",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "west",
+      "phase": "passing-a",
+      "state": "walk",
+      "file": "frames/boss/boss-west-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6b74a98ec1dbd7695684f02de1854dd145d635bf6a80e6bd152cd08c175cc54d",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/west/contact-b",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "west",
+      "phase": "contact-b",
+      "state": "walk",
+      "file": "frames/boss/boss-west-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ba3f6a640ad33c4c4c773d4a001d7f68a25a4bb2ee62b5bcd65966bb31e93ade",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/west/passing-b",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "west",
+      "phase": "passing-b",
+      "state": "walk",
+      "file": "frames/boss/boss-west-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e9d6438e5a7264dd45eacc288f9dd8346e74f3a562e90baa93a6b8d0090a5e08",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/west/idle",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "west",
+      "phase": "idle",
+      "state": "idle",
+      "file": "frames/boss/boss-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c809c3bd1f46ec8d4ff51c1d65390f87f6d2587642cc4401e6149b0cbf863f9c",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/west/interact",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "west",
+      "phase": "interact",
+      "state": "interact",
+      "file": "frames/boss/boss-west-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2b92773eda48ffd160111f7e13d957f72ebad8d3755b237b6513ea1829ae5ad7",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/east/contact-a",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "east",
+      "phase": "contact-a",
+      "state": "walk",
+      "file": "frames/boss/boss-east-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1322b50b059b0e1fcda5bf5b9e0beb320dc0ecaebaf064dfb312e028a1b3ea76",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/east/passing-a",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "east",
+      "phase": "passing-a",
+      "state": "walk",
+      "file": "frames/boss/boss-east-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d87d01f128a3a3009170d648cde07c8e1702933140756cbe7c8f9d5d86166dde",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/east/contact-b",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "east",
+      "phase": "contact-b",
+      "state": "walk",
+      "file": "frames/boss/boss-east-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "693b6a98d9c490260cbc0719bd0a59efa32f7d46b1a7d2978ba7d70d27b1bd11",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/east/passing-b",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "east",
+      "phase": "passing-b",
+      "state": "walk",
+      "file": "frames/boss/boss-east-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d611f1a443ca92d25c727e2e6c0e94d43fff3b2f5ec4f1e2da5e36b345f1f884",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/east/idle",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "east",
+      "phase": "idle",
+      "state": "idle",
+      "file": "frames/boss/boss-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e9e3c3132af973275f4bbf54e987cab15c715369384ece3eea4b4a2d3ef15785",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/east/interact",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "east",
+      "phase": "interact",
+      "state": "interact",
+      "file": "frames/boss/boss-east-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b35ec69e28e106100e676584fa002d7512fc1fc491ffa72531524f56bb005107",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/north/contact-a",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "north",
+      "phase": "contact-a",
+      "state": "walk",
+      "file": "frames/boss/boss-north-contact-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "987cd467224be6545e89788f5e1add50317c3526b055ab819f612c78bb3c388e",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/north/passing-a",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "north",
+      "phase": "passing-a",
+      "state": "walk",
+      "file": "frames/boss/boss-north-passing-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5bba6cb733fc3fc1f2e950060b35e3d2eecad4fc5953d376b7c30693d44fe541",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/north/contact-b",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "north",
+      "phase": "contact-b",
+      "state": "walk",
+      "file": "frames/boss/boss-north-contact-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "09f51ea9f1409c3931e6be767d11824ae5061bd86b3b4fcd2fc82c9f1161d984",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/north/passing-b",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "north",
+      "phase": "passing-b",
+      "state": "walk",
+      "file": "frames/boss/boss-north-passing-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cd4838c75ec7e058c2c8b258c37c5086cb4ffa6ab70b44ec8bdc16fec82a95e6",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/north/idle",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "north",
+      "phase": "idle",
+      "state": "idle",
+      "file": "frames/boss/boss-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0e1c0a7d46181378553186da6ee0d6c8a2647777a8e07239e4e0123a16419e15",
+      "runtimeReady": false
+    },
+    {
+      "id": "boss/north/interact",
+      "role": "boss",
+      "catalogId": "liveit.prod.v1.pixel.sprite.named.boss",
+      "direction": "north",
+      "phase": "interact",
+      "state": "interact",
+      "file": "frames/boss/boss-north-interact.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "d0dc7f7cdd89b2b1d705275349b6987e5268d5bffc948c311fca3e3131be03bd",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/boss/movement-atlas-4x6.png",
+    "width": 144,
+    "height": 128,
+    "sha256": "069ea2a0ed024a04a5224cb4e060d74173032efd48b6ce6bf6320392c2b6ddb2",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/boss/movement-atlas-preview-4x.png",
+    "scale": 4,
+    "sha256": "1da7e11d29db22fb64e0c55a68102de6355e834ef8fd1b4a39a4beb58d8b41e0",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

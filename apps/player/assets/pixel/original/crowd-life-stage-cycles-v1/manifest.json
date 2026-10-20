@@ -1,0 +1,235 @@
+{
+  "id": "crowd-life-stage-cycles-v1",
+  "kind": "original-pixel-crowd-age-movement-concepts",
+  "ageBands": {
+    "child": "8-12",
+    "teen": "16-19",
+    "adult": "20-59",
+    "elder": "60+"
+  },
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "roleCount": 30,
+  "frameCount": 900,
+  "roles": [
+    {
+      "role": "student",
+      "manifest": "frames/student/manifest.json",
+      "ageStages": ["child", "teen", "adult", "elder"],
+      "frameCount": 48,
+      "runtimeReady": false
+    },
+    {
+      "role": "office-worker",
+      "manifest": "frames/office-worker/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "store-clerk",
+      "manifest": "frames/store-clerk/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "baker",
+      "manifest": "frames/baker/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "delivery-rider",
+      "manifest": "frames/delivery-rider/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "bus-driver",
+      "manifest": "frames/bus-driver/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "taxi-driver",
+      "manifest": "frames/taxi-driver/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "police-officer",
+      "manifest": "frames/police-officer/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "library-visitor",
+      "manifest": "frames/library-visitor/manifest.json",
+      "ageStages": ["child", "teen", "adult", "elder"],
+      "frameCount": 48,
+      "runtimeReady": false
+    },
+    {
+      "role": "street-musician",
+      "manifest": "frames/street-musician/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "runner",
+      "manifest": "frames/runner/manifest.json",
+      "ageStages": ["child", "teen", "adult", "elder"],
+      "frameCount": 48,
+      "runtimeReady": false
+    },
+    {
+      "role": "tourist",
+      "manifest": "frames/tourist/manifest.json",
+      "ageStages": ["child", "teen", "adult", "elder"],
+      "frameCount": 48,
+      "runtimeReady": false
+    },
+    {
+      "role": "mechanic",
+      "manifest": "frames/mechanic/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "artist",
+      "manifest": "frames/artist/manifest.json",
+      "ageStages": ["child", "teen", "adult", "elder"],
+      "frameCount": 48,
+      "runtimeReady": false
+    },
+    {
+      "role": "filmmaker",
+      "manifest": "frames/filmmaker/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "athlete",
+      "manifest": "frames/athlete/manifest.json",
+      "ageStages": ["child", "teen", "adult", "elder"],
+      "frameCount": 48,
+      "runtimeReady": false
+    },
+    {
+      "role": "shopper",
+      "manifest": "frames/shopper/manifest.json",
+      "ageStages": ["child", "teen", "adult", "elder"],
+      "frameCount": 48,
+      "runtimeReady": false
+    },
+    {
+      "role": "barista",
+      "manifest": "frames/barista/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "pet-walker",
+      "manifest": "frames/pet-walker/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "market-vendor",
+      "manifest": "frames/market-vendor/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "security-guard",
+      "manifest": "frames/security-guard/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "historian",
+      "manifest": "frames/historian/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "park-cleaner",
+      "manifest": "frames/park-cleaner/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "nurse",
+      "manifest": "frames/nurse/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "caregiver",
+      "manifest": "frames/caregiver/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "gardener",
+      "manifest": "frames/gardener/manifest.json",
+      "ageStages": ["child", "teen", "adult", "elder"],
+      "frameCount": 48,
+      "runtimeReady": false
+    },
+    {
+      "role": "teacher",
+      "manifest": "frames/teacher/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "parent-with-stroller",
+      "manifest": "frames/parent-with-stroller/manifest.json",
+      "ageStages": ["adult", "elder"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "child-playground",
+      "manifest": "frames/child-playground/manifest.json",
+      "ageStages": ["child", "teen"],
+      "frameCount": 24,
+      "runtimeReady": false
+    },
+    {
+      "role": "elder-walker",
+      "manifest": "frames/elder-walker/manifest.json",
+      "ageStages": ["elder"],
+      "frameCount": 12,
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

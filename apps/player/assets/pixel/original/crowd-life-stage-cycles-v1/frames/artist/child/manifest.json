@@ -1,0 +1,276 @@
+{
+  "id": "crowd-artist-child-movement-age-v1",
+  "role": "artist",
+  "ageStage": "child",
+  "ageBand": "8-12",
+  "ageNote": "young hobby artist",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.artist",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/artist/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "artist/child/south/walk-a",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/artist/child/artist-child-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "44b7e5ecd167c18a3f4d33ba1bb3912daf60e07c6aa169cb327e529ec4fb138a",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/walk-a.png",
+      "sourceSha256": "928a20c49e780d3d60fdd330d6c73b741056eee1db94719142b71c2fbe804cc6",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/south/walk-b",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/artist/child/artist-child-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "08a50039bd8f4c61524b615ed05240cc4af2392f9f47e9132541398a06cd87d8",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/walk-b.png",
+      "sourceSha256": "0690b754dd5d7483dec23d5247566f51ee1ae94140848c922369a988f1188362",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/south/idle",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/artist/child/artist-child-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c548d4a36ba424ff0ebf30b6cf3f9bd839104b0bc3dc0b49621afe5f2fa3f241",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/front/idle.png",
+      "sourceSha256": "d2053ed90e8bb2111ef70a7e17506f8d8103bc25974f26080c883c3c82f56e15",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/west/walk-a",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/artist/child/artist-child-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "668e01865331f58a2448f7797a57230dd22b2a109b8e66a6a927feebb32e202e",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/walk-a.png",
+      "sourceSha256": "fc09cbc056466a4c9e92b3e40f22f0ee57a8f9d418be2884e5c2b42503ba026b",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/west/walk-b",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/artist/child/artist-child-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f97784670516cce1ccc30d02aae2eae99b78b4d3e73c4623fd8f62086ab1a4e1",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/walk-b.png",
+      "sourceSha256": "7fb7cc7e1e0120d31aa9a37ec3d55f17158057e82e77829c9e1a4f42790c921c",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/west/idle",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/artist/child/artist-child-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "32e249cd5041497b99e077d6ebdab4a771911d6a845dbfc51fb9740e796260ca",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/left/idle.png",
+      "sourceSha256": "fd63c952fcddeae5de71ee2cd3e0d501fd328f6de83302357b6c3968e15cbfa5",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/east/walk-a",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/artist/child/artist-child-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a64509cad4a5f2e979ca47680b41e3076fb5697c06a7f51702bf7a445939ee45",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/walk-a.png",
+      "sourceSha256": "783f52ae66b696b9fcf16af32be8982bb6a8cd1daf277f89f094b256b463772b",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/east/walk-b",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/artist/child/artist-child-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "cc46981a6df7c8c03af9fafec138837e685ef27618db7f6ccc802cd8a82ba18e",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/walk-b.png",
+      "sourceSha256": "103ebd4229dfc89903c7efc46c1e593cd21c83402d9a2841f499f23b7e6e0067",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/east/idle",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/artist/child/artist-child-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b0948c49a7e5d79e195dd0e72fd17e3c914d772fb10dc5323750da05c33dcab5",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/right/idle.png",
+      "sourceSha256": "8d47b6bd4f240c5d4b08bcee7aee4f97c50f6e2c223f302bab2e9d19940ba8fa",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/north/walk-a",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/artist/child/artist-child-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0e405df02d518ff02e06785ec627cd63618216ae55a787cd8c15a46d5fc356c9",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/walk-a.png",
+      "sourceSha256": "ec736b38f6b1b9dbf7ba13e3939f4b8185d7aaf3f5dec0e5fad8a2caa62926aa",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/north/walk-b",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/artist/child/artist-child-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "bb5b6e627dfd3c8e7e2087234a1013efb1b332694ff4cf61db40de84bdf405d4",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/walk-b.png",
+      "sourceSha256": "3daa2d6beb40bfad9b3af70194788aafb55028dc2a2b683fe8df5e1ecd017a45",
+      "runtimeReady": false
+    },
+    {
+      "id": "artist/child/north/idle",
+      "role": "artist",
+      "ageStage": "child",
+      "ageBand": "8-12",
+      "ageNote": "young hobby artist",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/artist/child/artist-child-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e6d35f95f383117de9c155dc479a97d54981491785adffd65bab301f57bd6ada",
+      "sourceFile": "crowd-archetypes-batch-v2/artist/back/idle.png",
+      "sourceSha256": "7fb67a90f77cf3f21ff4986f493856d8fa8f5f428df59261166524fc06d5262e",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

@@ -1,0 +1,276 @@
+{
+  "id": "crowd-park-cleaner-elder-movement-age-v1",
+  "role": "park-cleaner",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older worker or retired neighbor retaining the role's style",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.park-cleaner",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/park-cleaner/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "park-cleaner/elder/south/walk-a",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "394e1da2dfa53a5a548560ab07c256910cb27536342642ec98f26f0a359928b6",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-south-walk-a.png",
+      "sourceSha256": "adb5ea389687c9af020ca0d84de4bcc16bef716e7f7bb0326a621763f8f5edad",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/south/walk-b",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e12761bec2e5a2f28c96491ba3065b45073ed973e03ca4f48a40c8254b40c69d",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-south-walk-b.png",
+      "sourceSha256": "0626d42706f8244796d5fea3da9bfc5e2fe7f0fad1efc4ad7fa53f3a86d0f707",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/south/idle",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "335fb93dfeda9506e9516fa7c69dbda897e58234cba1196b211f7af7ce8a1284",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-south-idle.png",
+      "sourceSha256": "9bc22be078a70cddac796a756784ae4654acdb3b1c5eafade610d59c18067cc8",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/west/walk-a",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "373bc98b4a7b15a18de95097c066c139a0240b849cb55be5d2f00d4e584ce13d",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-west-walk-a.png",
+      "sourceSha256": "3632613a6a2afc10830993f7799b2946c6509c84153f5bc10b0e828c2539aa15",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/west/walk-b",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6ea68ee47689c9497177a0e208a57daf865fa4a30c1084008ef5f91a29ebf249",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-west-walk-b.png",
+      "sourceSha256": "b23761c3d2fed5180dcc139023d1b192d547a1bcc124260a8b2cf471aac0401d",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/west/idle",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "96370e00b44042e7a453ced4143bfcf922fe0fef09ef51fb4bbe6c8873b34b5d",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-west-idle.png",
+      "sourceSha256": "a842da512fe1fbe5d879221d9ef4244f3299337b687d47f0c87bef55d2382d27",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/east/walk-a",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0955a434875c669fe8fedcdbe28fd4fa14c392efed67f7538c44d331874ccde4",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-east-walk-a.png",
+      "sourceSha256": "d567e6014342b22127ebcfff16aa3393f4ffe7b6242cd4ba79d5328392785484",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/east/walk-b",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "07755bcfdeb743fd28a4e074ac17bcf7c2cc62b8975550587a691fa1ac6e85f8",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-east-walk-b.png",
+      "sourceSha256": "4cd2f24282fd1ba74749318ad2bc3b4ab322f615432ece4fe472b5f56b156dc0",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/east/idle",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e671a8e0edf6c197583e80925f857b80218757b9245f3b240bafd36fc24a8587",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-east-idle.png",
+      "sourceSha256": "ea154f69fac835b19ab2b966d4837d3be431b00f467051d6259b88c18ca3871a",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/north/walk-a",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "acc5958dc929296d123aac1ddd324a0a1c5b9a8f6a4cf2826a171948c168335a",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-north-walk-a.png",
+      "sourceSha256": "179685ce4232e391b436952154da907af439e33fe7a033a248cd19933dc25003",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/north/walk-b",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "987269817fad7e456913f7a1bbd48813c9c7e2f936c4d8e5c58ee7597eeaf677",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-north-walk-b.png",
+      "sourceSha256": "fa3e9f0df0e836cfa2275198fbe04c330cc72cdb84c06f605c8883b292922d1a",
+      "runtimeReady": false
+    },
+    {
+      "id": "park-cleaner/elder/north/idle",
+      "role": "park-cleaner",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older worker or retired neighbor retaining the role's style",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/park-cleaner/elder/park-cleaner-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0822c6f444945029cee225165482069a46e292132df2152c43cb24fbacc23747",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/park-cleaner/park-cleaner-north-idle.png",
+      "sourceSha256": "c48ed318ea384b613b6e14bc76241635e8e9fbe23800883319c76773b178b23e",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

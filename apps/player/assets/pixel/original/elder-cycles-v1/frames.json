@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "assetId": "elder-cycles-v1",
+  "status": "rejected",
+  "source": "elder-cycles-source.png",
+  "sourceDimensions": {
+    "width": 887,
+    "height": 1774,
+    "channels": 4
+  },
+  "requestedAtlas": {
+    "width": 384,
+    "height": 1024,
+    "columns": 4,
+    "rows": 8,
+    "cellWidth": 96,
+    "cellHeight": 128,
+    "columnOrder": ["contact-a", "passing-a", "contact-b", "passing-b"],
+    "rowOrder": [
+      "elder-woman-south",
+      "elder-woman-west",
+      "elder-woman-east",
+      "elder-woman-north",
+      "elder-man-south",
+      "elder-man-west",
+      "elder-man-east",
+      "elder-man-north"
+    ]
+  },
+  "frames": [],
+  "runtimeReady": false,
+  "limitations": [
+    "Generated source does not preserve the requested 4x8 phase/direction layout.",
+    "Only seven visible character bands were found during visual inspection.",
+    "Source-cell crops split character bodies across horizontal boundaries.",
+    "No normalized frames or atlas were created to avoid fabricated or duplicate cycles."
+  ]
+}

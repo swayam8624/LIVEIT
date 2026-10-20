@@ -1,0 +1,224 @@
+{
+  "id": "crowd-street-musician-movement-v1",
+  "role": "street-musician",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.street-musician",
+  "description": "magenta jacket, mint strap, compact guitar case",
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "id": "street-musician/south/walk-a",
+      "role": "street-musician",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/street-musician/street-musician-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "841c80d118ac9aa29b1c64ed957b12a22d60d5e6edb64d9e9a619c3e20739f4f",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/south/walk-b",
+      "role": "street-musician",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/street-musician/street-musician-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "218762203fd8573b0169d39decf3242b9027b815813d248ee6fffe9963695450",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/south/idle",
+      "role": "street-musician",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/street-musician/street-musician-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "795a68e59ea4f8b715a5a74dbec694900ab295a761faf0cb432bdf6f90cfcb65",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/west/walk-a",
+      "role": "street-musician",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/street-musician/street-musician-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b02c9b9aa69bc57d8e8838b78c7553242c1ea31bf740f5bfc4cd30bafdf72bc4",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/west/walk-b",
+      "role": "street-musician",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/street-musician/street-musician-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "df367cf35db61a293678bd5546df3128d8136204dd924471a03f4d105d881c15",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/west/idle",
+      "role": "street-musician",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/street-musician/street-musician-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f072b71e0e20f5767f6a572e79cdc85b97f94a011318fafbd61cec8ae8f53382",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/east/walk-a",
+      "role": "street-musician",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/street-musician/street-musician-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7a87dd4af2b7aa6d016ac774841429b07f6e41bc174dfaf90cca47513ceab090",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/east/walk-b",
+      "role": "street-musician",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/street-musician/street-musician-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "ea1aec3590e18252f44116784c41fe0cb9521422d39901228dcb7d229d7e7d8f",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/east/idle",
+      "role": "street-musician",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/street-musician/street-musician-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "c4b7b6093f9c9d31a5f89afea6389f09da85d18180fcf3e09feacc0cdc7fa777",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/north/walk-a",
+      "role": "street-musician",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/street-musician/street-musician-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "782adf37a10f454a3bd3aa2944a0b6467cb624a7a942f3cda788e84455cad2f7",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/north/walk-b",
+      "role": "street-musician",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/street-musician/street-musician-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2d955cbb021ea6fbb0bc1a975688e05e6db7c0f351d4e7bf26cb38ccd5e4d351",
+      "runtimeReady": false
+    },
+    {
+      "id": "street-musician/north/idle",
+      "role": "street-musician",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/street-musician/street-musician-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "1a42ee00d15206990d814d0b4fc2bc0834b7c2bd55ba8640209f7703641461b7",
+      "runtimeReady": false
+    }
+  ],
+  "atlas": {
+    "file": "frames/street-musician/movement-atlas-3x4.png",
+    "width": 72,
+    "height": 128,
+    "sha256": "3b745d325df646d1e52c9c58459afe1c21ca41f6c6e90ab9e4ee917506f0ecd7",
+    "runtimeReady": false
+  },
+  "preview": {
+    "file": "frames/street-musician/movement-atlas-preview-6x.png",
+    "scale": 6,
+    "sha256": "de92ea0d6739e64dc0f3b530fbc415e453c667302cb4dcfe1e65b0027d3ae3e4",
+    "runtimeReady": false
+  },
+  "runtimeReady": false
+}

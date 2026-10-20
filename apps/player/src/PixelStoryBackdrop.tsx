@@ -68,7 +68,10 @@ export function PixelStoryBackdrop({
   add(35, 236, 100, 2, '#f0b87b');
   // Distant skyline. Yellow lit windows reveal the city beyond the scene.
   const buildings = [
-    { x: 36, h: 42 }, { x: 57, h: 59 }, { x: 84, h: 35 }, { x: 104, h: 51 },
+    { x: 36, h: 42 },
+    { x: 57, h: 59 },
+    { x: 84, h: 35 },
+    { x: 104, h: 51 },
   ];
   for (const b of buildings) {
     add(b.x, 236 - b.h, 17, b.h, '#27364e');
@@ -77,8 +80,8 @@ export function PixelStoryBackdrop({
     }
   }
   for (let i = 0; i < 12; i++) {
-    const x = 40 + (i * 29) % 90;
-    const y = 110 + (i * 37) % 108;
+    const x = 40 + ((i * 29) % 90);
+    const y = 110 + ((i * 37) % 108);
     add(x, y, 2, 10, '#849bb6');
   }
 
@@ -164,7 +167,13 @@ export function PixelStoryBackdrop({
       <Image
         source={pixelArt.plant}
         resizeMode="stretch"
-        style={{ position: 'absolute', top: Math.round(298 * scale), left: Math.round(284 * scale), width: Math.round(24 * scale), height: Math.round(24 * scale) }}
+        style={{
+          position: 'absolute',
+          top: Math.round(298 * scale),
+          left: Math.round(284 * scale),
+          width: Math.round(24 * scale),
+          height: Math.round(24 * scale),
+        }}
       />
       <View style={styles.pixelPlacard}>
         <Text style={styles.pixelLabel}>BELLWEATHER · CORNER CAFÉ</Text>
@@ -193,6 +202,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 5,
   },
-  pixelLabel: { fontSize: 10, fontWeight: '900', color: '#ffddac', letterSpacing: 1 },
+  pixelLabel: {
+    fontSize: 10,
+    fontWeight: '900',
+    color: '#ffddac',
+    letterSpacing: 1,
+  },
   moodBar: { height: 4, width: '100%', position: 'absolute', bottom: 0 },
 });

@@ -1,0 +1,276 @@
+{
+  "id": "crowd-pet-walker-elder-movement-age-v1",
+  "role": "pet-walker",
+  "ageStage": "elder",
+  "ageBand": "60+",
+  "ageNote": "older pet walker",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.pet-walker",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/pet-walker/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "pet-walker/elder/south/walk-a",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/pet-walker/elder/pet-walker-elder-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "495da03e974f92078129761f0e21a7d4b226fe9ead61a265e9c5949c2283fdb5",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/front/walk-a.png",
+      "sourceSha256": "c9aca96f430b46dac12d219de38554c1d8b352f7f43c2bb74a5cede3817968a9",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/south/walk-b",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/pet-walker/elder/pet-walker-elder-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "98e3b820608263f22333a01b376b80ef6cdf18a51d1432907d4d911815ed955a",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/front/walk-b.png",
+      "sourceSha256": "172760d7c3e2eb3b09ec04ed20ab43621b1e3f85737b67752af3259d28de2cf5",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/south/idle",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/pet-walker/elder/pet-walker-elder-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "45acb94555b113275ebcafa66c7287dcee524f9455b69b0534a825e690e5b6fe",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/front/idle.png",
+      "sourceSha256": "39a017e5fd140efa532204241883b97cd6ac3f2894d3206c7e34ef13265c0c7e",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/west/walk-a",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/pet-walker/elder/pet-walker-elder-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0e702769d515dd1bcfdca562f81f31cbaec993397a94e6a51dfdcb142c933c06",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/left/walk-a.png",
+      "sourceSha256": "7b61cb5df642c084f8f9c510f51f77a6c4ab6b3bf51d1276fe8630296118ef9c",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/west/walk-b",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/pet-walker/elder/pet-walker-elder-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f1ff2810afbcd8c2e9a18d4558951cce34f8548c6717f86dae08f4cb6c20fb9b",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/left/walk-b.png",
+      "sourceSha256": "decd8bb87c85c5b76fb5678d878f4046b809819a5065451bb3780b98d46ed27c",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/west/idle",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/pet-walker/elder/pet-walker-elder-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "53cb5f3934fffeb72b53b862db58a830d9ccc3871c3d403e43ff1bba51a37680",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/left/idle.png",
+      "sourceSha256": "ab107fb8174159ba17162516cad1325ea274dbad43a18787ed4b18a1de6a5e4b",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/east/walk-a",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/pet-walker/elder/pet-walker-elder-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "27fe8e8b182745f5e58166161bb4d53510ccc11d4c3f89a3064dcdc83a32a43c",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/right/walk-a.png",
+      "sourceSha256": "8c86165ac2c7d169f4757b2afe727073409e8dfbcf3c80734ab03642adc8397b",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/east/walk-b",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/pet-walker/elder/pet-walker-elder-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "db072aeddeb4ea61c93ee631c9ef6288636eb0eadcc49f881a12ec78dc750d99",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/right/walk-b.png",
+      "sourceSha256": "62c4208a57c076bf59456371c2beedb16391cfc89103bc3bb0300f913bd44374",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/east/idle",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/pet-walker/elder/pet-walker-elder-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "f6636feb43287142ac67ccc43ceabaf330265bacff6d057e660ae9b5cafc1afe",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/right/idle.png",
+      "sourceSha256": "a079b01a8a97d284b0414ca00e69fd943ae60f796f2278c2c11597ae02499bab",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/north/walk-a",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/pet-walker/elder/pet-walker-elder-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2fcd9d56063036deed7892a0e7e12dc9714280cd3b6a375f3c7bb0c1bd49f581",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/back/walk-a.png",
+      "sourceSha256": "29bb1cf596a2fe61bb76232c09c80ae83f92277ea5d18b6f7129776e96a8d6b5",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/north/walk-b",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/pet-walker/elder/pet-walker-elder-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "215314062712c9d0b07961b44c90ec852ca0482be316611e88eb020debe4c34a",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/back/walk-b.png",
+      "sourceSha256": "dc880cea363ecda491bbc2c924ab934f34d38737196ae44ae3810cd3b9370214",
+      "runtimeReady": false
+    },
+    {
+      "id": "pet-walker/elder/north/idle",
+      "role": "pet-walker",
+      "ageStage": "elder",
+      "ageBand": "60+",
+      "ageNote": "older pet walker",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/pet-walker/elder/pet-walker-elder-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0d20a55bac889fec3bc9d30f2b7bef9dffd0a483b07f367a67f5ff00a38f961c",
+      "sourceFile": "crowd-archetypes-batch-v2/pet-walker/back/idle.png",
+      "sourceSha256": "7cc42a065685a5f55b4739b3d468bbf9e52de148a3deb02be799174b7d40810c",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

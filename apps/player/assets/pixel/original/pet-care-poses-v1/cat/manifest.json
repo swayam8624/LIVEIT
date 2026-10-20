@@ -1,0 +1,12 @@
+{
+  "id": "pet-care-cat-v1",
+  "animal": "cat",
+  "source": "cat-care-poses-source.png",
+  "atlas": "cat-care-poses-atlas-576x128.png",
+  "preview": "cat-care-poses-preview-2x.png",
+  "frameSize": [96, 128],
+  "poses": ["idle", "happy", "worried", "sleeping", "care", "recovering"],
+  "frameManifest": "frames.json",
+  "runtimeReady": false,
+  "status": "original concept export; requires art direction, timing, pivots, and engine intake"
+}

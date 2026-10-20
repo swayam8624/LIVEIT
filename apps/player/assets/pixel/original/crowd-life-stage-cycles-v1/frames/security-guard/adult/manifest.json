@@ -1,0 +1,276 @@
+{
+  "id": "crowd-security-guard-adult-movement-age-v1",
+  "role": "security-guard",
+  "ageStage": "adult",
+  "ageBand": "20-59",
+  "ageNote": "adult security role",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.security-guard",
+  "sourceBatch": "crowd-archetypes-batch-v3",
+  "sourceManifest": "crowd-archetypes-batch-v3/frames/security-guard/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "security-guard/adult/south/walk-a",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/security-guard/adult/security-guard-adult-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "28d910c3ae2a8bf09ab6faa38089ca6a0d53011b95d763c06ca919eb1ea2b47c",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-south-walk-a.png",
+      "sourceSha256": "28d910c3ae2a8bf09ab6faa38089ca6a0d53011b95d763c06ca919eb1ea2b47c",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/south/walk-b",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/security-guard/adult/security-guard-adult-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6470349c145f111b69295b0c59ed8eaea84c5927190df4f7774a24f9b6142904",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-south-walk-b.png",
+      "sourceSha256": "6470349c145f111b69295b0c59ed8eaea84c5927190df4f7774a24f9b6142904",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/south/idle",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/security-guard/adult/security-guard-adult-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "a072f2989bb06abc0937afb0b8bf1b87b8682d5d692cf1c3e7360453d2d758ef",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-south-idle.png",
+      "sourceSha256": "a072f2989bb06abc0937afb0b8bf1b87b8682d5d692cf1c3e7360453d2d758ef",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/west/walk-a",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/security-guard/adult/security-guard-adult-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "84e3e8ffc9c9ac15817a6deab0057bd65b7ee8944f1dff2cf31f9bb231df1a0a",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-west-walk-a.png",
+      "sourceSha256": "84e3e8ffc9c9ac15817a6deab0057bd65b7ee8944f1dff2cf31f9bb231df1a0a",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/west/walk-b",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/security-guard/adult/security-guard-adult-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "b9a34f21b66091d422c6a508a1bfe9ce686f31a5cfc60f304c776ec3e9c2c85b",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-west-walk-b.png",
+      "sourceSha256": "b9a34f21b66091d422c6a508a1bfe9ce686f31a5cfc60f304c776ec3e9c2c85b",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/west/idle",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/security-guard/adult/security-guard-adult-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "867c09a080194118590f673791287470e777580ae06e8fd03a3e060c45ec2ca8",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-west-idle.png",
+      "sourceSha256": "867c09a080194118590f673791287470e777580ae06e8fd03a3e060c45ec2ca8",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/east/walk-a",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/security-guard/adult/security-guard-adult-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "73ccef99f65b8da1841e564cbe626de7f5a209a639808f3b66fae9f1daec64a5",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-east-walk-a.png",
+      "sourceSha256": "73ccef99f65b8da1841e564cbe626de7f5a209a639808f3b66fae9f1daec64a5",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/east/walk-b",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/security-guard/adult/security-guard-adult-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7200076fcd2c8db4610cf20931621971677b434cbf8fe30f459c5cc42cdd2899",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-east-walk-b.png",
+      "sourceSha256": "7200076fcd2c8db4610cf20931621971677b434cbf8fe30f459c5cc42cdd2899",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/east/idle",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/security-guard/adult/security-guard-adult-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "6747ec730e1579a9325653485d1037db829fec6f39cb25aa3c667d8d648720fd",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-east-idle.png",
+      "sourceSha256": "6747ec730e1579a9325653485d1037db829fec6f39cb25aa3c667d8d648720fd",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/north/walk-a",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/security-guard/adult/security-guard-adult-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "7c38d41fc82817266d291837935943fa2e1112f514313317faaf4c58af78f529",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-north-walk-a.png",
+      "sourceSha256": "7c38d41fc82817266d291837935943fa2e1112f514313317faaf4c58af78f529",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/north/walk-b",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/security-guard/adult/security-guard-adult-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "860896ca3065ea6ba32749ba45ce8976a23894a5badfe3ea4385ff279c9c8064",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-north-walk-b.png",
+      "sourceSha256": "860896ca3065ea6ba32749ba45ce8976a23894a5badfe3ea4385ff279c9c8064",
+      "runtimeReady": false
+    },
+    {
+      "id": "security-guard/adult/north/idle",
+      "role": "security-guard",
+      "ageStage": "adult",
+      "ageBand": "20-59",
+      "ageNote": "adult security role",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/security-guard/adult/security-guard-adult-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "da8936ec8cf6199a200b6f61c6a6804421e149fb80ad8e8ec48791a5f5c316ba",
+      "sourceFile": "crowd-archetypes-batch-v3/frames/security-guard/security-guard-north-idle.png",
+      "sourceSha256": "da8936ec8cf6199a200b6f61c6a6804421e149fb80ad8e8ec48791a5f5c316ba",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

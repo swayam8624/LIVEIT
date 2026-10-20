@@ -1,0 +1,276 @@
+{
+  "id": "crowd-shopper-teen-movement-age-v1",
+  "role": "shopper",
+  "ageStage": "teen",
+  "ageBand": "16-19",
+  "ageNote": "late-teen shopper",
+  "catalogId": "liveit.prod.v1.pixel.sprite.crowd.shopper",
+  "sourceBatch": "crowd-archetypes-batch-v2",
+  "sourceManifest": "crowd-archetypes-batch-v2/shopper/manifest.json",
+  "frameSize": {
+    "width": 24,
+    "height": 32
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "directions": ["south", "west", "east", "north"],
+  "phases": ["walk-a", "walk-b", "idle"],
+  "frameCount": 12,
+  "frames": [
+    {
+      "id": "shopper/teen/south/walk-a",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "south",
+      "phase": "walk-a",
+      "file": "frames/shopper/teen/shopper-teen-south-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "384b856490c889df30a35f8d2a7f8716a82c48204954237d852cf1ef6ba9a8a0",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/front/walk-a.png",
+      "sourceSha256": "537f7ddec69a42ad41cb86aee4bc65e525aadab987e1d9bea036cc91404328e1",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/south/walk-b",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "south",
+      "phase": "walk-b",
+      "file": "frames/shopper/teen/shopper-teen-south-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "db1b0962c33fef50e3fbafbec939d5555867f7e63194f26c067855f1d74daeca",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/front/walk-b.png",
+      "sourceSha256": "d6f3b9f2920bf769d4797dc2677eb0ab4ef22e110409d8f4e523ba7824a8376e",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/south/idle",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "south",
+      "phase": "idle",
+      "file": "frames/shopper/teen/shopper-teen-south-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "598e0df8a50483524e01db1762eb803437b329df7bec50a525afd0911f68b3be",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/front/idle.png",
+      "sourceSha256": "388b3dc75cb828fdca2eb7d59f63926b0237c3390ccc7fa049229692fb0d13ec",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/west/walk-a",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "west",
+      "phase": "walk-a",
+      "file": "frames/shopper/teen/shopper-teen-west-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "daff2565cba41eb04eda03691e5bb154f8f44b0d4d37ccfbb8fa141cddb309d8",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/left/walk-a.png",
+      "sourceSha256": "f0c408eb131edc72d7eed5ee94d7495b28aeb89242693d27141eb35b5b090770",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/west/walk-b",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "west",
+      "phase": "walk-b",
+      "file": "frames/shopper/teen/shopper-teen-west-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "5c638aabb9dc6fc8f75fe922ac6bf9a970bd8d1f254480086ecf10d4e9ecbb5b",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/left/walk-b.png",
+      "sourceSha256": "0ccb9e4aedf762e6ae460fc5ffbfb3a4caf51e06a280ed42b681e8a17f766ec5",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/west/idle",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "west",
+      "phase": "idle",
+      "file": "frames/shopper/teen/shopper-teen-west-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "dc0af7fda6ee15a2b16affdaaed82fd21ad314da34a2a2712f13708216b88018",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/left/idle.png",
+      "sourceSha256": "8543099060f5727c6fb9f981602f37f308c4bb16825368ee59916488f8815668",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/east/walk-a",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "east",
+      "phase": "walk-a",
+      "file": "frames/shopper/teen/shopper-teen-east-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "0c433ea6b3db41644c05f7fb7341d907d275bc89f2a3af37f19ba16fef5fc84c",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/right/walk-a.png",
+      "sourceSha256": "ba3c005711baa4e80b7cb1ccf519f99b215ae3a27bb27b6ed1300892cf3094d4",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/east/walk-b",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "east",
+      "phase": "walk-b",
+      "file": "frames/shopper/teen/shopper-teen-east-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "e406f580b4cf66d9dda6d6fdf1a46881792310ea7eab635c0deb559c7b8f9099",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/right/walk-b.png",
+      "sourceSha256": "8ad1ef3118ab6c4f7d62c8f49d363809374b00391d02878af53b42f2ff599f33",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/east/idle",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "east",
+      "phase": "idle",
+      "file": "frames/shopper/teen/shopper-teen-east-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "92d3e312de0890b18fed02dc61259731a93f87871943daa766ce2150211ec8eb",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/right/idle.png",
+      "sourceSha256": "8e4e69d7d849910b9fc1f5d48e606d10e3f98009b4bf1414da46f2ba513aecd9",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/north/walk-a",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "north",
+      "phase": "walk-a",
+      "file": "frames/shopper/teen/shopper-teen-north-walk-a.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "663046a46567ea2e0e222dba2187af560bdd4a314f1f6bcaf7fbec53ca397266",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/back/walk-a.png",
+      "sourceSha256": "f3254c4f556b6c23c10d34181983f6a8459544c95c65b7fb291bcb8a12612759",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/north/walk-b",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "north",
+      "phase": "walk-b",
+      "file": "frames/shopper/teen/shopper-teen-north-walk-b.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "2e536ea20f665c99a5d3c95d216a0bbb596a4eb6a264ea75454d244b48e60d42",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/back/walk-b.png",
+      "sourceSha256": "de3b5422d080f933029e7fb602902f5d24ea99e5d6cf6d3b13a7212c65ac9c9b",
+      "runtimeReady": false
+    },
+    {
+      "id": "shopper/teen/north/idle",
+      "role": "shopper",
+      "ageStage": "teen",
+      "ageBand": "16-19",
+      "ageNote": "late-teen shopper",
+      "direction": "north",
+      "phase": "idle",
+      "file": "frames/shopper/teen/shopper-teen-north-idle.png",
+      "width": 24,
+      "height": 32,
+      "mode": "RGBA",
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sha256": "77a6603515df26e8b6e2fff6c6c32f03e9d2598e202f682a8153e32303906374",
+      "sourceFile": "crowd-archetypes-batch-v2/shopper/back/idle.png",
+      "sourceSha256": "40567894835df0dc00b609f0b612aefee33fc4aa3b822f857d0cd2eb4bd655b0",
+      "runtimeReady": false
+    }
+  ],
+  "runtimeReady": false
+}

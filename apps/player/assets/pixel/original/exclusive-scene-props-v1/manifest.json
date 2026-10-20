@@ -1,0 +1,364 @@
+{
+  "schema": "liveit.pixel.exclusive-scene-props.v1",
+  "generatedBy": "build_props.py",
+  "canvas": {
+    "size": [64, 64],
+    "mode": "RGBA",
+    "scale": "1x",
+    "pivot": [32, 60],
+    "pivotMeaning": "bottom-center ground contact"
+  },
+  "runtimeReady": false,
+  "scenes": [
+    {
+      "id": "graduation",
+      "props": [
+        {
+          "id": "ceremony-sign",
+          "path": "graduation/props/ceremony-sign.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.42,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "folding-chair",
+          "path": "graduation/props/folding-chair.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.435,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "honor-cord",
+          "path": "graduation/props/honor-cord.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.45,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "confetti-popper",
+          "path": "graduation/props/confetti-popper.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.465,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "diploma-tube",
+          "path": "graduation/props/diploma-tube.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.48,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "flower-wreath",
+          "path": "graduation/props/flower-wreath.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.495,
+          "interactive": true,
+          "runtimeReady": false
+        }
+      ],
+      "atlas": "graduation/props/graduation-props-atlas.png",
+      "preview": "graduation-props-preview.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "new-parenthood",
+      "props": [
+        {
+          "id": "folded-blanket",
+          "path": "new-parenthood/props/folded-blanket.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.42,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "feeding-bottle",
+          "path": "new-parenthood/props/feeding-bottle.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.435,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "lullaby-mobile",
+          "path": "new-parenthood/props/lullaby-mobile.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.45,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "toy-blocks",
+          "path": "new-parenthood/props/toy-blocks.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.465,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "footprint-card",
+          "path": "new-parenthood/props/footprint-card.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.48,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "night-lamp",
+          "path": "new-parenthood/props/night-lamp.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.495,
+          "interactive": true,
+          "runtimeReady": false
+        }
+      ],
+      "atlas": "new-parenthood/props/new-parenthood-props-atlas.png",
+      "preview": "new-parenthood-props-preview.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-legacy",
+      "props": [
+        {
+          "id": "framed-photo",
+          "path": "elder-legacy/props/framed-photo.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.42,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "tea-tray",
+          "path": "elder-legacy/props/tea-tray.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.435,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "knitting-basket",
+          "path": "elder-legacy/props/knitting-basket.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.45,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "birthday-cake",
+          "path": "elder-legacy/props/birthday-cake.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.465,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "reading-glasses",
+          "path": "elder-legacy/props/reading-glasses.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.48,
+          "interactive": true,
+          "runtimeReady": false
+        },
+        {
+          "id": "keepsake-box",
+          "path": "elder-legacy/props/keepsake-box.png",
+          "size": [64, 64],
+          "pivot": [32, 60],
+          "objectBounds": [6, 8, 58, 60],
+          "drawDepth": 0.495,
+          "interactive": true,
+          "runtimeReady": false
+        }
+      ],
+      "atlas": "elder-legacy/props/elder-legacy-props-atlas.png",
+      "preview": "elder-legacy-props-preview.png",
+      "runtimeReady": false
+    }
+  ],
+  "files": [
+    {
+      "path": "elder-legacy/props/birthday-cake.png",
+      "sha256": "f9e7862dfed5ba5a935d365efa68e949bae1978a61eeaf0758c398ffb2119749",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "elder-legacy/props/elder-legacy-props-atlas.png",
+      "sha256": "cc0af31e79cd96de8a97cb5ebac7e8419dd38d6f05b25aa74a597152178aeeee",
+      "size": [192, 128],
+      "mode": "RGBA"
+    },
+    {
+      "path": "elder-legacy/props/framed-photo.png",
+      "sha256": "605e21c3bce7bf8fe2a0e96697f967ef77a6f27f324928a1a056ab653487cd68",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "elder-legacy/props/keepsake-box.png",
+      "sha256": "d499eca89a2be430768f56f93202b59af017638787e9e360154c9260fb1f7a25",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "elder-legacy/props/knitting-basket.png",
+      "sha256": "4a403c86093541d56fab3c24debe93a5846399536d22c94d5ea9c5f93bd90ae4",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "elder-legacy/props/reading-glasses.png",
+      "sha256": "7a622510eba7bafa919f406e2dc352043f82054bf8f5a01e0f6340147bcff5fb",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "elder-legacy/props/tea-tray.png",
+      "sha256": "934dcbd2f0465283bdfe70d89387df04c11899d5207756001e08a9a56af0f6d6",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "elder-legacy-props-preview.png",
+      "sha256": "09799e0aa8e4b366fb49335182dea07073d277d547d086268ff6686cfd0eb966",
+      "size": [192, 128],
+      "mode": "RGBA"
+    },
+    {
+      "path": "graduation/props/ceremony-sign.png",
+      "sha256": "646074df7b2c0beb6e94c0cbd00938f8c333037a7d8f83b9b221e25e79ea2a0b",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "graduation/props/confetti-popper.png",
+      "sha256": "f23735f7280314ca22e4a92dffa936b56af4c0a19dd55616adaca8764f091cd0",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "graduation/props/diploma-tube.png",
+      "sha256": "89edd11c30b2ef76ab1d09469d07a07d8d982a2cdf6dbbb3a71ed93d7f614798",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "graduation/props/flower-wreath.png",
+      "sha256": "6f4ca531d671c2994416cca3190cb7e35de83de0f55884f158c6f0b8909cb129",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "graduation/props/folding-chair.png",
+      "sha256": "6ce1ec8721c6a4cdc1e9c7d8195942f13b3a11a35d5f04a2f5a35e25f6fc7ef0",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "graduation/props/graduation-props-atlas.png",
+      "sha256": "716a72b0c8199d0a507b6a3990da25e5396792c7025505b5ae3cd4f813084c63",
+      "size": [192, 128],
+      "mode": "RGBA"
+    },
+    {
+      "path": "graduation/props/honor-cord.png",
+      "sha256": "d68b225880df44ddf1f16f9b2be433da56210032f895de4efaae958a56365b23",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "graduation-props-preview.png",
+      "sha256": "5c9a40850f0112f323b0e3fdcf0a2c9e694c2fb3a210234dc6ae9f6edca64144",
+      "size": [192, 128],
+      "mode": "RGBA"
+    },
+    {
+      "path": "new-parenthood/props/feeding-bottle.png",
+      "sha256": "19fdebcae58061e63ec51cdad42eedc4b796ebf6534a23e8c920cec1bb683b0d",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "new-parenthood/props/folded-blanket.png",
+      "sha256": "83ec6b1dfb0f9a588cfffdf79f6c9ef1d00b5acbcdadf1cd4706bf561be368e4",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "new-parenthood/props/footprint-card.png",
+      "sha256": "05e91794d65dbf20eaa000b4bdcc4e31106b7b165108738de5a8d7f4373a466f",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "new-parenthood/props/lullaby-mobile.png",
+      "sha256": "17d25fb961c79e8b2a680f26a76b13f222122ea62d7b07e63cf7f6cf9d685355",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "new-parenthood/props/new-parenthood-props-atlas.png",
+      "sha256": "7b7453c9a32d83c66583b2f7e77e3803a84c410e48cf74f9d6256724030c3a86",
+      "size": [192, 128],
+      "mode": "RGBA"
+    },
+    {
+      "path": "new-parenthood/props/night-lamp.png",
+      "sha256": "0c4eae90bb4bbf2c71ed353f1548ac94e1f7701197101cb269860a5281477aca",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "new-parenthood/props/toy-blocks.png",
+      "sha256": "6e0799bacf0658e63841e7da0a4636cd3ec0d9db5f48496fed8c3a150c2a3574",
+      "size": [64, 64],
+      "mode": "RGBA"
+    },
+    {
+      "path": "new-parenthood-props-preview.png",
+      "sha256": "82366612028b81efdd8959f2cd9d21ec43fa83b18c685e379e3776b7697d51d5",
+      "size": [192, 128],
+      "mode": "RGBA"
+    }
+  ]
+}

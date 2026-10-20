@@ -1,0 +1,348 @@
+{
+  "schema": "liveit.pixel.sprite-batch.v1",
+  "batch": "life-arc-early-cycles-v1/teen-walk",
+  "source": {
+    "file": "teen-walk-source.png",
+    "sha256": "ab5e665c89e45a482dc4ef59aa478d5eccad05c64e8a1046e5fe5e763ccccf2a",
+    "size": {
+      "width": 1122,
+      "height": 1402
+    },
+    "mode": "RGBA"
+  },
+  "grid": {
+    "rows": ["south", "west", "east", "north"],
+    "columns": ["contact-a", "passing-a", "contact-b", "passing-b"],
+    "cellSize": {
+      "width": 24,
+      "height": 32
+    }
+  },
+  "pivot": {
+    "x": 12,
+    "y": 31
+  },
+  "frames": [
+    {
+      "file": "teen-walk-south-contact-a.png",
+      "stage": "teen-walk",
+      "direction": "south",
+      "phase": "contact-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 0,
+        "column": 0
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-south-passing-a.png",
+      "stage": "teen-walk",
+      "direction": "south",
+      "phase": "passing-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 0,
+        "column": 1
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-south-contact-b.png",
+      "stage": "teen-walk",
+      "direction": "south",
+      "phase": "contact-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 0,
+        "column": 2
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-south-passing-b.png",
+      "stage": "teen-walk",
+      "direction": "south",
+      "phase": "passing-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 0,
+        "column": 3
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-west-contact-a.png",
+      "stage": "teen-walk",
+      "direction": "west",
+      "phase": "contact-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 1,
+        "column": 0
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-west-passing-a.png",
+      "stage": "teen-walk",
+      "direction": "west",
+      "phase": "passing-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 1,
+        "column": 1
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-west-contact-b.png",
+      "stage": "teen-walk",
+      "direction": "west",
+      "phase": "contact-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 1,
+        "column": 2
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-west-passing-b.png",
+      "stage": "teen-walk",
+      "direction": "west",
+      "phase": "passing-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 1,
+        "column": 3
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-east-contact-a.png",
+      "stage": "teen-walk",
+      "direction": "east",
+      "phase": "contact-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 2,
+        "column": 0
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-east-passing-a.png",
+      "stage": "teen-walk",
+      "direction": "east",
+      "phase": "passing-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 2,
+        "column": 1
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-east-contact-b.png",
+      "stage": "teen-walk",
+      "direction": "east",
+      "phase": "contact-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 2,
+        "column": 2
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-east-passing-b.png",
+      "stage": "teen-walk",
+      "direction": "east",
+      "phase": "passing-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 2,
+        "column": 3
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-north-contact-a.png",
+      "stage": "teen-walk",
+      "direction": "north",
+      "phase": "contact-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 3,
+        "column": 0
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-north-passing-a.png",
+      "stage": "teen-walk",
+      "direction": "north",
+      "phase": "passing-a",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 3,
+        "column": 1
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-north-contact-b.png",
+      "stage": "teen-walk",
+      "direction": "north",
+      "phase": "contact-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 3,
+        "column": 2
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    },
+    {
+      "file": "teen-walk-north-passing-b.png",
+      "stage": "teen-walk",
+      "direction": "north",
+      "phase": "passing-b",
+      "frameSize": {
+        "width": 24,
+        "height": 32
+      },
+      "pivot": {
+        "x": 12,
+        "y": 31
+      },
+      "sourceCell": {
+        "row": 3,
+        "column": 3
+      },
+      "runtimeReady": false,
+      "notes": "Derived nearest-neighbor crop from the preserved ImageGen source sheet; concept-only until pixel cleanup and renderer review."
+    }
+  ],
+  "runtimeReady": false
+}

@@ -1,0 +1,318 @@
+{
+  "schema": "liveit.pixel.exclusive-scene-depth.v2",
+  "generatedBy": "build_layers.py",
+  "sourceGrid": [160, 128],
+  "exportSize": [320, 256],
+  "sourceSize": [640, 512],
+  "scenes": [
+    {
+      "id": "graduation",
+      "layers": [
+        "graduation/graduation-background-plate.png",
+        "graduation/graduation-midground-set-dressing.png",
+        "graduation/graduation-foreground-frame.png",
+        "graduation/graduation-actor-safe-guide.png"
+      ],
+      "items": [
+        "graduation/items/class-medal.png",
+        "graduation/items/diploma-scroll.png",
+        "graduation/items/graduation-cap.png",
+        "graduation/items/wildflower-bouquet.png"
+      ],
+      "actorSafeRectGrid": [42, 20, 118, 107],
+      "preview": "graduation-preview-derived.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "new-parenthood",
+      "layers": [
+        "new-parenthood/new-parenthood-background-plate.png",
+        "new-parenthood/new-parenthood-midground-set-dressing.png",
+        "new-parenthood/new-parenthood-foreground-frame.png",
+        "new-parenthood/new-parenthood-actor-safe-guide.png"
+      ],
+      "items": [
+        "new-parenthood/items/family-photo.png",
+        "new-parenthood/items/keepsake-rattle.png",
+        "new-parenthood/items/swaddled-baby.png",
+        "new-parenthood/items/welcome-home-card.png"
+      ],
+      "actorSafeRectGrid": [38, 24, 123, 109],
+      "preview": "new-parenthood-preview-derived.png",
+      "runtimeReady": false
+    },
+    {
+      "id": "elder-legacy",
+      "layers": [
+        "elder-legacy/elder-legacy-background-plate.png",
+        "elder-legacy/elder-legacy-midground-set-dressing.png",
+        "elder-legacy/elder-legacy-foreground-frame.png",
+        "elder-legacy/elder-legacy-actor-safe-guide.png"
+      ],
+      "items": [
+        "elder-legacy/items/garden-seed-packet.png",
+        "elder-legacy/items/legacy-letter.png",
+        "elder-legacy/items/memory-album.png",
+        "elder-legacy/items/old-key.png"
+      ],
+      "actorSafeRectGrid": [43, 19, 117, 108],
+      "preview": "elder-legacy-preview-derived.png",
+      "runtimeReady": false
+    }
+  ],
+  "files": [
+    {
+      "path": "elder-legacy/elder-legacy-actor-safe-guide.png",
+      "sha256": "0738c804317eb52e9e0791e827d029baa95ff6af380b857a89a5e4d5cb54f383",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "elder-legacy/elder-legacy-background-plate.png",
+      "sha256": "183555bcab5e13a021a1fa1492512a6f51ae12183825d015642678bd37ab9c0d",
+      "size": [320, 256],
+      "mode": "RGB",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "elder-legacy/elder-legacy-background-source.png",
+      "sha256": "18192bce516bee9da79f5f3db083891c23b6cab8cdf7cdf1ff299a6883a3082f",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "elder-legacy/elder-legacy-foreground-frame.png",
+      "sha256": "a7ba3929505800ddea709e0e272d6e69fdf7eab06f7742b7844aec9c28b8190a",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "elder-legacy/elder-legacy-foreground-source.png",
+      "sha256": "b2d0ad4a3a72a9e575c215a6e7f45e5c09be6ed94bac3da4ea4645edd50aeccd",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "elder-legacy/elder-legacy-midground-set-dressing.png",
+      "sha256": "ebdc66753c1dea1b633fa79ab66cbe0c14a68677b944623ff1f2fe6e6c0e8301",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "elder-legacy/elder-legacy-midground-source.png",
+      "sha256": "f4f05c5a91674c427069c6043f9476b280f23e8105c81ea1f082a06b24b2ad3e",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "elder-legacy/items/garden-seed-packet.png",
+      "sha256": "85f812c8b44c15b51aea74a1f7d6aa6eb09aa69ff1fc8c54875ec32301bbd991",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "elder-legacy/items/legacy-letter.png",
+      "sha256": "2756e9ef232a2a312b2a6ed216986628743155834330d38dfdd9710d088364a6",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "elder-legacy/items/memory-album.png",
+      "sha256": "1a53bd47a4f45de3f70a7e5020b021c689878efcfb89c87739a3c4e9040de7b9",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "elder-legacy/items/old-key.png",
+      "sha256": "fa94e91075570b2d41f534dda7ab0f1ae09eb1a43cbbcca4d538da6a1ec0bb7f",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "elder-legacy-preview-derived.png",
+      "sha256": "de861f4518f9cbee1d72e26c3d75e8ed57c964e4c91e0fcb9ed2a38f167d3ef5",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "derived-preview"
+    },
+    {
+      "path": "graduation/graduation-actor-safe-guide.png",
+      "sha256": "0cdbda7445eab1fa3b1e042796ce5f3e5e37b1bf27c8b74b6baccac438a53e1c",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "graduation/graduation-background-plate.png",
+      "sha256": "5282f5288ac07ee598be2fd70b3c241ba7f57cb3b6d27934d000a860837800b4",
+      "size": [320, 256],
+      "mode": "RGB",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "graduation/graduation-background-source.png",
+      "sha256": "f8de70af7cc39b84d3f6df73bce38c1711f84c5eec40c194ef9719fc4bfb01f0",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "graduation/graduation-foreground-frame.png",
+      "sha256": "d69869f8d2db9ec92f46c16da5d2e301770e739ff0c580c68eebe081301fb1ee",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "graduation/graduation-foreground-source.png",
+      "sha256": "de0d057d78e616d6201d2b3a0b1677a9848b4014b6c857ef910e451f319d55a8",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "graduation/graduation-midground-set-dressing.png",
+      "sha256": "97c3a8abf81ea88a82e0937860f06c9ec4bcd873d0744a2f71d9375b14bec21d",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "graduation/graduation-midground-source.png",
+      "sha256": "c1e4ce6e7a6a6aa9a433056fa29b60a81abf343e611487e131df61bb3bc27f23",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "graduation/items/class-medal.png",
+      "sha256": "77d250c6a52f369c0c9a8bc7c49f80d74656ac9c5bbfb4d7a3e9460191f59071",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "graduation/items/diploma-scroll.png",
+      "sha256": "44a618039f560b876aafae1058b90a7eef2f85104007b0f3efa9965f95fce015",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "graduation/items/graduation-cap.png",
+      "sha256": "147280ea1ebe3c6ddde6f69d9aea317c89ced58ae123336ab9964d7678447e21",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "graduation/items/wildflower-bouquet.png",
+      "sha256": "a0d83b9d836a826e725ca2b6164d55062d8f0a7b61ff5ba870c3abea5ef49845",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "graduation-preview-derived.png",
+      "sha256": "4dc703a356d887781dabe4bb27ceaa0611fbd89da4232e26576fb9ce72deb7e7",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "derived-preview"
+    },
+    {
+      "path": "new-parenthood/items/family-photo.png",
+      "sha256": "560632029b820292f0716ef32a3d104d6f9994d3c796fabf6b60e3bd4a438ea4",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "new-parenthood/items/keepsake-rattle.png",
+      "sha256": "227129cde224ce8eba5e7e507c547550f325f78f4335e379a1e32593a3c1ab38",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "new-parenthood/items/swaddled-baby.png",
+      "sha256": "a5ddb6fea6b984859fad640d095c5f3298b8a744d01985891d81c99bece56b14",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "new-parenthood/items/welcome-home-card.png",
+      "sha256": "cf2f56b69a52c459fac237c1e10b70f620d74753a22b9fb0392b3055e6990b43",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "new-parenthood/new-parenthood-actor-safe-guide.png",
+      "sha256": "f4182f2bb971fcc923e854122a2b700d2830f1f1fa717a603ceda6fb5865fa63",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "new-parenthood/new-parenthood-background-plate.png",
+      "sha256": "d21766c20b3eb18f3f2ef4a85c0076ed581fac8981c0bd1bac4815c7843435e8",
+      "size": [320, 256],
+      "mode": "RGB",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "new-parenthood/new-parenthood-background-source.png",
+      "sha256": "5cf7c02043f7ef914df8f7bd3f2d8f8bd856ed29d091a62a3cae666a69483de1",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "new-parenthood/new-parenthood-foreground-frame.png",
+      "sha256": "fcba8dca376fc1da28d299a49b63549cd035489a6c47cf679dca27ce4bb3eb9d",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "new-parenthood/new-parenthood-foreground-source.png",
+      "sha256": "75a94c67961331fb21baa1469dcdd7867a301e1dc46e440505293f8f0edd16cd",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "new-parenthood/new-parenthood-midground-set-dressing.png",
+      "sha256": "ceaaeb85d0120239c86e343aaa873633fba0ad6fe000ec5ee522d96f6b7ee738",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "layer-or-item"
+    },
+    {
+      "path": "new-parenthood/new-parenthood-midground-source.png",
+      "sha256": "db6c1d9a8019e1d772865d1cb9dba3c9a5ff90480f0aa98ec4f49ccc1e9634d8",
+      "size": [640, 512],
+      "mode": "RGB",
+      "role": "source-original"
+    },
+    {
+      "path": "new-parenthood-preview-derived.png",
+      "sha256": "d2eea86620731ad3de344d5c7d64feba465f513ad15445714036e1660990371a",
+      "size": [320, 256],
+      "mode": "RGBA",
+      "role": "derived-preview"
+    }
+  ],
+  "runtimeReady": false
+}
