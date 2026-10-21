@@ -53,6 +53,7 @@ import {
 import { modernSpriteColumn } from './spriteDirections';
 import { ambientPedestrians, type AmbientPedestrian } from './ambientPedestrians';
 import { AmbientActor } from './AmbientActor';
+import { residentObservation } from './residentDialogue';
 import { WORLD_REGIONS, regionAt, regionArrival, regionActivityZone, type RegionId } from './worldRegions';
 import {
   worldCell,
@@ -363,6 +364,7 @@ export function ArcadePixelLife({
   >('none');
   const [selectedResident, setSelectedResident] = useState<AmbientPedestrian | null>(null);
   const [metResidents, setMetResidents] = useState<string[]>([]);
+  const [visitedRegions, setVisitedRegions] = useState<RegionId[]>(['bellweather']);
   const [activityFeedback, setActivityFeedback] = useState('');
   const [lifeSystemFeedback, setLifeSystemFeedback] = useState('');
   const [currentNpc, setCurrentNpc] = useState<SocialNPC>('amelia');
@@ -459,6 +461,7 @@ export function ArcadePixelLife({
       AsyncStorage.getItem('liveit.localOllamaModel'),
       AsyncStorage.getItem(gameKey + '.pixelAvatar'),
       AsyncStorage.getItem(gameKey + '.metResidents'),
+      AsyncStorage.getItem(gameKey + '.visitedRegions'),
     ])
       .then(
         ([
@@ -471,6 +474,7 @@ export function ArcadePixelLife({
           customModel,
           savedAvatar,
           savedResidents,
+          savedRegions,
         ]) => {
           if (!active) return;
           try {
@@ -534,6 +538,16 @@ export function ArcadePixelLife({
             if (Array.isArray(ids))
               setMetResidents(ids.filter((id): id is string => typeof id === 'string').slice(-300));
           } catch { /* Missing resident sidecar must not affect the world save. */ }
+          try {
+            const regions: unknown = savedRegions ? JSON.parse(savedRegions) : [];
+            if (Array.isArray(regions))
+              setVisitedRegions(Array.from(new Set<RegionId>([
+                'bellweather',
+                ...regions.filter((id): id is RegionId =>
+                  typeof id === 'string' && WORLD_REGIONS.some((r) => r.id === id),
+                ),
+              ])));
+          } catch { /* Malformed discovery data cannot break a saved life. */ }
           setLoaded(true);
         },
       )
@@ -1234,6 +1248,13 @@ export function ArcadePixelLife({
     setPanel('none');
     setNotice('Arrived in ' + target.name + '. Explore the roads and meet the locals.');
     void AsyncStorage.setItem(gameKey + '.location', JSON.stringify(arrival))
+      .then(() => {
+        if (visitedRegions.includes(id)) return;
+        const next = [...visitedRegions, id];
+        void AsyncStorage.setItem(gameKey + '.visitedRegions', JSON.stringify(next))
+          .then(() => setVisitedRegions(next))
+          .catch(() => setNotice('Arrival saved, but discovery could not be recorded.'));
+      })
       .catch(() => setNotice('Travel succeeded, but saving this position failed.'));
   };
   const tapToWalk = (localX: number, localY: number) => {
@@ -1963,10 +1984,16 @@ export function ArcadePixelLife({
                 <Text style={s.help}>
                   {selectedResident?.profile.role.toUpperCase()} · {WORLD_REGIONS.find((r) => r.id === selectedResident?.profile.homeRegion)?.name}
                 </Text>
+                <Text style={s.help}>“{selectedResident ? residentObservation(selectedResident.profile, selectedResident.id, world.day) : ''}”</Text>
                 <Text style={s.help}>Everyone you meet has a stable world identity and a daily routine. Acquaintances are remembered across reloads.</Text>
-                <Pressable accessibilityRole="button" disabled={!selectedResident || metResidents.includes(selectedResident.id)} style={s.add}
+                <Pressable accessibilityRole="button" disabled={!selectedResident} style={s.add}
                   onPress={() => {
-                    if (!selectedResident || metResidents.includes(selectedResident.id)) return;
+                    if (!selectedResident) return;
+                    if (metResidents.includes(selectedResident.id)) {
+                      setNotice(selectedResident.profile.name + ': ' + residentObservation(selectedResident.profile, selectedResident.id, world.day));
+                      setPanel('none');
+                      return;
+                    }
                     const next = [...metResidents, selectedResident.id].slice(-300);
                     void AsyncStorage.setItem(gameKey + '.metResidents', JSON.stringify(next))
                       .then(() => {
@@ -1976,18 +2003,18 @@ export function ArcadePixelLife({
                       })
                       .catch(() => setNotice('Introduction could not be saved.'));
                   }}>
-                  <Text style={s.addText}>{selectedResident && metResidents.includes(selectedResident.id) ? '✓ ALREADY MET' : '✦ INTRODUCE YOURSELF'}</Text>
+                  <Text style={s.addText}>{selectedResident && metResidents.includes(selectedResident.id) ? '✦ ASK ABOUT THE NEIGHBORHOOD' : '✦ INTRODUCE YOURSELF'}</Text>
                 </Pressable>
               </ScrollView>
             ) : panel === 'travel' ? (
               <ScrollView style={s.messages} contentContainerStyle={{ gap: 10, paddingVertical: 12 }}>
-                <Text style={s.help}>Your present district: {currentRegion.name}. Each stop is in the same infinite walkable world. Transit is free in this version.</Text>
+                <Text style={s.help}>Your present district: {currentRegion.name}. Explored {visitedRegions.length} of {WORLD_REGIONS.length} destinations. Every stop belongs to the same saved walkable world. Transit is free in this version.</Text>
                 {WORLD_REGIONS.map((region) => (
                   <Pressable key={region.id} accessibilityRole="button" accessibilityLabel={'Travel to ' + region.name}
                     onPress={() => visitRegion(region.id)} style={[s.quest, { borderLeftWidth: 4, borderLeftColor: region.color }]}>
                     <Text style={s.questTitle}>{region.name}{currentRegion.id === region.id ? ' · YOU ARE HERE' : ' →'}</Text>
                     <Text style={s.help}>{region.subtitle}</Text>
-                    <Text style={s.mode}>{region.x}, {region.y} · WORLD MAP</Text>
+                    <Text style={s.mode}>{region.x}, {region.y} · {visitedRegions.includes(region.id) ? '✓ VISITED' : 'UNEXPLORED'}</Text>
                   </Pressable>
                 ))}
               </ScrollView>
