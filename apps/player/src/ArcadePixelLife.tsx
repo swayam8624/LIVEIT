@@ -51,10 +51,14 @@ import {
   type TilePoint,
 } from './pixelPathfinding';
 import { modernSpriteColumn } from './spriteDirections';
-import { ambientPedestrians } from './ambientPedestrians';
+import { ambientPedestrians, type AmbientPedestrian } from './ambientPedestrians';
+import { AmbientActor } from './AmbientActor';
+import { residentObservation } from './residentDialogue';
+import { WORLD_REGIONS, regionAt, regionArrival, regionActivityZone, type RegionId } from './worldRegions';
 import {
   worldCell,
   seedFromTimeline,
+  tileHash,
   visibleWorldTiles,
   biomeAt,
   chunkOf,
@@ -345,6 +349,8 @@ export function ArcadePixelLife({
   );
   const [panel, setPanel] = useState<
     | 'none'
+    | 'travel'
+    | 'resident'
     | 'talk'
     | 'missions'
     | 'settings'
@@ -356,6 +362,9 @@ export function ArcadePixelLife({
     | 'career'
     | 'household'
   >('none');
+  const [selectedResident, setSelectedResident] = useState<AmbientPedestrian | null>(null);
+  const [metResidents, setMetResidents] = useState<string[]>([]);
+  const [visitedRegions, setVisitedRegions] = useState<RegionId[]>(['bellweather']);
   const [activityFeedback, setActivityFeedback] = useState('');
   const [lifeSystemFeedback, setLifeSystemFeedback] = useState('');
   const [currentNpc, setCurrentNpc] = useState<SocialNPC>('amelia');
@@ -418,6 +427,7 @@ export function ArcadePixelLife({
   const camera = useRef(new Animated.ValueXY()).current;
   const bob = useRef(new Animated.Value(0)).current;
   const frameOffset = useRef(new Animated.Value(0)).current;
+  const gaitDistance = useRef(0);
   const ageFrameOffset = useRef(new Animated.Value(0)).current;
   const facingRef = useRef<Facing>('down');
   const localArt = pixelArt as Record<string, ImageSourcePropType>;
@@ -450,6 +460,8 @@ export function ArcadePixelLife({
       AsyncStorage.getItem('liveit.localOllamaEndpoint'),
       AsyncStorage.getItem('liveit.localOllamaModel'),
       AsyncStorage.getItem(gameKey + '.pixelAvatar'),
+      AsyncStorage.getItem(gameKey + '.metResidents'),
+      AsyncStorage.getItem(gameKey + '.visitedRegions'),
     ])
       .then(
         ([
@@ -461,6 +473,8 @@ export function ArcadePixelLife({
           customEndpoint,
           customModel,
           savedAvatar,
+          savedResidents,
+          savedRegions,
         ]) => {
           if (!active) return;
           try {
@@ -519,6 +533,21 @@ export function ArcadePixelLife({
             ['adam', 'alex', 'bob', 'amelia'].includes(savedAvatar)
           )
             setPixelAvatar(savedAvatar as 'adam' | 'alex' | 'bob' | 'amelia');
+          try {
+            const ids: unknown = savedResidents ? JSON.parse(savedResidents) : [];
+            if (Array.isArray(ids))
+              setMetResidents(ids.filter((id): id is string => typeof id === 'string').slice(-300));
+          } catch { /* Missing resident sidecar must not affect the world save. */ }
+          try {
+            const regions: unknown = savedRegions ? JSON.parse(savedRegions) : [];
+            if (Array.isArray(regions))
+              setVisitedRegions(Array.from(new Set<RegionId>([
+                'bellweather',
+                ...regions.filter((id): id is RegionId =>
+                  typeof id === 'string' && WORLD_REGIONS.some((r) => r.id === id),
+                ),
+              ])));
+          } catch { /* Malformed discovery data cannot break a saved life. */ }
           setLoaded(true);
         },
       )
@@ -748,11 +777,17 @@ export function ArcadePixelLife({
         }
       }
       const magnitude = Math.hypot(vx, vy);
+      const oldX = p.x, oldY = p.y;
       if (magnitude > 0) {
         const dx = (vx / magnitude) * dt * SPEED;
         const dy = (vy / magnitude) * dt * SPEED;
         if (!blocks(p.x + dx, p.y)) p.x += dx;
         if (!blocks(p.x, p.y + dy)) p.y += dy;
+      }
+      const walked = Math.hypot(p.x - oldX, p.y - oldY);
+      if (walked > 0.0001) {
+        gaitDistance.current += walked;
+        const gait = Math.floor(gaitDistance.current * 3);
         const nextFacing: Facing =
           Math.abs(vx) > Math.abs(vy)
             ? vx > 0
@@ -765,20 +800,20 @@ export function ArcadePixelLife({
         setFacing((previous) =>
           previous === nextFacing ? previous : nextFacing,
         );
-        bob.setValue(Math.sin(timestamp / 70) * 2);
+        bob.setValue(Math.sin(gaitDistance.current * Math.PI * 2) * 2);
         const faceOffset = modernPlayer ? modernSpriteColumn(nextFacing, 0) : 0;
         frameOffset.setValue(
           -TILE *
             (faceOffset +
-              (Math.floor(timestamp / 125) % (modernPlayer ? 6 : 4))),
+              (gait % (modernPlayer ? 6 : 4))),
         );
         ageFrameOffset.setValue(
           -48 *
             (({ down: 0, left: 1, right: 2, up: 3 } as const)[nextFacing] * 4 +
-              (Math.floor(timestamp / 125) % 4)),
+              (gait % 4)),
         );
       } else {
-        bob.setValue(Math.sin(timestamp / 440) * 0.7);
+        bob.setValue(0);
         frameOffset.setValue(
           modernPlayer ? -TILE * modernSpriteColumn(facingRef.current, 0) : 0,
         );
@@ -816,27 +851,29 @@ export function ArcadePixelLife({
         setPlace('street');
         setNotice('Back in Bellweather market.');
       }
+      const region = regionAt(p.x, p.y);
       const currentZone =
         p.place === 'cafe'
           ? 'cafe'
-          : p.x >= 17 && p.y >= 14
-            ? 'garden'
-            : p.x >= 19 && p.y <= 13
-              ? 'market'
-              : 'street';
+          : region.id !== 'bellweather'
+            ? regionActivityZone(region.id)
+            : p.x >= 17 && p.y >= 14
+              ? 'garden'
+              : p.x >= 19 && p.y <= 13
+                ? 'market'
+                : 'street';
       if (zoneRef.current !== currentZone) {
         zoneRef.current = currentZone;
         setZone(currentZone);
       }
       if (
         p.place === 'street' &&
-        p.x >= 17 &&
-        p.y >= 14 &&
+        currentZone === 'garden' &&
         lastZone.current !== 'garden'
       ) {
         lastZone.current = 'garden';
         missionEvent('garden');
-      } else if (!(p.place === 'street' && p.x >= 17 && p.y >= 14)) {
+      } else if (!(p.place === 'street' && currentZone === 'garden')) {
         lastZone.current = '';
       }
       const colsNeeded =
@@ -1042,6 +1079,13 @@ export function ArcadePixelLife({
         width: TILE,
         height: TILE,
       };
+      const tileRegion = regionAt(x, y);
+      const districtAccent =
+        place === 'street' &&
+        tileRegion.id !== 'bellweather' &&
+        !tile.solid &&
+        !tile.prop &&
+        tileHash(worldSeed ^ 0x0a73, x, y) % 17 === 0;
       elements.push(
         <View key={x + ':' + y} pointerEvents="none" style={frame}>
           <Image
@@ -1049,6 +1093,19 @@ export function ArcadePixelLife({
             resizeMode="stretch"
             style={[{ position: 'absolute', width: TILE, height: TILE }, crisp]}
           />
+          {districtAccent ? (
+            <View
+              style={{
+                position: 'absolute',
+                left: TILE / 4,
+                top: TILE / 4,
+                width: TILE / 8,
+                height: TILE / 8,
+                backgroundColor: tileRegion.color,
+                opacity: 0.9,
+              }}
+            />
+          ) : null}
           {tile.prop && tile.prop in pixelArt ? (
             <Image
               source={pixelArt[tile.prop]}
@@ -1092,6 +1149,7 @@ export function ArcadePixelLife({
   );
   const openChunk = chunkOf(tileWindow.left, tileWindow.top);
   const biome = biomeAt(worldSeed, tileWindow.left, tileWindow.top);
+  const currentRegion = regionAt(hero.current.x, hero.current.y);
   const dayWithinMonth = Math.min(30, Math.floor(clock / (MONTH_MS / 30)) + 1);
   const inGameMinute = Math.floor(((clock / (MONTH_MS / 30)) % 1) * 1440);
   const hour = Math.floor(inGameMinute / 60);
@@ -1117,7 +1175,7 @@ export function ArcadePixelLife({
       tileWindow.top,
       tileWindow.cols,
       tileWindow.rows,
-      Math.floor(inGameMinute / 20),
+      inGameMinute,
     ],
   );
   const monthPart = Math.floor((clock / MONTH_MS) * 100);
@@ -1172,6 +1230,33 @@ export function ArcadePixelLife({
           : 'A peaceful afternoon in the gardens.',
     );
   };
+  const visitRegion = (id: RegionId) => {
+    if (!loaded || paused) return;
+    const arrival = regionArrival(id, worldSeed);
+    const target = WORLD_REGIONS.find((r) => r.id === id)!;
+    routeRef.current = [];
+    talkAfterWalk.current = false;
+    keys.current.clear();
+    walkVector.current = { x: 0, y: 0 };
+    setMovement({ x: 0, y: 0 });
+    hero.current = { x: arrival.x, y: arrival.y, place: 'street' };
+    facingRef.current = arrival.facing;
+    setFacing(arrival.facing);
+    setPlace('street');
+    zoneRef.current = 'street';
+    setZone('street');
+    setPanel('none');
+    setNotice('Arrived in ' + target.name + '. Explore the roads and meet the locals.');
+    void AsyncStorage.setItem(gameKey + '.location', JSON.stringify(arrival))
+      .then(() => {
+        if (visitedRegions.includes(id)) return;
+        const next = [...visitedRegions, id];
+        void AsyncStorage.setItem(gameKey + '.visitedRegions', JSON.stringify(next))
+          .then(() => setVisitedRegions(next))
+          .catch(() => setNotice('Arrival saved, but discovery could not be recorded.'));
+      })
+      .catch(() => setNotice('Travel succeeded, but saving this position failed.'));
+  };
   const tapToWalk = (localX: number, localY: number) => {
     if (!loaded || paused || panel !== 'none') return;
     const p = hero.current;
@@ -1180,6 +1265,18 @@ export function ArcadePixelLife({
       y: Math.floor((localY - cameraPoint.current.y) / TILE),
     };
     const from = { x: Math.round(p.x), y: Math.round(p.y) };
+    const resident = pedestrians.find((r) =>
+      Math.round(r.x) === tap.x && Math.round(r.y) === tap.y,
+    );
+    if (resident) {
+      if (Math.hypot(resident.x - p.x, resident.y - p.y) > 2.5)
+        setNotice('Approach ' + resident.profile.name + ' to introduce yourself.');
+      else {
+        setSelectedResident(resident);
+        setPanel('resident');
+      }
+      return;
+    }
     const npc = npcAt(p.place);
     const talking = tap.x === npc.x && tap.y === npc.y;
     const target = targetForTap(p.place, tap, from, worldSeed);
@@ -1261,23 +1358,7 @@ export function ArcadePixelLife({
         >
           {tiles}
           {pedestrians.map((person) => (
-            <View
-              key={person.id}
-              pointerEvents="none"
-              style={{
-                position: 'absolute',
-                left: person.x * TILE,
-                top: person.y * TILE,
-                width: TILE,
-                height: TILE,
-              }}
-            >
-              <Image
-                source={actorArt(person.look, person.facing)}
-                resizeMode="stretch"
-                style={[{ width: TILE, height: TILE }, crisp]}
-              />
-            </View>
+            <AmbientActor key={person.id} person={person} tileSize={TILE} />
           ))}
           {place === 'street' ? (
             <>
@@ -1448,6 +1529,15 @@ export function ArcadePixelLife({
           pointerEvents="none"
           style={[s.daylight, { opacity: glow }]}
         />
+        {place === 'street' && currentRegion.id !== 'bellweather' ? (
+          <View
+            pointerEvents="none"
+            style={[
+              StyleSheet.absoluteFill,
+              { backgroundColor: currentRegion.color, opacity: 0.055 },
+            ]}
+          />
+        ) : null}
         <Pressable
           accessibilityRole="button"
           accessibilityLabel="Tap town to walk or tap Amelia to talk"
@@ -1464,6 +1554,8 @@ export function ArcadePixelLife({
             <Text style={s.sub}>
               {place === 'cafe'
                 ? 'THE OLD CAFÉ'
+                : currentRegion.id !== 'bellweather'
+                  ? currentRegion.name.toUpperCase()
                 : zone === 'garden'
                   ? 'BELLWEATHER GARDENS'
                   : zone === 'market'
@@ -1510,6 +1602,14 @@ export function ArcadePixelLife({
               pauseMovement();
               setActivityFeedback('');
               setPanel('activities');
+            }}
+          />
+          <HudButton
+            title="⌖"
+            detail="REGIONS"
+            onPress={() => {
+              pauseMovement();
+              setPanel('travel');
             }}
           />
           <HudButton
@@ -1820,7 +1920,11 @@ export function ArcadePixelLife({
             <View style={s.modalHead}>
               <View>
                 <Text style={s.modalTitle}>
-                  {panel === 'talk'
+                  {panel === 'resident'
+                    ? (selectedResident?.profile.name.toUpperCase() ?? 'LOCAL RESIDENT')
+                    : panel === 'travel'
+                      ? 'REGIONAL TRANSIT'
+                    : panel === 'talk'
                     ? SOCIAL_NPCS[currentNpc].name.toUpperCase()
                     : panel === 'missions'
                       ? 'YOUR MISSIONS'
@@ -1841,7 +1945,11 @@ export function ArcadePixelLife({
                                     : 'LOCAL CONVERSATION ENGINE'}
                 </Text>
                 <Text style={s.sub}>
-                  {panel === 'talk'
+                  {panel === 'resident'
+                    ? 'A real resident identity that stays consistent as you explore.'
+                    : panel === 'travel'
+                      ? 'Travel between original connected districts. Your life and save remain the same.'
+                    : panel === 'talk'
                     ? 'A real local-model conversation with remembered life events.'
                     : panel === 'missions'
                       ? 'Make any day into an adventure.'
@@ -1870,7 +1978,47 @@ export function ArcadePixelLife({
                 <Text style={s.closeText}>✕</Text>
               </Pressable>
             </View>
-            {panel === 'talk' ? (
+            {panel === 'resident' ? (
+              <ScrollView style={s.messages} contentContainerStyle={{ gap: 12, paddingVertical: 12 }}>
+                <Text style={s.questTitle}>{selectedResident?.profile.name}</Text>
+                <Text style={s.help}>
+                  {selectedResident?.profile.role.toUpperCase()} · {WORLD_REGIONS.find((r) => r.id === selectedResident?.profile.homeRegion)?.name}
+                </Text>
+                <Text style={s.help}>“{selectedResident ? residentObservation(selectedResident.profile, selectedResident.id, world.day) : ''}”</Text>
+                <Text style={s.help}>Everyone you meet has a stable world identity and a daily routine. Acquaintances are remembered across reloads.</Text>
+                <Pressable accessibilityRole="button" disabled={!selectedResident} style={s.add}
+                  onPress={() => {
+                    if (!selectedResident) return;
+                    if (metResidents.includes(selectedResident.id)) {
+                      setNotice(selectedResident.profile.name + ': ' + residentObservation(selectedResident.profile, selectedResident.id, world.day));
+                      setPanel('none');
+                      return;
+                    }
+                    const next = [...metResidents, selectedResident.id].slice(-300);
+                    void AsyncStorage.setItem(gameKey + '.metResidents', JSON.stringify(next))
+                      .then(() => {
+                        setMetResidents(next);
+                        setNotice('Introduced yourself to ' + selectedResident.profile.name + '.');
+                        setPanel('none');
+                      })
+                      .catch(() => setNotice('Introduction could not be saved.'));
+                  }}>
+                  <Text style={s.addText}>{selectedResident && metResidents.includes(selectedResident.id) ? '✦ ASK ABOUT THE NEIGHBORHOOD' : '✦ INTRODUCE YOURSELF'}</Text>
+                </Pressable>
+              </ScrollView>
+            ) : panel === 'travel' ? (
+              <ScrollView style={s.messages} contentContainerStyle={{ gap: 10, paddingVertical: 12 }}>
+                <Text style={s.help}>Your present district: {currentRegion.name}. Explored {visitedRegions.length} of {WORLD_REGIONS.length} destinations. Every stop belongs to the same saved walkable world. Transit is free in this version.</Text>
+                {WORLD_REGIONS.map((region) => (
+                  <Pressable key={region.id} accessibilityRole="button" accessibilityLabel={'Travel to ' + region.name}
+                    onPress={() => visitRegion(region.id)} style={[s.quest, { borderLeftWidth: 4, borderLeftColor: region.color }]}>
+                    <Text style={s.questTitle}>{region.name}{currentRegion.id === region.id ? ' · YOU ARE HERE' : ' →'}</Text>
+                    <Text style={s.help}>{region.subtitle}</Text>
+                    <Text style={s.mode}>{region.x}, {region.y} · {visitedRegions.includes(region.id) ? '✓ VISITED' : 'UNEXPLORED'}</Text>
+                  </Pressable>
+                ))}
+              </ScrollView>
+            ) : panel === 'talk' ? (
               <>
                 <ScrollView
                   style={s.messages}
