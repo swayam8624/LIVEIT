@@ -96,7 +96,7 @@ export function ambientPedestrians(
               : 'up';
         if (x < left || x >= left + cols || y < top || y >= top + rows)
           continue;
-        if (worldCell('street', x, y, seed).solid) continue;
+        if (worldCell('street', x, Math.round(y), seed).solid) continue;
         if (x === 10 && y === 7) continue; // canonical Amelia spawn
         results.push({
           id,
