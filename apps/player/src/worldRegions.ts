@@ -61,3 +61,24 @@ export function regionArrival(regionId: RegionId, seed: number): PixelPosition {
   }
   throw new Error('No safe arrival for ' + region.name);
 }
+
+/**
+ * Regional activities reuse real simulation actions. These categories are
+ * intentionally a compatibility layer, not new jobs or fabricated payouts.
+ */
+export function regionActivityZone(regionId: RegionId): 'street' | 'market' | 'garden' {
+  switch (regionId) {
+    case 'quayside':
+    case 'foundry':
+    case 'oldtown':
+      return 'market';
+    case 'larkspur':
+    case 'orchard':
+    case 'tideglass':
+    case 'cedarwood':
+      return 'garden';
+    case 'willowmere':
+    case 'bellweather':
+      return 'street';
+  }
+}
