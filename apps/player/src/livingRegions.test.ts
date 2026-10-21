@@ -2,13 +2,21 @@ import { describe, expect, it } from 'vitest';
 import { ambientPedestrians } from './ambientPedestrians';
 import { worldCell, validInfinitePosition } from './proceduralWorld';
 import { residentProfile } from './residentProfiles';
-import { regionArrival, regionAt, WORLD_REGIONS } from './worldRegions';
+import { residentObservation } from './residentDialogue';
+import { regionActivityZone, regionArrival, regionAt, WORLD_REGIONS } from './worldRegions';
 
 describe('original LIVEIT regional transport', () => {
   it('has nine distinct, named locations in one coordinate space', () => {
     expect(new Set(WORLD_REGIONS.map((r) => r.id)).size).toBe(9);
     for (const region of WORLD_REGIONS)
       expect(regionAt(region.x, region.y).id).toBe(region.id);
+  });
+
+  it('maps real game activities appropriately for distant districts', () => {
+    expect(regionActivityZone('foundry')).toBe('market');
+    expect(regionActivityZone('quayside')).toBe('market');
+    expect(regionActivityZone('cedarwood')).toBe('garden');
+    expect(regionActivityZone('willowmere')).toBe('street');
   });
 
   it('never delivers a character inside a wall or another canonical NPC', () => {
@@ -30,6 +38,13 @@ describe('deterministic resident identities and continuous movements', () => {
     expect(b).toEqual(a);
     expect(a.name.split(' ').length).toBe(2);
     expect(['none', 'cap', 'satchel']).toContain(a.accessory);
+  });
+
+  it('offers reproducible, offline regional dialogue without a model', () => {
+    const profile = residentProfile(33, '33:10:10:1', 320, 320);
+    const first = residentObservation(profile, '33:10:10:1', 12);
+    expect(first).toBe(residentObservation(profile, '33:10:10:1', 12));
+    expect(first.length).toBeGreaterThan(12);
   });
 
   it('repeats the same resident state at the same simulated minute', () => {
