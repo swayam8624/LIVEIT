@@ -53,10 +53,11 @@ import {
 import { modernSpriteColumn } from './spriteDirections';
 import { ambientPedestrians, type AmbientPedestrian } from './ambientPedestrians';
 import { AmbientActor } from './AmbientActor';
-import { WORLD_REGIONS, regionAt, regionArrival, type RegionId } from './worldRegions';
+import { WORLD_REGIONS, regionAt, regionArrival, regionActivityZone, type RegionId } from './worldRegions';
 import {
   worldCell,
   seedFromTimeline,
+  tileHash,
   visibleWorldTiles,
   biomeAt,
   chunkOf,
@@ -836,27 +837,29 @@ export function ArcadePixelLife({
         setPlace('street');
         setNotice('Back in Bellweather market.');
       }
+      const region = regionAt(p.x, p.y);
       const currentZone =
         p.place === 'cafe'
           ? 'cafe'
-          : p.x >= 17 && p.y >= 14
-            ? 'garden'
-            : p.x >= 19 && p.y <= 13
-              ? 'market'
-              : 'street';
+          : region.id !== 'bellweather'
+            ? regionActivityZone(region.id)
+            : p.x >= 17 && p.y >= 14
+              ? 'garden'
+              : p.x >= 19 && p.y <= 13
+                ? 'market'
+                : 'street';
       if (zoneRef.current !== currentZone) {
         zoneRef.current = currentZone;
         setZone(currentZone);
       }
       if (
         p.place === 'street' &&
-        p.x >= 17 &&
-        p.y >= 14 &&
+        currentZone === 'garden' &&
         lastZone.current !== 'garden'
       ) {
         lastZone.current = 'garden';
         missionEvent('garden');
-      } else if (!(p.place === 'street' && p.x >= 17 && p.y >= 14)) {
+      } else if (!(p.place === 'street' && currentZone === 'garden')) {
         lastZone.current = '';
       }
       const colsNeeded =
@@ -1062,6 +1065,13 @@ export function ArcadePixelLife({
         width: TILE,
         height: TILE,
       };
+      const tileRegion = regionAt(x, y);
+      const districtAccent =
+        place === 'street' &&
+        tileRegion.id !== 'bellweather' &&
+        !tile.solid &&
+        !tile.prop &&
+        tileHash(worldSeed ^ 0x0a73, x, y) % 17 === 0;
       elements.push(
         <View key={x + ':' + y} pointerEvents="none" style={frame}>
           <Image
@@ -1069,6 +1079,19 @@ export function ArcadePixelLife({
             resizeMode="stretch"
             style={[{ position: 'absolute', width: TILE, height: TILE }, crisp]}
           />
+          {districtAccent ? (
+            <View
+              style={{
+                position: 'absolute',
+                left: TILE / 4,
+                top: TILE / 4,
+                width: TILE / 8,
+                height: TILE / 8,
+                backgroundColor: tileRegion.color,
+                opacity: 0.9,
+              }}
+            />
+          ) : null}
           {tile.prop && tile.prop in pixelArt ? (
             <Image
               source={pixelArt[tile.prop]}
@@ -1485,6 +1508,15 @@ export function ArcadePixelLife({
           pointerEvents="none"
           style={[s.daylight, { opacity: glow }]}
         />
+        {place === 'street' && currentRegion.id !== 'bellweather' ? (
+          <View
+            pointerEvents="none"
+            style={[
+              StyleSheet.absoluteFill,
+              { backgroundColor: currentRegion.color, opacity: 0.055 },
+            ]}
+          />
+        ) : null}
         <Pressable
           accessibilityRole="button"
           accessibilityLabel="Tap town to walk or tap Amelia to talk"
