@@ -1,6 +1,7 @@
 import { CHUNK_SIZE, tileHash, worldCell } from './proceduralWorld';
 import type { Facing } from './pixelTownLogic';
 import { ambientSpriteAssignment } from './spriteIdentity';
+import { residentProfile, type ResidentProfile } from './residentProfiles';
 
 export type AmbientPedestrian = Readonly<{
   id: string;
@@ -9,6 +10,7 @@ export type AmbientPedestrian = Readonly<{
   look: 1 | 2;
   /** Stable visual key; currently restricted to approved CC0 placeholders. */
   spriteKey: 'pulse:n1' | 'pulse:n2';
+  profile: ResidentProfile;
   facing: Facing;
   shift: 'commute' | 'work' | 'leisure' | 'home';
 }>;
@@ -61,28 +63,41 @@ export function ambientPedestrians(
         // Generate a deterministic *sidewalk* resident rather than rolling
         // arbitrary solid building tiles. The global grid uses x%16=6/9
         // for publicly walkable pavements across chunk seams.
+        const id = seed + ':' + cx + ':' + cy + ':' + i;
+        const visual = ambientSpriteAssignment(seed, id);
+        // Keep movement entirely inside one 32x32 chunk. The triangle-wave
+        // gait reverses gently rather than teleporting from +3 to -3.
         const localX =
           ((hash >>> 9) % 2 === 0 ? 6 : 9) + ((hash >>> 12) % 2) * 16;
-        const localY = (hash >>> 7) % CHUNK_SIZE;
-        const t = Math.floor(minuteOfDay / 20);
+        const baseY = 4 + ((hash >>> 7) % (CHUNK_SIZE - 8));
         const x = cx * CHUNK_SIZE + localX;
-        let y = cy * CHUNK_SIZE + localY;
-        let facing: Facing = 'down';
-        // Daily pedestrian walking is independent of camera and order of
-        // discovery. Movement is bounded to the current chunk sidewalks.
-        if (shift !== 'home') {
-          const displacement = ((t + (hash >>> 25)) % 7) - 3;
-          y =
-            cy * CHUNK_SIZE +
-            ((localY + displacement + CHUNK_SIZE) % CHUNK_SIZE);
-          facing = displacement < 0 ? 'up' : 'down';
-        }
+        const base = cy * CHUNK_SIZE + baseY;
+        const cycle = [0, 1, 2, 3, 2, 1, 0, -1, -2, -3, -2, -1] as const;
+        const progress = (((minuteOfDay % 1440) + 1440) % 1440) / 12;
+        const step = Math.floor(progress);
+        const fraction = progress - step;
+        // Smoothstep has zero velocity at each waypoint, reducing jitter on
+        // slow displays while keeping the position deterministic across saves.
+        const blend = fraction * fraction * (3 - 2 * fraction);
+        const from = base + cycle[(step + (hash >>> 25)) % cycle.length]!;
+        const to = base + cycle[(step + 1 + (hash >>> 25)) % cycle.length]!;
+        const traversable =
+          !worldCell('street', x, Math.round(from), seed).solid &&
+          !worldCell('street', x, Math.round(to), seed).solid;
+        const y =
+          shift === 'home' || !traversable
+            ? base
+            : from + (to - from) * blend;
+        const facing: Facing =
+          shift === 'home' || !traversable || from === to
+            ? 'down'
+            : to > from
+              ? 'down'
+              : 'up';
         if (x < left || x >= left + cols || y < top || y >= top + rows)
           continue;
         if (worldCell('street', x, y, seed).solid) continue;
         if (x === 10 && y === 7) continue; // canonical Amelia spawn
-        const id = seed + ':' + cx + ':' + cy + ':' + i;
-        const visual = ambientSpriteAssignment(seed, id);
         results.push({
           id,
           x,
@@ -90,6 +105,7 @@ export function ambientPedestrians(
           facing,
           look: visual.look,
           spriteKey: visual.spriteKey,
+          profile: residentProfile(seed, id, cx * CHUNK_SIZE, cy * CHUNK_SIZE),
           shift,
         });
       }
