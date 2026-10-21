@@ -55,7 +55,7 @@ describe('deterministic resident identities and continuous movements', () => {
   });
 
   it('does not use render discovery order to assign appearances', () => {
-    const wide = ambientPedestrians(19, -8, -8, 64, 64, 850);
+    const wide = ambientPedestrians(19, -8, -8, 48, 48, 850);
     const narrow = ambientPedestrians(19, 0, 0, 32, 32, 850);
     for (const resident of narrow) {
       const match = wide.find((person) => person.id === resident.id);
