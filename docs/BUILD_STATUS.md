@@ -1,5 +1,19 @@
 # LIVEIT BUILD STATUS — observed, not aspirational
 
+## 2026-10-21 regional living-world development branch (not yet native verified)
+
+Source branch: `feat/living-regions-smooth-residents-20261021`, based on `feat/pixel-sprite-identity-gates-20261020`. **GitHub source commits only; no local npm check, Expo app run, iOS/Android simulator screenshots or save/reload acceptance were executed in this session.** See [Living World Regions](LIVING_WORLD_REGIONS_20261021.md).
+
+- Nine original coordinate-distinct regions with collision-checked arrival tiles, transit panel and the same existing world/save identity. District-specific activity classification and original procedural pixel accents are implemented.
+- Named ambient residents now derive stable profile, role and 2D accessory palette from seed and resident ID. Continuous sidewalk motions are interpolated by native-driven actor animation. Existing approved Pulse n1 animation sheets and n2 still images remain the ONLY active ambient character art; all concept packs remain unapproved.
+- Nearby residents can be introduced with acquaintance IDs saved to a sidecar after AsyncStorage success, without faking authoritative trust or money mutations. Player walk cycles now advance from actual distance travelled.
+- New `livingRegions.test.ts` source checks route landing, deterministic resident identity, collision and interpolation; tests written but **not run** here. QA requires CI plus on-device Bellweather café choice/reload, travel/reload, pixel nearest sampling, interaction and frame rate tests.
+- Pokémon multi-region fan projects are architectural inspiration only. Public repository visibility does not license reuse of Nintendo/Game Freak/Pokémon ROMs, region maps, sprites, music or characters. Original maps and permissioned art only.
+- On-device NPC LLM integration is a separate unmerged PR; this branch still has the old developer-only Ollama LAN setting and does not prove phone-local inference.
+
+---
+
+
 > **2026-10-19 owner pivot:** LIVEIT is now entirely **2D retro pixel art** including expressive animated dialogue portraits, dramatic layered story scenes, town roaming, characters and HUD. Native rigged 3D, mesh/morph acting and 3D set catalogs are **retired**. New docs: [Pixel-only V2](PIXEL_ONLY_DIRECTION_V2.md), and the user ZIP/audio importer [tools/intake_pixel_assets.py](../tools/intake_pixel_assets.py). Current 3D files are legacy experiments, not production acceptance. No downloaded user archives have yet been imported via this new workflow; published app remains illustrated fallback until pixel-game implementation.
 
 Updated 2026-10-20. Current working branch: feat/liveit-continuous-pixel-life. Main remains the earlier foundation. This update records local pixel concept and limited runtime resolver work; it does not claim a merged PR or native-device acceptance.
@@ -89,7 +103,7 @@ Updated 2026-10-20. Current working branch: feat/liveit-continuous-pixel-life. M
 2. Resolve formatting through tracked source changes; npm ci, npm run check, dependency audit classification.
 3. Stop only stale LIVEIT Metro processes, boot iPhone 17 Pro simulator, npm run ios (native app build). Capture actual screen with xcrun simctl io and exercise onboarding/age/choice/assets/restart.
 4. Gather YouTube recording evidence with creator, URL and timestamps; do not turn official feature lists into claims of observed gameplay.
-5. Build the first **top-down pixel town + real 3D dialogue** playable mobile slice with persistent navigation and fallback, then the birth-to-death lifespan, AI memory and lawful opt-in multiplayer. Follow the new M0–M7 implementation plan and AGENTS.md.
+5. Build the first **top-down pixel town + layered 2D pixel dialogue** playable mobile slice with persistent navigation and fallback, then the birth-to-death lifespan, AI memory and lawful opt-in multiplayer. Follow the new M0–M7 implementation plan and AGENTS.md.
 
 ## Definition of done
 
