@@ -13,7 +13,8 @@
 | `ambientPedestrians.ts` | Sidewalk movement with stable ID/appearance, reversible triangular trajectories, smoothstep position interpolation, collision checks on integer logical coordinates |
 | `AmbientActor.tsx` | React Native native-driver spatial interpolation and four-frame movement using the already-licensed Pulse n1 animation sheets; stationary animation remains idle; n2 uses the approved directional stills |
 | `ArcadePixelLife.tsx` | Live world renders resident characters, tap-nearby introductions with saved acquaintances, nine region transit choices, district-specific accents, compatible regional activity semantics and distance-derived player gait |
-| `livingRegions.test.ts` | Automated regression fixtures for arrival validity, generated IDs, view-order stability, collision and interpolation continuity |
+| `residentDialogue.ts` | Authored, fully offline regional resident observations with deterministic variation by simulated day |
+| `livingRegions.test.ts` | Automated regression fixtures for arrival validity, generated IDs, view-order stability, collision, interpolation, activity selection and deterministic dialogue |
 
 No unapproved concept sprites were activated. The 86 concept packs retain `runtimeReady: false`. Basic avatar variety comes from original names, small pixel accessory layers and the existing two verified CC0 character looks. More character bodies, age lines, portraits and wardrobes require visual/identity/rights/device QA.
 
@@ -22,7 +23,7 @@ No unapproved concept sprites were activated. The 86 concept packs retain `runti
 1. Start or resume the game on the branch; open Free Life in the mobile player.
 2. Enter **REGIONS** and travel to North Quay or Willowmere. Validate that the avatar is on a solid-free logical tile and travel survives a process restart.
 3. Walk the district. Verify that sidewalks have smooth, deterministic NPC trajectories and native crisp pixels, that NPCs are not visibly walking while stationary, and that a change in camera viewport does not reroll identity.
-4. Approach a crowd resident and tap their tile; **INTRODUCE YOURSELF** should only claim success after AsyncStorage acknowledges the saved ID. Close, reopen and confirm the same ID is recognized.
+4. Approach a crowd resident and tap their tile. Read region-specific offline dialogue; **INTRODUCE YOURSELF** should only claim success after AsyncStorage acknowledges the saved ID. Close and reopen: the same resident should offer **ASK ABOUT THE NEIGHBORHOOD**. Check saved regional-discovery indicators across transit and reload.
 5. Return to Bellweather, walk to the café, enter, meet Amelia, and verify authored choice and saved world consequences unchanged.
 6. Inspect busy streets and low-end hardware for frame pacing, memory, layout, legible controls and actual gameplay. Test iOS and Android separately.
 
